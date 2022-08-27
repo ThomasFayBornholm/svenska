@@ -1,0 +1,199 @@
+body {
+	background-color: ivory;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	font-size: 24px;
+}
+
+.titleHorse {
+	width: 8%;
+	margin: 20px auto 10px;
+}
+
+.column {
+	float: left;
+	height: 160px;
+}
+
+.left {
+	width: 50%;
+}
+
+.right {
+	width: 50%;
+}
+
+.row:after {
+	context: "";
+	display: table;
+	clear: both;
+}
+
+.iSearch {
+	width: 40%;
+	font-size: 32px;
+}
+
+.b1 {
+	font-size: 32px;
+}
+
+h1 {
+	font-size: 36px;
+	text-align: center;
+}	
+
+h2 {
+	width: 2000px;
+	margin-left: 10%;
+}
+
+.b2 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 100px;
+	width: 100px;
+	font-size: 32px;
+	vertical-align: bottom;
+}
+
+.b3 {
+	margin: 0px;
+	height: 42px;
+	width: 42px;
+	vertical-align: bottom;
+}
+
+.bImg {
+	height: 100px;
+	width: 100px;
+	margin-botton: 0px;
+}
+
+.c3 {
+	column-count: 3;	
+}
+
+.lEl {
+	font-size: 36px;
+}
+
+.pMid {
+	font-size: 32px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 20%;
+	margin-right: 25%;
+}
+
+.lMid {
+	margin-top: 24px;
+	margin-left: 38%;
+}
+
+.navL {
+	display: none;
+	margin-left: 45%;
+	margin-bottom: 0px;
+}
+
+.navR {
+	display: none;
+	margin-bottom: 0px;
+}
+
+.pFB {
+	display: none;
+	font-size: 48px;
+	margin-left: 48%;
+	margin-right: 10%;
+}
+
+pbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+h3 {
+	margin-left: 10px;
+}
+
+label {
+	font-size: 32px;
+	padding: 20px auto 20px;
+	margin-left: 10px;
+	margin-right: 25px;
+}
+
+.progressBar {
+	background-Color: blue;
+	width: 200px;
+	height: 36px;
+	margin-right: 6px;
+	margin-top: 0px;
+	margin-botton: 0px;
+	display: inline-block;
+}
+
+.score {
+	margin-right: 16px;
+	margin-left: 0px;
+	display: inline-block;
+	padding: 0;
+}
+
+.progressContainer {
+	display: inline-block;
+	overflow: hidden;
+	width: 200px;
+	height: 24px;
+	border: 10px solid #333333;
+	border-radius: 99px;
+	margin-right: 16px;
+}
+
+.progress {
+	display: block;
+	height: 100%;
+	background-color: blue;
+	border-radius: 99x;
+	-o-transition: .1s;
+	-moz-transition: .1s;
+	-webkit-transition: .1s;
+	transition: .1s;
+}
