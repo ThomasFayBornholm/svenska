@@ -1,26 +1,25 @@
 absolut 2
-aktivt 2
 aldrig 2
-allaredan 2
 alldeles 2
 allmänt 2
 allra 2
 alls 2
 allt 2
-allt mer (el. alltmer) 2
 alltför 2
 alltid 2
 alltjämt 2
+allt mer (el. alltmer) 2
 alltså 2
 allvarligt 2
 alternativt 2
-än (el. ännu) 2
-än så länge 2
 ända 2
 ändå 2
+än (el. ännu) 2
 annanstans 2
 annars 2
 annorlunda 2
+än så länge 2
+antagligen 2
 antagligen 2
 äntligen 2
 apropå 2
@@ -32,7 +31,6 @@ apropå 2
 åtskilligt 2
 automatiskt 2
 även 2
-avsevärd  2
 avsiktligt 2
 avslutningsvis 2
 bak 2
@@ -47,6 +45,7 @@ bi 2
 bland annat (förk. bl.a.) 2
 blixtsnabbt 2
 blott 2
+blott 2
 bokstavligen 2
 bort 2
 borta 2
@@ -55,11 +54,12 @@ bråttom 2
 brutto 2
 cirka (förk. ca) 2
 då 2
-då och då 2
 dagligen 2
 dåligt 2
 dåmera 2
+då och då 2
 där 2
+därav 2
 därav 2
 därefter 2
 däremot 2
@@ -67,15 +67,20 @@ därför 2
 däribland 2
 därifrån 2
 därigenom 2
+därigenom 2
+därmed 2
 därmed 2
 därpå 2
 därtill 2
+därtill 2
+därutöver 2
 därutöver 2
 därvid 2
 definitivt 2
 delvis 2
 dess 2
 dessförinnan 2
+dessutom 2
 dessutom 2
 dessvärre 2
 desto 2
@@ -121,8 +126,6 @@ föga 2
 följaktligen 2
 för 2
 för alltid 2
-för närvarande 2
-för övrigt 2
 förbi 2
 förbluffande 2
 före 2
@@ -130,31 +133,38 @@ före detta (förk. f.d., f d) 2
 företrädesvis 2
 förgäves 2
 förhållandevis 2
+förhållandevis 2
 förhoppningsvis 2
 formellt 2
 förmodligen 2
+för närvarande 2
+för övrigt 2
 förr 2
 förr eller senare 2
 förresten 2
 försiktigt 2
 först 2
-först och främst 2
 förstås 2
+först och främst 2
 försvinnande 2
 fort 2
+fortfarande 2
 fortfarande 2
 förtjust 2
 fortsättningsvis 2
 förut 2
 förvånansvärt 2
 förvisso 2
+förvisso 2
 fram 2
-fram och tillbaka 2
 framåt 2
 framför allt (el. framförallt) 2
 framgångsrikt 2
 framme 2
+fram och tillbaka 2
 framöver 2
+framöver 2
+främst 2
 främst 2
 fritt 2
 frivilligt 2
@@ -179,7 +189,6 @@ gott om 2
 gradvis 2
 gratis 2
 grovt 2
-gudskelov 2
 hädanefter 2
 halvvägs 2
 handgripligen 2
@@ -189,7 +198,7 @@ härligt 2
 härmed 2
 härom 2
 häromdagen 2
-häromdan 2
+häromdagen 2
 häromveckan 2
 hårt 2
 hastigt 2
@@ -205,61 +214,62 @@ himla 2
 historiskt 2
 hit 2
 hittills 2
-högerut 2
 högt 2
 hur 2
 hur som helst (el. hursomhelst) 2
+huvudsakligen 2
 huvudsakligen 2
 hyfsat 2
 i alla fall (el. iallafall; förk. iaf) 2
 i allmänhet 2
 i år 2
+ibland (el. i bland) 2
+idag (el. i dag) 2
 i fjol 2
 i första hand 2
 i förväg 2
 i fråga (el. ifråga) 2
+ifrån 2
 i fred 2
 i gång (el. igång) 2
-i grund och botten 2
-i huvudsak 2
-i likhet med 2
-i morse (el. imorse) 2
-i natt 2
-i och för sig 2
-i och med 2
-i onödan 2
-i övermorgon 2
-i övrigt 2
-i själva verket 2
-i stort sett 2
-i synnerhet 2
-i viss mån 2
-ibland (el. i bland) 2
-idag (el. i dag) 2
-ifrån 2
 igår (el. i går) 2
 igen 2
+i grund och botten 2
+i huvudsak 2
 ikväll (el. i kväll) 2
+i likhet med 2
 illa 2
 imorgon (el. i morgon) 2
+i morse (el. imorse) 2
 in 2
 inåt 2
+i natt 2
 indirekt 2
 ingalunda 2
+ingenstans 2
 ingenstans 2
 inledningsvis 2
 innan 2
 inne 2
 inomhus 2
 inrikes 2
-inte (formellt: icke, ej) 2
 inte ens 2
+inte (formellt: icke, ej) 2
 inte minst 2
 intensivt 2
 internationellt 2
 internt 2
 intill 2
+i och för sig 2
+i och med 2
+i onödan 2
+i övermorgon 2
+i övrigt 2
+i själva verket 2
 istället (el. i stället) 2
+i stort sett 2
+i synnerhet 2
+i viss mån 2
 jämförelsevis 2
 jämt 2
 ju 2
@@ -289,7 +299,9 @@ likadant 2
 likaledes 2
 likaså 2
 liksom 2
+liksom 2
 likt 2
+likväl 2
 likväl 2
 lite 2
 lite grann 2
@@ -299,16 +311,17 @@ löst 2
 lugnt 2
 lyckligtvis 2
 måhända 2
+måhända 2
 markant 2
 märkligt 2
 massvis 2
 med 2
 med andra ord 2
 med flera (förk. m.fl., m fl) 2
-medsols 2
 medvetet 2
 mer eller mindre 2
 mer och mer 2
+mestadels 2
 mestadels 2
 miljontals 2
 minsann 2
@@ -320,18 +333,19 @@ möjligen 2
 möjligt 2
 möjligtvis 2
 moraliskt 2
-motsols 2
 mycket 2
-någonsin (vardagl. nånsin) 2
 någonsin 2
+någonsin 2
+någonsin (vardagl. nånsin) 2
 någonstans (vardagl. nånstans) 2
 någorlunda 2
 något 2
 nämligen 2
+nämligen 2
 när 2
-när som helst 2
 nära 2
 närapå 2
+när som helst 2
 näst 2
 nästan 2
 nästintill 2
@@ -341,9 +355,8 @@ naturligtvis 2
 nedan 2
 nedåt 2
 negativt 2
-ner (el. ned) 2
 nere 2
-netto 2
+ner (el. ned) 2
 nödvändigtvis 2
 nog 2
 noga 2
@@ -352,10 +365,10 @@ nogsamt 2
 normalt 2
 norrut 2
 nu 2
-nuförtiden (el. nu för tiden) 2
 nuförtiden 2
-numera (el. numer) 2
+nuförtiden (el. nu för tiden) 2
 numera 2
+numera (el. numer) 2
 nyligen 2
 nyss 2
 oändligt 2
@@ -386,24 +399,24 @@ ovan 2
 ovanligt 2
 oväntat 2
 över 2
-över huvud taget (el. överhuvudtaget) 2
 överallt 2
 överdrivet 2
 överens 2
 överhuvudtaget 2
+över huvud taget (el. överhuvudtaget) 2
+överlag 2
 överlag 2
 övrigt 2
 på grund av (förk. p.g.a, pga., p g a) 2
 på något vis 2
+parallellt 2
 på så sätt 2
 på sätt och vis 2
 på sistone 2
-parallellt 2
 påtagligt 2
 perfekt 2
 periodiskt 2
 personligen 2
-platt 2
 plötsligt 2
 plus 2
 politiskt 2
@@ -429,20 +442,19 @@ rimligen 2
 rimligtvis 2
 roligt 2
 runt 2
-runt omkring 2
 runtom 2
+runt omkring 2
 så 2
 så att säga 2
+sådär 2
 så gott som 2
 så kallad (förk. s.k., s k) 2
-så pass 2
-så småningom (el. småningom) 2
-så snart som 2
-sådär 2
 säkerligen 2
 säkert 2
 såklart 2
 sakta 2
+således 2
+således 2
 således 2
 sällan 2
 sålunda 2
@@ -453,7 +465,10 @@ samt 2
 samtidigt 2
 sannerligen 2
 sannolikt 2
+så pass 2
 särskilt 2
+så småningom (el. småningom) 2
+så snart som 2
 sedan (vardagl. sen) 2
 sedermera 2
 senare 2
@@ -473,6 +488,7 @@ snällt 2
 snarare 2
 snarast 2
 snart 2
+snart 2
 snett 2
 snyggt 2
 socialt 2
@@ -480,7 +496,6 @@ söderut 2
 som 2
 som vanligt 2
 speciellt 2
-splitter 2
 spontant 2
 stadigt 2
 ständigt 2
@@ -508,23 +523,24 @@ teoretiskt 2
 tidigare 2
 tidigt 2
 till 2
+tillbaka (vardagl. tillbaks) 2
 till dess 2
 till exempel (förk. t.ex., t ex) 2
-till fullo 2
-till känna 2
-till och med (förk. t.o.m., t o m) 2
-till rätta 2
-till sist 2
-till slut 2
-till synes 2
-till vara 2
-tillbaka (vardagl. tillbaks) 2
 tillfälligt 2
 tillfälligtvis 2
+till fullo 2
 tillika 2
+tillika 2
+till känna 2
+till och med (förk. t.o.m., t o m) 2
 tillräckligt 2
-tills vidare 2
+till rätta 2
 tillsammans 2
+till sist 2
+till slut 2
+tills vidare 2
+till synes 2
+till vara 2
 tiotusentals 2
 totalt 2
 traditionellt 2
@@ -546,17 +562,19 @@ undantagslöst 2
 underbart 2
 ungefär 2
 upp 2
-upp och ner 2
 uppåt 2
 uppe 2
 uppenbarligen 2
 uppenbart 2
+upp och ner 2
 upprepat 2
 uppriktigt 2
 ursprungligen 2
 ut 2
 utanför 2
 utantill 2
+utantill 2
+utåt 2
 utåt 2
 ute 2
 uteslutande 2
@@ -566,24 +584,27 @@ utomhus 2
 utomlands 2
 utomordentligt 2
 uttryckligen 2
+uttryckligen 2
 vackert 2
 vad 2
+vad 2
 vad som helst 2
-vågrätt 2
+väl 2
 väl 2
 väldigt 2
 vanligen 2
 vänligen 2
 vanligt 2
 vanligtvis 2
-vänsterut 2
 var 2
+varav 2
 varav 2
 varför 2
 vari 2
 varifrån 2
 varigenom 2
 varmt 2
+varpå 2
 varpå 2
 värst 2
 vart 2
@@ -595,7 +616,6 @@ västerut 2
 verkligen 2
 verkligt 2
 vetenskapligt 2
-veterligen 2
 vida 2
 vidare 2
 vika 2
@@ -603,11 +623,15 @@ villigt 2
 vilse 2
 vilt 2
 visserligen 2
+visserligen 2
 visst 2
 vitt 2
 ytterligare 2
 ytterst 2
-ledvis 2
-styckevis 2
-styckvis 2
-föredetta 2
+aktivt 2
+vårätt 
+splitter 0
+häromdan 2
+veterligen 0
+gudskelov 0
+avsevärd 

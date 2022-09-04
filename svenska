@@ -1,52 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
 	<link rel="stylesheet" href="svenska.css">
-  <script src="jquery-3.5.1.min.js"></script>
+	<script src="jquery-3.4.1.min.js"></script>
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body onload="wordCount(); format()">
-<h1 id="iScore"></h1>
-<h2 id="iScore2">
-<span class="score" id="iScoreAdj"></span>
+<h1 class="pointer" id="iScore" onclick="showWords('all')" oncontextmenu="randomWord('all',event,this)"></h1>
+<span class="score pointer" id="iScoreAdj" onclick="showWords('adjektiv')" oncontextmenu="randomWord('adjektiv', event,this)"></span>
 	<span class="progressContainer">
 		<span class="progress" id="iProgAdj"></span>
 	</span>
-<span class="score" id="iScoreVerb"></span>
+<span class="score pointer" id="iScoreVerb" onclick="showWords('verb')" oncontextmenu="randomWord('verb', event,this)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgVerb"></span>
 </span>
-<span class="score" id="iScoreAdverb"></span>
+<span class="score pointer" id="iScoreAdverb" onclick="showWords('adverb')" oncontextmenu="randomWord('adverb', event,this)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgAdverb"></span>
 </span>
-<span class="score" id="iScoreSub_en"></span>
+<span class="score pointer" id="iScoreSub_en" onclick="showWords('substantiv_en')" oncontextmenu="randomWord('substantiv_en',event,this)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgSub_en"></span>
 </span>
-<span class="score" id="iScoreSub_ett"></span>
+<span class="score pointer" id="iScoreSub_ett" onclick="showWords('substantiv_ett')" oncontextmenu="randomWord('substantiv_ett', event,this)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgSub_ett"></span>
 </span>
-</h2>
-<div>
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
-<img class="titleHorse" src="img/Dalarna.jpg">
+<div class="dropdown">
+	<button class="b1 dropdownbtn" id="iSetGrade">Grade</button>
+	<div class="dropdown-content" id="iListShowGrades">
+		<p onclick="changeGrade(3)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">All</p>
+		<p onclick="changeGrade(-1)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Unknown</p>
+		<p onclick="changeGrade(0)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Low</p>
+		<p onclick="changeGrade(1)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Medium</p>
+		<p onclick="changeGrade(2)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">High</p>
+	</div>
 </div>
-<div class="row">
-  <div id="c1" class="column left" style="background-color:#aaa;">
-		<div id="iWordList">
-		<input class="iSearch" type="search" id="iWord";>
+<div>
+<img class="leftHorse titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="titleHorse" src="img/Dalarna.jpg">
+<img class="rghttHorse titleHorse" src="img/Dalarna.jpg">
+</div>
+<div class="Controls" id="iControls" style="background-color:#aaa;">
+	<div id="iInputList">
+		<div class="dropdown">
+			<img id="iDelete" class="dropdown b2 bL" src="img/Delete.png">
+				<div class="dropdown-content bL">
+					<p onclick="removeWord('adjektiv')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Adjektiv</p>
+					<p onclick="removeWord('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Verb</p>
+					<p onclick="removeWord('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Adverb</p>
+					<p onclick="removeWord('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Substantiv_en</p>
+					<p onclick="removeWord('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Substantiv_ett</p>
+				</div>
+			</div>
 		<div class="dropdown">
 			<button class="dropbtn b2">Add</button>
 			<div class="dropdown-content">
@@ -57,6 +73,8 @@
 				<p onclick=addWord("substantiv_ett") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Substantiv_ett</p>
 			</div>
 		</div>
+
+		<input class="iSearch" type="search" id="iInput";>
 		<img class="b2" id="iLookup" class="bImg" src="img/Dalarna.jpg" onclick="return lookupWord('')">
 		<div class="dropdown">
 			<img class="dropbtn b2" id="iTranslate" src="img/Magnify.png" onclick="return translateWord(false)">
@@ -66,45 +84,20 @@
 				<p onclick="exampleWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Example Word (Wikipedia)</p>
 			</div>
 		</div>
-		<div class="dropdown">
-			<img id="iDelete" class="dropdown b2" src="img/Delete.png"">
-			<div class="dropdown-content">
-				<p onclick="removeWord('adjektiv')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Adjektiv</p>
-				<p onclick="removeWord('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Verb</p>
-				<p onclick="removeWord('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Adverb</p>
-				<p onclick="removeWord('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Substantiv_en</p>
-				<p onclick="removeWord('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Substantiv_ett</p>
-			</div>
+		<img class="b2" id="iReadInp" src="img/Go.png" onclick="addTextPar()">
 		</div>
-		</div>
-
-  </div>
-  <div id="c2" class="column right" style="background-color:#bbb;">
-		<div class="dropdown">
-			<button class="dropbtn b1">Show</button>
-			<div class="dropdown-content">
-				<p onclick=showWords("all") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">All</p>
-				<p onclick=showWords("adjektiv") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adjektiv</p>
-				<p onclick=showWords("verb") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
-				<p onclick=showWords("adverb") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
-				<p onclick=showWords("substantiv_en") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Substantiv_en</p>
-				<p onclick=showWords("substantiv_ett") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Substantiv_ett</p>
-			</div>
-		</div>
-		<button class="b1" id="iSetGrade" oncontextmenu="changeGrade(event, this)" onclick="changeGrade(event,this)">Grade</button>
-		<button class="b1" id="iAllGradesToggle" onclick="allGrades(this)">All</button>
-		<input class="iSearch" id="iInpText" type="search">
-		<img class="b3" id="iReadInp" src="img/Go.png" onclick="addTextPar()">
-		<br>
-		<label id="iShowStatus"></label>
-		<label id="iShowSt"></label>
-
+	</div>
   </div>
 </div>
-<img class="b2 navL" src="img/leftArrow.png" id="iPrev" onclick="dec()" oncontextmenu="resetInd(event)">
-<img class="b2 navR" src="img/rightArrow.jpg" id="iNext" onclick="inc()" oncontextmenu="satInd(event)">
+<form class="navL" id="iFormNav" onsubmit="seek(event, this)">
+<img class="b2" src="img/leftArrow.png" id="iPrev" onclick="dec()" oncontextmenu="resetInd(event)">
+<img class="b2" src="img/rightArrow.jpg" id="iNext" onclick="inc()" oncontextmenu="satInd(event)">
+<input class="b2" id="iNavText" type="search">
+<label id="iShowSt"></label>
+</form>
 <label class="pFB" id="iParInd"></label>
 <p class="pMid" id="iTextPar"></p>
+<p class="pBig pointer" id="iTextWord"></p>
 <ol class="lMid" id="iKnownList"></ol>
 </body>
 <script>
@@ -121,6 +114,12 @@ function format() {
 	for (i = 0; i < el.length; i++) {
 		el[i].style.cursor = "pointer";
 	}
+	el = document.getElementsByClassName("pointer");
+	for (i = 0; i < el.length; i++) {
+		el[i].addEventListener("mouseover", function() {
+			this.style.cursor = "pointer";
+		})
+	}
 	el = document.getElementsByClassName("h3");
 	for (i = 0; i < el.length; i++) {
 		el[i].addEventListener("mouseover", function() {
@@ -136,6 +135,7 @@ let RANGE=25;
 let WORDS = "";
 let IND = 0;
 let PAR_IND = 0;
+let PAR_BUFF="";
 let ACTIVE="white";
 
 let N_TOT = 0;
@@ -161,7 +161,7 @@ showButtons["iShowSub_en"] = "substantiv_en";
 showButtons["iShowSub_ett"] = "substantiv_ett";
 
 function addWord(c) {
-	let word = document.getElementById("iWord").value;
+	let word = document.getElementById("iInput").value;
 	wordList = [];
 	var uppBound;
 	if (word.includes(",")) {
@@ -216,8 +216,8 @@ function addWord(c) {
 
 function removeWord(c) {
   // Remove from "active list" list
-	let iWord = document.getElementById("iWord");
-	let w = iWord.value;
+	let iInput = document.getElementById("iInput");
+	let w = iInput.value;
 	if (w.length === 0) {
 		return;
 	}
@@ -236,8 +236,7 @@ function removeWord(c) {
 			if (json === "-1") {
 				console.log("Failed to delete word: " + w);
 			}	else {
-				iWord.value = "";	
-				showWords(c);
+				iInput.value = "";	
 			}
 			wordCount();
 		})
@@ -282,7 +281,7 @@ function wordCount() {
 			score_p = json[score];	
 			$(id).css("width", score_p + "%");
 		}
-		let c = document.getElementById("iShowStatus").innerText;	
+		let c = getSelectedClass();
 		var tot=0;
 		switch (c) {
 			case "adjektiv":
@@ -323,12 +322,33 @@ function wordCount() {
 }
 
 function showWords(c) {
+	if (c === "Show") {
+		c = "all";
+	}
+	clearSelectedClass();
+	switch (c) {
+		case 'adjektiv':
+			$('#iScoreAdj').css("font-weight", "bold");
+			break;
+		case 'verb':
+			$('#iScoreVerb').css("font-weight", "bold");
+			break;
+		case 'adverb':
+			$('#iScoreAdverb').css("font-weight", "bold");
+			break;
+		case 'substantiv_en':
+			$('#iScoreSub_en').css("font-weight", "bold");
+			break;
+		case 'substantiv_ett':
+			$('#iScoreSub_ett').css("font-weight", "bold");
+			break;
+		default:
+	}
 	clearText();
-	let regex = document.getElementById("iWord").value;
+	clearWord();
+	let regex = document.getElementById("iInput").value;
 	let g = getGrade(document.getElementById("iSetGrade"));
-	var el;
-	el = document.getElementById("iShowStatus"); 
-	el.innerHTML = c;
+
 	fetch('backend/showWords.php?class=' + c + '&regex=' + regex + "&grade=" + g, {
 		method: 'get',
 		mode: 'cors',
@@ -340,10 +360,13 @@ function showWords(c) {
 		return response.json();
 	})
 	.then(json => {
-		clearList();
+		if (json.length < 10) {
+			clearNav();
+		}
+		refreshList();
 		let ol = document.getElementById("iKnownList");
 		if (PAR_IND > json.length / 10) {
-			PAR_IND = parseInt(json.length / 10);
+			PAR_IND = parseInt(json.length / 10) - 10;
 		}
 		let start = 10 * PAR_IND;
 		let end = start + 10;
@@ -352,7 +375,18 @@ function showWords(c) {
 		}	
 		ol.start = start + 1;
 		for (let i = start; i < end; i++) {
-			let el = document.createElement("li");
+			var el;
+			let append = false;
+			let nEls = $('#iKnownList').children().length;
+			let ind = i - start;
+			if (nEls > ind) {
+				let tmpId = "#i" + ind;
+				el = $(tmpId);
+			} else {
+				el = document.createElement("li");
+				append = true;
+			}
+
 			word = json[i].replaceAll(" 0", "").replaceAll(" 1", "").replaceAll(" 2", "")
 			
 			let fmt = "";
@@ -363,7 +397,7 @@ function showWords(c) {
 			} else {
 				fmt = word;
 			}
-			let par = '"' + word + '"';
+			let par = word;
 			par = par.replace("a ","a_");
 			par = par.replace("i ","i_");
 			par = par.replace("y ","y_");
@@ -371,37 +405,55 @@ function showWords(c) {
 			par = par.replace("å ","å_");
 			par = par.replace("g ","g_");
 			par = par.replace("r ","r_");
-			let tmp = "<span class='lEl' id='i" + i + "' onclick=lookupWord(" + par +  ")>" + fmt + "</span>";
-			el.innerHTML = tmp;
-			let id = "i" + i + "_class";
-			el.innerHTML += "<span class='lEl' id='i" + i + "_class'>________</span>";
-			ol.appendChild(el);
-					el = document.getElementById(id)
-			el.addEventListener("mouseover", function() {
-				this.style.cursor = "pointer";
-			})
-			el.addEventListener("click", function(event) {
-				classifyWord(this, false);
-			})
-			el.addEventListener("contextmenu", function(event) {
-				event.preventDefault();
-				classifyWord(this,true);
-			})
-			tmp = id.replace("_class","");
-			el = document.getElementById(tmp);
-			el.addEventListener("mouseover", function() {
-				this.style.cursor = "help";
-			})
-			el.addEventListener("contextmenu", function(event) {
-				event.preventDefault();
-				placeWord(this);
-			})
+			let tmp = "<span class='lEl' id='i" + ind + "'>" + fmt + "</span>";
+			tmp += "<span class='lEl' id='i" + ind + "_class'>________</span>";
+
+			if (append) {
+				// Create spans and populate them
+				el.innerHTML = tmp;
+				ol.appendChild(el);
+				// Word
+				el = $("#i" + i);
+				el.on("click", function() {
+					lookupWord(this.innerText);
+				})
+				el.on("mouseover", function() {
+					this.style.cursor = "help";
+				})
+				el.on("contextmenu", function(event) {
+					event.preventDefault();
+					placeWord(this);
+				})
+				// Word Classifier - not interesting for "all" words list
+				if (c !== "all") {
+					el = $("#i" + i + "_class");
+					el.mouseover(function() {
+						this.style.cursor = "pointer";
+					})
+					el.on("click", function(event) {
+						classifyWord(this, false);
+					})
+					el.on("contextmenu", function(event) {
+						event.preventDefault();
+						classifyWord(this,true);
+					})
+				}
+			} else {
+				// update i<n> content
+				el.html(fmt);
+			}
 		}
+	
+		if (end % 10 != 0 || end === 0) {
+			for (i = end % 10; i < 10; i++) {
+				let tmpId = "#i" + i;
+				$(tmpId).parent().remove();
+			}		
+		}		
 		if (json.length > 10) {
-			el = document.getElementById("iPrev");
-			el.style.display = "inline-block";
-			el = document.getElementById("iNext");
-			el.style.display = "inline-block";
+			$('#iFormNav').css("display", "block");
+			$('#iPrev').css("display", "inline-block");
+			$('#iNext').css("display", "inline-block");
 		}
 		el = document.getElementById("iShowSt");
 		var score=0.0;
@@ -440,7 +492,8 @@ function showWords(c) {
 }
 
 function showWordsRefresh() {
-	c = $("#iShowStatus").text();
+	c = getSelectedClass();
+	console.log(c);
 	if (c) {
 		showWords(c);
 	}
@@ -462,7 +515,7 @@ function classifyWord(el, demote) {
 		demote ? g = 1 : g = 2;
 	}
 	let w = el.previousSibling.innerText;
-	c = document.getElementById("iShowStatus").innerText;
+	c = getSelectedClass();
 	if (g === 0) {
 		el.previousSibling.innerHTML = "<b>" + w + "</b>";
 	} else if (g === 1) {
@@ -498,6 +551,24 @@ function clearList() {
 		}
 }
 
+function refreshList() {
+		
+	$('#iKnownList').children().each(function() {
+		// Clear only the span content to allow cheap content change
+		// read ID
+		let tmp = this.innerHTML;
+		let pos = tmp.search('id="i');
+		tmp = tmp.substr(pos+4);
+		pos = tmp.search('"');
+		tmp = "#" + tmp.substr(0,pos);
+		el = $(tmp)[0];
+		el.innerText = "";
+		el.style.color="";
+		tmp += "_class";
+		$(tmp).innerText = "";
+	})
+}
+
 function resetListing() {
 	clearList();
 }
@@ -516,14 +587,14 @@ function removeBar(word) {
 function lookupWord(word) {
 	word = removeBar(word);
 	if (word === "") {
-		word = document.getElementById("iWord").value;
+		word = document.getElementById("iInput").value;
 	}
 	let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
 	window.open(url, '_blank');
 }
 
 function translateWord(toEnglish) {
-	let word = document.getElementById("iWord").value;
+	let word = document.getElementById("iInput").value;
 	let url = "https://translate.google.com/?sl=en&tl=sv&text=" + word + "&op=translate";
 	if (toEnglish) {
 		url="https://tyda.se/search/<word>?lang%5B0%5D=en&lang%5B1%5D=sv"
@@ -533,21 +604,31 @@ function translateWord(toEnglish) {
 }
 
 function exampleWord() {
-	let word = document.getElementById("iWord").value;
+	let word = document.getElementById("iInput").value;
 	let url='https://sv.wikipedia.org/w/index.php?search="' + word + '&title=Special:Sök&profile=advanced&fulltext=1&searchengineselect=on&ns0=';
 	window.open(url, '_blank')
 }
 
 function addTextPar() {
+	$('#iTextPar').css("display", "block");
 	clearList();
+	clearWord();
 	clearShowStats();
 	PAR_IND = 0;
+	PAR_BUFF = $('#iInput').val();
 	updateTextPar();
 }
+
 function updateTextPar() {
-	let par = document.getElementById("iInpText").value;	
+	$('#iFormNav').css("marginLeft","45%");
+	let par = PAR_BUFF; 
 	// Mark end of paragraph for formatting reasons.
 	parArr = par.split("  ");
+	if (parArr.length > 0) {
+		$('#iFormNav').css("display", "block");
+		$('#iNavText').css("display", "none");
+	}
+
 	if (PAR_IND > parArr.length - 1) {
 		PAR_IND = parArr.length - 1;
 	}
@@ -583,7 +664,7 @@ function updateTextPar() {
 }
 
 function checkWord(el) {
-	let inp = document.getElementById("iWord");
+	let inp = document.getElementById("iInput");
 	let word = el.innerText;
 	let tmp = word.split(".");
 	word = tmp[0];
@@ -595,7 +676,7 @@ function checkWord(el) {
 }
 
 function placeWord(el) {
-	let inp = document.getElementById("iWord");
+	let inp = document.getElementById("iInput");
 	let word = el.innerText;
 	let tmp = word.split(".");
 	word = tmp[0];
@@ -655,6 +736,7 @@ function inc() {
 }
 
 function dec() {
+	console.log("dec");
 	if (PAR_IND === 0) {
 		PAR_IND = 0;
 	} else {
@@ -692,21 +774,8 @@ function getGrade(el) {
 	return grade;
 }
 
-function changeGrade(event, el) {
-	event.preventDefault();
-	let inc = (event.button === 0);
-	let grade = getGrade(el);
-	if (inc) {
-		grade += 1;	
-	} else {
-		grade -= 1;
-	}
-	if (grade > 3) {
-		grade = 3;
-	} else if (grade < -1) {
-		grade = -1;
-	}	
-
+function changeGrade(grade) {
+	el = document.getElementById("iSetGrade");
 	switch (grade) {
 		case -1:
 			el.style.backgroundColor = "black";
@@ -728,6 +797,9 @@ function changeGrade(event, el) {
 			el.style.backgroundColor = "white";
 			el.style.color = "black";
 			break;
+		default:
+			el.style.backgroundColor = "black";
+			el.style.color = "white";
 	}
 	showWordsRefresh();
 }
@@ -746,23 +818,29 @@ function allGrades(el) {
 	showWordsRefresh();
 }
 
+function clearNav() {
+	$('#iFormNav').css("display", "none");
+	$('#iPrev').css("display", "inline-block");
+	$('#iNext').css("display", "inline-block");
+	$('#iNavText').css("display", "inline-block");
+	$('#iFormNav').css("marginLeft","");
+}
+
+
+
 function clearText() {
-	let el = document.getElementById("iPrev");
-	el.style.display = "none";
-	el = document.getElementById("iNext");
-	el.style.display = "none";
-	el = document.getElementById("iParInd");
-	el.style.display = "none";
-	
-	el = document.getElementById("iTextPar");
-	el.innerHTML = "";
-}	
+	$('#iParInd').css("display", "none");
+	$('#iTextPar').html("");
+	$('#iTextPar').css("display", "none");
+}
+
+function clearWord() {
+	$('#iTextWord').html("");
+	$('#iTextWord').css("display", "none");
+}
 
 function clearShowStats() {
-	let el = document.getElementById("iShowStatus");
-	el.innerHTML = "";
-	el = document.getElementById("iShowSt");
-	el.innerHTML = "";
+	$("#iShowSt").html("");
 }
 
 function highlight(el,event) {
@@ -773,6 +851,102 @@ function highlight(el,event) {
 		el.style.cursor = "";
 		el.style.backgroundColor = ""; 
 	}
+}
+
+function clearSelectedClass() {
+	$('#iScoreAdj').css("font-weight", "");
+	$('#iScoreVerb').css("font-weight", "");
+	$('#iScoreAdverb').css("font-weight", "");
+	$('#iScoreSub_en').css("font-weight", "");
+	$('#iScoreSub_ett').css("font-weight", "");
+}
+
+function randomWord(c, event, el) {
+	clearSelectedClass();
+	el.style.fontWeight = "bold";
+	event.preventDefault();
+	$('#iTextWord').css("display","block");
+	$('#iTextWord').css("color","black");
+	$('#iTextWord').html="";
+	clearText();
+	clearList();
+	clearNav();
+	fetch('backend/randomWord.php?class=' + c, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		if (json.length > 0) {
+			// Show word nice and visible
+			$('#iTextWord').html(json);
+			$('#iTextWord').on("click", function() {
+				lookupWord(this.innerText);	
+			})
+			$('#iTextWord').on("contextmenu", function(event) {
+				event.preventDefault();
+				placeWord(this);	
+			})
+		}
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
+function seek(event, el) {
+	c = getSelectedClass();
+	event.preventDefault();
+	let num = $('#iNavText').val();
+	try {
+		num = parseInt(num);
+		PAR_IND = Math.floor(num / 10);
+	} catch(err) {
+		return;
+	}
+	let res = activeContent();
+	switch (res) {
+		case 0:
+			showWords(c);
+			break;
+		default:
+	}
+}	
+
+function activeContent() {
+	if ($('#i1').text().length > 0) {
+		return 0;
+	}
+	if ($('#iKnownList').children().first().length > 0) {
+		return 1;
+	}
+	if ($('#iTextPar').text().length > 0) {
+		return 2;
+	}
+}
+
+function getSelectedClass() {
+	if ($('#iScoreAdj').css("font-weight") > 400) {
+		return 'adjektiv';
+	}
+	if ($('#iScoreVerb').css("font-weight") > 400) {
+		return 'verb';
+	}
+	if ($('#iScoreAdverb').css("font-weight") > 400) {
+		return 'adverb';
+	}
+	if ($('#iScoreSub_en').css("font-weight")  > 400) {
+		return 'substantiv_en';
+	}
+	if ($('#iScoreSub_ett').css("font-weight")  > 400) {
+		return 'substantiv_ett';
+	}
+	return "all";
 }
 
 </script>
