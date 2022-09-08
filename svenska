@@ -134,7 +134,8 @@ function format() {
 let RANGE=25;
 let WORDS = "";
 let IND = 0;
-let PAR_IND = 0;
+let CONTENT_IND = 0;
+let CONTENT_STEP = 1;
 let PAR_BUFF="";
 let ACTIVE="white";
 
@@ -322,6 +323,7 @@ function wordCount() {
 }
 
 function showWords(c) {
+	CONTENT_STEP=10;
 	if (c === "Show") {
 		c = "all";
 	}
@@ -365,10 +367,10 @@ function showWords(c) {
 		}
 		refreshList();
 		let ol = document.getElementById("iKnownList");
-		if (PAR_IND > json.length / 10) {
-			PAR_IND = parseInt(json.length / 10) - 10;
+		if (CONTENT_IND > json.length) {
+			CONTENT_IND = (parseInt(json.length / 10)) * 10;
 		}
-		let start = 10 * PAR_IND;
+		let start = CONTENT_IND;
 		let end = start + 10;
 		if (end > json.length) {
 			end = json.length;
@@ -493,7 +495,6 @@ function showWords(c) {
 
 function showWordsRefresh() {
 	c = getSelectedClass();
-	console.log(c);
 	if (c) {
 		showWords(c);
 	}
@@ -610,11 +611,12 @@ function exampleWord() {
 }
 
 function addTextPar() {
+	CONTENT_STEP=1;
 	$('#iTextPar').css("display", "block");
 	clearList();
 	clearWord();
 	clearShowStats();
-	PAR_IND = 0;
+	CONTENT_IND = 0;
 	PAR_BUFF = $('#iInput').val();
 	updateTextPar();
 }
@@ -629,12 +631,12 @@ function updateTextPar() {
 		$('#iNavText').css("display", "none");
 	}
 
-	if (PAR_IND > parArr.length - 1) {
-		PAR_IND = parArr.length - 1;
+	if (CONTENT_IND > parArr.length - 1) {
+		CONTENT_IND = parArr.length - 1;
 	}
 	let parInd = document.getElementById("iParInd");
-	parInd.innerHTML = (PAR_IND + 1) + "/" + parArr.length;
-	par = parArr[PAR_IND];
+	parInd.innerHTML = (CONTENT_IND + 1) + "/" + parArr.length;
+	par = parArr[CONTENT_IND];
 	let words = par.split(" ");
 	let wc = words.length;
 	if (words[0] === "") {
@@ -705,7 +707,7 @@ function cleanWord(w) {
 
 function resetInd(e) {
 	e.preventDefault();
-	PAR_IND = 0;
+	CONTENT_IND = 0;
 	let par = document.getElementById("iTextPar").innerText;
 	if (par) {
 		updateTextPar();
@@ -716,7 +718,7 @@ function resetInd(e) {
 
 function satInd(e) {
 	e.preventDefault();
-	PAR_IND = 1000;
+	CONTENT_IND = 1000;
 	let par = document.getElementById("iTextPar").innerText;
 	if (par) {
 		updateTextPar();
@@ -726,7 +728,7 @@ function satInd(e) {
 }
 
 function inc() {
-	PAR_IND += 1;
+	CONTENT_IND += CONTENT_STEP;
 	let par = document.getElementById("iTextPar").innerText;
 	if (par) {
 		updateTextPar();
@@ -736,11 +738,9 @@ function inc() {
 }
 
 function dec() {
-	console.log("dec");
-	if (PAR_IND === 0) {
-		PAR_IND = 0;
-	} else {
-		PAR_IND -= 1;
+	CONTENT_IND -= CONTENT_STEP;
+	if (CONTENT_IND <= 0) {
+		CONTENT_IND = 0;
 	}
 	let par = document.getElementById("iTextPar").innerText;
 	if (par) {
@@ -905,7 +905,7 @@ function seek(event, el) {
 	let num = $('#iNavText').val();
 	try {
 		num = parseInt(num);
-		PAR_IND = Math.floor(num / 10);
+		CONTENT_IND = Math.floor(num / CONTENT_STEP) * CONTENT_STEP;
 	} catch(err) {
 		return;
 	}
