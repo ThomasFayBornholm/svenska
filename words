@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="svenska.css">
+	<script src="jquery-3.4.1.min.js"></script>
+	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="startup()">
+<!--progress bar-->
+<div onwheel="scrollView(event)">
+<button id="iShowToggle" onclick="showToggle()">HIDE</button>
+<span class="progressContainer">
+	<span class="progress" id="iProg"></span>
+</span>
+<span class="progressContainer">
+	<span class="progress" id="iDefProg"></span>
+</span>
+<div>
+<div class="dropdown">
+	<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg">
+	<div class="dropdown-content">
+		<p onclick="setClass('adjektiv')">Adjektiv</p>
+		<p onclick="setClass('verb')">Verb</p>
+		<p onclick="setClass('adverb')">Adverb</p>
+		<p onclick="setClass('substantiv_en')">En</p>
+		<p onclick="setClass('substantiv_ett')">Ett</p>
+		<p onclick="setClass('test')">Test</p>
+	</div>
+</div>
+</div>
+<form onsubmit="seekWord(event)">
+	<input id="iSeek">
+</form>
+</div>
+<div class="row columns_4">
+	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
+		<p id="iWords" class="fmtWords">Test<br>Words</p>
+	</div>
+	<div class="column" onwheel="scrollView(event)">
+		 <p class="pDef" id="iParDef"></p>
+	</div>
+	<div class="column" onwheel="scrollView(event)">
+	</div>
+</div>
+<form class="defInput" id="iDefForm" onsubmit="putDef(event)">
+<input class="iDef" id="iDef" onwheel="scrollView(event)">
+</form>
+<div id="iOutsideBottom" class="outside" onwheel="scrollView(event)" style="height: 1200px">
+	<p></p>
+</div>
+</body>
+<script>
+
+let INC = 0;
+let N_INC= 8;
+let SCROLL_INC=0
+let N_FOUND=0;
+
+let N_TOT=0;
+let N_ADJ=0;
+let N_VERB=0;
+let N_ADVERB=0;
+let N_EN=0;
+let N_ETT=0;
+let N_TEST=0;
+let N_CUR=0;
+let N_DEFS = 0;
+
+let LAST_WORD="";
+let CLASS = "test";
+var LAST_OBJ;
+
+let DEBUG=true;
+
+function startup() {
+	wordCount();
+	getWords();
+	setN_CUR();
+	getProgress();
+	countDefs();
+}
+
+function setN_CUR() {
+	if (CLASS === "test") {
+		N_CUR = N_TEST;
+	} else if (CLASS === "adjektiv") {
+		N_CUR = N_ADJ;
+	} else if (CLASS === "verb") {
+		N_CUR = N_VERB;
+	} else if (CLASS === "adverb") {
+		N_CUR = N_ADVERB;
+	} else if (CLASS === "substantiv_en") {
+		N_CUR = N_EN;
+	} else if (CLASS === "substantiv_ett") {
+		N_CUR = N_ETT;
+	}
+	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
+}
+function getProgress() {
+	var proj;
+	if (N_CUR != 0) {
+		prog = INC/N_CUR *100;
+	} else {
+		prog = 0;
+	}
+	$('#iProg').css("width", prog + "%");	
+	if (DEBUG) console.log("getProgress(); prog = " + prog); 
+}
+function putDef(e) {
+	e.preventDefault()
+	fetch('backend/putDef.php?class=' + CLASS + '&word=' + LAST_WORD + '&def=' + $('#iDef').val(), {
+		method: 'get',
+		mode:	'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	$('#iDef').val("")
+}
+function changeInc(delta) {
+	if (INC + delta > N_CUR) {
+		INC = INC;
+	} else {
+		INC += delta
+	}
+	if (INC < 0) {
+		INC = 0 
+	}
+	getProgress();
+	if (DEBUG) console.log("changeInc(" + delta + ")" + "-> INC: " + INC);
+}
+function advance() {
+	changeInc(N_INC)
+	getWords()
+}
+function retreat(e) {
+	e.preventDefault()
+	changeInc(-N_INC)
+	getWords()
+}
+function getWords() {
+	SCROLL_INC=-1;
+	N_FOUND=0;
+	$('#iParDef').text("");
+	fetch("backend/getWords.php?class=" + CLASS + "&start=" + INC + "&num=" + N_INC, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json',
+		}
+	})
+	.then(response => {
+		return response.json()
+	})
+	.then(json => {
+		let out = ""
+		N_FOUND=json.length;
+		if (N_FOUND > 0) {
+			for (let i = 0; i < N_FOUND; i++) {
+				let del = "<br>"
+				if (i === 0) { 
+					del = ""
+				}
+				out += del + popSpan(i, json[i]) 
+			}
+			$('#iWords').html(out)
+			getProgress();
+		}
+	})
+}
+
+function scrollView(e) {
+	e.preventDefault();
+	if (e.deltaY > 0) {
+		changeInc(N_INC);
+	} else {
+		changeInc(-N_INC);
+	}
+	getWords();
+}
+
+function scrollWords(e) {
+	e.preventDefault();
+	if (event.deltaY > 0) {
+		if (SCROLL_INC < N_FOUND-1) {
+			SCROLL_INC++;
+		}
+	} else {
+		if (SCROLL_INC > 0) {
+			SCROLL_INC--;
+		} else if (SCROLL_INC == -1) {
+			SCROLL_INC = N_FOUND - 1;
+		}
+	}
+	// Show local definition if available
+	let id = "w" + SCROLL_INC;
+	let el = document.getElementById(id);
+	lookupWord(el,true);
+	if (DEBUG) console.log("scrollWords() -> SCROLL_INC = " + SCROLL_INC);
+}
+function popSpan(i, w) {
+	tmp = "<span id='w<i>' onclick='lookupWord(this,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
+	return tmp.replace("<i>",i).replaceAll("<w>",w)
+}
+
+function lookupWord(el,onlyLocal) {
+	if (LAST_OBJ) {
+		LAST_OBJ.style.fontWeight="";
+	}
+	el.style.fontWeight="bold";
+	let word = el.innerText;
+	LAST_WORD=word;
+	LAST_OBJ = el;
+	scroll_inc = el.id.replace("w","");
+	if (scroll_inc > -1 && scroll_inc < N_INC) {
+		SCROLL_INC = scroll_inc; 
+	}
+	fetch('backend/getDef.php?class=' + CLASS + '&word='+ word, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json()
+	})
+	.then(json => {
+		// Prefer local definitions
+		if (json != "No definition found" && json != "Could not read json") {
+			$('#iParDef').html(json);
+			$('#iDefForm').css("visibility", "hidden");
+		} else {
+			if (!onlyLocal) {
+				let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
+				window.open(url, '_blank');
+			}
+			$('#iParDef').html("");
+			$('#iDefForm').css("visibility", "visible");
+			$('#iDef').focus();
+		}
+	})
+	.catch(error => {
+		console.log(error)
+	})
+}
+
+function onlineLookup(el, e) {
+	e.preventDefault()
+	word = el.innerText;
+	let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
+	window.open(url, '_blank');
+}
+
+function wordCount() {
+	fetch('backend/wordCount.php', {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		N_TOT = json["total"];
+		N_ADJ = json["adj"];
+		N_VERB = json["verb"];
+		N_ADVERB = json["adverb"];
+		N_EN = json["substantiv_en"];
+		N_ETT = json["substantiv_ett"];
+		N_TEST= json["test"];
+		setN_CUR();
+		getProgress();
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
+function showToggle() {
+	let hide= $('#iShowToggle').text() === "HIDE";
+	if (hide) {
+		// Hide controls 
+		$('#iSeek').css("visibility", "hidden");
+		$('#iSelect').css("visibility", "hidden");
+		$('#iShowToggle').text("__");
+	} else {
+		// Make visible class selector and word seeker controls
+		$('#iSeek').css("visibility", "visible");
+		$('#iSelect').css("visibility", "visible");
+		$('#iShowToggle').text("HIDE");
+		$('#iSeek').focus();
+	}
+	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iSeek').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
+}
+function seekWord(e) {
+	e.preventDefault()
+	let word = $('#iSeek').val();
+	if (word.length > 0) {
+		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			INC = json;			
+			getProgress();
+			getWords();
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	}
+	if (DEBUG) console.log("seekWord(); word = " + word + " -> INC = " + INC);
+}
+function setClass(c) {
+	CLASS = c;
+	INC = 0;
+	SCROLL_INC=-1;
+	countDefs();
+	setN_CUR();
+	getProgress();
+	getWords();
+	if (DEBUG) console.log("setClass(c); CLASS = " + CLASS + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
+}
+function countDefs() {
+	N_DEFS = 0;
+	$('#iDefProg').css("width", "0%");
+	fetch('backend/countDef.php?class=' + CLASS, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		if (json != "Failed to read definition file.") {	
+			N_DEFS=json;
+			if (DEBUG) console.log("countDefs(); N_DEFS = " + N_DEFS);
+			$('#iDefProg').css("width", N_DEFS/N_CUR * 100 + "%");
+		} else {
+			if (DEBUG) console.log("countDefs(); N_DEFS = " + N_DEFS);
+		}
+	})
+}
+</script>
+</html>

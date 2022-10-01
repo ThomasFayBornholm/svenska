@@ -100,9 +100,25 @@ h2 {
 	margin-top: 20px;
 	margin-left: 20%;
 	margin-right: 25%;
+	height: 800px;
 }
-.pointer {
+.row {
+	display: flex;	
+}
+.column {
+	flex: 25%;
+}
 
+.columns_four {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.pDef {
+	font-size: 36px;
+	margin-top: 8%;
+	margin-left: 2%;
 }
 .pBig {
 	font-size: 128px;
@@ -216,6 +232,21 @@ label {
 	transition: .1s;
 }
 
+.defInput {
+	visibility: hidden;
+}
+
+.iDef {
+	width: 50%;
+	font-size: 24px;
+}
+.outside {
+	height: 120px;
+}
+.fmtWords {
+	margin-left: 5%;
+	font-size: 60px
+}
 
 #iShowBtn {
 	width: 256px;
@@ -224,4 +255,3 @@ label {
 #iListShowClass {
 	width: 256px;
 }
-

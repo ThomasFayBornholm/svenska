@@ -16,19 +16,13 @@
 
 	$outfile = fopen($fileName, "a") or die("Could not open file: " . $fileName);
 	$outfileAll = fopen($allName, "a") or die("Could not open file: " . $allName);
-	// Check the word is not already listed
 	$word = $_GET['word'];
 	$elements= preg_split("/\r\n|\r|\n/", $contents);
 
-	$addTheWord = true;	
-	foreach ($elements as $el) {
-		if ($el == $word) {
-			$addTheWord = false;
-		}
-	}
+	// Previous action has checked that the word does not already exist in the listing 
 
-	if ($addTheWord) {	
-		// Append word to known words listing
+	// Add word add correct position in file
+	 
 		$res = fwrite($outfile, $word . " 0\n");
 		$res = fwrite($outfileAll, $word . "\n");
 	}

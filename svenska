@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="sv">
 <head>
 	<link rel="stylesheet" href="svenska.css">
 	<script src="jquery-3.4.1.min.js"></script>
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body onload="wordCount(); format()">
-<h1 class="pointer" id="iScore" onclick="showWords('all')" oncontextmenu="randomWord('all',event,this)"></h1>
-<span class="score pointer" id="iScoreAdj" onclick="showWords('adjektiv')" oncontextmenu="randomWord('adjektiv', event,this)"></span>
+<h1 class="pointer" id="iScore" onclick="showWords('all')" oncontextmenu="randomWord('all',event)"></h1>
+<span class="score pointer" id="iScoreAdj" onclick="showWords('adjektiv')" oncontextmenu="randomWord('adjektiv', event)"></span>
 	<span class="progressContainer">
 		<span class="progress" id="iProgAdj"></span>
 	</span>
-<span class="score pointer" id="iScoreVerb" onclick="showWords('verb')" oncontextmenu="randomWord('verb', event,this)"></span>
+<span class="score pointer" id="iScoreVerb" onclick="showWords('verb')" oncontextmenu="randomWord('verb', event)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgVerb"></span>
 </span>
-<span class="score pointer" id="iScoreAdverb" onclick="showWords('adverb')" oncontextmenu="randomWord('adverb', event,this)"></span>
+<span class="score pointer" id="iScoreAdverb" onclick="showWords('adverb')" oncontextmenu="randomWord('adverb', event)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgAdverb"></span>
 </span>
-<span class="score pointer" id="iScoreSub_en" onclick="showWords('substantiv_en')" oncontextmenu="randomWord('substantiv_en',event,this)"></span>
+<span class="score pointer" id="iScoreSub_en" onclick="showWords('substantiv_en')" oncontextmenu="randomWord('substantiv_en',event)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgSub_en"></span>
 </span>
-<span class="score pointer" id="iScoreSub_ett" onclick="showWords('substantiv_ett')" oncontextmenu="randomWord('substantiv_ett', event,this)"></span>
+<span class="score pointer" id="iScoreSub_ett" onclick="showWords('substantiv_ett')" oncontextmenu="randomWord('substantiv_ett', event)"></span>
 <span class="progressContainer">
 	<span class="progress" id="iProgSub_ett"></span>
 </span>
@@ -59,8 +58,8 @@
 					<p onclick="removeWord('adjektiv')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Adjektiv</p>
 					<p onclick="removeWord('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Verb</p>
 					<p onclick="removeWord('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Adverb</p>
-					<p onclick="removeWord('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Substantiv_en</p>
-					<p onclick="removeWord('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Substantiv_ett</p>
+					<p onclick="removeWord('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">En</p>
+					<p onclick="removeWord('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Ett</p>
 				</div>
 			</div>
 		<div class="dropdown">
@@ -69,8 +68,9 @@
 				<p onclick=addWord("adjektiv") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adjektiv</p>
 				<p onclick=addWord("verb") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
 				<p onclick=addWord("adverb") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
-				<p onclick=addWord("substantiv_en") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Substantiv_en</p>
-				<p onclick=addWord("substantiv_ett") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Substantiv_ett</p>
+				<p onclick=addWord("substantiv_en") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
+				<p onclick=addWord("substantiv_ett") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Ett</p>
+				<p onclick=addDef() onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Definition</p>
 			</div>
 		</div>
 
@@ -84,7 +84,8 @@
 				<p onclick="exampleWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Example Word (Wikipedia)</p>
 			</div>
 		</div>
-		<img class="b2" id="iReadInp" src="img/Go.png" onclick="addTextPar()">
+		<img class="b2" id="iReadInp" src="img/Read.jpg" onclick="addTextPar()">
+		<img class="b2" id="iReadInp" src="img/Matrix.jpg" onclick="addWordMatrix(event, false)" oncontextmenu="addWordMatrix(event, true)">
 		</div>
 	</div>
   </div>
@@ -97,6 +98,20 @@
 </form>
 <label class="pFB" id="iParInd"></label>
 <p class="pMid" id="iTextPar"></p>
+<div class="row columns_four" id="iMatrix">
+	<div class="column">
+		<p id="iMatrix_r1"></p>
+	</div>
+	<div class="column">
+		<p id="iMatrix_r2"></p>
+	</div>
+	<div class="column">
+		<p id="iMatrix_r3"></p>
+	</div>
+	<div class="column">
+		<p id="iMatrix_r4"></p>
+	</div>
+</div>
 <p class="pBig pointer" id="iTextWord"></p>
 <ol class="lMid" id="iKnownList"></ol>
 </body>
@@ -130,7 +145,40 @@ function format() {
 	el.style.backgroundColor="black";	
 	el.style.color="white";	
 
+	let wordTxt = document.getElementById("iTextWord");
+	wordTxt.addEventListener("wheel", function(event) {
+		c = getSelectedClass();
+		randomWord(c, event,this);
+	})
+
+	let wordList = document.getElementById("iKnownList");
+	wordList.addEventListener("wheel", function(event) {
+		event.preventDefault();
+		if (event.deltaY > 0) {
+			inc();
+		} else {
+			dec();
+		}
+		showWordsRefresh();	
+	})
+	let tPar = document.getElementById("iTextPar");
+	tPar.addEventListener("wheel", function(event) {
+		event.preventDefault();
+		var parArr = PAR_BUFF.split("  ");
+		if (event.deltaY > 0) {
+			if (CONTENT_IND < parArr.length) {
+				CONTENT_IND++;
+			} 
+		} else {
+			if (CONTENT_IND > 0) {
+				CONTENT_IND--;
+			}
+		}
+		updateTextPar();
+	})
+
 }
+
 let RANGE=25;
 let WORDS = "";
 let IND = 0;
@@ -161,7 +209,26 @@ showButtons["iShowAdverbs"] = "adverb"
 showButtons["iShowSub_en"] = "substantiv_en";
 showButtons["iShowSub_ett"] = "substantiv_ett";
 
+let LAST_CLASS="";
+let LAST_WORD="";
+
+function addDef() {
+	let def = $('#iInput').text();
+	if (def.length === 0 || LAST_CLASS.length===0 || LAST_WORD.length===0) {
+		return;
+	}
+	
+	fetch('backend/putDef.php?class=' + LAST_CLASS + "&word=" + LAST_WORD + "&def=" + def, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+
+}
 function addWord(c) {
+	LAST_CLASS=c;
 	let word = document.getElementById("iInput").value;
 	wordList = [];
 	var uppBound;
@@ -177,6 +244,7 @@ function addWord(c) {
 			word = wordList[i];
 		}
 		if (word.length > 0) {
+			LAST_WORD = word;
 			// Check that word does not exist already
 			fetch ('backend/existsWord.php?class=' + c + '&word=' + word, {
 				method: 'get',
@@ -213,6 +281,7 @@ function addWord(c) {
 			})
 		}
 	}
+	console.log(LAST_WORD);
 }
 
 function removeWord(c) {
@@ -265,13 +334,13 @@ function wordCount() {
 		let tmp = "";
 		tmp += "; Verb:" + json["verb"];
 		tmp += "; Adv:" + json["adj"];
-		tmp += "; Sub_en:" + json["substantiv_en"];
-		tmp += "; Sub_ett:" + json["substantiv_ett"];
+		tmp += "; En:" + json["substantiv_en"];
+		tmp += "; Ett:" + json["substantiv_ett"];
 		$("#iScoreAdj").html("Adj: " + json["adj"]);
 		$("#iScoreVerb").html("Verb: " + json["verb"]);
 		$("#iScoreAdverb").html("Adv: " + json["adverb"]);
-		$("#iScoreSub_en").html("Sub_en: " + json["substantiv_en"]);
-		$("#iScoreSub_ett").html("Sub_ett: " + json["substantiv_ett"]);
+		$("#iScoreSub_en").html("En: " + json["substantiv_en"]);
+		$("#iScoreSub_ett").html("Ett: " + json["substantiv_ett"]);
 		$("#iScoreSub_ett").css("margin-right", "0");
 	
 		arr = ["iProgAdj", "iProgVerb", "iProgAdverb", "iProgSub_en", "iProgSub_ett"];
@@ -327,27 +396,10 @@ function showWords(c) {
 	if (c === "Show") {
 		c = "all";
 	}
-	clearSelectedClass();
-	switch (c) {
-		case 'adjektiv':
-			$('#iScoreAdj').css("font-weight", "bold");
-			break;
-		case 'verb':
-			$('#iScoreVerb').css("font-weight", "bold");
-			break;
-		case 'adverb':
-			$('#iScoreAdverb').css("font-weight", "bold");
-			break;
-		case 'substantiv_en':
-			$('#iScoreSub_en').css("font-weight", "bold");
-			break;
-		case 'substantiv_ett':
-			$('#iScoreSub_ett').css("font-weight", "bold");
-			break;
-		default:
-	}
+	setSelectedClass(c);
 	clearText();
 	clearWord();
+	clearMatrix();
 	let regex = document.getElementById("iInput").value;
 	let g = getGrade(document.getElementById("iSetGrade"));
 
@@ -367,11 +419,14 @@ function showWords(c) {
 		}
 		refreshList();
 		let ol = document.getElementById("iKnownList");
-		if (CONTENT_IND > json.length) {
-			CONTENT_IND = (parseInt(json.length / 10)) * 10;
+		if (CONTENT_IND > json.length -1) {
+			CONTENT_IND = (parseInt((json.length - 1) / CONTENT_STEP)) * CONTENT_STEP;
+			if (CONTENT_IND < 0) {
+				CONTENT_IND = 0;
+			}
 		}
 		let start = CONTENT_IND;
-		let end = start + 10;
+		let end = start + CONTENT_STEP;
 		if (end > json.length) {
 			end = json.length;
 		}	
@@ -552,6 +607,13 @@ function clearList() {
 		}
 }
 
+function clearMatrix() {
+	$('#iMatrix_r1').html("");
+	$('#iMatrix_r2').html("");
+	$('#iMatrix_r3').html("");
+	$('#iMatrix_r4').html("");
+}
+
 function refreshList() {
 		
 	$('#iKnownList').children().each(function() {
@@ -615,17 +677,18 @@ function addTextPar() {
 	$('#iTextPar').css("display", "block");
 	clearList();
 	clearWord();
+	clearMatrix();
 	clearShowStats();
 	CONTENT_IND = 0;
 	PAR_BUFF = $('#iInput').val();
+
 	updateTextPar();
 }
 
 function updateTextPar() {
 	$('#iFormNav').css("marginLeft","45%");
-	let par = PAR_BUFF; 
 	// Mark end of paragraph for formatting reasons.
-	parArr = par.split("  ");
+	parArr = PAR_BUFF.split("  ");
 	if (parArr.length > 0) {
 		$('#iFormNav').css("display", "block");
 		$('#iNavText').css("display", "none");
@@ -642,13 +705,12 @@ function updateTextPar() {
 	if (words[0] === "") {
 		wc = 0;
 	}
-	let txtPar = document.getElementById("iTextPar");
 	let txt = "";
 	for (let i = 0; i < words.length; i++) {
 		let tmp = "w" + i;
 		txt += '<span id="' + tmp + '" onclick="checkWord(' + tmp + ')">' + words[i]  + " </span>";
 	}
-	txtPar.innerHTML = txt;
+	$('#iTextPar').html(txt);
 	for (i =0 ; i < words.length; i++) {
 		tmp = "w" + i;
 		let el = document.getElementById(tmp);
@@ -664,6 +726,7 @@ function updateTextPar() {
 	el = document.getElementById("iParInd");
 	el.style.display = "block";
 }
+
 
 function checkWord(el) {
 	let inp = document.getElementById("iInput");
@@ -718,7 +781,7 @@ function resetInd(e) {
 
 function satInd(e) {
 	e.preventDefault();
-	CONTENT_IND = 1000;
+	CONTENT_IND = 100000;
 	let par = document.getElementById("iTextPar").innerText;
 	if (par) {
 		updateTextPar();
@@ -801,7 +864,7 @@ function changeGrade(grade) {
 			el.style.backgroundColor = "black";
 			el.style.color = "white";
 	}
-	showWordsRefresh();
+  showWordsRefresh();
 }
 
 function allGrades(el) {
@@ -861,9 +924,10 @@ function clearSelectedClass() {
 	$('#iScoreSub_ett').css("font-weight", "");
 }
 
-function randomWord(c, event, el) {
+
+function randomWord(c, event) {
 	clearSelectedClass();
-	el.style.fontWeight = "bold";
+	setSelectedClass(c);
 	event.preventDefault();
 	$('#iTextWord').css("display","block");
 	$('#iTextWord').css("color","black");
@@ -929,6 +993,27 @@ function activeContent() {
 		return 2;
 	}
 }
+function setSelectedClass(c) {
+	clearSelectedClass();
+	switch (c) {
+		case "adjektiv":
+			$('#iScoreAdj').css("font-weight", "bold");
+			break;
+		case "verb":
+			$('#iScoreVerb').css("font-weight", "bold");
+			break;
+		case "adverb":
+			$('#iScoreAdverb').css("font-weight", "bold");
+			break;
+		case "substantiv_en":
+			$('#iScoreSub_en').css("font-weight", "bold");
+			break;
+		case "substantiv_ett":
+			$('#iScoreSub_ett').css("font-weight", "bold");
+			break;
+		default:
+	}
+}
 
 function getSelectedClass() {
 	if ($('#iScoreAdj').css("font-weight") > 400) {
@@ -949,5 +1034,99 @@ function getSelectedClass() {
 	return "all";
 }
 
+function addWordMatrix(e,single) {
+	e.preventDefault();
+	clearText();
+	clearList();
+	regex = $('#iInput').val();
+	c = getSelectedClass();
+	g = 3; 
+	fetch('backend/showWords.php?class=' + c + '&regex=' + regex + "&grade=" + g, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+	})
+	.then(response => {
+		return response.json();		
+	})
+	.then(json => {
+		let upper = json.length;
+		var max = 256;	
+		if (upper > max && !single) {
+			upper = max;
+		}
+	
+		let txt1 = "";
+		let txt2 = "";
+		let txt3 = "";
+		let txt4 = "";
+		
+		var del;
+		if (single) {
+			del = '",<br>"';
+		} else {
+			del = "<br>";
+		}
+
+		if (single) {
+			txt1 += '"' + getWord(json[0]);
+			txt1 += del + getWord(json[1]);
+			txt1 += del + getWord(json[2]);
+			txt1 += del + getWord(json[3]);
+		} else {
+			txt1 = getWord(json[0]);
+			txt2 = getWord(json[1]); 
+			txt3 = getWord(json[2]); 
+			txt4 = getWord(json[3]); 
+		}
+		var word = "";
+
+		for (i = 4; i < upper; i++) {
+			word = getWord(json[i]);
+			if (i % 4 === 0) {
+				txt1 += del + word;
+			} else if (i % 4 ===1) {
+				if (single) {
+					txt1 += del + word;
+				} else {
+					txt2 += del + word;
+				}
+			} else if (i % 4 ===2) {
+				if (single) {
+					txt1 += del + word;
+				} else {
+					txt3 += del + word;
+				}
+			} else if (i % 4 ===3) {
+				if (single) {
+					txt1 += del + word;
+				} else {
+					txt4 += del + word;
+				}
+			}
+		}
+		if (single) {
+			txt1 += '"';
+		}
+		$('#iMatrix_r1').html(txt1);
+		$('#iMatrix_r2').html(txt2);
+		$('#iMatrix_r3').html(txt3);
+		$('#iMatrix_r4').html(txt4);
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
+function getWord(inStr) {
+	// Remove trailing "grade" attribute
+	if (inStr.substring(inStr.length-2,inStr.length-1) === " ") {
+		return inStr.substring(0, inStr.length-2);
+	} else {
+		return inStr;
+	}
+}
 </script>
 </html>

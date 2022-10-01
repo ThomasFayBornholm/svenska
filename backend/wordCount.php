@@ -8,7 +8,7 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett"];
+	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "test"];
 
 	$nTot = 0;
 	$nAdj = 0;
@@ -16,6 +16,7 @@
 	$nAdverb = 0;
 	$nSub_en= 0;
 	$nSub_ett= 0;
+	$nTest = 0;
 	
 	$score= 0;
 	$scoreAdj = 0;
@@ -53,6 +54,8 @@
 			} else if ($f === "substantiv_ett") {
 				$nSub_ett = count($words) - 1;
 				$scoreSub_ett = $score;
+			} else if ($f === "test") {
+				$nTest = count($words) -1;
 			}
 		}
 
@@ -66,6 +69,7 @@
 	$count["adverb"] = $nAdverb;
 	$count["substantiv_en"] = $nSub_en;
 	$count["substantiv_ett"] = $nSub_ett;
+	$count["test"] = $nTest;
 	$score = $scoreAdj + $scoreVerb + $scoreAdverb + $scoreSub_en + $scoreSub_ett;
 	$count["score"] = fmtPercent($score, $nTot * 2);
 	$count["scoreAdj"] = fmtPercent($scoreAdj, $nAdj * 2);
