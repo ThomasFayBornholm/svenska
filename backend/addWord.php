@@ -22,10 +22,8 @@
 	// Previous action has checked that the word does not already exist in the listing 
 
 	// Add word add correct position in file
-	 
-		$res = fwrite($outfile, $word . " 0\n");
-		$res = fwrite($outfileAll, $word . "\n");
-	}
+	$res = fwrite($outfile, $word . " 0\n");
+	$res = fwrite($outfileAll, $word . "\n");
 
 	fclose($outfile);
 	fclose($outfileAll);
