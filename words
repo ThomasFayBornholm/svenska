@@ -121,6 +121,9 @@ function putDef(e) {
 	$('#iDefForm').css("visibility", "hidden");
 	scrollDown();
 	updateDef();
+	if (SCROLL_INC === (N_FOUND - 1)) {
+		lookupWord(LAST_OBJ,true);
+	}
 }
 function changeInc(delta) {
 	if (INC + delta > N_CUR) {
@@ -266,6 +269,7 @@ function lookupWord(el,onlyLocal) {
 	.catch(error => {
 		console.log(error)
 	})
+	if (DEBUG) console.log("lookupWord()");
 }
 
 function onlineLookup(el, e) {
@@ -350,6 +354,7 @@ function setClass(c) {
 	countDefs();
 	setN_CUR();
 	getProgress();
+	countDefs();
 	getWords();
 	if (DEBUG) console.log("setClass(c); CLASS = " + CLASS + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
 }
@@ -384,7 +389,7 @@ function lookupAll() {
 		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
 		window.open(url, id);
 	}
-	$('#iParDef').focus();
+	$('#iDef').focus();
 	if (DEBUG) console.log("lookupAll(); N_FOUND = " + N_FOUND);
 }
 function editDef(e) {
