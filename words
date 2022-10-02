@@ -11,9 +11,10 @@
 <span class="progressContainer">
 	<span class="progress" id="iProg"></span>
 </span>
-<span class="progressContainer">
+<span class="progressContainer" onclick="lookupAll()">
 	<span class="progress" id="iDefProg"></span>
 </span>
+<span id="iCnt">test</span>
 <div>
 <div class="dropdown">
 	<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg">
@@ -36,14 +37,15 @@
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
-		 <p class="pDef" id="iParDef"></p>
+		 <p class="pDef" id="iParDef" oncontextmenu="editDef(event)"></p>
+		<form class="defInput" id="iDefForm" onsubmit="putDef(event)">
+			<input class="iDef" id="iDef" onwheel="scrollView(event)">
+		</form>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
 	</div>
 </div>
-<form class="defInput" id="iDefForm" onsubmit="putDef(event)">
-<input class="iDef" id="iDef" onwheel="scrollView(event)">
-</form>
+
 <div id="iOutsideBottom" class="outside" onwheel="scrollView(event)" style="height: 1200px">
 	<p></p>
 </div>
@@ -66,7 +68,7 @@ let N_CUR=0;
 let N_DEFS = 0;
 
 let LAST_WORD="";
-let CLASS = "test";
+let CLASS = "verb";
 var LAST_OBJ;
 
 let DEBUG=true;
@@ -93,12 +95,13 @@ function setN_CUR() {
 	} else if (CLASS === "substantiv_ett") {
 		N_CUR = N_ETT;
 	}
+	$('#iCnt').text(N_CUR);
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
 function getProgress() {
 	var proj;
 	if (N_CUR != 0) {
-		prog = INC/N_CUR *100;
+		prog = parseInt(INC/N_CUR *100);
 	} else {
 		prog = 0;
 	}
@@ -114,7 +117,10 @@ function putDef(e) {
 			'Content-Type': 'application/json'
 		}
 	})
-	$('#iDef').val("")
+	$('#iDef').val("");
+	$('#iDefForm').css("visibility", "hidden");
+	scrollDown();
+	updateDef();
 }
 function changeInc(delta) {
 	if (INC + delta > N_CUR) {
@@ -123,10 +129,18 @@ function changeInc(delta) {
 		INC += delta
 	}
 	if (INC < 0) {
-		INC = 0 
+		INC = 0;
 	}
 	getProgress();
-	if (DEBUG) console.log("changeInc(" + delta + ")" + "-> INC: " + INC);
+	if (DEBUG) console.log("changeInc(" + delta + ") -> INC: " + INC);
+}
+function nextID(id) {
+	let num = id.replace("w","");
+	if (++num < N_FOUND) {
+		return "w" + num;
+	} else {
+		return id;
+	}
 }
 function advance() {
 	changeInc(N_INC)
@@ -181,21 +195,31 @@ function scrollView(e) {
 function scrollWords(e) {
 	e.preventDefault();
 	if (event.deltaY > 0) {
-		if (SCROLL_INC < N_FOUND-1) {
-			SCROLL_INC++;
-		}
+		scrollDown();
 	} else {
-		if (SCROLL_INC > 0) {
-			SCROLL_INC--;
-		} else if (SCROLL_INC == -1) {
-			SCROLL_INC = N_FOUND - 1;
-		}
+		scrollUp();
 	}
 	// Show local definition if available
+	updateDef();
+	if (DEBUG) console.log("scrollWords() -> SCROLL_INC = " + SCROLL_INC);
+}
+
+function scrollDown() {
+	if (SCROLL_INC < N_FOUND-1) {
+		SCROLL_INC++;
+	}
+}
+function scrollUp() {
+	if (SCROLL_INC > 0) {
+		SCROLL_INC--;
+	} else if (SCROLL_INC == -1) {
+		SCROLL_INC = N_FOUND - 1;
+	}
+}
+function updateDef() {
 	let id = "w" + SCROLL_INC;
 	let el = document.getElementById(id);
 	lookupWord(el,true);
-	if (DEBUG) console.log("scrollWords() -> SCROLL_INC = " + SCROLL_INC);
 }
 function popSpan(i, w) {
 	tmp = "<span id='w<i>' onclick='lookupWord(this,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
@@ -351,6 +375,22 @@ function countDefs() {
 			if (DEBUG) console.log("countDefs(); N_DEFS = " + N_DEFS);
 		}
 	})
+}
+function lookupAll() {
+	for (let i = 0; i < N_FOUND; i++) {
+		let id = "w" + i;
+		let id2 = "#" + id;
+		let word = $(id2).text();
+		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
+		window.open(url, id);
+	}
+	$('#iParDef').focus();
+	if (DEBUG) console.log("lookupAll(); N_FOUND = " + N_FOUND);
+}
+function editDef(e) {
+	e.preventDefault();
+	$('#iDefForm').css("visibility", "visible");
+	$('#iDef').focus();
 }
 </script>
 </html>

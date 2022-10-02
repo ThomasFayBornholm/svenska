@@ -116,6 +116,28 @@
 <ol class="lMid" id="iKnownList"></ol>
 </body>
 <script>
+let DEBUG = true;
+
+let RANGE=25;
+let WORDS = "";
+let IND = 0;
+let CONTENT_IND = 0;
+let CONTENT_STEP = 1;
+let PAR_BUFF="";
+let ACTIVE="white";
+
+let N_TOT = 0;
+let N_ADJ = 0;
+let N_VERB= 0;
+let N_ADVERB= 0;
+let N_SUB_EN = 0;
+let N_SUB_ETT = 0;
+
+let S_ADJ = 0.0;
+let S_VERB= 0.0;
+let S_ADVERB= 0.0;
+let S_SUB_EN = 0.0;
+let S_SUB_ETT = 0.0;
 function format() {
 	let el = document.getElementsByClassName("b1");
 	for (i = 0; i < el.length; i++) {
@@ -179,26 +201,6 @@ function format() {
 
 }
 
-let RANGE=25;
-let WORDS = "";
-let IND = 0;
-let CONTENT_IND = 0;
-let CONTENT_STEP = 1;
-let PAR_BUFF="";
-let ACTIVE="white";
-
-let N_TOT = 0;
-let N_ADJ = 0;
-let N_VERB= 0;
-let N_ADVERB= 0;
-let N_SUB_EN = 0;
-let N_SUB_ETT = 0;
-
-let S_ADJ = 0.0;
-let S_VERB= 0.0;
-let S_ADVERB= 0.0;
-let S_SUB_EN = 0.0;
-let S_SUB_ETT = 0.0;
 
 var showButtonIds = ["iShowAll", "iShowAdj", "iShowVerbs", "iShowAdverbs", "iShowSub_en", "iShowSub_ett"];
 var showButtons = [];
@@ -269,6 +271,7 @@ function addWord(c) {
 						return response.json();
 					})
 					.then(json => {
+						if (DEBUG) console.log("addWord(); chars written = " + json);
 						wordCount();
 					})
 					.catch(error => {
@@ -281,7 +284,7 @@ function addWord(c) {
 			})
 		}
 	}
-	console.log(LAST_WORD);
+	if (DEBUG) console.log("addWord(): LAST_WORD = " + LAST_WORD);
 }
 
 function removeWord(c) {

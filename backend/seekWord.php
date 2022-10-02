@@ -16,7 +16,16 @@
 				return;
 			}
 		} else {
-			if (str_contains($t, $word)) {
+			// Force match on first char
+			if ($word[0] === '^') {
+				$start=substr($word,1);
+				if ($start[0] === $t[0]) {
+					if (str_contains($t, $start)) {
+						echo json_encode($ind);
+						return;
+					}
+				}
+			} else {
 				echo json_encode($ind);
 				return;
 			}
