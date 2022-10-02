@@ -430,7 +430,7 @@ demolera 2
 demonstrera 2
 deponera 2
 deppa 2
-desarma 2
+desarmera 2
 desavouera 2
 devalvera 2
 diagnostisera 2
@@ -478,6 +478,8 @@ dra till sig 2
 dra upp 2
 dra ut 2
 drabba 2
+drabba ihop 0
+drabba samman 0
 dränka 2
 dricka 2
 drilla 2
@@ -581,6 +583,7 @@ flamma 2
 flämta 2
 flanera 2
 flankera 2
+fläta in 0
 fläta samman 2
 flimra 2
 flöda 2
@@ -1699,6 +1702,7 @@ ramla 2
 råna 2
 rangordna 2
 ränna 2
+rapa 0
 rapportera 2
 rasa 2
 rassla 2
@@ -2610,3 +2614,4 @@ yla 2
 yrka 2
 ysta 2
 yttra 2
+förfasa sig 0
