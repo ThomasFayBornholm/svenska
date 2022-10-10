@@ -60,6 +60,7 @@
 					<p onclick="removeWord('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Adverb</p>
 					<p onclick="removeWord('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">En</p>
 					<p onclick="removeWord('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Ett</p>
+					<p onclick="removeWord('test')" onmouseover="highlight(this,event)" onmouseout="highlight(this, event)">Test</p>
 				</div>
 			</div>
 		<div class="dropdown">
@@ -70,6 +71,7 @@
 				<p onclick=addWord("adverb") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
 				<p onclick=addWord("substantiv_en") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
 				<p onclick=addWord("substantiv_ett") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Ett</p>
+				<p onclick=addWord("test") onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Test</p>
 				<p onclick=addDef() onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Definition</p>
 			</div>
 		</div>

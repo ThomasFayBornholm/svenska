@@ -3,7 +3,7 @@
 	$path = getcwd() ."/";
 	$class = $_GET['class'];
 
-	$fileName = $path . $class;
+	$fileName = $path . $class . "-only";
 	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
 	$allName = $path . "all";
 	$allFile = fopen($allName, "r") or die("Could not open file: " . $allName);
@@ -14,7 +14,7 @@
 	}
 	fclose($infile);
 
-	$outfile = fopen($fileName, "a") or die("Could not open file: " . $fileName);
+	$outfile = fopen($fileName, "w") or die("Could not open file: " . $fileName);
 	$outfileAll = fopen($allName, "a") or die("Could not open file: " . $allName);
 	$word = $_GET['word'];
 	$elements= preg_split("/\r\n|\r|\n/", $contents);
@@ -22,7 +22,29 @@
 	// Previous action has checked that the word does not already exist in the listing 
 
 	// Add word add correct position in file
-	$res = fwrite($outfile, $word . " 0\n");
+	$first = true;
+	$out = "";
+	$placed = false;
+	foreach($elements as $w) {
+		if ($first) {
+			$del = "";
+			$first = false;
+		} else {
+			$del = "\n";
+		}
+		// Insertion point
+		if ($w > $word && !$placed) {
+			$placed=true;
+			$out = $out . $del . $word;
+			$out = $out . $del . $w; 
+		} else {
+			$out = $out . $del . $w; 
+		}
+	}
+	if ($placed === false) {
+		$out = $out . $del . $word;
+	}
+	$res = fwrite($outfile, $out);
 	$res = fwrite($outfileAll, $word . "\n");
 
 	fclose($outfile);

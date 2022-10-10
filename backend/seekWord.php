@@ -2,7 +2,7 @@
 	$path = getcwd() ."/";
 	$class = $_GET['class'];
 	$word = $_GET['word'];
-	$name = $class;
+	$name = $class . "-only";
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$words = preg_split("/\r\n|\r|\n/", $contents);
 	$ind = 0;
@@ -26,8 +26,10 @@
 					}
 				}
 			} else {
-				echo json_encode($ind);
-				return;
+				if (str_contains($t, $word)) {
+					echo json_encode($ind);
+					return;
+				}
 			}
 		}
 		$ind++;

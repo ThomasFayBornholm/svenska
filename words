@@ -27,8 +27,9 @@
 		<p onclick="setClass('test')">Test</p>
 	</div>
 </div>
+<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()">
 </div>
-<form onsubmit="seekWord(event)">
+<form onsubmit="seekWordWrapper(event)">
 	<input id="iSeek">
 </form>
 </div>
@@ -37,7 +38,7 @@
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
-		 <p class="pDef" id="iParDef" oncontextmenu="editDef(event)"></p>
+		 <p class="pDef" id="iParDef" onclick="clearDef()" oncontextmenu="editDef(event)"></p>
 		<form class="defInput" id="iDefForm" onsubmit="putDef(event)">
 			<input class="iDef" id="iDef" onwheel="scrollView(event)">
 		</form>
@@ -70,15 +71,11 @@ let N_DEFS = 0;
 let LAST_WORD="";
 let CLASS = "verb";
 var LAST_OBJ;
-
 let DEBUG=true;
 
 function startup() {
 	wordCount();
 	getWords();
-	setN_CUR();
-	getProgress();
-	countDefs();
 }
 
 function setN_CUR() {
@@ -108,22 +105,37 @@ function getProgress() {
 	$('#iProg').css("width", prog + "%");	
 	if (DEBUG) console.log("getProgress(); prog = " + prog); 
 }
+function fmtDef(def) {
+	for (i = 0; i < 10; i++) {
+		let old = " " + i + " ";
+		let rep = "<br>" + i + " ";
+		def = def.replace(old,rep)
+	}
+	return def;
+}
 function putDef(e) {
-	e.preventDefault()
-	fetch('backend/putDef.php?class=' + CLASS + '&word=' + LAST_WORD + '&def=' + $('#iDef').val(), {
+	e.preventDefault();
+	let def = $('#iDef').val();
+	fetch('backend/putDef.php?class=' + CLASS + '&word=' + LAST_WORD + '&def=' + fmtDef(def), {
 		method: 'get',
 		mode:	'cors',
 		headers: {
 			'Content-Type': 'application/json'
 		}
 	})
-	$('#iDef').val("");
-	$('#iDefForm').css("visibility", "hidden");
-	scrollDown();
-	updateDef();
-	if (SCROLL_INC === (N_FOUND - 1)) {
-		lookupWord(LAST_OBJ,true);
-	}
+	.then(response => {
+		$('#iDef').val("");
+		$('#iDefForm').css("visibility", "hidden");
+		// Reset highlighting of missing definition
+		LAST_OBJ.innerHTML = LAST_OBJ.innerText;
+		scrollDown();
+		updateDef();
+		// Race condition here between file write and def display	
+		if (SCROLL_INC === (N_FOUND - 1)) {
+			lookupWord(LAST_OBJ,true,true);
+		}
+	})
+	if (DEBUG) console.log("putDef() -> SCROLL_INC = " + SCROLL_INC);
 }
 function changeInc(delta) {
 	if (INC + delta > N_CUR) {
@@ -134,7 +146,6 @@ function changeInc(delta) {
 	if (INC < 0) {
 		INC = 0;
 	}
-	getProgress();
 	if (DEBUG) console.log("changeInc(" + delta + ") -> INC: " + INC);
 }
 function nextID(id) {
@@ -169,24 +180,57 @@ function getWords() {
 		return response.json()
 	})
 	.then(json => {
+		let lastJson = json;
 		let out = ""
 		N_FOUND=json.length;
 		if (N_FOUND > 0) {
-			for (let i = 0; i < N_FOUND; i++) {
-				let del = "<br>"
-				if (i === 0) { 
-					del = ""
-				}
-				out += del + popSpan(i, json[i]) 
+			let list = json[0];
+			for (i = 1; i < N_FOUND; i++) {
+				list += "," + json[i];	
 			}
-			$('#iWords').html(out)
-			getProgress();
+			fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list, {
+				method: 'get',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(response => {
+				return response.json();
+			})
+			.then(json => {
+				res = json;
+				console.log("res = " + res);
+				for (let i = 0; i < N_FOUND; i++) {
+					let del = "<br>"
+					if (i === 0) { 
+						del = ""
+					}
+					let tmp = 1 << i;
+					let hasDef = (res & tmp);
+					out += del + popSpan(i, lastJson[i],hasDef) 
+				}
+				$('#iWords').html(out);
+				getProgress();
+				countDefs();
+				if (DEBUG) console.log("getWords(); N_FOUND = " + N_FOUND);
+			})
+			.catch(error => {
+				console.log(error);
+			})
 		}
 	})
 }
 
+function existsDef(wordList) {
+	let res = 0;
+
+	
+}
+
 function scrollView(e) {
 	e.preventDefault();
+	$('#iWords').css("visibility", "visible");
 	if (e.deltaY > 0) {
 		changeInc(N_INC);
 	} else {
@@ -211,6 +255,7 @@ function scrollDown() {
 	if (SCROLL_INC < N_FOUND-1) {
 		SCROLL_INC++;
 	}
+	if (DEBUG) console.log("scrollDown(); SCROLL_INC = " + SCROLL_INC);
 }
 function scrollUp() {
 	if (SCROLL_INC > 0) {
@@ -218,18 +263,26 @@ function scrollUp() {
 	} else if (SCROLL_INC == -1) {
 		SCROLL_INC = N_FOUND - 1;
 	}
+	if (DEBUG) console.log("scrollUp(); SCROLL_INC = " + SCROLL_INC);
 }
 function updateDef() {
 	let id = "w" + SCROLL_INC;
 	let el = document.getElementById(id);
-	lookupWord(el,true);
+	lookupWord(el,true,true);
 }
-function popSpan(i, w) {
-	tmp = "<span id='w<i>' onclick='lookupWord(this,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
-	return tmp.replace("<i>",i).replaceAll("<w>",w)
+function popSpan(i, w, hasDef) {
+	tmp = "<span id='w<i>' onclick='lookupWord(this,false,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
+	if (DEBUG) console.log("popSpan(i=" + i + ",w=" + w + ",hasDef=" + hasDef + ")");
+	tmp = tmp.replace("<i>",i)
+	if (hasDef) {
+		tmp = tmp.replaceAll("<w>",w);
+	} else { 
+		tmp = tmp.replaceAll("<w>","<i>" + w + "</i>");
+	}
+	return tmp
 }
 
-function lookupWord(el,onlyLocal) {
+function lookupWord(el,onlyLocal,inline) {
 	if (LAST_OBJ) {
 		LAST_OBJ.style.fontWeight="";
 	}
@@ -252,10 +305,18 @@ function lookupWord(el,onlyLocal) {
 		return response.json()
 	})
 	.then(json => {
-		// Prefer local definitions
-		if (json != "No definition found" && json != "Could not read json") {
-			$('#iParDef').html(json);
+		// Prefer local definition over 3rd party dictionary
+		def = pretty(json)
+		if (def != "No definition found" && def != "Could not read json") {
+			if (json.includes("till '")) {
+				getCompDef(def);
+				return;
+			}
+			$('#iParDef').html("<b>" + word + ":</b><br>" + def);
 			$('#iDefForm').css("visibility", "hidden");
+			if (!inline) {
+				$('#iWords').css("visibility", "hidden");
+			}
 		} else {
 			if (!onlyLocal) {
 				let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
@@ -269,7 +330,62 @@ function lookupWord(el,onlyLocal) {
 	.catch(error => {
 		console.log(error)
 	})
-	if (DEBUG) console.log("lookupWord()");
+	if (DEBUG) console.log("lookupWord(" +  word + ")");
+}
+function getCompDef(def) {
+	if (DEBUG) console.log("getCompDef(def); def = " + def);
+	// Compose and output string that combines definition of multiple (usually two)
+	// component words
+	words = getRefs(def);
+	let complete = false;
+	let res = "";
+	let out = [];
+	let done = 0;
+	for (let i = 0; i < words.length; i++) {
+		let w = words[i];
+		// Dispatch n fetches to get definitions
+		// add an identifier to each result to enable correct ordering 
+		fetch('backend/getDef.php?class=' + guessClass(w) + '&word='+ w, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			out[done] = w + ":<br>" + json;
+			done++;
+			if (done >= words.length) {
+				// Perform any required ordering
+				let txt = def + "<br>";
+				console.log(txt);
+				let del = "";
+				console.log(out);
+				for (let i = 0; i < done; i++) {
+					if (i != 0) del = "<br>"
+					txt = txt + del + out[i];
+				}
+				console.log(txt);	
+				$('#iParDef').html(txt);
+			}
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	}
+}
+function getRefs(def) {
+	if (!def.includes("till ") || !def.includes("'")) {
+		return "";
+	}
+	def = def.replaceAll("till ", "");
+	def = def.replaceAll("'","");
+	arr = def.split(",");
+	return arr;
+	if (DEBUG) console.log("getRef()");
 }
 
 function onlineLookup(el, e) {
@@ -312,18 +428,23 @@ function showToggle() {
 		// Hide controls 
 		$('#iSeek').css("visibility", "hidden");
 		$('#iSelect').css("visibility", "hidden");
+		$('#iAdd').css("visibility", "hidden");
 		$('#iShowToggle').text("__");
 	} else {
 		// Make visible class selector and word seeker controls
 		$('#iSeek').css("visibility", "visible");
 		$('#iSelect').css("visibility", "visible");
+		$('#iAdd').css("visibility", "visible");
 		$('#iShowToggle').text("HIDE");
 		$('#iSeek').focus();
 	}
 	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iSeek').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
-function seekWord(e) {
-	e.preventDefault()
+function seekWordWrapper(e) {
+	e.preventDefault();
+	seekWord();
+}
+function seekWord() {
 	let word = $('#iSeek').val();
 	if (word.length > 0) {
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word, {
@@ -338,7 +459,6 @@ function seekWord(e) {
 		})
 		.then(json => {
 			INC = json;			
-			getProgress();
 			getWords();
 		})
 		.catch(error => {
@@ -360,7 +480,6 @@ function setClass(c) {
 }
 function countDefs() {
 	N_DEFS = 0;
-	$('#iDefProg').css("width", "0%");
 	fetch('backend/countDef.php?class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
@@ -382,20 +501,127 @@ function countDefs() {
 	})
 }
 function lookupAll() {
-	for (let i = 0; i < N_FOUND; i++) {
+	let url_base="https://svenska.se/tre?sok="
+	let word = $('#w0').text();	
+	let w = window.open(url_base + word + "&pz=1");
+	w.focus();
+	for (let i = 1; i < N_FOUND; i++) {
 		let id = "w" + i;
 		let id2 = "#" + id;
 		let word = $(id2).text();
-		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
-		window.open(url, id);
+		let url = url_base + word + "&pz=1";
+		window.open(url,id);
 	}
 	$('#iDef').focus();
+	w.focus();
 	if (DEBUG) console.log("lookupAll(); N_FOUND = " + N_FOUND);
 }
 function editDef(e) {
 	e.preventDefault();
 	$('#iDefForm').css("visibility", "visible");
 	$('#iDef').focus();
+}
+function clearDef() {
+	if (DEBUG) console.log("clearDef()");
+	$('#iParDef').html("");
+	$('#iWords').css("visibility", "visible");
+}
+function pretty(def) {
+	if (DEBUG) console.log("pretty(def); def = " + def);
+	let out = "";
+	subdefs = def.split("<br>");
+	for (let i = 0; i < subdefs.length; i++) {
+		del = "<br>";
+		if (i === 0) del="";
+		s = subdefs[i];		
+		pJFR = s.indexOf("JFR");
+		pSE = s.indexOf("SE");
+		pMOTS = s.indexOf("MOTSATS");
+		pSYN = s.indexOf("SYN");
+		let tot = pJFR + pSE + pMOTS + pSYN;
+		if (tot === -4) {
+			out = out + del + s;
+		} else {
+			// New line before the JFR, SE, MOTS indicators for styling
+			if (pJFR === -1) pJFR = 999999;
+			if (pSE === -1) pSE = 999999;
+			if (pMOTS === -1) pMOTS = 999999;
+			if (pSYN === -1) pSYN = 999999;
+			let start = pSE;
+			if (pJFR < start) start = pJFR;
+			if (pMOTS < start) start = pMOTS;
+			if (pSYN < start) start = pSYN;
+			let def2 =  s.slice(start,s.length);
+			s = s.slice(0,start) + "<br>"
+			def2 = def2.replaceAll("1","").replaceAll("2","").replaceAll("3","").replaceAll("4","");
+			def2 = def2.replaceAll(" ,",",").replaceAll("  ", " ");
+			def2 = def2.replaceAll(" 1<br>","<br>");
+			out = out + del + s + def2;
+		}
+	}
+	out = out.replaceAll("<br><br>","<br>");
+	return out;
+}
+function guessClass(word) {
+	if (word.endsWith('a')) return "verb"
+	if (word.includes(' ')) return "verb"
+	if (word.endsWith("ig")) return "adjektiv"
+	fetch('backend/existsWord.php?class=substantiv_ett&word=' + word, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+	})
+	.then(json => {
+	})
+	.catch(error => {
+		console.log(error);
+	})
+	return "substantiv_en"
+}
+function addWord() {
+	if (DEBUG) console.log("addWord()");
+	let word = $('#iSeek').val();	
+	let del = word[0] === '.';
+	if (del) word = word.slice(1,word.length);
+	if (word.length > 0) {
+		fetch ('backend/existsWord.php?class=' + CLASS + '&word=' + word, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})	
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			if (json !== -1 || (del && json === -1)) {	
+				let op = "add"	
+				if (del) op = "remove"
+				fetch('backend/' + op + 'Word.php?class=' + CLASS + "&word=" + word, {
+					method: 'get',
+					mode: 'cors',
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				})
+				.then(response => {
+					wordCount();
+				})
+				.catch(error => {
+					console.log(error);	
+				})
+
+			}
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	}
 }
 </script>
 </html>

@@ -3,11 +3,12 @@
 	$path = getcwd() ."/";
 	$class = $_GET['class'];
 	$word = $_GET['word'];
+	$trail = "-only";
 	// Write a tmp file with the chosen word remove
 	// Then overwrite the original file with the temp file
 	// Return -1 if word to be removed is not found.
 
-	$fileName = $path . $class;
+	$fileName = $path . $class . $trail;
 	$tmpName = $path . "tmp";
 
 	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);

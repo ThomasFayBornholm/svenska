@@ -26,35 +26,33 @@
 	$scoreSub_ett = 0;
 
 	foreach($files as $f) {
-		$infile = fopen($path . "/" . $f, "r") or die("Could not open file: " . $f);
+		$f_base = $f;
+		$f = $f . "-only";
+		$infile = fopen($path . "/" . $f , "r") or die("Could not open file: " . $f);
 		if (filesize($f) != 0) {
 			$score = 0;
 			$contents = fread($infile, filesize($f));
 			$words = preg_split("/\r\n|\r|\n/", $contents);
 			foreach($words as $w) {
-				if (strpos($w, " 1")) {
-					$score += 1;
-				} else if (strpos($w, " 2")) {
-					$score += 2;
-				}
+				$score += 2;
 			}
 
-			if ($f === "adjektiv") {
+			if ($f_base === "adjektiv") {
 				$nAdj = count($words) - 1;	 
 				$scoreAdj = $score;
-			} else if ($f === "verb") {
+			} else if ($f_base === "verb") {
 				$nVerb = count($words) - 1;
 				$scoreVerb = $score;
-			} else if ($f === "adverb") {
+			} else if ($f_base === "adverb") {
 				$nAdverb = count($words) - 1;
 				$scoreAdverb = $score;
-			} else if ($f === "substantiv_en") {
+			} else if ($f_base === "substantiv_en") {
 				$nSub_en = count($words) - 1;
 				$scoreSub_en = $score;
-			} else if ($f === "substantiv_ett") {
+			} else if ($f_base === "substantiv_ett") {
 				$nSub_ett = count($words) - 1;
 				$scoreSub_ett = $score;
-			} else if ($f === "test") {
+			} else if ($f_base === "test") {
 				$nTest = count($words) -1;
 			}
 		}
