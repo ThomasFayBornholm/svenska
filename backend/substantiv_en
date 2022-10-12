@@ -2,6 +2,7 @@ abort 2
 absorption 2
 acceptans 2
 adel 2
+trilska 2
 ädelsten 2
 adjö 2
 ädling 2
@@ -199,7 +200,7 @@ avföring 2
 avfyrning 2
 avgift 2
 avgjutning 2
-av­hållsamhet 0
+av­hållsamhet 2
 avhandling 2
 avkastning 2
 avkomling 2
@@ -247,7 +248,7 @@ banbrytare 2
 bandit 2
 bank 2
 bänk 2
-bankette 2
+bankett 2
 bar 2
 barack 2
 bärare 2
@@ -273,7 +274,6 @@ bataljon 2
 bearbetning 2
 bebis 2
 bebyggelse 2
-bedjande 2
 bedömare 2
 bedömning 2
 bedragare 2
@@ -355,7 +355,6 @@ betingelse 2
 betjäning 2
 betong 2
 betoning 2
-betrakelse 2
 betraktelse 2
 betydelse 2
 bevakning 2
@@ -590,7 +589,7 @@ dialekt 2
 dialog 2
 dialys 2
 diaspora 2
-diffussion 2
+diffusion 2
 dikt 2
 diktamen 2
 diktatur 2
@@ -845,7 +844,7 @@ finess 2
 finländare 2
 finlandisering 2
 finmekanik 2
-fint 0
+fint 2
 firma 2
 fisk 2
 fiskare 2
@@ -2648,6 +2647,7 @@ plattform 2
 plenisal 2
 plikt 2
 pliktskola 2
+plugg 2
 poäng 2
 poesi 2
 poet 2
@@ -3639,6 +3639,7 @@ utrikespolitik 2
 utrotning 2
 utrustning 2
 utsikt 2
+utskallning 2
 utskällning 2
 utsmyckning 2
 utspänning 2

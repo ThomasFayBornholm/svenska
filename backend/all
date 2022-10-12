@@ -1,3 +1,7 @@
+ skilja åt
+ skilja ifrån
+ skilja ut
+aaa
 åberopa
 åberopa sig
 abort
@@ -716,6 +720,7 @@ batteri
 bättra
 bättre
 baxa
+bbb
 be
 beakta
 beaktande
@@ -1365,6 +1370,7 @@ byta
 byte
 byxa
 cancer
+ccc
 cd
 cell
 cendré
@@ -1899,6 +1905,7 @@ envis
 envisas
 epitet
 epos
+er
 era
 erbjuda
 erbjudande
@@ -2463,6 +2470,7 @@ förfara
 förfarande
 förfärlig
 förfasa
+förfasa sig
 författa
 författare
 författarskap
@@ -2659,6 +2667,7 @@ forsla
 förslag
 förslava
 förslösa
+försmå
 försnilla
 försök
 försöka
@@ -2993,6 +3002,7 @@ fysik
 fysiker
 fysisk
 fysiskt
+g
 gå
 gå an
 gå åt
@@ -3123,6 +3133,8 @@ get
 gevär
 gift
 gifta
+gifta bort
+gifta sig
 giftig
 gig
 gigantisk
@@ -3333,6 +3345,8 @@ gynnsam
 gyttja
 gyttjebrottning
 ha
+ha för sig
+ha sig
 häck
 hacka
 hackig
@@ -3359,7 +3373,19 @@ hall
 håll
 hålla
 hälla
+hålla av
+hålla efter
+hålla igen
+hålla ihop
+hålla inne
+hålla kvar
+hålla med
 hålla på
+hålla samman
+hålla sig
+hålla till
+hålla uppe
+hålla ut
 hållare
 hållbar
 hållbarhet
@@ -3610,10 +3636,12 @@ historisk
 historiskt
 hit
 hitta
+hitta på
 hittills
 hjälm
 hjälp
 hjälpa
+hjälpa till
 hjälpkår
 hjälplös
 hjälpmedel
@@ -3746,6 +3774,7 @@ husdjur
 hushåll
 hustru
 husvagn
+huttra
 huva
 huvud
 huvudbonad
@@ -4149,6 +4178,7 @@ jakande
 jakt
 jamb
 jambisk
+jämföra
 jämföra (förk. jfr)
 jämförande
 jämförbar
@@ -4268,6 +4298,10 @@ kanin
 kanna
 känna
 känna av
+känna igen
+känna på
+känna på sig
+känna till
 kännare
 kännedom
 kännetecken
@@ -4301,6 +4335,7 @@ kappa
 käpphäst
 kapplöpning
 kapsla
+kapsla in
 kapslad
 kapten
 kår
@@ -4335,6 +4370,7 @@ kärnvirke
 karriär
 karriärutveckling
 karta
+kartera
 kartlägga
 kartläggning
 kartograf
@@ -4351,6 +4387,7 @@ kasserad
 kassett
 kast
 kasta
+kasta upp
 kastrull
 kasus
 kataklysmisk
@@ -4477,6 +4514,7 @@ knacka
 knäcka
 knäckare
 knackning
+knåda
 knall
 knapp
 knäppa
@@ -4502,6 +4540,9 @@ knut
 knuten
 knutpunkt
 knyta
+knyta an
+knyta sig
+knyta upp
 knytnäve
 ko
 kö
@@ -6006,6 +6047,7 @@ närma
 närma sig
 närmare
 närområde
+narras
 narrspel
 närstående
 närvara
@@ -6860,10 +6902,12 @@ plattform
 plenisal
 plikt
 pliktskola
+plira
 plocka
 plocka undan
 plötslig
 plötsligt
+plugg
 plugga
 plus
 poäng
@@ -6915,6 +6959,7 @@ potential
 potentialbarriär
 potentiell
 pott
+ppp
 prägla
 praktik
 praktikant
@@ -7037,7 +7082,9 @@ provocera
 provocera fram
 provokation
 prunka
+pruta
 prutmån
+prutta
 pryda
 prydlig
 pryl
@@ -7156,6 +7203,7 @@ rassmässig
 rast
 rastlös
 rät
+rata
 ratificera
 ration
 rationell
@@ -7442,6 +7490,8 @@ runtom
 rusa
 rusning
 rusta
+rusta ner
+rusta sig
 rusta upp
 ruta
 ruta in
@@ -7666,6 +7716,15 @@ schema
 schyst
 scrolla
 se
+se bort
+se efter
+se fram
+se ner
+se på
+se sig
+se till
+se upp
+se ut
 sed
 sedan (vardagl. sen)
 sedermera
@@ -7836,6 +7895,7 @@ skälla ut
 skallig
 skallskada
 skalskydd
+skälva
 skam
 skamlig
 skämma
@@ -7859,7 +7919,12 @@ skär
 skara
 skåra
 skära
+skära av
+skära igenom
+skära ner
 skära sig
+skära till
+skära upp
 skärgård
 skärm
 skärning
@@ -7928,6 +7993,7 @@ skjuta in
 skjuta över
 skjuta till
 skjuta upp
+sklija av
 sko
 skog
 skogsindustri
@@ -7986,6 +8052,8 @@ skrapa
 skräpa
 skratt
 skratta
+skratta ihjäl sig
+skratta ut
 skrattretande
 skrävla
 skrev
@@ -8396,6 +8464,7 @@ sprit
 spröd
 spruta
 spurta
+spy
 spydig
 spydighet
 stå
@@ -9574,6 +9643,7 @@ uran
 urban
 urfegning
 urholka
+urinera
 urkoppling
 urladda
 urladda sig
@@ -9608,6 +9678,7 @@ utbildningsminister
 utblick
 utbredd
 utbredning
+utbringa
 utbrista
 utbrott
 utbryta
@@ -9675,6 +9746,7 @@ utmaning
 utmärka
 utmärkt
 utmattad
+utmönstra
 utmönstrad
 utnämna
 utnötning
@@ -9714,6 +9786,7 @@ utsätta
 utse
 utseende
 utsikt
+utskallning
 utskällning
 utskilja
 ut­skjutande
@@ -10172,6 +10245,7 @@ vittnesbörd
 vittnesmål
 vittra
 volym
+vomera
 vråla
 vrång
 vred
@@ -10209,4 +10283,156 @@ yttrande
 yttrandefrihet
 yttre
 zon
-förfasa sig
+zzz
+ppp
+ttt
+trilska
+tvinga av
+tvinga fram
+tvinga ifrån
+tvinga på
+tvinga sig till
+tvinga till sig
+höstlov
+sommarlov
+vinterlov
+uppmäta
+gosa
+aaa
+aaa
+aaa
+aaa
+aa
+aaaa
+aaaa
+aaaa
+aaaa
+aaaa
+aaaa
+aaaa
+zzz
+zzz
+spela in
+spela av
+spela upp
+spela ut
+spela över
+spela av
+spela in
+spela upp
+spela över
+skilja av
+skilja ifrån
+skilja sig
+skilja ut
+skilja åt
+sticka av
+sticka emellan
+sticka ned
+sticka ner
+sticka sig
+sticka upp
+sticka ut
+stickas
+strycka för
+ strycka under
+strycka med
+ stryka över
+ strycka sig
+strycka undan
+strycka över
+stämma in
+stämma med
+stämma ned
+stämma upp
+stämma överens
+ stå emot
+ stå i
+stå bakom
+ stå på
+ stå upp
+ stå till
+ stå sig
+ stå över
+stöta sig
+stöta ut
+suga av
+suga i
+suga upp
+suga ut
+svänga ihop
+svänga sig
+svänga till
+vattna sig
+vattna ur
+veta av
+veta med sig
+veta om
+veta sig
+veta till sig
+eftersända
+vila sig
+vila upp sig
+vila ut
+vilja sig
+vilja till
+vilja åt
+visa sig
+visa ut
+vrida sig
+vrida upp
+vrida ur
+vänta in
+vänta sig
+vänta ut
+ värdera upp
+ värdera ner
+värdera ned
+ värdera om
+värdera upp
+värdera ner
+värdera upp
+värma upp
+växa bort
+växa igen
+växa samman
+växa fram
+växa till sig
+växa ut
+ån
+våga sig
+växla om
+växla över
+väga sig på
+våga sig på
+vårda sig
+vetgirig
+delvis
+försäga sig
+åmning
+harang
+avgränsa
+avkoppla
+förnedra
+alliera
+alliera sig
+ackvirera
+ackvisition
+avspärra
+avstänga
+förpacka
+adopteraaa
+adopteraaa
+adopteraaa
+adopteraaa
+adopteraaa
+adopteraaa
+adopteraaa
+adopteraaaa
+adopteraaaaa
+adoptera
+adopteraa
+bita av
+bita ifrån
+bita sig fast
+bita ifrån sig
