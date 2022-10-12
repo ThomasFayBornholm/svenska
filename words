@@ -39,8 +39,10 @@
 	</div>
 	<div class="column" onwheel="scrollView(event)">
 		 <p class="pDef" id="iParDef" onclick="clearDef()" oncontextmenu="editDef(event)"></p>
-		<form class="defInput" id="iDefForm" onsubmit="putDef(event)">
+		<form class="defInput" id="iDefForm" onsubmit="putDefWrapper(event)">
 			<input class="iDef" id="iDef" onwheel="scrollView(event)">
+			<textarea class="defBox" id="iDefText"></textarea>
+			<button>Put</button>
 		</form>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
@@ -106,17 +108,26 @@ function getProgress() {
 	if (DEBUG) console.log("getProgress(); prog = " + prog); 
 }
 function fmtDef(def) {
-	for (i = 0; i < 10; i++) {
+	for (i = 0; i < 12; i++) {
 		let old = " " + i + " ";
 		let rep = "<br>" + i + " ";
 		def = def.replace(old,rep)
 	}
 	return def;
 }
-function putDef(e) {
+function putDefWrapper(e) {
 	e.preventDefault();
+	putDef()
+}
+function putDef() {
+	
 	let def = $('#iDef').val();
-	fetch('backend/putDef.php?class=' + CLASS + '&word=' + LAST_WORD + '&def=' + fmtDef(def), {
+	if (def.length === 0) {
+		def = $('#iDefText').val();
+	}
+	if (DEBUG) console.log("START putDef(def); def = " + def + "; SCROLL_INC = " + SCROLL_INC);
+	def = preProc(def);
+	fetch('backend/putDef.php?class=' + CLASS + '&word=' + LAST_WORD + '&def=' + def, {
 		method: 'get',
 		mode:	'cors',
 		headers: {
@@ -125,6 +136,7 @@ function putDef(e) {
 	})
 	.then(response => {
 		$('#iDef').val("");
+		$('#iDefText').val("");
 		$('#iDefForm').css("visibility", "hidden");
 		// Reset highlighting of missing definition
 		LAST_OBJ.innerHTML = LAST_OBJ.innerText;
@@ -135,7 +147,6 @@ function putDef(e) {
 			lookupWord(LAST_OBJ,true,true);
 		}
 	})
-	if (DEBUG) console.log("putDef() -> SCROLL_INC = " + SCROLL_INC);
 }
 function changeInc(delta) {
 	if (INC + delta > N_CUR) {
@@ -266,6 +277,7 @@ function scrollUp() {
 	if (DEBUG) console.log("scrollUp(); SCROLL_INC = " + SCROLL_INC);
 }
 function updateDef() {
+	if (DEBUG) console.log("updateDef()");
 	let id = "w" + SCROLL_INC;
 	let el = document.getElementById(id);
 	lookupWord(el,true,true);
@@ -305,8 +317,8 @@ function lookupWord(el,onlyLocal,inline) {
 		return response.json()
 	})
 	.then(json => {
+		def = json;
 		// Prefer local definition over 3rd party dictionary
-		def = pretty(json)
 		if (def != "No definition found" && def != "Could not read json") {
 			if (json.includes("till '")) {
 				getCompDef(def);
@@ -560,6 +572,27 @@ function pretty(def) {
 		}
 	}
 	out = out.replaceAll("<br><br>","<br>");
+	for (let i = 1; i < 12; i++) {
+		out = out.replaceAll(i + " " + i, i);
+		out = out.replaceAll("<br>" + i + "<br>","<br>" );
+		out = out.replaceAll("<br> " + i + "<br>","<br>" );
+		out = out.replaceAll("<br>" + i + " <br>","<br>" );
+	}
+	// Strip any leading new line
+	if (out.slice(0,3) === "<br>") {
+		out = out.slice(4,out.length) 
+	}
+	const regex1 = /[a-z][1-9]/;
+	match = out.match(regex1);
+	if (match != null) {
+		console.log(match);
+		strMatch = match[0];
+		rep = strMatch[0] + "<br> " + strMatch[1];
+		out = out.replace(strMatch, rep);
+	}
+	if (out[0] === " ") out = out.slice(1,out.length);
+	out = out.replace("partikelntill", "partikeln till;");
+	if (out[out.length-1] === ",") out = out.slice(0,out.length-1)
 	return out;
 }
 function guessClass(word) {
@@ -622,6 +655,34 @@ function addWord() {
 			console.log(error);
 		})
 	}
+}
+function preProc(def) {
+	if (DEBUG) console.log("preProc(def(); def = " + def)
+	// Split definition
+	arr = def.split("\n");
+	let s = "";
+	let outDef = "";
+	for (let i = 0; i < arr.length; i++) {
+		s = arr[i];
+		if (s.length > 0) {
+			// Remove any leading space
+			if (s[0] === " ") s = s.slice(1,s.length)
+			let del = "<br>";
+			if (i === 0) del = ""
+			// Remove any reference numbers other than that at line start
+			let trail = s.slice(1,s.length);
+			for (let i = 1; i < 12; i++) {
+				trail = trail.replaceAll(" " + i + " "," ");
+				trail = trail.replaceAll(i,"");
+			}
+			s = s[0] + trail;
+			s = s.replaceAll("  ", "");
+			s = s.replaceAll(" , ", ", ");
+			outDef = outDef + del + s;
+		}
+	}
+	// That's it!
+	return outDef;
 }
 </script>
 </html>
