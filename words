@@ -39,11 +39,11 @@
 	</div>
 	<div class="column" onwheel="scrollView(event)">
 		 <p class="pDef" id="iParDef" onclick="clearDef()" oncontextmenu="editDef(event)"></p>
-		<form class="defInput" id="iDefForm" onsubmit="putDefWrapper(event)">
-			<input class="iDef" id="iDef" onwheel="scrollView(event)">
-			<textarea class="defBox" id="iDefText"></textarea>
-			<button>Put</button>
-		</form>
+		<div id="iDefDiv">
+			 <textarea class="defBox" id="iDefText"></textarea>
+			 <button onclick="putDef('')">Put</button>
+			 <button onclick="cleanUp()">Clean up</button>
+		</div>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
 	</div>
@@ -73,8 +73,8 @@ let N_DEFS = 0;
 let LAST_WORD="";
 let CLASS = "verb";
 var LAST_OBJ;
-let DEBUG=true;
-
+let DEBUG=false;
+let LAST_DEF = "";
 function startup() {
 	wordCount();
 	getWords();
@@ -108,20 +108,14 @@ function getProgress() {
 	if (DEBUG) console.log("getProgress(); prog = " + prog); 
 }
 function fmtDef(def) {
-	for (i = 0; i < 12; i++) {
+	for (i = 0; i < 24; i++) {
 		let old = " " + i + " ";
 		let rep = "<br>" + i + " ";
 		def = def.replace(old,rep)
 	}
 	return def;
 }
-function putDefWrapper(e) {
-	e.preventDefault();
-	putDef()
-}
-function putDef() {
-	
-	let def = $('#iDef').val();
+function putDef(def) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
 	}
@@ -135,9 +129,8 @@ function putDef() {
 		}
 	})
 	.then(response => {
-		$('#iDef').val("");
 		$('#iDefText').val("");
-		$('#iDefForm').css("visibility", "hidden");
+		$('#iDefDiv').css("visibility", "hidden");
 		// Reset highlighting of missing definition
 		LAST_OBJ.innerHTML = LAST_OBJ.innerText;
 		scrollDown();
@@ -318,6 +311,7 @@ function lookupWord(el,onlyLocal,inline) {
 	})
 	.then(json => {
 		def = json;
+		LAST_DEF = json;
 		// Prefer local definition over 3rd party dictionary
 		if (def != "No definition found" && def != "Could not read json") {
 			if (json.includes("till '")) {
@@ -325,7 +319,7 @@ function lookupWord(el,onlyLocal,inline) {
 				return;
 			}
 			$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-			$('#iDefForm').css("visibility", "hidden");
+			$('#iDefDiv').css("visibility", "hidden");
 			if (!inline) {
 				$('#iWords').css("visibility", "hidden");
 			}
@@ -335,8 +329,8 @@ function lookupWord(el,onlyLocal,inline) {
 				window.open(url, '_blank');
 			}
 			$('#iParDef').html("");
-			$('#iDefForm').css("visibility", "visible");
-			$('#iDef').focus();
+			$('#iDefDiv').css("visibility", "visible");
+			$('#iDefText').focus();
 		}
 	})
 	.catch(error => {
@@ -524,19 +518,20 @@ function lookupAll() {
 		let url = url_base + word + "&pz=1";
 		window.open(url,id);
 	}
-	$('#iDef').focus();
+	$('#iDefText').focus();
 	w.focus();
 	if (DEBUG) console.log("lookupAll(); N_FOUND = " + N_FOUND);
 }
 function editDef(e) {
 	e.preventDefault();
-	$('#iDefForm').css("visibility", "visible");
-	$('#iDef').focus();
+	$('#iDefDiv').css("visibility", "visible");
+	$('#iDefText').focus();
 }
 function clearDef() {
 	if (DEBUG) console.log("clearDef()");
 	$('#iParDef').html("");
 	$('#iWords').css("visibility", "visible");
+	$('#iDefDiv').css("visibility", "hidden");
 }
 function pretty(def) {
 	if (DEBUG) console.log("pretty(def); def = " + def);
@@ -572,7 +567,7 @@ function pretty(def) {
 		}
 	}
 	out = out.replaceAll("<br><br>","<br>");
-	for (let i = 1; i < 12; i++) {
+	for (let i = 1; i < 24; i++) {
 		out = out.replaceAll(i + " " + i, i);
 		out = out.replaceAll("<br>" + i + "<br>","<br>" );
 		out = out.replaceAll("<br> " + i + "<br>","<br>" );
@@ -662,27 +657,76 @@ function preProc(def) {
 	arr = def.split("\n");
 	let s = "";
 	let outDef = "";
+	// Support for partikel parters
+	// Can be between 1 and 3 suggested partner words
+	let regex1 = /skilt[a-zäöå]+/;
+	let regex1_alt = /partikeln[a-zäöå]+/;
+	let regex2 = /skilt[a-zäöå]+, [a-zäöå]+/;
+	let regex3 = /skilt[a-zäöå]+, [a-zäöå]+, [a-zäöå]+/;
 	for (let i = 0; i < arr.length; i++) {
 		s = arr[i];
-		if (s.length > 0) {
+		if (s.length > 1) {
 			// Remove any leading space
 			if (s[0] === " ") s = s.slice(1,s.length)
 			let del = "<br>";
 			if (i === 0) del = ""
 			// Remove any reference numbers other than that at line start
-			let trail = s.slice(1,s.length);
-			for (let i = 1; i < 12; i++) {
+			let trail = s.slice(2,s.length);
+			for (let i = 1; i < 24; i++) {
 				trail = trail.replaceAll(" " + i + " "," ");
 				trail = trail.replaceAll(i,"");
 			}
-			s = s[0] + trail;
+			s = s.slice(0,2) + trail;
 			s = s.replaceAll("  ", "");
 			s = s.replaceAll(" , ", ", ");
+			s = s.replaceAll("ibland med partikel","(ibland med partikel");
+			s = s.replaceAll("vanligen med partikel","(ibland med partikel");
+			s = s.replaceAll("ofta med partikel","(ofta med partikel");
+			let m = s.match(regex1);
+			let m_alt = s.match(regex1_alt);
+			let m2 = s.match(regex2);
+			let m3 = s.match(regex3);
+			let rep = ""
+			if (m3 != null) {
+				let strMatch = m3[0];
+				let rep = strMatch.slice(0,5) + " " + strMatch.slice(5,strMatch.length) + ")";
+				s = s.replace(strMatch, rep);
+			} else if (m2 != null) {
+				let strMatch = m2[0];
+				rep = strMatch.slice(0,5) + " " + strMatch.slice(5,strMatch.length) + ")";
+				s = s.replace(strMatch, rep);
+			} else if (m != null) {
+				let strMatch = m[0];
+				let rep = strMatch.slice(0,5) + " " + strMatch.slice(5,strMatch.length) + ")";
+				s = s.replace(strMatch, rep);
+			} else if (m_alt != null) {
+				let strMatch = m_alt[0];
+				let rep = strMatch.slice(0,9) + " " + strMatch.slice(9,strMatch.length) + ")";
+				s = s.replace(strMatch, rep);
+			}
+			let f1 = "utan) större betydelse­skillnad";
+			let f2 = "), utan större betydelse­förändring";
+			let f3 = "), utan större betydelse­skillnad";
+			let f4 = "utan) större betydelse­förändring";
+			s = s.replace(f1, f1.replace(")","") + ")");
+			s = s.replace(f2,f2.replace(")","") + ")");
+			s = s.replace(f3,f3.replace(")","") + ")");
+			s = s.replace(f4,f4.replace(")","") + ")");
+			if (s.includes("((")) s = s.replace("((", "(");
 			outDef = outDef + del + s;
 		}
 	}
 	// That's it!
 	return outDef;
+}
+function cleanUp() {
+	if (DEBUG) console.log("cleanUp(); LAST_DEF = " + LAST_DEF);
+	let def = LAST_DEF.replaceAll("<br>","\n");
+	def = def.replaceAll(" JFR","\nJFR");
+	def = def.replaceAll(" SE","\nSE");
+	def = def.replaceAll(" SYN","\nSYN");
+	def = def.replaceAll(" MOTSATS","\nMOTSATS");
+	putDef(def);
 }
 </script>
 </html>

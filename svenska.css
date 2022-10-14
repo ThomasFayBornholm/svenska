@@ -259,3 +259,7 @@ label {
 #iListShowClass {
 	width: 256px;
 }
+
+#iDefDiv {
+	visibility: hidden;
+}
