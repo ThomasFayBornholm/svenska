@@ -14,10 +14,10 @@ for c in wordClasses:
     os.rename(fileName, tmpFile)
     os.system("git checkout -- " + fileName)
 
-    with open(fileName, 'r', encoding='utf-8') as infile_1:
+    with open(tmpFile, 'r', encoding='utf-8') as infile_1:
         wordList_1 = infile_1.readlines()
 
-    with open(tmpFile, 'r', encoding='utf-8') as infile_2:
+    with open(fileName, 'r', encoding='utf-8') as infile_2:
         wordList_2 = infile_2.readlines()
 
     words = list()
@@ -31,7 +31,7 @@ for c in wordClasses:
     words.sort()
     cnt1 = str(len(wordList_1))
     cnt2 = str(len(wordList_2))
-    print("Combined " + fileName + " (git) with " + cnt1 + " words with " + fileName + " (local) with " + cnt2 + " words to get " + str(len(words)) + " unique words.")
+    print("Combined " + fileName + " (local) with " + cnt1 + " words with " + fileName + " (remote) with " + cnt2 + " words to get " + str(len(words)) + " unique words.")
     with open(fileName, 'w',encoding='utf-8') as outfile:
         for w in words:
             outfile.write(w)
@@ -47,10 +47,10 @@ for c in wordClasses:
         os.rename(fileName, tmpFile)
         os.system("git checkout -- " + fileName)
 
-        with open (fileName, 'r', encoding='utf-8') as infile1:
+        with open (tmpFile, 'r', encoding='utf-8') as infile1:
             json1 = json.load(infile1)
 
-        with open(tmpFile, 'r', encoding='utf-8') as infile2:
+        with open(fileName, 'r', encoding='utf-8') as infile2:
             json2 = json.load(infile2)
            
         words = dict()
@@ -64,7 +64,7 @@ for c in wordClasses:
         cnt1 = str(len(json1))
         cnt2 = str(len(json2))
 
-        print("Combined " + fileName + " (git) with " + cnt1 + " words with " + fileName + " (local) with " + cnt2 + " words to get " + str(len(words)) + " unique words.")
+        print("Combined " + fileName + " (local) with " + cnt1 + " definitions with " + fileName + " (remote) with " + cnt2 + " definitions to get " + str(len(words)) + " unique word definitions.")
         with open(fileName, 'w',encoding='utf-8') as outfile:
             if len(words) > 0:
                 json.dump(words, outfile)
