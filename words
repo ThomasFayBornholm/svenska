@@ -15,6 +15,7 @@
 	<span class="progress" id="iDefProg"></span>
 </span>
 <span id="iCnt">test</span>
+<span id="iCntTotal">Total</span>
 <div>
 <div class="dropdown">
 	<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg">
@@ -38,12 +39,12 @@
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
-		 <p class="pDef" id="iParDef" onclick="clearDef()" oncontextmenu="editDef(event)"></p>
 		<div id="iDefDiv">
 			 <textarea class="defBox" id="iDefText"></textarea>
 			 <button onclick="putDef('')">Put</button>
 			 <button onclick="cleanUp()">Clean up</button>
 		</div>
+		<p class="pDef" id="iParDef" onclick="clearDef()" oncontextmenu="editDef(event)"></p>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
 	</div>
@@ -95,6 +96,7 @@ function setN_CUR() {
 		N_CUR = N_ETT;
 	}
 	$('#iCnt').text(N_CUR);
+	$('#iCntTotal').text('[' + N_TOT + ']');
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
 function getProgress() {
@@ -130,7 +132,7 @@ function putDef(def) {
 	})
 	.then(response => {
 		$('#iDefText').val("");
-		$('#iDefDiv').css("visibility", "hidden");
+		$('#iDefDiv').css("display", "none");
 		// Reset highlighting of missing definition
 		LAST_OBJ.innerHTML = LAST_OBJ.innerText;
 		scrollDown();
@@ -319,7 +321,7 @@ function lookupWord(el,onlyLocal,inline) {
 				return;
 			}
 			$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-			$('#iDefDiv').css("visibility", "hidden");
+			$('#iDefDiv').css("display", "none");
 			if (!inline) {
 				$('#iWords').css("visibility", "hidden");
 			}
@@ -329,7 +331,7 @@ function lookupWord(el,onlyLocal,inline) {
 				window.open(url, '_blank');
 			}
 			$('#iParDef').html("");
-			$('#iDefDiv').css("visibility", "visible");
+			$('#iDefDiv').css("display", "block");
 			$('#iDefText').focus();
 		}
 	})
@@ -351,7 +353,7 @@ function getCompDef(def) {
 		let w = words[i];
 		// Dispatch n fetches to get definitions
 		// add an identifier to each result to enable correct ordering 
-		fetch('backend/getDef.php?class=' + guessClass(w) + '&word='+ w, {
+		fetch('backend/getDef.php?class=' + guessClass(w) + '&word='+ removeClassDesc(w), {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -524,14 +526,14 @@ function lookupAll() {
 }
 function editDef(e) {
 	e.preventDefault();
-	$('#iDefDiv').css("visibility", "visible");
+	$('#iDefDiv').css("display", "block");
 	$('#iDefText').focus();
 }
 function clearDef() {
 	if (DEBUG) console.log("clearDef()");
 	$('#iParDef').html("");
 	$('#iWords').css("visibility", "visible");
-	$('#iDefDiv').css("visibility", "hidden");
+	$('#iDefDiv').css("display", "none");
 }
 function pretty(def) {
 	if (DEBUG) console.log("pretty(def); def = " + def);
@@ -590,7 +592,23 @@ function pretty(def) {
 	if (out[out.length-1] === ",") out = out.slice(0,out.length-1)
 	return out;
 }
+function fullClassName(name) {
+	if (name === "en") return "substantiv_en"
+	if (name === "ett") return "substantiv_ett"
+	return name
+}
 function guessClass(word) {
+	// Prefer explicit definition of class
+	if (word.includes('(') && word.includes(')')) {
+		// grab class	
+		let start = word.indexOf('(')
+		let end = word.indexOf(')')	
+		if (start > end || start === -1) return 
+		let c = word.slice(start+1,end);
+		c = fullClassName(c);
+		return c;
+	} 
+	// Otherwise try and semi-intelligently guess word class
 	if (word.endsWith('a')) return "verb"
 	if (word.includes(' ')) return "verb"
 	if (word.endsWith("ig")) return "adjektiv"
@@ -609,6 +627,14 @@ function guessClass(word) {
 		console.log(error);
 	})
 	return "substantiv_en"
+}
+function removeClassDesc(word) {
+	let start = word.indexOf('(');
+	let end = word.indexOf(')');
+	if (start > end || start === -1) return word 
+	console.log(word.slice(0,start-1))
+	return word.slice(0,start-1)	
+			
 }
 function addWord() {
 	if (DEBUG) console.log("addWord()");
@@ -721,7 +747,9 @@ function preProc(def) {
 }
 function cleanUp() {
 	if (DEBUG) console.log("cleanUp(); LAST_DEF = " + LAST_DEF);
-	let def = LAST_DEF.replaceAll("<br>","\n");
+	let def = LAST_DEF
+	if (def.slice(0,4) === "<br>") def = def.substr(4)
+	def = def.replaceAll("<br>","\n");
 	def = def.replaceAll(" JFR","\nJFR");
 	def = def.replaceAll(" SE","\nSE");
 	def = def.replaceAll(" SYN","\nSYN");

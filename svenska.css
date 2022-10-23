@@ -236,10 +236,6 @@ label {
 	transition: .1s;
 }
 
-.defInput {
-	visibility: hidden;
-}
-
 .iDef {
 	width: 100%;
 	font-size: 24px;
@@ -261,5 +257,5 @@ label {
 }
 
 #iDefDiv {
-	visibility: hidden;
+	display: none;
 }
