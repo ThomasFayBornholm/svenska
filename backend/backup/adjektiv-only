@@ -473,7 +473,6 @@ frånvarande
 fuktig
 ful
 full
-fullfjädrad
 fullgjord
 fullgod
 fullkomlig
@@ -484,6 +483,7 @@ fullpropad
 fullsatt
 fullskalig
 fullständig
+fullfjädrad
 fumlig
 fundamental
 funktionell
@@ -638,11 +638,11 @@ hackig
 halsbrytande
 halt
 halv
-handfallen
 handfast
 handgriplig
 handlingsförlamad
 handlingskraftig
+handfallen
 hanterbar
 harmlös
 harmoniserad
@@ -792,7 +792,6 @@ inslagen
 instabil
 installerad
 institutionell
-inställsam
 intagande
 integrerande
 intellektuell
@@ -808,6 +807,7 @@ intressant
 intresserad
 invecklad
 invändig
+inställsam
 irakisk
 iransk
 irländsk
@@ -1125,9 +1125,9 @@ mobil
 moddig
 moderat
 modern
-modfälld
 modig
 modlös
+modfälld
 mogen
 molnig
 mondän
@@ -1139,10 +1139,10 @@ motbjudande
 motig
 motsatt
 motspänstig
-motsträvig
 motsvarande
 mottaglig
 motvillig
+motsträvig
 multinationell
 multiplicerad
 mumsig
@@ -1348,10 +1348,8 @@ orättvis
 orörlig
 osagd
 osannolik
-oschyst
 oskiljbar
 oskyldig
-ostadig
 ostörd
 osymmetrisk
 osynlig
@@ -1381,6 +1379,8 @@ ovidkommande
 oväntad
 oväxlad
 ovårdad
+oschyst
+ostadig
 oändlig
 oåterkallelig
 oönskad
@@ -1481,8 +1481,8 @@ rationell
 reaktionär
 real
 realistisk
-redlös
 redo
+redlös
 reell
 regelbunden
 regelmässig
@@ -1912,9 +1912,9 @@ upptagen
 uppåtstigande
 urban
 urringad
-urskiljbar
 ursprunglig
 urusel
+urskiljbar
 uråldrig
 usel
 utanpåliggande
@@ -1929,7 +1929,6 @@ utgående
 utlovad
 utländsk
 utmanande
-utmattad
 utmärkt
 utmönstrad
 utnyttjad
@@ -1940,13 +1939,14 @@ utrikespolitisk
 utsatt
 utskjutande
 utsorterad
-utstuderad
 utsvävande
 uttrycklig
 uttråkad
 utvald
 utvecklingsstörd
 utvändig
+utmattad
+utstuderad
 utåtagerande
 uvular
 vacker
@@ -2085,7 +2085,6 @@ yttre
 östlig
 östra
 överdriven
-överfallad
 överflödig
 övergiven
 övergripande
@@ -2093,9 +2092,6 @@ yttre
 överlägsen
 övernaturlig
 överordnad
-överraskad
-överrumplad
-överrumplande
 överskådlig
 överstimulerad
 översvallande
@@ -2105,5 +2101,9 @@ yttre
 övervintrad
 övervägande
 överväldigande
+överfallad
+överraskad
+överrumplad
+överrumplande
 övre
 övrig

@@ -272,11 +272,11 @@ fusk
 fynd
 fyrfota­djur
 fyrverkeri
+färgband
 fält
 fängelse
 fängelsestraff
 färdled
-färgband
 fäste
 fång
 får
@@ -432,7 +432,6 @@ hår
 hårrör
 högfrekvensegenskap
 högkvarter
-högrev
 högstadium
 höjningstecken
 hölje
@@ -516,6 +515,7 @@ koncept
 kongresshus
 konserthus
 konsthantverk
+kostnadsläge
 konstverk
 konto
 kontor
@@ -527,7 +527,6 @@ koordinatsystem
 korn
 kors
 kortslutningsställe
-kostnadsläge
 kraftuttryck
 kraftverk
 kreatinin
@@ -562,7 +561,6 @@ kåseri
 kök
 kölvatten
 kön
-könsorgan
 köp
 körkort
 kött
@@ -589,6 +587,7 @@ lergods
 lidande
 likhetstecken
 liv
+livdsmedel
 livsmedel
 ljud
 lock
@@ -734,6 +733,7 @@ ogillande
 oljepris
 ombud
 omdöme
+omgång
 omlopp
 område
 omslag
@@ -821,7 +821,7 @@ riksdagsbeslut
 riksdagsparti
 riksdagsval
 riksförbund
-ringrev
+ringdrev
 ris
 rop
 rotsystem
@@ -829,7 +829,7 @@ rottecken
 rovdjur
 rum
 ryck
-ryggradsdjur
+ryggrads­djur
 rykte
 räknesätt
 ränteläge
@@ -837,8 +837,7 @@ rättsväsende
 rå
 rån
 rön
-rör
-sakförhållande
+sak­förhållande
 salt
 samarbete
 samband
@@ -888,6 +887,7 @@ skepp
 skick
 skifte
 skikt
+skin
 skinn
 skivbolag
 skjul
@@ -918,6 +918,7 @@ sladder
 slag
 slaganfall
 slagfält
+slagmål
 slagord
 slagsmål
 slask
@@ -935,6 +936,7 @@ slöjmoln
 slöseri
 smartarsle
 smatter
+smet
 smink
 smolk
 sms
@@ -967,9 +969,11 @@ språk
 språkbruk
 språng
 spädbarn
+spärrskikt
 spår
 spöke
 spörsmål
+stadion
 stadium
 staffage
 stall
@@ -983,7 +987,6 @@ stickord
 stift
 stilleben
 stillestånd
-stop
 stopmått
 stopp
 stordåd
@@ -1015,8 +1018,7 @@ svin
 svärd
 svårmod
 syfte
-symptom
-symtom
+symptom(el.symtom)
 syndafall
 syndrom
 synsätt
@@ -1078,6 +1080,7 @@ toppmöte
 torg
 torn
 trakasseri
+trakasserie
 trams
 trassel
 trick
@@ -1088,6 +1091,7 @@ truckflak
 tryck
 tryckalster
 tryckeri
+trygghetsskapande
 trä
 träd
 tråk
@@ -1114,7 +1118,7 @@ underlag
 underland
 underliv
 underskott
-understöd
+understöde
 ungdomsförbund
 universitet
 universum
@@ -1220,6 +1224,8 @@ yrkande
 yrke
 yrkesval
 yttrande
+­könsorgan
+­rör
 ägande
 ägg
 äktenskap

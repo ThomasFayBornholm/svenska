@@ -558,7 +558,6 @@ distans
 distribution
 division
 djungel
-djurläkare
 djävul
 docent
 doft
@@ -578,7 +577,6 @@ dopning
 dos
 dosa
 dotter
-drabant
 dragning
 dram
 drift
@@ -2002,7 +2000,6 @@ lucka
 luffare
 luft
 luftvägsinfektion
-lump
 lunch
 lust
 lusta
@@ -2063,7 +2060,6 @@ maka
 make
 makt
 maktdelning
-maktfördelning
 makthavare
 mall
 malm
@@ -2115,6 +2111,7 @@ matta
 matte
 matvara
 medalj
+medansvarighet
 medarbetare
 medborgare
 medelhöjd
@@ -2214,6 +2211,7 @@ moll
 moms
 monarki
 monitor
+monstergaffel
 monter
 montering
 moped
@@ -2233,6 +2231,7 @@ motgång
 motion
 motionsrätt
 motionär
+motionäre
 motivation
 motivering
 motoffensiv
@@ -2277,6 +2276,7 @@ mängd
 människa
 människosyn
 mänsklighet
+märkläggning
 märkning
 mässa
 mästare
@@ -2300,13 +2300,13 @@ möbel
 möda
 möjlighet
 mördare
-mörkläggning
 mört
 mössa
 mötesplats
 nackdel
 nacke
 nagel
+nakenfisighet
 nalle
 namnteckning
 narkoman
@@ -2339,6 +2339,7 @@ nedstämdhet
 nerv
 nervgift
 nesa
+nettoström
 neutralitet
 nia
 nippel
@@ -2375,6 +2376,7 @@ nyhetssajt
 nykomling
 nykterist
 nyrekrytering
+nytt
 nytta
 nyttighet
 nyårsafton
@@ -3476,7 +3478,7 @@ upphandling
 upphettning
 upphovsman
 upphovsrätt
-upphällning
+upphållning
 upphöjning
 uppkomst
 upplag
@@ -3492,6 +3494,7 @@ upprinnelse
 upprustning
 upprättelse
 uppsats
+uppsida
 uppskattning
 uppslutning
 uppsträckning
@@ -3503,6 +3506,7 @@ upptäckt
 uppvärmning
 uppväxt
 uppövning
+urfegning
 urkoppling
 urladdning
 ursäkt
@@ -3539,6 +3543,7 @@ utrotning
 utrustning
 uträkning
 utsikt
+utskallning
 utskällning
 utsmyckning
 utspänning
@@ -3579,7 +3584,6 @@ valprövningsnämnd
 valrörelse
 valuta
 vana
-vandel
 vandring
 vanesak
 vanheder
@@ -3596,18 +3600,20 @@ vecka
 veckodag
 vektor
 velociped
+venture
+venturing
+verka
 verkan
 verklighet
 verklighetsflykt
 verksamhet
 verkstadsindustri
+verse
 version
 vessla
 vetenskap
 veteran
-veterinär
 vetskap
-vev
 vevarm
 vibration
 vidd
@@ -3664,6 +3670,7 @@ vändning
 vändpunkt
 väninna
 vänskap
+vänta
 väntan
 värd
 värdering
@@ -3675,6 +3682,7 @@ värmekälla
 värmeutveckling
 värnplikt
 värvning
+väsen
 väska
 väta
 vätska
