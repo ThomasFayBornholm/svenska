@@ -191,7 +191,7 @@ banan
 banbrytare
 bandit
 bank
-bankett
+bankette
 bankrutt
 bar
 barack
@@ -216,6 +216,7 @@ bataljon
 bearbetning
 bebis
 bebyggelse
+bedjande
 bedragare
 bedrift
 beduin
@@ -433,7 +434,7 @@ buk
 bukt
 bulle
 bulletin
-bulvan
+bulva
 bundsförvant
 bunt
 bur
@@ -468,6 +469,7 @@ bön
 böna
 börda
 början
+börs
 börse
 cancer
 cd
@@ -1086,7 +1088,6 @@ förvanskning
 förvaring
 förvarning
 förvirring
-förvridning
 förväntan
 förväntning
 förvåning
@@ -1401,7 +1402,6 @@ idrottsplats
 idé
 igelkott
 ihärdighet
-ilfart
 illusion
 illustration
 ilning
@@ -1429,6 +1429,7 @@ information
 infrastruktur
 ingenjör
 ingång
+initiativet
 inkallelse
 inkomst
 inkoppling
@@ -1568,7 +1569,6 @@ karriärutveckling
 karta
 kartläggning
 kartograf
-kartografi
 kartong
 kartongskylt
 kassa
@@ -1712,6 +1712,7 @@ kongress
 konjugat
 konjunktur
 konjunkturnedgång
+konkret
 konkurrens
 konkurrenskraft
 konkurrent
@@ -1807,7 +1808,7 @@ kritiker
 krock
 krog
 krok
-krokodiltårar
+krokodiltår
 krona
 kropp
 kroppstemperatur
@@ -1825,6 +1826,7 @@ kräm
 krämpa
 kränkning
 kråkfågel
+krönik
 krönika
 kudde
 kuk
@@ -1902,7 +1904,6 @@ kärna
 kärnklyvning
 kärnkraft
 kärnpunkt
-kärnreaktor
 kärnved
 kål
 kår
@@ -1930,18 +1931,17 @@ landsort
 landsting
 landstridskraft
 landyta
-lantgård
 lapp
 laser
 last
 lastbil
 latitud
 lavett
-lavin
 lavineffekt
 led
 leda
 ledamot
+ledamöt
 ledare
 ledarskribent
 ledighet
@@ -1986,7 +1986,7 @@ livslängd
 livsstil
 livstid
 livtidsfängelse
-ljumske
+ljumse
 ljusbåge
 ljusbågsugn
 ljusstake
@@ -2027,7 +2027,6 @@ läkare
 längd
 längdenhet
 längdskidåkning
-längdåkning
 längtan
 länk
 länsstyrelse
@@ -2434,7 +2433,6 @@ omsättning
 omtanke
 omvandling
 omväg
-omvändning
 omvärld
 omöjlighet
 ondhet
@@ -2464,7 +2462,7 @@ orosmoment
 orsak
 orsakssamband
 ort
-oräknelig
+orättvis
 orättvisa
 ost
 osäkerhet
@@ -2492,6 +2490,7 @@ paroll
 part
 partianhängare
 partikoppling
+partiledar
 partiledare
 partner
 passagerare
@@ -2565,7 +2564,6 @@ pondus
 ponton
 popsångerska
 por
-pornografi
 porr
 port
 portalfigur
@@ -2586,6 +2584,7 @@ praxis
 predikan
 premiär
 premiärminister
+premomoria
 present
 presentation
 president
@@ -2794,7 +2793,6 @@ räcka
 räckvidd
 räd
 rädsla
-räffla
 räkmacka
 räknare
 räknelag
@@ -2821,6 +2819,7 @@ röst
 röstning
 rösträtt
 röv
+sadelstolpsklämma
 saga
 sajt
 sak
@@ -2830,6 +2829,7 @@ saknad
 sakpolitik
 sambo
 same
+samhällssegment
 samlare
 samling
 sammandrabbning
@@ -2871,11 +2871,13 @@ serie
 serveess
 server
 service
+sex
 sexa
 sexualitet
 sfär
 show
 sida
+siffer
 siffra
 signal
 signalpolitik
@@ -2929,18 +2931,26 @@ sked
 skena
 skepsis
 skida
-skiffer
 skildring
 skillnad
 skilsmässa
 skinnskalle
 skissning
 skit
+skiv
 skiva
 sko
 skog
 skogsindustri
 skola
+skolavgift
+skolgång
+skolgård
+skolkorridor
+skolkurator
+skollag
+skolnation
+skolverksamhet
 skorpa
 skottglugg
 skottlossning
@@ -2951,8 +2961,9 @@ skrivning
 skrotning
 skrutt
 skräck
+skräcka
 skräcködla
-skrämsel
+skråmsel
 skugga
 skuld
 skuldra
@@ -3028,6 +3039,7 @@ socialdemokrat
 socialism
 socialist
 socialtjänst
+socialtjänste
 sociologi
 soffa
 sol
@@ -3044,6 +3056,8 @@ spalt
 spaltmeter
 spanare
 spaning
+spannmålsexport
+specialbestämmelse
 spekulation
 spelare
 spelning
@@ -3076,6 +3090,7 @@ stadiebeteckning
 stadsdel
 stake
 stam
+stamm
 standard
 stans
 start
@@ -3083,6 +3098,7 @@ stat
 station
 statist
 statistik
+statsetablering
 statskassa
 statsmakt
 statsminister
@@ -3109,6 +3125,7 @@ storlek
 storleksordning
 storm
 stormakt
+stormaktsställning
 stormsteg
 storstad
 story
@@ -3127,12 +3144,12 @@ struma
 strut
 struts
 strykning
+sträck
 sträcka
 sträckning
 sträva
 strävan
 stråk
-stråle
 strålglans
 strålkastare
 strålning
@@ -3141,7 +3158,9 @@ stråtrövare
 ström
 strömbegränsning
 strömbrytare
+strömrusning
 strömställare
+strömökning
 stubin
 student
 studie
@@ -3178,7 +3197,6 @@ svaghet
 sval
 svallvåg
 svastika
-svedjebruk
 svedjebrukare
 svensk
 svenska
@@ -3210,6 +3228,7 @@ säkerhet
 säkerhetspolitik
 säkerhetssynpunkt
 säljare
+sälla
 sändning
 säng
 sängkammare
@@ -3229,6 +3248,7 @@ sörlänning
 tabb
 tabell
 tablå
+tafatt
 tagg
 takt
 taktik
@@ -3238,6 +3258,7 @@ taliban
 tall
 tallinje
 talman
+taltur
 tamp
 tand
 tangent
@@ -3520,7 +3541,6 @@ utrikesminister
 utrikespolitik
 utrotning
 utrustning
-utrymning
 uträkning
 utsikt
 utskällning
@@ -3563,7 +3583,6 @@ valprövningsnämnd
 valrörelse
 valuta
 vana
-vandel
 vandring
 vanesak
 vanheder

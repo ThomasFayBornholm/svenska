@@ -219,7 +219,6 @@ exemplar
 experiment
 extremvärde
 fack
-fackspråk
 faktum
 fall
 fartyg
@@ -273,11 +272,11 @@ fusk
 fynd
 fyrfota­djur
 fyrverkeri
+färgband
 fält
 fängelse
 fängelsestraff
 färdled
-färgband
 fäste
 fång
 får
@@ -517,6 +516,7 @@ koncept
 kongresshus
 konserthus
 konsthantverk
+kostnadsläge
 konstverk
 konto
 kontor
@@ -528,7 +528,6 @@ koordinatsystem
 korn
 kors
 kortslutningsställe
-kostnadsläge
 kraftuttryck
 kraftverk
 kreatinin
@@ -563,7 +562,6 @@ kåseri
 kök
 kölvatten
 kön
-könsorgan
 köp
 körkort
 kött
@@ -838,7 +836,6 @@ rättsväsende
 rå
 rån
 rön
-rör
 sakförhållande
 salt
 samarbete
@@ -948,7 +945,6 @@ snus
 snusk
 snyft
 snöre
-snöskred
 socialbidrag
 socker
 sommarlov
@@ -985,8 +981,8 @@ stickord
 stift
 stilleben
 stillestånd
-stop
 stopmått
+stop
 stopp
 stordåd
 storfurstendöme
@@ -1151,7 +1147,6 @@ utkast
 utland
 utlopp
 utnyttjande
-utnötningskrig
 utrop
 utrymme
 utseende
@@ -1224,6 +1219,8 @@ yrkande
 yrke
 yrkesval
 yttrande
+könsorgan
+rör
 ägande
 ägg
 äktenskap
