@@ -708,6 +708,9 @@ function preProc(def) {
 			s = s.replaceAll("ibland med partikel","(ibland med partikel");
 			s = s.replaceAll("vanligen med partikel","(ibland med partikel");
 			s = s.replaceAll("ofta med partikel","(ofta med partikel");
+
+			s = s.replaceAll("vanligen i sammansätt.",")vanligen i sammansättn.)");
+			s = s.replaceAll("vanligen i vissa sammansätt.",")vanligen i vissa sammansättn.)");
 			let m = s.match(regex1);
 			let m_alt = s.match(regex1_alt);
 			let m2 = s.match(regex2);
