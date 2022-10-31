@@ -26,12 +26,13 @@
 		<p onclick="setClass('substantiv_en')">En</p>
 		<p onclick="setClass('substantiv_ett')">Ett</p>
 		<p onclick="setClass('test')">Test</p>
+		<p onclick="setClass('all')">All</p>
 	</div>
 </div>
 <img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()">
 </div>
 <form onsubmit="seekWordWrapper(event)">
-	<input id="iSeek">
+	<input id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">
 </form>
 </div>
 <div class="row columns_4">
@@ -72,13 +73,13 @@ let N_CUR=0;
 let N_DEFS = 0;
 
 let LAST_WORD="";
-let CLASS = "verb";
+let CLASS = "all";
 var LAST_OBJ;
-let DEBUG=false;
+let DEBUG=true;
 let LAST_DEF = "";
 function startup() {
 	wordCount();
-	getWords();
+	getWords(-1);
 }
 
 function setN_CUR() {
@@ -94,6 +95,8 @@ function setN_CUR() {
 		N_CUR = N_EN;
 	} else if (CLASS === "substantiv_ett") {
 		N_CUR = N_ETT;
+	} else if (CLASS === "all") {
+		N_CUR = N_TOT;
 	}
 	$('#iCnt').text(N_CUR);
 	$('#iCntTotal').text('[' + N_TOT + ']');
@@ -164,14 +167,14 @@ function nextID(id) {
 }
 function advance() {
 	changeInc(N_INC)
-	getWords()
+	getWords(-1)
 }
 function retreat(e) {
 	e.preventDefault()
 	changeInc(-N_INC)
-	getWords()
+	getWords(-1)
 }
-function getWords() {
+function getWords(ind) {
 	SCROLL_INC=-1;
 	N_FOUND=0;
 	$('#iParDef').text("");
@@ -219,7 +222,11 @@ function getWords() {
 				$('#iWords').html(out);
 				getProgress();
 				countDefs();
-				if (DEBUG) console.log("getWords(); N_FOUND = " + N_FOUND);
+				if (ind > -1) {
+					let el = document.getElementById("w" + ind);
+					lookupWord(el,false,true);
+				}
+				if (DEBUG) console.log("getWords(ind); ind = " + ind + ", N_FOUND = " + N_FOUND);
 			})
 			.catch(error => {
 				console.log(error);
@@ -242,7 +249,7 @@ function scrollView(e) {
 	} else {
 		changeInc(-N_INC);
 	}
-	getWords();
+	getWords(-1);
 }
 
 function scrollWords(e) {
@@ -281,7 +288,7 @@ function popSpan(i, w, hasDef) {
 	tmp = "<span id='w<i>' onclick='lookupWord(this,false,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
 	if (DEBUG) console.log("popSpan(i=" + i + ",w=" + w + ",hasDef=" + hasDef + ")");
 	tmp = tmp.replace("<i>",i)
-	if (hasDef) {
+	if (hasDef || CLASS === "all") {
 		tmp = tmp.replaceAll("<w>",w);
 	} else { 
 		tmp = tmp.replaceAll("<w>","<i>" + w + "</i>");
@@ -301,43 +308,65 @@ function lookupWord(el,onlyLocal,inline) {
 	if (scroll_inc > -1 && scroll_inc < N_INC) {
 		SCROLL_INC = scroll_inc; 
 	}
-	fetch('backend/getDef.php?class=' + CLASS + '&word='+ word, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json()
-	})
-	.then(json => {
-		def = json;
-		LAST_DEF = json;
-		// Prefer local definition over 3rd party dictionary
-		if (def != "No definition found" && def != "Could not read json") {
-			if (json.includes("till '")) {
-				getCompDef(def);
-				return;
+	if (CLASS === "all") {
+		fetch('backend/getDefAll.php?word=' + word, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
 			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			def = json;
+			LAST_DEF = def;
 			$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-			$('#iDefDiv').css("display", "none");
-			if (!inline) {
-				$('#iWords').css("visibility", "hidden");
+			return;
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	} else {
+		fetch('backend/getDef.php?class=' + CLASS + '&word='+ word, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
 			}
-		} else {
-			if (!onlyLocal) {
-				let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
-				window.open(url, '_blank');
+		})
+		.then(response => {
+			return response.json()
+		})
+		.then(json => {
+			def = json;
+			LAST_DEF = json;
+			// Prefer local definition over 3rd party dictionary
+			if (def != "No definition found" && def != "Could not read json") {
+				if (json.includes("till '")) {
+					getCompDef(def);
+					return;
+				}
+				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+				$('#iDefDiv').css("display", "none");
+				if (!inline) {
+					$('#iWords').css("visibility", "hidden");
+				}
+			} else {
+				if (!onlyLocal) {
+					let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
+					window.open(url, '_blank');
+				}
+				$('#iParDef').html("");
+				$('#iDefDiv').css("display", "block");
+				$('#iDefText').focus();
 			}
-			$('#iParDef').html("");
-			$('#iDefDiv').css("display", "block");
-			$('#iDefText').focus();
-		}
-	})
-	.catch(error => {
-		console.log(error)
-	})
+		})
+		.catch(error => {
+			console.log(error)
+		})
+	}
 	if (DEBUG) console.log("lookupWord(" +  word + ")");
 }
 function getCompDef(def) {
@@ -399,6 +428,7 @@ function getRefs(def) {
 function onlineLookup(el, e) {
 	e.preventDefault()
 	word = el.innerText;
+	if (word.length === 0) word = el.value;
 	let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
 	window.open(url, '_blank');
 }
@@ -466,8 +496,15 @@ function seekWord() {
 			return response.json();
 		})
 		.then(json => {
-			INC = json;			
-			getWords();
+			if (json > -1) {
+				INC = json - 3;			
+				let ind = 3;
+				if (INC < 0)  {
+					INC = 0;
+					let ind = 0;
+				}
+				getWords(ind);
+			}
 		})
 		.catch(error => {
 			console.log(error);
@@ -483,7 +520,7 @@ function setClass(c) {
 	setN_CUR();
 	getProgress();
 	countDefs();
-	getWords();
+	getWords(-1);
 	if (DEBUG) console.log("setClass(c); CLASS = " + CLASS + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
 }
 function countDefs() {
