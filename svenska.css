@@ -247,7 +247,10 @@ label {
 	margin-left: 5%;
 	font-size: 60px
 }
-
+.inputSearch {
+	font-size: 48pt;
+	width: 30%;
+}
 #iShowBtn {
 	width: 256px;
 }
