@@ -5,38 +5,36 @@
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body onload="startup()">
-<!--progress bar-->
-<div onwheel="scrollView(event)">
-<button id="iShowToggle" onclick="showToggle()">HIDE</button>
-<span class="progressContainer">
-	<span class="progress" id="iProg"></span>
-</span>
-<span class="progressContainer" onclick="lookupAll()">
-	<span class="progress" id="iDefProg"></span>
-</span>
-<span id="iCnt">test</span>
-<span id="iCntTotal">Total</span>
-<div>
-<div class="dropdown">
-	<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg">
-	<div class="dropdown-content">
-		<p onclick="setClass('adjektiv')">Adjektiv</p>
-		<p onclick="setClass('verb')">Verb</p>
-		<p onclick="setClass('adverb')">Adverb</p>
-		<p onclick="setClass('substantiv_en')">En</p>
-		<p onclick="setClass('substantiv_ett')">Ett</p>
-		<p onclick="setClass('test')">Test</p>
-		<p onclick="setClass('all')">All</p>
-	</div>
-</div>
-<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()">
-</div>
-<form onsubmit="seekWordWrapper(event)">
-	<input id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">
-</form>
-</div>
 <div class="row columns_4">
+<!--progress bar-->
 	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
+		<button id="iShowToggle" onclick="showToggle()">HIDE</button>
+		<span class="progressContainer">
+			<span class="progress" id="iProg"></span>
+		</span>
+		<span class="progressContainer" onclick="lookupAll()">
+			<span class="progress" id="iDefProg"></span>
+		</span>
+		<span id="iCnt">test</span>
+		<span id="iCntTotal">Total</span>
+		<div id="iControls">
+			<div class="dropdown">
+				<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg">
+				<div class="dropdown-content">
+					<p onclick="setClass('adjektiv')">Adjektiv</p>
+					<p onclick="setClass('verb')">Verb</p>
+					<p onclick="setClass('adverb')">Adverb</p>
+					<p onclick="setClass('substantiv_en')">En</p>
+					<p onclick="setClass('substantiv_ett')">Ett</p>
+					<p onclick="setClass('test')">Test</p>
+					<p onclick="setClass('all')">All</p>
+				</div>
+			</div>
+			<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()">
+			<form onsubmit="seekWordWrapper(event)">
+				<input id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">
+			</form>
+		</div>
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
@@ -45,14 +43,11 @@
 			 <button onclick="putDef('')">Put</button>
 			 <button onclick="cleanUp()">Clean up</button>
 		</div>
-		<p class="pDef" id="iParDef" onclick="clearDef()" oncontextmenu="editDef(event)"></p>
+		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDef(event)"></p>
+		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 	</div>
-	<div class="column" onwheel="scrollView(event)">
+	<div class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)">
 	</div>
-</div>
-
-<div id="iOutsideBottom" class="outside" onwheel="scrollView(event)" style="height: 1200px">
-	<p></p>
 </div>
 </body>
 <script>
@@ -209,7 +204,6 @@ function getWords(ind) {
 			})
 			.then(json => {
 				res = json;
-				console.log("res = " + res);
 				for (let i = 0; i < N_FOUND; i++) {
 					let del = "<br>"
 					if (i === 0) { 
@@ -220,6 +214,7 @@ function getWords(ind) {
 					out += del + popSpan(i, lastJson[i],hasDef) 
 				}
 				$('#iWords').html(out);
+				showWords();
 				getProgress();
 				countDefs();
 				if (ind > -1) {
@@ -235,21 +230,30 @@ function getWords(ind) {
 	})
 }
 
-function existsDef(wordList) {
-	let res = 0;
-
-	
-}
-
-function scrollView(e) {
-	e.preventDefault();
-	$('#iWords').css("visibility", "visible");
-	if (e.deltaY > 0) {
-		changeInc(N_INC);
-	} else {
-		changeInc(-N_INC);
-	}
+function scrollViewDown() {
+	if (DEBUG) console.log("scrollViewDown() begin");
+	changeInc(N_INC);
+	$('iDefDiv').css("display", "none");
 	getWords(-1);
+	showWords();
+}
+function scrollViewUp(e) {
+	e.preventDefault();
+	if (DEBUG) console.log("scrollViewUp() begin");
+	changeInc(-N_INC);
+	getWords(-1);
+	showWords();
+}
+function scrollView(e) {
+	if (DEBUG) console.log("scrollView() begin");
+	e.preventDefault();
+	showWords();
+	if (e.deltaY > 0) {
+		scrollViewDown();
+	} else {
+		scrollViewUp(e);
+	}
+	if (DEBUG) console.log("scrollView(); INC = " + INC)
 }
 
 function scrollWords(e) {
@@ -367,7 +371,11 @@ function lookupWord(el,onlyLocal,inline) {
 			console.log(error)
 		})
 	}
-	if (DEBUG) console.log("lookupWord(" +  word + ")");
+	
+	if (DEBUG) {
+		if (word.length === 0) word = "__empty__";
+		console.log("lookupWord(" +  word + ")");
+	}
 }
 function getCompDef(def) {
 	if (DEBUG) console.log("getCompDef(def); def = " + def);
@@ -421,8 +429,8 @@ function getRefs(def) {
 	def = def.replaceAll("till ", "");
 	def = def.replaceAll("'","");
 	arr = def.split(",");
-	return arr;
 	if (DEBUG) console.log("getRef()");
+	return arr;
 }
 
 function onlineLookup(el, e) {
@@ -464,15 +472,11 @@ function showToggle() {
 	let hide= $('#iShowToggle').text() === "HIDE";
 	if (hide) {
 		// Hide controls 
-		$('#iSeek').css("visibility", "hidden");
-		$('#iSelect').css("visibility", "hidden");
-		$('#iAdd').css("visibility", "hidden");
+		$('#iControls').css("display", "none");
 		$('#iShowToggle').text("__");
 	} else {
 		// Make visible class selector and word seeker controls
-		$('#iSeek').css("visibility", "visible");
-		$('#iSelect').css("visibility", "visible");
-		$('#iAdd').css("visibility", "visible");
+		$('#iControls').css("display", "block");
 		$('#iShowToggle').text("HIDE");
 		$('#iSeek').focus();
 	}
@@ -513,6 +517,8 @@ function seekWord() {
 	if (DEBUG) console.log("seekWord(); word = " + word + " -> INC = " + INC);
 }
 function setClass(c) {
+	$('#iDefDiv').css("display", "none");
+	$('#iWords').css("visibility", "visible");
 	CLASS = c;
 	INC = 0;
 	SCROLL_INC=-1;
@@ -563,6 +569,7 @@ function lookupAll() {
 }
 function editDef(e) {
 	e.preventDefault();
+	showWords();
 	$('#iDefDiv').css("display", "block");
 	$('#iDefText').focus();
 }
@@ -795,6 +802,11 @@ function cleanUp() {
 	def = def.replaceAll(" SYN","\nSYN");
 	def = def.replaceAll(" MOTSATS","\nMOTSATS");
 	putDef(def);
+}
+function showWords() {
+	if ($('#iWords').css("visibility") == "hidden") {
+		$('#iWords').css("visibility", "visible");
+	}
 }
 </script>
 </html>
