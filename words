@@ -26,11 +26,10 @@
 					<p onclick="setClass('adverb')">Adverb</p>
 					<p onclick="setClass('substantiv_en')">En</p>
 					<p onclick="setClass('substantiv_ett')">Ett</p>
-					<p onclick="setClass('test')">Test</p>
-					<p onclick="setClass('all')">All</p>
 				</div>
 			</div>
 			<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()">
+			<button class="b2" id="iAll" onclick="setClass('all')">All</button>
 			<form onsubmit="seekWordWrapper(event)">
 				<input id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">
 			</form>
@@ -70,7 +69,7 @@ let N_DEFS = 0;
 let LAST_WORD="";
 let CLASS = "all";
 var LAST_OBJ;
-let DEBUG=true;
+let DEBUG=false;
 let LAST_DEF = "";
 function startup() {
 	wordCount();
@@ -484,10 +483,10 @@ function showToggle() {
 }
 function seekWordWrapper(e) {
 	e.preventDefault();
-	seekWord();
-}
-function seekWord() {
 	let word = $('#iSeek').val();
+	seekWord(word);
+}
+function seekWord(word) {
 	if (word.length > 0) {
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word, {
 			method: 'get',
@@ -516,7 +515,7 @@ function seekWord() {
 	}
 	if (DEBUG) console.log("seekWord(); word = " + word + " -> INC = " + INC);
 }
-function setClass(c) {
+function setClass(c, seek = "") {
 	$('#iDefDiv').css("display", "none");
 	$('#iWords').css("visibility", "visible");
 	CLASS = c;
@@ -527,7 +526,8 @@ function setClass(c) {
 	getProgress();
 	countDefs();
 	getWords(-1);
-	if (DEBUG) console.log("setClass(c); CLASS = " + CLASS + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
+	if (seek.length > 0) seekWord(seek);
+	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
 }
 function countDefs() {
 	N_DEFS = 0;
@@ -723,6 +723,9 @@ function addWord() {
 }
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = " + def)
+	def = def.replace("Ãlderdomligt","[Ã¥lderdomlit]");	
+	def = def.replace("vardagligt","[vardagligt]");	
+	def = def.replace("mindre bruklikt","[mindre bruklikt]");	
 	// Split definition
 	arr = def.split("\n");
 	let s = "";
@@ -750,7 +753,7 @@ function preProc(def) {
 			s = s.replaceAll("  ", "");
 			s = s.replaceAll(" , ", ", ");
 			s = s.replaceAll("ibland med partikel","(ibland med partikel");
-			s = s.replaceAll("vanligen med partikel","(ibland med partikel");
+			s = s.replaceAll("vanligen med partikel","(vanligen med partikel");
 			s = s.replaceAll("ofta med partikel","(ofta med partikel");
 
 			s = s.replaceAll("vanligen i sammansätt.",")vanligen i sammansättn.)");
