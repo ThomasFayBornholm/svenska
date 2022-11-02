@@ -1,3 +1,6 @@
+abdominal
+abnorm
+aboriginsk
 absolut
 abstrakt
 absurd
@@ -11,6 +14,7 @@ afrikansk
 aggressiv
 akademisk
 aktiv
+aktsam
 aktuell
 akustisk
 akut
@@ -92,6 +96,7 @@ avsiktlig
 avskaffad
 avskild
 avskyvärd
+avsliten
 avslutad
 avslutande
 avspänd
@@ -202,10 +207,12 @@ bortskämd
 bosatt
 bottnad
 bra
+brandfarlig
 brant
 braskande
 bred
 briljant
+brinnande
 bristfällig
 brittisk
 brottslig
@@ -239,6 +246,7 @@ dansk
 debil
 debiterad
 defekt
+definitiv
 delad
 delaktig
 delvis
@@ -282,6 +290,7 @@ drullig
 drumlig
 dryg
 dräglig
+dråplig
 dubbel
 dubiösa
 duktig
@@ -418,6 +427,9 @@ finsk
 finurlig
 fipplig
 firad
+fjantig
+fjollig
+fjompig
 fjädrande
 fjärran
 fladdrig
@@ -527,6 +539,7 @@ föregiven
 föregående
 förenlig
 förestående
+förfallen
 författningsenlig
 förfluten
 förfärlig
@@ -537,6 +550,7 @@ förhärdad
 förhöjd
 förkastlig
 förkrossande
+förlagd
 förmögen
 förnedrad
 förnuftig
@@ -556,6 +570,7 @@ förtjust
 förtroendeskadlig
 förtrogen
 förtrolig
+förtryckt
 förtrytsam
 förträfflig
 förtvivlad
@@ -572,6 +587,7 @@ förödmjukad
 förödmjukande
 galen
 gammal
+gammaldags
 gastkramande
 gedigen
 gemensam
@@ -631,6 +647,7 @@ gräslig
 grävande
 grå
 grön
+gudlig
 gudomlig
 gul
 gyllene
@@ -730,6 +747,7 @@ högdragen
 höger
 högerpopulistisk
 högfrekvent
+höggravid
 högljudd
 högpresterande
 högtidlig
@@ -853,6 +871,7 @@ jämnstark
 jämnvarm
 jättebra
 jävla
+jönsig
 kall
 kallblodig
 kallsinnig
@@ -871,6 +890,7 @@ kemisk
 kinesisk
 kladdig
 klandervärd
+klantig
 klar
 klarvaken
 klassisk
@@ -946,6 +966,7 @@ kronisk
 kroppslig
 kruserlig
 kränkande
+kräsen
 krävande
 krånglig
 kul
@@ -1030,6 +1051,7 @@ ljum
 ljus
 ljusblå
 ljusskygg
+ljuv
 lodrät
 logisk
 logistisk
@@ -1073,6 +1095,7 @@ långsiktig
 långsmal
 långtgående
 långvarig
+långvåg
 lögnaktig
 löjlig
 lönlös
@@ -1102,6 +1125,7 @@ medborgerlig
 medelmåttig
 medelstor
 medeltida
+medfaren
 medfödd
 medial
 medicinsk
@@ -1274,6 +1298,7 @@ oformlig
 ofrivillig
 ofullbordad
 ofullständig
+oförberedd
 oförbrukad
 oförbätterlig
 oförmögen
@@ -1390,6 +1415,7 @@ ovanstående
 ovedersäglig
 ovetande
 ovidkommande
+oviss
 oväntad
 oväxlad
 ovårdad
@@ -1529,10 +1555,12 @@ riktig
 rimlig
 riskfylld
 robust
+rogivande
 romantisk
 romersk
 rosa
 rubbad
+rucklig
 ruffig
 rumslig
 rund
@@ -1564,12 +1592,14 @@ sakta
 saktfärdig
 salig
 samhällelig
+samhällsekonomisk
 samisk
 sammanbunden
 sammanbyggd
 sammanhängande
 sammanlagd
 sammansatt
+sammansvetsad
 samtida
 samtidig
 samtlig
@@ -1653,10 +1683,13 @@ skör
 skördad
 skötsam
 slagen
+slak
 slankig
+slapp
 slarvig
 slavisk
 slirig
+sliten
 slut
 slutgiltig
 slutlig
@@ -1695,6 +1728,7 @@ sorglig
 sossig
 sovjetisk
 spansk
+sparsmakad
 speciell
 specifik
 spektakulär
@@ -1709,7 +1743,9 @@ språklig
 språngvis
 spröd
 spydig
+spänd
 spännande
+spårlös
 stabil
 stackars
 stadig
@@ -1778,6 +1814,7 @@ symmetrisk
 sympatisk
 synbar
 synlig
+synnerligen
 syntetisk
 syrlig
 systematisk
@@ -1785,8 +1822,10 @@ säker
 säkerställd
 sällsam
 sällsynt
+sär
 särskild
 sävlig
+sårad
 sårbar
 södra
 sömnlös
@@ -1796,6 +1835,7 @@ tacksam
 tafatt
 tagen
 taggad
+tajt
 taktisk
 talrik
 tapper
@@ -1848,6 +1888,7 @@ trogen
 trolig
 trovärdig
 trygg
+tränad
 trådlindad
 trådlös
 tråkig
@@ -1917,12 +1958,15 @@ uppnäst
 uppriktig
 upprörd
 uppseglad
+uppskattad
 uppslitande
 uppsluppen
 uppstoppad
 upptagen
 uppåtstigande
 urban
+urblåst
+urgammal
 urringad
 ursinnig
 urskiljbar
@@ -1983,8 +2027,10 @@ varaktig
 vardaglig
 varierad
 varierande
+varlig
 varm
 varmblodig
+varsam
 vass
 vaxartad
 vederbörande
@@ -1994,6 +2040,7 @@ vemodig
 verklig
 verksam
 verkställande
+versal
 vertikal
 vetenskaplig
 veterinärmedicinsk
@@ -2031,6 +2078,7 @@ vägledande
 välbeställd
 välbärgad
 väldig
+välförsedd
 välintegrerad
 välkommen
 välkänd
@@ -2090,6 +2138,7 @@ yttre
 ödelade
 ödesdiger
 ödmjuk
+ödslig
 ökänd
 öm
 ömsesidig
@@ -2097,6 +2146,7 @@ yttre
 ömtalig
 önskvärd
 öppen
+öronbedövande
 österrikisk
 östlig
 östra
