@@ -666,7 +666,6 @@ förflyta
 förflytta
 förfoga
 förfrysa
-förfråga
 förfråga sig
 förfölja
 förföra
@@ -709,6 +708,7 @@ förorda
 förordna
 förorena
 förorsaka
+förorätta
 förpacka
 förplikta
 förringa
@@ -771,6 +771,7 @@ förväxla
 förvåna
 förädla
 förändra
+föräta sig
 förånga
 förödmjuka
 gagna
@@ -800,7 +801,6 @@ genomföra
 genomgå
 genomsyra
 ges
-gifta
 gifta sig
 gilla
 gina
@@ -966,7 +966,6 @@ höra till
 höra upp
 höras
 hörsamma
-hösta
 hösta in
 iaktta
 iakttaga
@@ -1002,6 +1001,7 @@ inhämta
 inhösta
 initiera
 inkalla
+inkapsla
 inkassera
 inkludera
 inkomma
@@ -1009,7 +1009,6 @@ inkoppla
 inkräkta
 inleda
 inlämna
-inlåta
 inlåta sig
 innebära
 innefatta
@@ -1070,7 +1069,6 @@ kamouflera
 kandidera
 kapa
 kapa åt sig
-kapsla
 kapsla in
 karakterisera
 kartlägga
@@ -1787,6 +1785,7 @@ sjunka
 sjösätta
 ska
 skada
+skada sig
 skaffa
 skaka
 skalla
@@ -2272,7 +2271,6 @@ tilltala
 tillträda
 tillvarata
 tillverka
-tillvälla
 tillvälla sig
 tillägga
 tillägna
@@ -2288,6 +2286,7 @@ titta fram
 titta in
 titta till
 titta upp
+titta över
 tjafsa
 tjata
 tjuta
@@ -2442,8 +2441,8 @@ uppträda
 upptäcka
 uppvakta
 uppvisa
+uppvärma
 urholka
-urladda
 urladda sig
 urskilja
 ursäkta
@@ -2671,7 +2670,6 @@ yttra
 åstadkomma
 åstunda
 åsyfta
-åta
 åta sig
 åtala
 återbetala
