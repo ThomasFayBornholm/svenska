@@ -21,23 +21,19 @@
 	// Previous action has checked that the word does not already exist in the listing 
 
 	// Add word add correct position in file
-	$first = true;
 	$out = "";
 	$placed = false;
+	$del = "";
 	foreach($elements as $w) {
-		if ($first) {
-			$del = "";
-			$first = false;
-		} else {
-			$del = "\n";
-		}
 		// Insertion point
 		if ($w > $word && !$placed) {
 			$placed=true;
 			$out = $out . $del . $word;
+			$del = "\n";
 			$out = $out . $del . $w; 
 		} else {
 			$out = $out . $del . $w; 
+			$del = "\n";
 		}
 	}
 	if ($placed === false) {
@@ -55,24 +51,21 @@
 	$first = true;
 	$out = "";
 	$placed = false;
+	$del="";
 	foreach($elements as $w) {
 		// Insertion point
 		if ($w === $word) {
+			$placed = true;
 			// No need to duplicate entry
 			$out = $out . $del . $word;
 			$placed = true;
 		} else if ($w > $word && !$placed) {
 			$placed = true;
 			$out = $out . $del . $word;
-			if (first) $out = $out . "\n";
+			$del = "\n";			
 			$out = $out . $del . $w;
 		} else {
 			$out = $out . $del . $w;
-		}
-		if ($first) {
-			$del = "";
-			$first = false;
-		} else {
 			$del = "\n";
 		}
 	}

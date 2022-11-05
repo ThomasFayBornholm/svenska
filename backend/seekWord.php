@@ -8,6 +8,7 @@
 	$ind = 0;
 	$found = false;
 	$match = -1;
+	$nMatches = 0;
 	foreach($words as $w) {
 		$t = str_replace(" 0", "", $w);
 		$t = str_replace(" 1", "", $t);
@@ -20,6 +21,7 @@
 		} else {
 			// Prefer exact matches
 			if (str_contains($t, $word)) {
+				$nMatches++;
 				if ($match === -1) {
 					$match = $ind;
 				} else {
