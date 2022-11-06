@@ -2,36 +2,50 @@
 	$path = getcwd() ."/";
 	$class = $_GET['class'];
 	$word = $_GET['word'];
+	// Word after current hightlighted word
+	$INC = $_GET['inc']+3;
 	$name = $class . "-only";
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$words = preg_split("/\r\n|\r|\n/", $contents);
 	$ind = 0;
 	$found = false;
 	$match = -1;
-	$nMatches = 0;
+	// Loop from current position
+	// First non-exact match is prioritised over later ones
+	// Exact match is allways returned when present 
+	$match2 = -1;
 	foreach($words as $w) {
-		$t = str_replace(" 0", "", $w);
-		$t = str_replace(" 1", "", $t);
-		$t = str_replace(" 2", "", $t);
 		if (strlen($word) === 1) {
-			if ($word === $t[0]) {
+			if ($word === $w[0]) {
 				echo json_encode($ind);
 				return;
 			}
 		} else {
 			// Prefer exact matches
-			if (str_contains($t, $word)) {
-				$nMatches++;
-				if ($match === -1) {
-					$match = $ind;
-				} else {
-					if ($t === $word) {
+			if (str_contains($w, $word)) {
+				if ($w === $word) {
+					echo json_encode($ind);
+					return;
+				}
+				// First non-exact match after current selection prioritised 
+				if ($ind > $INC) {
+					if ($match === -1) {
 						$match = $ind;
 					}
-				}	
+				// First non-exact match before current selection
+				} else if ($ind < $INC) {
+					if ($match2 === -1) {
+						$match2 = $ind;
+					}
+				} 
 			}
 		}
 		$ind++;
 	}
+	
+	if ($match === -1 && $match2 != -1) {
+		$match = $match2;
+	}
+	
 	echo json_encode($match);
 ?>

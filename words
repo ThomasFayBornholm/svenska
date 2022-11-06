@@ -488,7 +488,7 @@ function seekWordWrapper(e) {
 }
 function seekWord(word) {
 	if (word.length > 0) {
-		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word, {
+		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -515,6 +515,7 @@ function seekWord(word) {
 	}
 	if (DEBUG) console.log("seekWord(); word = " + word + " -> INC = " + INC);
 }
+
 function setClass(c, seek = "") {
 	$('#iDefDiv').css("display", "none");
 	$('#iWords').css("visibility", "visible");
@@ -656,20 +657,6 @@ function guessClass(word) {
 	if (word.endsWith('a')) return "verb"
 	if (word.includes(' ')) return "verb"
 	if (word.endsWith("ig")) return "adjektiv"
-	fetch('backend/existsWord.php?class=substantiv_ett&word=' + word, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-	})
-	.then(json => {
-	})
-	.catch(error => {
-		console.log(error);
-	})
 	return "substantiv_en"
 }
 function removeClassDesc(word) {
