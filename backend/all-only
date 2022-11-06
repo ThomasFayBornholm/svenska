@@ -5,13 +5,17 @@ abbot
 abbé
 abdikation
 abdomen
+aber
 abilitet
 abnormitet
 abolition
 aborigin
 abort
 abortera
+abrupt
 absolut
+absolutism
+absolutist
 absorbera
 absorption
 abstrakt
@@ -392,6 +396,7 @@ avgöra
 avgörande
 avhandling
 avhängig
+avhållsam
 avinstallera
 avisera
 avkastning
@@ -632,6 +637,7 @@ begå
 begåva
 begåvad
 begåvning
+behag
 behaga
 behaglig
 behandla
@@ -749,6 +755,7 @@ beskåda
 beslag
 beslagta
 beslagtaga
+beslut
 besluta
 beslutanderätt
 beslutsamhet
@@ -1332,6 +1339,7 @@ definition
 definitiv
 deklaration
 deklarera
+deklinera
 dekorera
 del
 dela
@@ -1477,6 +1485,7 @@ dominerande
 domslut
 domstol
 domän
+don
 donator
 donera
 dop
@@ -1611,10 +1620,12 @@ dåd
 dålig
 dåligt
 dåmera
+dåna
 dånande
 dårakitg
 dåraktig
 dåsa
+dåsig
 dåsighet
 dåvarande
 dö
@@ -1634,6 +1645,7 @@ dörrvakt
 ebba ut
 ed
 editor
+efemär
 effekt
 effektiv
 effektivisera
@@ -1725,6 +1737,8 @@ elände
 eländig
 emellanåt
 emellertid
+emfas
+emfatisk
 empati
 empatisk
 empirisk
@@ -1734,6 +1748,8 @@ enastående
 enbart
 endast
 endokrin
+energetik
+energetisk
 energi
 energieffektivisering
 energiräkning
@@ -1863,6 +1879,7 @@ exponering
 export
 exportera
 exportnäring
+expressiv
 extern
 extra
 extrainkallad
@@ -2072,6 +2089,7 @@ flikig
 flimra
 flimrande
 flin
+flink
 flit
 flitig
 flitigt
@@ -2093,6 +2111,7 @@ flygplats
 flygtid
 flygvapen
 flykt
+flyktig
 flykting
 flyktingpolitik
 flyta
@@ -2100,6 +2119,7 @@ flytande
 flytbar
 flytt
 flytta
+flyttbar
 fläck
 fläkt
 flämta
@@ -2615,6 +2635,8 @@ förgrenas
 förgrening
 förgrund
 förgrämd
+förgängelse
+förgänglig
 förgäves
 förgöra
 förhand
@@ -2676,6 +2698,8 @@ förmana
 förmedla
 förmedling
 förmiddag
+förminska
+förminskning
 förmoda
 förmodligen
 förmogenhet
@@ -2826,6 +2850,7 @@ förtvivla
 förtvivlad
 förtvivlan
 förtydliga
+förtänksam
 förunderlig
 förundersökning
 förut
@@ -3314,6 +3339,7 @@ harmoni
 harmonisera
 harmoniserad
 hasta
+hastig
 hastighet
 hastigt
 hat
@@ -4523,10 +4549,14 @@ konflikt
 konflikthantering
 konfrontation
 konfrontera
+konfundera
 konfunderad
+konfusion
+konfys
 kongress
 kongresshus
 konjugat
+konjugera
 konjugerad
 konjunktur
 konjunkturnedgång
@@ -4650,6 +4680,7 @@ korsning
 kort
 kortfattad
 kortis
+kortlivad
 kortsiktig
 kortsluta
 kortslutning
@@ -4659,6 +4690,8 @@ kortvåg
 korv
 korvmacka
 koryfé
+kosmetik
+kosmisk
 kost
 kosta
 kostnad
@@ -4847,6 +4880,7 @@ kvartal
 kvarter
 kvarvarande
 kvast
+kvick
 kvida
 kvidan
 kvinna
@@ -4981,6 +5015,7 @@ lagring
 lagråd
 lagstifta
 lagstiftande
+lagstiftare
 lagstiftning
 lakan
 lamm
@@ -5214,6 +5249,7 @@ lump
 lunch
 lungsnäcka
 lura
+lurig
 luspank
 lust
 lusta
@@ -6082,6 +6118,7 @@ nyhetsflöde
 nyhetssajt
 nykomling
 nykter
+nykterism
 nykterist
 nyliberal
 nyligen
@@ -6928,7 +6965,6 @@ rak
 raka
 rakdon
 raket
-rakt
 ram
 ramaskri
 ramla
@@ -6939,6 +6975,7 @@ ranglig
 rangordna
 ransonering
 rapa
+rapp
 rappning
 rapport
 rapportera
@@ -7473,7 +7510,6 @@ semester
 seminarium
 sen
 senare
-sent
 separat
 separera
 seperera
@@ -7767,6 +7803,7 @@ skröplig
 skugga
 skuld
 skuldra
+skuldsätta
 skuldsättning
 skulptera
 skulpterad
@@ -7936,6 +7973,7 @@ slå ut
 slå över
 slående
 slåss
+slö
 slödder
 slöja
 slöjd
@@ -8114,6 +8152,7 @@ spela upp
 spela ut
 spela över
 spelare
+spellista
 spelning
 spelplan
 spendera
@@ -9129,6 +9168,7 @@ trycka av
 trycka om
 trycka på
 trycka till
+tryckaccent
 tryckalster
 tryckeri
 trycktub
@@ -9697,6 +9737,7 @@ uttryck
 uttrycka
 uttrycklig
 uttryckligen
+uttrycksfull
 utträda
 uttråkad
 utvald
@@ -10034,6 +10075,7 @@ vägra
 vägran
 väl
 välbefinnande
+välbehag
 välbeställd
 välbärgad
 välde
@@ -10374,6 +10416,7 @@ zon
 åtlyda
 åtminstone
 åtnjuta
+åtråvärd
 åtskillig
 åtskilligt
 åtta
@@ -10513,7 +10556,4 @@ zon
 övervintra
 övervintrad
 överväga
-övervägande
-överväldiga
-överväldigande
-övnin
+övervägan
