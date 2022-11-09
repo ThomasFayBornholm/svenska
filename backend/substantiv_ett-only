@@ -13,6 +13,7 @@ andetag
 anfall
 anförande
 angrepp
+anlopp
 anseende
 ansikte
 anslag
@@ -39,6 +40,7 @@ arrangemang
 arsle
 arv
 arvode
+arvsanlag
 arvsanslag
 attribut
 avancemang
@@ -141,6 +143,7 @@ brätte
 bråk
 bröd
 brödraskap
+bröl
 bröllop
 bröst
 bud
@@ -148,9 +151,11 @@ budgetår
 budskap
 buller
 burop
+bus
 byggande
 bygge
 byte
+bäcken
 bälte
 bär
 bärande
@@ -170,6 +175,7 @@ decennium
 deltagande
 departement
 diagram
+diarium
 dike
 dilemma
 direktiv
@@ -202,6 +208,7 @@ dödsfall
 dödsstraff
 efternamn
 efterskott
+ekipage
 eko
 ekosystem
 elektronrör
@@ -233,6 +240,7 @@ fartyg
 farväl
 fastland
 fat
+fatöl
 fenomen
 fett
 fiasko
@@ -242,7 +250,9 @@ finger
 fiske
 fjäll
 flak
+flasköl
 flertal
+flimmerhår
 flin
 flyg
 flygbolag
@@ -311,12 +321,14 @@ företag
 företräde
 förfall
 förfarande
+förfaringssätt
 författarskap
 förfogande
 förhandlingsbord
 förhållande
 förhållningssätt
 förhör
+förkläde
 förlag
 förlopp
 förlöjligande
@@ -386,7 +398,9 @@ gym
 gymnasium
 gäng
 göt
+habegär
 hagel
+halmstrå
 halveringsmål
 halvklot
 halvsekel
@@ -394,6 +408,7 @@ halvår
 hamsterhjul
 handikapp
 handlande
+handlingssätt
 handlingsutrymme
 handlov
 hand­skydd
@@ -516,13 +531,13 @@ klipp
 klor
 kloster
 klädskåp
+knack
 knep
 knippe
 knog
 knä
 knäveck
 kok
-kokslov
 kol
 koldioxidutsläpp
 kollektivavtal
@@ -560,6 +575,7 @@ kroppsspråk
 krut
 kryphål
 kräldjur
+kuckel
 kugghjul
 kulturarv
 kulturkrig
@@ -591,6 +607,7 @@ lag
 lager
 lagförslag
 lagråd
+lagspråk
 lakan
 lamm
 land
@@ -610,6 +627,7 @@ lergods
 lidande
 likhetstecken
 liv
+livmoderinlägg
 livsmedel
 ljud
 lock
@@ -631,6 +649,7 @@ läte
 lågstadium
 lågvattenmärke
 lån
+långfinger
 lår
 lås
 lödder
@@ -641,7 +660,9 @@ lövträd
 magasin
 maktskifte
 mandat
+manhål
 manifest
+manskap
 manus
 manuskript
 marknadsklimat
@@ -664,10 +685,13 @@ medlemstapp
 medvetande
 mejl
 mejlsvar
+mellangärde
 mellanmål
 mellanrum
 mellanskikt
+mellanslag
 mellanstadium
+memorial
 meningsmotståndare
 mervärde
 miljöparti
@@ -822,6 +846,7 @@ påhitt
 påhopp
 påsklov
 påstående
+quiz
 rackartyg
 radhus
 rakdon
@@ -842,6 +867,7 @@ replikskifte
 reportage
 representantskap
 resonemang
+resultat
 revben
 rike
 riksdagsbeslut
@@ -855,6 +881,8 @@ rotsystem
 rottecken
 rovdjur
 rum
+rus
+rusmedel
 ryck
 ryggradsdjur
 rykte
@@ -866,6 +894,7 @@ rån
 rön
 rör
 sakförhållande
+sakläge
 salt
 samarbete
 samband
@@ -924,6 +953,7 @@ skott
 skov
 skratt
 skrev
+skri
 skriftspråk
 skrik
 skrin
@@ -949,8 +979,10 @@ slaganfall
 slagfält
 slagord
 slagsmål
+slagträ
 slask
 slaveri
+slit
 slopande
 slott
 slut
@@ -965,9 +997,11 @@ slöseri
 smalben
 smartarsle
 smatter
+smicker
 smink
 smolk
 sms
+smussel
 småbarn
 småföretag
 smör
@@ -976,15 +1010,18 @@ snitt
 snus
 snusk
 snyft
+snäpp
 snöre
 snöskred
 socialbidrag
 socker
 sommarlov
+sorgespel
 sortiment
 sovrum
 spackel
 sparande
+spatium
 specialfall
 spel
 spex
@@ -994,6 +1031,7 @@ sportlov
 spratt
 sprattel
 sprängstoff
+sprängämne
 språk
 språkbruk
 språng
@@ -1026,10 +1064,13 @@ straff
 streck
 strul
 stryk
+sträck
 stråk
+ströbröd
 strög
 strömkrig
 studentförbund
+studium
 stycke
 styre
 ställe
@@ -1078,6 +1119,7 @@ tangentbord
 tapp
 tecken
 teckenspråk
+tekniksprång
 telefonnummer
 telefonsamtal
 teleskop
@@ -1094,6 +1136,7 @@ tillfälle
 tillhygge
 tillhåll
 tillkännagivande
+tillmötesgående
 tillskott
 tillstånd
 tilltal
@@ -1103,9 +1146,12 @@ tillträde
 tilltugg
 tillvägagångssätt
 tillägg
+timmer
 ting
 tiotal
 tips
+tjugotal
+tjut
 tomrum
 tonläge
 toppmöte
@@ -1184,6 +1230,7 @@ utförande
 utkast
 utland
 utlopp
+utlägg
 utnyttjande
 utnötningskrig
 utrop
@@ -1239,6 +1286,7 @@ visum
 vittne
 vittnesbörd
 vittnesmål
+vrål
 vykort
 väder
 välbefinnande
@@ -1253,6 +1301,7 @@ världsrykte
 värme
 värmenät
 väsen
+väte
 vågspel
 våld
 ylle
@@ -1270,6 +1319,7 @@ yttrande
 äpple
 ärende
 äventyr
+åkdon
 ångestrop
 år
 åratal
