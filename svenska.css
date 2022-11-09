@@ -203,7 +203,7 @@ label {
 
 .progressBar {
 	background-Color: blue;
-	width: 200px;
+	width: 200pt;
 	height: 36px;
 	margin-right: 6px;
 	margin-top: 0px;
@@ -222,9 +222,9 @@ label {
 .progressContainer {
 	display: inline-block;
 	overflow: hidden;
-	width: 200px;
+	width: 600px;
 	height: 24px;
-	border: 10px solid #333333;
+	border: 4px solid #333333;
 	border-radius: 99px;
 	margin-right: 16px;
 }

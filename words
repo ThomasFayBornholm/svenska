@@ -9,14 +9,14 @@
 <!--progress bar-->
 	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
 		<button id="iShowToggle" onclick="showToggle()">HIDE</button>
+		<span id="iCnt">test</span>
+		<span id="iCntTotal">Total</span>
 		<span class="progressContainer">
 			<span class="progress" id="iProg"></span>
 		</span>
-		<span class="progressContainer" onclick="lookupAll()">
+		<span id="iDefProgContainer" class="progressContainer" onclick="lookupAll()" style="visibility: hidden">
 			<span class="progress" id="iDefProg"></span>
 		</span>
-		<span id="iCnt">test</span>
-		<span id="iCntTotal">Total</span>
 		<div id="iControls">
 			<div class="dropdown">
 				<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg">
@@ -519,6 +519,11 @@ function seekWord(word) {
 function setClass(c, seek = "") {
 	$('#iDefDiv').css("display", "none");
 	$('#iWords').css("visibility", "visible");
+	if (c != "all") {
+		$('#iDefProgContainer').css("visibility","visible");
+	} else {
+		$('#iDefProgContainer').css("visibility","hidden");
+	}
 	CLASS = c;
 	INC = 0;
 	SCROLL_INC=-1;

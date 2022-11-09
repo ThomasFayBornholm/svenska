@@ -5,8 +5,6 @@
 
 	$fileName = $path . $class . "-only";
 	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
-	$allName = $path . "all-only";
-	$allFile = fopen($allName, "r") or die("Could not open file: " . $allName);
 	if (filesize($fileName) == 0) {
 		$contents = "";
 	} else {
@@ -43,19 +41,18 @@
 	$res = fwrite($outfile, $out);
 	fclose($outfile);
 
-	$outfileAll = fopen($allName, "r") or die("Could not open file: " . $allName);
-	$contents = fread($outfileAll, filesize($allName));
-	fclose($outfileAll);
+	$allName = $path . "all-only";
+	$allFile = fopen($allName, "r") or die("Could not open file: " . $allName);
+	$contents = fread($allFile, filesize($allName));
+	fclose($allFile);
 	$elements= preg_split("/\r\n|\r|\n/", $contents);
-
-	$first = true;
+	var_dump(count($elements));
 	$out = "";
 	$placed = false;
 	$del="";
 	foreach($elements as $w) {
 		// Insertion point
 		if ($w === $word) {
-			$placed = true;
 			// No need to duplicate entry
 			$out = $out . $del . $word;
 			$placed = true;
