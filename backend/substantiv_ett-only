@@ -6,6 +6,7 @@ aktievärde
 album
 albumin
 alfabet
+alkali
 allting
 allvar
 alster
@@ -13,6 +14,7 @@ andetag
 anfall
 anförande
 angrepp
+anlag
 anlopp
 anseende
 ansikte
@@ -137,6 +139,7 @@ bruk
 brum
 brus
 brytningsindex
+brännvin
 bränsle
 bränsleelement
 brätte
@@ -152,6 +155,7 @@ budskap
 buller
 burop
 bus
+buskage
 byggande
 bygge
 byte
@@ -170,6 +174,7 @@ cyklop
 dagis
 dagsläge
 damm
+damspel
 datum
 decennium
 deltagande
@@ -215,6 +220,7 @@ elektronrör
 element
 elnät
 elände
+embryo
 enande
 energisystem
 engagemang
@@ -285,6 +291,7 @@ fruntimmer
 frågatecken
 frågetecken
 frö
+fröämne
 fundament
 funktionshinder
 furstendöme
@@ -373,6 +380,7 @@ glas
 glasögon
 glid
 glinder
+glossarium
 gny
 gnäll
 godis
@@ -386,6 +394,7 @@ grepp
 grubblande
 grums
 grus
+gry
 gränsskikt
 gränssnitt
 gränsöverskridande
@@ -397,6 +406,7 @@ gyckel
 gym
 gymnasium
 gäng
+gängstål
 göt
 habegär
 hagel
@@ -528,6 +538,7 @@ klarspråk
 klassrum
 klimat
 klipp
+klockslag
 klor
 kloster
 klädskåp
@@ -585,8 +596,10 @@ kuvert
 kval
 kvartal
 kvarter
+kvitto
 kvällsmål
 kylskåp
+kynne
 källvärde
 kännetecken
 kärl
@@ -620,10 +633,12 @@ latin
 lavaflöde
 led
 ledarskap
+leddjur
 ledningsbrott
 leende
 lejon
 lergods
+lexikon
 lidande
 likhetstecken
 liv
@@ -638,6 +653,7 @@ luftförsvar
 luftherravälde
 luftmotstånd
 lyft
+lynne
 läge
 läger
 läkemedel
@@ -706,6 +722,7 @@ minoritetsspråk
 minvärde
 mirakel
 missbruk
+missfall
 missförhållande
 missförstånd
 missiv
@@ -787,6 +804,7 @@ omlopp
 område
 omslag
 ord
+ordbok
 ordförandeskap
 organ
 original
@@ -808,8 +826,10 @@ pentry
 personnummer
 perspektiv
 pi
+pianino
 piano
 pilbåge
+pill
 piratparti
 piss
 plagg
@@ -926,6 +946,7 @@ set
 signalement
 sikte
 sinne
+sinnelag
 sjukhus
 självbedrägeri
 självfall
@@ -1006,6 +1027,7 @@ småbarn
 småföretag
 smör
 snack
+snatteri
 snitt
 snus
 snusk
@@ -1037,12 +1059,14 @@ språkbruk
 språng
 spädbarn
 spår
+spö
 spöke
 spörsmål
 stadium
 staffage
 stall
 stamord
+stamp
 statsbidrag
 statsråd
 stearin
@@ -1192,6 +1216,7 @@ umbärande
 umgänge
 undantag
 underhåll
+underkropp
 underlag
 underland
 underliv
@@ -1268,6 +1293,7 @@ vattenstånd
 vax
 vemod
 verb
+verifikat
 verk
 verktyg
 versmått
@@ -1275,12 +1301,14 @@ vetande
 vete
 vett
 vevlager
+vide
 vidtagande
 villebråd
 villkor
 vin
 vinterlov
 virus
+visit
 visitkort
 visum
 vittne
@@ -1343,5 +1371,7 @@ yttrande
 övergivande
 övergrepp
 överklagande
+överkropp
+överliv
 överskott
 övertag
