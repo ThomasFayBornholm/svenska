@@ -73,12 +73,14 @@ avtalsbråk
 avtryck
 axplock
 bad
+badort
 badrum
 bagage
 bagageutrymme
 bakhjul
 bakslag
 bakverk
+balanskonto
 balansmål
 band
 barbari
@@ -133,6 +135,7 @@ bladveck
 blask
 block
 blod
+blodbad
 blodkärl
 blodtryck
 blogginlägg
@@ -140,6 +143,7 @@ blom­ställning
 bläck
 blåsväder
 boende
+bokband
 bolag
 bombplan
 bonusbarn
@@ -192,6 +196,7 @@ böneutrop
 centerparti
 centralvärme
 centrum
+charlataneri
 chassi
 chips
 citat
@@ -224,6 +229,7 @@ dokument
 domslut
 don
 dop
+dopp
 dotterbolag
 dotterföretag
 drag
@@ -469,6 +475,7 @@ griskött
 grubblande
 grums
 grus
+gruvschakt
 gry
 gräl
 gränsskikt
@@ -557,6 +564,7 @@ högfrekvensegenskap
 högkvarter
 högrev
 högstadium
+högvilt
 höjningstecken
 hölje
 hörn
@@ -564,6 +572,7 @@ höstlov
 ide
 ideal
 identitetskort
+igenkännande
 illamående
 illdåd
 imperium
@@ -705,6 +714,7 @@ kulturarv
 kulturkrig
 kungarike
 kustområde
+kutter
 kuvert
 kval
 kvartal
@@ -755,6 +765,7 @@ ledningsbrott
 leende
 lejon
 lergods
+leverne
 lexikon
 lidande
 lider
@@ -777,6 +788,7 @@ luftherravälde
 luftmotstånd
 luftrör
 luktsinne
+lurendrejeri
 lyft
 lynne
 läge
@@ -947,6 +959,7 @@ omlopp
 område
 omslag
 ord
+ordalag
 ordbok
 ordförandeskap
 organ
@@ -1074,6 +1087,7 @@ ryggradsdjur
 rykte
 räknesätt
 ränteläge
+rättesnöre
 rättsväsende
 rå
 rån
@@ -1144,6 +1158,7 @@ skinn
 skivbolag
 skjul
 skolbarn
+skollov
 skott
 skov
 skratt
@@ -1207,6 +1222,7 @@ smultron
 smussel
 småbarn
 småföretag
+småvilt
 smör
 smörgåspaket
 snack
@@ -1272,6 +1288,7 @@ storföretag
 storhetsvansinne
 storsegel
 storverk
+storvilt
 straff
 streck
 strul
@@ -1340,6 +1357,7 @@ tand­skydd
 tangentbord
 tapp
 te
+team
 tecken
 teckenspråk
 tekniksprång
@@ -1428,6 +1446,7 @@ underliv
 underrede
 underskott
 understöd
+underverk
 ungdomsförbund
 universitet
 universum
@@ -1446,6 +1465,7 @@ upprop
 uppror
 upprättande
 uppslag
+uppsåt
 uppträdande
 uran
 ursinne
@@ -1474,6 +1494,7 @@ utseende
 utskott
 utslag
 utsläpp
+utsnitt
 utspel
 utsäde
 uttag
@@ -1487,6 +1508,7 @@ vad
 vadben
 vakuum
 vakuum­rör
+val
 valdeltagande
 valresultat
 valv
@@ -1518,6 +1540,7 @@ vide
 vidtagande
 villebråd
 villkor
+vilt
 viltkött
 vin
 vinbär
@@ -1546,12 +1569,14 @@ världsrykte
 värme
 värmenät
 väsen
+väsende
 väte
 vågspel
 våld
 vållande
 vårdhem
 ylle
+yngel
 yrkande
 yrke
 yrkesval
@@ -1598,6 +1623,7 @@ yttrande
 övergivande
 övergrepp
 övergångsställe
+överhuvud
 överklagande
 överkropp
 överliv
