@@ -8,35 +8,38 @@
 <div class="row columns_4">
 <!--progress bar-->
 	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
-		<button id="iShowToggle" onclick="showToggle()">HIDE</button>
-		<span id="iCnt">test</span>
-		<span id="iCntTotal">Total</span>
-		<span class="progressContainer">
-			<span class="progress" id="iProg"></span>
+		<span class="progressContainer" onclick="showToggle()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+			<span class="progress progressBar" id="iProg"></span>
 		</span>
-		<span id="iDefProgContainer" class="progressContainer" onclick="lookupAll()" style="visibility: hidden">
-			<span class="progress" id="iDefProg"></span>
+		<span id="iDefProgContainer" class="progressContainer" onclick="lookupAll()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+			<span class="progress progressBar hidden" id="iDefProg"></span>
 		</span>
 		<div id="iControls">
 			<div class="dropdown">
-				<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg">
+				<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout(this,event)">
+				<p class="debug" id="iDebugTxt"></p>
 				<div class="dropdown-content">
-					<p onclick="setClass('adjektiv')">Adjektiv</p>
-					<p onclick="setClass('verb')">Verb</p>
-					<p onclick="setClass('adverb')">Adverb</p>
-					<p onclick="setClass('substantiv_en')">En</p>
-					<p onclick="setClass('substantiv_ett')">Ett</p>
+					<p onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
+					<p onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
+					<p onclick="setClass('adjektiv')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adjektiv</p>
+					<p onclick="setClass('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Ett</p>
+					<p onclick="setClass('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
 				</div>
-			</div>
-			<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()">
-			<button class="b2" id="iAll" onclick="setClass('all')">All</button>
+			</div>			
+			
 			<form onsubmit="seekWordWrapper(event)">
 				<input id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">
+				<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">
+				<button class="b2" id="iLast" onclick="seekWord('')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Last</button>
 			</form>
 		</div>
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
 	<div class="column" onwheel="scrollView(event)">
+		<span class="counts" id="iCnt">test</span>
+		<span class="counts" id="iCntTotal">Total</span>
+
+		<!--img id="iGameScore" class="progress GameScore" src="img/Oresundsbron.jpg"-->
 		<div id="iDefDiv">
 			 <textarea class="defBox" id="iDefText"></textarea>
 			 <button onclick="putDef('')">Put</button>
@@ -44,9 +47,8 @@
 		</div>
 		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDef(event)"></p>
 		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
-	</div>
-	<div class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)">
-	</div>
+	</div>	
+	<div class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>	
 </div>
 </body>
 <script>
@@ -67,10 +69,13 @@ let N_CUR=0;
 let N_DEFS = 0;
 
 let LAST_WORD="";
+let CUR_WORD="";
 let CLASS = "all";
 var LAST_OBJ;
 let DEBUG=false;
 let LAST_DEF = "";
+let LAST_CLASS = "all";
+let CONTROLS_VISIBLE=true;
 function startup() {
 	wordCount();
 	getWords(-1);
@@ -93,7 +98,7 @@ function setN_CUR() {
 		N_CUR = N_TOT;
 	}
 	$('#iCnt').text(N_CUR);
-	$('#iCntTotal').text('[' + N_TOT + ']');
+	$('#iCntTotal').text(' [' + N_TOT + ']');
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
 function getProgress() {
@@ -120,7 +125,7 @@ function putDef(def) {
 	}
 	if (DEBUG) console.log("START putDef(def); def = " + def + "; SCROLL_INC = " + SCROLL_INC);
 	def = preProc(def);
-	fetch('backend/putDef.php?class=' + CLASS + '&word=' + LAST_WORD + '&def=' + def, {
+	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def, {
 		method: 'get',
 		mode:	'cors',
 		headers: {
@@ -305,8 +310,9 @@ function lookupWord(el,onlyLocal,inline) {
 	}
 	el.style.fontWeight="bold";
 	let word = el.innerText;
-	LAST_WORD=word;
+	CUR_WORD=word;
 	LAST_OBJ = el;
+	if (DEBUG) console.log("lookupWord(), CUR_WORD = " + CUR_WORD);
 	scroll_inc = el.id.replace("w","");
 	if (scroll_inc > -1 && scroll_inc < N_INC) {
 		SCROLL_INC = scroll_inc; 
@@ -323,7 +329,16 @@ function lookupWord(el,onlyLocal,inline) {
 			return response.json();
 		})
 		.then(json => {
-			def = json;
+			let keys = Object.keys(json);			
+
+			let def = "";
+			let delim ="";
+			let tmp = "<span onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";
+			for (let i = 0; i < keys.length; i++) {
+				console.log(word);
+				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
+				delim="<br>";
+			}
 			LAST_DEF = def;
 			$('#iParDef').html("<b>" + word + ":</b><br>" + def);
 			return;
@@ -351,6 +366,7 @@ function lookupWord(el,onlyLocal,inline) {
 					getCompDef(def);
 					return;
 				}
+				def = makeLinks(def);
 				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
 				$('#iDefDiv').css("display", "none");
 				if (!inline) {
@@ -376,6 +392,57 @@ function lookupWord(el,onlyLocal,inline) {
 		console.log("lookupWord(" +  word + ")");
 	}
 }
+// Make links to referenced words
+function makeLinks(def) {
+	if (DEBUG) console.log("makeLinks()")
+	if (def.split("<br>").length == 1) {
+		return def;
+	}
+	def = addLinks("MOTSATS", def);
+	def = addLinks("JFR", def);
+	def = addLinks("SYN.", def);
+	def = addLinks("SE", def);
+	return def;
+}
+function addLinks(refClass,def) {
+	let m = refClass + " ";
+	if (def.includes(m)) {
+		let cnt = def.split(m).length;
+		let start = 0;
+		let links = "";
+		for (let i = 0; i < cnt; i++) {
+			// End of list to link is either new line or end of def
+			start = def.indexOf(m,start);
+			if (start != -1) {
+				start += m.length;
+				def.indexOf("<br>",start) != -1 ? end = def.indexOf("<br", start) : end = def.length;
+				let sub = def.substr(start,end-start)
+				let links = sub;
+				let tmp2 = sub.replaceAll(", ",",");
+				linkArr = tmp2.split(',');
+				for (it in linkArr) {
+					let w = linkArr[it];
+					// single character words are possible
+					if (w.length > 0) {
+						links = links.replace(w,"<span onclick=followLink(this)>" + w + "</span>");
+
+					}
+				}
+				def = def.replace(sub, links)
+				links = "";
+			}
+		}
+	}
+	return def;
+}
+function followLink(el) {
+	let word = el.innerText;
+	if (DEBUG) console.log("followLink(" + word + ")");
+	$('#iSeek').val(word);	
+	setClass("all");
+	seekWord(word);
+}
+
 function getCompDef(def) {
 	if (DEBUG) console.log("getCompDef(def); def = " + def);
 	// Compose and output string that combines definition of multiple (usually two)
@@ -400,19 +467,22 @@ function getCompDef(def) {
 			return response.json();
 		})
 		.then(json => {
-			out[done] = w + ":<br>" + json;
+			// def - the original reference definition
+			// tmp - original ref + link to the referenced word
+			// json - the referenced definition
+			let tmp = "<span onclick=\"followLink(this)\"><b>_w_</b></span>:";
+			tmp = tmp.replaceAll("_w_",removeClassDesc(w));
+			tmp = tmp + "<br>";
+			out[done] = makeLinks(tmp + json);
 			done++;
 			if (done >= words.length) {
 				// Perform any required ordering
 				let txt = def + "<br>";
-				console.log(txt);
 				let del = "";
-				console.log(out);
 				for (let i = 0; i < done; i++) {
 					if (i != 0) del = "<br>"
 					txt = txt + del + out[i];
 				}
-				console.log(txt);	
 				$('#iParDef').html(txt);
 			}
 		})
@@ -468,16 +538,17 @@ function wordCount() {
 }
 
 function showToggle() {
-	let hide= $('#iShowToggle').text() === "HIDE";
-	if (hide) {
+	if (CONTROLS_VISIBLE) {
 		// Hide controls 
 		$('#iControls').css("display", "none");
 		$('#iShowToggle').text("__");
+		CONTROLS_VISIBLE=false;
 	} else {
 		// Make visible class selector and word seeker controls
 		$('#iControls').css("display", "block");
 		$('#iShowToggle').text("HIDE");
 		$('#iSeek').focus();
+		CONTROLS_VISIBLE=true;
 	}
 	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iSeek').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
@@ -487,6 +558,14 @@ function seekWordWrapper(e) {
 	seekWord(word);
 }
 function seekWord(word) {
+	if (word === '') {
+		word = LAST_WORD;
+		setClass(LAST_CLASS);
+		$('#iSeek').val(word);
+	}
+	LAST_WORD = CUR_WORD;
+	CUR_WORD = word;
+	if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
 	if (word.length > 0) {
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
@@ -517,6 +596,7 @@ function seekWord(word) {
 }
 
 function setClass(c, seek = "") {
+	LAST_CLASS = CLASS;
 	$('#iDefDiv').css("display", "none");
 	$('#iWords').css("visibility", "visible");
 	if (c != "all") {
@@ -660,8 +740,15 @@ function guessClass(word) {
 	} 
 	// Otherwise try and semi-intelligently guess word class
 	if (word.endsWith('a')) return "verb"
+	if (word.endsWith('as')) return "verb"
 	if (word.includes(' ')) return "verb"
 	if (word.endsWith("ig")) return "adjektiv"
+	if (word.endsWith("lös")) return "adjektiv"
+	if (word.endsWith("sam")) return "adjektiv"
+	if (word.endsWith("full")) return "adjektiv"
+	if (word.endsWith("ad")) return "adjektiv"
+	if (word.endsWith("en")) return "adjektiv"
+	if (word.endsWith("p")) return "substantiv_ett"
 	return "substantiv_en"
 }
 function removeClassDesc(word) {
@@ -678,38 +765,20 @@ function addWord() {
 	let del = word[0] === '.';
 	if (del) word = word.slice(1,word.length);
 	if (word.length > 0) {
-		fetch ('backend/existsWord.php?class=' + CLASS + '&word=' + word, {
+		let op = "add"	
+		if (del) op = "remove"
+		fetch('backend/' + op + 'Word.php?class=' + CLASS + "&word=" + word, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
 				'Content-Type': 'application/json'
 			}
-		})	
-		.then(response => {
-			return response.json();
 		})
-		.then(json => {
-			if (json !== -1 || (del && json === -1)) {	
-				let op = "add"	
-				if (del) op = "remove"
-				fetch('backend/' + op + 'Word.php?class=' + CLASS + "&word=" + word, {
-					method: 'get',
-					mode: 'cors',
-					headers: {
-						'Content-Type': 'application/json'
-					}
-				})
-				.then(response => {
-					wordCount();
-				})
-				.catch(error => {
-					console.log(error);	
-				})
-
-			}
+		.then(response => {
+			wordCount();
 		})
 		.catch(error => {
-			console.log(error);
+			console.log(error);	
 		})
 	}
 }
@@ -802,6 +871,44 @@ function showWords() {
 	if ($('#iWords').css("visibility") == "hidden") {
 		$('#iWords').css("visibility", "visible");
 	}
+}
+function highlight(el,event) {
+	if (event.type === "mouseover") {
+		el.style.cursor = "pointer";
+		el.style.borderColor = "blue";
+		if (el.nodeName === "P") el.style.backgroundColor="gray" 
+	} else {
+		el.style.cursor = "";
+		el.style.borderColor = "";
+		if (el.nodeName === "P") el.style.backgroundColor=""
+	}
+}
+function toggleDebugEv(e) {
+	e.preventDefault();
+	toggleDebug();
+}
+function toggleDebug() {
+	DEBUG = !DEBUG;
+	if (DEBUG) {
+		console.log("Entering debug mode...");
+		$('#iDebugTxt').text("DEBUG");
+		$('#iDebug').css("color","gray");
+	}  else {
+		$('#iDebug').css("color","");
+		$('#iDebugTxt').text("");
+		console.log("Leaving debug mode...");
+	}
+}
+function setClassGuessWrapper(ev) {
+	ev.preventDefault();
+	setClassGuess();
+}
+function setClassGuess() {
+	let word = $('#iSeek').val();
+	let c = guessClass(word);
+	if (DEBUG) console.log("setClassGuess, Class guessed as " + c)
+	setClass(c);
+	seekWord(CUR_WORD);
 }
 </script>
 </html>
