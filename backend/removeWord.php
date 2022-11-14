@@ -9,6 +9,7 @@
 	// Return -1 if word to be removed is not found.
 
 	$fileName = $path . $class . $trail;
+	$defName = $path . $class . "-def";
 	$tmpName = $path . "tmp";
 
 	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
@@ -24,9 +25,7 @@
 	$tmp = "";
 	$wArr = array();
 	foreach ($elements as $el) {
-		$w = str_replace(" 0", "", $el);
-		$w = str_replace(" 1", "", $w);
-		$w = str_replace(" 2", "", $w);
+		$w = $el;
 		if ($w === $word) {
 			$res = 0;
 		} else {
@@ -45,6 +44,10 @@
 	if ($res === 0) {
 		copy ($tmpName, $fileName);
 	}
-
+	// Remove definition
+	$contents = file_get_contents($defName, 'UTF-8');
+	$arr = json_decode($contents,true);
+	unset($arr[$word]);
+	file_put_contents($defName, json_encode($arr));
 	echo json_encode($res);
 ?>

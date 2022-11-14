@@ -24,11 +24,15 @@
 	$del = "";
 	foreach($elements as $w) {
 		// Insertion point
-		if ($w > $word && !$placed) {
-			$placed=true;
+		if ($w == $word) {
+			// No need to duplicate entry
+			$out = $out . $del . $word;
+			$placed = true;
+		} else if ($w > $word && !$placed) {
 			$out = $out . $del . $word;
 			$del = "\n";
 			$out = $out . $del . $w; 
+			$placed=true;
 		} else {
 			$out = $out . $del . $w; 
 			$del = "\n";
@@ -56,11 +60,11 @@
 			// No need to duplicate entry
 			$out = $out . $del . $word;
 			$placed = true;
-		} else if ($w > $word && !$placed) {
-			$placed = true;
+		} else if ($w > $word && !$placed) {			
 			$out = $out . $del . $word;
 			$del = "\n";			
 			$out = $out . $del . $w;
+			$placed = true;
 		} else {
 			$out = $out . $del . $w;
 			$del = "\n";
