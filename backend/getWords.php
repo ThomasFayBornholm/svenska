@@ -11,8 +11,8 @@
 	}
 	$outWords = array();
 	$end = $start + $num;
-	if ($end > count($words) - 1) {
-		$end = count($words) - 1;
+	if ($end > count($words)) {
+		$end = count($words);
 	}
 	for ($i = $start; $i < $end; $i++) {
 		array_push($outWords, $words[$i]);
