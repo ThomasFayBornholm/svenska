@@ -48,6 +48,7 @@ arv
 arvode
 arvsanlag
 arvsanslag
+attackplan
 attribut
 avancemang
 avbrott
@@ -60,6 +61,7 @@ avlopp
 avseende
 avskaffande
 avsked
+avskräde
 avslag
 avslöjande
 avsnitt
@@ -69,6 +71,7 @@ avtagande
 avtal
 avtalsbråk
 avtryck
+axplock
 bad
 badrum
 bagage
@@ -138,6 +141,7 @@ bläck
 blåsväder
 boende
 bolag
+bombplan
 bonusbarn
 bord
 bordsvatten
@@ -177,6 +181,7 @@ bus
 buskage
 byggande
 bygge
+byggenskap
 byte
 bäcken
 bälte
@@ -185,10 +190,13 @@ bärande
 bårhus
 böneutrop
 centerparti
+centralvärme
 centrum
+chassi
 chips
 citat
 college
+containerfartyg
 cyklop
 daghem
 dagis
@@ -220,6 +228,7 @@ dotterbolag
 dotterföretag
 drag
 drama
+drev
 dricka
 driftliv
 dråpslag
@@ -252,6 +261,7 @@ embryo
 enande
 energisystem
 engagemang
+enhetsflygplan
 enkammarparlament
 entreprenörskap
 envälde
@@ -290,6 +300,7 @@ finger
 firmamärke
 fiske
 fjäll
+fjärrvärme
 flak
 flasköl
 flertal
@@ -297,6 +308,7 @@ flimmerhår
 flin
 flyg
 flygbolag
+flygnummer
 flygplan
 flygvapen
 flöde
@@ -318,6 +330,8 @@ fotbollslag
 fotfäste
 foto
 fotografi
+fraktfartyg
+framdäck
 framsteg
 franskbröd
 frekvensberoende
@@ -339,6 +353,7 @@ furstendöme
 fusk
 fynd
 fyrfota­djur
+fyrtorn
 fyrverkeri
 fält
 fängelse
@@ -363,6 +378,7 @@ fördäck
 fördärv
 fördömande
 före
+förebud
 föredrag
 föredöme
 föregångsland
@@ -403,9 +419,11 @@ förtecken
 förtroende
 förtryck
 förutseende
+förverkligande
 förvärv
 förvärvsliv
 gage
+gagn
 galler
 galleri
 gap
@@ -440,6 +458,7 @@ gnäll
 godis
 godkännande
 gods
+godståg
 golv
 gradtal
 gram
@@ -473,6 +492,7 @@ halvklot
 halvsekel
 halvår
 hamsterhjul
+handbagage
 handelsbolag
 handikapp
 handlande
@@ -547,6 +567,7 @@ identitetskort
 illamående
 illdåd
 imperium
+inbrott
 inbördeskrig
 incitament
 index
@@ -569,6 +590,7 @@ inslag
 instick
 institut
 instrument
+instrumentbräda
 insulin
 intag
 intellekt
@@ -586,8 +608,10 @@ iste
 ister
 isterband
 jag
+jaktplan
 jordbruk
 jordskalv
+jäkt
 järn
 järnbruk
 kaffe
@@ -601,6 +625,7 @@ kapell
 kapital
 kapitel
 kapprum
+karosseri
 kast
 kavalleri
 kedjehjul
@@ -650,6 +675,7 @@ konto
 kontor
 kontrakt
 kontrollrum
+kontrolltorn
 konvent
 konvolut
 koordinatsystem
@@ -659,10 +685,12 @@ kortslutningsställe
 kostnadsläge
 kraftuttryck
 kraftverk
+kraftvärme
 kreatinin
 kreditkort
 kretslopp
 krigsbrott
+krigsfartyg
 krikon
 kriterium
 kronvrak
@@ -739,6 +767,8 @@ livmoderinlägg
 livsmedel
 ljud
 lock
+lokalnät
+lokomotiv
 lopp
 lov
 lovord
@@ -781,6 +811,7 @@ margarin
 marknadsklimat
 marknadspris
 maskineri
+maskinrum
 massmedium
 material
 matsvinn
@@ -832,6 +863,7 @@ misslyckande
 missmod
 missnöje
 misstag
+missöde
 mittfält
 mjöl
 mjölksocker
@@ -839,6 +871,7 @@ mobilnummer
 mod
 mode
 moderbolag
+moderfartyg
 modersmål
 moln
 moment
@@ -905,9 +938,11 @@ odds
 offer
 oflyt
 ogillande
+oljekraftverk
 oljepris
 ombud
 omdöme
+omen
 omlopp
 område
 omslag
@@ -948,6 +983,7 @@ piss
 plagg
 plagiat
 plasma
+plastfodral
 plommon
 plugg
 plus
@@ -999,6 +1035,7 @@ regelverk
 regemente
 regeringshåll
 regeringsunderlag
+regionnät
 register
 registerton
 regn
@@ -1008,7 +1045,10 @@ rep
 replikskifte
 reportage
 representantskap
+resande
 resgods
+residuum
+resmål
 resonemang
 resultat
 revben
@@ -1115,6 +1155,7 @@ skrin
 skrivande
 skrivbord
 skrot
+skrov
 skrubbsår
 skrälle
 skräp
@@ -1153,6 +1194,7 @@ släp
 slödder
 slöjmoln
 slöseri
+smaksinne
 smalben
 smartarsle
 smatter
@@ -1208,6 +1250,7 @@ spörsmål
 stadium
 staffage
 stall
+stamnät
 stamord
 stamp
 statsbidrag
@@ -1227,12 +1270,14 @@ stordåd
 storfurstendöme
 storföretag
 storhetsvansinne
+storsegel
 storverk
 straff
 streck
 strul
 stryk
 sträck
+strävande
 stråk
 ströbröd
 strög
@@ -1245,6 +1290,7 @@ styre
 styvbarn
 ställe
 ställningstagande
+ställverk
 stål
 stånd
 stöd
@@ -1269,6 +1315,7 @@ synsinne
 synsätt
 syre
 syskon
+säde
 sädesslag
 säkerhetsmål
 säkerhetssystem
@@ -1305,6 +1352,7 @@ tempo
 territorium
 terrorbrott
 testamente
+tidevarv
 tidsförlopp
 tidsintervall
 tillbehör
@@ -1352,6 +1400,7 @@ trä
 träd
 tråk
 tugg
+tummel
 tun
 tungsinne
 tvistemål
@@ -1376,6 +1425,7 @@ underkropp
 underlag
 underland
 underliv
+underrede
 underskott
 understöd
 ungdomsförbund
@@ -1401,6 +1451,7 @@ uran
 ursinne
 ursprung
 urval
+ur­val
 utanförskap
 utanförskapsområde
 utbildningsbidrag
@@ -1424,6 +1475,7 @@ utskott
 utslag
 utsläpp
 utspel
+utsäde
 uttag
 uttal
 uttalande
@@ -1488,6 +1540,7 @@ välfärdssamhälle
 välstånd
 vänsterparti
 värde
+världshav
 världskrig
 världsrykte
 värme
@@ -1529,6 +1582,7 @@ yttrande
 årtionde
 åtagande
 åtal
+återstod
 åtgärdspaket
 öde
 ögonblick
@@ -1536,14 +1590,17 @@ yttrande
 ögonlock
 öl
 önskemål
+önsketänkande
 öra
 öre
 örlogsfartyg
 överflöd
 övergivande
 övergrepp
+övergångsställe
 överklagande
 överkropp
 överliv
+överrede
 överskott
 övertag
