@@ -115,8 +115,8 @@ function setN_CUR() {
 	} else if (CLASS === "all") {
 		N_CUR = N_TOT;
 	}
-	$('#iCnt').text(N_CUR);
-	$('#iCntTotal').text(' [' + N_TOT + ']');
+	$('#iCnt').text(N_CUR.toLocaleString('sv'));
+	$('#iCntTotal').text(' [' + N_TOT.toLocaleString('sv') + ']');
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
 function getProgress() {
@@ -142,8 +142,7 @@ function putDef(def) {
 		def = $('#iDefText').val();
 	}
 	if (DEBUG) console.log("START putDef(def); def = " + def + "; SCROLL_INC = " + SCROLL_INC);
-	def = preProc(def);
-	console.log(def);
+	def = preProc(def);	
 	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def, {
 		method: 'get',
 		mode:	'cors',
@@ -156,7 +155,6 @@ function putDef(def) {
 		$('#iDefDiv').css("display", "none");
 		// Reset highlighting of missing definition
 		LAST_OBJ.innerHTML = LAST_OBJ.innerText;
-		scrollDown();
 		updateDef();
 		// Race condition here between file write and def display	
 		if (SCROLL_INC === (N_FOUND - 1)) {
@@ -375,7 +373,6 @@ function lookupWord(el,onlyLocal,inline) {
 			return response.json()
 		})
 		.then(json => {
-			console.log(json);
 			def = json;
 			LAST_DEF = json;
 			// Prefer local definition over 3rd party dictionary
@@ -385,7 +382,6 @@ function lookupWord(el,onlyLocal,inline) {
 					return;
 				}
 				def = makeLinks(def);
-				console.log(def);
 				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
 				$('#iDefDiv').css("display", "none");
 				if (!inline) {
@@ -801,7 +797,9 @@ function addMeta(def, regx) {
 	}
 	return def;
 }
-
+function grammar(def, rep) {
+	return def.replace(rep, "(" + rep + ")");
+}
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = " + def)
 	// Split definition
@@ -825,15 +823,37 @@ function preProc(def) {
 			
 			// Leading Meta tags
 			var regx;
-			regx = /(något hög\u00AD+tidligt)/g;
+			// Beware the silent hyphens (\u00AD)
+			regx = /hög­tidligt; mest bibliskt/g;
+			s = addMeta(s, regx);
+			regx = /något hög\u00ADtidligt el. formellt/g;
 			s = addMeta(s,regx);			
+			regx = /(något hög\u00AD+tidligt)/g;
+			s = addMeta(s,regx);		
+			regx = /(hög\u00AD+tidligt)/g;
+			s = addMeta(s,regx);					
 			regx = /(något var\u00AD+dagligt)/g;
 			s = addMeta(s,regx);		
 			regx = /(var\u00AD+dagligt)/g;		
 			s = addMeta(s,regx);
 			regx = /(dialektalt)/g;		
 			s = addMeta(s,regx);
-								
+			regx = /nu\u00ADmera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/g;
+			s = addMeta(s,regx);
+			regx = /(mindre brukligt)/g;		
+			s = addMeta(s,regx);
+			regx = /(matematik)/g;		
+			s = addMeta(s,regx);			
+			regx = /(fysik)/g;		
+			s = addMeta(s,regx);		
+			regx = /(juridik)/g;		
+			s = addMeta(s,regx);	
+			regx = /(ofta i fack\u00ADspråk)/g;		
+			s = addMeta(s,regx);
+			regx = /(ålderdomligt)/g;		
+			s = addMeta(s,regx);
+			regx = /(sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden)/g;		
+			s = addMeta(s,regx);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -886,18 +906,22 @@ function preProc(def) {
 			}
 						
 			// grammar information
-			s = s.replace("ofta refl.", "(ofta refl.)");
-			s = s.replace("med prep.", "( med prep. ");
-			s = s.replace("vanligen pres.", "(vanligen pres.)");			
-			s = s.replace("ofta plur.", "(ofta plur.)");			
-			s = s.replace("kanppast plur.", "(knappast plur.)");
-			s = s.replaceAll("ibland med partikel","(ibland med partikel");
-			s = s.replaceAll("vanligen med partikel","(vanligen med partikel");
-			s = s.replaceAll("ofta med partikel","(ofta med partikel");
-			s = s.replaceAll("vanligen i sammansätt.","(vanligen i sammansättn.)");
-			s = s.replaceAll("vanligen i vissa sammansätt.",")vanligen i vissa sammansättn.)");			
+			s = grammar(s,"ofta refl.");
+			s = grammar(s,"med prep.");
+			s = grammar(s,"med konjunktionen",);
+			s = grammar(s,"vanligen pres.");
+			s = grammar(s,"vanligen bestämd form sing.");
+			s = grammar(s,"vanligen bestämd form");
+			s = grammar(s,"ofta plur.");
+			s = grammar(s,"knappast plur.");
+			s = grammar(s,"vanligen plur.");
+			s = grammar(s,"vanligen i sammansättn.");
+			s = grammar(s,"vanligen i vissa sammansätt.");
+			s = grammar(s,"i vissa ut\u00ADtryck");
+			s = grammar(s,"ofta pass.");
+			s = grammar(s,"ofta bestämd form");
 			//outDef = "";
-			outDef += outDef + del + s;			
+			outDef += del + s;			
 			// HTML newline separator bon lines subsequent to the first
 			del = "<br>";
 		}
