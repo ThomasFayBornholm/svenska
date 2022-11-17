@@ -1,4 +1,4 @@
-$arr = @("all", "verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett");
+$arr = @("all", "verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "test");
 
 $dest="backup"
 for ($i = 0; $i -lt $arr.count; $i++) {

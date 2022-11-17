@@ -2,7 +2,7 @@
 	$path = getcwd() ."/";
 	$word = $_GET['word'];
 	$trail = "-def";
-	$classArr = array("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett");
+	$classArr = array("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "preposition", "interjektion", "pronomen", "förled");
 	$out = "";
 	// HTML escape chars
 	// Choose to do dynamic HTML formatting here as easier to handle each item directly
@@ -13,18 +13,16 @@
 		$name = $el . $trail;
 		$contents = file_get_contents($path . $name, 'UTF-8');
 		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
-		if (strlen($out) > 0) { 
-			$del = "<br>";
-		} else {
-			$del = "";
-		}
-		if (array_key_exists($word, $dict)) {
-			$outArr[$el] = $dict[$word];			
+		if ($dict) {
+			if (strlen($out) > 0) { 
+				$del = "<br>";
+			} else {
+				$del = "";
+			}
+			if (array_key_exists($word, $dict)) {
+				$outArr[$el] = $dict[$word];			
+			}
 		}
 	}
-	if (sizeof($outArr) === 0) {	
-		echo json_encode("Could not find definition.");
-	} else {
-		echo json_encode($outArr);
-	}
+	echo json_encode($outArr);
 ?>

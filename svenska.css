@@ -99,6 +99,11 @@ h2 {
 .lEl {
 	font-size: 36px;
 }
+.GameScore {
+	padding-top: 100%
+	width: 100%;
+	height: 12%;
+}
 
 .pMid {
 	font-size: 32px;
@@ -112,16 +117,20 @@ h2 {
 	display: flex;	
 }
 .column {
-	flex: 25%;
+	flex: 33%;
 }
-
+.counts {
+	font-size: 36pt;
+}
 .columns_four {
 	width: 80%;
 	margin-left: 10%;
 	margin-right: 10%;
 	height: 20%;
 }
-
+.debug {
+	display: inline
+}
 .pDef {
 	font-size: 36px;
 	margin-top: 42%;
@@ -229,11 +238,13 @@ label {
 	margin-right: 16px;
 }
 
-.progress {
+.progressBar {
 	display: block;
 	height: 100%;
 	background-color: blue;
 	border-radius: 99x;
+}
+.progress {
 	-o-transition: .1s;
 	-moz-transition: .1s;
 	-webkit-transition: .1s;
@@ -247,13 +258,17 @@ label {
 .outside {
 	height: 120px;
 }
+.hidden {
+	visibiliy: none;
+}
 .fmtWords {
 	margin-left: 5%;
 	font-size: 60px
 }
 .inputSearch {
 	font-size: 48pt;
-	width: 100%;
+	width: 66%;
+	height: 80pt;
 }
 #iShowBtn {
 	width: 256px;

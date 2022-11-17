@@ -70,6 +70,9 @@
 			$del = "\n";
 		}
 	}
+	if ($placed === false) {
+		$out = $out . $del . $word;
+	}
 	$outfileAll = fopen($allName, "w") or die("Could not open file: " . $allName);
 	$res = fwrite($outfileAll, $out);
 

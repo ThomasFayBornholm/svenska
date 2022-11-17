@@ -2,6 +2,7 @@ import sys
 import os
 from os.path import exists
 import json
+import shutil
 
 wordClasses = ("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "all", "test")
 for c in wordClasses:
@@ -11,8 +12,13 @@ for c in wordClasses:
 
     if exists(tmpFile):
         os.remove(tmpFile)
+
     os.rename(fileName, tmpFile)
-    os.system("git checkout -- " + fileName)
+    if len(sys.argv) > 1:
+        # Use locally stored files for comparison instead of remote
+        shutil.copyfile(sys.argv[1] + "/" + fileName, fileName)
+    else:
+        os.system("git checkout -- " + fileName)
 
     with open(tmpFile, 'r', encoding='utf-8') as infile_1:
         wordList_1 = infile_1.readlines()

@@ -7,17 +7,16 @@
 <body onload="startup()">
 <div class="row columns_4">
 <!--progress bar-->
-	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
-		<span class="progressContainer" onclick="showToggle()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+	<div title="Scroll to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se " id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
+		<span title="Toggle control view" class="progressContainer" onclick="showToggle()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 			<span class="progress progressBar" id="iProg"></span>
 		</span>
-		<span id="iDefProgContainer" class="progressContainer" onclick="lookupAll()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+		<span id="iDefProgContainer" class="progressContainer">
 			<span class="progress progressBar hidden" id="iDefProg"></span>
 		</span>
 		<div id="iControls">
 			<div class="dropdown">
-				<img id="iSelect" class="dropdown b2" src="img/Dalarna.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout(this,event)">
-				<p class="debug" id="iDebugTxt"></p>
+				<img title="Class selector. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Dalarna.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
 				<div class="dropdown-content">
 					<p onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
 					<p onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
@@ -25,30 +24,37 @@
 					<p onclick="setClass('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Ett</p>
 					<p onclick="setClass('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
 				</div>
-			</div>			
-			
+			</div>
+			<div class="dropdown">
+				<img title="Class selector #2 (rarer classes)" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="setClass('all')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+				<div class="dropdown-content">
+					<p onclick="setClass('preposition')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Preposition</p>
+					<p onclick="setClass('interjektion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Interjektion</p>					
+					<p onclick="setClass('pronomen')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Pronomen</p>
+					<p onclick="setClass('förled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Förled</p>
+				</div>
+			</div>		
+			<p class="debug" id="iDebugTxt"></p>
 			<form onsubmit="seekWordWrapper(event)">
-				<input id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">
-				<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">
-				<button class="b2" id="iLast" onclick="seekWord('')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Last</button>
-			</form>
+				<input title="Search for word in current class" id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">		
+				<img title="Left click: add word to store*&#10;Right click: guess class&#10;*(prefix with '.' to delete" class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">
+				<img title="Back to last view" class="b2" src="img/leftArrow.png" id="iLast" onclick="seekWord('')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+			</form>				
 		</div>
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
-	<div class="column" onwheel="scrollView(event)">
+	<div title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly"class="column" onwheel="scrollView(event)">
 		<span class="counts" id="iCnt">test</span>
 		<span class="counts" id="iCntTotal">Total</span>
-
-		<!--img id="iGameScore" class="progress GameScore" src="img/Oresundsbron.jpg"-->
-		<div id="iDefDiv">
-			 <textarea class="defBox" id="iDefText"></textarea>
+		<div  id="iDefDiv">
+			 <textarea  class="defBox" id="iDefText"></textarea>
 			 <button onclick="putDef('')">Put</button>
 			 <button onclick="cleanUp()">Clean up</button>
 		</div>
 		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDef(event)"></p>
 		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 	</div>	
-	<div class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>	
+	<div title="Navigation: left/scroll down = forward, right click/scroll up = back" class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>	
 </div>
 </body>
 <script>
@@ -65,6 +71,10 @@ let N_ADVERB=0;
 let N_EN=0;
 let N_ETT=0;
 let N_TEST=0;
+let N_PREPOSITION = 0;
+let N_INTERJEKTION = 0;
+let N_PRONOMEN = 0;
+let N_PREFIX = 0;
 let N_CUR=0;
 let N_DEFS = 0;
 
@@ -94,6 +104,14 @@ function setN_CUR() {
 		N_CUR = N_EN;
 	} else if (CLASS === "substantiv_ett") {
 		N_CUR = N_ETT;
+	} else if (CLASS === "preposition") {
+		N_CUR = N_PREPOSITION;
+	} else if (CLASS === "interjektion") {
+		N_CUR = N_INTERJEKTION;
+	} else if (CLASS === "pronomen") {
+		N_CUR = N_PRONOMEN;
+	} else if (CLASS === "förled") {
+		N_CUR = N_PREFIX;
 	} else if (CLASS === "all") {
 		N_CUR = N_TOT;
 	}
@@ -125,6 +143,7 @@ function putDef(def) {
 	}
 	if (DEBUG) console.log("START putDef(def); def = " + def + "; SCROLL_INC = " + SCROLL_INC);
 	def = preProc(def);
+	console.log(def);
 	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def, {
 		method: 'get',
 		mode:	'cors',
@@ -329,13 +348,11 @@ function lookupWord(el,onlyLocal,inline) {
 			return response.json();
 		})
 		.then(json => {
-			let keys = Object.keys(json);			
-
+			let keys = Object.keys(json);						
 			let def = "";
 			let delim ="";
 			let tmp = "<span onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";
-			for (let i = 0; i < keys.length; i++) {
-				console.log(word);
+			for (let i = 0; i < keys.length; i++) {			
 				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
 				delim="<br>";
 			}
@@ -358,6 +375,7 @@ function lookupWord(el,onlyLocal,inline) {
 			return response.json()
 		})
 		.then(json => {
+			console.log(json);
 			def = json;
 			LAST_DEF = json;
 			// Prefer local definition over 3rd party dictionary
@@ -367,6 +385,7 @@ function lookupWord(el,onlyLocal,inline) {
 					return;
 				}
 				def = makeLinks(def);
+				console.log(def);
 				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
 				$('#iDefDiv').css("display", "none");
 				if (!inline) {
@@ -405,33 +424,32 @@ function makeLinks(def) {
 	return def;
 }
 function addLinks(refClass,def) {
-	let m = refClass + " ";
-	if (def.includes(m)) {
-		let cnt = def.split(m).length;
-		let start = 0;
-		let links = "";
-		for (let i = 0; i < cnt; i++) {
-			// End of list to link is either new line or end of def
-			start = def.indexOf(m,start);
-			if (start != -1) {
-				start += m.length;
-				def.indexOf("<br>",start) != -1 ? end = def.indexOf("<br", start) : end = def.length;
-				let sub = def.substr(start,end-start)
-				let links = sub;
-				let tmp2 = sub.replaceAll(", ",",");
-				linkArr = tmp2.split(',');
-				for (it in linkArr) {
-					let w = linkArr[it];
-					// single character words are possible
-					if (w.length > 0) {
-						links = links.replace(w,"<span onclick=followLink(this)>" + w + "</span>");
-
-					}
+	if (DEBUG) console.log("addLinks(), refClass = " + refClass + ", def = " + def);
+	// Easiest to handle line by line and skip the lines without links
+	// Expectation is each link class (JFR, SE etc.) has its own new line.
+	defArr = def.split("<br>");
+	def = "";
+	m = refClass + " ";
+	delim = "";
+	beginSpan = "<span onclick=followLink(this)";
+	beginSpan += " onmouseover=highlight(this,event)";
+	beginSpan += " title='Navigate to \"_w_\"'";
+	beginSpan += ">"
+	spanTmp = beginSpan + "_w_</span>";
+	for (line of defArr) {
+		
+		if (line.indexOf(m) != -1) {
+			elArr = line.split(", ");
+			for (el of elArr) {
+				if (el.includes(m)) {
+					line = line.replace(el, m + spanTmp.replaceAll("_w_",el.substr(m.length, el.length - m.length)));
+				} else {
+					line = line.replace(el, spanTmp.replaceAll("_w_",el));
 				}
-				def = def.replace(sub, links)
-				links = "";
 			}
 		}
+		def += delim + line;
+		delim = "<br>";
 	}
 	return def;
 }
@@ -529,6 +547,10 @@ function wordCount() {
 		N_EN = json["substantiv_en"];
 		N_ETT = json["substantiv_ett"];
 		N_TEST= json["test"];
+		N_PREPOSITION = json["preposition"];
+		N_INTERJEKTION = json["interjektion"];
+		N_PRONOMEN = json["pronomen"];
+		N_PREFIX = json["prefix"];
 		setN_CUR();
 		getProgress();
 	})
@@ -607,7 +629,6 @@ function setClass(c, seek = "") {
 	CLASS = c;
 	INC = 0;
 	SCROLL_INC=-1;
-	countDefs();
 	setN_CUR();
 	getProgress();
 	countDefs();
@@ -637,22 +658,7 @@ function countDefs() {
 		}
 	})
 }
-function lookupAll() {
-	let url_base="https://svenska.se/tre?sok="
-	let word = $('#w0').text();	
-	let w = window.open(url_base + word + "&pz=1");
-	w.focus();
-	for (let i = 1; i < N_FOUND; i++) {
-		let id = "w" + i;
-		let id2 = "#" + id;
-		let word = $(id2).text();
-		let url = url_base + word + "&pz=1";
-		window.open(url,id);
-	}
-	$('#iDefText').focus();
-	w.focus();
-	if (DEBUG) console.log("lookupAll(); N_FOUND = " + N_FOUND);
-}
+
 function editDef(e) {
 	e.preventDefault();
 	showWords();
@@ -782,43 +788,66 @@ function addWord() {
 		})
 	}
 }
+
+function addMeta(def, regx) {
+	if (DEBUG) console.log("addMeta(), regx =´" + regx);
+	// Only apply one meta tag
+	if (def[2] === "[" && def.indexOf("]") > 2) return def;
+	if (!def[0].match(/A-Z/)) {			
+		m = def.match(regx)
+		if (m) {
+			def = def.replace(m[0], "[" + m[0] + "]");
+		}		
+	}
+	return def;
+}
+
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = " + def)
-	def = def.replace("Ãlderdomligt","[Ã¥lderdomlit]");	
-	def = def.replace("vardagligt","[vardagligt]");	
-	def = def.replace("mindre bruklikt","[mindre bruklikt]");	
 	// Split definition
+	def = def.replaceAll(" JFR", "\nJFR");
 	arr = def.split("\n");
-	let s = "";
 	let outDef = "";
-	// Support for partikel parters
+	// Grammer information - Support for partikel parters
 	// Can be between 1 and 3 suggested partner words
 	let regex1 = /skilt[a-zäöå]+/;
 	let regex1_alt = /partikeln[a-zäöå]+/;
 	let regex2 = /skilt[a-zäöå]+, [a-zäöå]+/;
 	let regex3 = /skilt[a-zäöå]+, [a-zäöå]+, [a-zäöå]+/;
-	for (let i = 0; i < arr.length; i++) {
-		s = arr[i];
+	// Delimiter is blank on first line
+	let del = "";
+	for (s of arr) {			
 		if (s.length > 1) {
-			// Remove any leading space
-			if (s[0] === " ") s = s.slice(1,s.length)
-			let del = "<br>";
-			if (i === 0) del = ""
+			// Remove any leading space(s)
+			while (s[0] === " ") {
+				s = s.slice(1,s.length)
+			}
+			
+			// Leading Meta tags
+			var regx;
+			regx = /(något hög\u00AD+tidligt)/g;
+			s = addMeta(s,regx);			
+			regx = /(något var\u00AD+dagligt)/g;
+			s = addMeta(s,regx);		
+			regx = /(var\u00AD+dagligt)/g;		
+			s = addMeta(s,regx);
+			regx = /(dialektalt)/g;		
+			s = addMeta(s,regx);
+								
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
 				trail = trail.replaceAll(" " + i + " "," ");
-				trail = trail.replaceAll(i,"");
+				trail = trail.replaceAll(i,"");				
 			}
-			s = s.slice(0,2) + trail;
-			s = s.replaceAll("  ", "");
-			s = s.replaceAll(" , ", ", ");
-			s = s.replaceAll("ibland med partikel","(ibland med partikel");
-			s = s.replaceAll("vanligen med partikel","(vanligen med partikel");
-			s = s.replaceAll("ofta med partikel","(ofta med partikel");
-
-			s = s.replaceAll("vanligen i sammansätt.",")vanligen i sammansättn.)");
-			s = s.replaceAll("vanligen i vissa sammansätt.",")vanligen i vissa sammansättn.)");
+			s = s.slice(0,2) + trail;		
+			s = s.replaceAll("  ", " ");
+			s = s.replaceAll("  ", " ");
+			let match = s.match(/[\s]+[,]+/i);
+			if (match) {
+				s = s.replaceAll(match[0],",");				
+			}
+			
 			let m = s.match(regex1);
 			let m_alt = s.match(regex1_alt);
 			let m2 = s.match(regex2);
@@ -850,7 +879,27 @@ function preProc(def) {
 			s = s.replace(f3,f3.replace(")","") + ")");
 			s = s.replace(f4,f4.replace(")","") + ")");
 			if (s.includes("((")) s = s.replace("((", "(");
-			outDef = outDef + del + s;
+			// Trailing spaces (or non-breaking space) can break links, remove
+			let lastCh = s.charAt(s.length-1);			
+			if (lastCh.charCodeAt(0) === 32 || lastCh.charCodeAt(0) === 160) {								
+				s = s.slice(0,s.length-1)
+			}
+						
+			// grammar information
+			s = s.replace("ofta refl.", "(ofta refl.)");
+			s = s.replace("med prep.", "( med prep. ");
+			s = s.replace("vanligen pres.", "(vanligen pres.)");			
+			s = s.replace("ofta plur.", "(ofta plur.)");			
+			s = s.replace("kanppast plur.", "(knappast plur.)");
+			s = s.replaceAll("ibland med partikel","(ibland med partikel");
+			s = s.replaceAll("vanligen med partikel","(vanligen med partikel");
+			s = s.replaceAll("ofta med partikel","(ofta med partikel");
+			s = s.replaceAll("vanligen i sammansätt.","(vanligen i sammansättn.)");
+			s = s.replaceAll("vanligen i vissa sammansätt.",")vanligen i vissa sammansättn.)");			
+			//outDef = "";
+			outDef += outDef + del + s;			
+			// HTML newline separator bon lines subsequent to the first
+			del = "<br>";
 		}
 	}
 	// That's it!
@@ -901,7 +950,9 @@ function toggleDebug() {
 }
 function setClassGuessWrapper(ev) {
 	ev.preventDefault();
-	setClassGuess();
+	let word = $('#iSeek').val();
+	setClassGuess();	
+	seekWord(word);
 }
 function setClassGuess() {
 	let word = $('#iSeek').val();

@@ -8,7 +8,7 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "test"];
+	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "test", "preposition", "pronomen", "interjektion", "förled"];
 
 	$nTot = 0;
 	$nAdj = 0;
@@ -17,50 +17,46 @@
 	$nSub_en= 0;
 	$nSub_ett= 0;
 	$nTest = 0;
-	
-	$score= 0;
-	$scoreAdj = 0;
-	$scoreVerb = 0;
-	$scoreAdverb = 0;
-	$scoreSub_en = 0;
-	$scoreSub_ett = 0;
+	$nPreposition = 0;
+	$nInterjektion = 0;
+	$nPronomen = 0;	
+	$nPrefix = 0;
 
 	foreach($files as $f) {
 		$f_base = $f;
 		$f = $f . "-only";
 		$infile = fopen($path . "/" . $f , "r") or die("Could not open file: " . $f);
 		if (filesize($f) != 0) {
-			$score = 0;
 			$contents = fread($infile, filesize($f));
 			$words = preg_split("/\r\n|\r|\n/", $contents);
-			foreach($words as $w) {
-				$score += 2;
-			}
 
 			if ($f_base === "adjektiv") {
 				$nAdj = count($words) - 1;	 
-				$scoreAdj = $score;
 			} else if ($f_base === "verb") {
 				$nVerb = count($words) - 1;
-				$scoreVerb = $score;
 			} else if ($f_base === "adverb") {
 				$nAdverb = count($words) - 1;
-				$scoreAdverb = $score;
 			} else if ($f_base === "substantiv_en") {
 				$nSub_en = count($words) - 1;
-				$scoreSub_en = $score;
 			} else if ($f_base === "substantiv_ett") {
 				$nSub_ett = count($words) - 1;
-				$scoreSub_ett = $score;
 			} else if ($f_base === "test") {
 				$nTest = count($words) -1;
+			} else if ($f_base === "preposition") {
+				$nPreposition= count($words) -1;
+			} else if ($f_base === "interjektion") {
+				$nInterjektion= count($words) -1;
+			} else if ($f_base === "pronomen") {
+				$nPronomen = count($words) -1;
+			} else if ($f_base === "förled") {
+				$nPrefix = count($words) -1;
 			}
 		}
 
 		fclose($infile);
 
 	}
-	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett;
+	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nPreposition + $nInterjektion + $nPronomen + $nPrefix;
 	$count["total"] = $nTot;
 	$count["adj"] = $nAdj;
 	$count["verb"] = $nVerb;
@@ -68,12 +64,9 @@
 	$count["substantiv_en"] = $nSub_en;
 	$count["substantiv_ett"] = $nSub_ett;
 	$count["test"] = $nTest;
-	$score = $scoreAdj + $scoreVerb + $scoreAdverb + $scoreSub_en + $scoreSub_ett;
-	$count["score"] = fmtPercent($score, $nTot * 2);
-	$count["scoreAdj"] = fmtPercent($scoreAdj, $nAdj * 2);
-	$count["scoreVerb"] = fmtPercent($scoreVerb, $nVerb * 2); 
-	$count["scoreAdverb"] = fmtPercent($scoreAdverb, $nAdverb * 2); 
-	$count["scoreSub_en"] = fmtPercent($scoreSub_en, $nSub_en * 2); 
-	$count["scoreSub_ett"] = fmtPercent($scoreSub_ett, $nSub_ett * 2);
+	$count["preposition"] = $nPreposition;
+	$count["interjektion"] = $nInterjektion;
+	$count["pronomen"] = $nPronomen;
+	$count["prefix"] = $nPrefix;
 	echo json_encode($count);
 ?>
