@@ -2,7 +2,7 @@
 	$path = getcwd() ."/";
 	$word = $_GET['word'];
 	$trail = "-def";
-	$classArr = array("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "preposition", "interjektion", "pronomen", "förled");
+	$classArr = array("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "plural", "preposition", "interjektion", "pronomen", "förled","slutled","räkneord");
 	$out = "";
 	// HTML escape chars
 	// Choose to do dynamic HTML formatting here as easier to handle each item directly

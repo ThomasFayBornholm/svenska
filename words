@@ -8,15 +8,9 @@
 <div class="row columns_4">
 <!--progress bar-->
 	<div title="Scroll to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se " id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
-		<span title="Toggle control view" class="progressContainer" onclick="showToggle()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-			<span class="progress progressBar" id="iProg"></span>
-		</span>
-		<span id="iDefProgContainer" class="progressContainer">
-			<span class="progress progressBar hidden" id="iDefProg"></span>
-		</span>
 		<div id="iControls">
 			<div class="dropdown">
-				<img title="Class selector. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Dalarna.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
+				<img title="Class selector. Left click to select all. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Dalarna.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
 				<div class="dropdown-content">
 					<p onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
 					<p onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
@@ -26,12 +20,22 @@
 				</div>
 			</div>
 			<div class="dropdown">
-				<img title="Class selector #2 (rarer classes)" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="setClass('all')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+				<img title="Class selector #2 (rarer classes), left click to select all" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="setClass('all')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 				<div class="dropdown-content">
-					<p onclick="setClass('preposition')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Preposition</p>
-					<p onclick="setClass('interjektion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Interjektion</p>					
+					<p onclick="setClass('plural')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Plural</p>
+					<p onclick="setClass('preposition')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Preposition</p>					
 					<p onclick="setClass('pronomen')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Pronomen</p>
+					<p onclick="setClass('interjektion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Interjektion</p>										
+				</div>
+			</div>						
+			<div class="dropdown">
+				<img title="Class selector #3 (rarer classes), left click to select all" id="iSelectRare" class="dropdown b2" src="img/TurningTorso.jpg" onclick="setClass('all')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+				<div class="dropdown-content">		
 					<p onclick="setClass('förled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Förled</p>
+					<p onclick="setClass('slutled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Slutled</p>
+					<p onclick="setClass('räkneord')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Räkneord</p>
+					<p onclick="setClass('konjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Konjunktion</p>
+					<p onclick="setClass('subjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Subjunktion</p>
 				</div>
 			</div>		
 			<p class="debug" id="iDebugTxt"></p>
@@ -44,8 +48,8 @@
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
 	<div title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly"class="column" onwheel="scrollView(event)">
-		<span class="counts" id="iCnt">test</span>
-		<span class="counts" id="iCntTotal">Total</span>
+		<span class="counts" id="iCnt" onclick="showToggle()">test</span>
+		<span class="counts" id="iCntTotal" onclick="showToggle()">Total</span>
 		<div  id="iDefDiv">
 			 <textarea  class="defBox" id="iDefText"></textarea>
 			 <button onclick="putDef('')">Put</button>
@@ -70,11 +74,13 @@ let N_VERB=0;
 let N_ADVERB=0;
 let N_EN=0;
 let N_ETT=0;
-let N_TEST=0;
+let N_PLURAL=0;
 let N_PREPOSITION = 0;
 let N_INTERJEKTION = 0;
 let N_PRONOMEN = 0;
 let N_PREFIX = 0;
+let N_SLUTLED = 0;
+let N_NUMMER = 0;
 let N_CUR=0;
 let N_DEFS = 0;
 
@@ -92,9 +98,7 @@ function startup() {
 }
 
 function setN_CUR() {
-	if (CLASS === "test") {
-		N_CUR = N_TEST;
-	} else if (CLASS === "adjektiv") {
+	if (CLASS === "adjektiv") {
 		N_CUR = N_ADJ;
 	} else if (CLASS === "verb") {
 		N_CUR = N_VERB;
@@ -112,10 +116,20 @@ function setN_CUR() {
 		N_CUR = N_PRONOMEN;
 	} else if (CLASS === "förled") {
 		N_CUR = N_PREFIX;
+	} else if (CLASS === "slutled") {
+		N_CUR = N_SLUTLED;
+	} else if (CLASS === "räkneord") {
+		N_CUR = N_NUMMER;
+	} else if (CLASS === "konjunktion") {
+		N_CUR = N_KONJUNKTION;
 	} else if (CLASS === "all") {
 		N_CUR = N_TOT;
 	}
-	$('#iCnt').text(N_CUR.toLocaleString('sv'));
+	if (CLASS === "all") {
+		$('#iCnt').text("");
+	} else {
+		$('#iCnt').text(N_CUR.toLocaleString('sv'));
+	}
 	$('#iCntTotal').text(' [' + N_TOT.toLocaleString('sv') + ']');
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
@@ -348,8 +362,8 @@ function lookupWord(el,onlyLocal,inline) {
 		.then(json => {
 			let keys = Object.keys(json);						
 			let def = "";
-			let delim ="";
-			let tmp = "<span onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";
+			let delim ="";			
+			let tmp = "<span onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";			
 			for (let i = 0; i < keys.length; i++) {			
 				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
 				delim="<br>";
@@ -541,12 +555,15 @@ function wordCount() {
 		N_VERB = json["verb"];
 		N_ADVERB = json["adverb"];
 		N_EN = json["substantiv_en"];
-		N_ETT = json["substantiv_ett"];
-		N_TEST= json["test"];
+		N_ETT = json["substantiv_ett"];		
+		N_PLURAL = json["plural"];
 		N_PREPOSITION = json["preposition"];
 		N_INTERJEKTION = json["interjektion"];
 		N_PRONOMEN = json["pronomen"];
 		N_PREFIX = json["prefix"];
+		N_SLUTLED = json["slutled"];
+		N_NUMMER = json["nummer"];
+		N_KONJUNKTION = json["nummer"];
 		setN_CUR();
 		getProgress();
 	})
@@ -604,6 +621,37 @@ function seekWord(word) {
 					let ind = 0;
 				}
 				getWords(ind);
+			} else {
+				// If no match in specific class useful to show matches in other classes.
+				fetch('backend/getDefAll.php?word=' + word, {
+					method: 'get',
+					mode: 'cors',
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				})
+				.then(response => {
+					return response.json();
+				})
+				.then(json => {
+					if (json.length > 0) {
+						let keys = Object.keys(json);						
+						let def = "";
+						let delim ="";
+						let tmp = "<span onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";
+						for (let i = 0; i < keys.length; i++) {			
+							def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
+							delim="<br>";
+						}
+						LAST_DEF = def;
+						$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+					} else {
+						$('#iParDef').html("No matches in any word class.");
+					}
+				})
+				.catch(error => {
+					console.log(error);
+				})
 			}
 		})
 		.catch(error => {
@@ -798,7 +846,7 @@ function addMeta(def, regx) {
 	return def;
 }
 function grammar(def, rep) {
-	return def.replace(rep, "(" + rep + ")");
+	return def.replace(" " + rep, " (" + rep + ")");
 }
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = " + def)
@@ -824,36 +872,51 @@ function preProc(def) {
 			// Leading Meta tags
 			var regx;
 			// Beware the silent hyphens (\u00AD)
-			regx = /hög­tidligt; mest bibliskt/g;
-			s = addMeta(s, regx);
-			regx = /något hög\u00ADtidligt el. formellt/g;
-			s = addMeta(s,regx);			
-			regx = /(något hög\u00AD+tidligt)/g;
-			s = addMeta(s,regx);		
-			regx = /(hög\u00AD+tidligt)/g;
-			s = addMeta(s,regx);					
-			regx = /(något var\u00AD+dagligt)/g;
-			s = addMeta(s,regx);		
-			regx = /(var\u00AD+dagligt)/g;		
-			s = addMeta(s,regx);
-			regx = /(dialektalt)/g;		
-			s = addMeta(s,regx);
-			regx = /nu\u00ADmera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/g;
-			s = addMeta(s,regx);
-			regx = /(mindre brukligt)/g;		
-			s = addMeta(s,regx);
-			regx = /(matematik)/g;		
-			s = addMeta(s,regx);			
-			regx = /(fysik)/g;		
-			s = addMeta(s,regx);		
-			regx = /(juridik)/g;		
-			s = addMeta(s,regx);	
-			regx = /(ofta i fack\u00ADspråk)/g;		
-			s = addMeta(s,regx);
-			regx = /(ålderdomligt)/g;		
-			s = addMeta(s,regx);
-			regx = /(sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden)/g;		
-			s = addMeta(s,regx);
+			s = addMeta(s,/något hög\u00ADtidligt ut\u00ADom i sammansättn./);
+			s = addMeta(s, /hög\u00ADtidligt; mest bibliskt/);
+			s = addMeta(s,/något hög\u00ADtidligt el. formellt/);			
+			s = addMeta(s,/något hög­tidligt el. skämtsamt/);
+			s = addMeta(s,/(något hög\u00AD+tidligt)/);		
+			s = addMeta(s,/(hög\u00AD+tidligt)/);					
+			s = addMeta(s,/(något var\u00AD+dagligt)/);		
+			s = addMeta(s,/(var\u00AD+dagligt; dialektalt)/);
+			s = addMeta(s,/(var\u00AD+dagligt; ned\u00ADsättande)/);
+			s = addMeta(s,/(starkt var\u00AD+dagligt)/);
+			s = addMeta(s,/(var\u00AD+dagligt)/);
+			s = addMeta(s,/(dialektalt)/);
+			s = addMeta(s,/nu\u00ADmera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/);
+			s = addMeta(s,/(mindre brukligt)/);
+			s = addMeta(s,/(matematik)/);			
+			s = addMeta(s,/(fysik)/);		
+			s = addMeta(s,/sär\u00ADskilt i juridiska samman\u00ADhang/);
+			s = addMeta(s,/(sär­skilt juridik)/);
+			s = addMeta(s,/(juridik)/);	
+			s = addMeta(s,/sär­skilt i fack­språk/);
+			s = addMeta(s,/(ofta i fack\u00ADspråk)/);
+			s = addMeta(s,/ålderdomligt ut\u00ADom i bibliska samman\u00ADhang/);
+			s = addMeta(s,/något ålderdomligt/);
+			s = addMeta(s,/(ålderdomligt)/);
+			s = addMeta(s,/(sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden)/);
+			s = addMeta(s,/något formellt/);
+			s = addMeta(s,/formellt/);
+			s = addMeta(s,/delvis historiskt/);
+			s = addMeta(s,/mest historiskt/);
+			s = addMeta(s,/historiskt/);
+			s = addMeta(s,/sär\u00ADskilt i barn\u00ADspråk och i imiterat barn\u00ADspråk/);
+			s = addMeta(s, /nu\u00ADmera ej i fack\u00ADmässiga samman\u00ADhang/);
+			s = addMeta(s, /mest i fack\u00ADspråk/);
+			s = addMeta(s, /ofta i vetenskapliga el. tekniska samman\u00ADhang/);
+			s = addMeta(s,/mest i vetenskapliga samman\u00ADhang/);
+			s = addMeta(s, /i vetenskapliga samman\u00ADhang/);
+			s = addMeta(s, /ålderdomligt el. skämtsamt/);
+			s = addMeta(s,/mest vid beskrivning av äldre förhållanden/);
+			s = addMeta(s,/musik/);
+			s = addMeta(s,/sär­skilt meteorologi/);
+			s = addMeta(s,/ofta i vänster­politisk debatt/);
+			s = addMeta(s,/ned­sättande/);
+			s = addMeta(s,/ibland något skämtsamt/);
+			s = addMeta(s,/sär­skilt statistik/);
+			s = addMeta(s,/sär­skilt filosofi/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -890,6 +953,8 @@ function preProc(def) {
 				let rep = strMatch.slice(0,9) + " " + strMatch.slice(9,strMatch.length) + ")";
 				s = s.replace(strMatch, rep);
 			}
+			s = s.replace("ibland med partikeln","(ibland med partikeln");
+			s = s.replace("vanligen med partikeln","(vanligen med partikeln");
 			let f1 = "utan) större betydelse­skillnad";
 			let f2 = "), utan större betydelse­förändring";
 			let f3 = "), utan större betydelse­skillnad";
@@ -913,13 +978,38 @@ function preProc(def) {
 			s = grammar(s,"vanligen bestämd form sing.");
 			s = grammar(s,"vanligen bestämd form");
 			s = grammar(s,"ofta plur.");
+			s = grammar(s,"knappast plur.; i vissa ut\u00ADtryck");
 			s = grammar(s,"knappast plur.");
 			s = grammar(s,"vanligen plur.");
+			s = grammar(s,"vanligen part.");
+			// ToDo regex to get word reference
+			s = grammar(s,"ofta fast sammansättn., jfr");
+			s = grammar(s,"mest i sammansättn.");
 			s = grammar(s,"vanligen i sammansättn.");
-			s = grammar(s,"vanligen i vissa sammansätt.");
+			s = grammar(s,"vanligen i vissa sammansätt.");			
+			// ToDo regex this one
+			s = grammar(s,"äv. fast sammansättn., se");
+			s = grammar(s,"vanligen i vissa ut\u00ADtryck");
 			s = grammar(s,"i vissa ut\u00ADtryck");
 			s = grammar(s,"ofta pass.");
 			s = grammar(s,"ofta bestämd form");
+			s = grammar(s,"ofta perfekt particip");
+			s = grammar(s,"ofta presens particip");
+			s = grammar(s,"vanligen perfekt particip");
+			s = grammar(s,"vanligen obestämd form sing.");
+			s = grammar(s,"äv. två ord");
+			s = grammar(s,"nästan en\u00ADbart i sammansättn.");
+			s = grammar(s,"endast predikativt");
+			s = grammar(s,"vanligen i konstruktion");
+			s = grammar(s,"i opersonliga konstruktioner");			
+			s = grammar(s,"vanligen opersonlig konstruktion");
+			s = grammar(s,"vanligen koll.");
+			s = grammar(s,"ofta i nekande el. frågande ut­tryck");
+			s = grammar(s,"nästan en­bart plur.");
+			// ToDo Regex this to include the partikel verk
+			//s = grammar(s,"ofta lös förbindelse, se");
+			// ToDo Regex this to include the verb
+			//s = grammar(s,"vanligen i förbindelse");
 			//outDef = "";
 			outDef += del + s;			
 			// HTML newline separator bon lines subsequent to the first
