@@ -10,7 +10,7 @@
 	<div title="Scroll to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se " id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
 		<div id="iControls">
 			<div class="dropdown">
-				<img title="Class selector. Left click to select all. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Dalarna.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
+				<img title="Class selector. Left click to select all. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
 				<div class="dropdown-content">
 					<p onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
 					<p onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
@@ -23,6 +23,7 @@
 				<img title="Class selector #2 (rarer classes), left click to select all" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="setClass('all')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 				<div class="dropdown-content">
 					<p onclick="setClass('plural')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Plural</p>
+					<p onclick="setClass('superlativ')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Superlativ</p>
 					<p onclick="setClass('preposition')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Preposition</p>					
 					<p onclick="setClass('pronomen')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Pronomen</p>
 					<p onclick="setClass('interjektion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Interjektion</p>										
@@ -79,8 +80,10 @@ let N_PREPOSITION = 0;
 let N_INTERJEKTION = 0;
 let N_PRONOMEN = 0;
 let N_PREFIX = 0;
+let N_SUPERLATIV = 0;
 let N_SLUTLED = 0;
 let N_NUMMER = 0;
+let N_SUBJUNKTION = 0;
 let N_CUR=0;
 let N_DEFS = 0;
 
@@ -116,12 +119,18 @@ function setN_CUR() {
 		N_CUR = N_PRONOMEN;
 	} else if (CLASS === "förled") {
 		N_CUR = N_PREFIX;
+	} else if (CLASS === "plural") {
+		N_CUR = N_PLURAL;
+	} else if (CLASS === "superlativ") {
+		N_CUR = N_SUPERLATIV;
 	} else if (CLASS === "slutled") {
 		N_CUR = N_SLUTLED;
 	} else if (CLASS === "räkneord") {
 		N_CUR = N_NUMMER;
 	} else if (CLASS === "konjunktion") {
 		N_CUR = N_KONJUNKTION;
+	} else if (CLASS === "subjunktion") {
+		N_CUR = N_SUBJUNKTION;
 	} else if (CLASS === "all") {
 		N_CUR = N_TOT;
 	}
@@ -205,6 +214,9 @@ function retreat(e) {
 	getWords(-1)
 }
 function getWords(ind) {
+	// Ind is used to highlight and lookup a given word index from the returned list
+	// Global INC is used to get the starting index of the returned list
+	if (DEBUG) console.log("getWords(), ind = " + ind + ", INC = ", + INC);
 	SCROLL_INC=-1;
 	N_FOUND=0;
 	$('#iParDef').text("");
@@ -364,7 +376,7 @@ function lookupWord(el,onlyLocal,inline) {
 			let def = "";
 			let delim ="";			
 			let tmp = "<span onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";			
-			for (let i = 0; i < keys.length; i++) {			
+			for (let i = 0; i < keys.length; i++) {		
 				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
 				delim="<br>";
 			}
@@ -424,17 +436,63 @@ function lookupWord(el,onlyLocal,inline) {
 // Make links to referenced words
 function makeLinks(def) {
 	if (DEBUG) console.log("makeLinks()")
+	def = linkSingleWord(def);
 	if (def.split("<br>").length == 1) {
 		return def;
 	}
+	
 	def = addLinks("MOTSATS", def);
 	def = addLinks("JFR", def);
 	def = addLinks("SYN.", def);
-	def = addLinks("SE", def);
+	def = addLinks("SE", def);	
 	return def;
 }
+function linkSingleWord(def) {
+	if (DEBUG) console.log("linkSingleWord(def), def " + def);
+	if (def.substr(0,6) === "till '") return def;
+	defArr = def.split("<br>");
+	outDef = "";
+	del = "";
+	tmpSpan = "<span onclick=followLink(this) onmouseover=highlight(this,event) title='Navigate to \"_w_\"'>_w_</span>";
+	for (line of defArr) {		
+		// Excluse explicitly predefined links and word class links e.g. "verb:"
+		if (line[0].match(/[A-Z]/) != null || line.indexOf(":") != -1) {
+			outDef += del + line;
+			del = "<br>";
+		} else {
+			let tmp = line;
+			tmp = tmp.substr(2);			
+
+			// Strip away meta and grammer information
+			let res = tmp.match(/(\[.*\])/);
+			if (res) {
+				tmp = tmp.replace(res[0] + " ","");
+			}
+			res = tmp.match(/(\(.*\))/);
+			if (res) {
+				tmp = tmp.replace(res[0] + " ","");
+			}
+			let ref = "det att ";
+			// Simple references to verbs
+			if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
+			let cnt = tmp.match(/ /g);
+			if (cnt === null) {
+				let offset = 1;
+				if (cnt === null) offset = 0
+				let word = tmp.substr(offset).replaceAll("­","");
+				line = line.replace(word, tmpSpan.replaceAll("_w_",word));				
+			} 
+			
+			outDef += del + line;
+			del = "<br>";
+		}
+	}
+	return outDef;
+}
+
 function addLinks(refClass,def) {
 	if (DEBUG) console.log("addLinks(), refClass = " + refClass + ", def = " + def);
+	if (def.indexOf(refClass) === -1) return def;
 	// Easiest to handle line by line and skip the lines without links
 	// Expectation is each link class (JFR, SE etc.) has its own new line.
 	defArr = def.split("<br>");
@@ -451,10 +509,13 @@ function addLinks(refClass,def) {
 		if (line.indexOf(m) != -1) {
 			elArr = line.split(", ");
 			for (el of elArr) {
+				el = el.replaceAll("­","");
 				if (el.includes(m)) {
-					line = line.replace(el, m + spanTmp.replaceAll("_w_",el.substr(m.length, el.length - m.length)));
+					let rep = m + spanTmp.replaceAll("_w_",el.substr(m.length, el.length - m.length))
+					line = line.replace(el, rep);
 				} else {
-					line = line.replace(el, spanTmp.replaceAll("_w_",el));
+					let rep = spanTmp.replaceAll("_w_", el);
+					line = line.replace(", " + el, ", " + rep);
 				}
 			}
 		}
@@ -526,7 +587,7 @@ function getRefs(def) {
 	def = def.replaceAll("till ", "");
 	def = def.replaceAll("'","");
 	arr = def.split(",");
-	if (DEBUG) console.log("getRef()");
+	if (DEBUG) console.log("getRef(), arr = " + arr);
 	return arr;
 }
 
@@ -557,13 +618,15 @@ function wordCount() {
 		N_EN = json["substantiv_en"];
 		N_ETT = json["substantiv_ett"];		
 		N_PLURAL = json["plural"];
+		N_SUPERLATIV = json["superlativ"];
 		N_PREPOSITION = json["preposition"];
 		N_INTERJEKTION = json["interjektion"];
 		N_PRONOMEN = json["pronomen"];
 		N_PREFIX = json["prefix"];
 		N_SLUTLED = json["slutled"];
 		N_NUMMER = json["nummer"];
-		N_KONJUNKTION = json["nummer"];
+		N_KONJUNKTION = json["konjunktion"];
+		N_SUBJUNKTION = json["subjunktion"];
 		setN_CUR();
 		getProgress();
 	})
@@ -598,9 +661,18 @@ function seekWord(word) {
 		setClass(LAST_CLASS);
 		$('#iSeek').val(word);
 	}
+	word = word.toLowerCase();
 	LAST_WORD = CUR_WORD;
 	CUR_WORD = word;
 	if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
+	// Special case of prefixes and suffices
+	if (word.substr(word.length-1) === "-") {
+		word = word.substr(0,word.length-1);
+		setClass("förled");
+	} else if (word.slice(0,1) === "-") {
+		word = word.substr(1);
+		setClass("slutled");
+	}
 	if (word.length > 0) {
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
@@ -614,11 +686,13 @@ function seekWord(word) {
 		})
 		.then(json => {
 			if (json > -1) {
-				INC = json - 3;			
+				// Put selected word in the middle of the word collection				
+				INC = json - 3;
 				let ind = 3;
-				if (INC < 0)  {
+				let mid = N_INC/2;
+				if (json < mid - 1) {					
 					INC = 0;
-					let ind = 0;
+					ind = json;
 				}
 				getWords(ind);
 			} else {
@@ -634,13 +708,14 @@ function seekWord(word) {
 					return response.json();
 				})
 				.then(json => {
-					if (json.length > 0) {
+					if (Object.keys(json).length > 0) {
 						let keys = Object.keys(json);						
 						let def = "";
 						let delim ="";
-						let tmp = "<span onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";
+						let tmp = "<span title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";
 						for (let i = 0; i < keys.length; i++) {			
-							def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
+							let compDef = json[keys[i]];															
+							def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
 							delim="<br>";
 						}
 						LAST_DEF = def;
@@ -804,9 +879,8 @@ function guessClass(word) {
 function removeClassDesc(word) {
 	let start = word.indexOf('(');
 	let end = word.indexOf(')');
-	if (start > end || start === -1) return word 
-	console.log(word.slice(0,start-1))
-	return word.slice(0,start-1)	
+	if (start > end || start === -1) return word 	
+	return word.slice(0,start-1)
 			
 }
 function addWord() {
@@ -834,24 +908,28 @@ function addWord() {
 }
 
 function addMeta(def, regx) {
+	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta(), regx =´" + regx);
+	if (def.length < 3 || def[0].match(/A-Z/)) return def
 	// Only apply one meta tag
-	if (def[2] === "[" && def.indexOf("]") > 2) return def;
-	if (!def[0].match(/A-Z/)) {			
-		m = def.match(regx)
-		if (m) {
-			def = def.replace(m[0], "[" + m[0] + "]");
-		}		
+	if (def[2] === "[" && def.indexOf("]") > 2) return def;	
+	// Probably don't actual need regex but leave "ias is" for now
+	let rawStr = regx.source;
+	if (def.indexOf(rawStr) === 2) {
+		def = def.replace(rawStr, "[" + rawStr + "]");
 	}
 	return def;
 }
-function grammar(def, rep) {
+function grammer(def, rep) {
 	return def.replace(" " + rep, " (" + rep + ")");
 }
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = " + def)
 	// Split definition
 	def = def.replaceAll(" JFR", "\nJFR");
+	def = def.replaceAll(" SE", "\nSE");
+	def = def.replaceAll(" SYN.", "\nSYN.");
+	def = def.replaceAll(" MOTSATS", "\nMOTSATS");	
 	arr = def.split("\n");
 	let outDef = "";
 	// Grammer information - Support for partikel parters
@@ -868,35 +946,42 @@ function preProc(def) {
 			while (s[0] === " ") {
 				s = s.slice(1,s.length)
 			}
-			
+			// Defuault to "pretty" leading bullet point
+			if (s[0].match(/[a-zäöå]+/) != null) {
+				s = `\u25CF ` + s;
+			}
 			// Leading Meta tags
-			var regx;
 			// Beware the silent hyphens (\u00AD)
-			s = addMeta(s,/något hög\u00ADtidligt ut\u00ADom i sammansättn./);
-			s = addMeta(s, /hög\u00ADtidligt; mest bibliskt/);
-			s = addMeta(s,/något hög\u00ADtidligt el. formellt/);			
+			s = addMeta(s,/något hög­tidligt ut\u00ADom i sammansättn./);
+			s = addMeta(s, /hög­tidligt; mest bibliskt/);
+			s = addMeta(s,/något hög­tidligt el. formellt/);			
 			s = addMeta(s,/något hög­tidligt el. skämtsamt/);
-			s = addMeta(s,/(något hög\u00AD+tidligt)/);		
-			s = addMeta(s,/(hög\u00AD+tidligt)/);					
-			s = addMeta(s,/(något var\u00AD+dagligt)/);		
-			s = addMeta(s,/(var\u00AD+dagligt; dialektalt)/);
-			s = addMeta(s,/(var\u00AD+dagligt; ned\u00ADsättande)/);
-			s = addMeta(s,/(starkt var\u00AD+dagligt)/);
-			s = addMeta(s,/(var\u00AD+dagligt)/);
-			s = addMeta(s,/(dialektalt)/);
-			s = addMeta(s,/nu\u00ADmera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/);
-			s = addMeta(s,/(mindre brukligt)/);
-			s = addMeta(s,/(matematik)/);			
-			s = addMeta(s,/(fysik)/);		
-			s = addMeta(s,/sär\u00ADskilt i juridiska samman\u00ADhang/);
-			s = addMeta(s,/(sär­skilt juridik)/);
-			s = addMeta(s,/(juridik)/);	
+			s = addMeta(s,/något hög­tidligt/);		
+			s = addMeta(s,/hög­tidligt/);					
+			s = addMeta(s,/något var­dagligt/);		
+			s = addMeta(s,/var­dagligt; dialektalt/);
+			s = addMeta(s,/var­dagligt; ned\u00ADsättande/);
+			s = addMeta(s,/starkt var­dagligt/);
+			s = addMeta(s,/var­dagligt/);
+			s = addMeta(s,/dialektalt/);
+			s = addMeta(s,/nu­mera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/);
+			s = addMeta(s,/mindre brukligt/);
+			s = addMeta(s,/sär­skilt ekonomi/);
+			s = addMeta(s,/sär­skilt i matematiskt fack­språk/);
+			s = addMeta(s,/matematisk/);
+			s = addMeta(s,/fysik/);		
+			s = addMeta(s,/sär­skilt i juridiska samman\u00ADhang/);
+			s = addMeta(s,/sär­skilt juridik/);
+			s = addMeta(s,/juridik/);	
+			s = addMeta(s,/psykologi/);
+			s = addMeta(s,/informations­teknik/);
 			s = addMeta(s,/sär­skilt i fack­språk/);
-			s = addMeta(s,/(ofta i fack\u00ADspråk)/);
+			s = addMeta(s,/ofta i fack­språk/);
+			s = addMeta(s,/mest i fack­mässiga samman­hang/);
 			s = addMeta(s,/ålderdomligt ut\u00ADom i bibliska samman\u00ADhang/);
 			s = addMeta(s,/något ålderdomligt/);
-			s = addMeta(s,/(ålderdomligt)/);
-			s = addMeta(s,/(sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden)/);
+			s = addMeta(s,/ålderdomligt/);
+			s = addMeta(s,/sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden/);
 			s = addMeta(s,/något formellt/);
 			s = addMeta(s,/formellt/);
 			s = addMeta(s,/delvis historiskt/);
@@ -905,18 +990,29 @@ function preProc(def) {
 			s = addMeta(s,/sär\u00ADskilt i barn\u00ADspråk och i imiterat barn\u00ADspråk/);
 			s = addMeta(s, /nu\u00ADmera ej i fack\u00ADmässiga samman\u00ADhang/);
 			s = addMeta(s, /mest i fack\u00ADspråk/);
+			s = addMeta(s, /sär­skilt i vetenskapliga samman­hang/);
 			s = addMeta(s, /ofta i vetenskapliga el. tekniska samman\u00ADhang/);
+			s = addMeta(s, /i vetenskapliga samman­hang/);
+			s = addMeta(s, /mest i tekniska samman­hang/);
 			s = addMeta(s,/mest i vetenskapliga samman\u00ADhang/);
+			s = addMeta(s,/sär­skilt i vetenskapliga samman\u00ADhang/);
 			s = addMeta(s, /i vetenskapliga samman\u00ADhang/);
 			s = addMeta(s, /ålderdomligt el. skämtsamt/);
 			s = addMeta(s,/mest vid beskrivning av äldre förhållanden/);
+			s = addMeta(s,/äv. som musikalisk term/);
 			s = addMeta(s,/musik/);
 			s = addMeta(s,/sär­skilt meteorologi/);
 			s = addMeta(s,/ofta i vänster­politisk debatt/);
 			s = addMeta(s,/ned­sättande/);
 			s = addMeta(s,/ibland något skämtsamt/);
 			s = addMeta(s,/sär­skilt statistik/);
-			s = addMeta(s,/sär­skilt filosofi/);
+			s = addMeta(s,/sär­skilt filosofi, biologi/);
+			s = addMeta(s,/sär­skilt filosofi/);			
+			s = addMeta(s,/filosofi/);			
+			s = addMeta(s,/i allmän­språket/);
+			s = addMeta(s,/sär­skilt militär­väsen/);
+			s = addMeta(s,/sär­skilt sjö­fart/);
+			s = addMeta(s,/ibland något ironiskt/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -970,46 +1066,57 @@ function preProc(def) {
 				s = s.slice(0,s.length-1)
 			}
 						
-			// grammar information
-			s = grammar(s,"ofta refl.");
-			s = grammar(s,"med prep.");
-			s = grammar(s,"med konjunktionen",);
-			s = grammar(s,"vanligen pres.");
-			s = grammar(s,"vanligen bestämd form sing.");
-			s = grammar(s,"vanligen bestämd form");
-			s = grammar(s,"ofta plur.");
-			s = grammar(s,"knappast plur.; i vissa ut\u00ADtryck");
-			s = grammar(s,"knappast plur.");
-			s = grammar(s,"vanligen plur.");
-			s = grammar(s,"vanligen part.");
+			// grammer information
+			s = grammer(s,"ofta refl.");
+			s = grammer(s,"med prep.");
+			s = grammer(s,"med konjunktionen",);
+			s = grammer(s,"vanligen pres.");
+			s = grammer(s,"vanligen bestämd form sing.");
+			s = grammer(s,"vanligen bestämd form");
+			s = grammer(s,"ofta plur.");
+			s = grammer(s,"knappast plur.; i vissa ut\u00ADtryck");
+			s = grammer(s,"knappast plur.");
+			s = grammer(s,"vanligen plur.");
+			s = grammer(s,"vanligen part.");
 			// ToDo regex to get word reference
-			s = grammar(s,"ofta fast sammansättn., jfr");
-			s = grammar(s,"mest i sammansättn.");
-			s = grammar(s,"vanligen i sammansättn.");
-			s = grammar(s,"vanligen i vissa sammansätt.");			
+			s = grammer(s,"ofta fast sammansättn., jfr");
+			s = grammer(s,"mest i sammansättn.");
+			s = grammer(s,"nu­mera vanligen i sammansätt.");	
+			s = grammer(s,"vanligen i sammansättn.");
+			s = grammer(s,"vanligen i vissa sammansätt.");			
 			// ToDo regex this one
-			s = grammar(s,"äv. fast sammansättn., se");
-			s = grammar(s,"vanligen i vissa ut\u00ADtryck");
-			s = grammar(s,"i vissa ut\u00ADtryck");
-			s = grammar(s,"ofta pass.");
-			s = grammar(s,"ofta bestämd form");
-			s = grammar(s,"ofta perfekt particip");
-			s = grammar(s,"ofta presens particip");
-			s = grammar(s,"vanligen perfekt particip");
-			s = grammar(s,"vanligen obestämd form sing.");
-			s = grammar(s,"äv. två ord");
-			s = grammar(s,"nästan en\u00ADbart i sammansättn.");
-			s = grammar(s,"endast predikativt");
-			s = grammar(s,"vanligen i konstruktion");
-			s = grammar(s,"i opersonliga konstruktioner");			
-			s = grammar(s,"vanligen opersonlig konstruktion");
-			s = grammar(s,"vanligen koll.");
-			s = grammar(s,"ofta i nekande el. frågande ut­tryck");
-			s = grammar(s,"nästan en­bart plur.");
+			s = grammer(s,"äv. fast sammansättn., se");
+			s = grammer(s,"vanligen i vissa ut\u00ADtryck");
+			s = grammer(s,"i vissa ut\u00ADtryck");
+			s = grammer(s,"ofta pass.");
+			s = grammer(s,"vanligen pass. el. part.");
+			s = grammer(s,"ofta bestämd form");
+			s = grammer(s,"ofta perfekt particip");
+			s = grammer(s,"ofta presens particip");
+			s = grammer(s,"vanligen perfekt particip");
+			s = grammer(s,"vanligen obestämd form sing.");
+			s = grammer(s,"äv. två ord");
+			s = grammer(s,"nästan en\u00ADbart i sammansättn.");
+			s = grammer(s,"endast predikativt");
+			s = grammer(s,"vanligen i konstruktioner");
+			s = grammer(s,"vanligen i konstruktion");
+			s = grammer(s,"vanligen i opersonliga konstruktioner");			
+			s = grammer(s,"i opersonliga konstruktioner");			
+			s = grammer(s,"vanligen opersonlig konstruktion");
+			s = grammer(s,"vanligen koll.");
+			s = grammer(s,"ofta i nekande el. frågande ut­tryck");
+			s = grammer(s,"vanligen i nekande el. frågande ut­tryck");
+			s = grammer(s,"ofta i nekande ut­tryck");
+			s = grammer(s,"vanligen i nekande ut­tryck");
+			s = grammer(s,"nästan en­bart plur.");
+			s = grammer(s,"i plur.");
+			s = grammer(s,"vanligen predikativt");
+			s = grammer(s,"äv. två ord");
+			s = grammer(s,"ofta två ord");
 			// ToDo Regex this to include the partikel verk
-			//s = grammar(s,"ofta lös förbindelse, se");
+			//s = grammer(s,"ofta lös förbindelse, se");
 			// ToDo Regex this to include the verb
-			//s = grammar(s,"vanligen i förbindelse");
+			//s = grammer(s,"vanligen i förbindelse");
 			//outDef = "";
 			outDef += del + s;			
 			// HTML newline separator bon lines subsequent to the first

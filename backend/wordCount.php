@@ -8,7 +8,7 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord"];
+	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural","superlativ", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion"];
 
 	$nTot = 0;
 	$nAdj = 0;
@@ -17,6 +17,7 @@
 	$nSub_en= 0;
 	$nSub_ett= 0;
 	$nPlural = 0;
+	$nSuperlativ = 0;
 	$nPreposition = 0;
 	$nInterjektion = 0;
 	$nPronomen = 0;	
@@ -24,6 +25,7 @@
 	$nSlutled = 0;
 	$nNummer = 0;
 	$nKonjunktion = 0;	
+	$nSubjunktion = 0;	
 
 	foreach($files as $f) {
 		$f_base = $f;
@@ -45,6 +47,8 @@
 				$nSub_ett = count($words) - 1;
 			} else if ($f_base === "plural") {
 				$nPlural = count($words) - 1;
+			} else if ($f_base === "superlativ") {
+				$nSuperlativ = count($words) - 1;
 			} else if ($f_base === "preposition") {
 				$nPreposition= count($words) -1;
 			} else if ($f_base === "interjektion") {
@@ -57,6 +61,8 @@
 				$nNummer = count($words) - 1;
 			} else if ($f_base === "konjunktion") {
 				$nKonjunktion = count($words) - 1;
+			} else if ($f_base === "subjunktion") {
+				$nSubjunktion = count($words) - 1;
 			} else if ($f_base === "slutled") {
 				$nSlutled = count($words) - 1;			
 			}
@@ -64,7 +70,7 @@
 		fclose($infile);
 	}
 	
-	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nPlural + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled;
+	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nPlural + $nSuperlativ + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled;
 	$count["total"] = $nTot;
 	$count["adj"] = $nAdj;
 	$count["verb"] = $nVerb;
@@ -72,6 +78,7 @@
 	$count["substantiv_en"] = $nSub_en;
 	$count["substantiv_ett"] = $nSub_ett;
 	$count["plural"] = $nPlural;
+	$count["superlativ"] = $nSuperlativ;
 	$count["preposition"] = $nPreposition;
 	$count["interjektion"] = $nInterjektion;
 	$count["pronomen"] = $nPronomen;
@@ -79,5 +86,6 @@
 	$count["nummer"] = $nNummer;
 	$count["konjunktion"] = $nKonjunktion;
 	$count["slutled"] = $nSlutled;
+	$count["subjunktion"] = $nSubjunktion;
 	echo json_encode($count);
 ?>
