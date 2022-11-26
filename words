@@ -453,7 +453,7 @@ function linkSingleWord(def) {
 	defArr = def.split("<br>");
 	outDef = "";
 	del = "";
-	tmpSpan = "<span onclick=followLink(this) onmouseover=highlight(this,event) title='Navigate to \"_w_\"'>_w_</span>";
+	tmpSpan = "<span onclick=followLink(this) onmouseover=highlight(this,event) title='Navigate to \"_w_\"'><b>_w_</b></span>";
 	for (line of defArr) {		
 		// Excluse explicitly predefined links and word class links e.g. "verb:"
 		if (line[0].match(/[A-Z]/) != null || line.indexOf(":") != -1) {
@@ -503,7 +503,7 @@ function addLinks(refClass,def) {
 	beginSpan += " onmouseover=highlight(this,event)";
 	beginSpan += " title='Navigate to \"_w_\"'";
 	beginSpan += ">"
-	spanTmp = beginSpan + "_w_</span>";
+	spanTmp = beginSpan + "<b>_w_</b></span>";
 	for (line of defArr) {
 		
 		if (line.indexOf(m) != -1) {
@@ -584,6 +584,7 @@ function getRefs(def) {
 	if (!def.includes("till ") || !def.includes("'")) {
 		return "";
 	}
+	def = def.slice(2);
 	def = def.replaceAll("till ", "");
 	def = def.replaceAll("'","");
 	arr = def.split(",");
@@ -961,6 +962,7 @@ function preProc(def) {
 			s = addMeta(s,/något var­dagligt/);		
 			s = addMeta(s,/var­dagligt; dialektalt/);
 			s = addMeta(s,/var­dagligt; ned\u00ADsättande/);
+			s = addMeta(s,/var­dagligt, ibland något ned­sättande/);
 			s = addMeta(s,/starkt var­dagligt/);
 			s = addMeta(s,/var­dagligt/);
 			s = addMeta(s,/dialektalt/);
