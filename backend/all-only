@@ -94,9 +94,11 @@ agronom
 agronomi
 ah
 aha
+aids
 airbag
 aj
 aja baja
+ajö
 akademi
 akademisk
 akalkuli
@@ -675,6 +677,7 @@ avskaffad
 avskaffande
 avsked
 avskeda
+avskedstagande
 avskild
 avskilja
 avskrift
@@ -1080,6 +1083,8 @@ benägenhet
 benämna
 benämning
 beordra
+bepansra
+bepansring
 bereda
 beredd
 beredning
@@ -2035,6 +2040,7 @@ cykelhjälm
 cykelväg
 cykelvänlig
 cykla
+cyklisk
 cyklist
 cyklop
 cynisk
@@ -2432,6 +2438,7 @@ drilling
 drink
 drista sig
 dristig
+driv
 driva
 drivande
 driven
@@ -2473,7 +2480,6 @@ dubbeldäckare
 dubbelmoral
 dubbelspel
 dubbelsäng
-dubbelt
 dubier
 dubiös
 duga
@@ -2836,6 +2842,7 @@ envis
 envisas
 envälde
 envåldshärskare
+ep
 epifyt
 epileptiker
 epitet
@@ -3499,7 +3506,6 @@ framgent
 framgå
 framgång
 framgångsrik
-framgångsrikt
 framhäva
 framhålla
 framkalla
@@ -3507,6 +3513,7 @@ framkomlig
 framkomlighet
 framkomma
 framlägga
+frammana
 framme
 framriktning
 framryckning
@@ -3543,6 +3550,7 @@ frasering
 fred
 fredag
 fredlig
+fredsam
 fregatt
 frejdig
 frekvens
@@ -4048,6 +4056,7 @@ förhandla
 förhandling
 förhandlingsbar
 förhandlingschef
+förhandsmeddelande
 förhandsvisning
 förhasta sig
 förhastad
@@ -4365,6 +4374,7 @@ förvandla
 förvandling
 förvanska
 förvanskning
+förvar
 förvara
 förvaring
 förvarna
@@ -4663,6 +4673,8 @@ gnagande
 gnata
 gnetig
 gnida
+gniden
+gnidig
 gnista
 gnistra
 gnola
@@ -4744,6 +4756,7 @@ granskning
 granskningsnämnd
 granulation
 grapefrukt
+gratie
 gratinera
 gratis
 gratta
@@ -5253,6 +5266,7 @@ hitta
 hitta på
 hittegods
 hittills
+hiv
 hjord
 hjort
 hjortron
@@ -5941,7 +5955,6 @@ inlärningssvårighet
 inlåna
 inlånad
 inlåning
-inlåta
 inlåta sig
 inmata
 inmatad
@@ -6019,7 +6032,6 @@ instruera
 instruktion
 instrument
 instrumentbräda
-instrumentbräde
 instrumentpanel
 instrålning
 inställa
@@ -6399,6 +6411,7 @@ kanske
 kansli
 kant
 kantat
+kantblomma
 kanton
 kantor
 kantra
@@ -6620,6 +6633,7 @@ klubb
 klubbafton
 klump
 klunga
+klura ut
 klurig
 kluven
 klyfta
@@ -6658,6 +6672,7 @@ knal
 knall
 knallhård
 knap
+knape
 knaper
 knapp
 knappast
@@ -7761,6 +7776,7 @@ list
 lista
 lista sig
 lista sig till
+lista ut
 listig
 lita
 lita på
@@ -7852,6 +7868,7 @@ lovord
 lovorda
 lovprisa
 lovprisning
+lp
 lucka
 luddig
 luffare
@@ -8035,6 +8052,8 @@ läsvärd
 läte
 lätt
 lätta
+lättbegriplig
+lättfattlig
 lätthanterlig
 lätthet
 lättjefull
@@ -8352,6 +8371,7 @@ mediesfär
 meditation
 medium
 medkänsla
+medla
 medlem
 medlemskap
 medlemsland
@@ -9084,6 +9104,8 @@ nominering
 nonaggressionspakt
 nonchalant
 nonchalera
+noppa
+noppa sig
 nordisk
 nordlig
 nordpol
@@ -9491,6 +9513,7 @@ ombudsman
 ombunden
 ombyte
 ombytlig
+omdana
 omdaning
 omdebatterad
 omdefiniera
@@ -9588,6 +9611,7 @@ ondhet
 ondsint
 ondska
 ondskefull
+ondulera
 oneklig
 onekligen
 online
@@ -9842,9 +9866,11 @@ panik
 pank
 panna
 panorama
+pansar
 pansarglas
 pansarskott
 pansexuell
+pansra
 panta
 pantförskriva
 pantomim
@@ -9966,7 +9992,7 @@ perfid
 perifer
 periferi
 period
-periodiskt
+periodisk
 periodtal
 permanens
 permanent
@@ -10766,6 +10792,7 @@ restprodukt
 restriktiv
 resultat
 resultera
+resumera
 resurs
 resväska
 reta
@@ -11282,6 +11309,7 @@ schasa
 schema
 schemalagd
 schlager
+schysst
 schyst
 scoop
 scrolla
@@ -11485,6 +11513,7 @@ sjunga in
 sjunga ut
 sjunka
 sjuttonde
+sjyst
 själ
 själslig
 själv
@@ -12295,6 +12324,7 @@ sorl
 sort
 sortera
 sortiment
+sosse
 sossig
 souterräng
 sova
@@ -12419,7 +12449,9 @@ spraka
 spratt
 sprattel
 sprattla
+spray
 spraya
+sprej
 spreja
 spreta
 spretig
@@ -12765,6 +12797,7 @@ strävsam
 stråk
 stråla
 strålande
+strålblomma
 stråle
 strålglans
 strålkastare
@@ -12842,6 +12875,7 @@ städse
 ställa
 ställa av
 ställa in
+ställa in sig
 ställa om
 ställa samman
 ställa sig
@@ -13558,6 +13592,7 @@ tillföra
 tillförlit
 tillförlitlig
 tillförsel
+tillförsikt
 tillgiven
 tillgjord
 tillgodogöra sig
@@ -13695,6 +13730,7 @@ tjur
 tjurved
 tjusa
 tjusig
+tjusning
 tjut
 tjuta
 tjuv
@@ -14261,12 +14297,16 @@ universum
 unna
 upp
 upp och ner
+uppbjuda
 uppblåst
+uppbringa
 uppbrott
 uppbrusande
 uppbyggd
 uppbyggnad
 uppbära
+uppbåd
+uppbåda
 uppbörd
 uppdaga
 uppdatera
@@ -14275,6 +14315,7 @@ uppdelning
 uppdiktad
 uppdra
 uppdrag
+uppdriva
 uppdykande
 uppe
 uppehälle
@@ -15238,6 +15279,8 @@ vänta ut
 väntan
 väntjänst
 väntrum
+väpna
+väpnare
 värd
 värde
 värdefull
@@ -15294,6 +15337,7 @@ väsende
 väsentlig
 väsentligen
 väska
+väsnas
 vässa
 västerländsk
 västerut
@@ -15734,7 +15778,6 @@ zucchini
 över huvud taget
 överallt
 övera
-ö
 överdrag
 överflöd
 överge
@@ -15749,5 +15792,5 @@ zucchini
 överklaga
 överläge
 överlägga
-ö
+överläggning
 övervinna
