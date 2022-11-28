@@ -1,10 +1,10 @@
 abandon
-abberation
 abborre
 abbot
 abbé
 abdikation
 abdomen
+aberration
 abilitet
 abnormitet
 abolition
@@ -76,6 +76,7 @@ alkalimetall
 alkan
 alkohol
 alkoholfri
+allegori
 allergi
 allians
 alligator
@@ -114,6 +115,7 @@ anatomi
 anblick
 and
 anda
+andakt
 ande
 andel
 andemening
@@ -154,12 +156,13 @@ anslutning
 anspelning
 anstalt
 ansträngning
-anställd
 anställning
 anstöt
+ansvarsnämd
 ansökan
 ansökning
 antagning
+antagonism
 antagonist
 anteckning
 anteckningsbok
@@ -236,6 +239,8 @@ asbestcement
 ask
 aska
 aspekt
+aspiration
+assignation
 assistent
 asteroid
 astronaut
@@ -635,6 +640,7 @@ bogserare
 bogserbil
 bogserbåt
 bogsering
+boja
 bojkott
 bok
 bokföring
@@ -663,9 +669,11 @@ bonuspappa
 boplats
 bordell
 bordläggning
+bordläggningsplenum
 bordsduk
 borg
 borgare
+borgarklass
 borgmästare
 boricka
 borr
@@ -687,6 +695,7 @@ bottenfällning
 bottenplan
 bottensats
 bottenvåning
+bourgeoisie
 boutique
 bov
 bowling
@@ -965,6 +974,7 @@ deklination
 dekor
 dekoration
 del
+delegat
 delegation
 delfin
 delgivning
@@ -980,6 +990,7 @@ demonstrant
 demonstration
 departementschef
 deplacement
+deportation
 depression
 deputation
 depå
@@ -1104,6 +1115,7 @@ drivhusgas
 drivkedja
 drivkraft
 drog
+dromedar
 droppe
 drottning
 drummel
@@ -1116,6 +1128,7 @@ dröm
 drönarbild
 drönare
 dubb
+dubbelagent
 dubbeldäckare
 dubbelmoral
 dubbelsäng
@@ -1226,6 +1239,7 @@ elström
 emfas
 emigrant
 emigration
+emissarie
 emotion
 empati
 empiri
@@ -1282,6 +1296,7 @@ evolution
 examen
 examination
 excitation
+exhalation
 exil
 existens
 exklusion
@@ -1295,6 +1310,8 @@ exponent
 exponering
 export
 exposition
+exspiration
+extas
 extrakt
 extremhöger
 extremist
@@ -1687,6 +1704,7 @@ fönsterbräda
 fönsterbänk
 fönsterruta
 för
+föraning
 förankring
 förare
 förbannelse
@@ -1853,6 +1871,7 @@ förvanskning
 förvaring
 förvarning
 förvirring
+förvisning
 förvissning
 förvridning
 förväg
@@ -2133,6 +2152,7 @@ handelspolitik
 handflata
 handfull
 handfängsel
+handklappning
 handklove
 handlare
 handled
@@ -2241,6 +2261,7 @@ hona
 honnör
 honung
 hop
+hopslagning
 hora
 horisont
 horn
@@ -2252,6 +2273,7 @@ hotelse
 hovmästare
 hovrätt
 hud
+hum
 humanist
 humanitet
 humbug
@@ -2447,6 +2469,7 @@ ingefära
 ingenjör
 ingenjörskonst
 ingång
+inhalation
 inkallelse
 inkompetens
 inkomst
@@ -2497,6 +2520,7 @@ intagning
 integration
 integritet
 intelligens
+intention
 interferens
 interjektion
 international
@@ -2807,6 +2831,7 @@ knapp
 knark
 knarkare
 knarkkurir
+knegare
 knekt
 knipa
 knippa
@@ -2849,6 +2874,7 @@ kollega
 kollektivtrafik
 kollision
 kolloid
+kolmonoxid
 kolon
 koloni
 kolonn
@@ -2868,6 +2894,7 @@ kommentar
 kommentator
 kommissarie
 kommission
+kommissionär
 kommitté
 kommun
 kommunikation
@@ -3270,6 +3297,7 @@ ledamot
 ledare
 ledighet
 ledning
+ledningsvävnad
 ledsnad
 ledstång
 ledtråd
@@ -4153,6 +4181,7 @@ pappersexercis
 papperskorg
 pappersmassa
 paprika
+parabel
 parad
 paragraf
 parallellcirkel
@@ -4405,6 +4434,7 @@ publik
 publikation
 pudding
 puff
+puka
 pulsåder
 pulver
 pump
@@ -4513,6 +4543,7 @@ regissör
 registrering
 reglering
 regnbåge
+regnbågsfamilj
 regnbågsforell
 regnskog
 regnskur
@@ -4604,6 +4635,7 @@ ritning
 ritual
 rival
 rivalitet
+rivning
 ro
 rock
 rock'n'roll
@@ -5093,6 +5125,8 @@ småbil
 småborgare
 småfranska
 småplanet
+småstad
+smörgås
 smörgåstårta
 smörja
 snaps
@@ -5192,6 +5226,7 @@ spik
 spiksko
 spillning
 spindel
+spion
 spiral
 spis
 spisel
@@ -5294,6 +5329,7 @@ stjälk
 stjärn
 stjärna
 stjärnbild
+stjärnfamilj
 stjärt
 stod
 stol
@@ -5447,6 +5483,7 @@ svindel
 svininfluensa
 svinstia
 svordom
+svulst
 svägerska
 svält
 sväng
@@ -5479,6 +5516,7 @@ synkop
 synkope
 synnerv
 synpunkt
+syntes
 synvilla
 synvinkel
 syren
@@ -5753,6 +5791,7 @@ transfer
 transformator
 transient
 transistor
+transkription
 transmission
 transparens
 transplantation
@@ -5828,6 +5867,7 @@ tulpan
 tum
 tumlare
 tumme
+tumör
 tunga
 tungspene
 tunnel
@@ -6229,6 +6269,7 @@ virvelstorm
 virvelvind
 visa
 visdom
+vise
 vision
 viskning
 visning
@@ -6262,6 +6303,7 @@ vägbro
 vägg
 vägledning
 vägran
+vägrare
 väktare
 välfärd
 välgärning
@@ -6308,6 +6350,7 @@ värmeutveckling
 värnkraft
 värnplikt
 värvning
+väsentlighet
 väska
 väta
 vätgas
@@ -6454,6 +6497,7 @@ zucchini
 återuppbyggnad
 återupplivning
 återvandring
+återverkan
 återverkning
 återvändsgata
 återvändsgränd

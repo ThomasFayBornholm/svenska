@@ -18,11 +18,13 @@ aga
 agera
 agglomerera
 akta
+akta sig
 aktivera
 aktualisera
 alliera sig
 alludera
 alstra
+amma
 amputera
 ana
 analysera
@@ -41,6 +43,7 @@ ange
 angripa
 angå
 anhopa
+anhopa sig
 anhålla
 anklaga
 anknyta
@@ -82,11 +85,18 @@ applådera
 approximera
 aptera
 arbeta
+arbeta bort
+arbeta in
+arbeta om
+arbeta sig
+arbeta upp
+arbeta över
 argumentera
 arkivera
 arrangera
 arrestera
 artikulera
+artikulera sig
 asfaltera
 aska
 aspirera
@@ -205,6 +215,7 @@ bebygga
 bebåda
 bedja
 bedra
+bedraga
 bedriva
 bedröva
 bedyra
@@ -215,6 +226,7 @@ befalla
 befara
 befinna
 befinna sig
+befinnas
 befläcka
 befordra
 befria
@@ -224,6 +236,7 @@ begagna
 bege sig
 begrava
 begripa
+begripa sig på
 begrunda
 begränsa
 begråta
@@ -234,6 +247,7 @@ behaga
 behandla
 behäfta
 behärska
+behärska sig
 behålla
 behöva
 behövas
@@ -244,6 +258,7 @@ beklaga
 bekläda
 bekräfta
 bekymra
+bekymra sig
 bekämpa
 bekänna
 belasta
@@ -306,6 +321,8 @@ besätta
 besöka
 beta
 betala
+betala av
+betala sig
 bete sig
 beteckna
 betinga
@@ -331,6 +348,7 @@ bibehålla
 bibringa
 bida
 bidra
+bidraga
 bifoga
 bilda
 bilägga
@@ -354,6 +372,7 @@ blekna
 bli
 bli av
 bli till
+bli till sig
 blicka
 blidka
 blinka
@@ -364,6 +383,7 @@ blockera
 blogga
 blomma
 blomstra
+blomstra upp
 blotställa
 blotta
 blottlägga
@@ -384,6 +404,7 @@ blåsa ut
 blöda
 blöta
 bo
+bo in sig
 bogsera
 boka
 bokstavera
@@ -395,14 +416,11 @@ borra sig
 borsta
 bortföra
 bortse
-bosätta
 bosätta sig
 bota
 bottna
 boxas
 braka
-branna sig
-branna vid
 breda
 breda ut sig
 bredda
@@ -433,6 +451,8 @@ bräcka
 bräda
 bränna
 bränna av
+bränna sig
+bränna vid
 brådska
 bråka
 bua
@@ -516,7 +536,9 @@ dela upp
 dela ut
 delegera
 delge
+delgiva
 delta
+deltaga
 demaskera
 dementera
 demolera
@@ -580,9 +602,12 @@ dra över
 drabba
 drabba ihop
 drabba samman
+draga
 dreja
 dribbla
 dricka
+dricka upp
+dricka ur
 dricksa
 drifta
 driftsätta
@@ -612,6 +637,7 @@ dväljas
 dyka
 dyka upp
 dyrka
+dyrka upp
 dämpa
 dänga
 dåna
@@ -678,13 +704,13 @@ exercera
 existera
 exkludera
 expandera
+expediera
 experimentera
 explicera
 exploatera
 explodera
 exponera
 exportera
-extas
 fabricera
 fabulera
 faktagranska
@@ -901,7 +927,6 @@ förestå
 företa
 företaga
 företräda
-före­komma
 förfalla
 förfara
 förfasa sig
@@ -963,6 +988,7 @@ förmena
 förminska
 förmoda
 förmå
+förmå sig
 förnedra
 förneka
 förnimma
@@ -1254,6 +1280,10 @@ holka ur
 hopa sig
 hopas
 hoppa
+hoppa av
+hoppa in
+hoppa på
+hoppa över
 hoppas
 hora
 hosta
@@ -1766,6 +1796,7 @@ leva upp
 leva ut
 leverera
 lida
+liera sig
 ligga
 ligga efter
 likna
@@ -1969,6 +2000,7 @@ myllra
 mynna
 mynta
 mäkla
+mäkta
 märka
 märka ut
 mäta
@@ -2090,7 +2122,9 @@ opponera sig
 ordna
 ordna sig
 organisera
+organisera sig
 orientera
+orientera sig
 orka
 orka med
 oroa
@@ -2297,6 +2331,7 @@ resumera
 reta
 reta upp
 retardera
+retirera
 returnera
 revidera
 rida
@@ -2395,6 +2430,7 @@ röna
 röra
 rösta
 röva
+sabba
 sabotera
 sakna
 sakta
@@ -2883,6 +2919,7 @@ stänga inne
 stänga ner
 stänga upp
 stänga ute
+stänka
 stärka
 stävja
 stå
@@ -3160,6 +3197,7 @@ torde
 torka
 torska
 tortera
+trafikera
 traggla
 trakassera
 traktera
@@ -3169,6 +3207,7 @@ trampa upp
 trampa ur
 trampa över
 transformera
+transkribera
 transpirera
 transplantera
 transportera
@@ -3211,6 +3250,7 @@ tråka
 tråka ut
 tråla
 trösta
+trötta
 tröttna
 tugga
 tulla
