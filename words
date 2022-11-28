@@ -10,7 +10,7 @@
 	<div title="Scroll to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se " id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
 		<div id="iControls">
 			<div class="dropdown">
-				<img title="Class selector. Left click to select all. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
+				<img title="Class selector. Left click to select all. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="setClass('all')" oncontextmenu="lookupManyWords(36)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
 				<div class="dropdown-content">
 					<p onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
 					<p onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
@@ -50,11 +50,11 @@
 	</div>
 	<div title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly"class="column" onwheel="scrollView(event)">
 		<span class="counts" id="iCnt" onclick="showToggle()">test</span>
-		<span class="counts" id="iCntTotal" onclick="showToggle()">Total</span>
+		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view">Total</span>
 		<div  id="iDefDiv">
 			 <textarea  class="defBox" id="iDefText"></textarea>
-			 <button onclick="putDef('')">Put</button>
-			 <button onclick="cleanUp()">Clean up</button>
+			 <button onclick="putDef('')">Put</button>			 
+			 <button onclick="cleanUp()">Clean up</button>			 
 		</div>
 		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDef(event)"></p>
 		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
@@ -165,8 +165,10 @@ function putDef(def) {
 		def = $('#iDefText').val();
 	}
 	if (DEBUG) console.log("START putDef(def); def = " + def + "; SCROLL_INC = " + SCROLL_INC);
-	def = preProc(def);	
-	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def, {
+	let processed = preProc(def);
+	def = processed[0];
+	meta = processed[1];
+	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta , {
 		method: 'get',
 		mode:	'cors',
 		headers: {
@@ -185,6 +187,7 @@ function putDef(def) {
 		}
 	})
 }
+
 function changeInc(delta) {
 	if (INC + delta > N_CUR) {
 		INC = INC;
@@ -398,17 +401,41 @@ function lookupWord(el,onlyLocal,inline) {
 		.then(response => {
 			return response.json()
 		})
-		.then(json => {
-			def = json;
-			LAST_DEF = json;
+		.then(json => {			
+			def = json["def"];
+			LAST_DEF = json["def"];
 			// Prefer local definition over 3rd party dictionary
 			if (def != "No definition found" && def != "Could not read json") {
-				if (json.includes("till '")) {
+				if (def.includes("till '")) {
 					getCompDef(def);
 					return;
 				}
 				def = makeLinks(def);
-				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+				if (json["meta"].length > 0) {
+					// Only interested in the first meta line for now.
+					// May expand this later
+					let meta = json["meta"].replace(CUR_WORD,"<b>" + CUR_WORD + "</b>");
+					metaArr = meta.split("<br>");
+					let tmpMeta = "";
+					delMeta = "";
+					for (let i = 0; i < metaArr.length; i++) {						
+						if (i == 0) {
+							delMeta = "";
+						} else if (i === 1) {
+							delMeta = "<br>ORDKLASS: ";
+						} else if (i === 2) {
+							delMeta = "<br>UTTAL: ";
+						} else {
+							delMeta = "<br>";
+						}
+						tmpMeta += delMeta + metaArr[i];
+					}
+					def = "<i>" + tmpMeta + "</i><br>" + def;
+					$('#iParDef').html(def);
+				} else {
+					$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+				}
+				
 				$('#iDefDiv').css("display", "none");
 				if (!inline) {
 					$('#iWords').css("visibility", "hidden");
@@ -436,7 +463,7 @@ function lookupWord(el,onlyLocal,inline) {
 // Make links to referenced words
 function makeLinks(def) {
 	if (DEBUG) console.log("makeLinks()")
-	def = linkSingleWord(def);
+	def = linkSingleWord(def);	
 	if (def.split("<br>").length == 1) {
 		return def;
 	}
@@ -447,7 +474,7 @@ function makeLinks(def) {
 	def = addLinks("SE", def);	
 	return def;
 }
-function linkSingleWord(def) {
+function linkSingleWord(def) {	
 	if (DEBUG) console.log("linkSingleWord(def), def " + def);
 	if (def.substr(0,6) === "till '") return def;
 	defArr = def.split("<br>");
@@ -455,36 +482,48 @@ function linkSingleWord(def) {
 	del = "";
 	tmpSpan = "<span onclick=followLink(this) onmouseover=highlight(this,event) title='Navigate to \"_w_\"'><b>_w_</b></span>";
 	for (line of defArr) {		
-		// Excluse explicitly predefined links and word class links e.g. "verb:"
-		if (line[0].match(/[A-Z]/) != null || line.indexOf(":") != -1) {
-			outDef += del + line;
-			del = "<br>";
-		} else {
-			let tmp = line;
-			tmp = tmp.substr(2);			
+		if (line.length > 0) {
+			// Excluse explicitly predefined links and word class links e.g. "verb:"
+			if (line[0].match(/[A-Z]/) != null || line.indexOf(":") != -1) {
+				outDef += del + line;
+				del = "<br>";
+			} else {
+				let tmp = line;
+				tmp = tmp.substr(2);			
 
-			// Strip away meta and grammer information
-			let res = tmp.match(/(\[.*\])/);
-			if (res) {
-				tmp = tmp.replace(res[0] + " ","");
+				// Strip away meta and grammer information
+				let res = tmp.match(/(\[.*\])/);
+				if (res) {
+					tmp = tmp.replace(res[0] + " ","");
+				}
+				res = tmp.match(/(\(.*\))/);
+				if (res) {
+					tmp = tmp.replace(res[0] + " ","");
+				}
+				let ref = "det att ";
+				// Simple references to verbs from substantiv
+				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
+				// Simple references to verbs from adjektiv
+				ref = "som ";
+				if (tmp.indexOf(ref) === 0) {
+					tmp = tmp.replace(ref,"");
+					// remove trailing 'r' from verb conjugation
+					if (tmp.slice(tmp.length-1) === 'r') {					
+						tmp = tmp.slice(0,tmp.length-1);
+					}
+				}
+				
+				let cnt = tmp.match(/ /g);
+				if (cnt === null) {
+					let offset = 1;
+					if (cnt === null) offset = 0
+					let word = tmp.substr(offset).replaceAll("­","");
+					line = line.replace(word, tmpSpan.replaceAll("_w_",word));				
+				} 
+				
+				outDef += del + line;
+				del = "<br>";
 			}
-			res = tmp.match(/(\(.*\))/);
-			if (res) {
-				tmp = tmp.replace(res[0] + " ","");
-			}
-			let ref = "det att ";
-			// Simple references to verbs
-			if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
-			let cnt = tmp.match(/ /g);
-			if (cnt === null) {
-				let offset = 1;
-				if (cnt === null) offset = 0
-				let word = tmp.substr(offset).replaceAll("­","");
-				line = line.replace(word, tmpSpan.replaceAll("_w_",word));				
-			} 
-			
-			outDef += del + line;
-			del = "<br>";
 		}
 	}
 	return outDef;
@@ -562,7 +601,7 @@ function getCompDef(def) {
 			let tmp = "<span onclick=\"followLink(this)\"><b>_w_</b></span>:";
 			tmp = tmp.replaceAll("_w_",removeClassDesc(w));
 			tmp = tmp + "<br>";
-			out[done] = makeLinks(tmp + json);
+			out[done] = makeLinks(tmp + json["def"]);
 			done++;
 			if (done >= words.length) {
 				// Perform any required ordering
@@ -713,7 +752,7 @@ function seekWord(word) {
 						let keys = Object.keys(json);						
 						let def = "";
 						let delim ="";
-						let tmp = "<span title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";
+						let tmp = "<span onmouseover=\"highlight(thisss,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";						
 						for (let i = 0; i < keys.length; i++) {			
 							let compDef = json[keys[i]];															
 							def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
@@ -926,6 +965,35 @@ function grammer(def, rep) {
 }
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = " + def)
+	// return def and meta components
+	// Check if any meta information existsDef	
+	if (def[0] === " ") def = def.slice(1);
+	let meta = "";
+	let firstWord = def[0];
+	for (let i = 1; i < def.length; i++) {
+		if (def[i].match(/[a-zöäå_]/)) {
+			firstWord += def[i];
+		} else {
+			break;
+		}
+	}
+	// To allow user to enter verbs with multiple words
+	firstWord = firstWord.replaceAll("_"," ");	
+	if (firstWord === CUR_WORD) {		
+		defArr = def.split('\n');
+		meta = defArr[0].replaceAll("_"," ");		
+		let del = "";
+		def = "";
+		for (let i = 1; i < defArr.length; i++) {		
+			if (i < 3) {
+				meta += "<br>" + defArr[i];
+			} else {
+				def += del + defArr[i];
+				del = "\n";
+			}
+		}
+	}
+	
 	// Split definition
 	def = def.replaceAll(" JFR", "\nJFR");
 	def = def.replaceAll(" SE", "\nSE");
@@ -952,11 +1020,12 @@ function preProc(def) {
 				s = `\u25CF ` + s;
 			}
 			// Leading Meta tags
-			// Beware the silent hyphens (\u00AD)
+			// Beware the silent hyphens (\u00AD)			
 			s = addMeta(s,/något hög­tidligt ut\u00ADom i sammansättn./);
 			s = addMeta(s, /hög­tidligt; mest bibliskt/);
 			s = addMeta(s,/något hög­tidligt el. formellt/);			
 			s = addMeta(s,/något hög­tidligt el. skämtsamt/);
+			s = addMeta(s,/ibland något hög­tidligt/);		
 			s = addMeta(s,/något hög­tidligt/);		
 			s = addMeta(s,/hög­tidligt/);					
 			s = addMeta(s,/något var­dagligt/);		
@@ -971,16 +1040,19 @@ function preProc(def) {
 			s = addMeta(s,/sär­skilt ekonomi/);
 			s = addMeta(s,/sär­skilt i matematiskt fack­språk/);
 			s = addMeta(s,/matematisk/);
+			s = addMeta(s,/fysik, kemi m.m./);
 			s = addMeta(s,/fysik/);		
 			s = addMeta(s,/sär­skilt i juridiska samman\u00ADhang/);
 			s = addMeta(s,/sär­skilt juridik/);
 			s = addMeta(s,/juridik/);	
+			s = addMeta(s,/sär­skilt i lag­språk/);
 			s = addMeta(s,/psykologi/);
 			s = addMeta(s,/informations­teknik/);
 			s = addMeta(s,/sär­skilt i fack­språk/);
 			s = addMeta(s,/ofta i fack­språk/);
 			s = addMeta(s,/mest i fack­mässiga samman­hang/);
 			s = addMeta(s,/ålderdomligt ut\u00ADom i bibliska samman\u00ADhang/);
+			s = addMeta(s,/ålderdomligt ut­om i vissa ut­tryck/);
 			s = addMeta(s,/något ålderdomligt/);
 			s = addMeta(s,/ålderdomligt/);
 			s = addMeta(s,/sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden/);
@@ -1005,6 +1077,8 @@ function preProc(def) {
 			s = addMeta(s,/musik/);
 			s = addMeta(s,/sär­skilt meteorologi/);
 			s = addMeta(s,/ofta i vänster­politisk debatt/);
+			s = addMeta(s,/ofta ned­sättande/);
+			s = addMeta(s,/ofta något ned­sättande/);
 			s = addMeta(s,/ned­sättande/);
 			s = addMeta(s,/ibland något skämtsamt/);
 			s = addMeta(s,/sär­skilt statistik/);
@@ -1015,6 +1089,7 @@ function preProc(def) {
 			s = addMeta(s,/sär­skilt militär­väsen/);
 			s = addMeta(s,/sär­skilt sjö­fart/);
 			s = addMeta(s,/ibland något ironiskt/);
+			s = addMeta(s,/sär­skilt arkeologi/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -1074,11 +1149,13 @@ function preProc(def) {
 			s = grammer(s,"med konjunktionen",);
 			s = grammer(s,"vanligen pres.");
 			s = grammer(s,"vanligen bestämd form sing.");
+			s = grammer(s,"ofta bestämd form sing.");
 			s = grammer(s,"vanligen bestämd form");
 			s = grammer(s,"ofta plur.");
 			s = grammer(s,"knappast plur.; i vissa ut\u00ADtryck");
 			s = grammer(s,"knappast plur.");
 			s = grammer(s,"vanligen plur.");
+			s = grammer(s,"sällan plur.");
 			s = grammer(s,"vanligen part.");
 			// ToDo regex to get word reference
 			s = grammer(s,"ofta fast sammansättn., jfr");
@@ -1092,6 +1169,7 @@ function preProc(def) {
 			s = grammer(s,"i vissa ut\u00ADtryck");
 			s = grammer(s,"ofta pass.");
 			s = grammer(s,"vanligen pass. el. part.");
+			s = grammer(s,"vanligen refl. el. pass.");
 			s = grammer(s,"ofta bestämd form");
 			s = grammer(s,"ofta perfekt particip");
 			s = grammer(s,"ofta presens particip");
@@ -1115,6 +1193,7 @@ function preProc(def) {
 			s = grammer(s,"vanligen predikativt");
 			s = grammer(s,"äv. två ord");
 			s = grammer(s,"ofta två ord");
+			s = grammer(s,"i negerade samman­hang");
 			// ToDo Regex this to include the partikel verk
 			//s = grammer(s,"ofta lös förbindelse, se");
 			// ToDo Regex this to include the verb
@@ -1125,8 +1204,11 @@ function preProc(def) {
 			del = "<br>";
 		}
 	}
+	var out = []
+	out[0] = outDef;
+	out[1] = meta;
 	// That's it!
-	return outDef;
+	return out;
 }
 function cleanUp() {
 	if (DEBUG) console.log("cleanUp(); LAST_DEF = " + LAST_DEF);
@@ -1183,6 +1265,28 @@ function setClassGuess() {
 	if (DEBUG) console.log("setClassGuess, Class guessed as " + c)
 	setClass(c);
 	seekWord(CUR_WORD);
+}
+function lookupManyWords(n) {
+	fetch('backend/getWords.php?&class=' + CLASS + "&start=" + (parseInt(INC) + parseInt(SCROLL_INC)).toString() + "&num=" + n, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json()
+	})
+	.then(json => {
+		for (let i = 0; i < json.length; i++) {
+			let word = json[i]
+			let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
+			window.open(url, '_blank');
+		}
+	})
+	.catch(error => {
+		console.log(error);
+	})
 }
 </script>
 </html>

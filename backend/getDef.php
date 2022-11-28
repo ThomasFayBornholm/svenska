@@ -6,14 +6,27 @@
 	$name = $class . $trail;
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
+	$out = array("def"=>"", "meta"=>"");
 	if ($dict) {
 		if (array_key_exists($word, $dict)) {
-			echo json_encode($dict[$word]);
+			$out["def"] = $dict[$word];
+			// Check for meta data also
+			$name = $class . "-meta";
+			$metaContents = file_get_contents($path . $name, 'UTF-8');
+			$metaDict = json_decode($metaContents, JSON_UNESCAPED_UNICODE);
+			if ($metaDict != null) {
+				if (array_key_exists($word, $metaDict)) {
+					$out["meta"] = $metaDict[$word];
+				}
+			}
+			echo json_encode($out);
 			return;
 		} else {
-			echo json_encode("No definition found");
+			$out["def"] = "No definition found";
+			echo json_encode($out);
 		}
 	} else {
-		echo json_encode("Could not read json");
+		$out["def"] = "Could not read json";
+		echo json_encode($out);
 	}
 ?>

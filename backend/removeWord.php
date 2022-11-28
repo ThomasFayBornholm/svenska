@@ -10,6 +10,7 @@
 
 	$fileName = $path . $class . $trail;
 	$defName = $path . $class . "-def";
+	$metaName = $path . $class . "-meta";
 	$tmpName = $path . "tmp";
 
 	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
@@ -49,5 +50,10 @@
 	$arr = json_decode($contents,true);
 	unset($arr[$word]);
 	file_put_contents($defName, json_encode($arr));
+	// Remove meta
+	$contents = file_get_contents($metaName, 'UTF-8');
+	$arr = json_decode($contents,true);
+	unset($arr[$word]);
+	file_put_contents($metaName, json_encode($arr));
 	echo json_encode($res);
 ?>

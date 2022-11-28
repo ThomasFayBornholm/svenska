@@ -3,11 +3,21 @@
 	$class = $_GET['class'];
 	$word = $_GET['word'];
 	$def = $_GET['def'];
+	$meta = $_GET['meta'];
 	$trail = "-def";
-	$name = $class . $trail;
-	$contents = file_get_contents($path . $name, 'UTF-8');
-	$arr = json_decode($contents,true);
-	$arr[$word] = $def;
-		
-	file_put_contents($path. $name, json_encode($arr));
+	if (strlen($def) > 0) {
+		$name = $class . $trail;
+		$contents = file_get_contents($path . $name, 'UTF-8');
+		$arr = json_decode($contents,true);
+		$arr[$word] = $def;
+		file_put_contents($path. $name, json_encode($arr));
+	}
+
+	if (strlen($meta) > 0) {
+		$name = $class . "-meta";
+		$contents = file_get_contents($path . $name, 'UTF-8');
+		$arr = json_decode($contents,true);
+		$arr[$word] = $meta;
+		file_put_contents($path . $name, json_encode($arr));
+	}
 ?>
