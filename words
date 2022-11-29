@@ -970,16 +970,32 @@ function preProc(def) {
 	if (def[0] === " ") def = def.slice(1);
 	let meta = "";
 	let firstWord = def[0];
+	let secondWord = "";
+	let thirdWord = "";
+	let matchedFirst = false;
 	for (let i = 1; i < def.length; i++) {
-		if (def[i].match(/[a-zöäå_]/)) {
-			firstWord += def[i];
+		if (def[i].match(/[a-zöäåé-]/)) {
+			if (!matchedFirst) {
+				firstWord += def[i];
+			} else {
+				secondWord += def[i]
+			}
 		} else {
-			break;
+			if (matchedFirst) break;			
+			matchedFirst = true;
 		}
 	}
-	// To allow user to enter verbs with multiple words
-	firstWord = firstWord.replaceAll("_"," ");	
-	if (firstWord === CUR_WORD) {		
+	var m;
+	if (CLASS === "slutled") {
+		m = "-" + CUR_WORD;
+	} else if (CLASS === "förled") {
+		m = CUR_WORD + "-";
+	} else {
+		m = CUR_WORD;
+	}
+	console.log(m);
+	
+	if (firstWord === m || firstWord + " " + secondWord === m) {		
 		defArr = def.split('\n');
 		meta = defArr[0].replaceAll("_"," ");		
 		let del = "";
@@ -1035,6 +1051,8 @@ function preProc(def) {
 			s = addMeta(s,/starkt var­dagligt/);
 			s = addMeta(s,/var­dagligt/);
 			s = addMeta(s,/dialektalt/);
+			s = addMeta(s,/ofta i fackspråkliga samman­hang/);
+			s = addMeta(s, /nu\u00ADmera ej i fack\u00ADmässiga samman\u00ADhang/);
 			s = addMeta(s,/nu­mera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/);
 			s = addMeta(s,/mindre brukligt/);
 			s = addMeta(s,/sär­skilt ekonomi/);
@@ -1061,8 +1079,7 @@ function preProc(def) {
 			s = addMeta(s,/delvis historiskt/);
 			s = addMeta(s,/mest historiskt/);
 			s = addMeta(s,/historiskt/);
-			s = addMeta(s,/sär\u00ADskilt i barn\u00ADspråk och i imiterat barn\u00ADspråk/);
-			s = addMeta(s, /nu\u00ADmera ej i fack\u00ADmässiga samman\u00ADhang/);
+			s = addMeta(s,/sär\u00ADskilt i barn\u00ADspråk och i imiterat barn\u00ADspråk/);			
 			s = addMeta(s, /mest i fack\u00ADspråk/);
 			s = addMeta(s, /sär­skilt i vetenskapliga samman­hang/);
 			s = addMeta(s, /ofta i vetenskapliga el. tekniska samman\u00ADhang/);
@@ -1090,6 +1107,7 @@ function preProc(def) {
 			s = addMeta(s,/sär­skilt sjö­fart/);
 			s = addMeta(s,/ibland något ironiskt/);
 			s = addMeta(s,/sär­skilt arkeologi/);
+			s = addMeta(s, /ej officiell svensk beteckning/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -1168,6 +1186,7 @@ function preProc(def) {
 			s = grammer(s,"vanligen i vissa ut\u00ADtryck");
 			s = grammer(s,"i vissa ut\u00ADtryck");
 			s = grammer(s,"ofta pass.");
+			s = grammer(s,"vanligen pass. el. perfekt particip");
 			s = grammer(s,"vanligen pass. el. part.");
 			s = grammer(s,"vanligen refl. el. pass.");
 			s = grammer(s,"ofta bestämd form");
@@ -1287,6 +1306,13 @@ function lookupManyWords(n) {
 	.catch(error => {
 		console.log(error);
 	})
+}
+function asSammanVerb() {
+	regfx = /äv. fast sammansättn., se/
+}
+
+function asPartikelVerb() {
+
 }
 </script>
 </html>
