@@ -654,6 +654,7 @@ effektivisera
 effektuera
 efterapa
 efterbilda
+efterforska
 efterfråga
 efterfölja
 efterhärma
@@ -732,10 +733,8 @@ fastställa
 fatta
 fela
 felbedöma
-felbedömning
 felcitera
 festa
-fiffa
 fiffa upp
 fiffla
 filea
@@ -749,6 +748,7 @@ finslipa
 finta
 fippla
 fira
+fira av
 fiska
 fixa
 fjädra
@@ -786,6 +786,7 @@ fordra
 forma
 formalisera
 formge
+formgiva
 formulera
 forsa
 forska
@@ -817,6 +818,7 @@ framträda
 fresta
 fria
 frige
+frigiva
 frigöra
 frihetsberöva
 frikoppla
@@ -829,6 +831,7 @@ frodas
 frossa
 frukta
 frysa
+frysa ihjäl
 frysa in
 frysa ut
 frälsa
@@ -837,8 +840,12 @@ fräsa
 fräscha upp
 fräta
 fråga
+fråga efter
+fråga sig
+fråga ut
 frångå
 frånta
+fråntaga
 fukta
 fullborda
 fullfölja
@@ -891,6 +898,7 @@ förbigå
 förbinda
 förbjuda
 förbli
+förbliva
 förbluffa
 förbruka
 förbrylla
@@ -910,6 +918,7 @@ förebrå
 förebygga
 förebåda
 föredra
+föredraga
 förefalla
 föregå
 förekomma
@@ -925,7 +934,9 @@ förestava
 föreställa
 förestå
 företa
+företa sig
 företaga
+företaga sig
 företräda
 förfalla
 förfara
@@ -939,7 +950,6 @@ förflyta
 förflytta
 förfoga
 förfrysa
-förfråga
 förfråga sig
 förfärdiga
 förfölja
@@ -981,7 +991,6 @@ förlänga
 förlåta
 förlöjliga
 förlöpa
-förlöra sig
 förmana
 förmedla
 förmena
@@ -1129,13 +1138,14 @@ genomsyra
 ges
 gestalta
 gestalta sig
-gifta
 gifta sig
 gilla
 gina
 gissa
 gissla
 gitta
+giva
+givas
 gjuta
 gjuta av
 gjuta in
@@ -1406,11 +1416,13 @@ indoktrinera
 infektera
 infinna sig
 influera
+inflyta
 informera
 infärga
 införa
 införliva
 inge
+ingiva
 ingripa
 ingå
 inhibera
@@ -1918,6 +1930,7 @@ maila
 maka
 mala
 mana
+mana fram
 mangla
 manifestera
 manipulera
@@ -2746,6 +2759,7 @@ snudda
 snurra
 snuva
 snyfta
+snygga upp
 snylta
 snärja
 snärja in sig
@@ -3704,6 +3718,8 @@ yttra sig
 åtgärda
 åtlyda
 åtnjuta
+åtskilja
+åtskiljas
 åvägabringa
 ödelägga
 ödsla

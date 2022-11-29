@@ -2334,6 +2334,7 @@ diskus
 diskuskastning
 diskussion
 diskutera
+disparat
 disponent
 disponera
 disposition
@@ -2564,6 +2565,7 @@ dvärg
 dyckert
 dygdig
 dygn
+dyk
 dyka
 dykand
 dylik
@@ -2660,6 +2662,7 @@ efterbild
 efterbilda
 efterbildning
 efterbliven
+efterforska
 efterfråga
 efterfrågan
 efterfölja
@@ -3182,7 +3185,6 @@ fiende
 fiendskap
 fientlig
 fientlighet
-fiffa
 fiffa upp
 fiffel
 fiffig
@@ -3248,6 +3250,7 @@ fiol
 fippla
 fipplig
 fira
+fira av
 firad
 firma
 firmamärke
@@ -3471,6 +3474,7 @@ formel
 formell
 formellt
 formge
+formgiva
 formlig
 formlös
 formulera
@@ -3616,6 +3620,7 @@ fridfull
 fridsam
 frige
 frigiditet
+frigiva
 frigivning
 frigjord
 frigöra
@@ -3689,6 +3694,7 @@ frustration
 fryntlig
 frys
 frysa
+frysa ihjäl
 frysa in
 frysa ut
 frysbox
@@ -3714,6 +3720,10 @@ fräsig
 fräta
 frätning
 fråga
+fråga efter
+fråga efter,fråga sig,fråga ut
+fråga sig
+fråga ut
 frågatecken
 frågespalt
 frågesport
@@ -3723,6 +3733,7 @@ frångå
 frånskild
 frånstötande
 frånta
+fråntaga
 frånträda
 frånvarande
 frånvaro
@@ -3942,6 +3953,7 @@ förbittring
 förbjuda
 förbjuden
 förbli
+förbliva
 förbluffa
 förbluffad
 förbluffande
@@ -4000,6 +4012,7 @@ föredetta
 föredetting
 föredra
 föredrag
+föredraga
 föredragning
 föredragningslista
 föredöme
@@ -4042,8 +4055,10 @@ förestå
 förestående
 föreståndare
 företa
+företa sig
 företag
 företaga
+företaga sig
 företagare
 företagsamhet
 företagsekonomi
@@ -4182,6 +4197,7 @@ förlåtelse
 förlöjliga
 förlöjligande
 förlöpa
+förlöra
 förlöra sig
 förman
 förmana
@@ -4661,9 +4677,11 @@ gissning
 gissningsvis
 gitarr
 gitta
+giva
 givakt
 givande
 givare
+givas
 given
 givetvis
 givmild
@@ -5936,6 +5954,7 @@ influensa
 influera
 influerad
 inflygning
+inflyta
 inflytande
 inflytelserik
 info
@@ -5961,6 +5980,7 @@ ingen
 ingenjör
 ingenjörskonst
 ingenstans
+ingiva
 ingrepp
 ingripa
 ingripande
@@ -6656,6 +6676,7 @@ klassrum
 klatsch
 klausul
 klavecin
+klaviatur
 klen
 klenod
 klentrogen
@@ -6830,6 +6851,7 @@ kola
 koldioxid
 koldioxidutsläpp
 kolerisk
+kolhydrat
 kolibri
 koll
 kolla
@@ -8271,6 +8293,7 @@ mamma
 mammaledig
 man
 mana
+mana fram
 manager
 mandarin
 mandarin 
@@ -8300,6 +8323,7 @@ manschauvinistisk
 manschett
 manskap
 manslem
+manual
 manus
 manuskript
 manér
@@ -12327,6 +12351,7 @@ snyft
 snyfta
 snyfting
 snygg
+snygga upp
 snylta
 snyltare
 snyltgäst
@@ -15812,7 +15837,10 @@ zucchini
 åtrå
 åtråvärd
 åtsittande
+åtskilja
+åtskiljas
 åtskillig
+åtskils
 åtsmitande
 åtta
 åttonde
