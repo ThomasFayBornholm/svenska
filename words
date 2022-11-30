@@ -402,35 +402,18 @@ function lookupWord(el,onlyLocal,inline) {
 			return response.json()
 		})
 		.then(json => {			
+			let meta = json["meta"];
 			def = json["def"];
 			LAST_DEF = json["def"];
 			// Prefer local definition over 3rd party dictionary
 			if (def != "No definition found" && def != "Could not read json") {
 				if (def.includes("till '")) {
-					getCompDef(def);
+					getCompDef(meta,def);
 					return;
 				}
 				def = makeLinks(def);
-				if (json["meta"].length > 0) {
-					// Only interested in the first meta line for now.
-					// May expand this later
-					let meta = json["meta"].replace(CUR_WORD,"<b>" + CUR_WORD + "</b>");
-					metaArr = meta.split("<br>");
-					let tmpMeta = "";
-					delMeta = "";
-					for (let i = 0; i < metaArr.length; i++) {						
-						if (i == 0) {
-							delMeta = "";
-						} else if (i === 1) {
-							delMeta = "<br>ORDKLASS: ";
-						} else if (i === 2) {
-							delMeta = "<br>UTTAL: ";
-						} else {
-							delMeta = "<br>";
-						}
-						tmpMeta += delMeta + metaArr[i];
-					}
-					def = "<i>" + tmpMeta + "</i><br>" + def;
+				if (meta.length > 0) {										
+					def = fmtMeta(meta) + def;
 					$('#iParDef').html(def);
 				} else {
 					$('#iParDef').html("<b>" + word + ":</b><br>" + def);
@@ -567,11 +550,11 @@ function followLink(el) {
 	let word = el.innerText;
 	if (DEBUG) console.log("followLink(" + word + ")");
 	$('#iSeek').val(word);	
-	setClass("all");
+	let oldINC = INC;
 	seekWord(word);
 }
 
-function getCompDef(def) {
+function getCompDef(meta, def) {
 	if (DEBUG) console.log("getCompDef(def); def = " + def);
 	// Compose and output string that combines definition of multiple (usually two)
 	// component words
@@ -611,7 +594,7 @@ function getCompDef(def) {
 					if (i != 0) del = "<br>"
 					txt = txt + del + out[i];
 				}
-				$('#iParDef').html(txt);
+				$('#iParDef').html(fmtMeta(meta) + txt);
 			}
 		})
 		.catch(error => {
@@ -696,25 +679,12 @@ function seekWordWrapper(e) {
 	seekWord(word);
 }
 function seekWord(word) {
-	if (word === '') {
-		word = LAST_WORD;
-		setClass(LAST_CLASS);
-		$('#iSeek').val(word);
-	}
-	word = word.toLowerCase();
-	LAST_WORD = CUR_WORD;
-	CUR_WORD = word;
-	if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
-	// Special case of prefixes and suffices
-	if (word.substr(word.length-1) === "-") {
-		word = word.substr(0,word.length-1);
-		setClass("förled");
-	} else if (word.slice(0,1) === "-") {
-		word = word.substr(1);
-		setClass("slutled");
-	}
-	if (word.length > 0) {
-		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
+	// Regex support
+	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
+	reg2 = word.indexOf("$") != -1 || word.indexOf("[") != -1 || word.indexOf("]") != -1;
+	if (reg1 || reg2) {
+		// Will return first match
+		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word + '&inc=' + INC, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -722,7 +692,7 @@ function seekWord(word) {
 			}
 		})
 		.then(response => {
-			return response.json();
+			return response.json()
 		})
 		.then(json => {
 			if (json > -1) {
@@ -735,43 +705,89 @@ function seekWord(word) {
 					ind = json;
 				}
 				getWords(ind);
-			} else {
-				// If no match in specific class useful to show matches in other classes.
-				fetch('backend/getDefAll.php?word=' + word, {
-					method: 'get',
-					mode: 'cors',
-					headers: {
-						'Content-Type': 'application/json'
-					}
-				})
-				.then(response => {
-					return response.json();
-				})
-				.then(json => {
-					if (Object.keys(json).length > 0) {
-						let keys = Object.keys(json);						
-						let def = "";
-						let delim ="";
-						let tmp = "<span onmouseover=\"highlight(thisss,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";						
-						for (let i = 0; i < keys.length; i++) {			
-							let compDef = json[keys[i]];															
-							def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
-							delim="<br>";
-						}
-						LAST_DEF = def;
-						$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-					} else {
-						$('#iParDef').html("No matches in any word class.");
-					}
-				})
-				.catch(error => {
-					console.log(error);
-				})
 			}
 		})
 		.catch(error => {
 			console.log(error);
 		})
+	} else {
+		if (word === '') {
+			word = LAST_WORD;
+			setClass(LAST_CLASS);
+			$('#iSeek').val(word);
+		}
+		word = word.toLowerCase();
+		LAST_WORD = CUR_WORD;
+		CUR_WORD = word;
+		if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
+		// Special case of prefixes and suffices
+		if (word.substr(word.length-1) === "-") {
+			word = word.substr(0,word.length-1);
+			setClass("förled");
+		} else if (word.slice(0,1) === "-") {
+			word = word.substr(1);
+			setClass("slutled");
+		}
+		if (word.length > 0) {
+			fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
+				method: 'get',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(response => {
+				return response.json();
+			})
+			.then(json => {
+				if (json > -1) {
+					// Put selected word in the middle of the word collection				
+					INC = json - 3;
+					let ind = 3;
+					let mid = N_INC/2;
+					if (json < mid - 1) {					
+						INC = 0;
+						ind = json;
+					}
+					getWords(ind);
+				} else {
+					// If no match in specific class useful to show matches in other classes.
+					fetch('backend/getDefAll.php?word=' + word, {
+						method: 'get',
+						mode: 'cors',
+						headers: {
+							'Content-Type': 'application/json'
+						}
+					})
+					.then(response => {
+						return response.json();
+					})
+					.then(json => {
+						if (Object.keys(json).length > 0) {
+							let keys = Object.keys(json);						
+							let def = "";
+							let delim ="";
+							let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";						
+							for (let i = 0; i < keys.length; i++) {			
+								let compDef = json[keys[i]];															
+								def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
+								delim="<br>";
+							}
+							LAST_DEF = def;
+							$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+						} else {
+							$('#iParDef').html("No matches in any word class.");
+						}
+					})
+					.catch(error => {
+						console.log(error);
+					})
+				}
+			})
+			.catch(error => {
+				console.log(error);
+			})
+		}
 	}
 	if (DEBUG) console.log("seekWord(); word = " + word + " -> INC = " + INC);
 }
@@ -969,43 +985,32 @@ function preProc(def) {
 	// Check if any meta information existsDef	
 	if (def[0] === " ") def = def.slice(1);
 	let meta = "";
-	let firstWord = def[0];
-	let secondWord = "";
-	let thirdWord = "";
-	let matchedFirst = false;
-	for (let i = 1; i < def.length; i++) {
-		if (def[i].match(/[a-zöäåé-]/)) {
-			if (!matchedFirst) {
-				firstWord += def[i];
-			} else {
-				secondWord += def[i]
-			}
+	let defArr = def.split(" ");
+	if (defArr.length > 2) {
+		let firstWord = defArr[0];
+		let twoWords = firstWord + " " + defArr[1];
+		let threeWords = twoWords + " " + defArr[2];
+
+		var m;
+		if (CLASS === "slutled") {
+			m = "-" + CUR_WORD;
+		} else if (CLASS === "förled") {
+			m = CUR_WORD + "-";
 		} else {
-			if (matchedFirst) break;			
-			matchedFirst = true;
-		}
-	}
-	var m;
-	if (CLASS === "slutled") {
-		m = "-" + CUR_WORD;
-	} else if (CLASS === "förled") {
-		m = CUR_WORD + "-";
-	} else {
-		m = CUR_WORD;
-	}
-	console.log(m);
-	
-	if (firstWord === m || firstWord + " " + secondWord === m) {		
-		defArr = def.split('\n');
-		meta = defArr[0].replaceAll("_"," ");		
-		let del = "";
-		def = "";
-		for (let i = 1; i < defArr.length; i++) {		
-			if (i < 3) {
-				meta += "<br>" + defArr[i];
-			} else {
-				def += del + defArr[i];
-				del = "\n";
+			m = CUR_WORD;
+		}	
+		if (firstWord === m || twoWords === m || threeWords === m) {		
+			defArr = def.split('\n');
+			meta = defArr[0].replaceAll("_"," ");		
+			let del = "";
+			def = "";
+			for (let i = 1; i < defArr.length; i++) {		
+				if (i < 3) {
+					meta += "<br>" + defArr[i].replace("ORDKLASS: ","").replace("UTTAL: ","");
+				} else {
+					def += del + defArr[i];
+					del = "\n";
+				}
 			}
 		}
 	}
@@ -1037,6 +1042,7 @@ function preProc(def) {
 			}
 			// Leading Meta tags
 			// Beware the silent hyphens (\u00AD)			
+			// ToDo Move the (many) regx definitions to the function body
 			s = addMeta(s,/något hög­tidligt ut\u00ADom i sammansättn./);
 			s = addMeta(s, /hög­tidligt; mest bibliskt/);
 			s = addMeta(s,/något hög­tidligt el. formellt/);			
@@ -1051,6 +1057,7 @@ function preProc(def) {
 			s = addMeta(s,/starkt var­dagligt/);
 			s = addMeta(s,/var­dagligt/);
 			s = addMeta(s,/dialektalt/);
+			s = addMeta(s,/i fack­språk/);
 			s = addMeta(s,/ofta i fackspråkliga samman­hang/);
 			s = addMeta(s, /nu\u00ADmera ej i fack\u00ADmässiga samman\u00ADhang/);
 			s = addMeta(s,/nu­mera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/);
@@ -1108,6 +1115,7 @@ function preProc(def) {
 			s = addMeta(s,/ibland något ironiskt/);
 			s = addMeta(s,/sär­skilt arkeologi/);
 			s = addMeta(s, /ej officiell svensk beteckning/);
+			s = addMeta(s, /förskönande om­skrivning/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -1160,10 +1168,9 @@ function preProc(def) {
 			if (lastCh.charCodeAt(0) === 32 || lastCh.charCodeAt(0) === 160) {								
 				s = s.slice(0,s.length-1)
 			}
-						
+			// ToDo Move the (many) grammer pattern definitions to the function body
 			// grammer information
-			s = grammer(s,"ofta refl.");
-			s = grammer(s,"med prep.");
+			s = grammer(s,"ofta refl.");			
 			s = grammer(s,"med konjunktionen",);
 			s = grammer(s,"vanligen pres.");
 			s = grammer(s,"vanligen bestämd form sing.");
@@ -1181,12 +1188,12 @@ function preProc(def) {
 			s = grammer(s,"nu­mera vanligen i sammansätt.");	
 			s = grammer(s,"vanligen i sammansättn.");
 			s = grammer(s,"vanligen i vissa sammansätt.");			
-			// ToDo regex this one
-			s = grammer(s,"äv. fast sammansättn., se");
+			// ToDo regex this one			
 			s = grammer(s,"vanligen i vissa ut\u00ADtryck");
 			s = grammer(s,"i vissa ut\u00ADtryck");
 			s = grammer(s,"ofta pass.");
 			s = grammer(s,"vanligen pass. el. perfekt particip");
+			s = grammer(s,"vanligen pass. och perfekt particip");
 			s = grammer(s,"vanligen pass. el. part.");
 			s = grammer(s,"vanligen refl. el. pass.");
 			s = grammer(s,"ofta bestämd form");
@@ -1195,6 +1202,7 @@ function preProc(def) {
 			s = grammer(s,"vanligen perfekt particip");
 			s = grammer(s,"vanligen obestämd form sing.");
 			s = grammer(s,"äv. två ord");
+			s = grammer(s,"äv. tre ord");
 			s = grammer(s,"nästan en\u00ADbart i sammansättn.");
 			s = grammer(s,"endast predikativt");
 			s = grammer(s,"vanligen i konstruktioner");
@@ -1213,8 +1221,22 @@ function preProc(def) {
 			s = grammer(s,"äv. två ord");
 			s = grammer(s,"ofta två ord");
 			s = grammer(s,"i negerade samman­hang");
-			// ToDo Regex this to include the partikel verk
-			//s = grammer(s,"ofta lös förbindelse, se");
+			s = grammer(s,"i negerade ut­tryck");
+			s = grammer(s, "i ett få­tal ut­tryck");
+			s = grammer(s, "i negerade el. frågande samman­hang");
+			// ToDo Regex this to include the multi-word verbs
+			//s = grammer(s,"ofta lös förbindelse, se");			
+			s = fmtVerbApart(s,/(äv. lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(äv. lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(ofta lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(ofta lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(vanligen lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(vanligen lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			// Format "fast sammansättn." grammer
+			s = fmtVerbTogether(s,/(vanligen fast sammansättn., se )([a-zöäå_]+)/);
+			s = fmtVerbTogether(s,/(ofta fast sammansättn., se )([a-zöäå_]+)/);
+			s = fmtVerbTogether(s,/(äv. fast sammansättn., se )([a-zöäå_]+)/);			
+			s = fmtVerbTogether(s,/(äv. fast sammansättn., jfr )([a-zöäå_]+)/);			
 			// ToDo Regex this to include the verb
 			//s = grammer(s,"vanligen i förbindelse");
 			//outDef = "";
@@ -1228,6 +1250,43 @@ function preProc(def) {
 	out[1] = meta;
 	// That's it!
 	return out;
+}
+function fmtVerbTogether(s,regx) {
+	if (DEBUG) console.log("fmtVerbTogether(s,regx), s = " + s + ", regx = " + regx);	
+	m = s.match(regx);
+	
+	if (m != null) {
+		if (m.length === 3) {			
+			let link = "<span onmouseover=highlight(this,event) title='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_",m[2]);				
+			// Allow user to extend the verb to include another partikel e.g. "sig"
+			link = link.replaceAll("__"," ");
+			s = s.replace(m[0],"(" + m[1] + link + ")");
+		}
+	}
+	return s
+}
+function  fmtVerbApart(s,regx) {
+	if (DEBUG) console.log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
+	m = s.match(regx);	
+	if (m != null) {
+		if (m.length === 4) {			
+			// remove leading space from second word and replace with regular space.
+			let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_",m[2] + " " + m[3].substring(1));
+			// Allow user to match only a single verb word
+			link = link.replaceAll(" __","");
+			s = s.replace(m[0],"(" + m[1] + link + ")");
+		}
+	}
+	return s	
+}
+function withParticle(s) {
+	rep = "ibland with partikel";
+	s = s.replace(rep, "(" + rep);
+	rep = "ofta with partikel";
+	s = s.replace(rep, "(" + rep)
+	rep = "vanligen with partikel";
+	s = s.replace(rep, "(" + rep);
+	return s;
 }
 function cleanUp() {
 	if (DEBUG) console.log("cleanUp(); LAST_DEF = " + LAST_DEF);
@@ -1307,12 +1366,26 @@ function lookupManyWords(n) {
 		console.log(error);
 	})
 }
-function asSammanVerb() {
-	regfx = /äv. fast sammansättn., se/
-}
 
-function asPartikelVerb() {
-
+function fmtMeta(meta) {
+	meta = meta.replace(CUR_WORD,"<b>" + CUR_WORD + "</b>");
+	metaArr = meta.split("<br>");
+	let tmpMeta = "";
+	delMeta = "";
+	for (let i = 0; i < metaArr.length; i++) {						
+		if (i == 0) {
+			delMeta = "";
+		} else if (i === 1) {
+			delMeta = "<br>ORDKLASS: ";
+		} else if (i === 2) {
+			delMeta = "<br>UTTAL: ";
+		} else {
+			delMeta = "<br>";
+		}
+		tmpMeta += delMeta + metaArr[i];
+	}
+	tmpMeta = "<i>" + tmpMeta + "</i><br>"
+	return tmpMeta;
 }
 </script>
 </html>
