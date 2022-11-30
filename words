@@ -7,7 +7,7 @@
 <body onload="startup()">
 <div class="row columns_4">
 <!--progress bar-->
-	<div title="Scroll to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se " id="iWordBox" class="wordBox column" onwheel="scrollWords(event)">
+	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)" onclick="clearDef()" title="Scroll to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se ">
 		<div id="iControls">
 			<div class="dropdown">
 				<img title="Class selector. Left click to select all. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="setClass('all')" oncontextmenu="lookupManyWords(36)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
@@ -48,7 +48,7 @@
 		</div>
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
-	<div title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly"class="column" onwheel="scrollView(event)">
+	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="scrollViewDownWrapper" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
 		<span class="counts" id="iCnt" onclick="showToggle()">test</span>
 		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view">Total</span>
 		<div  id="iDefDiv">
@@ -58,8 +58,8 @@
 		</div>
 		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDef(event)"></p>
 		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
-	</div>	
-	<div title="Navigation: left/scroll down = forward, right click/scroll up = back" class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>	
+	</div>
+	<div id="iRight" class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)" title="Navigation: left/scroll down = forward, right click/scroll up = back"></div>	
 </div>
 </body>
 <script>
@@ -713,7 +713,6 @@ function seekWord(word) {
 	} else {
 		if (word === '') {
 			word = LAST_WORD;
-			setClass(LAST_CLASS);
 			$('#iSeek').val(word);
 		}
 		word = word.toLowerCase();
@@ -845,6 +844,10 @@ function clearDef() {
 	$('#iParDef').html("");
 	$('#iWords').css("visibility", "visible");
 	$('#iDefDiv').css("display", "none");
+	SCROLL_INC = -1;
+	for (let i = 0; i< N_FOUND; i++) {
+		$('#w' + i).css("fontWeight", "");
+	}
 }
 function pretty(def) {
 	if (DEBUG) console.log("pretty(def); def = " + def);
@@ -1386,6 +1389,9 @@ function fmtMeta(meta) {
 	}
 	tmpMeta = "<i>" + tmpMeta + "</i><br>"
 	return tmpMeta;
+}
+function ScrollViewDownWrapper() {
+	if ($('#iDefDiv').css("display") === "none") ScrollViewDown()
 }
 </script>
 </html>
