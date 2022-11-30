@@ -121,6 +121,7 @@ avgränsa
 avgå
 avgöra
 avhämta
+avhöra
 avigsida
 avinstallera
 avisera
@@ -173,6 +174,7 @@ avstå
 avstöta
 avsyna
 avsätta
+avsätta sig
 avsåga
 avsöndra
 avta
@@ -368,6 +370,7 @@ bjuda till
 bjuda upp
 bjuda ut
 blanda
+blanda samman
 blekna
 bli
 bli av
@@ -689,6 +692,7 @@ erhålla
 erinra
 erinra sig
 erkänna
+ernå
 erodera
 ersätta
 ertappa
@@ -825,6 +829,7 @@ frikoppla
 frikänna
 frisera
 frisera sig
+friskna till
 friställa
 fritera
 frodas
@@ -1173,6 +1178,7 @@ gnägga
 gnälla
 godkänna
 godta
+godtaga
 golva
 gosa
 gottgöra
@@ -1194,6 +1200,7 @@ grimasera
 grina
 grina upp sig
 gripa
+gripa in
 grovna
 grubbla
 gruffa
@@ -1202,7 +1209,6 @@ grumsa
 grunda
 grundera
 grundlägga
-grundläggning
 gruppera
 grusa
 grusbelägga
@@ -1233,6 +1239,7 @@ gå igenom
 gå ihop
 gå in
 gå med
+gå ned
 gå ner
 gå på
 gå samman
@@ -1249,6 +1256,10 @@ ha
 hacka
 hagla
 haka
+haka av
+haka loss
+haka sig
+haka upp sig
 hala
 halka
 halstra
@@ -1318,6 +1329,8 @@ hyra ut
 hysa
 häckla
 häda
+hägna
+hägna in
 hägra
 häkta
 hälla
@@ -1325,6 +1338,7 @@ hälsa
 hälsa på
 hämma
 hämta
+hämta in
 hända
 hänföra
 hänföra sig
@@ -1394,6 +1408,7 @@ idrotta
 ifrågasätta
 ignorera
 igångsätta
+ihågkomma
 ila
 illustrera
 imitera
@@ -1436,6 +1451,7 @@ inkapsla
 inkarnera
 inkassera
 inkludera
+inkoka
 inkomma
 inkoppla
 inkräkta
@@ -1468,6 +1484,7 @@ installera
 instifta
 instruera
 inställa
+inställa sig
 instämma
 insupa
 insöndra
@@ -1478,6 +1495,7 @@ intensifiera
 interagera
 intervjua
 intressera
+intressera sig
 introducera
 inträda
 inträffa
@@ -1491,6 +1509,7 @@ involvera
 invända
 irra
 irritera
+irritera sig
 isa
 iscensätta
 isolera
@@ -1518,6 +1537,10 @@ jämställa
 jäsa
 kalkylera
 kalla
+kalla ihop
+kalla in
+kalla samman
+kalla upp
 kamma
 kamma hem
 kamma igenom
@@ -1534,6 +1557,7 @@ kassera
 kassera in
 kasta
 kasta sig
+kasta upp
 katalysera
 kedja
 kedjeröka
@@ -1548,6 +1572,10 @@ kittla
 klaga
 klandra
 klappa
+klappa igen
+klappa igenom
+klappa ihop
+klappa till
 klara
 klara av
 klara sig
@@ -1559,6 +1587,8 @@ klarlägga
 klassa
 klassificera
 kleta
+kleta ned
+kleta ner
 klia
 klibba
 klicka
@@ -1566,6 +1596,7 @@ klinga
 klinka
 klippa
 klippa sig
+klippa till
 klistra
 kliva
 klocka
@@ -1580,13 +1611,18 @@ klä upp
 klä ut
 kläcka
 kläcka ur sig
+kläda
 klämma
+klämma sig
 klämta
 klättra
 klå
 klösa
 knacka
+knacka ned
+knacka ner
 knacka på
+knacka ur
 knapra
 knarka
 knastra
@@ -1608,11 +1644,13 @@ knåda
 koagulera
 koda
 koda av
+koda in
 kodifiera
 koja
 koka
 koka ihop
 koka in
+koka ned
 koka ner
 koka över
 kola
@@ -1675,6 +1713,7 @@ kopiera
 koppa
 koppla
 koppla av
+koppla bort
 koppla ifrån
 koppla ihop
 koppla in
@@ -1690,6 +1729,8 @@ korrodera
 korsa
 kortsluta
 kosta
+kosta på
+kosta på sig
 krackelera
 krama
 kratsa
@@ -1698,7 +1739,6 @@ kretsa
 krevera
 kriga
 krigsplacera
-kring gå
 kringgärda
 kringgå
 kristna
@@ -1715,6 +1755,10 @@ krypa
 krypa ihop
 kryptera
 kryssa
+kryssa för
+kryssa i
+kryssa in
+kryssa över
 krysta
 krysta fram
 kräkas
@@ -1750,7 +1794,9 @@ kyla av
 kyssa
 käbbla
 käka
+käka upp
 kämpa
+kämpa emot
 kämpa ner
 kämpa till sig
 känna
@@ -1760,8 +1806,10 @@ känna igen
 känna med sig
 känna på
 känna sig
+känna sig för
 känna till
 kännas
+kännas vid
 känneteckna
 kära
 kära ner sig
@@ -1772,12 +1820,22 @@ köpa upp
 köpa ut
 köpslå
 köra
+köra fast
+köra ihop sig
+köra in
+köra om
+köra på
+köra upp
+köra ur
+köra ut
+köra över
 lacka
 ladda
 ladda ner
 ladda upp
 ladda ur sig
 laga
+laga sig
 lagföra
 lagra
 lagstifta
@@ -2004,6 +2062,7 @@ motta
 mottaga
 motverka
 moussera
+mula
 mullra
 multiplicera
 mumsa
@@ -2048,8 +2107,10 @@ narra av
 narra i
 navigera
 nedbringa
+nedkämpa
 nedmontera
 nedrusta
+nedsätta
 nedteckna
 nedtona
 nedvärdera
@@ -2160,6 +2221,7 @@ pantförskriva
 pantsätta
 para
 parafera
+paralysera
 parasitera
 parera
 parkera
@@ -2168,6 +2230,7 @@ passa på
 passera
 patrullera
 pausa
+peaka
 pejla
 peka
 peka ut
@@ -2832,6 +2895,7 @@ spärra upp
 spärra ut
 spå
 spåra
+spöka
 spöka ut
 stabilisera
 stadfästa
@@ -2915,6 +2979,7 @@ ställa av
 ställa in
 ställa in sig
 ställa om
+ställa om sig
 ställa samman
 ställa sig
 ställa till
@@ -3107,6 +3172,7 @@ tackla av
 taga
 tajming
 tala
+tala in
 tala om
 tampas
 tangera
@@ -3142,6 +3208,7 @@ tilldöma
 tillerkänna
 tillfoga
 tillfredsställa
+tillfriskna
 tillfångata
 tillföra
 tillgodogöra sig
@@ -3271,6 +3338,7 @@ tulla
 tumla
 tungkyssa
 tunna
+tuta i
 tveka
 tvinga
 tvinna
@@ -3383,6 +3451,7 @@ upprusta
 upprätta
 upprätthålla
 uppröra
+uppröra sig
 uppskatta
 uppskjuta
 uppskriva
@@ -3529,6 +3598,8 @@ vidgå
 vidhäfta
 vidhålla
 vidimera
+vidkomma
+vidkännas
 vidröra
 vidta
 vifta
@@ -3669,6 +3740,7 @@ yttra sig
 äventyra
 åberopa
 åberopa sig
+åderlåta
 ådra
 åka
 åligga
