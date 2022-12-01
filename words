@@ -48,7 +48,7 @@
 		</div>
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
-	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="scrollViewDownWrapper" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
+	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="ScrollViewDownWrapper()" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
 		<span class="counts" id="iCnt" onclick="showToggle()">test</span>
 		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view">Total</span>
 		<div  id="iDefDiv">
@@ -548,6 +548,11 @@ function addLinks(refClass,def) {
 }
 function followLink(el) {
 	let word = el.innerText;
+	let rep = word.match(/\s/);
+	if (rep != null) {
+		word = word.replace(rep[0], " ");
+	}
+	word = word.replace("!","");
 	if (DEBUG) console.log("followLink(" + word + ")");
 	$('#iSeek').val(word);	
 	let oldINC = INC;
@@ -1067,6 +1072,7 @@ function preProc(def) {
 			s = addMeta(s,/mindre brukligt/);
 			s = addMeta(s,/sär­skilt ekonomi/);
 			s = addMeta(s,/sär­skilt i matematiskt fack­språk/);
+			s = addMeta(s,/sär­skilt matematik/);
 			s = addMeta(s,/matematisk/);
 			s = addMeta(s,/fysik, kemi m.m./);
 			s = addMeta(s,/fysik/);		
@@ -1155,8 +1161,9 @@ function preProc(def) {
 				let rep = strMatch.slice(0,9) + " " + strMatch.slice(9,strMatch.length) + ")";
 				s = s.replace(strMatch, rep);
 			}
-			s = s.replace("ibland med partikeln","(ibland med partikeln");
-			s = s.replace("vanligen med partikeln","(vanligen med partikeln");
+			s = s.replace("ibland med partikel","(ibland med partikel");
+			s = s.replace("vanligen med partikel","(vanligen med partikel");
+			s = s.replace("ofta med partikel","(ofta med partikel");
 			let f1 = "utan) större betydelse­skillnad";
 			let f2 = "), utan större betydelse­förändring";
 			let f3 = "), utan större betydelse­skillnad";
@@ -1185,8 +1192,8 @@ function preProc(def) {
 			s = grammer(s,"vanligen plur.");
 			s = grammer(s,"sällan plur.");
 			s = grammer(s,"vanligen part.");
-			// ToDo regex to get word reference
-			s = grammer(s,"ofta fast sammansättn., jfr");
+			// ToDo regex to get word reference			
+			s = grammer(s,"ofta i sammansättn.");
 			s = grammer(s,"mest i sammansättn.");
 			s = grammer(s,"nu­mera vanligen i sammansätt.");	
 			s = grammer(s,"vanligen i sammansättn.");
@@ -1230,6 +1237,8 @@ function preProc(def) {
 			// ToDo Regex this to include the multi-word verbs
 			//s = grammer(s,"ofta lös förbindelse, se");			
 			s = fmtVerbApart(s,/(äv. lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = s.replace("formen", "formen ");
+			s = fmtVerbApart(s,/(äv. lös förbindelse i formen )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(äv. lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(ofta lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(ofta lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
@@ -1237,12 +1246,15 @@ function preProc(def) {
 			s = fmtVerbApart(s,/(vanligen lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			// Format "fast sammansättn." grammer
 			s = fmtVerbTogether(s,/(vanligen fast sammansättn., se )([a-zöäå_]+)/);
+			s = fmtVerbTogether(s,/(vanligen fast sammansättn., jfr )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(ofta fast sammansättn., se )([a-zöäå_]+)/);
+			s = fmtVerbTogether(s,/(ofta fast sammansättn., jfr )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(äv. fast sammansättn., se )([a-zöäå_]+)/);			
 			s = fmtVerbTogether(s,/(äv. fast sammansättn., jfr )([a-zöäå_]+)/);			
+						
 			// ToDo Regex this to include the verb
 			//s = grammer(s,"vanligen i förbindelse");
-			//outDef = "";
+			s = handlePrep(s);
 			outDef += del + s;			
 			// HTML newline separator bon lines subsequent to the first
 			del = "<br>";
@@ -1270,11 +1282,12 @@ function fmtVerbTogether(s,regx) {
 }
 function  fmtVerbApart(s,regx) {
 	if (DEBUG) console.log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
-	m = s.match(regx);	
+	m = s.match(regx);
 	if (m != null) {
-		if (m.length === 4) {			
+		if (m.length === 4) {
+			let repWord = m[2] + " " + m[3].substring(1);
 			// remove leading space from second word and replace with regular space.
-			let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_",m[2] + " " + m[3].substring(1));
+			let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_", repWord);
 			// Allow user to match only a single verb word
 			link = link.replaceAll(" __","");
 			s = s.replace(m[0],"(" + m[1] + link + ")");
@@ -1391,7 +1404,22 @@ function fmtMeta(meta) {
 	return tmpMeta;
 }
 function ScrollViewDownWrapper() {
-	if ($('#iDefDiv').css("display") === "none") ScrollViewDown()
+
+	if (false && $('#iDefDiv').css("display") === "none") {
+		scrollViewDown();
+	}
+}
+function handlePrep(s) {
+	// Can have 0, 1 or more preposition words
+	// Works for a single preposition word
+	// Maybe support multiple words later
+	regx = /med prep.[a-zöäå]/;
+	let m = s.match(regx);
+	if (m != null) {
+		s = s.replace(m[0], "(" + m[0] + ")");
+		s = s.replace("prep.", "prep. ");		
+	}
+	return s;
 }
 </script>
 </html>
