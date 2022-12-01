@@ -965,7 +965,9 @@ debattartikel
 debattör
 december
 decimeter
+default
 defekation
+defekt
 definition
 definitionsmängd
 deg
@@ -979,6 +981,7 @@ delegat
 delegation
 delfin
 delgivning
+delmängd
 delning
 delstat
 deltagare
@@ -1051,6 +1054,7 @@ diskuskastning
 diskussion
 disponent
 disposition
+disputation
 dispyt
 dissertation
 dissonans
@@ -1149,6 +1153,7 @@ dvala
 dvd
 dvd-skiva
 dvärg
+dy
 dyckert
 dykand
 dyna
@@ -1382,6 +1387,7 @@ februari
 federation
 fejd
 fela
+felaktighet
 felbedömning
 felmarginal
 felsägning
@@ -1976,6 +1982,7 @@ glömska
 gnista
 gnutta
 godhet
+goding
 godsak
 godsherre
 godstrafik
@@ -2118,6 +2125,8 @@ gödsel
 göl
 göt
 hacka
+hacka ned
+hacka ner
 hackspett
 hage
 haj
@@ -2711,7 +2720,9 @@ kapris
 kapsel
 kapten
 karakteristik
+karakteristika
 karaktär
+karaktäristika
 karamell
 karate
 karavan
@@ -2732,6 +2743,7 @@ kartläggning
 kartograf
 kartografi
 kartong
+kaskad
 kassa
 kasse
 kassett
@@ -2913,6 +2925,7 @@ kompaktskiva
 kompanjon
 kompensation
 kompetens
+kompilator
 kompis
 komplettering
 komplexitet
@@ -3210,6 +3223,7 @@ kälkbacke
 kälke
 källa
 källare
+källkod
 kämpe
 kändis
 känga
@@ -3534,6 +3548,7 @@ manifestation
 manlighet
 manschett
 manslem
+mantissa
 manual
 manöver
 mapp
@@ -3561,6 +3576,7 @@ maser
 mask
 maska
 maskin
+maskinkod
 maskinvara
 maskopi
 maskros
@@ -3696,6 +3712,7 @@ mirabell
 misandri
 misogyni
 miss
+missanpassning
 misshandel
 mission
 missionär
@@ -4102,6 +4119,7 @@ ondhet
 ondska
 onsdag
 onska
+oordning
 opera
 operation
 operationssal
@@ -4275,9 +4293,11 @@ pilot
 pilsner
 pincené
 pincett
+pingla
 pingst
 pingstlilja
 pingvin
+pipa
 pippi
 pir
 pirat
@@ -4379,6 +4399,7 @@ presentatör
 president
 press
 presskonferens
+prestanda
 prestation
 prickskytt
 prilla
@@ -4796,6 +4817,7 @@ samling
 sammandrabbning
 sammanfattning
 sammanhållning
+sammankomst
 sammanslagning
 sammanslutning
 sammansmältning
@@ -5073,6 +5095,7 @@ skötsel
 sladd
 slagdänga
 slaktare
+slam
 slamkrypare
 slang
 slant
@@ -5352,6 +5375,7 @@ stod
 stol
 stolpe
 stolthet
+stomme
 stoppare
 stor
 storasyster
@@ -5759,6 +5783,7 @@ toalett
 tobak
 toffel
 tolerans
+tolk
 tolkning
 tom
 tomat
@@ -5810,6 +5835,7 @@ transformator
 transient
 transistor
 transkription
+translator
 transmission
 transparens
 transplantation
@@ -5852,7 +5878,9 @@ trut
 tryckaccent
 tryckfrihet
 tryckning
+tryckpress
 tryffel
+tryffelsvamp
 trygghet
 träblåsinstrument
 träbock
@@ -6044,6 +6072,7 @@ uppsyn
 uppsägning
 uppsättning
 uppsökning
+uppteckning
 upptäckt
 uppvaktning
 uppvärmning
@@ -6095,6 +6124,7 @@ utläggning
 utlämning
 utlänning
 utmaning
+utmattning
 utmärkning
 utmätning
 utnötning
@@ -6579,6 +6609,7 @@ zucchini
 överståthållare
 översvämning
 översyn
+översättare
 översättning
 övertid
 överträdelse

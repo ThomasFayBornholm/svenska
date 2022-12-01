@@ -22,6 +22,7 @@ akta sig
 aktivera
 aktualisera
 alliera sig
+allokera
 alludera
 alstra
 amma
@@ -42,6 +43,7 @@ anförtro sig
 ange
 angripa
 angå
+angöra
 anhopa
 anhopa sig
 anhålla
@@ -133,14 +135,18 @@ avkunna
 avkyla
 avla
 avlida
+avliva
 avlossa
 avlysa
 avlyssna
 avlägga
 avlägsna
+avlämna
 avlöna
 avlösa
+avmaska
 avmäta
+avmönstra
 avpassa
 avpollettera
 avreglera
@@ -419,12 +425,16 @@ borra sig
 borsta
 bortföra
 bortse
+bortta
 bosätta sig
 bota
 bottna
 boxas
 braka
+bre ut
+bre ut sig
 breda
+breda ut
 breda ut sig
 bredda
 briljera
@@ -549,6 +559,7 @@ demonstrera
 deponera
 deportera
 deppa
+depreciera
 desarmera
 desavouera
 desinficera
@@ -563,6 +574,7 @@ diffundera
 dika
 diktera
 dilla
+dimensionera
 dingla
 dirigera
 disciplinera
@@ -628,6 +640,7 @@ drömma
 dröna
 duga
 dugga
+duggregna
 duka
 duka under
 dumpa
@@ -679,6 +692,7 @@ eliminera
 emballera
 emigrera
 emotse
+emotta
 ena
 energieffektivisera
 enervera
@@ -692,6 +706,7 @@ erhålla
 erinra
 erinra sig
 erkänna
+erkänna sig
 ernå
 erodera
 ersätta
@@ -855,6 +870,7 @@ fukta
 fullborda
 fullfölja
 fullgöra
+fullständiga
 fumla
 fundera
 fungera
@@ -956,6 +972,7 @@ förflytta
 förfoga
 förfrysa
 förfråga sig
+förfära
 förfärdiga
 förfölja
 förföra
@@ -973,6 +990,7 @@ förhålla sig
 förhåna
 förhöja
 förhöra
+förinställa
 förinta
 förivra sig
 förkasta
@@ -1033,6 +1051,8 @@ försjunka
 förskansa
 förskjuta
 förskona
+förskräcka
+förskräckas
 förskylla
 förslava
 förslöa
@@ -1169,9 +1189,11 @@ glöda
 glömma
 gnaga
 gnata
+gneta
 gnida
 gnista
 gnistra
+gno
 gnola
 gnugga
 gny
@@ -1253,6 +1275,10 @@ gå över
 gödsla
 gömma
 göra
+göra an
+göra av
+göra bort
+göra bort sig
 ha
 hacka
 hagla
@@ -1427,6 +1453,7 @@ inbilla sig
 inbjuda
 inbringa
 inchecka
+indicera
 indikera
 indoktrinera
 infektera
@@ -1457,6 +1484,7 @@ inkomma
 inkoppla
 inkräkta
 inleda
+inlinda
 inlämna
 inlåna
 inlåta sig
@@ -1504,6 +1532,7 @@ intyga
 invadera
 invagga
 invandra
+invertera
 investera
 inviga
 involvera
@@ -1519,6 +1548,7 @@ ivra
 jaga
 jaga in
 jaga upp sig
+jaka
 jazza
 jazza upp
 jiddra
@@ -1682,6 +1712,7 @@ kommendera
 kommentera
 kommunicera
 kompensera
+kompilera
 komplettera
 komplicera
 komponera
@@ -1690,6 +1721,7 @@ kompromissa
 koncentrera
 koncentrera sig
 kondensera
+konfigurera
 konfirmera
 konfrontera
 konfundera
@@ -1873,7 +1905,6 @@ ligga efter
 likna
 likrikta
 likvidera
-lik­rikta
 limma
 linda
 linda in
@@ -1892,6 +1923,9 @@ ljuga
 locka
 logaritmera
 logga
+logga in
+logga ur
+logga ut
 lokalisera
 lossa
 lossna
@@ -1982,6 +2016,7 @@ löpa in
 löpa samman
 löpa ut
 lösa
+lösa av
 lösa ut
 lösgöra
 magasinera
@@ -2015,6 +2050,7 @@ medfölja
 medföra
 medge
 medla
+medta
 medverka
 mena
 meta
@@ -2032,6 +2068,7 @@ misshandla
 misshushålla
 missivera
 missköta
+missköta sig
 missleda
 misslyckas
 misstänka
@@ -2047,6 +2084,7 @@ modernisera
 modifiera
 montera
 montera ned
+montera ner
 moralisera
 mosa
 mota
@@ -2057,7 +2095,6 @@ motivera
 motse
 motstå
 motsvara
-motsätta
 motsätta sig
 motta
 mottaga
@@ -2071,6 +2108,7 @@ mumsa i sig
 murra
 myllra
 mynna
+mynna ut
 mynta
 mäkla
 mäkta
@@ -2090,6 +2128,7 @@ mångdubbla
 mångfaldiga
 måtta
 möblera
+möblera om
 möjliggöra
 mönstra av
 mönstra in
@@ -2103,6 +2142,8 @@ nagelfara
 nalkas
 nalla
 nappa
+nappa till sig
+nappa åt sig
 narra
 narra av
 narra i
@@ -2125,17 +2166,25 @@ nivellera
 njuta
 nobba
 nolla
+nollställa
+nollställa sig
 nominera
 nonchalera
 noppa
 noppa sig
+noppra
+noppra sig
 normalisera
+normera
 notera
 nubba
+nybilda
 nynna
 nyrekrytera
 nysa
 nysta
+nysta av
+nysta upp
 nyttja
 nämna
 näpsa
@@ -2175,8 +2224,10 @@ omhägna
 omhänderta
 omkomma
 omkull
+ommöblera
 omnämna
 omplacera
+omplantera
 omringa
 omsluta
 omspänna
@@ -2221,13 +2272,17 @@ panta
 pantförskriva
 pantsätta
 para
+para sig
 parafera
 paralysera
 parasitera
 parera
 parkera
 passa
+passa av
 passa på
+passa sig
+passa upp
 passera
 patrullera
 pausa
@@ -2247,17 +2302,22 @@ peta
 picka
 pigga upp
 pina
+pingla
 pipa
 pippa
 pirra
 piska
+piska upp
 placera
+placera om
+placera sig
 plagiera
 planera
 planka
 planlägga
 planta
 plantera
+plantera om
 plira
 plocka
 plugga
@@ -2373,8 +2433,10 @@ reformera
 regera
 regissera
 registrera
+regla
 reglera
 regna
+regummera
 rekapitulera
 reklamera
 rekommendera
@@ -2416,6 +2478,7 @@ rigga
 rigga av
 rigga om
 rigga upp sig
+rigla
 rikta
 ringa
 ringa in
@@ -2512,6 +2575,7 @@ sabba
 sabotera
 sakna
 sakta
+sakta sig
 samarbeta
 samla
 samla sig
@@ -2526,6 +2590,7 @@ sammanfoga
 sammanföra
 sammankalla
 sammankoppla
+sammanpacka
 sammansmälta
 sammanställa
 sammansvärja sig
@@ -2545,6 +2610,11 @@ schacka
 schasa
 scrolla
 se
+se bort
+se efter
+se fram
+se ned
+se ner
 se upp
 se ut
 segelflyga
@@ -2689,6 +2759,7 @@ skälla
 skälla ut
 skämma
 skämma bort
+skämma ut
 skämmas
 skämta
 skänka
@@ -3140,6 +3211,7 @@ sönderdela
 sörja
 ta
 ta av
+ta bort
 ta efter
 ta emot
 ta fram
@@ -3168,6 +3240,8 @@ ta åt sig
 ta över
 tabba
 tabba sig
+tabellera
+tabulera
 tacka
 tackla
 tackla av
@@ -3461,6 +3535,7 @@ uppsluka
 uppsnappa
 uppstå
 uppta
+uppteckna
 uppträda
 upptäcka
 uppvakta
@@ -3514,11 +3589,13 @@ utlämna
 utlösa
 utmana
 utmatta
+utmynna
 utmärka
 utmåla
 utmönstra
 utnyttja
 utnämna
+utpeka
 utplåna
 utpressa
 utrangera
@@ -3538,6 +3615,7 @@ utsända
 utsätta
 uttala
 uttala sig
+uttolka
 uttrycka
 utträda
 uttyda
