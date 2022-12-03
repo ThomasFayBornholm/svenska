@@ -550,7 +550,7 @@ function followLink(el) {
 	let word = el.innerText;
 	let rep = word.match(/\s/);
 	if (rep != null) {
-		word = word.replace(rep[0], " ");
+		word = word.replaceAll(rep[0], " ");
 	}
 	word = word.replace("!","");
 	if (DEBUG) console.log("followLink(" + word + ")");
@@ -570,6 +570,7 @@ function getCompDef(meta, def) {
 	let done = 0;
 	for (let i = 0; i < words.length; i++) {
 		let w = words[i];
+		w = w.replace("-","");
 		// Dispatch n fetches to get definitions
 		// add an identifier to each result to enable correct ordering 
 		fetch('backend/getDef.php?class=' + guessClass(w) + '&word='+ removeClassDesc(w), {
@@ -683,7 +684,8 @@ function seekWordWrapper(e) {
 	let word = $('#iSeek').val();
 	seekWord(word);
 }
-function seekWord(word) {
+function seekWord(word) {	
+
 	// Regex support
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
 	reg2 = word.indexOf("$") != -1 || word.indexOf("[") != -1 || word.indexOf("]") != -1;
@@ -716,11 +718,13 @@ function seekWord(word) {
 			console.log(error);
 		})
 	} else {
+		// Special exception for two special pronouns
+		if (word != "Ers" && word != "Eders") word = word.toLowerCase()
 		if (word === '') {
 			word = LAST_WORD;
 			$('#iSeek').val(word);
 		}
-		word = word.toLowerCase();
+		
 		LAST_WORD = CUR_WORD;
 		CUR_WORD = word;
 		if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
@@ -1038,7 +1042,7 @@ function preProc(def) {
 	let regex3 = /skilt[a-zäöå]+, [a-zäöå]+, [a-zäöå]+/;
 	// Delimiter is blank on first line
 	let del = "";
-	for (s of arr) {			
+	for (s of arr) {				
 		if (s.length > 1) {
 			// Remove any leading space(s)
 			while (s[0] === " ") {
@@ -1051,6 +1055,8 @@ function preProc(def) {
 			// Leading Meta tags
 			// Beware the silent hyphens (\u00AD)			
 			// ToDo Move the (many) regx definitions to the function body
+			s = addMeta(s,/sär­skilt medicin/);
+			s = addMeta(s,/sär­skilt i handels­språk/);
 			s = addMeta(s,/något hög­tidligt ut\u00ADom i sammansättn./);
 			s = addMeta(s, /hög­tidligt; mest bibliskt/);
 			s = addMeta(s,/något hög­tidligt el. formellt/);			
@@ -1091,7 +1097,8 @@ function preProc(def) {
 			s = addMeta(s,/ålderdomligt/);
 			s = addMeta(s,/sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden/);
 			s = addMeta(s,/något formellt/);
-			s = addMeta(s,/formellt/);
+			s = addMeta(s,/formellt i konkret an­vändning/); 
+			s = addMeta(s,/formellt/);			
 			s = addMeta(s,/delvis historiskt/);
 			s = addMeta(s,/mest historiskt/);
 			s = addMeta(s,/historiskt/);
@@ -1106,6 +1113,7 @@ function preProc(def) {
 			s = addMeta(s, /i vetenskapliga samman\u00ADhang/);
 			s = addMeta(s, /ålderdomligt el. skämtsamt/);
 			s = addMeta(s,/mest vid beskrivning av äldre förhållanden/);
+			s = addMeta(s,/sär­skilt vid beskrivning av äldre förhållanden/);
 			s = addMeta(s,/äv. som musikalisk term/);
 			s = addMeta(s,/musik/);
 			s = addMeta(s,/sär­skilt meteorologi/);
@@ -1125,6 +1133,7 @@ function preProc(def) {
 			s = addMeta(s,/sär­skilt arkeologi/);
 			s = addMeta(s, /ej officiell svensk beteckning/);
 			s = addMeta(s, /förskönande om­skrivning/);
+			s = addMeta(s, /bibliskt/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -1183,6 +1192,7 @@ function preProc(def) {
 			s = grammer(s,"ofta refl.");			
 			s = grammer(s,"med konjunktionen",);
 			s = grammer(s,"vanligen pres.");
+			s = grammer(s,"endast pres. el. pret.");
 			s = grammer(s,"vanligen bestämd form sing.");
 			s = grammer(s,"ofta bestämd form sing.");
 			s = grammer(s,"vanligen bestämd form");
@@ -1201,7 +1211,8 @@ function preProc(def) {
 			// ToDo regex this one			
 			s = grammer(s,"vanligen i vissa ut\u00ADtryck");
 			s = grammer(s,"i vissa ut\u00ADtryck");
-			s = grammer(s,"ofta pass.");
+			s = grammer(s, "ofta pass. el. perfekt particip");
+			s = grammer(s,"ofta pass.");			
 			s = grammer(s,"vanligen pass. el. perfekt particip");
 			s = grammer(s,"vanligen pass. och perfekt particip");
 			s = grammer(s,"vanligen pass. el. part.");
@@ -1209,6 +1220,7 @@ function preProc(def) {
 			s = grammer(s,"ofta bestämd form");
 			s = grammer(s,"ofta perfekt particip");
 			s = grammer(s,"ofta presens particip");
+			s = grammer(s, "nästan en­bart pres. el. pret.");
 			s = grammer(s,"vanligen perfekt particip");
 			s = grammer(s,"vanligen obestämd form sing.");
 			s = grammer(s,"äv. två ord");
@@ -1222,6 +1234,7 @@ function preProc(def) {
 			s = grammer(s,"vanligen opersonlig konstruktion");
 			s = grammer(s,"vanligen koll.");
 			s = grammer(s,"ofta i nekande el. frågande ut­tryck");
+			s = grammer(s,"ofta i nekande konstruktion");
 			s = grammer(s,"vanligen i nekande el. frågande ut­tryck");
 			s = grammer(s,"ofta i nekande ut­tryck");
 			s = grammer(s,"vanligen i nekande ut­tryck");
@@ -1234,8 +1247,8 @@ function preProc(def) {
 			s = grammer(s,"i negerade ut­tryck");
 			s = grammer(s, "i ett få­tal ut­tryck");
 			s = grammer(s, "i negerade el. frågande samman­hang");
-			// ToDo Regex this to include the multi-word verbs
-			//s = grammer(s,"ofta lös förbindelse, se");			
+			s = grammer(s, "vanligen supinum");
+			// ToDo Regex this to include the multi-word verbs			
 			s = fmtVerbApart(s,/(äv. lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = s.replace("formen", "formen ");
 			s = fmtVerbApart(s,/(äv. lös förbindelse i formen )([a-zöäå]+)(\s[a-zöäå_]+)/);
@@ -1255,6 +1268,7 @@ function preProc(def) {
 			// ToDo Regex this to include the verb
 			//s = grammer(s,"vanligen i förbindelse");
 			s = handlePrep(s);
+			s = s.replaceAll("_","");
 			outDef += del + s;			
 			// HTML newline separator bon lines subsequent to the first
 			del = "<br>";
@@ -1284,6 +1298,7 @@ function  fmtVerbApart(s,regx) {
 	if (DEBUG) console.log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
 	m = s.match(regx);
 	if (m != null) {
+		console.log(m);
 		if (m.length === 4) {
 			let repWord = m[2] + " " + m[3].substring(1);
 			// remove leading space from second word and replace with regular space.
@@ -1301,6 +1316,8 @@ function withParticle(s) {
 	rep = "ofta with partikel";
 	s = s.replace(rep, "(" + rep)
 	rep = "vanligen with partikel";
+	s = s.replace(rep, "(" + rep);
+	repo = "vanligen med någon av partiklarna";
 	s = s.replace(rep, "(" + rep);
 	return s;
 }

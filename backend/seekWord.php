@@ -12,9 +12,10 @@
 	$match = -1;
 	// Loop from current position
 	// First non-exact match is prioritised over later ones
-	// Exact match is allways returned when present 
+	// Exact match is always returned when present 
 	$match2 = -1;
 	foreach($words as $w) {
+		// Why the special case for single character word?
 		if (strlen($word) === 1) {
 			if ($word === $w[0]) {
 				echo json_encode($ind);
