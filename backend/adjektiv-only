@@ -68,7 +68,6 @@ anständig
 anstötlig
 ansvarig
 ansvarsfull
-ansvarsnämnd
 antagen
 antik
 antitetisk
@@ -88,6 +87,7 @@ aritmetisk
 arkeologisk
 arkitektonik
 arkitektonisk
+arla
 aromatisk
 artificiell
 artig
@@ -206,6 +206,7 @@ besk
 beskaffad
 beskedlig
 beskäftig
+beslutsam
 beslutsfattande
 besläktad
 beslöjad
@@ -243,7 +244,9 @@ bidragande
 biffig
 bifogad
 bilateral
+bildad
 bildande
+bildlig
 bilingual
 billig
 bindande
@@ -254,6 +257,7 @@ bister
 biträdande
 bitsk
 bitter
+bjärt
 blandad
 blank
 blaserad
@@ -276,6 +280,7 @@ blygsam
 blå
 blåsig
 blöt
+bokstavlig
 bokstavstrogen
 bolsjevikisk
 bombastisk
@@ -284,6 +289,7 @@ boreal
 borgerlig
 bortfintad
 bortglömd
+bortkommen
 bortskämd
 bosatt
 bottnad
@@ -325,6 +331,7 @@ busig
 buskablyg
 butter
 byråkratisk
+bäng
 bärande
 bärbar
 bärig
@@ -368,6 +375,7 @@ deprimerad
 deriverande
 desillusionerad
 deskriptiv
+desorienterad
 desperat
 destruktiv
 detaljerad
@@ -622,9 +630,7 @@ fladdrig
 flammig
 flat
 flegmatisk
-fler
 flera
-flerfasig
 flerspråkig
 flexibel
 flikig
@@ -632,6 +638,7 @@ flimrande
 flink
 flitig
 floskulös
+flott
 flummig
 flyende
 flyktig
@@ -657,7 +664,6 @@ fortlöpande
 fossil
 fragil
 fragmentarisk
-fragmentartad
 fragmenterad
 framfusig
 framförliggande
@@ -668,7 +674,6 @@ framstående
 framsynt
 framtida
 framträdande
-fram­stående
 framåt
 framåtsyftande
 frank
@@ -719,7 +724,6 @@ fullgod
 fullkomlig
 fullmatad
 fullmäktig
-fullmäktige
 fullpackad
 fullproppad
 fullsatt
@@ -754,7 +758,6 @@ fåordig
 föga
 följande
 följdriktig
-följd­riktig
 föraktfull
 förankrad
 förargad
@@ -772,6 +775,7 @@ förbluffad
 förbrukad
 förbunden
 fördelaktig
+fördetta
 fördjupad
 fördjupande
 fördold
@@ -880,6 +884,7 @@ genomfluten
 genomförbar
 genomgripande
 genomgående
+genomsläpplig
 genomsnittlig
 genomträngande
 genomtänkt
@@ -922,6 +927,7 @@ godtagbar
 godtrogen
 godtycklig
 godvillig
+gosig
 grabbig
 graderad
 grafisk
@@ -945,6 +951,7 @@ grundlös
 grundmurad
 gruvlig
 grym
+gräll
 gränslös
 gränsöverskridande
 gräslig
@@ -1011,6 +1018,7 @@ hemlig
 hemlighetsfull
 hemlös
 hemmagjord
+hemmastadd
 hemsk
 hemtrevlig
 herbivor
@@ -1036,6 +1044,7 @@ hjärtnupen
 holländsk
 homogen
 homosexuell
+hopkramad
 hoppfull
 hoppingivande
 hopplös
@@ -1181,6 +1190,7 @@ ingående
 inhemsk
 inherent
 initial
+initierad
 inkallad
 inkapabel
 inkommande
@@ -1201,6 +1211,7 @@ inpiskad
 inre
 inringad
 insaltad
+insatt
 insjuknad
 inskränkt
 inslagen
@@ -1228,6 +1239,7 @@ intresserad
 invecklad
 invändig
 invändningsfri
+inåtvänd
 irakisk
 iransk
 irländsk
@@ -1320,6 +1332,7 @@ klinisk
 klok
 klurig
 kluven
+klädd
 knal
 knallhård
 knaper
@@ -1328,10 +1341,12 @@ knasig
 knepig
 knivig
 knuten
+knäpp
 knölig
 kobent
 kognitiv
 kokande
+koko
 kokt
 kolerisk
 kollektiv
@@ -1541,7 +1556,9 @@ lokal
 lomhörd
 lovad
 lovande
+lucker
 luddig
+luftig
 lugn
 lumpen
 lurig
@@ -1559,6 +1576,7 @@ lyrisk
 lysande
 lysten
 lyxig
+läbbig
 läcker
 läglig
 lämpad
@@ -1749,6 +1767,7 @@ måttlig
 möblerbar
 mödosam
 möjlig
+mör
 mörk
 mörklagd
 naiv
@@ -1770,6 +1789,7 @@ nedlåtande
 nedre
 nedrig
 nedslagen
+nedslående
 nedsmutsad
 nedstämd
 nedtecknad
@@ -1884,6 +1904,7 @@ oemotsäglig
 oenig
 oerfaren
 oerhörd
+oestetisk
 ofantlig
 ofattbar
 ofelbar
@@ -2056,6 +2077,7 @@ orätt
 orättvis
 orörlig
 osagd
+osammanhängande
 osannolik
 oschyst
 osedlig
@@ -2065,6 +2087,7 @@ oskattbar
 oskiljbar
 oskyldig
 oskön
+osnygg
 osolidarisk
 ostadig
 ostörd
@@ -2089,6 +2112,7 @@ otymplig
 otäck
 otänkbar
 otät
+oumbärlig
 oundgänglig
 oundviklig
 ounviklig
@@ -2117,6 +2141,7 @@ ovärderlig
 oväsentlig
 oväxlad
 ovårdad
+o­förbehållsam
 oändlig
 oärlig
 oåterkallelig
@@ -2129,6 +2154,7 @@ packad
 paff
 palestinsk
 pampig
+panikslagen
 pank
 pansexuell
 pappaledig
@@ -2192,6 +2218,7 @@ positiv
 potentiell
 praktfull
 praktisk
+precis
 preciös
 pregnant
 prekär
@@ -2226,6 +2253,7 @@ prydlig
 psykiatrisk
 psykisk
 psykologisk
+publik
 pucklig
 pueril
 punktformig
@@ -2300,6 +2328,7 @@ representativ
 repressiv
 repulsiv
 resande
+reslig
 restriktiv
 retfull
 retlig
@@ -2395,6 +2424,8 @@ sammantagen
 samtida
 samtidig
 samtlig
+samvetsgrann
+samvetslös
 sankt
 sann
 sanningsenlig
@@ -2427,12 +2458,15 @@ serbisk
 seriekopplad
 seriös
 sexbent
+sexsiffrig
 sexuell
 silveraktig
 sinnlig
 sinnrik
 sionistisk
 sipprad
+siratlig
+sirlig
 sista
 sistnämnd
 sjaskig
@@ -2488,6 +2522,8 @@ skrattretande
 skriftlig
 skrotfärdig
 skrovlig
+skrupelfri
+skrupulös
 skruvad
 skrynklig
 skräckblandad
@@ -2503,6 +2539,7 @@ skygg
 skyldig
 skälig
 skämd
+skämmig
 skämtsam
 skär
 skålformig
@@ -2662,9 +2699,11 @@ strävsam
 strålande
 strålsjuk
 stucken
+studerad
 stum
 stupfull
 stupid
+stygg
 styv
 styvnackad
 ställföreträdande
@@ -2874,6 +2913,7 @@ töjbar
 töntig
 törstig
 udda
+umbärlig
 undanskymd
 underbar
 underblåst
@@ -2972,6 +3012,7 @@ utomnordisk
 utomordentlig
 utomstående
 utpressad
+utpumpad
 utrerad
 utrikespolitisk
 utsatt
@@ -2988,11 +3029,13 @@ utsökt
 uttrycklig
 uttrycksfull
 uttråkad
+uttröttad
 uttunnad
 utvald
 utvecklingsstörd
 utvändig
 utåtagerande
+utåtriktad
 uvular
 vacker
 vag
@@ -3166,6 +3209,7 @@ yttre
 åtsittande
 åtskillig
 åtsmitande
+öde
 ödelade
 ödesdiger
 ödmjuk

@@ -362,6 +362,7 @@ ansvara
 ansvarig
 ansvarsfull
 ansvarsnämd
+ansvarsnämnd
 ansätta
 ansök
 ansöka
@@ -384,6 +385,7 @@ antibiotikum
 antidot
 antik
 antikropp
+antingen
 antisemitism
 antisionism
 antites
@@ -419,6 +421,7 @@ appellera
 apperception
 applicera
 applådera
+apposition
 appreciera
 approximera
 aprikos
@@ -480,6 +483,7 @@ aristokrati
 aritmetik
 aritmetisk
 ark
+arkebusera
 arkeologisk
 arketyp
 arkitekt
@@ -489,6 +493,7 @@ arkitektur
 arkiv
 arkivera
 arkivklipp
+arla
 arm
 armband
 armbandsur
@@ -668,6 +673,8 @@ avläggare
 avlägsen
 avlägsna
 avlämna
+avlänka
+avläsa
 avlång
 avlöna
 avlöning
@@ -754,6 +761,7 @@ avstämma
 avstämning
 avstänga
 avstängd
+avstängning
 avstå
 avstånd
 avståndstagande
@@ -782,6 +790,7 @@ avtryck
 avträda
 avträde
 avträdelse
+avtvinga
 avtäcka
 avundas
 avundsjuka
@@ -804,6 +813,7 @@ avkasta
 avyttra
 axel
 axill
+axiom
 axplock
 azurblå
 babe
@@ -894,6 +904,7 @@ band
 banderoll
 bandit
 baner
+banger
 banhoppning
 bank
 banka
@@ -1021,6 +1032,7 @@ begiven
 begrava
 begraven
 begravning
+begravningsplats
 begrepp
 begripa
 begripa sig på
@@ -1088,6 +1100,7 @@ bekänna
 bekännelse
 belackare
 belagd
+belamra
 belasta
 belastning
 belevad
@@ -1205,6 +1218,7 @@ beslut
 besluta
 besluta sig
 beslutanderätt
+beslutsam
 beslutsamhet
 beslutscirkel
 beslutsfattande
@@ -1357,7 +1371,10 @@ bilateral
 bilbälte
 bild
 bilda
+bildad
 bildande
+bildhuggare
+bildlig
 bildläsare
 bildning
 bildningsvärde
@@ -1383,6 +1400,7 @@ bindande
 bindare
 bindel
 bindning
+binga
 binokel
 binom
 bio
@@ -1424,12 +1442,15 @@ bjuda ut
 bjudning
 bjälke
 bjällra
+bjärt
 björk
 björn
 björnram
 blackjack
 blad
 bladveck
+blamera
+blamera sig
 blanda
 blanda samman
 blanda sig i
@@ -1578,6 +1599,7 @@ boklåda
 bokning
 bokstav
 bokstavera
+bokstavlig
 bokstavligen
 bokstavskod
 bokstavstrogen
@@ -1626,6 +1648,7 @@ borr
 borra
 borra sig
 borrmaskin
+borrsväng
 borsta
 borste
 bort
@@ -1640,6 +1663,7 @@ bortfintad
 bortföra
 bortglömd
 bortgång
+bortkommen
 bortom
 bortresonera
 borträkna
@@ -1669,6 +1693,7 @@ botten
 bottenfällning
 bottenplan
 bottensats
+bottenskola
 bottenskrap
 bottenvåning
 bottna
@@ -1718,6 +1743,7 @@ brev
 brevbärare
 brevlåda
 brevröst
+brevrösta
 brevvän
 brevväxling
 bricka
@@ -1853,6 +1879,7 @@ bröllopsresa
 bröst
 brösthåla
 bröstkorg
+bröstsim
 bröstvarta
 bröstvårta
 bu
@@ -1917,6 +1944,7 @@ butta
 butter
 by
 byffe
+byffé
 bygd
 bygga
 bygga samman
@@ -1953,6 +1981,7 @@ bädda
 bägare
 bägge
 bälte
+bäng
 bänk
 bär
 bära
@@ -2067,6 +2096,7 @@ chef
 chefredaktör
 chiffer
 chiffrera
+chikan
 chili
 chips
 chock
@@ -2106,7 +2136,9 @@ container
 containerfartyg
 containerhamn
 cool
+crawl
 crawla
+crawlsim
 cred
 credit
 cricket
@@ -2246,7 +2278,9 @@ delvis
 delägare
 demaskera
 dementera
+demilitarisera
 demilitariserad
+demilitisera
 demokrat
 demokrati
 demokratisk
@@ -2285,6 +2319,7 @@ desillusion
 desillusionerad
 desinficera
 deskriptiv
+desorienterad
 desperat
 despoti
 despotism
@@ -2331,7 +2366,9 @@ differentiera
 diffundera
 diffunderad
 diffus
+diffusion
 diffussion
+difteri
 digital
 digitalkamera
 dignitet
@@ -2534,6 +2571,7 @@ driftsätta
 driidrottare
 drill
 drilla
+drillborr
 drilling
 drink
 drista sig
@@ -2564,6 +2602,7 @@ drägg
 dräglig
 dräktig
 dräktighet
+drämma
 dränera
 dränering
 dräng
@@ -2579,6 +2618,7 @@ dubb
 dubbel
 dubbelagent
 dubbeldäckare
+dubbelhet
 dubbelmoral
 dubbelspel
 dubbelsäng
@@ -2622,12 +2662,15 @@ dvd-skiva
 dväljas
 dvärg
 dy
+dyckarklocka
 dyckert
+dyfteri
 dygdig
 dygn
 dyk
 dyka
 dykand
+dykarklocka
 dylik
 dyna
 dynamik
@@ -2654,6 +2697,7 @@ där
 därav
 därefter
 däremot
+därest
 därför
 däribland
 därifrån
@@ -2706,6 +2750,7 @@ ebb
 ebba ut
 ed
 edamer
+edamerost
 eder
 edikt
 editor
@@ -2871,6 +2916,7 @@ emigrant
 emigration
 emigrera
 emissarie
+emission
 emotion
 emotse
 emotta
@@ -2880,6 +2926,7 @@ empiri
 empirisk
 empirism
 en
+en masse
 ena
 enahanda
 enande
@@ -2888,6 +2935,7 @@ enbart
 enbo
 encyklopedi
 endast
+endera
 endokrin
 endräkt
 energetik
@@ -2928,6 +2976,8 @@ enkelspårig
 enkelsäng
 enkelt
 enkönad
+enlig
+enligt
 enorm
 ens
 ensak
@@ -3151,6 +3201,7 @@ far
 farbror
 farfar
 farförälder
+farföräldrar
 farhåga
 farkost
 farled
@@ -3333,6 +3384,7 @@ fiskehamn
 fiskerättighet
 fiskhåv
 fiskleverolja
+fiskolja
 fission
 fitta
 fix
@@ -3357,6 +3409,7 @@ fjärd
 fjärde
 fjärdedel
 fjäril
+fjärilsim
 fjärma
 fjärran
 fjärrkontroll
@@ -3425,6 +3478,7 @@ flor
 florist
 floskel
 floskulös
+flott
 flotta
 flotte
 flottyrkoka
@@ -3472,6 +3526,7 @@ fläcktyfus
 fläddermus
 fläderbär
 fläkt
+fläkta
 flämt
 flämta
 fläng
@@ -3537,6 +3592,7 @@ fordring
 forell
 form
 forma
+forma om
 formalisera
 formaliserad
 format
@@ -3658,6 +3714,7 @@ framtidsman
 framtoning
 framträda
 framträdande
+framtvinga
 framväxa
 framåt
 framåtanda
@@ -3713,6 +3770,7 @@ frikostig
 frikrans
 frikänna
 frilagd
+frilufts
 friluftsmåleri
 friluftsteater
 frimodig
@@ -3721,6 +3779,7 @@ fris
 frisera
 frisera sig
 frisersalong
+frisim
 frisk
 friskna till
 friskola
@@ -3804,6 +3863,7 @@ frågeställning
 frågetecken
 frågvis
 frångå
+frånsida
 frånskild
 frånstötande
 frånta
@@ -3881,6 +3941,7 @@ fyrtorn
 fyrverkeri
 fysik
 fysiker
+fysiljera
 fysioterapeut
 fysisk
 fysiskt
@@ -4054,6 +4115,7 @@ fördela
 fördela sig
 fördelaktig
 fördelning
+fördetta
 fördjupa
 fördjupad
 fördjupande
@@ -4095,13 +4157,13 @@ föredragningslista
 föredöme
 förefalla
 förefinnas
+förege
 föregiven
 föregå
 föregående
 föregångare
 föregångsland
 förehavande
-förehävande
 förekomst
 föreligga
 föreläsa
@@ -4125,6 +4187,7 @@ förespråka
 förespråkare
 förestava
 föreställa
+föreställa sig
 föreställning
 förestå
 förestående
@@ -4246,6 +4309,7 @@ förkylning
 förkärlek
 förlag
 förlaga
+förlama
 förlamad
 förled
 förleda
@@ -4365,6 +4429,7 @@ försiktighet
 försjunkenhet
 förskansa
 förskansning
+förskingra
 förskingring
 förskjuta
 förskola
@@ -4384,6 +4449,7 @@ förslava
 förslå
 förslöa
 förslösa
+försmak
 försmädlig
 försmå
 försnilla
@@ -4398,12 +4464,15 @@ först
 först och främst
 första
 förstad
+förstahands
 förstahands-
 förstaplats
 förstaspråk
 förstklassig
 förstone
 förstora
+förstoring
+förstoringsglas
 förströ
 förströelse
 förstulen
@@ -4421,6 +4490,7 @@ förstås
 förståsigpåare
 förstöra
 förstörelse
+förstöring
 försumlig
 försumma
 försvaga
@@ -4701,10 +4771,12 @@ genomgripande
 genomgå
 genomgående
 genomgång
+genomklang
 genomlysa
 genomlysning
 genomslag
 genomslagskraft
+genomsläpplig
 genomsnitt
 genomsnittlig
 genomsyra
@@ -4739,6 +4811,7 @@ gifta sig
 gifte
 giftermål
 giftig
+giftlära
 gig
 gigant
 gigantisk
@@ -4788,6 +4861,7 @@ glaserad
 glasklar
 glasnost
 glassig
+glasyr
 glasöga
 glasögon
 glatt
@@ -4882,6 +4956,7 @@ gom
 gomspene
 gorilla
 gosa
+gosig
 gosse
 gott
 gott om
@@ -4961,6 +5036,7 @@ gris
 griskött
 groda
 grodd
+grodsim
 grop
 grosshandel
 grotta
@@ -4992,6 +5068,7 @@ grundläggande
 grundläggning
 grundlös
 grundmurad
+grundsats
 grundskola
 grundskoleförordning
 grundsyn
@@ -5019,6 +5096,7 @@ grädde
 gräddtårta
 gräl
 gräla
+gräll
 gräma
 gräma sig
 gräns
@@ -5083,6 +5161,7 @@ gummiplatta
 gumse
 gunga
 gunst
+gupp
 gurka
 guvernant
 guvernement
@@ -5110,6 +5189,7 @@ gällning
 gäng
 gängback
 gänglig
+gängning
 gängrelaterad
 gängse
 gängstål
@@ -5160,6 +5240,7 @@ gåtfull
 gåva
 gödsel
 gödsla
+göka
 göl
 gömma
 göra
@@ -5172,6 +5253,7 @@ ha
 ha för sig
 ha sig
 habegär
+hack
 hacka
 hacka ned
 hacka ner
@@ -5220,6 +5302,7 @@ halvsekel
 halvtid
 halvtimme
 halvvägs
+halvädelsten
 halvår
 halvö
 hamburgare
@@ -5374,7 +5457,9 @@ hemlös
 hemma
 hemmagjord
 hemmakatt
+hemmansägare
 hemmaplan
+hemmastadd
 hemmatrak
 hemmatrakt
 hemmavid
@@ -5496,6 +5581,7 @@ hop
 hopa sig
 hopas
 hopkok
+hopkramad
 hopp
 hoppa
 hoppa av
@@ -5521,7 +5607,6 @@ horisontal
 horisontell
 hormon
 horn
-hornhud
 hornlös
 hosta
 hosta upp
@@ -5567,6 +5652,7 @@ hur som helst
 hurra
 hursomhelst
 hurtig
+huruvida
 hus
 husarrest
 husbil
@@ -5575,6 +5661,7 @@ husera
 hushåll
 hushålla
 hushållning
+hushållsrulle
 hushållsrum
 hustru
 husvagn
@@ -5819,6 +5906,7 @@ högskolebehörighet
 högskolepoäng
 högspänning
 högspänningsanläggning
+högst
 högstadieålder
 högstadium
 högtalare
@@ -5864,6 +5952,7 @@ höstlov
 hövas
 hövlig
 hövlighet
+i
 i alla fall
 i allmänhet
 i fjol
@@ -5944,6 +6033,7 @@ ihärdighet
 ihågkomma
 ihålig
 ihållande
+ikon
 ikväll
 ila
 iland
@@ -5986,6 +6076,8 @@ imperium
 implantation
 implantera
 implementera
+implicera
+implikation
 implodera
 imponera
 imponerad
@@ -6091,6 +6183,7 @@ ingalunda
 inge
 ingefära
 ingen
+ingendera
 ingenjör
 ingenjörskonst
 ingenstans
@@ -6112,6 +6205,7 @@ initial
 initiativ
 initiativet
 initiera
+initierad
 injaga
 inkalla
 inkallad
@@ -6146,6 +6240,7 @@ inlinda
 inlines
 inlineskridsko
 inlägg
+inlägga
 inläggning
 inlämna
 inländsk
@@ -6155,6 +6250,7 @@ inlåna
 inlånad
 inlåning
 inlåta sig
+inlöpa
 inmata
 inmatad
 innan
@@ -6195,6 +6291,7 @@ inrättning
 insalta
 insaltad
 insats
+insatt
 inse
 insida
 insikt
@@ -6302,6 +6399,7 @@ intressera
 intressera sig
 intresserad
 intrig
+intro
 introducera
 introduktion
 introspektion
@@ -6345,12 +6443,12 @@ inställsam
 invecklad
 inälvor
 inåt
+inåtvänd
 irakisk
 iransk
 irländsk
 ironisk
 irra
-irratation
 irrelevant
 irretera sig
 irritation
@@ -6410,7 +6508,6 @@ januari
 japansk
 japp
 jargong
-jasså
 jaså
 javisst
 jazz
@@ -6508,6 +6605,7 @@ jämkad
 jämkning
 jämlik
 jämlikhet
+jämlikt
 jämmerlig
 jämn
 jämna
@@ -6612,6 +6710,7 @@ kamé
 kanadensare
 kanadensisk
 kanal
+kanalisera
 kanalje
 kandidat
 kandidatur
@@ -6680,6 +6779,7 @@ karosseri
 karriär
 karsk
 karta
+kartbild
 kartera
 kartlägga
 kartläggning
@@ -6687,6 +6787,7 @@ kartograf
 kartografi
 kartong
 kartongskylt
+karva
 kasino
 kaskad
 kass
@@ -6696,6 +6797,7 @@ kassera
 kassera in
 kasserad
 kassett
+kassun
 kassör
 kast
 kasta
@@ -6726,6 +6828,10 @@ kavaj
 kavalkad
 kavall
 kavat
+kavla
+kavla ned
+kavla ner
+kavla upp
 kaxig
 kedja
 kedjehjul
@@ -6740,6 +6846,7 @@ kemi
 kemikalie
 kemisk
 kemist
+kepphäst
 kex
 kidnappa
 kidnappning
@@ -6879,6 +6986,7 @@ klä ut
 kläcka
 kläcka ur sig
 kläda
+klädd
 klädhängare
 klädsel
 klädskåp
@@ -6906,6 +7014,7 @@ knackning
 knal
 knall
 knallhård
+knallskott
 knap
 knape
 knaper
@@ -6956,6 +7065,7 @@ knä
 knäcka
 knäckare
 knäckebröd
+knäpp
 knäppa
 knäppa av
 knäppa på
@@ -6996,6 +7106,7 @@ koka över
 kokande
 kokbok
 kokill
+koko
 koksalt
 kokt
 kokvrå
@@ -7038,6 +7149,7 @@ kombinatorik
 kombinera
 komedi
 kometkarriär
+komfort
 komfortabel
 komik
 komisk
@@ -7329,6 +7441,7 @@ korsa
 korsgång
 korsning
 korsord
+korståg
 kort
 kortfattad
 korthet
@@ -7583,6 +7696,7 @@ kursa
 kursdeltagare
 kursnotering
 kursplan
+kurtis
 kurv
 kurva
 kuscha
@@ -7797,6 +7911,7 @@ köra ur
 köra ut
 köra över
 körare
+körfält
 körkort
 körning
 körsbär
@@ -7877,6 +7992,10 @@ lantgård
 lantlig
 lapidarisk
 lapp
+lappa
+lappa på
+lappa till
+lappa över
 lapsus
 larm
 larma
@@ -7976,6 +8095,7 @@ leverantör
 leverera
 leverne
 leverpastej
+levertran
 levnadskostnad
 lexikon
 liberal
@@ -8153,11 +8273,13 @@ lovprisa
 lovprisning
 lp
 lucka
+lucker
 luddig
 luffare
 luft
 luftförorening
 luftherravälde
+luftig
 luftmotstånd
 luftpump
 luftrör
@@ -8176,6 +8298,7 @@ lunch
 lunchpaus
 lund
 lungsnäcka
+lupp
 lura
 lura av
 lura i
@@ -8238,6 +8361,7 @@ lystnad
 lyte
 lyteskomik
 lyxig
+läbbig
 läcka
 läcker
 läckström
@@ -8297,6 +8421,7 @@ längta
 längtan
 länk
 länka
+länka av
 läns
 länsa
 länsstyrelse
@@ -8391,10 +8516,15 @@ långvåg
 lår
 lås
 låsa
+låsa in
+låsa sig
+låsa upp
 låsning
 låt
 låta
+låtsa sig
 låtsas
+låtsas om
 löda
 lödder
 lödrät
@@ -8508,6 +8638,7 @@ manierad
 manifest
 manifestation
 manifestera
+manifestera sig
 manipulera
 mankemang
 mankera
@@ -8717,6 +8848,7 @@ memorandum
 memorial
 men
 mena
+mena på
 menig
 mening
 meningsfrände
@@ -9016,6 +9148,7 @@ motivation
 motivera
 motivering
 motljus
+motläsa
 motoffensiv
 motor
 motorbåt
@@ -9154,6 +9287,7 @@ märr
 mässa
 mässig
 mässing
+mässling
 mästare
 mästerskap
 mästerverk
@@ -9229,6 +9363,7 @@ mönstra in
 mönstra på
 mönstra upp
 mönstra ut
+mör
 mörda
 mördare
 mörja
@@ -9245,6 +9380,7 @@ möte
 mötesfrihet
 mötesplats
 nabo
+naboland
 nacka
 nackdel
 nacke
@@ -9337,6 +9473,7 @@ nedgång
 nedkomst
 nedkämpa
 nedladdning
+nedlägga
 nedläggning
 nedlåtande
 nedmontering
@@ -9347,11 +9484,13 @@ nedskriva
 nedskrivning
 nedskärning
 nedslagen
+nedslående
 nedsmutsad
 nedströms
 nedstämd
 nedstämdhet
 nedsätta
+nedteckna
 nedtecknad
 nedtona
 nedvärdera
@@ -9573,6 +9712,7 @@ nå
 nåbar
 nåd
 någon
+någondera
 någonsin
 någonstans
 någonting
@@ -9701,6 +9841,7 @@ oemotsäglig
 oenig
 oerfaren
 oerhörd
+oestetisk
 ofantlig
 ofattbar
 ofelbar
@@ -9989,6 +10130,7 @@ operera sig
 operett
 opinion
 opinionsmätning
+opium
 opponent
 opponera
 opponera sig
@@ -10085,6 +10227,7 @@ orättvis
 orättvisa
 orörlig
 osagd
+osammanhängande
 osanning
 osannolik
 oschyst
@@ -10096,6 +10239,7 @@ oskattbar
 oskiljbar
 oskyldig
 oskön
+osnygg
 osolidarisk
 ost
 ostadig
@@ -10126,6 +10270,7 @@ otydlig
 otymplig
 otäck
 otänkbar
+oumbärlig
 oundgänglig
 oundviklig
 ounviklig
@@ -10172,6 +10317,7 @@ oxidera
 oxkött
 ozon
 ozonskikt
+o­förbehållsam
 oändlig
 oärlig
 oåterkallelig
@@ -10213,6 +10359,7 @@ pandemi
 panegyrik
 panel
 panik
+panikslagen
 pank
 panna
 panorama
@@ -10226,6 +10373,7 @@ pantförskriva
 pantomim
 pantsätta
 papegoja
+papier-maché
 pappa
 pappaledig
 pappenheimare
@@ -10428,6 +10576,7 @@ piss
 pissdålig
 pist
 pistach
+pitt
 pizza
 pjäs
 pjäxa
@@ -10532,7 +10681,9 @@ polygrip
 polynom
 pomp
 pompa
+poncho
 pondus
+ponny
 ponton
 poolbiljard
 popsångerska
@@ -10562,6 +10713,7 @@ postbox
 postfack
 postkontor
 postnummer
+postulat
 potatis
 potens
 potential
@@ -10614,6 +10766,7 @@ pressmeddelande
 prestanda
 prestation
 prestera
+prestige
 presumtiv
 preventiv
 preventivmedel
@@ -10703,6 +10856,7 @@ proposition
 propp
 proppfull
 proppmätt
+proppsäkring
 propsa
 propå
 prosodi
@@ -10754,6 +10908,7 @@ psykologi
 psykologisk
 psykos
 pub
+pubes
 publicera
 publicera sig
 publicering
@@ -10762,6 +10917,8 @@ publik
 publikation
 pucklig
 pudding
+pudel
+pudla
 pueril
 puff
 puka
@@ -10926,6 +11083,8 @@ ranta
 rapa
 rapp
 rappa
+rappa på
+rappa till
 rappning
 rapport
 rapportera
@@ -11162,6 +11321,7 @@ resgods
 residuum
 resistans
 resistor
+reslig
 resmål
 resning
 resolution
@@ -11214,6 +11374,7 @@ revolt
 revolution
 revolutionerande
 revolutionär
+revy
 revyartist
 ribba
 rida
@@ -11367,6 +11528,7 @@ ruska av sig
 ruskig
 rusmedel
 rusning
+russ
 russin
 rusta
 rusta ner
@@ -11394,6 +11556,7 @@ ryckning
 rygg
 ryggrad
 ryggradsdjur
+ryggsim
 ryka
 ryka ihop
 ryka på
@@ -11572,6 +11735,10 @@ sabotage
 sabotera
 sackaros
 sadelstolpsklämma
+sadla
+sadla av
+sadla om
+sadla på
 saft
 saga
 sagodjur
@@ -11696,6 +11863,8 @@ samvaro
 samverka
 samverkan
 samvete
+samvetsgrann
+samvetslös
 sand
 sandal
 sandalett
@@ -11845,6 +12014,8 @@ sex
 sexa
 sexarbetare
 sexbent
+sexsiffrig
+sexsiftig
 sextonde
 sexualitet
 sexualliv
@@ -11852,6 +12023,7 @@ sexuell
 sexårsverksamhet
 sfär
 shoppa
+shoppingvagn
 shoppingväska
 show
 si
@@ -11909,7 +12081,9 @@ sionistisk
 sippra
 sipprad
 sira
+siratlig
 siren
+sirlig
 siska
 sist
 sista
@@ -11952,6 +12126,7 @@ sjunka
 sjuttonde
 sjyst
 själ
+själa
 själslig
 själv
 självaste
@@ -11995,6 +12170,7 @@ skadad
 skadestånd
 skadlig
 skaffa
+skafferi
 skaft
 skaka
 skakning
@@ -12219,6 +12395,8 @@ skrov
 skrovlig
 skrubbsår
 skrumpna
+skrupelfri
+skrupulös
 skrutt
 skruv
 skruva
@@ -12272,6 +12450,8 @@ skutta
 skvadron
 skvaller
 skvallra
+skvätt
+skvätta
 sky
 skydd
 skydda
@@ -12307,6 +12487,7 @@ skämma
 skämma bort
 skämma ut
 skämmas
+skämmig
 skämt
 skämta
 skämtare
@@ -12448,6 +12629,7 @@ slunga
 sluss
 slut
 sluta
+sluta om
 sluta upp
 slutbetyg
 slutdestination
@@ -12674,7 +12856,10 @@ snigel
 sniken
 snillrik
 snippa
+snirka
 snirkel
+snirkla
+snirkla sig
 snitt
 snittmängd
 sno
@@ -12688,6 +12873,7 @@ snooker
 snopp
 snor
 snudda
+snurr
 snurra
 snus
 snusk
@@ -12720,6 +12906,7 @@ snö
 snöa
 snöa igen
 snöa in
+snöboll
 snölykta
 snöplig
 snöra
@@ -12740,6 +12927,7 @@ socialtjänste
 sociologi
 socka
 socker
+sockerglasyr
 sockersjuka
 soffa
 soffbord
@@ -12848,6 +13036,7 @@ speciell
 species
 specificera
 specifik
+specifikation
 speditör
 spegel
 spegla
@@ -13136,6 +13325,7 @@ stickskada
 stift
 stifta
 stiftelse
+stig
 stiga
 stigande
 stil
@@ -13175,6 +13365,7 @@ stollig
 stolpe
 stolt
 stolthet
+stoltsera
 stomme
 stopmått
 stopp
@@ -13326,6 +13517,7 @@ stubin
 student
 studentförbund
 studera
+studerad
 studerande
 studie
 studierektor
@@ -13351,6 +13543,7 @@ stycke
 styckevis
 styckning
 styckvis
+stygg
 styggelse
 stykjärn
 stympa
@@ -13413,6 +13606,7 @@ stängel
 stängsel
 stänka
 stärka
+stäv
 stävja
 stävjande
 stå
@@ -13431,6 +13625,7 @@ stånd
 ståndaktig
 ståndpunkt
 stång
+stånga
 ståtlig
 stöd
 stöda
@@ -13442,6 +13637,7 @@ stöld
 stöna
 stöp
 stöpa
+stör
 störa
 störning
 störta
@@ -13525,6 +13721,7 @@ svallvåg
 svamp
 svan
 svansföring
+svanskota
 svara
 svart
 svartsjuk
@@ -13771,6 +13968,7 @@ så småningom
 så snart som
 sådd
 sådär
+såframt
 såga
 såga av
 sågbock
@@ -13788,6 +13986,8 @@ sår
 såra
 sårbar
 sås
+såsom
+såvida
 såväl
 söderut
 södra
@@ -13815,6 +14015,7 @@ sörlänning
 söt
 sötsak
 sötsur
+t-bana
 ta
 ta av
 ta bort
@@ -13828,6 +14029,7 @@ ta in
 ta itu
 ta med
 ta ner
+ta om hand
 ta på
 ta på sig
 ta sig
@@ -14135,6 +14337,7 @@ tillika
 tillintetgöra
 tillintetgörelse
 tillit
+tillkalla
 tillknäppt
 tillkomma
 tillkomst
@@ -14169,6 +14372,7 @@ tillspetsning
 tillspilloge
 tillstrykan
 tillströmning
+tillstymmelse
 tillstyrka
 tillständsbevis
 tillstå
@@ -14238,6 +14442,7 @@ titta upp
 tittare
 tjafsa
 tjalla
+tjat
 tjata
 tjatig
 tjeckisk
@@ -14341,6 +14546,7 @@ tossig
 total
 totalitär
 totalt
+toxikologi
 tradition
 traditionell
 traditionellt
@@ -14610,6 +14816,7 @@ tvinga av
 tvinga fram
 tvinga ifrån
 tvinga på
+tvinga sig
 tvinga sig till
 tvinga till sig
 tvinna
@@ -14648,7 +14855,11 @@ tvåsamhet
 tvåspråkig
 tvåvåningsbuss
 twill
+ty
 tycka
+tycka om
+tycka sig
+tycka till
 tyckande
 tyckas
 tycke
@@ -14684,6 +14895,7 @@ täckdikning
 täcke
 täckt
 täckt 
+tälja
 tält
 tälta
 tämligen
@@ -14693,6 +14905,13 @@ tändsticka
 tänja
 tänjbar
 tänka
+tänka efter
+tänka igenom
+tänka om
+tänka sig
+tänka till
+tänka ut
+tänka över
 tänkande
 tänkbar
 tänkespråk
@@ -14738,6 +14957,7 @@ umami
 umayadisk
 umbära
 umbärande
+umbärlig
 umgänge
 umgängeston
 umgås
@@ -14780,6 +15000,8 @@ underland
 underlig
 underliv
 underlydande
+underlägga
+underlägga sig
 underlägsen
 underlätta
 underlåta
@@ -15030,6 +15252,7 @@ uppträda
 uppträdande
 upptäcka
 upptäckt
+upptända
 uppvakta
 uppvaktning
 uppvisa
@@ -15162,6 +15385,7 @@ utförsäljing
 utge
 utge sig
 utgift
+utgivning
 utgå
 utgående
 utgång
@@ -15190,7 +15414,9 @@ utlämna
 utlämning
 utländsk
 utlänning
+utläsa
 utlåtande
+utlöpa
 utlösa
 utmana
 utmanande
@@ -15225,6 +15451,7 @@ utpressa
 utpressad
 utpressning
 utprickning
+utpumpad
 utrangera
 utreda
 utredare
@@ -15273,6 +15500,8 @@ utsorterad
 utsparkad
 utspel
 utspela sig
+utspisa
+utspisning
 utspridd
 utsprång
 utsträcka
@@ -15304,6 +15533,7 @@ uttryckligen
 uttrycksfull
 utträda
 uttråkad
+uttröttad
 uttunnad
 uttyda
 utvald
@@ -15330,6 +15560,7 @@ utvärdering
 utjämna
 utåt
 utåtagerande
+utåtriktad
 utöka
 utöva
 utöver
@@ -15476,6 +15707,7 @@ varseblivning
 varsel
 varsko
 varsla
+varstans
 vart
 varuhus
 varulv
@@ -16061,6 +16293,7 @@ ystande
 yta
 ytlig
 ytmått
+ytter
 ytterdörr
 ytterligare
 ytterpunkt
@@ -16367,6 +16600,7 @@ zucchini
 öppenspis
 öppet
 öppetid
+öppettid
 öppna
 öra
 öre
@@ -16400,6 +16634,7 @@ zucchini
 överallt
 övera
 överdrag
+överenskomma
 överflöd
 överge
 övergiva
@@ -16409,6 +16644,5 @@ zucchini
 överhuvud
 överhuvudtaget
 öve
-överklivning
-
-överlämna sig
+överkli
+överlappa

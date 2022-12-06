@@ -92,6 +92,7 @@ avtal
 avtalsbråk
 avtryck
 avträde
+axiom
 axplock
 bad
 badkar
@@ -223,6 +224,7 @@ brödraskap
 bröl
 bröllop
 bröst
+bröstsim
 bud
 budgetår
 budskap
@@ -384,6 +386,7 @@ fiasko
 fickur
 fiendskap
 fiffel
+fika
 fikon
 filter
 finger
@@ -391,6 +394,7 @@ finrum
 firmamärke
 fiske
 fjäll
+fjärilsim
 fjärrvärme
 flabb
 flak
@@ -401,10 +405,12 @@ flertal
 flimmerhår
 flin
 flintskalle
+flock
 flor
 flugfiske
 flyg
 flygbolag
+flygfält
 flygnummer
 flygplan
 flygvapen
@@ -442,6 +448,7 @@ frekvensberoende
 frihetsvärde
 frihjul
 frimärke
+frisim
 frislag
 frontavsnitt
 fruktkött
@@ -490,7 +497,7 @@ förebud
 föredrag
 föredöme
 föregångsland
-förehävande
+förehavande
 föremål
 föreningsliv
 företag
@@ -522,6 +529,7 @@ försegel
 förskott
 förslag
 förstaspråk
+förstoringsglas
 förstånd
 försvar
 försvarsväsen
@@ -571,7 +579,6 @@ gips
 glapp
 glas
 glasöga
-glasögon
 glid
 glidflygplan
 glimmer
@@ -594,8 +601,10 @@ grannland
 grannskap
 grepp
 griskött
+grodsim
 grubblande
 grums
+grundlag
 grus
 gruvschakt
 gry
@@ -607,6 +616,7 @@ gräs
 guld
 guldkorn
 gummi
+gupp
 guvernement
 gyckel
 gym
@@ -616,6 +626,7 @@ gängstål
 gångjärn
 göt
 habegär
+hack
 hagel
 hagelgevär
 halmstrå
@@ -814,6 +825,7 @@ klot
 klädskåp
 klädstreck
 knack
+knallskott
 knatter
 kneg
 knep
@@ -842,7 +854,6 @@ komplimang
 koncept
 kondis
 konditori
-kongresshus
 konserthus
 konsthantverk
 konstverk
@@ -859,6 +870,7 @@ korallrev
 korn
 kors
 korsord
+korståg
 korthus
 kortslutningsställe
 kortspel
@@ -925,6 +937,7 @@ kölvatten
 kön
 könsorgan
 köp
+körfält
 körkort
 körsbär
 kött
@@ -957,6 +970,7 @@ leende
 lejon
 lergods
 leverne
+levertran
 lexikon
 lidande
 lider
@@ -1146,6 +1160,7 @@ mönster
 mörker
 mörkertal
 möte
+naboland
 nafs
 narkotikum
 narrspel
@@ -1204,6 +1219,7 @@ omklädningrum
 omlopp
 område
 omslag
+opium
 oratorium
 ord
 ordalag
@@ -1274,6 +1290,7 @@ porto
 porträtt
 postfack
 postnummer
+postulat
 prat
 precedensfall
 prefix
@@ -1370,9 +1387,11 @@ rovdjur
 rum
 rus
 rusmedel
+russ
 russin
 ryck
 ryggradsdjur
+ryggsim
 rykte
 rymdmått
 räcke
@@ -1448,6 +1467,7 @@ självstyre
 sjå
 sjöslag
 skadestånd
+skafferi
 skal
 skall
 skalskydd
@@ -1776,6 +1796,7 @@ timmer
 ting
 tiotal
 tips
+tjat
 tjog
 tjugotal
 tjut
@@ -2024,7 +2045,6 @@ zoo
 åliggande
 ångestrop
 år
-åratal
 århundrade
 årsmöte
 årsskifte
