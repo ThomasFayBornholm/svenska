@@ -476,17 +476,16 @@ function linkSingleWord(def) {
 
 				// Strip away meta and grammer information
 				let res = tmp.match(/(\[.*\])/);
-				if (res) {
-					tmp = tmp.replace(res[0] + " ","");
-				}
+				if (res) tmp = tmp.replace(res[0] + " ","");
 				res = tmp.match(/(\(.*\))/);
-				if (res) {
-					tmp = tmp.replace(res[0] + " ","");
-				}
-				let ref = "det att ";
-				// Simple references to verbs from substantiv
+				if (res) tmp = tmp.replace(res[0] + " ","");
+				// Simple references to adjektives from substantive
+				let ref = "det att vara ";
 				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
-				// Simple references to verbs from adjektiv
+				ref = "det att ";
+				// Simple references to verbs from substantive
+				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
+				// Simple references to verbs from adjektive
 				ref = "som ";
 				if (tmp.indexOf(ref) === 0) {
 					tmp = tmp.replace(ref,"");
@@ -989,6 +988,12 @@ function addMeta(def, regx) {
 	return def;
 }
 function grammer(def, rep) {
+	// Only one grammer expression is permitted
+	if (def.indexOf(rep) != -1) {
+		end = def.indexOf(rep) + rep.length;
+		let after = def.substring(end,end+1);
+		if (after === ")") return def
+	}
 	return def.replace(" " + rep, " (" + rep + ")");
 }
 function preProc(def) {
@@ -997,32 +1002,37 @@ function preProc(def) {
 	// Check if any meta information existsDef	
 	if (def[0] === " ") def = def.slice(1);
 	let meta = "";
-	let defArr = def.split(" ");
-	if (defArr.length > 2) {
-		let firstWord = defArr[0];
-		let twoWords = firstWord + " " + defArr[1];
-		let threeWords = twoWords + " " + defArr[2];
+	
+	let defArr = def.split("\n");
+	let firstLine = defArr[0];
+	let opts = firstLine.split(" ");
+	let firstWord = opts[0];
+	let twoWords = "";
+	let threeWords = "";
 
-		var m;
-		if (CLASS === "slutled") {
-			m = "-" + CUR_WORD;
-		} else if (CLASS === "förled") {
-			m = CUR_WORD + "-";
-		} else {
-			m = CUR_WORD;
-		}	
-		if (firstWord === m || twoWords === m || threeWords === m) {		
-			defArr = def.split('\n');
-			meta = defArr[0].replaceAll("_"," ");		
-			let del = "";
-			def = "";
-			for (let i = 1; i < defArr.length; i++) {		
-				if (i < 3) {
-					meta += "<br>" + defArr[i].replace("ORDKLASS: ","").replace("UTTAL: ","");
-				} else {
-					def += del + defArr[i];
-					del = "\n";
-				}
+	if (opts.length > 1) twoWords = firstWord + " " + opts[1];		
+	if (opts.length > 2) threeWords = twoWords + " " + opts[2];
+	
+	var m;
+	if (CLASS === "slutled") {
+		m = "-" + CUR_WORD;
+	} else if (CLASS === "förled") {
+		m = CUR_WORD + "-";
+	} else {
+		m = CUR_WORD;
+	}	
+	
+	if (firstWord === m || twoWords === m || threeWords === m) {		
+		defArr = def.split('\n');
+		meta = defArr[0].replaceAll("_"," ");		
+		let del = "";
+		def = "";
+		for (let i = 1; i < defArr.length; i++) {		
+			if (i < 3) {
+				meta += "<br>" + defArr[i].replace("ORDKLASS: ","").replace("UTTAL: ","");
+			} else {
+				def += del + defArr[i];
+				del = "\n";
 			}
 		}
 	}
@@ -1055,8 +1065,16 @@ function preProc(def) {
 			// Leading Meta tags
 			// Beware the silent hyphens (\u00AD)			
 			// ToDo Move the (many) regx definitions to the function body
+			s = addMeta(s, /nu­mera sällan i fack­mässiga samman­hang/);
+			s = addMeta(s, /nu­mera mindre brukligt i fack­mässiga samman­hang/);
+			s = addMeta(s,/ofta i religiösa samman­hang/);
+			s = addMeta(s,/sär­skilt bibliskt; något ålderdomligt ut­om i vissa ut­tryck/);
+			s = addMeta(s,/sär­skilt geometri/);
+			s = addMeta(s, /ofta i bild­konst/);
+			s = addMeta(s,/mest som marxistisk term/);
 			s = addMeta(s,/sär­skilt medicin/);
 			s = addMeta(s,/sär­skilt i handels­språk/);
+			s = addMeta(s,/medicin/);
 			s = addMeta(s,/något hög­tidligt ut\u00ADom i sammansättn./);
 			s = addMeta(s, /hög­tidligt; mest bibliskt/);
 			s = addMeta(s,/något hög­tidligt el. formellt/);			
@@ -1066,6 +1084,7 @@ function preProc(def) {
 			s = addMeta(s,/hög­tidligt/);					
 			s = addMeta(s,/något var­dagligt/);		
 			s = addMeta(s,/var­dagligt; dialektalt/);
+			s = addMeta(s,/var­dagligt; ned­sättande/);
 			s = addMeta(s,/var­dagligt; ned\u00ADsättande/);
 			s = addMeta(s,/var­dagligt, ibland något ned­sättande/);
 			s = addMeta(s,/starkt var­dagligt/);
@@ -1086,6 +1105,7 @@ function preProc(def) {
 			s = addMeta(s,/sär­skilt juridik/);
 			s = addMeta(s,/juridik/);	
 			s = addMeta(s,/sär­skilt i lag­språk/);
+			s = addMeta(s,/sär­skilt psykologi/);
 			s = addMeta(s,/psykologi/);
 			s = addMeta(s,/informations­teknik/);
 			s = addMeta(s,/sär­skilt i fack­språk/);
@@ -1093,14 +1113,18 @@ function preProc(def) {
 			s = addMeta(s,/mest i fack­mässiga samman­hang/);
 			s = addMeta(s,/ålderdomligt ut\u00ADom i bibliska samman\u00ADhang/);
 			s = addMeta(s,/ålderdomligt ut­om i vissa ut­tryck/);
+			s = addMeta(s,/delvis något ålderdomligt/);
 			s = addMeta(s,/något ålderdomligt/);
+			s = addMeta(s,/något ålderdomligt el. ironiskt/);
 			s = addMeta(s,/ålderdomligt/);
-			s = addMeta(s,/sär\u00ADskilt vid beskrivning av ut\u00ADländska förhållanden/);
+			s = addMeta(s,/sär­skilt vid beskrivning av ut­ländska förhållanden/);
+			s = addMeta(s,/endast vid beskrivning av ut­ländska förhållanden/);
 			s = addMeta(s,/något formellt/);
 			s = addMeta(s,/formellt i konkret an­vändning/); 
 			s = addMeta(s,/formellt/);			
 			s = addMeta(s,/delvis historiskt/);
 			s = addMeta(s,/mest historiskt/);
+			s = addMeta(s,/historiskt i Sverige/);
 			s = addMeta(s,/historiskt/);
 			s = addMeta(s,/sär\u00ADskilt i barn\u00ADspråk och i imiterat barn\u00ADspråk/);			
 			s = addMeta(s, /mest i fack\u00ADspråk/);
@@ -1120,6 +1144,7 @@ function preProc(def) {
 			s = addMeta(s,/ofta i vänster­politisk debatt/);
 			s = addMeta(s,/ofta ned­sättande/);
 			s = addMeta(s,/ofta något ned­sättande/);
+			s = addMeta(s,/ned­sättande; något ålderdomligt/);
 			s = addMeta(s,/ned­sättande/);
 			s = addMeta(s,/ibland något skämtsamt/);
 			s = addMeta(s,/sär­skilt statistik/);
@@ -1127,13 +1152,17 @@ function preProc(def) {
 			s = addMeta(s,/sär­skilt filosofi/);			
 			s = addMeta(s,/filosofi/);			
 			s = addMeta(s,/i allmän­språket/);
+			s = addMeta(s,/sär­skilt sport/);
+			s = addMeta(s,/sär­skilt militär­väsen och sport/);
 			s = addMeta(s,/sär­skilt militär­väsen/);
 			s = addMeta(s,/sär­skilt sjö­fart/);
 			s = addMeta(s,/ibland något ironiskt/);
 			s = addMeta(s,/sär­skilt arkeologi/);
 			s = addMeta(s, /ej officiell svensk beteckning/);
+			s = addMeta(s, /nu­mera ej officiell beteckning/);
 			s = addMeta(s, /förskönande om­skrivning/);
 			s = addMeta(s, /bibliskt/);
+			s = addMeta(s,/ofta fysik och teknik/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {
@@ -1189,10 +1218,16 @@ function preProc(def) {
 			}
 			// ToDo Move the (many) grammer pattern definitions to the function body
 			// grammer information
+			s = grammer(s,"ofta med versal");
+			s = grammer(s,"ofta med efter­följande bi­sats");
+			s = grammer(s,"sär­skilt i pass. konstruktioner");
+			s = grammer(s,"i konstruktion med komparativ");
+			s = grammer(s,"ofta substantiverat");
 			s = grammer(s,"ofta refl.");			
 			s = grammer(s,"med konjunktionen",);
 			s = grammer(s,"vanligen pres.");
 			s = grammer(s,"endast pres. el. pret.");
+			s = grammer(s,"i bestämd form");
 			s = grammer(s,"vanligen bestämd form sing.");
 			s = grammer(s,"ofta bestämd form sing.");
 			s = grammer(s,"vanligen bestämd form");
@@ -1208,9 +1243,12 @@ function preProc(def) {
 			s = grammer(s,"nu­mera vanligen i sammansätt.");	
 			s = grammer(s,"vanligen i sammansättn.");
 			s = grammer(s,"vanligen i vissa sammansätt.");			
+			s = grammer(s,"i sammansättn.");
 			// ToDo regex this one			
 			s = grammer(s,"vanligen i vissa ut\u00ADtryck");
+			s = grammer(s,"utan böjning, i vissa ut\u00ADtryck");
 			s = grammer(s,"i vissa ut\u00ADtryck");
+			s = grammer(s,"i några ut\u00ADtryck");
 			s = grammer(s, "ofta pass. el. perfekt particip");
 			s = grammer(s,"ofta pass.");			
 			s = grammer(s,"vanligen pass. el. perfekt particip");
