@@ -103,6 +103,7 @@ bagageutrymme
 bajs
 bakhjul
 bakslag
+bakspår
 bakverk
 balanshjul
 balanskonto
@@ -297,6 +298,7 @@ dopp
 dotterbolag
 dotterföretag
 drag
+dragdjur
 drama
 draperi
 drev
@@ -319,6 +321,7 @@ däggdjur
 dåd
 dån
 dånande
+dödläge
 dödsfall
 dödsstraff
 e-mail
@@ -692,6 +695,7 @@ huvudkontor
 hyckleri
 hyreshus
 hyss
+häftplåster
 hägn
 hällregn
 händelseförlopp
@@ -816,12 +820,14 @@ klarspråk
 klassrum
 klick
 klimat
+klimax
 klink
 klipp
 klockslag
 klor
 kloster
 klot
+klädesplagg
 klädskåp
 klädstreck
 knack
@@ -851,6 +857,7 @@ kommunistparti
 kompani
 komplement
 komplimang
+koncentrationsläger
 koncept
 kondis
 konditori
@@ -1113,6 +1120,7 @@ mittfält
 mjälthugg
 mjöl
 mjölksocker
+mms
 mobilnummer
 mod
 mode
@@ -1219,6 +1227,7 @@ omklädningrum
 omlopp
 område
 omslag
+omtal
 opium
 oratorium
 ord
@@ -1297,6 +1306,7 @@ prefix
 prejudikat
 premium
 presidentval
+presidium
 pressmeddelande
 preventivmedel
 pris
@@ -1356,6 +1366,7 @@ regn
 regnkläder
 regnväder
 rekord
+rekvisit
 relationsbyggande
 rengöringsmedel
 rep
@@ -1425,7 +1436,6 @@ sammanhang
 sammanträde
 sammanträffande
 sammelsurium
-sammträde
 samråd
 samspel
 samsyn
@@ -1471,7 +1481,6 @@ skafferi
 skal
 skall
 skalskydd
-skapande
 skarpsinne
 skede
 skelett
@@ -1540,11 +1549,9 @@ slaveri
 slem
 slidhornsdjur
 slit
-slopande
 slott
 slut
 slutbetyg
-slutförande
 slutled
 slutskede
 släktled
@@ -1575,7 +1582,6 @@ småföretag
 småhus
 småvilt
 smör
-smörgåspaket
 smörj
 snack
 snask
@@ -1639,7 +1645,6 @@ stamnät
 stamord
 stamp
 standar
-startande
 statsbidrag
 statsråd
 stavhopp
@@ -1677,7 +1682,6 @@ strävande
 stråk
 ströbröd
 strög
-strömkrig
 studentförbund
 studium
 stycke
@@ -1712,7 +1716,6 @@ svårmod
 sybehör
 sydsken
 syfte
-symptom
 symtom
 syndafall
 syndrom
@@ -1720,6 +1723,7 @@ synsinne
 synsätt
 syre
 syskon
+system
 systerskap
 säde
 sädesslag
@@ -1885,7 +1889,6 @@ upplopp
 upplägg
 upprop
 uppror
-upprättande
 uppslag
 uppsåt
 uppträdande
@@ -1895,7 +1898,6 @@ ursinne
 ursprung
 urtag
 urval
-ur­val
 utanförskap
 utanförskapsområde
 utbildningsbidrag
@@ -1911,7 +1913,6 @@ utland
 utlopp
 utlägg
 utlåtande
-utnyttjande
 utnötningskrig
 utrop
 utropsord
@@ -1930,7 +1931,6 @@ uttalande
 uttryck
 utvecklingsland
 vaccin
-vacklande
 vad
 vadben
 vakuum
@@ -1969,7 +1969,6 @@ vetebröd
 vett
 vevlager
 vide
-vidtagande
 vidunder
 villebråd
 villkor
@@ -2091,4 +2090,5 @@ zoo
 överströmsskydd
 övertag
 övertramp
+övervägande
 övervåld

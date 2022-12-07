@@ -60,6 +60,7 @@ akt
 akter
 aktie
 aktion
+aktionsart
 aktionsradie
 aktivism
 aktivist
@@ -202,6 +203,7 @@ arbetsgivare
 arbetsgrupp
 arbetskamrat
 arbetskraft
+arbetskraftsinvandring
 arbetskraftsutvandring
 arbetsköpare
 arbetslöshet
@@ -299,6 +301,7 @@ avkomling
 avkomma
 avkortning
 avkylning
+avlyssning
 avläggare
 avlöning
 avlöningsdag
@@ -1282,6 +1285,7 @@ enkammarriksdag
 enkelsäng
 ensak
 ensamhet
+entitet
 entreprenör
 entré
 entusiasm
@@ -1512,6 +1516,7 @@ flygvärd
 flygvärdinna
 flykt
 flykting
+flyktinginvandring
 flyktingpolitik
 flytdocka
 flytt
@@ -1924,6 +1929,7 @@ garanti
 gardering
 garderob
 gardin
+garvning
 gas
 gastillförsel
 gasutveckling
@@ -2311,6 +2317,7 @@ hunger
 hungersnöd
 hunk
 hurra
+husar
 husarrest
 husbil
 hushållning
@@ -2481,6 +2488,7 @@ induktor
 industri
 industridesign
 infallsvinkel
+infanterist
 infektion
 infinitiv
 inflammation
@@ -2516,6 +2524,7 @@ innebörd
 innehållsförteckning
 innekatt
 innerdörr
+innerstad
 innovation
 inrikesminister
 inrikespolitik
@@ -2782,6 +2791,7 @@ kattunge
 kavaj
 kavalkad
 kavall
+kavallerist
 kedja
 kedjekrans
 kedjereaktion
@@ -3163,6 +3173,7 @@ kula
 kuling
 kull
 kulle
+kulmen
 kulpenna
 kulspetspenna
 kulstötning
@@ -3404,6 +3415,7 @@ litteratur
 liturgi
 livmoder
 livränta
+livscykel
 livsföring
 livskraft
 livslängd
@@ -3554,6 +3566,7 @@ malör
 mamma
 man
 manager
+manchesterliberalism
 mandarin
 mandarin 
 mandatperiod
@@ -3929,6 +3942,7 @@ narkoman
 nation
 nationaldräkt
 nationalekonomi
+nationalförsamling
 nationalism
 nationalist
 nationalitet
@@ -4031,6 +4045,7 @@ nyhetssajt
 nykomling
 nykterism
 nykterist
+nyliberalism
 nymf
 nymåne
 nyrekrytering
@@ -4069,6 +4084,7 @@ nöt
 nötfrukt
 nötfärs
 nötkreatur
+oavhängighet
 obalans
 obegriplighet
 objektivitet
@@ -4321,6 +4337,7 @@ pingla
 pingst
 pingstlilja
 pingvin
+pint
 pipa
 pippi
 pir
@@ -5108,6 +5125,7 @@ skärning
 skärningspunkt
 skärpning
 skärskada
+skärva
 skådespelare
 skådespelarkonst
 skådespelerska
@@ -5228,6 +5246,7 @@ snölykta
 socialdemokrat
 socialism
 socialist
+socialliberalism
 socialtjänst
 sociologi
 socka
@@ -5302,6 +5321,7 @@ spets
 spik
 spiksko
 spillning
+spillra
 spindel
 spion
 spiral
@@ -5548,6 +5568,7 @@ suterräng
 suveränitet
 svaghet
 sval
+svala
 svallvåg
 svamp
 svan
@@ -5557,6 +5578,7 @@ svartsjuka
 svastika
 svavelkis
 sveda
+svedja
 svedjebruk
 svedjebrukare
 svensk
@@ -5612,9 +5634,12 @@ syssling
 syster
 systerdotter
 systerson
+säd
 sädesskyl
+sädesvätska
 sägen
 säkerhet
+säkerhetspolis
 säkerhetspolitik
 säkerhetssynpunkt
 säkring
@@ -5735,6 +5760,7 @@ terminal
 termistor
 termometer
 terrass
+terror
 terrorism
 terrorist
 terräng
@@ -5793,6 +5819,7 @@ tillspetsning
 tillstrykan
 tillströmning
 tillstymmelse
+tillställning
 tillståndsbevis
 tillsyn
 tillsynsmyndighet
@@ -5910,6 +5937,7 @@ trissa
 tro
 troké
 trollkarl
+trolöshet
 trombon
 trop
 tropik
@@ -5925,6 +5953,7 @@ trumpet
 trupp
 trut
 tryckaccent
+tryckare
 tryckfrihet
 tryckning
 tryckpress
@@ -6376,6 +6405,7 @@ viskning
 visning
 visp
 vispning
+visshet
 vistelse
 vitbeta
 vitlök
@@ -6408,6 +6438,7 @@ vägrare
 väktare
 välfärd
 välgärning
+välgång
 välgörenhet
 väljarbarometer
 väljare
