@@ -51,6 +51,7 @@
 	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="ScrollViewDownWrapper()" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
 		<span class="counts" id="iCnt" onclick="showToggle()">test</span>
 		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view">Total</span>
+		<span class="counts" id="iCntRegex" onclick="showToggle()" title="Click to toggle control view"></span>
 		<div  id="iDefDiv">
 			 <textarea  class="defBox" id="iDefText"></textarea>
 			 <button onclick="putDef('')">Put</button>			 
@@ -142,16 +143,7 @@ function setN_CUR() {
 	$('#iCntTotal').text(' [' + N_TOT.toLocaleString('sv') + ']');
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
-function getProgress() {
-	var proj;
-	if (N_CUR != 0) {
-		prog = parseInt(INC/N_CUR *100);
-	} else {
-		prog = 0;
-	}
-	$('#iProg').css("width", prog + "%");	
-	if (DEBUG) console.log("getProgress(); prog = " + prog); 
-}
+
 function fmtDef(def) {
 	for (i = 0; i < 24; i++) {
 		let old = " " + i + " ";
@@ -216,9 +208,10 @@ function retreat(e) {
 	changeInc(-N_INC)
 	getWords(-1)
 }
-function getWords(ind) {
+function getWords(ind = INC) {
 	// Ind is used to highlight and lookup a given word index from the returned list
 	// Global INC is used to get the starting index of the returned list
+	
 	if (DEBUG) console.log("getWords(), ind = " + ind + ", INC = ", + INC);
 	SCROLL_INC=-1;
 	N_FOUND=0;
@@ -254,18 +247,15 @@ function getWords(ind) {
 			})
 			.then(json => {
 				res = json;
+				let del = "";
 				for (let i = 0; i < N_FOUND; i++) {
-					let del = "<br>"
-					if (i === 0) { 
-						del = ""
-					}
 					let tmp = 1 << i;
 					let hasDef = (res & tmp);
 					out += del + popSpan(i, lastJson[i],hasDef) 
+					del = "<br>";
 				}
 				$('#iWords').html(out);
-				showWords();
-				getProgress();
+				showWords();				
 				countDefs();
 				if (ind > -1) {
 					let el = document.getElementById("w" + ind);
@@ -376,6 +366,11 @@ function lookupWord(el,onlyLocal,inline) {
 		})
 		.then(json => {
 			let keys = Object.keys(json);						
+			if (keys.length === 1 && keys[0] != CLASS) {			
+				// Go direct to class if no ambiguity in found word(s)
+				setClass(keys[0]);
+				seekWord(word);
+			}
 			let def = "";
 			let delim ="";			
 			let tmp = "<span onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";			
@@ -484,6 +479,11 @@ function linkSingleWord(def) {
 				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
 				ref = "det att ";
 				// Simple references to verbs from substantive
+				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
+				// Simple reference from adjektives to substantive
+				ref = "som vållar ";
+				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
+				ref = "som präglas av ";
 				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
 				// Simple references to verbs from adjektive
 				ref = "som ";
@@ -655,8 +655,7 @@ function wordCount() {
 		N_NUMMER = json["nummer"];
 		N_KONJUNKTION = json["konjunktion"];
 		N_SUBJUNKTION = json["subjunktion"];
-		setN_CUR();
-		getProgress();
+		setN_CUR();		
 	})
 	.catch(error => {
 		console.log(error);
@@ -684,13 +683,18 @@ function seekWordWrapper(e) {
 	seekWord(word);
 }
 function seekWord(word) {	
-
+	if (word[0] === "." || word[word.length-1] === ".") {
+		addWord();
+		return;
+	}
+	$('#iCntRegex').html("");
 	// Regex support
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
 	reg2 = word.indexOf("$") != -1 || word.indexOf("[") != -1 || word.indexOf("]") != -1;
 	if (reg1 || reg2) {
 		// Will return first match
-		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word + '&inc=' + INC, {
+		
+		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -701,16 +705,22 @@ function seekWord(word) {
 			return response.json()
 		})
 		.then(json => {
-			if (json > -1) {
-				// Put selected word in the middle of the word collection				
-				INC = json - 3;
-				let ind = 3;
-				let mid = N_INC/2;
-				if (json < mid - 1) {					
-					INC = 0;
-					ind = json;
+			if (json.length > 0) {
+				// Write the first n matches to the page
+				N_FOUND = json.length;
+				console.log(N_FOUND);
+				let del = "";
+				let out = "";
+				for (let i = 0; i < N_FOUND; i++) {				
+					let tmp = 1 << i;
+					let hasDef = (res & tmp);
+					out += del + popSpan(i, json[i],hasDef) 
+					del = "<br>"
 				}
-				getWords(ind);
+				$('#iCntRegex').html("*" + N_FOUND + "*");
+				$('#iWords').html(out);
+				showWords();				
+				countDefs();
 			}
 		})
 		.catch(error => {
@@ -771,7 +781,12 @@ function seekWord(word) {
 					})
 					.then(json => {
 						if (Object.keys(json).length > 0) {
-							let keys = Object.keys(json);						
+							let keys = Object.keys(json);	
+							if (keys.length === 1 && keys[0] != CLASS) {			
+								// Go direct to class if no ambiguity in found word(s)
+								setClass(keys[0]);
+								seekWord(word);
+							}
 							let def = "";
 							let delim ="";
 							let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";						
@@ -811,8 +826,7 @@ function setClass(c, seek = "") {
 	CLASS = c;
 	INC = 0;
 	SCROLL_INC=-1;
-	setN_CUR();
-	getProgress();
+	setN_CUR();	
 	countDefs();
 	getWords(-1);
 	if (seek.length > 0) seekWord(seek);
@@ -953,8 +967,9 @@ function removeClassDesc(word) {
 function addWord() {
 	if (DEBUG) console.log("addWord()");
 	let word = $('#iSeek').val();	
-	let del = word[0] === '.';
-	if (del) word = word.slice(1,word.length);
+	let del = word[0] === '.' || word[word.length-1] === ".";
+	if (word[0] === '.') word = word.slice(1,word.length);
+	if (word[word.length-1] === '.') word = word.slice(0,word.length-1);
 	if (word.length > 0) {
 		let op = "add"	
 		if (del) op = "remove"
@@ -966,6 +981,36 @@ function addWord() {
 			}
 		})
 		.then(response => {
+			// If this was the last listing of this word delete from "all" listing also
+			fetch('backend/getDefAll.php?class=all&word=' + word, {
+				method: 'get',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(response => {
+				return response.json();
+			})
+			.then(json => {
+				// It was last reference
+				if (json.length < 1) {
+					fetch('backend/removeWord.php?class=all&word=' + word, {
+						method: 'get',
+						mode: 'cors',
+						headers: {
+							'Content-Type': 'application/json'
+						}
+					})
+					.catch(error => {
+						console.log(error);
+					})
+				}
+			})
+			.catch(error => {
+				console.log(error);
+			})
+			getWords();
 			wordCount();
 		})
 		.catch(error => {
@@ -1004,6 +1049,17 @@ function preProc(def) {
 	let meta = "";
 	
 	let defArr = def.split("\n");
+	// Concenate if multiple spellings are present
+	if (defArr.length > 3 && defArr[1] === "eller" || defArr[1] === "även" || defArr[1] === "även åld.") {
+		defArr[0] = defArr[0] + " </i>" + defArr[1] + " <i>" + defArr[2];
+		// Move remaining items up two elements
+		for (i = 3; i < defArr.length; i++) {
+			defArr[i-2] = defArr[i]
+		}
+		defArr.pop();
+		defArr.pop();		
+	}
+
 	let firstLine = defArr[0];
 	let opts = firstLine.split(" ");
 	let firstWord = opts[0];
@@ -1023,7 +1079,6 @@ function preProc(def) {
 	}	
 	
 	if (firstWord === m || twoWords === m || threeWords === m) {		
-		defArr = def.split('\n');
 		meta = defArr[0].replaceAll("_"," ");		
 		let del = "";
 		def = "";
@@ -1065,6 +1120,10 @@ function preProc(def) {
 			// Leading Meta tags
 			// Beware the silent hyphens (\u00AD)			
 			// ToDo Move the (many) regx definitions to the function body
+			s = addMeta(s, /nu­mera ej officiell benämning/);
+			s = addMeta(s, /ofta i värderande ut­tryck/);
+			s = addMeta(s,/ofta statistik/);
+			s = addMeta(s,/mest i vetenskapliga samman­hang/);
 			s = addMeta(s, /nu­mera sällan i fack­mässiga samman­hang/);
 			s = addMeta(s, /nu­mera mindre brukligt i fack­mässiga samman­hang/);
 			s = addMeta(s,/ofta i religiösa samman­hang/);
@@ -1141,11 +1200,13 @@ function preProc(def) {
 			s = addMeta(s,/äv. som musikalisk term/);
 			s = addMeta(s,/musik/);
 			s = addMeta(s,/sär­skilt meteorologi/);
+			s = addMeta(s,/sär­skilt i vänster­politisk debatt/);
 			s = addMeta(s,/ofta i vänster­politisk debatt/);
 			s = addMeta(s,/ofta ned­sättande/);
 			s = addMeta(s,/ofta något ned­sättande/);
 			s = addMeta(s,/ned­sättande; något ålderdomligt/);
 			s = addMeta(s,/ned­sättande/);
+			s = addMeta(s,/ibland skämtsamt/);
 			s = addMeta(s,/ibland något skämtsamt/);
 			s = addMeta(s,/sär­skilt statistik/);
 			s = addMeta(s,/sär­skilt filosofi, biologi/);
@@ -1218,11 +1279,15 @@ function preProc(def) {
 			}
 			// ToDo Move the (many) grammer pattern definitions to the function body
 			// grammer information
+			s = grammer(s, "vanligen bestämd form sing. och med versal");
+			s = grammer(s, "med subst. som för­led");
+			s = grammer(s, "vanligen placerat efter huvud­ordet");
 			s = grammer(s,"ofta med versal");
 			s = grammer(s,"ofta med efter­följande bi­sats");
 			s = grammer(s,"sär­skilt i pass. konstruktioner");
 			s = grammer(s,"i konstruktion med komparativ");
 			s = grammer(s,"ofta substantiverat");
+			s = grammer(s, "ofta refl. el. pass.");
 			s = grammer(s,"ofta refl.");			
 			s = grammer(s,"med konjunktionen",);
 			s = grammer(s,"vanligen pres.");
@@ -1259,8 +1324,9 @@ function preProc(def) {
 			s = grammer(s,"ofta perfekt particip");
 			s = grammer(s,"ofta presens particip");
 			s = grammer(s, "nästan en­bart pres. el. pret.");
-			s = grammer(s,"vanligen perfekt particip");
+			s = grammer(s,"vanligen perfekt particip");			
 			s = grammer(s,"vanligen obestämd form sing.");
+			s = grammer(s,"vanligen obestämd form");
 			s = grammer(s,"äv. två ord");
 			s = grammer(s,"äv. tre ord");
 			s = grammer(s,"nästan en\u00ADbart i sammansättn.");
@@ -1288,6 +1354,7 @@ function preProc(def) {
 			s = grammer(s, "vanligen supinum");
 			// ToDo Regex this to include the multi-word verbs			
 			s = fmtVerbApart(s,/(äv. lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = s.replace("formerna", "formerna ");
 			s = s.replace("formen", "formen ");
 			s = fmtVerbApart(s,/(äv. lös förbindelse i formen )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(äv. lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
@@ -1302,7 +1369,8 @@ function preProc(def) {
 			s = fmtVerbTogether(s,/(ofta fast sammansättn., jfr )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(äv. fast sammansättn., se )([a-zöäå_]+)/);			
 			s = fmtVerbTogether(s,/(äv. fast sammansättn., jfr )([a-zöäå_]+)/);			
-						
+			s = simpleRef(s);		
+			s = simpleBold(s);		
 			// ToDo Regex this to include the verb
 			//s = grammer(s,"vanligen i förbindelse");
 			s = handlePrep(s);
@@ -1336,17 +1404,35 @@ function  fmtVerbApart(s,regx) {
 	if (DEBUG) console.log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
 	m = s.match(regx);
 	if (m != null) {
-		console.log(m);
 		if (m.length === 4) {
 			let repWord = m[2] + " " + m[3].substring(1);
+			
 			// remove leading space from second word and replace with regular space.
 			let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_", repWord);
 			// Allow user to match only a single verb word
 			link = link.replaceAll(" __","");
-			s = s.replace(m[0],"(" + m[1] + link + ")");
+			s = s.replace(m[0],"(" + m[1] + link + ")");			
 		}
 	}
 	return s	
+}
+function simpleRef(s) {
+	regx = "/\(se äv. ([a-zöäå]+)\)/"
+	let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>"
+	m = s.match(regx);
+	if (m) {
+		s = s.replace(m[0],"(se äv. " + link.replaceAll("_w_",m[2]) + ")");
+	}
+	return s;
+}
+function simpleBold(s) {
+	regx = "((vanligen (?:med )?komparativ)([a-zöäå]+))"
+	let bold = "<b>_w_</b>";
+	m = s.match(regx);
+	if (m) {
+		s = s.replace(m[0],"(" + m[2] + " " + bold.replaceAll("_w_"," " + m[3]) + ")");
+	}	
+	return s;
 }
 function withParticle(s) {
 	rep = "ibland with partikel";
