@@ -5,11 +5,9 @@ adjektiv
 adverb
 adverbial
 affix
-agerande
 agg
 aggregat
 agn
-akterdäck
 aktiebolag
 aktievärde
 album
@@ -37,7 +35,6 @@ antal
 antibiotikum
 antikropp
 antågande
-användande
 användningsfall
 apotek
 apropå
@@ -59,11 +56,10 @@ armborst
 armod
 armveck
 arrangemang
-arsle
+arsel
 arv
 arvode
 arvsanlag
-arvsanslag
 attackplan
 attribut
 avancemang
@@ -77,7 +73,6 @@ avgörande
 avhopp
 avlopp
 avseende
-avskaffande
 avsked
 avskedstagande
 avskräde
@@ -177,7 +172,6 @@ blodkärl
 blodtryck
 blogginlägg
 blomster
-blom­ställning
 bläck
 blänk
 blåsväder
@@ -240,11 +234,9 @@ byte
 bäcken
 bälte
 bär
-bärande
 båg
 bårhus
 böj
-böjande
 bönehus
 böneutrop
 café
@@ -427,6 +419,7 @@ fogeord
 fokus
 folk
 folkmord
+folkmål
 folkparti
 folkuniversitet
 fordon
@@ -445,6 +438,7 @@ foto
 fotografi
 fraktfartyg
 framdäck
+framhjul
 framsteg
 franskbröd
 frekvensberoende
@@ -458,7 +452,6 @@ fruktkött
 fruntimmer
 frysfack
 frändskap
-frågatecken
 frågetecken
 frö
 fröämne
@@ -467,7 +460,7 @@ funktionshinder
 furstendöme
 fusk
 fynd
-fyrfota­djur
+fyrfotadjur
 fyrtorn
 fyrverkeri
 fädernesland
@@ -548,7 +541,6 @@ förtroende
 förtryck
 förutseende
 förvar
-förverkligande
 förvärv
 förvärvsliv
 gage
@@ -567,7 +559,6 @@ genljud
 genmäle
 genom
 genombrott
-genomförande
 genomslag
 genomsnitt
 genrep
@@ -605,7 +596,6 @@ grannskap
 grepp
 griskött
 grodsim
-grubblande
 grums
 grundlag
 grus
@@ -741,7 +731,6 @@ infix
 inflytande
 informationssamhälle
 infraljud
-införande
 ingrepp
 ingripande
 ingående
@@ -784,7 +773,6 @@ jäkt
 järn
 järnbruk
 kaffe
-kafé
 kakel
 kalas
 kalenderår
@@ -806,7 +794,6 @@ kattguld
 kavalleri
 kedjehjul
 kejsarsnitt
-keks
 kex
 kilogram
 kisel
@@ -963,6 +950,7 @@ lammkött
 land
 landskap
 landslag
+landsmål
 landsting
 lantbruk
 larm
@@ -998,11 +986,11 @@ lokomotiv
 lopp
 lov
 lovord
+luftdrag
 luftförsvar
 luftherravälde
 luftmotstånd
 luftrör
-luktsinne
 lurendrejeri
 lustspel
 lyft
@@ -1040,7 +1028,6 @@ magasin
 magsår
 maktskifte
 mandat
-maner
 manhål
 manifest
 mankemang
@@ -1084,7 +1071,6 @@ mellanstadium
 memorandum
 memorial
 men
-meningsmotståndare
 meningsutbyte
 mervärde
 metspö
@@ -1144,8 +1130,6 @@ motiv
 motljus
 motstånd
 mottagande
-mullrande
-mums
 murbruk
 museum
 musiköra
@@ -1170,6 +1154,7 @@ mörkertal
 möte
 naboland
 nafs
+namn
 narkotikum
 narrspel
 nationalepos
@@ -1188,6 +1173,7 @@ nobelpris
 norrsken
 nu
 nuläge
+nummer
 nyhetsbrev
 nyhetsflöde
 nyår
@@ -1211,7 +1197,6 @@ odal
 odds
 offer
 oflyt
-ogillande
 ogräs
 ok
 okynne
@@ -1223,7 +1208,7 @@ ombud
 ombyte
 omdöme
 omen
-omklädningrum
+omklädningsrum
 omlopp
 område
 omslag
@@ -1411,11 +1396,13 @@ ränteläge
 rättesnöre
 rättsväsende
 rå
+råd
 rådjur
 rån
 rön
 rör
 rörsocker
+röveri
 sabotage
 sagodjur
 sakförhållande
@@ -1702,6 +1689,7 @@ suddgummi
 suffix
 sugrör
 svaj
+svar
 svedjebruk
 svek
 svensktalande
@@ -1817,6 +1805,7 @@ trams
 trappräcke
 trappsteg
 trassel
+trehjuling
 trick
 tripp
 troll
@@ -1846,7 +1835,6 @@ tvärstopp
 tvättfat
 tvättmedel
 tvång
-tyckande
 tycke
 tyg
 typsnitt
@@ -1859,6 +1847,7 @@ tänkespråk
 tåg
 tålamod
 töcken
+u-land
 ultraljud
 umbärande
 umgänge
@@ -1929,7 +1918,6 @@ uttag
 uttal
 uttalande
 uttryck
-utvecklingsland
 vaccin
 vad
 vadben
@@ -2062,6 +2050,7 @@ zoo
 öde
 ögonblick
 ögonbryn
+ögonkast
 ögonlock
 öl
 önskemål
