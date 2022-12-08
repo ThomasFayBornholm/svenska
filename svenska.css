@@ -52,6 +52,11 @@ p {
 .nav {
 	display: none;
 }
+.putDef {
+	width: 100%;
+	height: 80pt;
+	font-size: 28pt;
+}
 
 .iSearchNav {
 	width: 90%;
@@ -137,6 +142,9 @@ h2 {
 	margin-top: 42%;
 	margin-left: 2%;
 	width: 180%;
+	height: 800pt;blyfri bly­fritt bly­fria
+adjektiv
+bly`fri 
 }
 .pBig {
 	font-size: 128px;

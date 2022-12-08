@@ -10,7 +10,7 @@
 	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)" onclick="clearDef()" title="Scroll to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se ">
 		<div id="iControls">
 			<div class="dropdown">
-				<img title="Class selector. Left click to select all. Right click to go to debug mode" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="setClass('all')" oncontextmenu="lookupManyWords(36)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
+				<img title="Class selector. Left click to select all. Right click to lookup all display words" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="setClass('all')" oncontextmenu="lookupManyWords(36)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
 				<div class="dropdown-content">
 					<p onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
 					<p onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<div class="dropdown">
-				<img title="Class selector #2 (rarer classes), left click to select all" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="setClass('all')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+				<img title="Class selector #2 (rarer classes), left click to select all" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="closeDefs()" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 				<div class="dropdown-content">
 					<p onclick="setClass('plural')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Plural</p>
 					<p onclick="setClass('superlativ')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Superlativ</p>
@@ -30,7 +30,7 @@
 				</div>
 			</div>						
 			<div class="dropdown">
-				<img title="Class selector #3 (rarer classes), left click to select all" id="iSelectRare" class="dropdown b2" src="img/TurningTorso.jpg" onclick="setClass('all')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+				<img title="Class selector #3 (rarer classes), left click to select all" id="iSelectRare" class="dropdown b2" src="img/TurningTorso.jpg" onclick="setClass('all')" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 				<div class="dropdown-content">		
 					<p onclick="setClass('förled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Förled</p>
 					<p onclick="setClass('slutled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Slutled</p>
@@ -54,10 +54,9 @@
 		<span class="counts" id="iCntRegex" onclick="showToggle()" title="Click to toggle control view"></span>
 		<div  id="iDefDiv">
 			 <textarea  class="defBox" id="iDefText"></textarea>
-			 <button onclick="putDef('')">Put</button>			 
-			 <button onclick="cleanUp()">Clean up</button>			 
+			 <button class="putDef" onclick="putDef('')">Put</button>			 			 
 		</div>
-		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDef(event)"></p>
+		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDefWrapper(event)"></p>
 		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 	</div>
 	<div id="iRight" class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)" title="Navigation: left/scroll down = forward, right click/scroll up = back"></div>	
@@ -96,6 +95,9 @@ let DEBUG=false;
 let LAST_DEF = "";
 let LAST_CLASS = "all";
 let CONTROLS_VISIBLE=true;
+
+var TABS = [];
+
 function startup() {
 	wordCount();
 	getWords(-1);
@@ -170,9 +172,15 @@ function putDef(def) {
 	.then(response => {
 		$('#iDefText').val("");
 		$('#iDefDiv').css("display", "none");
-		// Reset highlighting of missing definition
+		// Reset highlighting of m	issing definition
 		LAST_OBJ.innerHTML = LAST_OBJ.innerText;
 		updateDef();
+		// Find last non-null tabindex
+				
+		let tmpInd = parseInt(SCROLL_INC) + parseInt(1);		
+		TABS[tmpInd].focus();
+		scrollDown()
+		updateDef()	
 		// Race condition here between file write and def display	
 		if (SCROLL_INC === (N_FOUND - 1)) {
 			lookupWord(LAST_OBJ,true,true);
@@ -421,7 +429,7 @@ function lookupWord(el,onlyLocal,inline) {
 			} else {
 				if (!onlyLocal) {
 					let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
-					window.open(url, '_blank');
+					window.open(bulletProofUrl(url), '_blank');
 				}
 				$('#iParDef').html("");
 				$('#iDefDiv').css("display", "block");
@@ -512,6 +520,7 @@ function linkSingleWord(def) {
 }
 
 function addLinks(refClass,def) {
+	console.log(def);
 	if (DEBUG) console.log("addLinks(), refClass = " + refClass + ", def = " + def);
 	if (def.indexOf(refClass) === -1) return def;
 	// Easiest to handle line by line and skip the lines without links
@@ -533,6 +542,7 @@ function addLinks(refClass,def) {
 				el = el.replaceAll("­","");
 				if (el.includes(m)) {
 					let rep = m + spanTmp.replaceAll("_w_",el.substr(m.length, el.length - m.length))
+					console.log(rep)
 					line = line.replace(el, rep);
 				} else {
 					let rep = spanTmp.replaceAll("_w_", el);
@@ -623,8 +633,8 @@ function onlineLookup(el, e) {
 	e.preventDefault()
 	word = el.innerText;
 	if (word.length === 0) word = el.value;
-	let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
-	window.open(url, '_blank');
+	let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
+	window.open(bulletProofUrl(url), '_blank');
 }
 
 function wordCount() {
@@ -683,7 +693,7 @@ function seekWordWrapper(e) {
 	seekWord(word);
 }
 function seekWord(word) {	
-	if (word[0] === "." || word[word.length-1] === ".") {
+	if (word[0] === "." || word[word.length-1] === "." || word.indexOf('+') != -1) {
 		addWord();
 		return;
 	}
@@ -855,11 +865,14 @@ function countDefs() {
 	})
 }
 
-function editDef(e) {
-	e.preventDefault();
+function editDef() {	
 	showWords();
 	$('#iDefDiv').css("display", "block");
 	$('#iDefText').focus();
+}
+function editDefWrapper(e) {
+	e.preventDefault()
+	editDef()
 }
 function clearDef() {
 	if (DEBUG) console.log("clearDef()");
@@ -967,6 +980,12 @@ function removeClassDesc(word) {
 function addWord() {
 	if (DEBUG) console.log("addWord()");
 	let word = $('#iSeek').val();	
+	if (word.indexOf('+') != -1) {
+		tmp = word.split('+');
+		word = tmp[0];
+		tmpClass = tmp[1];
+		if (tmpClass.length > 1) setClass(tmpClass);
+	}
 	let del = word[0] === '.' || word[word.length-1] === ".";
 	if (word[0] === '.') word = word.slice(1,word.length);
 	if (word[word.length-1] === '.') word = word.slice(0,word.length-1);
@@ -1027,8 +1046,13 @@ function addMeta(def, regx) {
 	if (def[2] === "[" && def.indexOf("]") > 2) return def;	
 	// Probably don't actual need regex but leave "ias is" for now
 	let rawStr = regx.source;
+	browserDependentDelim = "";
+	if (navigator.userAgent.indexOf("Chrome") != -1 ) {
+		browserDependentDelim = " ";
+	}
+	
 	if (def.indexOf(rawStr) === 2) {
-		def = def.replace(rawStr, "[" + rawStr + "]");
+		def = def.replace(rawStr, "[" + rawStr + "]" + browserDependentDelim);
 	}
 	return def;
 }
@@ -1044,13 +1068,13 @@ function grammer(def, rep) {
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = " + def)
 	// return def and meta components
-	// Check if any meta information existsDef	
+	// Check if any meta information exists	
 	if (def[0] === " ") def = def.slice(1);
 	let meta = "";
 	
 	let defArr = def.split("\n");
 	// Concenate if multiple spellings are present
-	if (defArr.length > 3 && defArr[1] === "eller" || defArr[1] === "även" || defArr[1] === "även åld.") {
+	if (defArr.length > 3 && defArr[1] === "eller" || defArr[1] === "även" || defArr[1] === "även åld." || defArr[1] === "även vardagligt") {
 		defArr[0] = defArr[0] + " </i>" + defArr[1] + " <i>" + defArr[2];
 		// Move remaining items up two elements
 		for (i = 3; i < defArr.length; i++) {
@@ -1120,17 +1144,24 @@ function preProc(def) {
 			// Leading Meta tags
 			// Beware the silent hyphens (\u00AD)			
 			// ToDo Move the (many) regx definitions to the function body
+			s = addMeta(s, /språk­vetenskap/);
+			s = addMeta(s, /sär­skilt i affärs­mässiga och vetenskapliga samman­hang/);
+			s = addMeta(s, /samman­fattande, formell beteckning/);
 			s = addMeta(s, /nu­mera ej officiell benämning/);
 			s = addMeta(s, /ofta i värderande ut­tryck/);
 			s = addMeta(s,/ofta statistik/);
+			s = addMeta(s, /ofta ironiskt/);
 			s = addMeta(s,/mest i vetenskapliga samman­hang/);
 			s = addMeta(s, /nu­mera sällan i fack­mässiga samman­hang/);
 			s = addMeta(s, /nu­mera mindre brukligt i fack­mässiga samman­hang/);
+			s = addMeta(s, /i fackspråkliga samman­hang/);
+			s = addMeta(s, /nu­mera mindre brukligt/);
 			s = addMeta(s,/ofta i religiösa samman­hang/);
 			s = addMeta(s,/sär­skilt bibliskt; något ålderdomligt ut­om i vissa ut­tryck/);
 			s = addMeta(s,/sär­skilt geometri/);
 			s = addMeta(s, /ofta i bild­konst/);
 			s = addMeta(s,/mest som marxistisk term/);
+			s = addMeta(s,/sär­skilt medicin, psykologi/);
 			s = addMeta(s,/sär­skilt medicin/);
 			s = addMeta(s,/sär­skilt i handels­språk/);
 			s = addMeta(s,/medicin/);
@@ -1146,6 +1177,7 @@ function preProc(def) {
 			s = addMeta(s,/var­dagligt; ned­sättande/);
 			s = addMeta(s,/var­dagligt; ned\u00ADsättande/);
 			s = addMeta(s,/var­dagligt, ibland något ned­sättande/);
+			s = addMeta(s,/var­dagligt; sär­skilt sport/);
 			s = addMeta(s,/starkt var­dagligt/);
 			s = addMeta(s,/var­dagligt/);
 			s = addMeta(s,/dialektalt/);
@@ -1188,7 +1220,7 @@ function preProc(def) {
 			s = addMeta(s,/sär\u00ADskilt i barn\u00ADspråk och i imiterat barn\u00ADspråk/);			
 			s = addMeta(s, /mest i fack\u00ADspråk/);
 			s = addMeta(s, /sär­skilt i vetenskapliga samman­hang/);
-			s = addMeta(s, /ofta i vetenskapliga el. tekniska samman\u00ADhang/);
+			s = addMeta(s, /ofta i tekniska el. vetenskapliga samman­hang/);
 			s = addMeta(s, /i vetenskapliga samman­hang/);
 			s = addMeta(s, /mest i tekniska samman­hang/);
 			s = addMeta(s,/mest i vetenskapliga samman\u00ADhang/);
@@ -1279,6 +1311,10 @@ function preProc(def) {
 			}
 			// ToDo Move the (many) grammer pattern definitions to the function body
 			// grammer information
+			s = grammer(s, "ofta i substantivisk an­vändning")
+			s = grammer(s, "nästan en­bart bestämd form sing.")
+			s = grammer(s, "vanligen i böjda former");
+			s = grammer(s, "nästan alltid bestämd form sing. och med versal");
 			s = grammer(s, "vanligen bestämd form sing. och med versal");
 			s = grammer(s, "med subst. som för­led");
 			s = grammer(s, "vanligen placerat efter huvud­ordet");
@@ -1308,6 +1344,7 @@ function preProc(def) {
 			s = grammer(s,"nu­mera vanligen i sammansätt.");	
 			s = grammer(s,"vanligen i sammansättn.");
 			s = grammer(s,"vanligen i vissa sammansätt.");			
+			s = grammer(s,"i vissa ut­tryck och sammansättn.");			
 			s = grammer(s,"i sammansättn.");
 			// ToDo regex this one			
 			s = grammer(s,"vanligen i vissa ut\u00ADtryck");
@@ -1330,6 +1367,7 @@ function preProc(def) {
 			s = grammer(s,"äv. två ord");
 			s = grammer(s,"äv. tre ord");
 			s = grammer(s,"nästan en\u00ADbart i sammansättn.");
+			s = grammer(s,"nästan en­bart predikativt");
 			s = grammer(s,"endast predikativt");
 			s = grammer(s,"vanligen i konstruktioner");
 			s = grammer(s,"vanligen i konstruktion");
@@ -1445,17 +1483,7 @@ function withParticle(s) {
 	s = s.replace(rep, "(" + rep);
 	return s;
 }
-function cleanUp() {
-	if (DEBUG) console.log("cleanUp(); LAST_DEF = " + LAST_DEF);
-	let def = LAST_DEF
-	if (def.slice(0,4) === "<br>") def = def.substr(4)
-	def = def.replaceAll("<br>","\n");
-	def = def.replaceAll(" JFR","\nJFR");
-	def = def.replaceAll(" SE","\nSE");
-	def = def.replaceAll(" SYN","\nSYN");
-	def = def.replaceAll(" MOTSATS","\nMOTSATS");
-	putDef(def);
-}
+
 function showWords() {
 	if ($('#iWords').css("visibility") == "hidden") {
 		$('#iWords').css("visibility", "visible");
@@ -1502,6 +1530,9 @@ function setClassGuess() {
 	seekWord(CUR_WORD);
 }
 function lookupManyWords(n) {
+	// Clear existing tabs collection
+	TABS.length = 0;
+	n = 8;			
 	fetch('backend/getWords.php?&class=' + CLASS + "&start=" + (parseInt(INC) + parseInt(SCROLL_INC)).toString() + "&num=" + n, {
 		method: 'get',
 		mode: 'cors',
@@ -1513,11 +1544,13 @@ function lookupManyWords(n) {
 		return response.json()
 	})
 	.then(json => {
-		for (let i = 0; i < json.length; i++) {
+		if (json.length < n) n = json.length
+		for (let i = 0; i < n; i++) {			
 			let word = json[i]
 			let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
-			window.open(url, '_blank');
-		}
+			// Manual unicode percentage escaping as some browsers misbehave here	
+			TABS.push(window.open(bulletProofUrl(url), '_blank'));		
+		}	
 	})
 	.catch(error => {
 		console.log(error);
@@ -1562,5 +1595,19 @@ function handlePrep(s) {
 	}
 	return s;
 }
+function bulletProofUrl(url) {
+	// Manually do escaping of Swedish unicode characters as browsers can misbehave here
+	
+	url = url.replaceAll("ä","%C3%A4");			
+	url = url.replaceAll("å","%C3%A5");			
+	url = url.replaceAll("ö","%C3%B6");				
+	return url
+}
+function closeDefs() {
+	for (i = 0; i < TABS.length; i++) {
+		TABS[i].close();
+	}
+}
+
 </script>
 </html>
