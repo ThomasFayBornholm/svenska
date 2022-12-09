@@ -1175,6 +1175,7 @@ function preProc(def) {
 			s = addMeta(s,/något var­dagligt/);		
 			s = addMeta(s,/var­dagligt; dialektalt/);
 			s = addMeta(s,/var­dagligt; ned­sättande/);
+			s = addMeta(s, /var­dagligt; vanligen något ned­sättande/);
 			s = addMeta(s,/var­dagligt; ned\u00ADsättande/);
 			s = addMeta(s,/var­dagligt, ibland något ned­sättande/);
 			s = addMeta(s,/var­dagligt; sär­skilt sport/);
@@ -1311,10 +1312,12 @@ function preProc(def) {
 			}
 			// ToDo Move the (many) grammer pattern definitions to the function body
 			// grammer information
+			
 			s = grammer(s, "ofta i substantivisk an­vändning")
 			s = grammer(s, "nästan en­bart bestämd form sing.")
 			s = grammer(s, "vanligen i böjda former");
 			s = grammer(s, "nästan alltid bestämd form sing. och med versal");
+			s = grammer(s, "ofta bestämd form sing. och med versal");
 			s = grammer(s, "vanligen bestämd form sing. och med versal");
 			s = grammer(s, "med subst. som för­led");
 			s = grammer(s, "vanligen placerat efter huvud­ordet");
@@ -1375,6 +1378,7 @@ function preProc(def) {
 			s = grammer(s,"i opersonliga konstruktioner");			
 			s = grammer(s,"vanligen opersonlig konstruktion");
 			s = grammer(s,"vanligen koll.");
+			s = grammer(s, "ofta koll.");
 			s = grammer(s,"ofta i nekande el. frågande ut­tryck");
 			s = grammer(s,"ofta i nekande konstruktion");
 			s = grammer(s,"vanligen i nekande el. frågande ut­tryck");
@@ -1390,6 +1394,7 @@ function preProc(def) {
 			s = grammer(s, "i ett få­tal ut­tryck");
 			s = grammer(s, "i negerade el. frågande samman­hang");
 			s = grammer(s, "vanligen supinum");
+			s = grammer(s, "ofta best. form sing.");
 			// ToDo Regex this to include the multi-word verbs			
 			s = fmtVerbApart(s,/(äv. lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = s.replace("formerna", "formerna ");
@@ -1403,6 +1408,7 @@ function preProc(def) {
 			// Format "fast sammansättn." grammer
 			s = fmtVerbTogether(s,/(vanligen fast sammansättn., se )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(vanligen fast sammansättn., jfr )([a-zöäå_]+)/);
+			s = fmtVerbTogether(s,/(någon gång fast sammansättn., se )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(ofta fast sammansättn., se )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(ofta fast sammansättn., jfr )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(äv. fast sammansättn., se )([a-zöäå_]+)/);			
@@ -1600,7 +1606,8 @@ function bulletProofUrl(url) {
 	
 	url = url.replaceAll("ä","%C3%A4");			
 	url = url.replaceAll("å","%C3%A5");			
-	url = url.replaceAll("ö","%C3%B6");				
+	url = url.replaceAll("ö","%C3%B6");	
+	url = url.replaceAll("é","%C3%A9");
 	return url
 }
 function closeDefs() {
