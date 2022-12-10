@@ -43,7 +43,6 @@ bredvid
 brutto
 bråttom
 bäst
-bättre
 både
 cash
 cirka
@@ -129,7 +128,6 @@ först
 först och främst
 förstås
 försvinnande
-förtjust
 förut
 förvisso
 ganska
@@ -173,12 +171,12 @@ härmed
 härnäst
 härom
 häromdagen
-häromdan
 häromveckan
 högerut
 högst
 i alla fall
 i allmänhet
+i dag
 i fjol
 i fred
 i fråga
@@ -186,7 +184,9 @@ i första hand
 i förväg
 i grund och botten
 i gång
+i går
 i huvudsak
+i kväll
 i likhet med
 i morse
 i natt
@@ -195,6 +195,7 @@ i och med
 i onödan
 i själva verket
 i stort sett
+i stället
 i synnerhet
 i viss mån
 i år
@@ -202,16 +203,12 @@ i övermorgon
 i övrigt
 ibland
 icke
-idag
 ideligen
 ifrån
 igen
-igår
 ihop
-ikväll
 iland
 illa
-imorgon
 in
 in absurdum
 ingalunda
@@ -227,7 +224,6 @@ inte ens
 inte minst
 intill
 inåt
-iställe
 isär
 ju
 just
@@ -303,14 +299,11 @@ näst
 nästan
 nästintill
 nättopp
-någonsi
 någonsin
-någonstan
 någonstans
 någonvart
 någorlunda
 något
-nånsin
 nödvändigtvis
 och så vidare
 också
@@ -319,10 +312,10 @@ ofördröjligen
 oförhappandes
 olyckligtvis
 om
+om igen
 ombord
 omedelbart
 omgående
-omigen
 omkring
 omvänt
 onekligen
@@ -331,7 +324,7 @@ ont
 ostvart
 ovan
 ovanför
-oåterkalligen
+oåterkalleligen
 personligen
 piano
 plus
@@ -350,8 +343,8 @@ respektive
 rimligen
 rimligtvis
 runt
-runt omkring
 runtom
+runtomkring
 rätt
 sakta
 samman
@@ -363,7 +356,6 @@ sannerligen
 sannolikt
 sedan
 sedermera
-sen
 senare
 si
 sinsemellan
@@ -389,7 +381,6 @@ strax efter
 stundom
 stundtals
 styckevis
-styckvis
 städse
 ständigt
 sydvart
@@ -404,7 +395,6 @@ så
 så att säga
 så gott som
 så kallad
-så pass
 så småningom
 så snart som
 sådär
@@ -419,6 +409,7 @@ till
 till dess
 till exempel
 till fullo
+till godo
 till hands
 till känna
 till och med
@@ -427,15 +418,12 @@ till rätta
 till sist
 till slut
 till synes
-till vara
 tillbaka
 tillfälligtvis
-tillgodo
-tillhands
 tillika
-tillrätta
 tills vidare
 tillsammans
+tillvara
 tiotusentals
 troligen
 troligtvis
@@ -451,11 +439,11 @@ undantagsvis
 under
 ungefär
 upp
-upp och ner
 uppe
 uppenbarligen
 uppenbart
 uppför
+uppochned
 uppströms
 uppåt
 ursprungligen
@@ -518,7 +506,6 @@ ytterst
 österut
 östvart
 över
-över huvud taget
 överallt
 överens
 överhuvud
