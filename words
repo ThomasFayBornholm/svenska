@@ -96,7 +96,16 @@ let LAST_DEF = "";
 let LAST_CLASS = "all";
 let CONTROLS_VISIBLE=true;
 
+
 var TABS = [];
+
+document.addEventListener("visibilitychange", (event) => {
+	if (TABS.length > 0) {
+		if (document.visibilityState == "visible") {
+			editDef();
+		}
+	}
+});
 
 function startup() {
 	wordCount();
@@ -519,8 +528,7 @@ function linkSingleWord(def) {
 	return outDef;
 }
 
-function addLinks(refClass,def) {
-	console.log(def);
+function addLinks(refClass,def) {	
 	if (DEBUG) console.log("addLinks(), refClass = " + refClass + ", def = " + def);
 	if (def.indexOf(refClass) === -1) return def;
 	// Easiest to handle line by line and skip the lines without links
@@ -542,7 +550,6 @@ function addLinks(refClass,def) {
 				el = el.replaceAll("­","");
 				if (el.includes(m)) {
 					let rep = m + spanTmp.replaceAll("_w_",el.substr(m.length, el.length - m.length))
-					console.log(rep)
 					line = line.replace(el, rep);
 				} else {
 					let rep = spanTmp.replaceAll("_w_", el);
@@ -1535,7 +1542,7 @@ function setClassGuess() {
 	setClass(c);
 	seekWord(CUR_WORD);
 }
-function lookupManyWords(n) {
+function lookupManyWords(n) {	
 	// Clear existing tabs collection
 	TABS.length = 0;
 	n = 8;			
