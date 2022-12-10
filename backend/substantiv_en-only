@@ -2023,6 +2023,7 @@ grafit
 grammofonskiva
 gran
 granat
+grand
 grann
 granne
 grannfejd
@@ -3354,6 +3355,7 @@ legend
 legering
 legitimation
 legitimitet
+legoknekt
 leguan
 lek
 lekplats
@@ -3734,6 +3736,7 @@ misogyni
 miss
 missanpassning
 misshandel
+missil
 mission
 missionär
 missräkning
@@ -4696,6 +4699,7 @@ rival
 rivalitet
 rivning
 ro
+robot
 rock
 rock'n'roll
 rocka
@@ -4877,7 +4881,6 @@ sax
 saxofon
 scanner
 scen
-schal
 schlager
 sed
 sedel
@@ -5211,7 +5214,7 @@ snopp
 snurr
 snuskighet
 snuva
-snyfting
+snyftning
 snyltare
 snyltgäst
 snäppa
@@ -5258,14 +5261,13 @@ sopskyffel
 sorg
 sort
 sosse
-souterräng
 sovstad
 sovsäck
 sovvagn
 spackel
 spade
 spagat
-spaghetti
+spagetti
 spak
 spalt
 spaltmeter
@@ -5304,7 +5306,7 @@ spiral
 spiralrörelse
 spis
 spisel
-spishäll
+spiselhäll
 spjutkastning
 spjäla
 spjälsäng
@@ -5318,7 +5320,6 @@ sport
 sportgren
 sportvagn
 spray
-sprej
 spretighet
 spridning
 springare
@@ -5350,7 +5351,6 @@ stagnation
 stake
 stam
 stamfader
-stamfar
 stamp
 stamtavla
 standard
@@ -5596,7 +5596,6 @@ sympatisör
 syn
 synagoga
 synd
-synintryck
 synkop
 synkope
 synnerhet
@@ -5696,6 +5695,7 @@ tandval
 tandvärk
 tangent
 tanke
+tanks
 tant
 tantal
 tapp
@@ -6042,11 +6042,9 @@ under
 underarm
 underart
 underavdelning
-underbyxor
 undergång
 underhandling
 underhållning
-underkläder
 underlåtenhet
 underrättelse
 underrättelsetjänst
@@ -6056,7 +6054,6 @@ undersköterska
 undersökning
 undertröja
 undervisning
-undervisningstimma
 undervisningstimme
 undfallenhet
 undran
@@ -6243,7 +6240,6 @@ valfusk
 valkampanj
 valkrets
 vall
-vallag
 vallgrav
 vallokal
 vallåt
@@ -6419,7 +6415,6 @@ välgörenhet
 väljarbarometer
 väljare
 väljarkår
-väljarström
 vällukt
 välsignelse
 vämjelse
@@ -6448,7 +6443,7 @@ världsdel
 världsmakt
 världsmästare
 världsrymd
-världs­vana
+världsvana
 värme
 värmeanläggning
 värmebölja
