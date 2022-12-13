@@ -22,6 +22,7 @@ andraspråk
 anfall
 anförande
 angrepp
+anhållande
 ankare
 anlag
 anlopp
@@ -55,6 +56,7 @@ armbandsur
 armborst
 armod
 armveck
+armégevär
 arrangemang
 arsel
 arv
@@ -62,6 +64,7 @@ arvode
 arvsanlag
 attackplan
 attribut
+automatkarbin
 avancemang
 avbrott
 avbräck
@@ -125,6 +128,7 @@ beklagande
 bekymmer
 belopp
 belägg
+bemyndigande
 bemötande
 ben
 benbrott
@@ -143,8 +147,10 @@ bestånd
 besvär
 besök
 beta
+bete
 beteende
 beting
+bett
 betyg
 bevarande
 bevis
@@ -299,6 +305,7 @@ driftliv
 driv
 drivhus
 drivmedel
+dropp
 dråpslag
 dröjsmål
 dubbelspel
@@ -355,6 +362,7 @@ etage
 etui
 evangelium
 evenemang
+exempel
 exemplar
 exkrement
 experiment
@@ -598,6 +606,7 @@ griskött
 grodsim
 grums
 grundlag
+grupphus
 grus
 gruvschakt
 gry
@@ -775,6 +784,7 @@ järnbruk
 kaffe
 kakel
 kalas
+kalendarium
 kalenderår
 kall
 kalvkött
@@ -793,6 +803,7 @@ kast
 kattguld
 kavalleri
 kedjehjul
+kedjehus
 kejsarsnitt
 kex
 kilogram
@@ -869,7 +880,6 @@ korthus
 kortslutningsställe
 kortspel
 kostnadsläge
-kraftmoment
 kraftuttryck
 kraftverk
 kraftvärme
@@ -898,10 +908,13 @@ krångel
 kubikmått
 kuckel
 kugghjul
+kulsprutegevär
+kulsprutepistol
 kulturarv
 kulturkrig
 kungadöme
 kungarike
+kunnande
 kustområde
 kutter
 kuvert
@@ -954,6 +967,7 @@ landsmål
 landsting
 lantbruk
 larm
+lask
 lass
 latin
 lavaflöde
@@ -986,6 +1000,7 @@ lokomotiv
 lopp
 lov
 lovord
+ludd
 luftdrag
 luftförsvar
 luftherravälde
@@ -1204,6 +1219,7 @@ oljekraftverk
 oljepris
 oljud
 olycksfall
+omak
 ombud
 ombyte
 omdöme
@@ -1226,11 +1242,13 @@ organ
 original
 ovett
 oväder
+oväsen
 oxkött
 ozonskikt
 p-piller
 paket
 palats
+paltbröd
 panorama
 pansar
 pansarglas
@@ -1310,6 +1328,7 @@ prov
 prygel
 pränt
 psyke
+pulvrisera
 pund
 pundhuvud
 pussel
@@ -1507,6 +1526,7 @@ skrot
 skrotupplag
 skrov
 skrubbsår
+skrymteri
 skrälle
 skräp
 skrå
@@ -1567,6 +1587,7 @@ sms
 smultron
 smussel
 smycke
+smäll
 småbarn
 småföretag
 småhus
@@ -1674,6 +1695,7 @@ ströbröd
 strög
 studentförbund
 studium
+stup
 stycke
 styrdokument
 styre
@@ -1992,6 +2014,7 @@ välbefinnande
 välbehag
 välde
 välfärdssamhälle
+välljud
 välstånd
 vänsterparti
 väntrum
@@ -2020,6 +2043,7 @@ yttrande
 zoo
 ägande
 ägg
+äggviteämne
 äktenskap
 äldreboende
 ämbar

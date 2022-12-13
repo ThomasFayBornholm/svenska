@@ -557,7 +557,6 @@ attackplan
 attentat
 attityd
 attjo
-attonde
 attrahera
 attraherande
 attraktion
@@ -981,7 +980,6 @@ befalla
 befallning
 befara
 befattning
-befinna
 befinna sig
 befinnas
 befintlig
@@ -1036,7 +1034,6 @@ behaglig
 behandla
 behandling
 behov
-behäfta
 behäftad
 behärska
 behärska sig
@@ -1256,6 +1253,7 @@ betala
 betala av
 betala sig
 betalning
+bete
 bete sig
 beteckna
 betecknande
@@ -1291,6 +1289,7 @@ betydlig
 betyg
 betyg(s)sätta
 betäckning
+betänka
 beundra
 beundransvärd
 bevaka
@@ -1498,7 +1497,6 @@ blomvas
 blomvass
 blomställning
 blond
-blotställa
 blott
 blotta
 blottlägga
@@ -1626,6 +1624,7 @@ bortanför
 bortaplan
 bortarbeta
 bortavaro
+bortemot
 bortfall
 bortfinta
 bortföra
@@ -1693,6 +1692,7 @@ bransch
 brant
 braskande
 brasklapp
+brassa
 bratvurst
 bravo
 bre ut
@@ -2683,7 +2683,6 @@ dölja
 döma
 döma ut
 döpa
-döpa om
 dörr
 dörrklocka
 dörrknackning
@@ -3613,6 +3612,7 @@ frambringa
 framdel
 framdäck
 framfusig
+framför
 framför allt
 framföra
 framförallt
@@ -4025,7 +4025,6 @@ förbittring
 förbjuda
 förbjuden
 förbli
-förbliva
 förbluffa
 förbluffande
 förbrukare
@@ -4068,7 +4067,6 @@ fördärv
 fördöma
 fördömande
 före
-före detta
 förebild
 förebrå
 förebråelse
@@ -4080,7 +4078,6 @@ föredetta
 föredetting
 föredra
 föredrag
-föredraga
 föredragning
 föredragningslista
 föredöme
@@ -4126,8 +4123,6 @@ föresätta sig
 företa
 företa sig
 företag
-företaga
-företaga sig
 företagare
 företagsamhet
 företagsekonomi
@@ -4225,7 +4220,6 @@ förkastlig
 förklara
 förklaring
 förklä
-förkläda
 förkläde
 förknippa
 förkonstlad
@@ -4267,7 +4261,6 @@ förlåtelse
 förlöjliga
 förlöjligande
 förlöpa
-förlöra
 förlöra sig
 förman
 förmana
@@ -4525,6 +4518,7 @@ förvara
 förvaring
 förvarna
 förvarning
+förveda
 förverkliga
 förvilla
 förvirra
@@ -4731,7 +4725,6 @@ getost
 gevär
 gift
 gifta
-gifta bort
 gifta sig
 gifte
 giftermål
@@ -7347,7 +7340,6 @@ kraft
 kraftfull
 kraftig
 kraftlös
-kraftmoment
 kraftmätning
 kraftuttryck
 kraftverk
@@ -7573,7 +7565,6 @@ kust
 kustbevakning
 kustområde
 kustremsa
-kutrygg
 kutter
 kuttra
 kutym
@@ -7706,7 +7697,6 @@ kär
 kära
 kära ner sig
 käresta
-käring
 kärl
 kärlek
 kärlekgnabb
@@ -8650,7 +8640,6 @@ median
 mediaspråk
 medicin
 medicinsk
-mediesfär
 meditation
 medium
 medkänsla
@@ -9234,7 +9223,6 @@ namngiven
 namnkunnig
 namnskyddad
 namnteckning
-nanasekund
 nappa
 nappa till sig
 nappa åt sig
@@ -11997,7 +11985,6 @@ skattebetalare
 skattehöjning
 skattemedel
 skattepliktig
-skatterådgivare
 skattesänkning
 skava
 ske
@@ -12735,7 +12722,6 @@ sommar
 sommaraktig
 sommarlig
 sommarlov
-sommarskjuka
 sommarstuga
 somna
 somna in
@@ -12893,7 +12879,6 @@ sprattel
 sprattla
 spray
 spraya
-spreja
 spreta
 spretig
 spretighet
@@ -13293,6 +13278,7 @@ stum
 stund
 stundom
 stundtals
+stup
 stupa
 stupfull
 stupid
@@ -13917,7 +13903,6 @@ tekniskt
 teknologi
 teknologisk
 telefon
-telefonapp
 telefonera
 telefoni
 telefonkiosk
@@ -13983,7 +13968,6 @@ testamente
 testballong
 testikel
 testosteron
-teve
 text
 textil
 tia
@@ -15120,7 +15104,6 @@ utförlig
 utförsel
 utförsgåva
 utförsälja
-utförsäljing
 utge
 utge sig
 utgift
@@ -15508,7 +15491,6 @@ verksam
 verksamhet
 verkstad
 verkstadsindustri
-verkstan
 verkställa
 verkställande
 verkställande direktör
@@ -15629,7 +15611,6 @@ vindruta
 vindrutetorkare
 vindruva
 vindstilla
-ving
 vingbredd
 vinge
 vingla
@@ -16364,8 +16345,4 @@ zucchini
 övergrepp
 övergång
 överhuvud
-överhuvudtaget
-öve
-överkli
-översta
-�
+ö
