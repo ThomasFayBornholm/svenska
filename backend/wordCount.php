@@ -8,7 +8,7 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural","superlativ", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
+	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural","superlativ", "preposition", "pronomen", "interjektion", "fÃ¶rled", "slutled", "rÃ¤kneord", "subjunktion", "konjunktion"];
 
 	$nTot = 0;
 	$nAdj = 0;
@@ -55,9 +55,9 @@
 				$nInterjektion= count($words) -1;
 			} else if ($f_base === "pronomen") {
 				$nPronomen = count($words) -1;
-			} else if ($f_base === "förled") {
+			} else if ($f_base === "fÃ¶rled") {
 				$nPrefix = count($words) -1;
-			} else if ($f_base === "räkneord") {
+			} else if ($f_base === "rÃ¤kneord") {
 				$nNummer = count($words) - 1;
 			} else if ($f_base === "konjunktion") {
 				$nKonjunktion = count($words) - 1;
