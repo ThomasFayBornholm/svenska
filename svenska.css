@@ -279,6 +279,10 @@ label {
 	width: 66%;
 	height: 80pt;
 }
+.dropEl {
+	font-size: 24pt;
+	margin: 0pt;
+}
 #iShowBtn {
 	width: 256px;
 }
