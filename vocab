@@ -51,6 +51,7 @@
 	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="ScrollViewDownWrapper()" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
 		<span class="counts" id="iCnt">test</span>
 		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view" onmouseover="highlight(this,event)">Total</span>
+		<span class="counts" id="iScore">{Score}</span>
 		<span class="counts" id="iCntRegex"></span>
 		<div id="iDefDiv">
 			 <textarea  class="defBox" id="iDefText"></textarea>			 
@@ -114,6 +115,7 @@ document.addEventListener("visibilitychange", (event) => {
 function startup() {
 	wordCount();
 	getWords(-1);
+	updateScore();
 }
 
 function setN_CUR() {
@@ -171,7 +173,7 @@ function putDef(def) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
 	}
-	if (DEBUG) console.log("START putDef(def); def = " + def + "; SCROLL_INC = " + SCROLL_INC);
+	if (DEBUG) console.log("START putDef(def); def = '" + def + "'; SCROLL_INC = " + SCROLL_INC);
 	let processed = preProc(def);
 	def = processed[0];
 	meta = processed[1];
@@ -187,19 +189,54 @@ function putDef(def) {
 		$('#iDefText').val("");
 		$('#iDefDiv').css("display", "none");
 		// Reset highlighting of m	issing definition
-		LAST_OBJ.innerHTML = LAST_OBJ.innerText;
-		updateDef();
+		LAST_OBJ.innerHTML = LAST_OBJ.innerText;		
 		// Find last non-null tabindex
 		if (TABS.length > 0) {
 			let tmpInd = parseInt(SCROLL_INC) + parseInt(1);		
 			TABS[tmpInd].focus();
 			scrollDown()
 		}
-		updateDef()	
+		if (SCROLL_INC != N_FOUND-1) {
+			editNext()				
+		} else {
+			updateDef();
+			getWords();
+			updateScore();	
+		}
+		displaySelection();
 		// Race condition here between file write and def display	
+		/*
 		if (SCROLL_INC === (N_FOUND - 1)) {
 			lookupWord(LAST_OBJ,true,true);
 		}
+		*/
+	})
+	updateScore();
+}
+function updateScore() {
+	fetch('backend/getScore.php?class=' + CLASS, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		let score = 0;
+		if (N_TOT > 0) {
+			score = Math.round(json/(N_CUR*2) * 10000)/100;
+		}
+		if (CLASS === "all") {
+			$('#iScore').html("");
+		} else {
+			$('#iScore').html("{" + score + "%}");
+		}
+	})
+	.catch(error => {
+		console.log(error);
 	})
 }
 
@@ -284,18 +321,12 @@ function getWords(ind = INC) {
 				if (CLASS != "all") {
 					for (let i = 0; i < N_FOUND; i++) {
 						let tmp = "#w" + i;
-						if (score[i] >  4) {
+						if (score[i] > 1) {
 							$(tmp).css("color","darkgreen");
-						} else if (score[i] > 3) {
-							$(tmp).css("color","cadetblue");
-						} else if (score[i] > 2) {
-							$(tmp).css("color","steelblue");
-						} else if (score[i] > 1) {
-							$(tmp).css("color","sienna");
 						} else if (score[i] > 0) {
-							$(tmp).css("color","darkred");
+							$(tmp).css("color","steelblue");
 						} else {
-							$(tmp).css("color","black");
+							$(tmp).css("color","darkred");
 						}
 					}
 				}
@@ -877,6 +908,7 @@ function setClass(c, seek = "") {
 	setN_CUR();	
 	countDefs();
 	getWords(-1);
+	updateScore();
 	if (seek.length > 0) seekWord(seek);
 	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
 }
@@ -904,6 +936,7 @@ function countDefs() {
 }
 
 function editDef() {	
+	if (DEBUG) console.log("editDef()")
 	showWords();
 	$('#iDefDiv').css("display", "block");
 	$('#iDefText').focus();
@@ -1097,6 +1130,7 @@ function addMeta(def, regx) {
 	}
 	return def;
 }
+
 function grammer(def, rep) {
 	// Only one grammer expression is permitted
 	if (def.indexOf(rep) != -1) {
@@ -1107,7 +1141,7 @@ function grammer(def, rep) {
 	return def.replace(" " + rep, " (" + rep + ")");
 }
 function preProc(def) {
-	if (DEBUG) console.log("preProc(def(); def = " + def)
+	if (DEBUG) console.log("preProc(def(); def = '" + def + "'")
 	// return def and meta components
 	// Check if any meta information exists	
 	if (def[0] === " ") def = def.slice(1);
@@ -1227,6 +1261,7 @@ function preProc(def) {
 			s = addMeta(s,/var­dagligt; dialektalt/);
 			s = addMeta(s,/var­dagligt; ned­sättande/);
 			s = addMeta(s,/något ned­sättande/);
+			s = addMeta(s,/ned­sättande; ålderdomligt/);
 			s = addMeta(s, /var­dagligt; vanligen något ned­sättande/);
 			s = addMeta(s,/var­dagligt; ned\u00ADsättande/);
 			s = addMeta(s,/var­dagligt, ibland något ned­sättande/);
@@ -1687,8 +1722,8 @@ function closeDefs() {
 function ScoreDown(ev) {
 	if (DEBUG) console.log("ScoreDown()")
 	ev.preventDefault();
-	if (CUR_SCORE <= 1) {
-		CUR_SCORE = 5;
+	if (CUR_SCORE <= 0) {
+		CUR_SCORE = 2;
 	} else {
 		CUR_SCORE -= 1;
 	}
@@ -1696,14 +1731,35 @@ function ScoreDown(ev) {
 }
 function ScoreUp() {
 	if (DEBUG) console.log("ScoreUp()")
-	if (CUR_SCORE >=  5) {
-		CUR_SCORE = 1;
+	if (CUR_SCORE >=  2) {
+		CUR_SCORE = 0;
 	} else {
 		CUR_SCORE += 1;
 	}
 
 	$('#iSetScore').html(CUR_SCORE);
 }
-
+function keyNav(ev) {
+	ev.preventDefault();
+	console.log("nav");
+}
+function editNext() {
+	if (DEBUG) console.log("editNext()")
+	if (SCROLL_INC < N_FOUND-1) {
+		SCROLL_INC++;
+	}
+	let cur = "#w" + SCROLL_INC;
+	CUR_WORD = $(cur).text();
+	editDef();
+	// ToDo show any current definition
+}
+function displaySelection() {
+	for (let i = 0; i < N_FOUND; i++) {
+		let tmp = "#w" + i;
+		$(tmp).css("font-weight", "")
+	}
+	let cur = "#w" + SCROLL_INC;
+	$(cur).css("font-weight", "bold");
+}
 </script>
 </html>
