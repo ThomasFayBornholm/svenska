@@ -521,6 +521,7 @@ arvodesnämnd
 arvsanlag
 arvsmassa
 arvtagare
+as
 asbest
 asbestcement
 asch
@@ -959,7 +960,6 @@ bebåda
 bedja
 bedjande
 bedra
-bedraga
 bedragare
 bedrageri
 bedrift
@@ -1188,7 +1188,6 @@ beskäftig
 beskåda
 beslag
 beslagta
-beslagtaga
 beslut
 besluta
 besluta sig
@@ -1323,7 +1322,6 @@ biceps
 bida
 bidra
 bidrag
-bidraga
 bidragande
 bidragsgivare
 bidrottning
@@ -1454,7 +1452,6 @@ blindgata
 blindtarm
 blinka
 blinker
-bliva
 blivande
 blixt
 blixtlås
@@ -2217,14 +2214,12 @@ delegation
 delegera
 delfin
 delge
-delgiva
 delgivning
 delikat
 delmängd
 delning
 delstat
 delta
-deltaga
 deltagande
 deltagare
 deltid
@@ -2489,7 +2484,6 @@ drabba ihop
 drabba samman
 drabbning
 drag
-draga
 dragbasun
 dragkedja
 dragning
@@ -3024,6 +3018,7 @@ evighet
 evolution
 evolutionistisk
 evolutionär
+ex
 exakt
 exam
 examen
@@ -3232,7 +3227,6 @@ festival
 festlig
 fet
 fett
-fettfri
 fettsugning
 fiasko
 fiber
@@ -3338,6 +3332,7 @@ fjädra
 fjädrande
 fjädring
 fjäll
+fjälla
 fjällkedja
 fjällräv
 fjällvandra
@@ -3362,6 +3357,7 @@ flacka
 fladdermus
 fladdra
 fladdrig
+flaga
 flagga
 flak
 flamma
@@ -3537,7 +3533,6 @@ formel
 formell
 formellt
 formge
-formgiva
 formlig
 formlös
 formulera
@@ -3685,7 +3680,6 @@ fridfull
 fridsam
 frige
 frigiditet
-frigiva
 frigivning
 frigjord
 frigöra
@@ -3802,7 +3796,6 @@ frånsida
 frånskild
 frånstötande
 frånta
-fråntaga
 frånträda
 frånvarande
 frånvaro
@@ -4386,8 +4379,11 @@ förstahands
 förstahands-
 förstaplats
 förstaspråk
+förstatliga
 förstklassig
+förstocka
 förstone
+förstoppa
 förstora
 förstoring
 förstoringsglas
@@ -4574,6 +4570,7 @@ förödmjukad
 förödmjukande
 förövare
 fösa
+gadda ihop sig
 gaddstekel
 gaffel
 gaffeltruck
@@ -4752,11 +4749,9 @@ gissning
 gissningsvis
 gitarr
 gitta
-giva
 givakt
 givande
 givare
-givas
 given
 givetvis
 givmild
@@ -4833,7 +4828,6 @@ gnälla
 gnällig
 god
 god dag
-goddag
 godhet
 godhjärtad
 goding
@@ -4852,7 +4846,6 @@ godstrafik
 godståg
 godsägare
 godta
-godtaga
 godtagbar
 godtrogen
 godtycklig
@@ -5122,7 +5115,6 @@ gå igenom
 gå ihop
 gå in
 gå med
-gå ned
 gå ner
 gå på
 gå samman
@@ -5165,7 +5157,6 @@ ha sig
 habegär
 hack
 hacka
-hacka ned
 hacka ner
 hackig
 hackspett
@@ -5516,6 +5507,7 @@ horisontell
 hormon
 horn
 hornlös
+hos
 hosta
 hosta upp
 hostning
@@ -5879,7 +5871,6 @@ i år
 i övermorgon
 i övrigt
 iaktta
-iakttaga
 iakttagare
 iakttagelse
 ibland
@@ -6020,7 +6011,6 @@ incitament
 indefinit
 indelning
 index
-indicera
 indignation
 indignerad
 indikera
@@ -6077,7 +6067,6 @@ ingendera
 ingenjör
 ingenjörskonst
 ingenstans
-ingiva
 ingrepp
 ingripa
 ingripande
@@ -6149,7 +6138,6 @@ innebörd
 innefatta
 inneha
 innehav
-innehava
 innehåll
 innehålla
 innehållsförteckning
@@ -6653,7 +6641,6 @@ karriär
 karsk
 karta
 kartbild
-kartera
 kartlägga
 kartläggning
 kartograf
@@ -6799,7 +6786,6 @@ klenod
 klentrogen
 klenvuxen
 kleta
-kleta ned
 kleta ner
 kletig
 klia
@@ -6809,6 +6795,7 @@ klibbig
 klick
 klicka
 klient
+klimakterium
 klimat
 klimatfråga
 klimatförändring
@@ -6855,7 +6842,6 @@ klä upp
 klä ut
 kläcka
 kläcka ur sig
-kläda
 klädd
 klädhängare
 klädsel
@@ -6876,7 +6862,6 @@ klösa
 klöver
 knack
 knacka
-knacka ned
 knacka ner
 knacka på
 knacka ur
@@ -6970,7 +6955,6 @@ kok
 koka
 koka ihop
 koka in
-koka ned
 koka ner
 koka över
 kokbok
@@ -7014,7 +6998,6 @@ kolsyrad
 kolumn
 kombi
 kombination
-kombinatorik
 kombinera
 komedi
 kometkarriär
@@ -7331,7 +7314,6 @@ kostnad
 kostnadsfri
 kostsam
 kostym
-kostymbal
 kota
 kotte
 krabba
@@ -8540,7 +8522,6 @@ mask
 maska
 maska av
 maskera
-maskerad
 maskin
 maskineri
 maskinkod
@@ -8928,7 +8909,6 @@ monster
 monsun
 monter
 montera
-montera ned
 montera ner
 montering
 montör
@@ -11391,7 +11371,6 @@ räkna bort
 räkna ifrån
 räkna in
 räkna med
-räkna ned
 räkna ner
 räkna om
 räkna samman
@@ -11696,7 +11675,6 @@ se
 se bort
 se efter
 se fram
-se ned
 se ner
 se på
 se sig
@@ -12186,7 +12164,6 @@ skräcködla
 skräddare
 skräddarsy
 skräddarsydd
-skräddarsydda
 skrälla
 skrällande
 skrälle
@@ -13740,7 +13717,6 @@ sökande
 sökning
 sökt
 söktryck
-sölja
 söm
 sömma
 sömmerska
@@ -13806,7 +13782,6 @@ tacksam
 tacksägelse
 tafatt
 tag
-taga
 tagande
 tagen
 tagg
@@ -14025,7 +14000,6 @@ tillbörlig
 tilldela
 tilldelning
 tilldra sig
-tilldraga sig
 tilldragande
 tilldragelse
 tilldöma
@@ -14442,7 +14416,6 @@ trä
 träblåsinstrument
 träbock
 träd
-träda
 träda in
 trädgård
 trädgårdsarbete
@@ -15835,7 +15808,6 @@ värdelös
 värdemängd
 värdeneutral
 värdera
-värdera ned
 värdera ner
 värdera om
 värdera upp

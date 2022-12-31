@@ -1,4 +1,5 @@
 import json
+import os
 templateList='''<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="<class>_words">
@@ -17,7 +18,8 @@ template='''<?xml version="1.0" encoding="utf-8"?>
 </resources>'''
 
 wordClasses=("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "test")
-path = 'C:/Users/glatho01/AndroidStudioProjects/Svenska/app/src/main/res/values'
+home=os.environ["HOMEDRIVE"] + os.environ["HOMEPATH"]
+path = home + "/AndroidStudioProjects/Svenska/app/src/main/res/values"
 print("Writing output to path: " + path)
 for c in wordClasses:
     # Word listing

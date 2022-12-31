@@ -5,7 +5,7 @@
 	$trail = "-def";
 	$name = $class . $trail;
 	$contents = file_get_contents($path . $name, 'UTF-8');
-	$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
+	$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);	
 	$out = array("def"=>"", "meta"=>"");
 	if ($dict) {
 		if (array_key_exists($word, $dict)) {
@@ -14,9 +14,17 @@
 			$name = $class . "-meta";
 			$metaContents = file_get_contents($path . $name, 'UTF-8');
 			$metaDict = json_decode($metaContents, JSON_UNESCAPED_UNICODE);
+			$name = $class . "-score";
+			$scoreContents = file_get_contents($path . $name, 'UTF-8');
+			$scoreDict = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);
 			if ($metaDict != null) {
 				if (array_key_exists($word, $metaDict)) {
 					$out["meta"] = $metaDict[$word];
+				}
+			}
+			if ($scoreDict != null) {
+				if (array_key_exists($word, $scoreDict)) {
+					$out["score"] = $scoreDict[$word];
 				}
 			}
 			echo json_encode($out);
