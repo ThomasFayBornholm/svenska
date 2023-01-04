@@ -4,34 +4,68 @@
 	<script src="jquery-3.4.1.min.js"></script>
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-<div class="row columns_4" style="width: 400px">
+<body onload="init()">
+<div class="row columns_4" style="width: 400px">	
 	<div class="column" style="margin-right: 20px">
-		<p><audio controls autoplay>
-			<source src="sounds/ful.mp3" type="audio/mpeg">
+		<button id="btn1" class="b2" onclick="play1()">Ful / Full</button>		
+		<p><audio id="iFul" controls>
+			<source  src="sounds/ful.mp3" type="audio/mpeg">
 			Your browser does not support the audio element.
 		</audio></p>
-		<p><audio controls autoplay>
+		<p><audio id="iFull">
 			<source src="sounds/full.mp3" type="audio/mpeg">
 			Your browser does not support the audio element.
 		</audio></p>
-		<p><audio controls autoplay>
+	</div>
+	<div class="column" style="margin-right: 20px">
+		<button id="btn2" class="b2" onclick="play2()">Glas / Glass</button>
+		<p><audio id="iGlas" controls>
 			<source src="sounds/glas.mp3" type="audio/mpeg">
 			Your browser does not support the audio element.
 		</audio></p>
-		<p><audio controls autoplay>
+		<p><audio id="iGlass">
 			<source src="sounds/glass.mp3" type="audio/mpeg">
 			Your browser does not support the audio element.
 		</audio></p>
 	</div>
-	<div class="column">
-		<p style="font-size: 36px; margin-top: 20px; margin-bottom: 0px">Ful</p>
-		<p style="font-size: 36px; margin-top: 28px; margin-bottom: 0px">Full</p>
-		<p style="font-size: 36px; margin-top: 28px; margin-bottom: 0px">Glas</p>
-		<p style="font-size: 36px; margin-top: 28px; margin-bottom: 0px">Glass</p>
-	</div>
 </div>
 </audio><br>
 </div>
+<script>
+function init() {
+	var a1 = document.getElementById("iFul");
+	a1.addEventListener("timeupdate", function() {
+		if (a1.currentTime > 0.7) {
+			playFull()
+		}
+	})
+	size = "200px"
+	
+	$('#btn1').css("width", size)
+	var a3 = document.getElementById("iGlas");
+	a3.addEventListener("timeupdate", function() {
+		if (a3.currentTime > 0.8) {
+			playGlass()
+		}
+	})	
+	$('#btn2').css("width", size)	
+}
+function play1() {
+	var a = document.getElementById("iFul");
+	a.play()
+}
+function playFull() {
+	var a = document.getElementById("iFull");
+	a.play()
+}
+function play2() {
+	var a = document.getElementById("iGlas");
+	a.play()
+}
+function playGlass() {
+	var a = document.getElementById("iGlass");
+	a.play()
+}
+</script>
 </body>
 </html>

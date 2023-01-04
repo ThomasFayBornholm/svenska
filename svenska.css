@@ -95,7 +95,14 @@ h2 {
 	width: 42px;
 	vertical-align: bottom;
 }
-
+.redWord {
+	color: red;
+	cursor: pointer;
+}
+.blueWord {
+	color: blue;
+	cursor: pointer;
+}
 .bImg {
 	height: 100px;
 	width: 100px;
