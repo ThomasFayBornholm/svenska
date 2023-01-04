@@ -48,7 +48,7 @@
 		</div>
 		<p id="iWords" class="fmtWords">Test<br>Words</p>
 	</div>
-	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="ScrollViewDownWrapper()" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
+	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
 		<span class="counts" id="iCnt">test</span>
 		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view" onmouseover="highlight(this,event)">Total</span>
 		<span class="counts" id="iScore">{Score}</span>
@@ -227,12 +227,17 @@ function updateScore() {
 	.then(json => {
 		let score = 0;
 		if (N_TOT > 0) {
-			score = Math.round(json/(N_CUR*2) * 10000)/100;
+			score = Math.round(json["total"]/(N_CUR*2) * 10000)/100;
 		}
 		if (CLASS === "all") {
-			$('#iScore').html("");
+			score = Math.round(json["total"]/(N_TOT*2) * 100);
+			$('#iScore').html("{" + score + "%");
+			$('#iScore').html($('#iScore').html() + " " + json["greenCount"].toLocaleString('sv') + "}");			
 		} else {
-			$('#iScore').html("{" + score + "%}");
+			$('#iScore').html("{" + score + "%");
+			$('#iScore').html($('#iScore').html() + " <span class='redWord' onclick='nextWord(this,event)' oncontextmenu='nextWord(this,event)'>" + json["redCount"] + "</span>")
+			$('#iScore').html($('#iScore').html() + ";<span class='blueWord' onclick='nextWord(this,event)' oncontextmenu='nextWord(this,event)'>" + json["blueCount"] + "</span>")
+			$('#iScore').html($('#iScore').html() + "}");
 		}
 	})
 	.catch(error => {
@@ -489,8 +494,7 @@ function lookupWord(el,onlyLocal,inline) {
 					} else {
 						$('#iParDef').html("<b>" + word + ":</b><br>" + def);
 					}					
-					if (json["score"]) {
-						$('#iParDef').html($('#iParDef').html() + "<br>Score: <b>" + json["score"] + "</br>")
+					if (json["score"]) {						
 						CUR_SCORE = parseInt(json["score"]);
 					}
 					$('#iDefDiv').css("display", "none");
@@ -847,8 +851,8 @@ function seekWord(word) {
 					}
 					getWords(ind);
 				} else {
-					// If no match in specific class useful to show matches in other classes.
-					fetch('backend/getDefAll.php?word=' + word, {
+					// If no exact match then check for matching conjugations within class
+					fetch('backend/getConj.php?word=' + word + '&class=' + CLASS, {
 						method: 'get',
 						mode: 'cors',
 						headers: {
@@ -856,33 +860,74 @@ function seekWord(word) {
 						}
 					})
 					.then(response => {
-						return response.json();
+						return response.json()
 					})
 					.then(json => {
-						if (Object.keys(json).length > 0) {
-							let keys = Object.keys(json);	
-							if (keys.length === 1 && keys[0] != CLASS) {			
-								// Go direct to class if no ambiguity in found word(s)
-								setClass(keys[0]);
-								seekWord(word);
-							}
-							let def = "";
-							let delim ="";
-							let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";						
-							for (let i = 0; i < keys.length; i++) {			
-								let compDef = json[keys[i]];															
-								def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
-								delim="<br>";
-							}
-							LAST_DEF = def;
-							$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+						let res = json["word"];							
+						if (res != "") {								
+							setClass(json["class"],res);
 						} else {
-							$('#iParDef').html("No matches in any word class.");
+							// If no match in specific class useful to show matches in other classes.
+							fetch('backend/getDefAll.php?word=' + word, {
+								method: 'get',
+								mode: 'cors',
+								headers: {
+									'Content-Type': 'application/json'
+								}
+							})
+							.then(response => {
+								return response.json();
+							})
+							.then(json => {
+								if (Object.keys(json).length > 0) {
+									let keys = Object.keys(json);	
+									if (keys.length === 1 && keys[0] != CLASS) {			
+										// Go direct to class if no ambiguity in found word(s)
+										setClass(keys[0]);
+										seekWord(word);
+									}
+									let def = "";
+									let delim ="";
+									let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";						
+									for (let i = 0; i < keys.length; i++) {			
+										let compDef = json[keys[i]];															
+										def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
+										delim="<br>";
+									}
+									LAST_DEF = def;
+									$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+								} else {
+									// If no match then try to find match in conjugations					
+									fetch('backend/getConj.php?word=' + word + "&class=all", {
+										method: 'get',
+										mode: 'cors',
+										headers: {
+											'Content-Type': 'application/json'							
+										}
+									})
+									.then(response => {
+										return response.json()
+									})
+									.then(json => {
+										if (json["word"] != "") {									
+											setClass(json["class"],json["word"]);
+										} else {								
+											$('#iParDef').html("No matches in any word class.");	
+										}
+									})
+									.catch(error => {
+										console.log(error);
+									})					
+								}
+							})
+							.catch(error => {
+								console.log(error);
+							})
 						}
 					})
 					.catch(error => {
 						console.log(error);
-					})
+					})										
 				}
 			})
 			.catch(error => {
@@ -937,10 +982,12 @@ function countDefs() {
 
 function editDef() {	
 	if (DEBUG) console.log("editDef()")
-	showWords();
-	$('#iDefDiv').css("display", "block");
-	$('#iDefText').focus();
-	$('#iSetScore').html(CUR_SCORE);
+	if ($('#iParDef').text() != "") {
+		showWords();
+		$('#iDefDiv').css("display", "block");
+		$('#iDefText').focus();
+		$('#iSetScore').html(CUR_SCORE);
+	}
 }
 function editDefWrapper(e) {
 	e.preventDefault()
@@ -1760,6 +1807,52 @@ function displaySelection() {
 	}
 	let cur = "#w" + SCROLL_INC;
 	$(cur).css("font-weight", "bold");
+}
+function clickMiddle(ev) {
+	if (DEBUG) console.log("clickMiddle()");
+	ev.preventDefault();			
+	if (ev.target.style.cursor != "pointer" && ev.target.className != "redWord" && ev.target.className != "blueWord") {
+		if ($('#iDefDiv').css("display") === "none" && $('#iParDef').text() === "") { 
+			let btn = ev.button;
+			if (btn === 0) {
+				scrollViewDown()
+			} else {
+				scrollViewUp(ev)
+			}	
+		}
+	}
+}
+function getCurr() {
+	if (SCROLL_INC === -1) {
+		return INC
+	} else {
+		return (parseInt(INC) + parseInt(SCROLL_INC))
+	}
+}
+function nextWord(el,ev) {
+	ev.preventDefault();
+	if (DEBUG) console.log("nextWord()")
+	// Find the next word with the relevant score
+	updateScore();
+	let score = 0;
+	if (el.className === "blueWord") score = 1
+	let back = ev.button === 2;
+	fetch('backend/getNextWord.php?class=' + CLASS + '&start=' + getCurr() + '&score=' + score + '&back=' + back, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json()
+	})
+	.then(json => {
+		seekWord(json);
+	})
+	.catch(error => {
+		console.log(error)
+	})		
 }
 </script>
 </html>
