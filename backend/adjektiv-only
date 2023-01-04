@@ -16,6 +16,7 @@ affärsmässig
 afghansk
 afrikansk
 aggressiv
+agnatisk
 akademisk
 aktiv
 aktsam
@@ -46,10 +47,8 @@ andlig
 androgen
 angelägen
 angenäm
-angivande
 angränsande
 anhörig
-anmäld
 anmärkningsvärd
 annorlunda
 annuell
@@ -65,7 +64,6 @@ anständig
 anstötlig
 ansvarig
 ansvarsfull
-antagen
 antik
 antitetisk
 antropocentrisk
@@ -106,7 +104,6 @@ avhängig
 avhållsam
 avig
 avkopplad
-avkopplande
 avlagd
 avliden
 avlägsen
@@ -118,8 +115,6 @@ avsiktlig
 avskild
 avskyvärd
 avslappnad
-avsliten
-avslutande
 avspänd
 avstressad
 avtagande
@@ -418,6 +413,7 @@ död
 dödlig
 döv
 efemär
+effektfull
 effektiv
 efterbliven
 efterföljande
@@ -585,7 +581,6 @@ fjollig
 fjompig
 fjuttig
 fjäderklädd
-fjädrande
 fjärran
 flack
 fladdrig
@@ -644,6 +639,7 @@ fredsam
 frejdig
 frekvensberoende
 frenetisk
+frestande
 fri
 fridfull
 fridsam
@@ -892,6 +888,7 @@ gravid
 grekisk
 grekisk-ortodox
 gripande
+gripen
 grov
 grumlig
 grumsig
@@ -1167,6 +1164,7 @@ intorkad
 intressant
 intresserad
 intresseväckande
+intrikat
 invecklad
 invers
 invändig
@@ -1263,6 +1261,7 @@ klurig
 kluven
 klädd
 klädsam
+klämmig
 knal
 knallhård
 knaper
@@ -1274,6 +1273,7 @@ knuten
 knäpp
 knölig
 kobent
+kognatisk
 kognitiv
 koko
 kokt
@@ -1288,6 +1288,7 @@ kommersiell
 kommunal
 kommunistisk
 kompakt
+komparativ
 kompetent
 komplett
 komplex
@@ -1446,6 +1447,7 @@ linjär
 listig
 liten
 litterär
+liturgisk
 livad
 livaktig
 livfull
@@ -1617,6 +1619,7 @@ misslyckad
 misslynt
 missmodig
 missnöjd
+missriktad
 misstrogen
 misstänksam
 misstänkt
@@ -2005,6 +2008,7 @@ oskattbar
 oskiljbar
 oskyldig
 oskön
+osmidig
 osnygg
 osolidarisk
 ostadig
@@ -2117,6 +2121,7 @@ platonsk
 platt
 plausibel
 plump
+plural
 plågsam
 plötslig
 poetisk
@@ -2216,6 +2221,7 @@ regional
 reglerbar
 regnig
 regressiv
+reguljär
 rejäl
 reko
 rekorderlig
@@ -2323,6 +2329,7 @@ sammanlagd
 sammansatt
 sammansvetsad
 sammantagen
+samstämmig
 samtida
 samtidig
 samtlig
@@ -2343,6 +2350,7 @@ sedesam
 sedeslös
 sedvanlig
 seg
+sekret
 sekulär
 sekunda
 sekundär
@@ -2360,6 +2368,7 @@ sexbent
 sexsiffrig
 sexuell
 silveraktig
+singular
 sinnlig
 sinnrik
 sionistisk
@@ -2425,7 +2434,6 @@ skruvad
 skrynklig
 skräckblandad
 skräddarsydd
-skrällande
 skrämmande
 skräpig
 skrå
@@ -2481,6 +2489,7 @@ smärre
 smärt
 smärtsam
 smärtstillande
+små
 småaktig
 småtrevlig
 snabb
@@ -2490,6 +2499,7 @@ snarstucken
 snaskig
 sniken
 snillrik
+snopen
 snuskig
 snygg
 snäll
@@ -2531,7 +2541,6 @@ spikrak
 spinkig
 spirituell
 spontan
-sporrande
 sportslig
 spretig
 spridd
@@ -2707,6 +2716,7 @@ tillgänglig
 tillhörande
 tillknäppt
 tillmötesgående
+tillplattad
 tillräcklig
 tillrådlig
 tillsagd
@@ -2902,6 +2912,7 @@ uttrycksfull
 uttråkad
 uttröttad
 uttunnad
+uttömmande
 utvald
 utvecklingsstörd
 utvändig
@@ -3034,6 +3045,8 @@ världslig
 världsomfattande
 världsvan
 värnpliktig
+värre
+värst
 väsentlig
 västerländsk
 västlig
@@ -3106,6 +3119,7 @@ yttre
 överordnad
 överraskad
 överskådlig
+överspelad
 översvallande
 översynt
 övertygad
