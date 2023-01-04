@@ -28,6 +28,7 @@
 					echo json_encode($ind);
 					return;
 				}
+				/* No fuzzy matches now, prefer to match conjugations instead
 				// First non-exact match after current selection prioritised 
 				if ($ind > $INC) {
 					if ($match === -1) {
@@ -39,6 +40,7 @@
 						$match2 = $ind;
 					}
 				} 
+				*/
 			}
 		}
 		$ind++;

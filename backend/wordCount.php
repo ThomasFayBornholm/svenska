@@ -36,35 +36,35 @@
 			$words = preg_split("/\r\n|\r|\n/", $contents);
 
 			if ($f_base === "adjektiv") {
-				$nAdj = count($words) - 1;	 
+				$nAdj = count($words);	 
 			} else if ($f_base === "verb") {
-				$nVerb = count($words) - 1;
+				$nVerb = count($words);
 			} else if ($f_base === "adverb") {
-				$nAdverb = count($words) - 1;
+				$nAdverb = count($words);
 			} else if ($f_base === "substantiv_en") {
-				$nSub_en = count($words) - 1;
+				$nSub_en = count($words);
 			} else if ($f_base === "substantiv_ett") {
-				$nSub_ett = count($words) - 1;
+				$nSub_ett = count($words);
 			} else if ($f_base === "plural") {
-				$nPlural = count($words) - 1;
+				$nPlural = count($words);
 			} else if ($f_base === "superlativ") {
-				$nSuperlativ = count($words) - 1;
+				$nSuperlativ = count($words);
 			} else if ($f_base === "preposition") {
-				$nPreposition= count($words) -1;
+				$nPreposition= count($words);
 			} else if ($f_base === "interjektion") {
-				$nInterjektion= count($words) -1;
+				$nInterjektion= count($words);
 			} else if ($f_base === "pronomen") {
-				$nPronomen = count($words) -1;
+				$nPronomen = count($words);
 			} else if ($f_base === "förled") {
-				$nPrefix = count($words) -1;
+				$nPrefix = count($words);
 			} else if ($f_base === "räkneord") {
-				$nNummer = count($words) - 1;
+				$nNummer = count($words);
 			} else if ($f_base === "konjunktion") {
-				$nKonjunktion = count($words) - 1;
+				$nKonjunktion = count($words);
 			} else if ($f_base === "subjunktion") {
-				$nSubjunktion = count($words) - 1;
+				$nSubjunktion = count($words);
 			} else if ($f_base === "slutled") {
-				$nSlutled = count($words) - 1;			
+				$nSlutled = count($words);			
 			}
 		}
 		fclose($infile);
