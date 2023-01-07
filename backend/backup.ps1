@@ -9,3 +9,5 @@ for ($i = 0; $i -lt $arr.count; $i++) {
 	$name = $arr[$i] + "-meta";
 	Copy-Item $name $dest;
 }
+
+Copy-Item -recurse -force C:\xampp\htdocs\svenska "C:\Users\SETHFAY\"

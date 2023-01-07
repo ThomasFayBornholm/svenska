@@ -51,7 +51,7 @@
 	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
 		<span class="counts" id="iCnt">test</span>
 		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view" onmouseover="highlight(this,event)">Total</span>
-		<span class="counts" id="iScore">{Score}</span>
+		<span class="counts" "score" id="iScore">{Score}</span>
 		<span class="counts" id="iCntRegex"></span>
 		<div id="iDefDiv">
 			 <textarea  class="defBox" id="iDefText"></textarea>			 
@@ -100,6 +100,8 @@ let CONTROLS_VISIBLE=true;
 
 let CUR_SCORE = 5;
 var TABS = [];
+var REGEX_WORDS = [];
+var N_REGEX = 0;
 
 var COLORS = ["red", "blue", "green"];
 
@@ -197,7 +199,8 @@ function putDef(def) {
 			scrollDown()
 		}
 		if (SCROLL_INC != N_FOUND-1) {
-			editNext()				
+			updateScore();
+			editNext();		
 		} else {
 			updateDef();
 			getWords();
@@ -227,7 +230,7 @@ function updateScore() {
 	.then(json => {
 		let score = 0;
 		if (N_TOT > 0) {
-			score = Math.round(json["total"]/(N_CUR*2) * 10000)/100;
+			score = Math.round(json["total"]/(N_CUR*2) * 100);
 		}
 		if (CLASS === "all") {
 			score = Math.round(json["total"]/(N_TOT*2) * 100);
@@ -249,8 +252,15 @@ function changeInc(delta) {
 	if (INC + delta > N_CUR) {
 		INC = INC;
 	} else {
-		INC += delta
+		if (N_REGEX > 0) {
+			if (INC + delta < N_REGEX) {			
+				INC += delta
+			}
+		} else {
+			INC += delta
+		}
 	}
+
 	if (INC < 0) {
 		INC = 0;
 	}
@@ -265,88 +275,112 @@ function nextID(id) {
 	}
 }
 function advance() {
+	if (DEBUG) console.log("advance()");
 	changeInc(N_INC)
 	getWords(-1)
 }
 function retreat(e) {
+	if (DEBUG) console.log("retreat()");
 	e.preventDefault()
 	changeInc(-N_INC)
 	getWords(-1)
 }
 function getWords(ind = INC) {
 	// Ind is used to highlight and lookup a given word index from the returned list
-	// Global INC is used to get the starting index of the returned list
-	
-	if (DEBUG) console.log("getWords(), ind = " + ind + ", INC = ", + INC);
+	// Global INC is used to get the starting index of the returned list	
+	if (DEBUG) console.log("getWords(), ind = " + ind + ", INC = ", + INC);	
 	SCROLL_INC=-1;
 	N_FOUND=0;
 	$('#iParDef').text("");
-	fetch("backend/getWords.php?class=" + CLASS + "&start=" + INC + "&num=" + N_INC, {
+	if (N_REGEX > 0) {
+		list = REGEX_WORDS[ind];	
+		N_FOUND = N_REGEX - ind;
+		if (N_FOUND > N_INC) N_FOUND = N_INC;	
+		for (i = ind+1; i < N_FOUND + ind; i++) {
+			list += "," + REGEX_WORDS[i];
+		}
+		displayWords(list,-1)
+	} else {
+		fetch("backend/getWords.php?class=" + CLASS + "&start=" + INC + "&num=" + N_INC, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json',
+			}
+		})
+		.then(response => {
+			return response.json()
+		})
+		.then(json => {			
+			let lastJson = json;
+			N_FOUND=json.length;
+			if (N_FOUND > 0) {
+				let list = json[0];
+				let scores = [];
+				for (i = 1; i < N_FOUND; i++) {
+					list += "," + json[i];
+				}			
+				displayWords(list,ind)
+			}
+		})
+		.catch(error => {
+			console.log(error)
+		})
+	}
+	if (DEBUG) console.log("END getWords(ind); ind = " + ind + ", N_FOUND = " + N_FOUND);
+}
+
+function displayWords(list,ind) {
+	if (DEBUG) console.log("displayWords(), list = " + list + ", ind = " + ind)
+	let out = ""
+	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
-			'Content-Type': 'application/json',
+			'Content-Type': 'application/json'
 		}
 	})
 	.then(response => {
-		return response.json()
+		return response.json();
 	})
 	.then(json => {
-		let lastJson = json;
-		let out = ""
-		N_FOUND=json.length;
-		if (N_FOUND > 0) {
-			let list = json[0];
-			let scores = [];
-			for (i = 1; i < N_FOUND; i++) {
-				list += "," + json[i];
-			}			
-			fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list, {
-				method: 'get',
-				mode: 'cors',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {
-				return response.json();
-			})
-			.then(json => {
-				res = json["stat"];
-				let score = json["score"];
-				let del = "";
-				for (let i = 0; i < N_FOUND; i++) {
-					let tmp = 1 << i;
-					let hasDef = (res & tmp);
-					out += del + popSpan(i, lastJson[i],hasDef) 
-					del = "<br>";
-				}
-				$('#iWords').html(out);
-				// Formwatting to show score indicators
-				if (CLASS != "all") {
-					for (let i = 0; i < N_FOUND; i++) {
-						let tmp = "#w" + i;
-						if (score[i] > 1) {
-							$(tmp).css("color","darkgreen");
-						} else if (score[i] > 0) {
-							$(tmp).css("color","steelblue");
-						} else {
-							$(tmp).css("color","darkred");
-						}
-					}
-				}
-				showWords();				
-				countDefs();
-				if (ind > -1) {
-					let el = document.getElementById("w" + ind);
-					lookupWord(el,false,true);
-				}
-				if (DEBUG) console.log("getWords(ind); ind = " + ind + ", N_FOUND = " + N_FOUND);
-			})
-			.catch(error => {
-				console.log(error);
-			})
+		res = json["stat"];
+		let score = json["score"];
+		let del = "";
+		let words = list.split(",");	
+		N_FOUND = words.length;		
+		for (let i = 0; i < N_FOUND; i++) {
+			let tmp = 1 << i;
+			let hasMeta = (res & tmp);
+			out += del + popSpan(i, words[i],hasMeta) 
+			del = "<br>";
 		}
+		$('#iWords').html(out);
+		// Formwatting to show score indicators
+		if (CLASS != "all") {
+			for (let i = 0; i < N_FOUND; i++) {
+				let tmp = "#w" + i;
+				if (score[i] > 1) {
+					$(tmp).css("color","darkgreen");
+				} else if (score[i] > 0) {
+					$(tmp).css("color","steelblue");
+				} else {
+					$(tmp).css("color","darkred");
+				}
+			}
+		}
+		showWords();				
+		countDefs();
+		
+		if (ind > -1) {
+			let el = document.getElementById("w" + ind);
+			lookupWord(el,false,true);
+		}
+		
+		
+	})
+	.catch(error => {
+		console.log(error);
 	})
 }
 
@@ -354,14 +388,22 @@ function scrollViewDown() {
 	if (DEBUG) console.log("scrollViewDown() begin");
 	changeInc(N_INC);
 	$('iDefDiv').css("display", "none");
-	getWords(-1);
+	if (N_REGEX > 1) {
+		getWords();
+	} else {
+		getWords(-1);
+	}
 	showWords();
 }
 function scrollViewUp(e) {
 	e.preventDefault();
 	if (DEBUG) console.log("scrollViewUp() begin");
 	changeInc(-N_INC);
-	getWords(-1);
+	if (N_REGEX > 1) {
+		getWords();
+	} else {
+		getWords(-1);
+	}
 	showWords();
 }
 function scrollView(e) {
@@ -408,11 +450,11 @@ function updateDef() {
 	let el = document.getElementById(id);
 	lookupWord(el,true,true);
 }
-function popSpan(i, w, hasDef) {
+function popSpan(i, w, hasMeta) {
 	tmp = "<span id='w<i>' onclick='lookupWord(this,false,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
-	if (DEBUG) console.log("popSpan(i=" + i + ",w=" + w + ",hasDef=" + hasDef + ")");
+	if (DEBUG) console.log("popSpan(i=" + i + ",w=" + w + ",hasMeta=" + hasMeta + ")");
 	tmp = tmp.replace("<i>",i)
-	if (hasDef || CLASS === "all") {
+	if (hasMeta || CLASS === "all") {
 		tmp = tmp.replaceAll("<w>",w);
 	} else { 
 		tmp = tmp.replaceAll("<w>","<i>" + w + "</i>");
@@ -630,6 +672,8 @@ function addLinks(refClass,def) {
 	return def;
 }
 function followLink(el) {
+	N_REGEX = 0;
+	REGEX_WORDS = [];
 	let word = el.innerText;
 	let rep = word.match(/\s/);
 	if (rep != null) {
@@ -767,17 +811,21 @@ function seekWordWrapper(e) {
 	seekWord(word);
 }
 function seekWord(word) {	
-	if (word[0] === "." || word[word.length-1] === "." || word.indexOf('+') != -1) {		
+	REGEX_WORDS = [];
+	if (word[word.length-1] === "." || word.indexOf('+') != -1) {		
 		addWord();
 		return;
+	}
+	// Strip trailing white space
+	
+	while (word.substr(word.length-1) === " ") {
+		word = word.substr(0,word.length-1)
 	}
 	$('#iCntRegex').html("");
 	// Regex support
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
 	reg2 = word.indexOf("$") != -1 || word.indexOf("[") != -1 || word.indexOf("]") != -1;
-	if (reg1 || reg2) {
-		// Will return first match
-		
+	if (reg1 || reg2) {				
 		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
 			method: 'get',
 			mode: 'cors',
@@ -789,27 +837,22 @@ function seekWord(word) {
 			return response.json()
 		})
 		.then(json => {
-			if (json.length > 0) {
-				// Write the first n matches to the page
-				N_FOUND = json.length;			
-				let del = "";
-				let out = "";
-				for (let i = 0; i < N_FOUND; i++) {				
-					let tmp = 1 << i;
-					let hasDef = (res & tmp);
-					out += del + popSpan(i, json[i],hasDef) 
-					del = "<br>"
-				}
-				$('#iCntRegex').html("*" + N_FOUND + "*");
-				$('#iWords').html(out);
-				showWords();				
-				countDefs();
-			}
+			REGEX_WORDS = json;			
+			N_REGEX = json.length;			
+			$('#iScore').html("");
+			$('#iCntRegex').html("*" + N_REGEX + "*");			
+			if (N_REGEX > 0) {
+				INC = 0;
+				SCROLL_INC = -1;
+				getWords(INC)
+			}			
 		})
 		.catch(error => {
 			console.log(error);
 		})
 	} else {
+		REGEX_WORDS = [];
+		N_REGEX = 0;
 		// Special exception for two special pronouns
 		if (word != "Ers" && word != "Eders") word = word.toLowerCase()
 		if (word === '') {
@@ -940,6 +983,9 @@ function seekWord(word) {
 
 function setClass(c, seek = "") {
 	LAST_CLASS = CLASS;
+	REGEX_WORDS = [];
+	N_REGEX = 0;
+	$('#iCntRegex').html("");
 	$('#iDefDiv').css("display", "none");
 	$('#iWords').css("visibility", "visible");
 	if (c != "all") {
@@ -1107,7 +1153,7 @@ function addWord() {
 		$('#iSeek').val(word);
 		
 	}
-	let del = word[0] === '.' || word[word.length-1] === ".";
+	let del = word[word.length-1] === ".";
 	if (word[0] === '.') word = word.slice(1,word.length);
 	if (word[word.length-1] === '.') word = word.slice(0,word.length-1);
 	if (word.length > 0) {
@@ -1600,6 +1646,7 @@ function  fmtVerbApart(s,regx) {
 			let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_", repWord);
 			// Allow user to match only a single verb word
 			link = link.replaceAll(" __","");
+			link = link.replaceAll("___", " ");
 			s = s.replace(m[0],"(" + m[1] + link + ")");			
 		}
 	}

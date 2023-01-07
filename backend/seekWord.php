@@ -22,12 +22,13 @@
 				return;
 			}
 		} else {
-			// Prefer exact matches
-			if (str_contains($w, $word)) {
-				if ($w === $word) {
-					echo json_encode($ind);
-					return;
-				}
+			$fuzzyE = str_replace("é","e",$w);
+			$fuzzyE = str_replace("é","e",$fuzzyE);
+			// Prefer exact matches			
+			if ($w === $word || $fuzzyE === $word) {
+				echo json_encode($ind);
+				return;
+			}			
 				/* No fuzzy matches now, prefer to match conjugations instead
 				// First non-exact match after current selection prioritised 
 				if ($ind > $INC) {
@@ -41,7 +42,6 @@
 					}
 				} 
 				*/
-			}
 		}
 		$ind++;
 	}
