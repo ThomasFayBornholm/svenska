@@ -20,6 +20,7 @@ affirmera
 aga
 agera
 agglomerera
+aggregera
 akta
 akta sig
 aktivera
@@ -468,8 +469,6 @@ bottna
 boxas
 braka
 brassa
-bre ut
-bre ut sig
 breda
 breda ut
 breda ut sig
@@ -676,6 +675,7 @@ driva
 droga
 droppa
 drunkna
+drunkning
 dryfta
 drämma
 dränera
@@ -699,6 +699,7 @@ dyka
 dyka upp
 dyrka
 dyrka upp
+dämma
 dämpa
 dänga
 dåna
@@ -808,6 +809,7 @@ felcitera
 festa
 fiffa upp
 fiffla
+fika
 filea
 filma
 filtrera
@@ -944,8 +946,10 @@ fundera
 fungera
 funka
 fuska
+fuskåka
 fylla
 fylla i
+fylla upp
 fyra av
 fysiljera
 fälla
@@ -969,6 +973,8 @@ fåra
 föda
 födas
 följa
+följa med
+följa upp
 föra
 föra bort
 föra fram
@@ -1565,6 +1571,7 @@ göra av
 göra bort
 göra bort sig
 göra upp
+göra åt
 ha
 hacka
 hacka ner
@@ -1740,6 +1747,7 @@ implicera
 implodera
 imponera
 importera
+improvisera
 inandas
 inarbeta
 inbegripa
@@ -1806,6 +1814,7 @@ insjukna
 inskeppa
 inskola
 inskränka
+inskärpa
 insomna
 inspektera
 inspela
@@ -2530,6 +2539,9 @@ notera
 nubba
 nybilda
 nynna
+nypa
+nypa till
+nypas
 nyrekrytera
 nysa
 nysta
@@ -3084,6 +3096,7 @@ skaka
 skala
 skalla
 skallra
+skandalisera
 skandera
 skapa
 skarva
@@ -3204,6 +3217,8 @@ skära till
 skära upp
 skärma av
 skärpa
+skärpa in
+skärpa sig
 skärskåda
 skåda
 skåra
@@ -3238,6 +3253,7 @@ sluka
 slunga
 sluta
 sluta om
+sluta sig
 sluta upp
 slutföra
 slutta
@@ -3823,8 +3839,15 @@ tjalla
 tjata
 tjattra
 tjuta
+tjuvhålla
+tjuvkika
+tjuvkoppla
 tjuvlyssna
 tjuvstarta
+tjuvtitta
+tjuvträna
+tjuvåka
+tjäla
 tjäna
 tjäna av
 tjäna ut
@@ -4288,6 +4311,7 @@ vräka i sig
 vräka sig
 vräka ur sig
 vråla
+vurpa
 väcka
 väcka upp
 vädja

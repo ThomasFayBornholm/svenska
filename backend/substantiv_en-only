@@ -477,6 +477,7 @@ bellis
 belysning
 belysningsarmatur
 belägenhet
+beläggning
 belåtenhet
 belöning
 bemanning
@@ -627,6 +628,7 @@ blodgivning
 blodkropp
 blodpalt
 blodplasma
+blodshämnd
 blodsugare
 blodundersökning
 blodåder
@@ -647,6 +649,7 @@ blues
 bluff
 blunder
 blus
+blyerts
 blyertspenna
 blåbär
 blåklocka
@@ -1123,6 +1126,7 @@ domare
 domherre
 domicil
 dominans
+dominant
 domkraft
 domkyrka
 domstol
@@ -1477,7 +1481,6 @@ fingernagel
 fink
 finländare
 finländska
-finmekanik
 fint
 fiol
 firma
@@ -2210,6 +2213,7 @@ halt
 halva
 halvering
 halvfabrikat
+halvfart
 halvledare
 halvlek
 halvmåne
@@ -2276,6 +2280,7 @@ hedning
 hejduk
 hela
 helfabrikat
+helfart
 helg
 helgdag
 helhet
@@ -2339,6 +2344,7 @@ ho
 hobby
 hockey
 holk
+holme
 holmgång
 homosexualitet
 hona
@@ -2441,7 +2447,12 @@ härskare
 härstamning
 härva
 häst
+hästansikte
+hästgård
+hästkraft
+hästskjuts
 hävd
+hävstång
 häxa
 håbrand
 håg
@@ -2485,6 +2496,7 @@ höjdpunkt
 höjning
 hök
 höna
+hönsgård
 hörlur
 hörntand
 hörsel
@@ -2729,6 +2741,7 @@ kabel
 kabeljo
 kabin
 kabyss
+kadens
 kaffeböna
 kaffekopp
 kaffemaskin
@@ -3236,6 +3249,7 @@ kula
 kuling
 kull
 kulle
+kullerbytta
 kulmen
 kulpenna
 kulspetspenna
@@ -3288,6 +3302,7 @@ kvarsittning
 kvarstad
 kvart
 kvartil
+kvartsfart
 kvast
 kviga
 kvinna
@@ -3861,6 +3876,7 @@ monter
 montering
 montör
 moped
+mopp
 mor
 moral
 morbror
@@ -4440,6 +4456,7 @@ plåtskada
 poesi
 poet
 pojke
+pojkspoling
 pojkvän
 poker
 pol
@@ -4589,6 +4606,7 @@ pundare
 pung
 punkt
 punktering
+puns
 pupill
 purjolök
 puta
@@ -4945,6 +4963,7 @@ sammanställning
 sammansvärjning
 sammansättning
 sammanvägning
+samordnare
 samordning
 samregering
 samstämmighet
@@ -5264,6 +5283,7 @@ släpkärra
 släpvagn
 slätt
 slå
+slåtter
 slåttermaskin
 slöja
 slöjd
@@ -5300,6 +5320,7 @@ snarkning
 snaskighet
 snickare
 snigel
+snipa
 snippa
 snirkel
 snittmängd
@@ -5313,6 +5334,7 @@ snuva
 snyftning
 snyltare
 snyltgäst
+snäcka
 snäppa
 snärt
 snö
@@ -5346,6 +5368,7 @@ sommar
 sommarsjuka
 sommarstuga
 son
+sonata
 sond
 sonhustru
 sopa
@@ -5628,6 +5651,7 @@ stöt
 stötfångare
 stöttrupp
 stövel
+subdominant
 subjektivitet
 subjunktion
 substans
@@ -5806,6 +5830,7 @@ tandval
 tandvärk
 tangent
 tanke
+tankemöda
 tanks
 tant
 tantal
@@ -5936,7 +5961,14 @@ tjur
 tjurved
 tjusning
 tjuv
+tjuvgömma
+tjuvjakt
+tjuvnad
+tjuvsena
+tjuvskytt
 tjuvstart
+tjuvåkare
+tjäle
 tjänare
 tjänst
 tjänsteman
@@ -5959,7 +5991,9 @@ tonart
 tonbildning
 tonfisk
 tonhöjd
+tonika
 tonsill
+tonsättare
 tonvikt
 tonåring
 topp
@@ -6021,6 +6055,7 @@ treklang
 trend
 trevare
 triangel
+triathlon
 trilla
 trilska
 trimaran
@@ -6078,6 +6113,7 @@ tuba
 tubkikare
 tuff
 tuggtobak
+tukt
 tull
 tullkontor
 tulpan
@@ -6134,6 +6170,7 @@ täckdikning
 tändsticka
 täppa
 tärna
+tät
 tätort
 tätting
 tävling
@@ -6319,6 +6356,7 @@ utrustning
 utrymning
 uträkning
 utsaga
+utsida
 utsikt
 utskrift
 utskyld
@@ -6376,6 +6414,8 @@ valp
 valprövningsnämnd
 valross
 valrörelse
+vals
+valsverk
 valuta
 vampyr
 vana
@@ -6427,6 +6467,7 @@ vedersakare
 vektor
 velociped
 ven
+vendetta
 ventil
 veranda
 verifikation
@@ -6514,6 +6555,7 @@ viträv
 vits
 vodka
 volleyboll
+volt
 volym
 votering
 vovve
@@ -6524,6 +6566,7 @@ vråk
 vrångbild
 vulkan
 vurm
+vurpa
 vy
 väckarklocka
 väckelse
@@ -6631,6 +6674,7 @@ whiteboard
 yacht
 yllefilt
 yllesocka
+yngling
 ynnest
 yoghurt
 yrkesskola
