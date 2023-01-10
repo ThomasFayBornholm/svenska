@@ -18,9 +18,15 @@ alkali
 allting
 allvar
 alster
+anbud
+andante
+andedrag
+andelsboende
 andetag
+andningshål
 andraspråk
 anfall
+anfallskrig
 anförande
 angrepp
 anhållande
@@ -42,8 +48,10 @@ apotek
 apropå
 arbetarparti
 arbete
+arbetsavtal
 arbetsbetyg
 arbetsbi
+arbetsbord
 arbetsliv
 arbetsrum
 arbetssätt
@@ -330,8 +338,10 @@ dödsstraff
 e-mail
 edikt
 efterled
+eftermäle
 efternamn
 efterskott
+eftertryck
 ego
 ekipage
 eko
@@ -435,6 +445,7 @@ folk
 folkmord
 folkmål
 folkparti
+folkslag
 folkuniversitet
 fonem
 fordon
@@ -468,6 +479,7 @@ fruktkött
 fruntimmer
 frysfack
 frändskap
+fräs
 frågetecken
 frö
 fröämne
@@ -494,6 +506,7 @@ får
 fårkött
 fåtal
 födelsenummer
+fögderi
 fönster
 förakt
 förband
@@ -566,6 +579,7 @@ galler
 galleri
 gap
 garage
+garde
 garn
 garnityr
 garv
@@ -614,6 +628,7 @@ grannland
 grannskap
 grepp
 griskött
+groddjur
 grodsim
 grums
 grundlag
@@ -724,7 +739,12 @@ hålslag
 hån
 hånskratt
 hår
+håravfall
+hårbalsam
+hårband
+hårburr
 hårrör
+hårvatten
 högblad
 högfrekvensegenskap
 högkvarter
@@ -1039,6 +1059,7 @@ lyft
 lynne
 lysrör
 lyte
+läder
 läge
 läger
 lägerbål
@@ -1102,6 +1123,7 @@ medlemskap
 medlemsland
 medlemstapp
 medlidande
+medlut
 medvetande
 mejl
 mejlsvar
@@ -1121,6 +1143,7 @@ migrationsverk
 miljöparti
 milligram
 mindretal
+mineral
 mineralvatten
 minfält
 mingel
@@ -1179,6 +1202,7 @@ museum
 musiköra
 mutbrott
 mynt
+mys
 mysterium
 människorov
 märke
@@ -1220,9 +1244,11 @@ norrsken
 nu
 nuläge
 nummer
+nybygge
 nyhetsbrev
 nyhetsflöde
 nyp
+nyttodjur
 nyår
 näringsliv
 näringsvärde
@@ -1429,10 +1455,12 @@ ringfinger
 ringrev
 ris
 rivjärn
+rofferi
 rop
 ros
 rotsystem
 rottecken
+rov
 rovdjur
 rum
 rus
@@ -1475,6 +1503,7 @@ samlag
 samlingsbegrepp
 samliv
 sammanbrott
+sammandrag
 sammanhang
 sammanträde
 sammanträffande
@@ -1485,6 +1514,7 @@ samsyn
 samtal
 samtycke
 samvete
+sandrev
 scenario
 sceneri
 schack
@@ -1511,6 +1541,7 @@ sigill
 signalement
 signalhorn
 sikte
+silke
 sinne
 sinnelag
 sjukhus
@@ -1547,6 +1578,7 @@ skjutvapen
 skolbarn
 skollov
 skott
+skottår
 skov
 skrammel
 skratt
@@ -1556,6 +1588,7 @@ skri
 skriftspråk
 skrik
 skrin
+skript
 skrivande
 skrivbord
 skrot
@@ -1710,6 +1743,7 @@ stim
 stipendium
 stjärnsystem
 sto
+stoff
 stoft
 stop
 stopmått
@@ -1920,6 +1954,7 @@ tält
 tänkande
 tänkespråk
 tåg
+tågvirke
 tålamod
 töcken
 u-land
@@ -2058,6 +2093,7 @@ vridmoment
 vrål
 vykort
 väder
+väderkorn
 vägavgiftsställe
 vägguttag
 välbefinnande
@@ -2160,3 +2196,4 @@ zoo
 övertramp
 övervägande
 övervåld
+övningsämne
