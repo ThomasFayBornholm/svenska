@@ -40,7 +40,7 @@
 				</div>
 			</div>		
 			<p class="debug" id="iDebugTxt"></p>
-			<form onsubmit="seekWordWrapper(event)">
+			<form onsubmit="seekWordWrapper(event)" onkeydown="checkDelete(event)">
 				<input title="Search for word, has regex support.&#10Right-click for svenska.se lookup" id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">		
 				<img title="Left click: add word to store*&#10;Right click: guess class&#10;*(suffix word with '.' char to delete from current word class listing" class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">
 				<img title="Back to last view" class="b2" src="img/leftArrow.png" id="iLast" onclick="seekWord('')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
@@ -54,11 +54,16 @@
 		<span class="counts" "score" id="iScore">{Score}</span>
 		<span class="counts" id="iCntRegex"></span>
 		<div id="iDefDiv">
+			<button class="putMore" onclick="putMore('KONSTRUKTION')">Kons</button>			 			 
+			<button class="putMore" onclick="putMore('EXEMPEL')">Ex</button>
+			<button class="putMore" onclick="putMore('HISTORIK')">Hist</button>
+			<button class="putMore" onclick="putMore('DET ATT')">Det att</button>
 			 <textarea  class="defBox" id="iDefText"></textarea>			 
 			 <button id = "iSetScore" class="putDef" onclick="ScoreUp()", oncontextmenu="ScoreDown(event)">Score</button>
 			 <button class="putDef" onclick="putDef('')">Put</button>			 			 
-		</div>
+		</div>		
 		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDefWrapper(event)"></p>		
+		
 		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 	</div>
 	<div id="iRight" class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)" title="Navigation: left/scroll down = forward, right click/scroll up = back"></div>	
@@ -97,7 +102,7 @@ let DEBUG=false;
 let LAST_DEF = "";
 let LAST_CLASS = "all";
 let CONTROLS_VISIBLE=true;
-
+let SHOW_MORE = false;
 let CUR_SCORE = 5;
 var TABS = [];
 var REGEX_WORDS = [];
@@ -199,8 +204,9 @@ function putDef(def) {
 			scrollDown()
 		}
 		if (SCROLL_INC != N_FOUND-1) {
-			updateScore();
-			editNext();		
+			updateDef();
+			getWords();
+			updateScore();	
 		} else {
 			updateDef();
 			getWords();
@@ -238,8 +244,8 @@ function updateScore() {
 			$('#iScore').html($('#iScore').html() + " " + json["greenCount"].toLocaleString('sv') + "}");			
 		} else {
 			$('#iScore').html("{" + score + "%");
-			$('#iScore').html($('#iScore').html() + " <span class='redWord' onclick='nextWord(this,event)' oncontextmenu='nextWord(this,event)'>" + json["redCount"] + "</span>")
-			$('#iScore').html($('#iScore').html() + ";<span class='blueWord' onclick='nextWord(this,event)' oncontextmenu='nextWord(this,event)'>" + json["blueCount"] + "</span>")
+			$('#iScore').html($('#iScore').html() + " <span class='redWord' onclick=seekWord('redwords') oncontextmenu='nextWord(this,event)'>" + json["redCount"] + "</span>")
+			$('#iScore').html($('#iScore').html() + ";<span class='blueWord' onclick=seekWord('bluewords') oncontextmenu='nextWord(this,event)'>" + json["blueCount"] + "</span>")
 			$('#iScore').html($('#iScore').html() + "}");
 		}
 	})
@@ -462,7 +468,7 @@ function popSpan(i, w, hasMeta) {
 	return tmp
 }
 
-function lookupWord(el,onlyLocal,inline) {
+function lookupWord(el,onlyLocal,inline) {	
 	if (el) {
 		if (LAST_OBJ) {
 			LAST_OBJ.style.fontWeight="";
@@ -501,8 +507,8 @@ function lookupWord(el,onlyLocal,inline) {
 					def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
 					delim="<br>";
 				}
-				LAST_DEF = def;
-				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+				LAST_DEF = def;				
+				displayDef(def);						
 				return;
 			})
 			.catch(error => {
@@ -531,11 +537,9 @@ function lookupWord(el,onlyLocal,inline) {
 					}
 					def = makeLinks(def);
 					if (meta.length > 0) {										
-						def = fmtMeta(meta) + def;
-						$('#iParDef').html(def);
-					} else {
-						$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-					}					
+						def = fmtMeta(meta) + def;					
+					}
+					displayDef(def,word);											
 					if (json["score"]) {						
 						CUR_SCORE = parseInt(json["score"]);
 					}
@@ -563,6 +567,12 @@ function lookupWord(el,onlyLocal,inline) {
 			console.log("lookupWord(" +  word + ")");
 		}
 	}
+}
+function displayDef(def,word) {
+	let tmp = "<span onclick=toggleMore() title='Show More' onmouseover=highlight(this,event)>" + word + "</span>";
+	def = def.replace(word,tmp);
+	$('#iParDef').html(def)
+	SHOW_MORE = false;
 }
 // Make links to referenced words
 function makeLinks(def) {
@@ -812,6 +822,13 @@ function seekWordWrapper(e) {
 }
 function seekWord(word) {	
 	REGEX_WORDS = [];
+	if (word === "next") {
+		scrollViewDown();
+		return;
+	} else if (word === "prev") {
+		scrollViewUp(event);
+		return;
+	}
 	if (word[word.length-1] === "." || word.indexOf('+') != -1) {		
 		addWord();
 		return;
@@ -825,6 +842,7 @@ function seekWord(word) {
 	// Regex support
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
 	reg2 = word.indexOf("$") != -1 || word.indexOf("[") != -1 || word.indexOf("]") != -1;
+	scoreMatch = word.indexOf("redwords") != -1 || word.indexOf("bluewords") != - 1;
 	if (reg1 || reg2) {				
 		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
 			method: 'get',
@@ -846,6 +864,33 @@ function seekWord(word) {
 				SCROLL_INC = -1;
 				getWords(INC)
 			}			
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	} else if (scoreMatch) {
+		let score = 0;
+		if (word === "bluewords") score = 1;		
+		fetch('backend/scoreMatch.php?class=' + CLASS + '&score=' + score, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			REGEX_WORDS = json;			
+			N_REGEX = json.length;			
+			$('#iScore').html("");
+			$('#iCntRegex').html("*" + N_REGEX + "*");			
+			if (N_REGEX > 0) {
+				INC = 0;
+				SCROLL_INC = -1;
+				getWords(INC)
+			}
 		})
 		.catch(error => {
 			console.log(error);
@@ -930,7 +975,7 @@ function seekWord(word) {
 										seekWord(word);
 									}
 									let def = "";
-									let delim ="";
+									let delim ="";									
 									let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";						
 									for (let i = 0; i < keys.length; i++) {			
 										let compDef = json[keys[i]];															
@@ -1143,6 +1188,7 @@ function removeClassDesc(word) {
 			
 }
 function addWord() {
+	CUR_SCORE = 1;
 	if (DEBUG) console.log("addWord()");
 	let word = $('#iSeek').val();	
 	if (word.indexOf('+') != -1) {
@@ -1352,7 +1398,9 @@ function preProc(def) {
 			s = addMeta(s,/hög­tidligt/);					
 			s = addMeta(s,/något var­dagligt/);		
 			s = addMeta(s,/var­dagligt; dialektalt/);
+			s = addMeta(s,/var­dagligt; något ned­sättande/);
 			s = addMeta(s,/var­dagligt; ned­sättande/);
+			s = addMeta(s,/ibland något ned­sättande/);
 			s = addMeta(s,/något ned­sättande/);
 			s = addMeta(s,/ned­sättande; ålderdomligt/);
 			s = addMeta(s, /var­dagligt; vanligen något ned­sättande/);
@@ -1577,6 +1625,7 @@ function preProc(def) {
 			s = grammer(s,"äv. två ord");
 			s = grammer(s,"ofta två ord");
 			s = grammer(s,"i negerade samman­hang");
+			s = grammer(s,"ofta i negerade ut­tryck");	
 			s = grammer(s,"i negerade ut­tryck");
 			s = grammer(s, "i ett få­tal ut­tryck");
 			s = grammer(s, "i negerade el. frågande samman­hang");
@@ -1900,6 +1949,61 @@ function nextWord(el,ev) {
 	.catch(error => {
 		console.log(error)
 	})		
+}
+function putMore(header) {
+	if (DEBUG) console.log("putMore()")
+	let more = $('#iDefText').val();
+	more = more.replaceAll("\n","<br>");
+	fetch('backend/putMore.php?word=' + CUR_WORD + '&class=' + CLASS + '&header=' + header + '&more=' + more, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		//Done
+		$('#iDefText').val("");
+	})
+	.catch(error => {
+		console.log(error)
+	})
+}
+function toggleMore() {	
+	if (SHOW_MORE === false) {
+		fetch('backend/showMore.php?class=' + CLASS + '&word=' + CUR_WORD, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json()
+		})
+		.then(json => {					
+			if (json.length === 0) {
+				$('#iParDef').html($('#iParDef').html() + "<span id='iMore'><br>No more information to show<br>" + json + "</span>");		
+			} else {
+				$('#iParDef').html($('#iParDef').html() + "<span id='iMore'><br><br>" + json + "</span>");		
+			}
+			SHOW_MORE = true;			
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	} else {
+		$('#iMore').remove();
+		SHOW_MORE = false;
+	}
+}
+function checkDelete(ev) {
+	if (ev.key === "Escape") {
+		$('#iSeek').val("");
+	}
 }
 </script>
 </html>
