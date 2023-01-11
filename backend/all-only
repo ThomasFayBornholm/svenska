@@ -2063,6 +2063,7 @@ cirkla
 cirkulation
 cirkulationsplats
 cirkulera
+cirkulär
 cirkus
 ciselera
 cistern
@@ -4680,6 +4681,7 @@ genomgång
 genomklang
 genomlysa
 genomlysning
+genomskinlig
 genomslag
 genomslagskraft
 genomsläpplig
@@ -4937,6 +4939,7 @@ grodd
 grodsim
 grop
 grosshandel
+grotesk
 grotta
 grov
 grovlek
@@ -5807,6 +5810,7 @@ höjdpunkt
 höjning
 höjningstecken
 hök
+hölja
 hölje
 höna
 hönsa
@@ -7409,6 +7413,7 @@ krosskada
 krubba
 kruka
 krukväxt
+krullig
 krumbukt
 krusbär
 kruserlig
@@ -9395,6 +9400,7 @@ nudel
 nuförtiden
 nuläge
 numera
+numerär
 nunna
 nutid
 nutida
@@ -9540,6 +9546,7 @@ nötkreatur
 nötkött
 o
 oacceptabel
+oaktat
 oaktsam
 oangenäm
 oanständig
@@ -10032,6 +10039,7 @@ osynlig
 osäker
 osäkerhet
 osäljbar
+osökt
 otalig
 otidsenlig
 otillbörlig
@@ -10707,6 +10715,7 @@ punktladdning
 pupill
 purjolök
 pussel
+pusta
 puta
 putjolök
 puts
@@ -12948,7 +12957,6 @@ staket
 stall
 stam
 stamfader
-stamm
 stamma
 stamnät
 stamord
@@ -13214,6 +13222,7 @@ strålsjuk
 strålskada
 stråt
 stråtrövare
+strö
 ströbröd
 strög
 ström
@@ -13560,6 +13569,7 @@ synkopera
 synlig
 synnerligen
 synnerv
+synonym
 synpunkt
 synsätt
 syntes
@@ -13699,6 +13709,7 @@ sårbar
 sås
 såsom
 såvida
+såvitt
 såväl
 söderut
 södra
@@ -13836,6 +13847,7 @@ tantal
 tapp
 tappa
 tapper
+tappt
 tarm
 tarvlig
 tas
@@ -16002,9 +16014,7 @@ zucchini
 ägodel
 äkta
 äktenskap
-äldre
 äldreboende
-äldst
 älg
 älska
 älsklig

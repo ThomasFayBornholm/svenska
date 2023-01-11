@@ -133,6 +133,7 @@ avfyra
 avfärda
 avföra
 avge
+avgifta
 avgränsa
 avgå
 avgöra
@@ -518,10 +519,13 @@ brådska
 bråka
 bua
 bubbla
+buga
+buga sig
 bukta
 bukta sig
 bulla upp
 bullra
+bunkra
 bura in
 burka
 busa
@@ -899,6 +903,7 @@ fostra
 fotografera
 fragmentera
 frakta
+frambesvärja
 frambringa
 framföda
 framföra
@@ -948,6 +953,9 @@ fråga sig
 fråga ut
 frångå
 frånta
+fröjda
+fröjda sig
+fröjdas
 fukta
 fullborda
 fullfölja
@@ -1349,6 +1357,7 @@ förtrycka
 förtryta
 förtränga
 förtrösta
+förtröttas
 förtulla
 förtunna
 förtvina
@@ -1453,6 +1462,7 @@ generera
 gengälda
 geniförklara
 genljuda
+genmäla
 genomdriva
 genomflyta
 genomföra
@@ -1470,6 +1480,7 @@ gilla
 gina
 gippa
 gissa
+gissa sig till
 gissla
 gitta
 gjuta
@@ -1622,6 +1633,7 @@ heja på
 hejda
 hemförlova
 hemlighålla
+hemsöka
 heta
 hetsa
 hetsa upp
@@ -1727,8 +1739,12 @@ hålla ut
 hållas
 håna
 håra
+hårdna
+hårdra
+hårdträna
 högakta
 höja
+hölja
 hönsa
 höra
 höra av
@@ -1819,8 +1835,10 @@ innefatta
 inneha
 innehålla
 innesluta
+inpassa
 inpränta
 inrama
+inreda
 inrikta
 inringa
 inropa
@@ -1877,6 +1895,7 @@ irra
 irritera
 irritera sig
 isa
+isa ner
 iscensätta
 isolera
 ituta
@@ -1915,6 +1934,7 @@ kamma in
 kamouflera
 kanalisera
 kandidera
+kanota
 kantra
 kapa
 kapa åt sig
@@ -1939,6 +1959,7 @@ kela
 kidnappa
 kika
 kila
+kinesa
 kirra
 kisa
 kissa
@@ -2127,6 +2148,8 @@ krocka
 kroka
 krossa
 krubba
+krusa
+krusa sig
 krydda
 krylla
 krympa
@@ -2532,6 +2555,7 @@ nationalisera
 navigera
 nedbringa
 nedgradera
+nedisa
 nedkämpa
 nedlägga
 nedmontera
@@ -2638,6 +2662,7 @@ omvärdera
 omväxla
 omändra
 onanera
+ondgöra sig
 ondulera
 oordna
 operera
@@ -2675,6 +2700,7 @@ pantförskriva
 pantsätta
 para
 para sig
+paradera
 parafera
 paralysera
 parasitera
@@ -2792,6 +2818,7 @@ pulvrisera
 pumpa
 punga ut
 punktera
+pusta
 puta
 putsa
 putta
@@ -2914,10 +2941,12 @@ rigga upp sig
 rigla
 rikta
 rikta sig
+rimma
 ringa
 ringa in
 ringa på
 ringa ut
+ringakta
 rinna
 rinna av
 rinna upp
@@ -2944,6 +2973,7 @@ rotera
 rubba
 rubricera
 rucka
+rufsa
 ruinera
 ruinera sig
 rulla
@@ -2975,6 +3005,7 @@ rymma
 rymma ut
 rymmas
 rynka
+rysa
 ryta
 räcka
 räcka till
@@ -3209,11 +3240,14 @@ skrymta
 skrynkla
 skryta
 skräcka
+skräda
 skräddarsy
 skrälla
 skrämma
+skräna
 skräpa
 skrävla
+skråla
 skugga
 skuldsätta
 skulptera
@@ -3575,6 +3609,7 @@ sträcka sig
 sträva
 stråla
 stråla samman
+strö
 strömma
 ströva
 studera
@@ -3659,6 +3694,7 @@ sula
 summa
 summera
 supa
+supera
 sura
 surfa
 surra
@@ -3829,6 +3865,7 @@ tillerkänna
 tillfoga
 tillfredsställa
 tillfriskna
+tillfråga
 tillfångata
 tillföra
 tillgodogöra sig
@@ -3869,6 +3906,7 @@ tillämpa
 tillåta
 tillåta sig
 tillönska
+timra
 tina
 tippa
 tipsa
@@ -3908,7 +3946,9 @@ tona fram
 tona ner
 tonsätta
 toppa
+topprida
 torde
+torgföra
 torka
 torka in
 torka inne
@@ -3925,6 +3965,7 @@ trampa upp
 trampa ur
 trampa över
 transformera
+transitera
 transkribera
 transpirera
 transplantera
@@ -3943,6 +3984,7 @@ trilla
 trilskas
 trimma
 trissa
+triumfera
 trivas
 trixa
 trixa sig
@@ -3952,6 +3994,11 @@ trolla fram
 trolova
 trotsa
 trubba
+trumfa
+trumfa i
+trumfa igenom
+trumfa in
+trumfa över
 trumma
 trumma ihop
 trumma in
@@ -3978,6 +4025,7 @@ tråka ut
 tråla
 trösta
 trötta
+trötta ut
 tröttna
 tugga
 tulla
@@ -4048,6 +4096,7 @@ underhandla
 underhålla
 underkasta
 underkasta sig
+underkuva
 underkänna
 underlägga sig
 underlätta
@@ -4185,6 +4234,8 @@ utföra
 utförsälja
 utge
 utge sig
+utgjuta
+utgjuta sig
 utgå
 utgöra
 uthärda
@@ -4250,6 +4301,7 @@ utvärdera
 utöka
 utöva
 vackla
+vada
 vagga
 vagga in
 vaja
@@ -4263,6 +4315,7 @@ valla
 valsa
 vandra
 vanhedra
+vanka
 vanpryda
 vansköta
 vantrivas
@@ -4284,6 +4337,7 @@ vattna sig
 vattna ur
 vecka
 vederböra
+vederfaras
 vederlägga
 verifiera
 verka
@@ -4462,6 +4516,7 @@ yttra sig
 åberopa sig
 åderlåta
 ådra
+åhöra
 åka
 åka dit
 åka fast
@@ -4551,6 +4606,7 @@ yttra sig
 övergiva
 överglänsa
 övergå
+överhölja
 överklaga
 överlappa
 överleva
@@ -4576,6 +4632,7 @@ yttra sig
 överta
 övertala
 övertolka
+övertrumfa
 överträda
 överträffa
 övertyga
