@@ -42,19 +42,24 @@
 				
 				$lineOne = $lines[0];
 				if ($word != "eller") {
-					$lineOne = str_replace("eller", "", $lineOne);
+					$lineOne = str_replace("eller ", "", $lineOne);
 				}
 				if ($word != "komparitiv") {
-					$lineOne = str_replace("komparitiv", "", $lineOne);
+					$lineOne = str_replace("komparitiv ", "", $lineOne);
 				}
 				if ($word != "superlativ") {
-					$lineOne = str_replace("superlativ", "", $lineOne);
+					$lineOne = str_replace("superlativ ", "", $lineOne);
+				}				
+				if ($word != "objektsform") {
+					$lineOne = str_replace("objektsform ", "", $lineOne);
 				}
+
 				foreach($meta as $m) {
 					$lineOne = str_replace($m,"",$lineOne);
 				}	
 				
 				$words = explode(" ",$lineOne);
+				
 				$firstConj = $words[0];
 				foreach($words as $w) {					
 					$w = str_replace("~",$firstConj, $w);					
@@ -62,8 +67,15 @@
 					$fuzzyE = str_replace("é","e",$fuzzyE);						
 					if ($word === $w or $word === $fuzzyE or (str_contains($lineOne,$word) and $el === "adverb")) {		
 						if (str_contains($lineOne,$rest)) {				
-							$keyCount = count(explode(" ", $key));
+							$keyCount = count(explode(" ", $key));	
+							// Enforce same number of words in "stored key" (from file) and "search word" (from user)
+							// Exception of above for adverbs, e.g. "i kväll" and "ikväll" shall be equivalent.
 							if ($nFind === $keyCount || $el === "adverb") {
+								if ($el === "adverb") {
+									echo $lineOne . "<br>";
+									echo $words[1] . "<br>";
+									echo $w . "<br>";																		
+								}
 								$out["class"] = $el;
 								$out["word"] = $key;
 								echo json_encode($out);
