@@ -439,6 +439,7 @@ banan
 banbrytare
 banderoll
 bandit
+bandy
 banger
 banhoppning
 bank
@@ -638,6 +639,7 @@ bilväg
 bindare
 bindel
 bindning
+bindsle
 binga
 binokel
 bio
@@ -1286,6 +1288,7 @@ dynamik
 dynamo
 dynasti
 dynga
+dysenteri
 dysfori
 dyskalkyli
 dyslexi
@@ -1315,10 +1318,13 @@ efterbildning
 efterfrågan
 eftergift
 efterhand
+efterhandskonstruktion
 efterkommande
+efterkonstruktion
 efterkrigstid
 efterkälken
 eftermiddag
+efterrationalisering
 efterrätt
 efterrättelse
 eftersläpning
@@ -1974,6 +1980,7 @@ förpliktelse
 förplägnad
 förrgår
 förrädare
+förrätt
 försakelse
 församling
 församlingsfrihet
@@ -2207,6 +2214,7 @@ graviditet
 graviditetstest
 gravitet
 gravyr
+gravör
 grej
 grek
 gren
@@ -2392,6 +2400,8 @@ hastighet
 hastighetstävling
 hatt
 haubits
+havandeskapsförgiftning
+haverist
 havre
 havsgräns
 havshorisont
@@ -2800,10 +2810,12 @@ intagning
 integration
 integritet
 intelligens
+intendent
 intention
 interferens
 interjektion
 international
+internatskola
 internetsida
 interpellation
 intervju
@@ -3290,6 +3302,7 @@ konsulent
 konsult
 konsultation
 konsument
+konsumentförening
 konsumtion
 kontakt
 kontaktlins
@@ -3311,6 +3324,7 @@ konvergens
 konversation
 konvoj
 konvulsion
+kooperation
 koordinat
 koordinator
 kopia
@@ -3602,6 +3616,7 @@ landsman
 landsort
 landsting
 landsväg
+landsättning
 lanka
 lantbrukare
 lanterna
@@ -3691,6 +3706,7 @@ lista
 liter
 litteratur
 liturgi
+livbåt
 livmoder
 livränta
 livscykel
@@ -3707,6 +3723,7 @@ ljuspunkt
 ljusstake
 lo
 lock
+logi
 logik
 logo
 logoped
@@ -4035,6 +4052,7 @@ misogyni
 miss
 missanpassning
 misshandel
+misshällighet
 missil
 mission
 missionär
@@ -4386,6 +4404,7 @@ obalans
 obduktion
 obegriplighet
 objektivitet
+objektsform
 obligation
 oboe
 observation
@@ -4642,6 +4661,7 @@ personlighet
 persontrafik
 personuppgift
 pessimist
+pest
 petitess
 pianist
 piga
@@ -4667,6 +4687,7 @@ piruett
 piska
 pist
 pistasch
+pistol
 pitt
 pizza
 pjäs
@@ -5049,6 +5070,7 @@ revetera
 revisor
 revolt
 revolution
+revolver
 revy
 revyartist
 ribba
@@ -5098,6 +5120,7 @@ rubrik
 ruccola
 ruccolasallad
 ruelse
+rugby
 rulle
 rullning
 rullskridsko
@@ -5179,6 +5202,7 @@ råvara
 rödbeta
 rödförskjutning
 rödräv
+rödsot
 röja
 rök
 rökdetektor
@@ -5820,6 +5844,7 @@ stekpanna
 stekvändare
 sten
 stenkoll
+stensöta
 stentorsstämma
 stereo
 stereotyp
@@ -6150,6 +6175,7 @@ tantal
 tapp
 tappt
 tarm
+tass
 tatuering
 tavla
 taxering
@@ -6613,6 +6639,9 @@ uppsättning
 uppsökning
 uppteckning
 upptäckt
+upptäcktsfärd
+upptäcktsresa
+upptäcktsresande
 uppvaktning
 uppvärmning
 uppväxt
@@ -6764,6 +6793,7 @@ vantrivsel
 vanära
 vapensköld
 vapenstillestånd
+vapenvila
 var
 vara
 varaktighet
