@@ -101,6 +101,7 @@ avtal
 avtalsbråk
 avtryck
 avträde
+ax
 axiom
 axplock
 bad
@@ -284,6 +285,7 @@ dagis
 dagsläge
 damm
 damspel
+dass
 datum
 decennium
 dekret
@@ -384,6 +386,7 @@ etage
 etui
 evangelium
 evenemang
+event
 ex
 exempel
 exemplar
@@ -710,6 +713,7 @@ helvete
 hem
 hembiträde
 hemland
+hemlighus
 heroin
 herravälde
 hertigdöme
@@ -796,6 +800,7 @@ idiom
 igenkännande
 illamående
 illdåd
+imperfekt
 imperium
 inbrott
 inbyte
@@ -825,12 +830,23 @@ instick
 institut
 instrument
 instrumentbräda
+instämmande
 insulin
 intag
+inteckningslån
 intellekt
+intentionsdjup
+intercitytåg
+interface
+interferon
+interludium
+intermezzo
 internat
 interneringsläger
+interregnum
 intervall
+intervjuoffer
+intestatarv
 intresse
 intressegrupp
 intresseområde
@@ -1155,6 +1171,7 @@ medel
 medeltal
 medelvärde
 medgivande
+medhåll
 mediaspråk
 medium
 medlemskap
@@ -1272,8 +1289,16 @@ nattduksbord
 nattlinne
 naturvin
 nav
+nederbördsområde
 nederlag
 nedfall
+nedgående
+nedköp
+nedslag
+nedsläpp
+nedstråk
+nedåtgående
+negativ
 nej
 nervkrig
 nettolön
@@ -1286,6 +1311,7 @@ nu
 nuläge
 nummer
 nybygge
+nyckelax
 nyhetsbrev
 nyhetsflöde
 nyp
@@ -1371,6 +1397,7 @@ penicillin
 pensionsavtal
 pensionsvillkor
 pentry
+perfekt
 periodtal
 personnummer
 perspektiv
@@ -1392,7 +1419,9 @@ plir
 plommon
 plugg
 plus
+pluskvamperfekt
 plåster
+poem
 pojkstreck
 polarsken
 polynom
@@ -1405,12 +1434,14 @@ postnummer
 postulat
 prat
 precedensfall
+predikat
 prefix
 prejudikat
 premium
 presidentval
 presidium
 pressmeddelande
+preteritum
 preventivmedel
 pris
 privatliv
@@ -1818,6 +1849,7 @@ strykjärn
 sträck
 strävande
 stråk
+stråke
 strö
 ströbröd
 strög
@@ -1887,6 +1919,7 @@ sömnmedel
 tack
 tag
 tagande
+tagel
 tak
 takskägg
 tal
@@ -2064,6 +2097,7 @@ utbrott
 utbud
 utbyte
 utdrag
+utedass
 utfall
 utförande
 uthus
