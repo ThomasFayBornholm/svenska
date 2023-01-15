@@ -37,13 +37,6 @@ p {
 .right {
 	width: 50%;
 }
-
-.row:after {
-	context: "";
-	display: table;
-	clear: both;
-}
-
 .iSearch {
 	width: 20%;
 	font-size: 32px;
@@ -57,12 +50,6 @@ p {
 	height: 80pt;
 	font-size: 28pt;
 }
-.putMore {
-	width: 24%;
-	height: 80pt;
-	font-size: 28pt;
-}
-
 .iSearchNav {
 	width: 90%;
 	font-size: 32px;
@@ -131,12 +118,17 @@ h2 {
 	margin-right: 25%;
 	height: 800px;
 }
-.row {
-	display: flex;	
+.firstColumn {
+	width: 32%;
+	float: left;
+	margin-left: 1%;
 }
-.column {
-	flex: 33%;
+.secondColumn {
+	width: 50%;
+	float: left;
+	margin-right: 5%;
 }
+
 .counts {
 	font-size: 36pt;
 	margin-left: 10pt;
@@ -152,9 +144,9 @@ h2 {
 }
 .pDef {
 	font-size: 36px;
-	margin-top: 30%;
+	margin-top: 15%;
 	margin-left: 2%;
-	width: 180%;
+	width: 100%;
 	height: 800pt;
 }
 .pBig {
