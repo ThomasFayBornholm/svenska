@@ -5,69 +5,68 @@
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body onload="startup()">
-<div class="row columns_4">
-<!--progress bar-->
-	<div id="iWordBox" class="wordBox column" onwheel="scrollWords(event)" onclick="clearDef()" title="Scroll with mouse wheel to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se ">
-		<div id="iControls">
-			<div class="dropdown">
-				<img title="Class selector. Left click to select all. Right click to lookup all display words" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="closeDefs()" oncontextmenu="lookupManyWords()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
-				<div class="dropdown-content">
-					<p class="dropEl" onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
-					<p class="dropEl" onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
-					<p class="dropEl" onclick="setClass('adjektiv')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adjektiv</p>
-					<p class="dropEl" onclick="setClass('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Ett</p>
-					<p class="dropEl" onclick="setClass('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
-				</div>
+<div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()" title="Scroll with mouse wheel to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se ">
+	<div id="iControls">
+		<div class="dropdown">
+			<img title="Class selector. Left click to select all. Right click to lookup all display words" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="closeDefs()" oncontextmenu="lookupManyWords()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
+			<div class="dropdown-content">
+				<p class="dropEl" onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
+				<p class="dropEl" onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
+				<p class="dropEl" onclick="setClass('adjektiv')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adjektiv</p>
+				<p class="dropEl" onclick="setClass('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Ett</p>
+				<p class="dropEl" onclick="setClass('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
 			</div>
-			<div class="dropdown">
-				<img title="Class selector #2 (rarer classes), left click to select all, right-click to toggle debug mode" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="closeDefs()" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-				<div class="dropdown-content">
-					<p class="dropEl" onclick="setClass('plural')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Plural</p>
-					<p class="dropEl" onclick="setClass('superlativ')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Superlativ</p>
-					<p class="dropEl" onclick="setClass('preposition')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Preposition</p>					
-					<p class="dropEl" onclick="setClass('pronomen')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Pronomen</p>
-					<p class="dropEl" onclick="setClass('interjektion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Interjektion</p>										
-				</div>
-			</div>						
-			<div class="dropdown">
-				<img title="Class selector #3 (rarer classes), left click to select all, right-click to toggle debug mode" id="iSelectRare" class="dropdown b2" src="img/TurningTorso.jpg" onclick="closeDefs()" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-				<div class="dropdown-content">		
-					<p class="dropEl" onclick="setClass('förled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Förled</p>
-					<p class="dropEl" onclick="setClass('slutled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Slutled</p>
-					<p class="dropEl" onclick="setClass('räkneord')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Räkneord</p>
-					<p class="dropEl" onclick="setClass('konjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Konjunktion</p>
-					<p class="dropEl" onclick="setClass('subjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Subjunktion</p>
-				</div>
-			</div>		
-			<p class="debug" id="iDebugTxt"></p>
-			<form onsubmit="seekWordWrapper(event)" onkeydown="checkDelete(event)">
-				<input title="Search for word, has regex support.&#10Right-click for svenska.se lookup" id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">		
-				<img title="Left click: add word to store*&#10;Right click: guess class&#10;*(suffix word with '.' char to delete from current word class listing" class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">
-				<img title="Back to last view" class="b2" src="img/leftArrow.png" id="iLast" onclick="seekWord('')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-			</form>				
 		</div>
-		<p id="iWords" class="fmtWords">Test<br>Words</p>
-	</div>
-	<div id="iMiddle" class="column" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
-		<span class="counts" id="iCnt">test</span>
-		<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view" onmouseover="highlight(this,event)">Total</span>
-		<span class="counts" "score" id="iScore">{Score}</span>
-		<span class="counts" id="iCntRegex"></span>
-		<div id="iDefDiv">
-			<button class="putMore" onclick="putMore('KONSTRUKTION')">Kons</button>			 			 
-			<button class="putMore" onclick="putMore('EXEMPEL')">Ex</button>
-			<button class="putMore" onclick="putMore('HISTORIK')">Hist</button>
-			<button class="putMore" onclick="putMore('DET ATT')">Det att</button>
-			 <textarea  class="defBox" id="iDefText"></textarea>			 
-			 <button id = "iSetScore" class="putDef" onclick="ScoreUp()", oncontextmenu="ScoreDown(event)">Score</button>
-			 <button class="putDef" onclick="putDef('')">Put</button>			 			 
+		<div class="dropdown">
+			<img title="Class selector #2 (rarer classes), left click to select all, right-click to toggle debug mode" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="closeDefs()" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+			<div class="dropdown-content">
+				<p class="dropEl" onclick="setClass('plural')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Plural</p>
+				<p class="dropEl" onclick="setClass('superlativ')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Superlativ</p>
+				<p class="dropEl" onclick="setClass('preposition')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Preposition</p>					
+				<p class="dropEl" onclick="setClass('pronomen')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Pronomen</p>
+				<p class="dropEl" onclick="setClass('interjektion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Interjektion</p>										
+			</div>
+		</div>						
+		<div class="dropdown">
+			<img title="Class selector #3 (rarer classes), left click to select all, right-click to toggle debug mode" id="iSelectRare" class="dropdown b2" src="img/TurningTorso.jpg" onclick="closeDefs()" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+			<div class="dropdown-content">		
+				<p class="dropEl" onclick="setClass('förled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Förled</p>
+				<p class="dropEl" onclick="setClass('slutled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Slutled</p>
+				<p class="dropEl" onclick="setClass('räkneord')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Räkneord</p>
+				<p class="dropEl" onclick="setClass('konjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Konjunktion</p>
+				<p class="dropEl" onclick="setClass('subjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Subjunktion</p>
+			</div>
 		</div>		
-		<p class="pDef" id="iParDef" ondblclick="clearDef()" oncontextmenu="editDefWrapper(event)"></p>		
-		
-		<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
+		<p class="debug" id="iDebugTxt"></p>
+		<form onsubmit="seekWordWrapper(event)" onkeydown="checkDelete(event)">
+			<input title="Search for word, has regex support.&#10Right-click for svenska.se lookup" id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">		
+			<img title="Left click: add word to store*&#10;Right click: guess class&#10;*(suffix word with '.' char to delete from current word class listing" class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">
+			<img title="Back to last view" class="b2" src="img/leftArrow.png" id="iLast" onclick="seekWord('')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+		</form>				
 	</div>
-	<div id="iRight" class="column" onwheel="scrollView(event)" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)" title="Navigation: left/scroll down = forward, right click/scroll up = back"></div>	
+	<p id="iWords" class="fmtWords">Test<br>Words</p>
 </div>
+<div id="iInfo" class="secondColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
+	<span class="counts" id="iCnt">test</span>
+	<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view" onmouseover="highlight(this,event)">Total</span>
+	<span class="counts" "score" id="iScore">{Score}</span>
+	<span class="counts" id="iCntRegex"></span>
+	<div id="iDefDiv">
+		 <textarea  class="defBox" id="iDefText"></textarea>			 
+		 <div id="iPutDef">
+		 <button id = "iSetScore" class="putDef" onclick="ScoreUp()", oncontextmenu="ScoreDown(event)">Score</button>
+		 <button class="putDef" onclick="putDef('')">Put</button>			 			 
+		 </div>
+		 <div id="iDivMore">		
+		 <button class="putDef" onclick="putMore('EXEMPEL')">Ex</button>
+		 <button class="putDef" onclick="putMore('HISTORIK')">Hist</button>		
+		 <button class="putDef" onclick="clearMore()">Clear all</button>		
+		 </div>
+
+	</div>		
+	<p class="pDef" id="iParDef" ondblclick="clearDef()"></p>			
+	<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
+</div>	
 </body>
 <script>
 
@@ -96,6 +95,7 @@ let N_DEFS = 0;
 
 let LAST_WORD="";
 let CUR_WORD="";
+let CUR_DEF="0";
 let CLASS = "all";
 var LAST_OBJ;
 let DEBUG=false;
@@ -508,7 +508,7 @@ function lookupWord(el,onlyLocal,inline) {
 					delim="<br>";
 				}
 				LAST_DEF = def;				
-				displayDef(def);						
+				displayDef("",def, word);						
 				return;
 			})
 			.catch(error => {
@@ -536,10 +536,7 @@ function lookupWord(el,onlyLocal,inline) {
 						return;
 					}
 					def = makeLinks(def);
-					if (meta.length > 0) {										
-						def = fmtMeta(meta) + def;					
-					}
-					displayDef(def,word);											
+					displayDef(meta,def,word);											
 					if (json["score"]) {						
 						CUR_SCORE = parseInt(json["score"]);
 					}
@@ -568,10 +565,34 @@ function lookupWord(el,onlyLocal,inline) {
 		}
 	}
 }
-function displayDef(def,word) {
-	let tmp = "<span onclick=toggleMore() title='Show More' onmouseover=highlight(this,event)>" + word + "</span>";
-	def = def.replace(word,tmp);
-	$('#iParDef').html(def)
+function displayDef(meta, def,word) {
+	if (DEBUG) console.log("displayDef()");	
+	let defRaw = def.split("<br>");
+	let defLines = [];
+	let iWrite = 0;
+	for (i = 0; i < defRaw.length; i++) {
+		if (defRaw[i].match(/^[1-9]+[0-9]?.*/)) {
+			defLines[iWrite] = defRaw[i];
+			iWrite++;			
+		} else {
+			if (defLines.length === 0) {
+				defLines[0] = defRaw[i];
+			} else {
+				defLines[iWrite-1] += "<br>" + defRaw[i];
+			}
+		}
+	}
+	let outDef = "";
+	let delim = "";
+	for (j = 0; j < defLines.length; j++) {
+		let key = word.replaceAll(" ","-") + "_" + j;
+		let id = "iMore_" + key;		
+		outDef += delim + defLines[j] + " <span id='" + id + "' onmouseover='highlight(this,event)' title='Show more information' onclick=toggleMore('" + key + "') oncontextmenu=editMore(event,'" + key + "')> <i>++</i></span>";
+		delim = "<br>";
+	}
+	outDef = "<span oncontextmenu=editDefWrapper(event)>" + fmtMeta(meta) + "</span>" + outDef;
+	$('#iParDef').html(outDef)
+	
 	SHOW_MORE = false;
 }
 // Make links to referenced words
@@ -1072,10 +1093,12 @@ function countDefs() {
 }
 
 function editDef() {	
-	if (DEBUG) console.log("editDef()")
+	if (DEBUG) console.log("editDef()")	
 	if ($('#iParDef').text() != "") {
 		showWords();
 		$('#iDefDiv').css("display", "block");
+		$('#iPutDef').css("display", "block");
+		$('#iDivMore').css("display", "none");
 		$('#iDefText').focus();
 		$('#iSetScore').html(CUR_SCORE);
 	}
@@ -1175,9 +1198,12 @@ function guessClass(word) {
 	if (word.endsWith("lös")) return "adjektiv"
 	if (word.endsWith("sam")) return "adjektiv"
 	if (word.endsWith("full")) return "adjektiv"
+	if (word.endsWith("ell")) return "adjektiv"
+	if (word.endsWith("isk")) return "adjektiv"
 	if (word.endsWith("ad")) return "adjektiv"
 	if (word.endsWith("en")) return "adjektiv"
 	if (word.endsWith("p")) return "substantiv_ett"
+	if (word.endsWith("ism")) return "substantiv_en"
 	return "substantiv_en"
 }
 function removeClassDesc(word) {
@@ -1462,6 +1488,7 @@ function preProc(def) {
 			s = addMeta(s,/mest vid beskrivning av äldre förhållanden/);
 			s = addMeta(s,/sär­skilt vid beskrivning av äldre förhållanden/);
 			s = addMeta(s,/äv. som musikalisk term/);
+			s = addMeta(s,/musikalisk/);
 			s = addMeta(s,/musik/);
 			s = addMeta(s,/sär­skilt meteorologi/);
 			s = addMeta(s,/sär­skilt i vänster­politisk debatt/);
@@ -1490,9 +1517,11 @@ function preProc(def) {
 			s = addMeta(s,/ofta fysik och teknik/);
 			// Remove any reference numbers other than that at line start
 			let trail = s.slice(2,s.length);
-			for (let i = 1; i < 24; i++) {
+			for (let i = 1; i < 24; i++) {				
 				trail = trail.replaceAll(" " + i + " "," ");
-				trail = trail.replaceAll(i,"");				
+				if (trail.indexOf(i) === 0) {
+					trail = trail.replaceAll(i,"");
+				}
 			}
 			s = s.slice(0,2) + trail;		
 			s = s.replaceAll("  ", " ");
@@ -1951,10 +1980,11 @@ function nextWord(el,ev) {
 	})		
 }
 function putMore(header) {
-	if (DEBUG) console.log("putMore()")
+	if (DEBUG) console.log("putMore()")	
 	let more = $('#iDefText').val();
-	more = more.replaceAll("\n","<br>");
-	fetch('backend/putMore.php?word=' + CUR_WORD + '&class=' + CLASS + '&header=' + header + '&more=' + more, {
+	more = more.replaceAll("\n","<br>");	
+	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
+	fetch('backend/putMore.php?word=' + key + '&class=' + CLASS + '&header=' + header + '&more=' + more, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -1967,14 +1997,24 @@ function putMore(header) {
 	.then(json => {
 		//Done
 		$('#iDefText').val("");
+		$('#iDefDiv').css("display", "none");
+		$('#iDivMore').css("display", "none");
+		toggleMore(key,true)
 	})
 	.catch(error => {
 		console.log(error)
 	})
 }
-function toggleMore() {	
-	if (SHOW_MORE === false) {
-		fetch('backend/showMore.php?class=' + CLASS + '&word=' + CUR_WORD, {
+function toggleMore(key, show = false) {	
+	if (DEBUG) console.log("toggleMore(key), key = " + key);		
+	let start = key.indexOf("_");
+	if (start != -1) CUR_DEF = key.substring(start+1);
+	let id = "#iMore_" + key;
+	let showMore = $(id).text() === " ++";
+
+	if (showMore === true || show) {
+		$(id).attr("title","Hide extra information");
+		fetch('backend/showMore.php?class=' + CLASS + '&word=' + key, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -1984,26 +2024,57 @@ function toggleMore() {
 		.then(response => {
 			return response.json()
 		})
-		.then(json => {					
+		.then(json => {								
 			if (json.length === 0) {
-				$('#iParDef').html($('#iParDef').html() + "<span id='iMore'><br>No more information to show<br>" + json + "</span>");		
+				$(id).html("--<br>No more information to show");				
 			} else {
-				$('#iParDef').html($('#iParDef').html() + "<span id='iMore'><br><br>" + json + "</span>");		
-			}
-			SHOW_MORE = true;			
+				$(id).html("--<br>" + json);				
+			}		
 		})
 		.catch(error => {
 			console.log(error);
 		})
 	} else {
 		$('#iMore').remove();
-		SHOW_MORE = false;
-	}
+		$(id).text(" ++");
+		$(id).attr("title","Show more information");
+	}	
+}
+
+function editMore(ev,key) {
+	ev.preventDefault();
+	$("#iPutDef").css("display", "none");
+	$('#iDefDiv').css("display", "block");
+	$("#iDivMore").css("display", "block");
+	$('#iDefText').focus();
 }
 function checkDelete(ev) {
 	if (ev.key === "Escape") {
 		$('#iSeek').val("");
 	}
+}
+function clearMore() {
+	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
+	if (DEBUG) console.log("clearMore(key), key = " + key)
+	fetch('backend/clearMore.php?key=' + key + '&class=' + CLASS, {
+		method: 'get',
+		mode: 'cors',
+		heaaders: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		
+	})
+	.catch(error => {
+		console.log(error)
+	})
+	toggleMore(key,true);
+	$('#iDefDiv').css("display", "none");
+	$('#iDivMore').css("display", "none");
 }
 </script>
 </html>

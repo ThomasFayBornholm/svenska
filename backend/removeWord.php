@@ -11,6 +11,8 @@
 	$fileName = $path . $class . $trail;
 	$defName = $path . $class . "-def";
 	$metaName = $path . $class . "-meta";
+	$scoreName = $path . $class . "-score";
+	$moreName = $path . $class . "-more";
 	$tmpName = $path . "tmp";
 
 	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
@@ -55,5 +57,16 @@
 	$arr = json_decode($contents,true);
 	unset($arr[$word]);
 	file_put_contents($metaName, json_encode($arr));
+	// Remove score
+	$contents = file_get_contents($scoreName, 'UTF-8');
+	$arr = json_decode($contents,true);
+	unset($arr[$word]);
+	file_put_contents($scoreName, json_encode($arr));
+
+	// Remove more
+	$contents = file_get_contents($moreName, 'UTF-8');
+	$arr = json_decode($contents,true);
+	unset($arr[$word]);
+	file_put_contents($moreName, json_encode($arr));
 	echo json_encode($res);
 ?>

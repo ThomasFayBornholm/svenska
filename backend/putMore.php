@@ -32,10 +32,13 @@
 		// New information is added
 			$str = $header . ":<br>" . $more;
 		}
+		if (substr($str,-4) === "<br>") {
+			$str = substr($str,0,(strlen($str)-4));
+		}
 		// Crude hack for now.
 		$existing = str_replace("<br><br>","<br>",$existing);
 		$arr[$word] = $existing . $str;
-		echo $arr[$word];
 		file_put_contents($path. $name, json_encode($arr));
 	}
+	echo json_encode("");
 ?>
