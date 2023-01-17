@@ -150,6 +150,7 @@ avkorta
 avkunna
 avkyla
 avla
+avlasta
 avlida
 avliva
 avlossa
@@ -460,6 +461,7 @@ bo in sig
 bogsera
 boka
 bokstavera
+bolla
 bomba
 bomma
 bomma igen
@@ -1845,6 +1847,7 @@ inneha
 innehålla
 innesluta
 inpassa
+inplanera
 inpränta
 inrama
 inreda
@@ -2480,6 +2483,7 @@ minnas
 minska
 minutera
 missa
+missakta
 missbruka
 missförstå
 missgynna
@@ -2617,6 +2621,8 @@ noppra
 noppra sig
 normalisera
 normera
+nosa
+nosa sig
 notera
 nubba
 nybilda
@@ -2778,6 +2784,7 @@ placera om
 placera sig
 plagiera
 planera
+planera in
 planka
 planlägga
 planta
@@ -2885,6 +2892,7 @@ rama in
 ramla
 ramla på
 rangera ut
+rangla
 rangordna
 rannsaka
 ranta
@@ -3229,7 +3237,10 @@ skingra
 skissa
 skissera
 skita
+skita ner
+skita ner sig
 skita på sig
+skita sig
 skiva
 skjuta
 skjuta av
