@@ -46,7 +46,7 @@
 	</div>
 	<p id="iWords" class="fmtWords">Test<br>Words</p>
 </div>
-<div id="iInfo" class="secondColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit.&#10;Double left click definition to hide def&#10;Words referenced as SE, JFR, MOTSATS etc can be clicked for instant navigation&#10;Word classes in italics can also be clicked to change class selection directly">
+<div id="iInfo" class="secondColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit">
 	<span class="counts" id="iCnt">test</span>
 	<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view" onmouseover="highlight(this,event)">Total</span>
 	<span class="counts" "score" id="iScore">{Score}</span>
@@ -64,7 +64,7 @@
 		 </div>
 
 	</div>		
-	<p class="pDef" id="iParDef" ondblclick="clearDef()"></p>			
+	<p class="pDef" id="iParDef" ondblclick="clearDef()" title="Double click to hide"></p>			
 	<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 </div>	
 </body>
@@ -469,6 +469,8 @@ function popSpan(i, w, hasMeta) {
 }
 
 function lookupWord(el,onlyLocal,inline) {	
+	$('#iPutDef').css("display","block");
+	$('#iPutMore').css("display","none");
 	if (el) {
 		if (LAST_OBJ) {
 			LAST_OBJ.style.fontWeight="";
@@ -566,7 +568,7 @@ function lookupWord(el,onlyLocal,inline) {
 	}
 }
 function displayDef(meta, def,word) {
-	if (DEBUG) console.log("displayDef()");	
+	if (DEBUG) console.log("displayDef(meta,def,word)");	
 	let defRaw = def.split("<br>");
 	let defLines = [];
 	let iWrite = 0;
@@ -577,7 +579,8 @@ function displayDef(meta, def,word) {
 		} else {
 			if (defLines.length === 0) {
 				defLines[0] = defRaw[i];
-			} else {
+				iWrite++;
+			} else {				
 				defLines[iWrite-1] += "<br>" + defRaw[i];
 			}
 		}
@@ -1308,7 +1311,9 @@ function grammer(def, rep) {
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = '" + def + "'")
 	// return def and meta components
-	// Check if any meta information exists	
+	// " ++" is a user-control, remove is present in definition
+	def = def.replaceAll(" ++","");
+	// Check if any meta information exists		
 	if (def[0] === " ") def = def.slice(1);
 	let meta = "";
 	
@@ -2026,9 +2031,9 @@ function toggleMore(key, show = false) {
 		})
 		.then(json => {								
 			if (json.length === 0) {
-				$(id).html("--<br>No more information to show");				
+				$(id).html("<br>No more information to show");				
 			} else {
-				$(id).html("--<br>" + json);				
+				$(id).html("<br>" + json);				
 			}		
 		})
 		.catch(error => {
