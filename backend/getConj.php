@@ -50,6 +50,9 @@
 				if ($word != "superlativ") {
 					$lineOne = str_replace("superlativ ", "", $lineOne);
 				}				
+				if ($word != "supinum") {
+					$lineOne = str_replace("supinum ", "", $lineOne);
+				}
 				if ($word != "objektsform") {
 					$lineOne = str_replace("objektsform ", "", $lineOne);
 				}
