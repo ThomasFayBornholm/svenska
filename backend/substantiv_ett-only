@@ -2,6 +2,8 @@ aber
 abonnemang
 ackord
 adjektiv
+adoptivbarn
+adrenalin
 adverb
 adverbial
 affix
@@ -76,6 +78,7 @@ arvsanlag
 as
 attackplan
 attribut
+auditorium
 automatkarbin
 avancemang
 avbrott
@@ -106,6 +109,7 @@ ax
 axiom
 axplock
 bad
+badhus
 badkar
 badort
 badrum
@@ -126,6 +130,7 @@ bank
 barbari
 barn
 barnbarn
+barnrikehus
 barrträd
 bastubad
 batteri
@@ -176,6 +181,7 @@ bilbälte
 bildningsvärde
 biljettpris
 bilåkande
+bind
 binom
 bistånd
 biträde
@@ -188,6 +194,7 @@ block
 blod
 blodbad
 blodkärl
+blodprov
 blodtryck
 blogginlägg
 blomster
@@ -216,6 +223,8 @@ bostadsområde
 bostadstillägg
 bottenskrap
 brak
+brandalarm
+brandlarm
 bredband
 brev
 broderskap
@@ -223,11 +232,13 @@ brohuvud
 brosk
 brott
 bruk
+brukssamhälle
 brum
 brus
 bry
 bryderi
 brytningsindex
+bräde
 brädspel
 brännvin
 bränsle
@@ -290,6 +301,7 @@ damspel
 dass
 datum
 decennium
+decimaltal
 dekret
 delta
 deltagande
@@ -315,6 +327,7 @@ domslut
 don
 dop
 dopbevis
+dopnamn
 dopp
 dotterbolag
 dotterföretag
@@ -457,6 +470,7 @@ fodral
 fogeord
 fokus
 folk
+folkhem
 folkmord
 folkmål
 folkparti
@@ -472,6 +486,7 @@ fort
 forum
 fosfat
 foster
+fosterbarn
 fosterland
 fotbollslag
 fotfäste
@@ -509,7 +524,9 @@ fyrtorn
 fyrverkeri
 fädernesland
 fält
+fältrop
 fältslag
+fälttåg
 fängelse
 fängelsestraff
 färdbevis
@@ -523,6 +540,7 @@ får
 fårkött
 fåtal
 födelsenummer
+födelsetal
 fögderi
 fönster
 förakt
@@ -591,7 +609,13 @@ förtryck
 förutseende
 förvar
 förvärv
+förvärvsarbete
+förvärvsavdrag
 förvärvsliv
+föräldrahem
+föräldrakooperativ
+föräldramöte
+föräldraskap
 gage
 gagn
 galler
@@ -711,6 +735,7 @@ hekto
 hektogram
 helgon
 helsike
+heltal
 helvete
 hem
 hembiträde
@@ -759,6 +784,7 @@ hägn
 hällregn
 händelseförlopp
 hänseende
+härnadståg
 hästdjur
 hästminne
 hål
@@ -784,6 +810,7 @@ hårvatten
 högblad
 högfrekvensegenskap
 högkvarter
+högmod
 högrev
 högstadium
 högvatten
@@ -826,6 +853,7 @@ inlägg
 innehav
 innehåll
 inpass
+insegel
 inskott
 inslag
 instick
@@ -925,6 +953,7 @@ klädskåp
 klädstreck
 knack
 knallskott
+knarr
 knatter
 kneg
 knep
@@ -956,6 +985,7 @@ koncept
 kondis
 konditori
 konserthus
+konsortium
 konsthantverk
 konstverk
 konto
@@ -992,6 +1022,7 @@ krikon
 kriterium
 krokben
 kronvrak
+kroppsarbete
 kroppsbyggande
 kroppsspråk
 krumsprång
@@ -1001,6 +1032,7 @@ kryphål
 krypto
 kryss
 krysshult
+kräkmedel
 kräldjur
 krångel
 kubikmått
@@ -1030,6 +1062,7 @@ kyrkoår
 källvärde
 kännemärke
 kännetecken
+känsloliv
 kärl
 kärleksgnabb
 kärnkraftverk
@@ -1066,6 +1099,7 @@ landsmål
 landsting
 lantbruk
 lappri
+lapptäcke
 larm
 lask
 lass
@@ -1099,6 +1133,7 @@ lokalnät
 lokomotiv
 lopp
 lort
+lotteri
 lov
 lovord
 ludd
@@ -1138,6 +1173,7 @@ lår
 lås
 lödder
 löfte
+löje
 lönnmord
 löpband
 lösenord
@@ -1146,10 +1182,12 @@ lövträd
 magasin
 magsår
 maktskifte
+maktövertagande
 mandat
 manhål
 manifest
 mankemang
+manschettyrke
 manskap
 manus
 manuskript
@@ -1162,6 +1200,7 @@ maskineri
 maskinrum
 massmedium
 material
+matriarkat
 matsvinn
 mausoleum
 maximum
@@ -1257,6 +1296,8 @@ motljus
 motlut
 motstånd
 mottagande
+motto
+munväder
 murbruk
 museum
 musiköra
@@ -1329,8 +1370,10 @@ näste
 nät
 nättroll
 nätverk
+nätverksnav
 nödfall
 nöje
+nöjesfiske
 nötkött
 obehag
 objekt
@@ -1369,6 +1412,7 @@ ordspråk
 ordstäv
 organ
 original
+os
 ovett
 oväder
 oväsen
@@ -1395,6 +1439,7 @@ partnerskap
 party
 pass
 patent
+patriarkat
 pekfinger
 penicillin
 pensionsavtal
@@ -1457,10 +1502,12 @@ projekt
 proletariat
 pronomen
 protein
+protektorat
 protokoll
 prov
 prygel
 pränt
+prång
 psyke
 pund
 pundhuvud
@@ -1483,6 +1530,7 @@ quiz
 rackartyg
 radergummi
 radhus
+raffinemang
 rakdon
 raketvapen
 ramaskri
@@ -1536,6 +1584,7 @@ roder
 rofferi
 rop
 ros
+rotorblad
 rotsystem
 rottecken
 rov
@@ -1556,6 +1605,7 @@ räknesätt
 ränteläge
 rättesnöre
 rättsfall
+rättssamhälle
 rättsväsende
 rå
 råd
@@ -1590,6 +1640,7 @@ sammanträde
 sammanträffande
 sammelsurium
 sammet
+sampel
 samråd
 samspel
 samsyn
@@ -1680,8 +1731,10 @@ skrotupplag
 skrov
 skrubbsår
 skrymteri
+skryt
 skrälle
 skräp
+skrävel
 skrå
 skum
 skutt
@@ -1765,9 +1818,11 @@ snäckdjur
 snäpp
 snärj
 snärp
+snödjup
 snöre
 snöregn
 snöskred
+snötäcke
 socialbidrag
 socker
 soffbord
@@ -1791,6 +1846,7 @@ spioneri
 spjut
 split
 splitter
+sportfiske
 sportlov
 spott
 spratt
@@ -1824,12 +1880,14 @@ stearinljus
 steg
 stenparti
 stickord
+stickprov
 stift
 stigma
 stilleben
 stillestånd
 stim
 stipendium
+stjärnskott
 stjärnsystem
 sto
 stoff
@@ -1849,6 +1907,7 @@ straffområde
 strandhugg
 streck
 strul
+struntprat
 stryk
 strykjärn
 sträck
@@ -1878,7 +1937,10 @@ sudd
 suddgummi
 suffix
 sugrör
+suicid
+supinum
 svaj
+svammel
 svar
 svedjebruk
 svek
@@ -1918,9 +1980,14 @@ sätt
 sätteri
 sår
 sök
+sökarljus
+sökord
 söktryck
+sökverktyg
+söl
 söm
 sömnmedel
+sönderfall
 tack
 tag
 tagande
@@ -1935,6 +2002,7 @@ tandem
 tandkött
 tand­skydd
 tangentbord
+tankearbete
 tapp
 te
 teach-in
@@ -2005,6 +2073,7 @@ torn
 torp
 trafikljus
 trakasseri
+tramp
 trams
 trappräcke
 trappsteg
@@ -2086,6 +2155,7 @@ upplopp
 upplägg
 upprop
 uppror
+uppseende
 uppslag
 uppsåt
 uppträdande
@@ -2127,6 +2197,7 @@ uttag
 uttal
 uttalande
 uttryck
+va-nät
 vaccin
 vad
 vadben
@@ -2135,9 +2206,11 @@ vakuum­rör
 val
 valdeltagande
 valresultat
+valspråk
 valv
 vandrarhem
 vansinne
+vanstyre
 vant
 vanvett
 vapen
@@ -2217,6 +2290,7 @@ väte
 växthus
 vågspel
 våld
+våldsdåd
 vållande
 vårdhem
 wienerbröd
@@ -2224,6 +2298,11 @@ ylle
 yngel
 yrkande
 yrke
+yrkesarbete
+yrkesfiske
+yrkesförbud
+yrkesprogram
+yrkesregister
 yrkesval
 ytläge
 ytmått
@@ -2248,6 +2327,7 @@ zoo
 ålderdomshem
 åliggande
 ångestrop
+ånglok
 år
 århundrade
 årsmöte
@@ -2286,10 +2366,12 @@ zoo
 övergångsställe
 överhuvud
 överinseende
+överkast
 överklagande
 överkropp
 överliv
 överläge
+övermod
 övermått
 överrede
 överskott
