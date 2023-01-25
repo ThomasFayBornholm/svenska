@@ -92,6 +92,7 @@ anträffa
 antyda
 anvisa
 använda
+använda sig
 apa efter
 appellera
 applicera
@@ -256,72 +257,114 @@ baxa
 be
 beakta
 bearbeta
+beatificera
+beblanda sig
 bebo
 bebygga
 bebåda
+becka
+becka sig
+bedarra
 bedja
 bedra
+bedra sig
 bedriva
 bedröva
 bedyra
 bedåra
 bedöma
 bedöva
+beediga
 befalla
 befara
+befatta sig
 befinna sig
 befinnas
 befläcka
+befolka
 befordra
+befrakta
 befria
+befrukta
 befrämja
+befullmäktiga
 befästa
+begabba
 begagna
+begagna sig
+begapa
 bege sig
+begjuta
 begrava
 begripa
 begripa sig på
 begrunda
 begränsa
+begränsa sig
 begråta
+begynna
 begära
 begå
 begåva
 behaga
 behandla
+behovspröva
+behänga
 behärska
 behärska sig
 behålla
 behöva
 behövas
+beivra
 bejaka
 bekanta
 bekanta sig
 bekantgöra
 beklaga
+beklaga sig
 bekläda
+beknipa sig
+bekomma
+bekosta
+bekransa
+bekriga
 bekräfta
+bekröna
+bekväma sig
 bekymra
 bekymra sig
 bekämpa
 bekänna
+bekänna sig
 belacka
 belamra
+belanga
 belasta
+beledsaga
+beljuga
 belysa
 belägga
+belägra
+belåna
 belöna
 belöpa sig
 bemanna
 bemyndiga
 bemäktiga sig
 bemänga
+bemärka
 bemästra
 bemöda sig
 bemöta
+bena
+bena upp
+bena ut
 benämna
+benåda
 beordra
 bepansra
+bepryda
+bepudra
 bereda
 berika
 beriktiga
@@ -566,6 +609,7 @@ bönfalla
 böra
 börja
 censurera
+centralisera
 centrera
 charma
 charmera
@@ -822,6 +866,7 @@ falla undan
 falla ut
 fantisera
 fara
+fara fram
 fasa
 fasa ut
 fascinera
@@ -922,6 +967,7 @@ fragmentera
 frakta
 frambesvärja
 frambringa
+framfara
 framföda
 framföra
 framgå
@@ -933,6 +979,7 @@ framkomma
 framlägga
 frammana
 framrösta
+framskrida
 framskymta
 framställa
 framstå
@@ -1610,6 +1657,7 @@ gå upp
 gå ut
 gå åt
 gå över
+göda
 gödsla
 göka
 gömma
@@ -1632,6 +1680,7 @@ haka sig
 haka upp sig
 hala
 halka
+halsa
 halstra
 halta
 halvera
@@ -1950,7 +1999,9 @@ jiddra
 jobba
 jogga
 jonglera
+jorda
 jordfästa
+jordslå
 jubla
 justera
 jäkta
@@ -1972,8 +2023,10 @@ kamma hem
 kamma igenom
 kamma in
 kamouflera
+kana
 kanalisera
 kandidera
+kanonisera
 kanota
 kantra
 kapa
@@ -2137,6 +2190,7 @@ konfigurera
 konfirmera
 konfrontera
 konfundera
+kongruera
 konjugera
 konka
 konkurrera
@@ -2226,6 +2280,7 @@ krångla
 krångla sig
 krångla till
 kröka
+kröna
 kubera
 kugga
 kulminera
@@ -2459,6 +2514,7 @@ läsa på
 läsa upp
 läsa ut
 lätta
+läxa upp
 låga
 låna
 låsa
@@ -2552,9 +2608,11 @@ mjuka upp
 mjuka upp sig
 mobba
 mobilisera
+modellera
 moderera
 modernisera
 modifiera
+mojna
 monopolisera
 montera
 montera ner
@@ -2672,6 +2730,7 @@ nosa
 nosa sig
 notera
 nubba
+nyansera
 nybilda
 nydana
 nynna
@@ -2874,6 +2933,7 @@ preferera
 prenumerera
 presentera
 presidera
+preskribera
 pressa
 prestera
 pricka
@@ -3032,6 +3092,7 @@ reta upp sig
 retardera
 retirera
 returnera
+reva
 revidera
 rida
 rigga
@@ -3169,6 +3230,7 @@ sadla på
 sakna
 sakta
 sakta sig
+saligförklara
 samarbeta
 samla
 samla sig
@@ -3283,6 +3345,8 @@ skicka in
 skicka sig
 skida
 skifta
+skikta
+skikta sig
 skildra
 skilja
 skilja av
@@ -3321,6 +3385,7 @@ skralna
 skramla
 skrapa
 skratta
+skrida
 skrika
 skritta
 skriva
@@ -3418,6 +3483,7 @@ slicka
 slingra
 slingra sig
 slinka
+slinta
 slipa
 slipa av
 slippa
@@ -3676,6 +3742,7 @@ sticka ut
 stickas
 stifta
 stiga
+stillna
 stimma
 stimulera
 stinka
@@ -3968,6 +4035,7 @@ tentera upp
 testa
 ticka
 tidigarelägga
+tidsbegränsa
 tidsbestämma
 tiga
 tigga
@@ -4640,6 +4708,8 @@ yttra sig
 ändra
 ändra om
 ändra sig
+ängsla
+ängsla sig
 ängslas
 ära
 ärva
