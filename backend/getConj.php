@@ -56,7 +56,7 @@
 				if ($word != "objektsform") {
 					$lineOne = str_replace("objektsform ", "", $lineOne);
 				}
-
+				$lineOne = str_replace("i vissa stelnade uttryck används ","",$lineOne);
 				foreach($meta as $m) {
 					$lineOne = str_replace($m,"",$lineOne);
 				}	

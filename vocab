@@ -473,7 +473,7 @@ function popSpan(i, w, hasMeta) {
 }
 
 // Only call when word class is "all"
-function showWordMatches() {
+function showWordMatches(follow) {
 	if (DEBUG) console.log("showWordMatches()");
 	if (CLASS != "all") {
 		return;
@@ -481,7 +481,7 @@ function showWordMatches() {
 	let id = "w" + SCROLL_INC;
 	let el = document.getElementById(id);
 	let word = el.innerText;
-
+	
 	if (LAST_OBJ) {
 		LAST_OBJ.style.fontWeight="";
 	}
@@ -497,8 +497,13 @@ function showWordMatches() {
 	.then(response => {
 		return response.json();
 	})
-	.then(json => {
-		let keys = Object.keys(json);						
+	.then(json => {		
+		let keys = Object.keys(json);	
+		if (keys.length === 1 && keys[0] != CLASS && follow) {			
+			// Go direct to class if no ambiguity in found word(s)
+			setClass(keys[0]);
+			seekWord(word);
+		}
 		let def = "";
 		let delim ="";			
 		let tmp = "<span onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";			
@@ -523,8 +528,12 @@ function lookupWord(el,onlyLocal,inline) {
 
 	if (el) {
 		if (CLASS === "all") {
-			SCROLL_INC = parseInt(el.id.replace("w",""));								
-			showWordMatches();			
+			SCROLL_INC = parseInt(el.id.replace("w",""));			
+			let follow = false;
+			if (el.innerText.indexOf(">") != -1) {
+				follow = true;
+			}
+			showWordMatches(follow);			
 			return;
 		}
 		if (LAST_OBJ) {
@@ -924,7 +933,7 @@ function seekWord(word, link = false) {
 	} else if (word === "prev") {
 		scrollViewUp(event);
 		return;
-	} else if (word.indexOf("aaa") != -1) {
+	} else if (word.indexOf("aaa") != -1 || word === "top") {
 		setClass("all")
 		return;		
 	}
@@ -936,6 +945,7 @@ function seekWord(word, link = false) {
 	while (word.substr(word.length-1) === " ") {
 		word = word.substr(0,word.length-1)
 	}
+
 	$('#iCntRegex').html("");
 	// Regex support
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
@@ -1056,6 +1066,12 @@ function seekWord(word, link = false) {
 						if (res != "") {								
 							setClass(json["class"],res);
 						} else {
+							let follow = false;
+							if (word.indexOf("\\") != -1 || word.indexOf("<") != -1) {
+								word = word.replaceAll("\\","");
+								word = word.replaceAll("<","");
+								follow = true;
+							}
 							// If no match in specific class useful to show matches in other classes.
 							fetch('backend/getDefAll.php?word=' + word, {
 								method: 'get',
@@ -1067,7 +1083,7 @@ function seekWord(word, link = false) {
 							.then(response => {
 								return response.json();
 							})
-							.then(json => {								
+							.then(json => {
 								if (Object.keys(json).length > 0) {
 									let keys = Object.keys(json);	
 									if (keys.length === 1 && keys[0] != CLASS) {			
