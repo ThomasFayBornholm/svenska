@@ -7,36 +7,6 @@
 <body onload="startup()">
 <div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()" title="Scroll with mouse wheel to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se ">
 	<div id="iControls">
-		<div class="dropdown">
-			<img title="Class selector. Left click to select all. Right click to lookup all display words" id="iSelect" class="dropdown b2" src="img/Sandhammaren.jpg" onclick="closeDefs()" oncontextmenu="lookupManyWords()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">				
-			<div class="dropdown-content">
-				<p class="dropEl" onclick="setClass('substantiv_en')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">En</p>
-				<p class="dropEl" onclick="setClass('verb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Verb</p>
-				<p class="dropEl" onclick="setClass('adjektiv')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adjektiv</p>
-				<p class="dropEl" onclick="setClass('substantiv_ett')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Ett</p>
-				<p class="dropEl" onclick="setClass('adverb')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Adverb</p>
-			</div>
-		</div>
-		<div class="dropdown">
-			<img title="Class selector #2 (rarer classes), left click to select all, right-click to toggle debug mode" id="iSelectRare" class="dropdown b2" src="img/Oresundsbron.jpg" onclick="closeDefs()" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-			<div class="dropdown-content">
-				<p class="dropEl" onclick="setClass('plural')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Plural</p>
-				<p class="dropEl" onclick="setClass('superlativ')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Superlativ</p>
-				<p class="dropEl" onclick="setClass('preposition')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Preposition</p>					
-				<p class="dropEl" onclick="setClass('pronomen')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Pronomen</p>
-				<p class="dropEl" onclick="setClass('interjektion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Interjektion</p>										
-			</div>
-		</div>						
-		<div class="dropdown">
-			<img title="Class selector #3 (rarer classes), left click to select all, right-click to toggle debug mode" id="iSelectRare" class="dropdown b2" src="img/TurningTorso.jpg" onclick="closeDefs()" oncontextmenu="toggleDebugEv(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-			<div class="dropdown-content">		
-				<p class="dropEl" onclick="setClass('förled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Förled</p>
-				<p class="dropEl" onclick="setClass('slutled')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Slutled</p>
-				<p class="dropEl" onclick="setClass('räkneord')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Räkneord</p>
-				<p class="dropEl" onclick="setClass('konjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Konjunktion</p>
-				<p class="dropEl" onclick="setClass('subjunktion')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">Subjunktion</p>
-			</div>
-		</div>		
 		<p class="debug" id="iDebugTxt"></p>
 		<form onsubmit="seekWordWrapper(event)" onkeydown="checkDelete(event)">
 			<input title="Search for word, has regex support.&#10Right-click for svenska.se lookup" id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">		
@@ -109,7 +79,7 @@ var REGEX_WORDS = [];
 var N_REGEX = 0;
 
 var COLORS = ["red", "blue", "green"];
-
+var CLASSES = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","plural","superlativ","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
 
 document.addEventListener("visibilitychange", (event) => {
 	if (TABS.length > 0) {
@@ -916,6 +886,22 @@ function showToggle() {
 function seekWordWrapper(e) {
 	e.preventDefault();
 	let word = $('#iSeek').val();
+	if (word.indexOf("@") === 0) {
+		let newClass  = fullClassName(word.substr(1));
+		if (newClass != "list") {
+			setClass(newClass);		
+		} else {
+			let delim = "";
+			let out = "";
+			for (let i = 0; i < CLASSES.length; i++) {
+				out += delim + CLASSES[i];
+				delim = "<br>";
+			}
+			$('#iWords').html(out);			
+		}
+		$('#iSeek').val("");
+		return;
+	}
 	seekWord(word);
 }
 
@@ -933,9 +919,6 @@ function seekWord(word, link = false) {
 	} else if (word === "prev") {
 		scrollViewUp(event);
 		return;
-	} else if (word.indexOf("aaa") != -1 || word === "top") {
-		setClass("all")
-		return;		
 	}
 	if (word[word.length-1] === "." || word.indexOf('+') != -1) {		
 		addWord();
@@ -1272,8 +1255,24 @@ function pretty(def) {
 	return out;
 }
 function fullClassName(name) {
+	if (name === "") return "all"
+	if (name === "a") return "all"
 	if (name === "en") return "substantiv_en"
 	if (name === "ett") return "substantiv_ett"
+	if (name === "adj") return "adjektiv"
+	if (name === "adv") return "adverb"
+	if (name === "sub") return "subjunktion"
+	if (name === "sup") return "superlativ"
+	if (name === "plu") return "plural"
+	if (name === "prep") return "preposition"
+	if (name === "pro") return "pronomen"
+	if (name === "for") return "förled"
+	if (name === "för") return "förled"
+	if (name === "slut") return "slutled"
+	if (name === "slut") return "slutled"
+	if (name === "räk") return "räkneord"
+	if (name === "kon") return "konjunktion"
+	if (name === "int") return "interjektion"
 	return name
 }
 function guessClass(word) {
@@ -2136,6 +2135,9 @@ function checkDelete(ev) {
 	if (ev.key === "Escape") {
 		$('#iSeek').val("");
 	}
+	if (ev.key === "Control") {
+		setClass("all")
+	}
 }
 function clearMore() {
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
@@ -2161,4 +2163,5 @@ function clearMore() {
 	$('#iDivMore').css("display", "none");
 }
 </script>
+<script src="script.js"></script>
 </html>
