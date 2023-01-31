@@ -1,45 +1,63 @@
 <!DOCTYPE html>
+<html lang="sv"></html>
 <head>
-	<link rel="stylesheet" href="svenska.css">
-	<script src="jquery-3.4.1.min.js"></script>
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="svenska.css">
+	<script src="jquery-3.6.0.js"></script>
+	<script src="jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script>
+	$( function() {
+		$( document ).tooltip();
+	} );
+	</script>
+	<style>
+	label {
+		display: inline-block;
+		width: 5em;
+	}
+	</style>	
 </head>
 <body onload="startup()">
-<div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()" title="Scroll with mouse wheel to navigate individual words&#10;Left click word = get definition&#10;Right click word = lookup@svensk.se ">
+<div >
+<h1 id="iTitle" ondblclick="toggleTooltips()" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on other elements">Svenska Ordbok</h1>
+</div>
+<div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()" onkeydown="processKeyDown(event)">
 	<div id="iControls">
 		<p class="debug" id="iDebugTxt"></p>
-		<form onsubmit="seekWordWrapper(event)" onkeydown="checkDelete(event)">
-			<input title="Search for word, has regex support.&#10Right-click for svenska.se lookup" id="iSeek" oncontextmenu="onlineLookup(this,event)" class="inputSearch">		
-			<img title="Left click: add word to store*&#10;Right click: guess class&#10;*(suffix word with '.' char to delete from current word class listing" class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">
-			<img title="Back to last view" class="b2" src="img/leftArrow.png" id="iLast" onclick="seekWord('')" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+		<form onsubmit="newInputWrapper(event)" onkeydown="processKeyDown(event)">
+			<input id="iInput" oncontextmenu="onlineLookup(this,event)" class="inputSearch">		
+			<img class="b2" src="img/add.svg" id="iAdd" onclick="addWord()" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)" oncontextmenu="setClassGuessWrapper(event)">			
+			<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="seekWord('')" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 		</form>				
 	</div>
 	<p id="iWords" class="fmtWords">Test<br>Words</p>
 </div>
-<div id="iInfo" class="secondColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" title="Mouse wheel/ or click left/right to navigate&#10;Right click definition to edit">
+<div id="iInfo" class="secondColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)" onkeydown="processKeyDown(event)">
 	<span class="counts" id="iCnt">test</span>
-	<span class="counts" id="iCntTotal" onclick="showToggle()" title="Click to toggle control view" onmouseover="highlight(this,event)">Total</span>
+	<span class="counts" id="iCntTotal" onclick="showToggle()" onmouseover="highlight(this,event)">Total</span>
 	<span class="counts" "score" id="iScore">{Score}</span>
 	<span class="counts" id="iCntRegex"></span>
 	<div id="iDefDiv">
 		 <textarea  class="defBox" id="iDefText"></textarea>			 
 		 <div id="iPutDef">
-		 <button class="putDefThree" onclick="putDef('', 0)">0</button>			 			 
-		 <button class="putDefThree" onclick="putDef('', 1)">Put (1)</button>			 			 
-		 <button class="putDefThree" onclick="putDef('', 2)">2</button>			 			 
+		 <button class="putDefThree" id="iPut0" onclick="putDef('', 0)">0</button>			 			 
+		 <button class="putDefThree" id="iPut1" onclick="putDef('', 1)">Put (1)</button>			 			 
+		 <button class="putDefThree" id="iPut2" onclick="putDef('', 2)">2</button>			 			 
 		 </div>
 		 <div id="iDivMore">		
-		 <button class="putDefThree" onclick="putMore('EXEMPEL')">Ex</button>
-		 <button class="putDefThree" onclick="putMore('HISTORIK')">Hist</button>		
-		 <button class="putDefThree" onclick="clearMore()">Clear all</button>		
+		 <button class="putDefThree" onclick="putMore('EXEMPEL')" id="iPutEx">Ex</button>
+		 <button class="putDefThree" onclick="putMore('HISTORIK')" id="iPutHist">Hist</button>		
+		 <button class="putDefThree" onclick="clearMore()" id="iClearAll">Clear all</button>		
 		 </div>
 
 	</div>		
-	<p class="pDef" id="iParDef" ondblclick="clearDef()" title="Double click to hide"></p>			
+	<p class="pDef" id="iParDef" ondblclick="clearDef()"></p>			
 	<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 </div>	
 </body>
 <script>
+
 
 let INC = 0;
 let N_INC= 8;
@@ -81,6 +99,9 @@ var N_REGEX = 0;
 var COLORS = ["red", "blue", "green"];
 var CLASSES = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","plural","superlativ","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
 
+// Crude toggle on site load to show tool tips
+let SHOW_HELP = false;
+
 document.addEventListener("visibilitychange", (event) => {
 	if (TABS.length > 0) {
 		if (document.visibilityState == "visible") {
@@ -90,6 +111,7 @@ document.addEventListener("visibilitychange", (event) => {
 });
 
 function startup() {
+	showTooltips();
 	wordCount();
 	getWords(-1);
 	updateScore();
@@ -131,10 +153,12 @@ function setN_CUR() {
 	}
 	if (CLASS === "all") {
 		$('#iCnt').text("");
+		$('#iCntTotal').text(' [' + N_TOT.toLocaleString('sv') + ']');
 	} else {
 		$('#iCnt').text(N_CUR.toLocaleString('sv'));
-	}
-	$('#iCntTotal').text(' [' + N_TOT.toLocaleString('sv') + ']');
+		$('#iCntTotal').text("");
+	}	
+	
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
 
@@ -206,10 +230,10 @@ function updateScore() {
 	.then(json => {
 		let score = 0;
 		if (N_TOT > 0) {
-			score = Math.round(json["total"]/(N_CUR*2) * 100);
+			score = Math.round(json["total"]/(N_CUR*2) * 1000)/10;
 		}
 		if (CLASS === "all") {
-			score = Math.round(json["total"]/(N_TOT*2) * 100);
+			score = Math.round(json["total"]/(N_TOT*2) * 1000)/10;
 			$('#iScore').html("{" + score + "%");
 			$('#iScore').html($('#iScore').html() + " " + json["greenCount"].toLocaleString('sv') + "}");			
 		} else {
@@ -635,7 +659,12 @@ function displayDef(meta, def,word) {
 		delim = "<br>";
 	}
 	outDef = outDef.replaceAll(" </b>","</b>")
-	outDef = "<span oncontextmenu=editDefWrapper(event)>" + fmtMeta(meta) + "</span>" + outDef;
+	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event)"
+	if (SHOW_HELP) {
+		console.log("test")
+		tmpSpan += " title='Right click to edit definition'" 
+	}
+	outDef = tmpSpan + ">" + fmtMeta(meta) + "</span>" + outDef;
 	$('#iParDef').html(outDef)
 	
 	SHOW_MORE = false;
@@ -724,7 +753,9 @@ function addLinks(refClass,def) {
 	delim = "";
 	beginSpan = "<span onclick=followLink(this)";
 	beginSpan += " onmouseover=highlight(this,event)";
-	beginSpan += " title='Navigate to \"_w_\"'";
+	if (SHOW_HELP) {
+		beginSpan += " title='Navigate to \"_w_\"'";
+	}
 	beginSpan += ">"
 	spanTmp = beginSpan + "<b>_w_</b></span>";
 	for (line of defArr) {
@@ -759,7 +790,7 @@ function followLink(el) {
 	}
 	word = word.replace("!","");
 	if (DEBUG) console.log("followLink(" + word + ")");
-	$('#iSeek').val(word);	
+	$('#iInput').val(word);	
 	let oldINC = INC;
 	seekWord(word, true);
 }
@@ -878,14 +909,14 @@ function showToggle() {
 		// Make visible class selector and word seeker controls
 		$('#iControls').css("display", "block");
 		$('#iShowToggle').text("HIDE");
-		$('#iSeek').focus();
+		$('#iInput').focus();
 		CONTROLS_VISIBLE=true;
 	}
-	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iSeek').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
+	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
-function seekWordWrapper(e) {
+function newInputWrapper(e) {
 	e.preventDefault();
-	let word = $('#iSeek').val();
+	let word = $('#iInput').val();
 	if (word.indexOf("@") === 0) {
 		let newClass  = fullClassName(word.substr(1));
 		if (newClass != "list") {
@@ -899,7 +930,17 @@ function seekWordWrapper(e) {
 			}
 			$('#iWords').html(out);			
 		}
-		$('#iSeek').val("");
+		$('#iInput').val("");
+		return;
+	} else if (word.indexOf("@") != -1) {
+		// Add word
+		let tmp  = word.split("@");
+		let newClass = tmp[1];
+		word = tmp[0];
+		setClass(fullClassName(newClass));
+		$('#iInput').val(word);
+		addWord();
+		seekWord(word);
 		return;
 	}
 	seekWord(word);
@@ -911,15 +952,10 @@ function seekWordWrapper(e) {
  3) Matches conjugation within class
  4) Matches conjugation within any class (first found).
  */
+// Link is set if this seek is called from a clickable link
 function seekWord(word, link = false) {
+	if (DEBUG) console.log("seekWord(word, link),word = " + word + ", link = " + link)
 	REGEX_WORDS = [];
-	if (word === "next") {
-		scrollViewDown();
-		return;
-	} else if (word === "prev") {
-		scrollViewUp(event);
-		return;
-	}
 	if (word[word.length-1] === "." || word.indexOf('+') != -1) {		
 		addWord();
 		return;
@@ -994,7 +1030,7 @@ function seekWord(word, link = false) {
 		if (word === '') {
 			word = LAST_WORD;
 			console.log(word);
-			$('#iSeek').val(word);
+			$('#iInput').val(word);
 			setClass(LAST_CLASS);
 		}
 		if (!link) {
@@ -1311,13 +1347,13 @@ function removeClassDesc(word) {
 }
 function addWord() {	
 	if (DEBUG) console.log("addWord()");
-	let word = $('#iSeek').val();	
+	let word = $('#iInput').val();	
 	if (word.indexOf('+') != -1) {
 		tmp = word.split('+');
 		word = tmp[0];
 		tmpClass = tmp[1];
 		if (tmpClass.length > 1) setClass(tmpClass);
-		$('#iSeek').val(word);
+		$('#iInput').val(word);
 		
 	}
 	let del = word[word.length-1] === ".";
@@ -1896,12 +1932,12 @@ function toggleDebug() {
 }
 function setClassGuessWrapper(ev) {
 	ev.preventDefault();
-	let word = $('#iSeek').val();
+	let word = $('#iInput').val();
 	setClassGuess();	
 	seekWord(word);
 }
 function setClassGuess() {
-	let word = $('#iSeek').val();
+	let word = $('#iInput').val();
 	let c = guessClass(word);
 	if (DEBUG) console.log("setClassGuess, Class guessed as " + c)
 	setClass(c);
@@ -2095,7 +2131,7 @@ function toggleMore(key, show = false) {
 	let showMore = $(id).text() === " ++";
 
 	if (showMore === true || show) {
-		$(id).attr("title","Hide extra information");
+		$(id).attr("title","Left: Hide\nRight: Add/Edit information");
 		fetch('backend/showMore.php?class=' + CLASS + '&word=' + key, {
 			method: 'get',
 			mode: 'cors',
@@ -2131,13 +2167,22 @@ function editMore(ev,key) {
 	$("#iDivMore").css("display", "block");
 	$('#iDefText').focus();
 }
-function checkDelete(ev) {
+function processKeyDown(ev) {
+	if (DEBUG) console.log("processKeyDown(ev)")	
 	if (ev.key === "Escape") {
-		$('#iSeek').val("");
+		$('#iInput').val("");
 	}
-	if (ev.key === "Control") {
-		setClass("all")
+	if (ev.location === 2) {
+		if (ev.key === "Control") {
+			setClass("all")
+		}
 	}
+	if (ev.key === "PageDown") {
+		scrollViewDown();
+	} else if (ev.key === "PageUp") {
+		scrollViewUp(ev);
+	}
+	
 }
 function clearMore() {
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
@@ -2162,6 +2207,54 @@ function clearMore() {
 	$('#iDefDiv').css("display", "none");
 	$('#iDivMore').css("display", "none");
 }
+function hack(ev) {
+	if (DEBUG) console.log("hack()");
+	ev.preventDefault();
+	$('#iDefDiv').css("display","block");
+}
+function showTooltips() {
+	if (DEBUG) console.log("showTooltips()");
+	if (!SHOW_HELP) {
+		$('#iInput').attr("title","");
+		$('#iWordBox').attr("title","");
+		$('#iInfo').attr("title","");
+		$('#iAdd').attr("title","");
+		$('#iLast').attr("title","");
+		$('#iParDef').attr("title","");
+		$('#iCntTotal').attr("title","");
+		$('#iDefText').attr("title","");
+		$('#iPut0').attr("title","");
+		$('#iPut1').attr("title","");
+		$('#iPut2').attr("title","");
+		$('#iPutEx').attr("title","");
+		$('#iPutHist').attr("title","");
+		$('#iClearAll').attr("title","");
+	} else {
+		$('#iInput').attr("title","Search for word, has regex support.\nRight-click for svenska.se lookup" );
+		$('#iWordBox').attr("title","Scroll with mouse wheel to navigate individual words\nLeft click word = get definition\nRight click word = lookup@svensk.se");
+		$('#iInfo').attr("title","Mouse wheel/ or click left/right to navigate");
+		$('#iAdd').attr("title","Left click: add word to store*.\nRight click: guess class\n* (suffix word with '.' char to delete from current word class listing");
+		$('#iLast').attr("title","Back to last view");
+		$('#iParDef').attr("title","Double click to hide");
+		$('#iCntTotal').attr("title","Click to toggle control view");
+		$('#iDefText').attr("title","Enter definition text");
+		$('#iPut0').attr("title","Add/edit definition with score of '0/2'");
+		$('#iPut1').attr("title","Add/edit definition with score of '1/2'");
+		$('#iPut2').attr("title","Add/edit definition with score of '2/2'");
+		$('#iPutEx').attr("title","Add/edit example text");
+		$('#iPutHist').attr("title","Add/edit history text");
+		$('#iClearAll').attr("title","Clear all additional meta information.");
+	}
+}
+function toggleTooltips() {
+	if (DEBUG) console.log("toggleTooltips()");
+	SHOW_HELP = !SHOW_HELP;	
+	showTooltips();
+	if (SHOW_HELP) {
+		$('#iTitle').html($('#iTitle').html() + " - with Tooltips");
+	} else {
+		$('#iTitle').html($('#iTitle').html().replace(" - with Tooltips",""));
+	}
+}
 </script>
-<script src="script.js"></script>
 </html>

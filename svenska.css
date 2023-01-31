@@ -1,5 +1,5 @@
 body {
-	background-color: 7f7f7f;
+	background-color: lightgoldenrodyellow;
 }
 
 * {
@@ -65,7 +65,7 @@ p {
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 64px;
 	text-align: center;
 }	
 
@@ -124,7 +124,7 @@ h2 {
 	height: 800px;
 }
 .firstColumn {
-	width: 32%;
+	width: 34%;
 	float: left;
 	margin-left: 1%;
 }
@@ -190,33 +190,6 @@ h2 {
 	margin-right: 10%;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
 h3 {
 	margin-left: 10px;
 }
@@ -226,16 +199,6 @@ label {
 	padding: 20px auto 20px;
 	margin-left: 10px;
 	margin-right: 25px;
-}
-
-.progressBar {
-	background-Color: blue;
-	width: 200pt;
-	height: 36px;
-	margin-right: 6px;
-	margin-top: 0px;
-	margin-botton: 0px;
-	display: inline-block;
 }
 
 .score {
