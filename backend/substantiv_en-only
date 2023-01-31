@@ -119,6 +119,7 @@ amortering
 amplitud
 ampull
 amputation
+analfabet
 analys
 analysprocess
 analytiker
@@ -210,21 +211,32 @@ anteckning
 anteckningsbok
 anteckningstavla
 antidot
+antifon
 antifoni
+antikrist
 antikvitet
+antioxidant
+antipartikel
 antipati
 antipod
+antirobotrobot
 antisemitism
 antisionism
 antites
+antologi
+antrax
 antropofag
 antropologi
+antropomorfism
+antydan
+antydning
 antågande
 anvisning
 användare
 användning
 aorta
 apa
+apati
 apelsin
 apokope
 apostel
@@ -941,6 +953,7 @@ boboll
 bock
 bod
 bodybuilding
+boendekostnad
 bofink
 bog
 bogserare
@@ -966,6 +979,7 @@ bombkrater
 bombning
 bombplan
 bomull
+bonad
 bonde
 bondgård
 bondlurk
@@ -1213,6 +1227,7 @@ cashewnöt
 cava
 cd
 cd-skiva
+cd-spelare
 cell
 cellulosa
 cembalo
@@ -1400,6 +1415,7 @@ detonation
 devis
 dia
 diabetes
+diabild
 diafragma
 diagnos
 diagnostik
@@ -1649,6 +1665,7 @@ elektron
 elektronblixt
 elektronik
 elementarande
+elementarpartikel
 elev
 elevator
 elit
@@ -1869,6 +1886,7 @@ finanspolitik
 finansrådgivare
 finess
 fingernagel
+fingervisning
 fink
 finländare
 finländska
@@ -2144,6 +2162,7 @@ fyrkantsspänning
 fyrmänning
 fyrsiding
 fyrskaft
+fyrsprång
 fysik
 fysiker
 fysioterapeut
@@ -2418,6 +2437,7 @@ gallblåsa
 gallfeber
 gallup
 galning
+galopp
 galopptävling
 gamling
 gammelfarfar
@@ -2543,6 +2563,7 @@ gradmätning
 graf
 grafit
 grammatik
+grammofon
 grammofonskiva
 gran
 granat
@@ -2550,6 +2571,7 @@ grand
 grann
 granne
 grannfejd
+grannlåt
 granskare
 granskning
 granskningsnämnd
@@ -2706,6 +2728,7 @@ halsmandel
 halt
 halva
 halvering
+halveringstid
 halvfabrikat
 halvfart
 halvfigur
@@ -2826,6 +2849,7 @@ hindi
 hingst
 hink
 hinna
+hint
 hiss
 historia
 historik
@@ -2926,6 +2950,7 @@ hylla
 hyllning
 hylsa
 hymn
+hyperbol
 hypotenusa
 hypotes
 hyra
@@ -3141,6 +3166,7 @@ ingenjörskonst
 ingrediens
 ingång
 inhalation
+inhamn
 inkallelse
 inkarnation
 inklination
@@ -3175,6 +3201,7 @@ insats
 insida
 insikt
 insinuant
+insinuation
 insjö
 inskränkning
 insolation
@@ -3507,6 +3534,7 @@ karavan
 karbin
 kardan
 kardinal
+karenstid
 karies
 karikatyr
 karisma
@@ -3780,6 +3808,7 @@ konfrontation
 konfusion
 kongress
 kongruens
+konjak
 konjugat
 konjugation
 konjunktion
@@ -4105,6 +4134,7 @@ kärnved
 kärra
 kärring
 kätting
+kåkstad
 kål
 kålrot
 kår
@@ -4148,6 +4178,7 @@ landgång
 landhöjning
 landis
 landsbygd
+landsfader
 landsfiskal
 landsflykt
 landsförrädare
@@ -4250,6 +4281,7 @@ lisa
 list
 lista
 liter
+litotes
 litteratur
 liturgi
 livbåt
@@ -4275,6 +4307,8 @@ lockfågel
 lodlinje
 logi
 logik
+logistik
+logistiker
 logo
 logoped
 logopedi
@@ -4639,6 +4673,7 @@ mix
 mjukis
 mjukost
 mjukvara
+mjältbrand
 mjälte
 mjölk
 mjölkprodukt
@@ -5242,6 +5277,7 @@ passion
 passivitet
 passkontroll
 passning
+passopp
 passus
 pasta
 pastej
@@ -5553,6 +5589,7 @@ pärlemor
 pärs
 påbröd
 pådrivare
+påfyllning
 påföljd
 påk
 påkörning
@@ -5565,6 +5602,7 @@ påsklilja
 påstötning
 påtryckare
 påtryckning
+påtår
 påve
 påverkan
 pöbel
@@ -5744,6 +5782,7 @@ rikedom
 riksdag
 riksdagsledamot
 riksolycka
+rikssvenska
 riktlinje
 riktning
 rimfrost
@@ -5778,6 +5817,7 @@ rosmarin
 rot
 rotation
 rotting
+rotvälta
 roulette
 rubbning
 rubin
@@ -6014,6 +6054,7 @@ serb
 serie
 serveess
 server
+servering
 serveringsavgift
 servett
 service
@@ -6156,6 +6197,7 @@ skiss
 skissning
 skit
 skiva
+skivspelare
 skjorta
 skjuts
 sko
@@ -6917,6 +6959,7 @@ tankemöda
 tanks
 tant
 tantal
+tapet
 tapp
 tappt
 tarm
@@ -6972,6 +7015,7 @@ tertiärtiden
 tes
 tesaurus
 test
+testator
 testballong
 testikel
 tetraeder
@@ -7109,6 +7153,8 @@ toa
 toalett
 tobak
 toffel
+toka
+tokstolle
 tolerans
 tolk
 tolkning
@@ -7144,6 +7190,8 @@ torsk
 torso
 tortyr
 torv
+tosa
+tossa
 toxikologi
 tradition
 tradjazz
@@ -7193,6 +7241,7 @@ tredjedel
 trehörning
 treklang
 trend
+tretår
 trevare
 triangel
 triathlon
@@ -7249,6 +7298,7 @@ tråd
 trådbuss
 tråkmåns
 trål
+trångsyn
 tröghet
 tröghetslag
 tröja
@@ -7353,6 +7403,7 @@ under
 underarm
 underart
 underavdelning
+underdrift
 undergång
 underhandling
 underhållning
@@ -7362,6 +7413,7 @@ underrättelsetjänst
 undersida
 underskrift
 undersköterska
+understatement
 undersökning
 undertröja
 undervisning
@@ -7745,6 +7797,7 @@ vindruva
 vindstilla
 vingbredd
 vinge
+vink
 vinkel
 vinkelhastighet
 vinnare
@@ -7864,6 +7917,7 @@ värnpliktsarmé
 värvning
 väsentlighet
 väska
+västerled
 väta
 vätgas
 vätska
@@ -8109,6 +8163,7 @@ zucchini
 ört
 örtträdgård
 öst
+österled
 överbefälhavare
 överblick
 överdrift
@@ -8135,6 +8190,7 @@ zucchini
 översikt
 översittare
 överskattning
+överskrift
 överståthållare
 översvämning
 översyn

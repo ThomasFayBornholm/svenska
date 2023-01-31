@@ -17,6 +17,7 @@ album
 albumin
 alfabet
 alkali
+allmänspråk
 allting
 allvar
 alster
@@ -38,6 +39,7 @@ ankarspel
 anlag
 anletsdrag
 anlopp
+anrop
 anseende
 ansikte
 anslag
@@ -46,7 +48,11 @@ ansvar
 antagande
 antal
 antibiotikum
+antigen
+antihistamin
+antiklimax
 antikropp
+antitoxin
 antågande
 användningsfall
 apotek
@@ -348,6 +354,7 @@ delta
 deltagande
 departement
 diagram
+diapositiv
 diarium
 dike
 dilemma
@@ -435,6 +442,7 @@ enkammarparlament
 enskifte
 entreprenörskap
 envälde
+enzym
 epitet
 epos
 erbjudande
@@ -1233,6 +1241,7 @@ längdsnitt
 lärande
 lärkträd
 läroverk
+läshuvud
 läte
 lättsinne
 lågblad
@@ -1393,6 +1402,7 @@ måste
 mått
 måttband
 mög
+mögel
 mönster
 mörker
 mörkertal
@@ -1421,6 +1431,7 @@ negativ
 nej
 nervkrig
 nettolön
+neutrum
 nit
 nitrogen
 nittonhundra-talet
@@ -1536,6 +1547,7 @@ piss
 plagg
 plagiat
 plakat
+plan
 plank
 plankton
 plasma
@@ -1585,6 +1597,7 @@ protokoll
 prov
 prygel
 pränt
+prål
 prång
 psyke
 pund
@@ -1653,6 +1666,7 @@ riksdagsbeslut
 riksdagsparti
 riksdagsval
 riksförbund
+riksspråk
 riksäpple
 riktmärke
 ringfinger
@@ -1661,6 +1675,7 @@ ris
 rivjärn
 roder
 rofferi
+rollfack
 rop
 ros
 rotorblad
@@ -2112,6 +2127,7 @@ tenn
 teorem
 territorium
 terrorbrott
+test
 testamente
 testosteron
 tidevarv
@@ -2143,6 +2159,7 @@ tillkännagivande
 tillmäle
 tillmötesgående
 tillnamn
+tillrop
 tillskott
 tillstånd
 tilltag
@@ -2360,6 +2377,7 @@ vilt
 viltkött
 vin
 vinbär
+vindfälle
 vindspel
 vinterlov
 virke
@@ -2400,6 +2418,7 @@ värme
 värmenät
 väsen
 väsende
+västgötaklimax
 väte
 växelbruk
 växelkontor
