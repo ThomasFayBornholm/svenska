@@ -207,6 +207,7 @@ ansökning
 antagning
 antagonism
 antagonist
+antavla
 anteckning
 anteckningsbok
 anteckningstavla
@@ -232,6 +233,7 @@ antydan
 antydning
 antågande
 anvisning
+anvisningsläkare
 användare
 användning
 aorta
@@ -304,6 +306,7 @@ armé
 arrangör
 arrest
 art
+artefakt
 artighet
 artighetsfras
 artikel
@@ -501,6 +504,7 @@ bard
 bardval
 bark
 barkis
+barlast
 barm
 barmhärtighet
 barnatro
@@ -874,6 +878,7 @@ bindning
 bindsle
 binga
 binokel
+binäring
 bio
 bioduk
 biograf
@@ -911,6 +916,7 @@ blinker
 blinkning
 blixt
 blockad
+blockbildning
 blodförlust
 blodgivare
 blodgivning
@@ -1250,6 +1256,7 @@ chaufför
 check
 chef
 chefredaktör
+chiffrering
 chikan
 chili
 chock
@@ -1537,6 +1544,7 @@ drivfjäder
 drivhusgas
 drivkedja
 drivkraft
+drivrutin
 drog
 dromedar
 droppe
@@ -1825,6 +1833,7 @@ fasan
 fascism
 fascist
 fasett
+faskikel
 fason
 fasta
 faster
@@ -1943,6 +1952,7 @@ flinga
 flint
 flinta
 flipp
+flisa
 flit
 flock
 flod
@@ -2278,6 +2288,7 @@ förhandlingschef
 förhandsvisning
 förhoppning
 förhud
+förhållningsorder
 förintelse
 förklaring
 förknippning
@@ -2329,6 +2340,7 @@ försiktighet
 försjunkenhet
 förskansning
 förskingring
+förskjutning
 förskola
 förskoleklass
 förskoning
@@ -2476,6 +2488,7 @@ generator
 generositet
 genesis
 gengas
+gengäld
 gengångare
 genklang
 genomgång
@@ -2685,6 +2698,7 @@ gyttja
 gyttjebrottning
 gäck
 gällning
+gänga
 gängback
 gängning
 gängtapp
@@ -2692,6 +2706,7 @@ gärd
 gärning
 gässling
 gäst
+gästgivargård
 gågata
 gång
 gångbana
@@ -2808,8 +2823,10 @@ hela
 helfabrikat
 helfart
 helg
+helgd
 helgdag
 helhet
+helighet
 helikopter
 heltid
 hemgift
@@ -2950,6 +2967,7 @@ hylla
 hyllning
 hylsa
 hymn
+hynda
 hyperbol
 hypotenusa
 hypotes
@@ -3115,6 +3133,7 @@ illustration
 illvilja
 ilning
 ilska
+image
 imitation
 imma
 immanens
@@ -3143,6 +3162,7 @@ indelning
 indignation
 individ
 individualitet
+indrivning
 induktor
 industri
 industridesign
@@ -3280,6 +3300,7 @@ intervju
 intervjuare
 intervjuundersökning
 intolerans
+intonation
 intoxikation
 intresseorganisation
 intressesfär
@@ -3693,6 +3714,7 @@ knut
 knuta
 knutpunkt
 knyck
+knyppling
 knytnäve
 knäckare
 knäppning
@@ -3704,6 +3726,7 @@ koalition
 kobbe
 kock
 kod
+kodnyckel
 koefficient
 koffert
 kofot
@@ -3895,6 +3918,7 @@ korrespondent
 korridor
 korrigering
 korrosion
+korrumpering
 korruption
 korsgång
 korsning
@@ -5093,6 +5117,7 @@ olikhet
 oliv
 olivolja
 olja
+oljemålning
 oljetankar
 olm
 olycka
@@ -5348,6 +5373,7 @@ pingla
 pingst
 pingstlilja
 pingvin
+pinne
 pint
 pipa
 pippi
@@ -6006,8 +6032,10 @@ satan
 satkärring
 satmara
 sats
+satsaccent
 satsdel
 satslösning
+satsmelodi
 satsning
 satsuma
 savann
@@ -6213,6 +6241,7 @@ skopa
 skopning
 skorpa
 skorsten
+skottavla
 skottdag
 skottglugg
 skottkärra
@@ -6334,6 +6363,7 @@ slutpunkt
 slutsats
 slutspurt
 slutsten
+sluttning
 slyngel
 släde
 slägga
@@ -6495,6 +6525,7 @@ spelning
 spelplan
 spenat
 sperma
+speta
 spets
 spik
 spiksko
@@ -6609,6 +6640,7 @@ stereo
 stereometri
 stereotyp
 stia
+sticka
 stickel
 stickkontakt
 stickling
@@ -7076,6 +7108,7 @@ tidvattenhöjd
 tiebreak
 tiger
 tiggare
+tik
 tillblivelse
 tilldelning
 tilldragelse
@@ -8077,6 +8110,7 @@ zucchini
 ådra
 åhörare
 åkallan
+åker
 åklagare
 åklagarmyndighet
 åkning
