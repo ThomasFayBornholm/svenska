@@ -10,7 +10,6 @@ aberration
 abonnera
 abdikation
 abdomen
-aber
 abilitet
 abnormitet
 abolition
@@ -201,6 +200,7 @@ ambulans
 amen
 amerikan
 amerikansk
+amfetamin
 amfibie
 amiral
 amma
@@ -805,6 +805,7 @@ backspänning
 bad
 bada
 badbyxor
+baddare
 baddräkt
 badhandduk
 badkar
@@ -1658,6 +1659,7 @@ bosätta sig
 bosättning
 bot
 bota
+botanisera
 botten
 bottenfällning
 bottenplan
@@ -1968,7 +1970,9 @@ båda upp
 både
 båge
 båglampa
+bågminut
 bågsekund
+bågskytte
 bål
 bårhus
 båt
@@ -2010,6 +2014,7 @@ camembert
 camping
 campingplats
 cancer
+cannabis
 cappuccino
 cash
 cashewnöt
@@ -2273,6 +2278,7 @@ desinficera
 deskriptiv
 desorienterad
 desperat
+desperation
 despoti
 despotism
 dess
@@ -2320,6 +2326,7 @@ diffus
 diffusion
 diffussion
 difteri
+digerdöden
 digital
 digitalkamera
 dignitet
@@ -2329,6 +2336,7 @@ dikt
 diktamen
 diktatur
 diktera
+diktion
 dilemma
 dilettantisk
 dill
@@ -3235,6 +3243,7 @@ festa
 festival
 festlig
 fet
+fetma
 fett
 fettsugning
 fiasko
@@ -3694,6 +3703,8 @@ frigivning
 frigjord
 frigöra
 frigörelse
+frihamn
+frihandel
 frihet
 frihetsberöva
 frihetsberövad
@@ -4977,6 +4988,7 @@ grundbok
 grundbult
 grundera
 grundinställning
+grundkurs
 grundlag
 grundlagsändring
 grundlig
@@ -5282,6 +5294,7 @@ hantering
 hanterlig
 hantverk
 hantverkare
+hantverksförening
 harang
 hare
 harkrank
@@ -7304,11 +7317,14 @@ korrosion
 korruption
 kors
 korsa
+korsfästa
+korsfästelse
 korsgång
 korsning
 korsord
 korståg
 kort
+korta
 kortfattad
 korthet
 korthus
@@ -7558,6 +7574,7 @@ kurort
 kurs
 kursa
 kursdeltagare
+kursiv
 kursnotering
 kursplan
 kurtis
@@ -8219,6 +8236,7 @@ lyxig
 läbbig
 läcka
 läcker
+läderhud
 läderlapp
 läge
 lägenhet
@@ -8556,6 +8574,7 @@ maskinrum
 maskinvara
 maskopi
 maskros
+maskrosbarn
 maskulin
 massa
 massage
@@ -8964,6 +8983,7 @@ mos
 mosa
 moské
 mossa
+mossbelupen
 mosse
 moster
 mot
@@ -9485,6 +9505,7 @@ nyttja
 nytändning
 nyår
 nyårsafton
+näbb
 nämligen
 nämna
 nämnd
@@ -9853,6 +9874,7 @@ omkomma
 omkostnad
 omkrets
 omkring
+omkväde
 omkörning
 omlopp
 omloppsbana
@@ -10112,6 +10134,7 @@ ovanpå
 ovanstående
 ovarsam
 ovedersäglig
+overall
 overksam
 overksamhet
 ovetande
@@ -11115,7 +11138,6 @@ resenär
 resenäre
 reserv
 reservation
-reservdäck
 reservera
 reservera sig
 reservgenerator
@@ -11581,6 +11603,7 @@ samförstånd
 samhälle
 samhällelig
 samhällsengagemang
+samhällsklass
 samhällsomstörtande
 samhällssyn
 samisk
@@ -13075,6 +13098,7 @@ stereo
 stereotyp
 steril
 stia
+stick
 sticka
 sticka av
 sticka emellan
@@ -13569,6 +13593,7 @@ sy
 sy ihop
 sy in
 sybehör
+sydkant
 sydlig
 sydpol
 sydsken
@@ -14741,6 +14766,7 @@ underhållning
 underjordisk
 underkasta
 underkasta sig
+underklass
 underkropp
 underkänd
 underkänna
@@ -15907,6 +15933,7 @@ väsnas
 vässa
 västerländsk
 västerut
+västkant
 västlig
 västra
 väta
@@ -16342,6 +16369,7 @@ zucchini
 öst
 österrikisk
 österut
+östkant
 östlig
 östra
 östrogen
@@ -16351,5 +16379,69 @@ zucchini
 öva sig
 öva upp
 över
-överallt
-öv
+överambitiös
+överanstränga
+överantvarda
+överanvändning
+överarm
+överbefolkning
+överbegåvad
+överbelastad
+överbelastningsattack
+överbeskydda
+överbett
+överblicka
+överboka
+överbrygga
+överbud
+överbyggnad
+överdos
+överdosera
+överdriven
+överdängare
+överdåd
+överexponera
+överflygning
+överfångsglas
+överförsäkra
+överförtjust
+övergångsålder
+övergöda
+överhalning
+överhandsknop
+överhet
+överhud
+överhus
+överhäng
+överhöghet
+överinlärning
+överintendent
+överjag
+överjordisk
+överjäsning
+överklassig
+överkomlig
+överkompensation
+överkompensera
+överkurs
+överkäke
+överkänslig
+överkörd
+överlagra
+överlakan
+överlapp
+överlappning
+överlevnadskurs
+överliggare
+överlopps
+överloppsgärning
+överlupen
+överläge
+överläkare
+överlärare
+övermakt
+överman
+övermanna
+övermogen
+övermorgon
+övermänsklig

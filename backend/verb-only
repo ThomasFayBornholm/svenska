@@ -129,6 +129,7 @@ atrofiera
 attackera
 attrahera
 auktorisera
+auskultera
 avancera
 avbilda
 avbryta
@@ -536,6 +537,7 @@ bortta
 bortvräka
 bosätta sig
 bota
+botanisera
 bottna
 boxas
 braka
@@ -558,6 +560,7 @@ brotta
 brottas
 bruka
 bry sig
+brygga över
 bryna
 bryta
 bryta av
@@ -578,6 +581,7 @@ bränna sig
 bränna vid
 brådska
 bråka
+bröla
 bua
 bubbla
 buga
@@ -897,6 +901,8 @@ felbedöma
 felcitera
 fermentera
 festa
+fetma
+fetna
 fiffa upp
 fiffla
 fika
@@ -2270,6 +2276,8 @@ korrigera
 korrodera
 korrumpera
 korsa
+korsfästa
+korta
 korta av
 kortsluta
 kosta
@@ -3721,6 +3729,7 @@ spionera
 spjäla
 splittra
 spola
+spola om
 spoliera
 sponsra
 sporra
@@ -3776,6 +3785,7 @@ stanna
 stanna av
 stapla
 starta
+starta upp
 stationera
 statuera
 stava
@@ -4260,6 +4270,7 @@ träffa
 träffa på
 träffas
 träna
+träna sig
 tränga
 tränga igenom
 tränga in
@@ -4273,6 +4284,7 @@ trösta
 trötta
 trötta ut
 tröttna
+ttt
 tudela
 tugga
 tulla
@@ -4873,25 +4885,40 @@ yttra sig
 öva sig
 öva upp
 överanalysera
+överanstränga
 överanstränga sig
+överantvarda
+överanvända
 överarbeta
+överbeskydda
 överbevisa
 överbjuda
+överblicka
+överboka
+överbringa
+överbrygga
 överdimensionera
+överdirektör
+överdosera
 överdriva
 överenskomma
 överensstämma
+överexponera
 överfalla
 överflygla
 överflöda
 överföra
+överförsäkra
 överge
-övergiva
 överglänsa
 övergå
+övergöda
 överhetta
 överhölja
+överhöra
+överila sig
 överklaga
+överlagra
 överlappa
 överleva
 överlista
@@ -4899,6 +4926,7 @@ yttra sig
 överlämna
 överlämna sig
 överlåta
+övermanna
 övernatta
 överordna
 överpröva
