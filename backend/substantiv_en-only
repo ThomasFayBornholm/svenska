@@ -3255,6 +3255,7 @@ inklination
 inkompetens
 inkomst
 inkoppling
+inkrustation
 inkräktare
 inkörning
 inlandsis
@@ -3592,6 +3593,7 @@ kanot
 kant
 kantat
 kantblomma
+kantin
 kanton
 kantor
 kapacitans
@@ -4424,6 +4426,7 @@ luffare
 luft
 luftfart
 luftförorening
+luftkuddefarkost
 luftpump
 luftström
 luftväg
@@ -4584,8 +4587,16 @@ marginal
 marin
 marina
 mark
+marka
+markatta
+markeffektfarkost
+markegång
 markering
 marketing
+markfrigång
+markgreve
+markis
+marklyft
 marknad
 marknadsekonomi
 marknadsföring
@@ -6044,6 +6055,7 @@ rösträtt
 röv
 sabel
 sackaros
+safari
 saft
 saga
 sajt
@@ -6952,6 +6964,8 @@ svängning
 svärdotter
 svärmare
 svärson
+svävare
+svävfarkost
 svävning
 svåger
 svångrem
@@ -7921,6 +7935,7 @@ viking
 vikt
 vila
 vildand
+vildmark
 vilja
 villa
 villervalla
@@ -8283,6 +8298,7 @@ zucchini
 ö
 ödebygd
 ödeläggelse
+ödemark
 ödla
 ögonfrans
 ögonläkare
