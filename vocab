@@ -30,8 +30,8 @@
 </div>
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
-	<form class="centred" onsubmit="newInputWrapper(event)" onkeydown="processKeyDown(event)">		
-		<input id="iInput" oncontextmenu="onlineLookup(this,event)" class="inputSearch" autocomplete="off">				
+	<form class="centred" onsubmit="newInputWrapper(event)">		
+		<input id="iInput" oncontextmenu="onlineLookup(this,event)" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(this,event)">				
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="seekWord('')" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 	</form>
 	
@@ -42,7 +42,7 @@
 <div id="iInfo" class="secondColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)">
 
 	<div id="iDefDiv">
-		 <textarea  class="defBox" id="iDefText"></textarea>			 
+		 <textarea  class="defBox" id="iDefText" onkeydown="defEntry(event)"></textarea>			 
 		 <div id="iPutDef">
 		 <button class="putDefThree" id="iPut0" onclick="putDef('', 0)">0</button>			 			 
 		 <button class="putDefThree" id="iPut1" onclick="putDef('', 1)">Put (1)</button>			 			 
@@ -152,7 +152,7 @@ function setN_CUR() {
 	} else if (CLASS === "subjunktion") {
 		N_CUR = N_SUBJUNKTION;
 	} else if (CLASS === "all") {
-		N_CUR = N_TOT;
+		N_CUR = N_ALL;
 	}
 	if (CLASS === "all") {
 		$('#iCnt').text("");
@@ -611,13 +611,15 @@ function lookupWord(el,onlyLocal,inline) {
 						$('#iWords').css("visibility", "hidden");
 					}
 				} else {
+					/*
 					if (!onlyLocal) {
 						let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
 						window.open(bulletProofUrl(url), '_blank');
 					}
+					*/
+					seekWordSingleClass(word);
 					$('#iParDef').html("");
 					$('#iDefDiv').css("display", "block");
-					$('#iDefText').focus();
 				}
 			})
 			.catch(error => {
@@ -869,10 +871,11 @@ function getRefs(def) {
 	return arr;
 }
 
-function onlineLookup(el, e) {
-	e.preventDefault()
-	word = el.innerText;
-	if (word.length === 0) word = el.value;
+function onlineLookup(elHTML, ev) {	
+	if (DEBUG) console.log("onlineLookup(elHTML, ev)");
+	ev.preventDefault()
+	word = elHTML.innerText;
+	if (word.length === 0) word = elHTML.value;
 	let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
 	window.open(bulletProofUrl(url), '_blank');
 }
@@ -890,6 +893,7 @@ function wordCount() {
 	})
 	.then(json => {
 		N_TOT = json["total"];
+		N_ALL = json["all"];
 		N_ADJ = json["adj"];
 		N_VERB = json["verb"];
 		N_ADVERB = json["adverb"];
@@ -928,6 +932,7 @@ function showToggle() {
 	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
 function newInputWrapper(e) {
+	if (DEBUG) console.log("newInputWrapper()");
 	e.preventDefault();
 	let word = $('#iInput').val();
 	if (word.indexOf("@") === 0) {
@@ -957,14 +962,45 @@ function newInputWrapper(e) {
 		$('#iInput').val(word);
 		newInputWrapper(e);
 		return;
-	} else if (word.indexOf(",") === 0 || word.indexOf(",") === word.length-1) {
-		console.log("add")
+	} else if (word.indexOf(",") === 0 || word.indexOf(",") === word.length-1) {	
 		word = word.replaceAll(",","");
 		$('#iInput').val(word);
 		addWord();
-		seekWord(word);
+		seekWordSingleClass(word);
+		return;
 	}
 	seekWord(word);
+}
+
+function seekWordSingleClass(word) {
+	if (word.length > 0) {
+		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			if (json > -1) {
+				// Put selected word in the middle of the word collection				
+				INC = json - 3;
+				let ind = 3;
+				let mid = N_INC/2;
+				if (json < mid - 1) {					
+					INC = 0;
+					ind = json;
+				}
+				getWords(ind);
+			}
+		})
+		.catch(error => {
+			console.log(error);
+		})		
+	}
 }
 
 /* Priorities for search
@@ -1050,7 +1086,6 @@ function seekWord(word, link = false) {
 		if (word != "Ers" && word != "Eders") word = word.toLowerCase()
 		if (word === '') {
 			word = LAST_WORD;
-			console.log(word);
 			$('#iInput').val(word);
 			setClass(LAST_CLASS);
 		}
@@ -1202,7 +1237,7 @@ function setClass(c, seek = "") {
 	countDefs();
 	getWords(-1);
 	updateScore();
-	if (seek.length > 0) seekWord(seek);
+	if (seek.length > 0) seekWordSingleClass(seek);
 	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
 }
 function countDefs() {
@@ -1391,37 +1426,42 @@ function addWord() {
 			}
 		})
 		.then(response => {
-			// If this was the last listing of this word delete from "all" listing also
-			fetch('backend/getDefAll.php?class=all&word=' + word, {
-				method: 'get',
-				mode: 'cors',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {
-				return response.json();
-			})
-			.then(json => {
-				// It was last reference
-				if (json.length < 1) {
-					fetch('backend/removeWord.php?class=all&word=' + word, {
-						method: 'get',
-						mode: 'cors',
-						headers: {
-							'Content-Type': 'application/json'
-						}
-					})
-					.catch(error => {
-						console.log(error);
-					})
-				}
-			})
-			.catch(error => {
-				console.log(error);
-			})
-			getWords();
-			wordCount();
+			if (op === "remove") {
+				// If this was the last listing of this word delete from "all" listing also
+				fetch('backend/getDefAll.php?class=all&word=' + word, {
+					method: 'get',
+					mode: 'cors',
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				})
+				.then(response => {
+					return response.json();
+				})
+				.then(json => {
+					// It was last reference
+					if (json.length < 1) {
+						fetch('backend/removeWord.php?class=all&word=' + word, {
+							method: 'get',
+							mode: 'cors',
+							headers: {
+								'Content-Type': 'application/json'
+							}
+						})
+						.catch(error => {
+							console.log(error);
+						})
+						getWords();
+						wordCount();
+					}
+				})
+				.catch(error => {
+					console.log(error);
+				})
+			// Navigate to newly added word for convenience.
+			} else if (op === "add") {
+				seekWordSingleClass(word)
+			}
 		})
 		.catch(error => {
 			console.log(error);	
@@ -1829,6 +1869,7 @@ function preProc(def) {
 			s = fmtVerbApart(s,/(äv. lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(ofta lös förbindelse i formen )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(ofta lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(ofta lös förbindelse se )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(ofta lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(vanligen lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(vanligen lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
@@ -2196,10 +2237,14 @@ function editMore(ev,key) {
 	$("#iDivMore").css("display", "block");
 	$('#iDefText').focus();
 }
-function processKeyDown(ev) {
+function processKeyDown(elHTML,ev) {
 	if (DEBUG) console.log("processKeyDown(ev)")	
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
+	}
+	if (ev.key === "Home") {
+		onlineLookup(elHTML,ev);
+		$('#iDefText').focus();
 	}
 	if (ev.location === 2) {
 		if (ev.key === "Control") {
@@ -2283,6 +2328,30 @@ function toggleTooltips() {
 		$('#iTitle').html($('#iTitle').html() + " - with Tooltips");
 	} else {
 		$('#iTitle').html($('#iTitle').html().replace(" - with Tooltips",""));
+	}
+}
+function defEntry(ev) {
+	if (ev.location === 2) {
+		if (ev.key === "Control") {			
+			putDef('',2);
+			$('#iInput').val("");
+			$('#iInput').focus();
+			seekWord(CUR_WORD);
+		}
+	} else if (ev.location === 3) {
+		if (ev.key === "0") {
+			ev.preventDefault();
+			putDef('',0);
+			$('#iInput').val("");
+			$('#iInput').focus();
+			seekWord(CUR_WORD);
+		} else if (ev.key === "1") {
+			ev.preventDefault();
+			putDef('',1);
+			$('#iInput').val("");
+			$('#iInput').focus();
+			seekWord(CUR_WORD);
+		}
 	}
 }
 </script>

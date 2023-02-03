@@ -8,9 +8,10 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural","superlativ", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
+	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural","superlativ", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
 
 	$nTot = 0;
+	$nAll = 0;
 	$nAdj = 0;
 	$nVerb = 0;
 	$nAdverb = 0;
@@ -34,8 +35,9 @@
 		if (filesize($f) != 0) {
 			$contents = fread($infile, filesize($f));
 			$words = preg_split("/\r\n|\r|\n/", $contents);
-
-			if ($f_base === "adjektiv") {
+			if ($f_base === "all") {
+				$nAll = count($words);
+			} else if ($f_base === "adjektiv") {
 				$nAdj = count($words);	 
 			} else if ($f_base === "verb") {
 				$nVerb = count($words);
@@ -72,6 +74,7 @@
 	
 	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nPlural + $nSuperlativ + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled;
 	$count["total"] = $nTot;
+	$count["all"] = $nAll;
 	$count["adj"] = $nAdj;
 	$count["verb"] = $nVerb;
 	$count["adverb"] = $nAdverb;
