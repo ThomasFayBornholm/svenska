@@ -32,7 +32,7 @@
 	<p class="debug" id="iDebugTxt"></p>
 	<form class="centred" onsubmit="newInputWrapper(event)">		
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(this,event)">				
-		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="seekWord('')" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 	</form>
 	
 </div>
@@ -363,7 +363,7 @@ function displayWords(list,ind) {
 			del = "<br>";
 		}
 		$('#iWords').html(out);
-		// Formwatting to show score indicators
+		// Formatting to show score indicators
 		if (CLASS != "all") {
 			for (let i = 0; i < N_FOUND; i++) {
 				let tmp = "#w" + i;
@@ -381,10 +381,9 @@ function displayWords(list,ind) {
 		
 		if (ind > -1) {
 			let el = document.getElementById("w" + ind);
+			CUR_WORD = el.innerText;
 			lookupWord(el,false,true);
-		}
-		
-		
+		}				
 	})
 	.catch(error => {
 		console.log(error);
@@ -794,8 +793,9 @@ function addLinks(refClass,def) {
 	return def;
 }
 function followLink(el) {
+	if (DEBUG) console.log("followLink");
 	LAST_CLASS = CLASS;
-		
+	LAST_WORD = CUR_WORD;	
 	N_REGEX = 0;
 	REGEX_WORDS = [];
 	let word = el.innerText;
@@ -804,6 +804,7 @@ function followLink(el) {
 		word = word.replaceAll(rep[0], " ");
 	}
 	word = word.replace("!","");
+	CUR_WORD = word;
 	if (DEBUG) console.log("followLink(" + word + ")");
 	$('#iInput').val(word);	
 	let oldINC = INC;
@@ -972,8 +973,10 @@ function newInputWrapper(e) {
 	seekWord(word);
 }
 
-function seekWordSingleClass(word) {
+function seekWordSingleClass(word) {	
+	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)	
 	if (word.length > 0) {
+		LAST_WORD = CUR_WORD;
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
 			mode: 'cors',
@@ -986,6 +989,7 @@ function seekWordSingleClass(word) {
 		})
 		.then(json => {
 			if (json > -1) {
+				CUR_WORD = word;
 				// Put selected word in the middle of the word collection				
 				INC = json - 3;
 				let ind = 3;
@@ -1000,7 +1004,7 @@ function seekWordSingleClass(word) {
 		.catch(error => {
 			console.log(error);
 		})		
-	}
+	}	
 }
 
 /* Priorities for search
@@ -1010,7 +1014,7 @@ function seekWordSingleClass(word) {
  4) Matches conjugation within any class (first found).
  */
 // Link is set if this seek is called from a clickable link
-function seekWord(word, link = false) {
+function seekWord(word, link = false) {	
 	if (DEBUG) console.log("seekWord(word, link),word = " + word + ", link = " + link)
 	REGEX_WORDS = [];
 	if (word[word.length-1] === "." || word.indexOf('+') != -1) {		
@@ -1090,7 +1094,7 @@ function seekWord(word, link = false) {
 			setClass(LAST_CLASS);
 		}
 		if (!link) {
-			LAST_WORD = CUR_WORD;
+			//LAST_WORD = CUR_WORD;
 		}
 		CUR_WORD = word;
 		if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
@@ -1215,30 +1219,40 @@ function seekWord(word, link = false) {
 			})
 		}
 	}
-	if (DEBUG) console.log("seekWord(); word = " + word + " -> INC = " + INC);
+	if (DEBUG) console.log("END seekWord(); word = " + word + " -> INC = " + INC);			
 }
 
 function setClass(c, seek = "") {
+	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	LAST_CLASS = CLASS;
-	REGEX_WORDS = [];
-	N_REGEX = 0;
-	$('#iCntRegex').html("");
-	$('#iDefDiv').css("display", "none");
-	$('#iWords').css("visibility", "visible");
-	if (c != "all") {
-		$('#iDefProgContainer').css("visibility","visible");
-	} else {
-		$('#iDefProgContainer').css("visibility","hidden");
+	if (c != CLASS) {
+		REGEX_WORDS = [];
+		REGEX_WORDS = [];
+		N_REGEX = 0;
+		$('#iCntRegex').html("");
+		$('#iDefDiv').css("display", "none");
+		$('#iWords').css("visibility", "visible");
+		if (c != "all") {
+			$('#iDefProgContainer').css("visibility","visible");
+		} else {
+			$('#iDefProgContainer').css("visibility","hidden");
+		}
+		CLASS = c;
+		INC = 0;
+		SCROLL_INC=-1;
+		setN_CUR();	
+		countDefs();
+		getWords(-1);
+		updateScore();
 	}
-	CLASS = c;
-	INC = 0;
-	SCROLL_INC=-1;
-	setN_CUR();	
-	countDefs();
-	getWords(-1);
-	updateScore();
 	if (seek.length > 0) seekWordSingleClass(seek);
-	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);
+	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);	
+}
+function getLastWord() {
+	if (DEBUG) console.log("getLastWord()")	
+	setClass(LAST_CLASS);
+	$('#iInput').val(LAST_WORD);
+	seekWordSingleClass(LAST_WORD);	
 }
 function countDefs() {
 	N_DEFS = 0;
@@ -1402,7 +1416,7 @@ function removeClassDesc(word) {
 			
 }
 function addWord() {	
-	if (DEBUG) console.log("addWord()");
+	if (DEBUG) console.log("addWord()");	
 	let word = $('#iInput').val();	
 	if (word.indexOf('+') != -1) {
 		tmp = word.split('+');
@@ -2242,7 +2256,7 @@ function processKeyDown(elHTML,ev) {
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
 	}
-	if (ev.key === "Home") {
+	if (ev.key === "ArrowUp") {
 		onlineLookup(elHTML,ev);
 		$('#iDefText').focus();
 	}
@@ -2353,6 +2367,13 @@ function defEntry(ev) {
 			seekWord(CUR_WORD);
 		}
 	}
+}
+function showLast(caller) {
+	console.log("*** Caller = " + caller + "***")
+	console.log("LAST_CLASS = " + LAST_CLASS)
+	console.log("LAST_WORD = " + LAST_WORD)
+	console.log("CLASS = " + CLASS)
+	console.log("CUR_WORD = " + CUR_WORD)
 }
 </script>
 </html>
