@@ -119,6 +119,7 @@ argumentera
 arkebusera
 arkivera
 arrangera
+arrendera ut
 arrestera
 artikulera
 artikulera sig
@@ -272,6 +273,7 @@ barlasta
 basa
 basera
 basta
+basunera ut
 baxa
 be
 beakta
@@ -585,6 +587,7 @@ bryta om
 bryta samman
 bryta sig
 bryta sig in
+bryta sig ut
 bryta upp
 bryta ut
 bräcka
@@ -707,6 +710,7 @@ depreciera
 desarmera
 desavouera
 desinficera
+detachera
 determinera
 detonera
 detronisera
@@ -878,6 +882,7 @@ etablera
 etsa
 evakuera
 evaluera
+examinera
 excitera
 exercera
 existera
@@ -953,6 +958,7 @@ fjäska
 flacka
 fladdra
 flaga
+flagga ut
 flagna
 flamma
 flanera
@@ -1080,6 +1086,7 @@ fuskåka
 fylla
 fylla i
 fylla upp
+fylla ut
 fyra av
 fysiljera
 fälla
@@ -1098,6 +1105,7 @@ fästa sig
 få
 få ut
 få åter
+fålla
 fånga
 fånga in
 fåra
@@ -1607,6 +1615,7 @@ gjuta in
 gjuta över
 glamma
 glasera
+glesa ut
 glida
 glimma
 glimra
@@ -2333,6 +2342,8 @@ krigsplacera
 kringgärda
 kringgå
 kringränna
+kristallisera
+kristallisera sig
 kristna
 krita
 kritisera
@@ -2363,6 +2374,7 @@ kräkas
 kräla
 kränka
 kräva
+kräva ut
 krångla
 krångla sig
 krångla till
@@ -2389,6 +2401,7 @@ kvalificera
 kvarstå
 kvida
 kvittera
+kvittera ut
 kvittra
 kväka
 kvälja
@@ -2663,6 +2676,7 @@ medge
 medla
 medta
 medverka
+memorera
 mena
 mena på
 meta
@@ -3059,6 +3073,7 @@ propsa
 protestera
 prova
 prova på
+prova ut
 provocera
 provocera fram
 provtjänstgöra
@@ -3085,6 +3100,7 @@ pusta
 puta
 putsa
 putta
+pynta
 pyssla
 pärla
 påbjuda
@@ -3394,7 +3410,7 @@ se till
 se upp
 se ut
 se över
-sedvana
+seeda
 segelflyga
 segla
 segla in
@@ -3879,6 +3895,7 @@ stipulera
 stirra
 stjäla
 stjälpa
+stoffera
 stoja
 stoltsera
 stoppa
@@ -3917,6 +3934,8 @@ stryka över
 strypa
 sträcka
 sträcka sig
+sträcka ut
+sträcka ut sig
 sträva
 stråla
 stråla samman
@@ -4337,6 +4356,8 @@ trycka till
 trygga
 tryta
 trä
+träda emellan
+träda fram
 träffa
 träffa på
 träffas
@@ -4527,6 +4548,7 @@ uppstämma
 uppstå
 uppsöka
 uppta
+upptaxera
 uppteckna
 upptrappa
 uppträda
@@ -4549,61 +4571,101 @@ ursäkta
 urvattna
 utagera
 utandas
+utannonsera
+utanordna
+utantilläxa
 utarbeta
 utarma
+utarrendera
+utbasunera
+utbe sig
+utbekomma
 utbetala
 utbilda
 utbilda sig
 utbjuda
+utbomba
 utbreda
 utbreda sig
 utbringa
 utbrista
 utbrodera
 utbryta
+utbygga
 utbyta
 utdela
+utdika
+utdunsta
 utdöma
 utebli
 utebliva
 utelämna
 utesluta
+utestänga
+utexaminera
+utexperimentera
 utfalla
+utfiska
+utflagga
+utfodra
 utforma
 utforska
 utfråga
+utfylla
+utfälla
 utfärda
 utfästa
+utfästa sig
+utfå
 utföra
 utförsälja
 utge
 utge sig
 utgjuta
 utgjuta sig
+utglesa
+utgrunda
 utgå
 utgöra
 uthärda
 utjämna
 utklassa
 utkomma
+utkommendera
+utkristallisera
+utkräva
+utkvittera
+utkämpa
+utlokalisera
+utlotta
 utlova
+utlysa
 utlägga
 utlämna
 utläsa
+utlåta sig
 utlöpa
 utlösa
 utmana
+utmanövrera
 utmatta
+utmejsla
+utminutera
 utmynna
 utmärka
 utmärka sig
+utmäta
 utmåla
 utmönstra
 utnyttja
 utnämna
 utpeka
+utplundra
 utplåna
 utpressa
+utpricka
+utprova
+utradera
 utrangera
 utreda
 utrensa
@@ -4614,13 +4676,22 @@ utrymma
 uträtta
 utröna
 utse
+utsira
+utskeppa
 utskilja
 utskriva
 utskänka
+utslunga
+utsläcka
+utsläta
 utsmycka
 utspela sig
 utspelas
+utspinna sig
 utspisa
+utspy
+utstaka
+utstoffera
 utsträcka
 utstå
 utstöta
@@ -4628,6 +4699,7 @@ utsuga
 utsända
 utsätta
 utsätta sig
+utsöka
 utsöndra
 uttala
 uttala sig

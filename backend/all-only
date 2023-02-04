@@ -1,6 +1,7 @@
 Eders
 Ers
 Europa
+I
 Orienten
 abandon
 abborre
@@ -665,6 +666,8 @@ aromatisk
 arrangemang
 arrangera
 arrangör
+arrende
+arrendera ut
 arrest
 arrestera
 arsel
@@ -931,6 +934,7 @@ avse
 avsedd
 avseende
 avsevärd
+avsigkommen
 avsikt
 avsiktlig
 avskaffa
@@ -1044,6 +1048,7 @@ avväpnande
 avvärja
 avyttra
 av­kasta
+av­skiljare
 aväta
 ax
 axel
@@ -1223,6 +1228,7 @@ bastard
 bastu
 bastubad
 basun
+basunera ut
 batalj
 bataljon
 batch
@@ -2465,6 +2471,7 @@ bryta om
 bryta samman
 bryta sig
 bryta sig in
+bryta sig ut
 bryta upp
 bryta ut
 brytning
@@ -2936,6 +2943,7 @@ debitera
 december
 decennium
 dechiffrera
+deciderad
 decimaltal
 decimera
 decimeter
@@ -3054,6 +3062,8 @@ desto
 destruktiv
 destruktivitet
 det vill säga
+detachement
+detachera
 detalj
 detaljerad
 detaljhandel
@@ -3897,6 +3907,7 @@ ex
 exakt
 examen
 examination
+examinera
 excentrisk
 excitation
 excitera
@@ -4116,6 +4127,7 @@ felfri
 felmarginal
 felsägning
 feminin
+femininum
 feminism
 feminist
 femma
@@ -4276,6 +4288,7 @@ fladdra
 fladdrig
 flaga
 flagga
+flagga ut
 flagna
 flagrant
 flak
@@ -4788,6 +4801,7 @@ frånskild
 frånstötande
 frånta
 frånträda
+frånträde
 frånvarande
 frånvaro
 frö
@@ -4866,6 +4880,7 @@ fylking
 fylla
 fylla i
 fylla upp
+fylla ut
 fyllecell
 fyllig
 fyllning
@@ -4955,6 +4970,7 @@ fågel
 fågelbo
 fågelholk
 fågelsång
+fålla
 fåmäld
 fång
 fånga
@@ -6112,6 +6128,7 @@ glasöga
 glasögon
 glatt
 gles
+glesa ut
 gletscher
 glid
 glida
@@ -7652,6 +7669,7 @@ inarbeta
 inavel
 inavlad
 inbegripa
+inbetalning
 inbilla
 inbilla sig
 inbillning
@@ -7675,6 +7693,7 @@ incheckning
 incheckningsdisk
 incident
 incitament
+indata
 indefinit
 indela
 indelning
@@ -7719,6 +7738,7 @@ inflygning
 inflyta
 inflytande
 inflytelserik
+inflyttningslän
 info
 information
 informationssamhälle
@@ -7783,6 +7803,7 @@ inkomstbringande
 inkonsekvent
 inkoppla
 inkoppling
+inkorg
 inkorporera
 inkorrekt
 inkrustation
@@ -7803,6 +7824,7 @@ inlevelsefull
 inlinda
 inlines
 inlineskridsko
+inljud
 inlägg
 inlägga
 inläggning
@@ -7812,6 +7834,7 @@ inlärning
 inlärningssvårighet
 inlåna
 inlåning
+inlåningsränta
 inlåta
 inlåta sig
 inlöpa
@@ -7833,24 +7856,32 @@ innehålla
 innehållsförteckning
 innehållsrik
 innekatt
+innelag
 inner
 innerdörr
 innerstad
 inneröra
 innesluta
+innetermometer
 innevarande
 innovation
 innovativ
+inombordare
+inombordsmotor
 inomhus
+inomskärs
+inomvärldslig
 inpass
 inpassa
 inpiskad
 inplanera
 inpränta
+input
 inpå
 inrama
 inre
 inreda
+inriggad
 inrikes
 inrikesminister
 inrikespolitik
@@ -7860,6 +7891,7 @@ inringa
 inringare
 inropa
 inrotad
+inryckning
 inrymma
 inrätta
 inrättning
@@ -8124,6 +8156,7 @@ invänta
 invånarantal
 invånare
 in­ställsam
+inäga
 inälvor
 inåt
 inåtvänd
@@ -9428,6 +9461,8 @@ kringränna
 kris
 krisp
 kristall
+kristallisera
+kristallisera sig
 kristallkula
 kristdemokrat
 kristen
@@ -9545,6 +9580,7 @@ kränka
 kränkning
 kräsen
 kräva
+kräva ut
 krävande
 kråka
 kråkfågel
@@ -9695,6 +9731,7 @@ kvist
 kvistig
 kvittens
 kvittera
+kvittera ut
 kvittering
 kvitto
 kvittra
@@ -10754,6 +10791,7 @@ maskopi
 maskros
 maskrosbarn
 maskulin
+maskulinum
 massa
 massage
 massaker
@@ -10914,6 +10952,7 @@ melodramatisk
 melon
 mem
 memorandum
+memorera
 memorial
 men
 mena
@@ -12598,6 +12637,7 @@ outbildad
 outförbar
 outgrundlig
 outplånlig
+output
 outrotlig
 outsäglig
 outtalad
@@ -13286,6 +13326,7 @@ prototyp
 prov
 prova
 prova på
+prova ut
 proveniens
 proviant
 provins
@@ -13377,6 +13418,8 @@ putsning
 putta
 putto
 pyjamas
+pynt
+pynta
 pyramid
 pyrit
 pyroteknik
@@ -14487,9 +14530,9 @@ sedig
 sediment
 sedlig
 sedlighet
-sedvana
 sedvanlig
 sedvänja
+seeda
 seg
 segel
 segelbåt
@@ -15293,6 +15336,7 @@ slutgiltig
 slutled
 slutlig
 slutligen
+slutljud
 slutlön
 slutpunkt
 slutsats
@@ -16097,6 +16141,7 @@ stjärt
 sto
 stod
 stoff
+stoffera
 stoft
 stoja
 stol
@@ -16251,6 +16296,8 @@ strypa
 sträck
 sträcka
 sträcka sig
+sträcka ut
+sträcka ut sig
 sträckmuskel
 sträckning
 sträng
@@ -17451,6 +17498,7 @@ tok
 toka
 tokig
 tokstolle
+tolerabel
 tolerans
 tolerera
 tolfte
@@ -17726,6 +17774,8 @@ trä
 träblåsinstrument
 träbock
 träd
+träda emellan
+träda fram
 trädgård
 trädgårdsarbete
 trädgårdsväxt
@@ -17997,6 +18047,7 @@ udd
 udda
 uddatalsmetod
 udde
+uddljud
 uggla
 ugn
 ull
@@ -18018,6 +18069,8 @@ undanskymd
 undanstökad
 undanta
 undantag
+undantagslag
+undantagstillstånd
 undantagsvis
 undantränga
 under
@@ -18171,6 +18224,7 @@ uniformera
 unik
 unilateral
 union
+universaltid
 universell
 universitet
 universum
@@ -18277,6 +18331,7 @@ uppluckrad
 upplysa
 upplysning
 upplägg
+upplåning
 upplåtelse
 upplösa
 upplösning
@@ -18358,8 +18413,12 @@ uppsöka
 uppsökning
 uppta
 upptagen
+upptaxera
 uppteckna
+upptecknare
 uppteckning
+upptill
+upptrampad
 upptrappa
 uppträda
 uppträdande
@@ -18395,6 +18454,7 @@ urholka
 urinblåsa
 urinera
 urinvägsinfektion
+urklipp
 urkoppling
 urkund
 urladda sig
@@ -18405,6 +18465,7 @@ ursinne
 ursinnig
 urskilja
 urskiljbar
+urskiljning
 urskillning
 urskog
 urskulda
@@ -18434,21 +18495,48 @@ utandning
 utanför
 utanförskap
 utanförskapsområde
+utanförstående
+utannonsera
+utanordna
+utanpå
 utanpåliggande
+utanpåskjorta
+utanskrift
 utantill
+utantilläxa
+utanverk
 utarbeta
+utarbetad
 utarma
+utarrendera
+utav
+utbasunera
+utbe sig
+utbekomma
 utbetala
 utbetalning
+utbetalningskort
 utbilda
 utbilda sig
 utbildare
 utbildning
 utbildningsbana
 utbildningsbidrag
+utbildningsdepartement
+utbildningsexplosion
+utbildningsklyfta
+utbildningslinje
 utbildningsminister
+utbildningsplats
+utbildningsprogram
+utbildningsradio
 utbjuda
 utblick
+utblommad
+utblottad
+utblåsning
+utbomba
+utbordare
 utbreda
 utbreda sig
 utbredd
@@ -18457,89 +18545,215 @@ utbringa
 utbrista
 utbrodera
 utbrott
+utbrunnen
 utbryta
+utbrytare
+utbrytarkung
 utbrytning
+utbränd
+utbrändhet
+utbuad
 utbud
 utbuktad
+utbuktning
+utbygga
+utbyggd
 utbyggnad
 utbyta
 utbytbar
 utbyte
+utbytesstudent
+utbärning
+utböling
+utcheckning
+utdata
 utdela
 utdelning
+utdika
+utdockning
 utdrag
+utdragbar
 utdragen
 utdragslåda
+utdragssoffa
+utdrivning
+utdunsta
+utdunstning
 utdöd
+utdöende
 utdöma
 ute
 utebli
 utebliva
+utebruk
 utedass
+uteffekt
+utefter
+uteförsvar
+utegrill
+utegångsfår
+utegångsförbud
 utekatt
+utekväll
+utelag
+uteliggande
+uteliggare
+uteliv
 utelämna
+utelöpande
+utemöbel
+utensilier
+uteplats
+uterum
 uterus
 uteservering
 utesluta
 uteslutande
 utesluten
 uteslutning
+utespelare
+utestänga
+utestående
+utetermometer
+utexaminera
+utexperimentera
+uteätare
 utfall
 utfalla
 utfallsorienterad
+utfallsprov
+utfart
 utfattig
+utfestad
+utfiska
+utflagga
+utflugen
+utflykt
+utflyttning
+utflyttningslän
+utflöde
+utfodra
 utforma
 utformning
 utforska
+utfrusen
 utfrysning
 utfryst
 utfråga
 utfrågning
+utfylla
+utfyllnad
+utfälla
+utfällbar
+utfällning
+utfärd
 utfärda
 utfästa
+utfästa sig
 utfästelse
+utfå
+utför
 utföra
 utförande
+utförbar
 utförlig
 utförsbacke
 utförsel
 utförsgåva
 utförslöpa
+utförsäkrad
 utförsälja
 utförsäljning
+utförsåkare
+utförsåkning
+utgallring
 utge
 utge sig
 utgift
+utgiftstak
 utgivare
 utgivning
+utgivningsbevis
 utgjuta
 utgjuta sig
+utgjutelse
+utgjutning
+utglesa
+utgrunda
+utgrävare
+utgrävning
 utgå
 utgående
 utgång
+utgångshastighet
+utgångsläge
 utgångspunkt
 utgård
 utgåva
 utgöra
+uthamn
+uthopp
+uthuggning
+uthungrad
 uthus
 uthyra
+uthyrning
 uthängd
 uthärda
+uthärdlig
+uthållig
 uthållighet
+uti
+utifall
 utifrån
+utilism
+utilitarism
+utjord
 utjämna
 utjämning
+utjämningsmandat
+utkant
 utkast
 utkastare
+utkik
+utkikspunkt
 utklassa
+utklassning
+utklipp
+utklädd
+utklädsel
 utkomma
+utkommendera
 utkomst
+utkora
+utkorad
+utkorg
+utkragning
+utkristallisera
+utkräva
+utkvittera
 utkyld
+utkämpa
+utkörare
+utkörd
 utland
+utlandseloktorat
+utlandslektor
+utlandslektorat
+utlandsskuld
+utlandssvensk
 utled
+utledsen
+utless
 utlevad
+utlevande
+utlevelse
+utljud
+utlokalisera
 utlopp
+utlotta
 utlova
+utlysa
 utlägg
 utlägga
 utläggning
@@ -18547,23 +18761,38 @@ utlämna
 utlämning
 utländsk
 utlänning
+utlärd
 utläsa
+utlåning
+utlåningsränta
+utlåta sig
 utlåtande
 utlöpa
+utlöpare
 utlösa
+utlösare
 utlösning
 utmana
 utmanande
+utmanare
 utmaning
+utmanövrera
+utmark
+utmarsch
 utmatning
 utmatta
 utmattning
 utmed
+utmejsla
+utminutera
 utmynna
+utmärglad
 utmärka
 utmärka sig
+utmärkelse
 utmärkning
 utmärkt
+utmäta
 utmätning
 utmåla
 utmönstra
@@ -18571,81 +18800,160 @@ utnyttja
 utnämna
 utnötning
 utnötningskrig
+utnött
 utom
+utombordare
+utombordsmotor
+utombys
+utomeuropeisk
 utomhus
+utomhusbruk
+utomjording
 utomlands
 utomnordisk
 utomordentlig
+utomparlamentarisk
+utomrättslig
+utomskärs
 utomstående
+utomvärldslig
+utomäktenskaplig
 utopi
 utopisk
+utopism
 utopist
 utpeka
+utpinad
+utplundra
 utplåna
 utplåning
+utpost
 utpressa
 utpressare
 utpressning
+utpricka
 utprickning
+utprova
+utpräglad
 utpumpad
+utpyntad
+utradera
 utrangera
 utreda
 utredare
 utredning
+utredningsman
 utrensa
+utrensning
 utrerad
+utresa
+utriggad
+utriggare
 utrikes
+utrikesdepartement
+utrikeshandel
+utrikeskorrespondent
 utrikesminister
+utrikesnämnd
 utrikespolitik
 utrikespolitisk
+utrikisk
+utrikiska
 utrop
 utropa
+utropare
 utropsord
+utropstecken
 utrota
 utrotning
+utrotningshotad
+utrum
+utrusning
 utrusta
 utrustning
+utryckning
 utrymma
 utrymme
+utrymmessnål
 utrymning
+uträknad
 uträkning
 uträtta
 utröna
 utsaga
+utsagd
+utsago
 utsatt
+utsatthet
+utschasad
 utse
 utseende
 utsida
 utsikt
 utsiktslös
+utsira
+utsjö
+utskeppa
+utskick
 utskilja
 utskjutande
 utskott
+utskrattad
 utskrift
 utskriva
 utskyld
+utskälld
 utskällning
+utskämd
 utskänka
+utskänkning
+utskärgård
+utskåpning
 utslag
+utslagen
+utslagning
+utslagsfråga
+utslagsgivande
+utslagsröst
+utslagsturnering
+utslagstävling
 utsliten
 utslocknad
+utslunga
+utslutning
+utsläcka
 utsläpp
 utsläppning
+utsläppsgård
+utsläppsrätt
+utsläta
+utslätad
 utsmycka
 utsmyckning
 utsnitt
+utsocknes
+utspark
 utsparkad
 utspel
 utspela sig
 utspelas
+utspinna sig
 utspisa
 utspisning
 utspridd
+utspring
+utspringande
 utsprång
+utspy
+utspädd
+utspökad
+utstaka
+utstoffera
 utsträcka
 utsträckning
 utstrålning
 utstuderad
+utstyrd
 utställning
 utstå
 utstöta
@@ -18656,6 +18964,7 @@ utsända
 utsändning
 utsätta
 utsätta sig
+utsöka
 utsökning
 utsökt
 utsöndra
@@ -18701,6 +19010,7 @@ utvärdering
 utväxla
 ut­mattad
 ut­studerad
+utäga
 utåt
 utåtagerande
 utåtriktad
@@ -19346,6 +19656,7 @@ välva sig
 välvd
 välvilja
 välvillig
+välvning
 vämjelig
 vämjelse
 vän
@@ -19414,6 +19725,7 @@ världsmästare
 världsomfattande
 världsrykte
 världsrymd
+världstid
 världsvan
 världsvana
 världs­vana
