@@ -1,5 +1,5 @@
 <?php
-	$res = 0;
+	$res = -1;
 	$path = getcwd() ."/";
 	$class = $_GET['class'];
 
@@ -22,39 +22,42 @@
 	$out = "";
 	$placed = false;
 	$del = "";
+	$i = 0;
 	foreach($elements as $w) {
 		// Insertion point
 		if ($w == $word) {
 			// No need to duplicate entry
 			$out = $out . $del . $word;
 			$placed = true;
+			$res = $i;
 		} else if ($w > $word && !$placed) {
 			$out = $out . $del . $word;
+			$res = $i;
 			$del = "\n";
-			$out = $out . $del . $w; 
+			$out = $out . $del . $w; 			
 			$placed=true;
 		} else {
 			$out = $out . $del . $w; 
 			$del = "\n";
 		}
+		$i++;
 	}
 	if ($placed === false) {
 		$out = $out . $del . $word;
 	}
 	
-	$res = fwrite($outfile, $out);
+	fwrite($outfile, $out);
 	fclose($outfile);
-
+	
 	$allName = $path . "all-only";
 	$allFile = fopen($allName, "r") or die("Could not open file: " . $allName);
 	$contents = fread($allFile, filesize($allName));
 	fclose($allFile);
 	$elements= preg_split("/\r\n|\r|\n/", $contents);
-	var_dump(count($elements));
 	$out = "";
 	$placed = false;
 	$del="";
-	foreach($elements as $w) {
+	foreach($elements as $w) {		
 		// Insertion point
 		if ($w === $word) {
 			// No need to duplicate entry
@@ -73,9 +76,9 @@
 	if ($placed === false) {
 		$out = $out . $del . $word;
 	}
-	$outfileAll = fopen($allName, "w") or die("Could not open file: " . $allName);
-	$res = fwrite($outfileAll, $out);
-
-	fclose($outfileAll);
+	$outfileAll = fopen($allName, "w") or die("Could not open file: " . $allName);		
+	fwrite($outfileAll, $out);
+	fclose($outfileAll);		
+	
 	echo json_encode($res);
 ?>
