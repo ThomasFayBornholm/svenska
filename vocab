@@ -173,6 +173,7 @@ function fmtDef(def) {
 	}
 	return def;
 }
+
 function putDef(def, score) {	
 	if (def.length === 0) {
 		def = $('#iDefText').val();
@@ -1221,7 +1222,42 @@ function seekWord(word, link = false) {
 	}
 	if (DEBUG) console.log("END seekWord(); word = " + word + " -> INC = " + INC);			
 }
-
+function drillDown() {
+	let word = $('#iInput').val()
+	fetch('backend/getDefAll.php?word=' + word, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		if (Object.keys(json).length > 0) {
+			let keys = Object.keys(json);	
+			if (keys.length === 1 && keys[0] != CLASS) {			
+			// Go direct to class if no ambiguity in found word(s)
+				setClass(keys[0]);
+				seekWord(word);
+				let def = "";
+				let delim ="";									
+				let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
+				for (let i = 0; i < keys.length; i++) {			
+				let compDef = json[keys[i]];															
+				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
+				delim="<br>";
+				LAST_DEF = def;
+				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+				}
+			}
+		}
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
 function setClass(c, seek = "") {
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	LAST_CLASS = CLASS;
@@ -2259,6 +2295,8 @@ function processKeyDown(elHTML,ev) {
 	if (ev.key === "ArrowUp") {
 		onlineLookup(elHTML,ev);
 		$('#iDefText').focus();
+	} else if (ev.key === "ArrowDown" && CLASS === "all") {
+		drillDown()
 	}
 	if (ev.location === 2) {
 		if (ev.key === "Control") {

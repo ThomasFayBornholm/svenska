@@ -75,9 +75,7 @@
 							// Exception of above for adverbs, e.g. "i kväll" and "ikväll" shall be equivalent.
 							if ($nFind === $keyCount || $el === "adverb") {
 								if ($el === "adverb") {
-									echo $lineOne . "<br>";
-									echo $words[1] . "<br>";
-									echo $w . "<br>";																		
+																									
 								}
 								$out["class"] = $el;
 								$out["word"] = $key;
