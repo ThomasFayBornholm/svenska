@@ -181,33 +181,57 @@ avfalla
 avfetta
 avfira
 avflytta
+avfordra
+avfrosta
 avfyra
 avfärda
+avfölja
 avföra
 avge
 avgifta
 avgränsa
+avguda
 avgå
 avgöra
+avhandla
+avhjälpa
 avhysa
 avhämta
+avhända
 avhänga
+avhärda
+avhålla
 avhöra
 avinstallera
+avisa
 avisera
 avjaga
+avjämna
 avkasta
+avklarna
+avklinga
 avkläda
+avknoppa
 avkoda
+avkolonisera
 avkoppla
 avkorta
+avkriminalisera
+avkräva
 avkunna
 avkyla
+avköna
 avla
+avlagra
+avlagra sig
 avlasta
+avleda
 avlida
 avliva
+avlocka
 avlossa
+avlusa
+avluta
 avlysa
 avlyssna
 avlägga
@@ -215,22 +239,44 @@ avlägsna
 avlämna
 avlänka
 avläsa
+avlåta
 avlöna
 avlöpa
 avlösa
+avlöva
+avmagnetisera
 avmaska
+avmasta
+avmattas
 avmäta
+avmåla
+avmåla sig
 avmönstra
+avnavla
+avnjuta
 avpassa
+avpatrullera
+avplana
+avpolitisera
 avpollettera
+avporträttera
+avpressa
+avprogrammera
+avreda
+avregistrera
 avreglera
 avresa
 avrinna
+avromantisera
 avrunda
 avrusta
+avräkna
 avrätta
 avråda
+avsalta
 avse
+avsegla
+avsjunga
 avskaffa
 avskeda
 avskilja
@@ -246,12 +292,16 @@ avslå
 avslöja
 avslöja sig
 avsmaka
+avsmalna
 avsnöra
+avsocialisera
 avsomna
 avspegla
+avspisa
 avspärra
 avstanna
 avstava
+avstressa
 avstycka
 avstyra
 avstyrka
@@ -259,21 +309,32 @@ avställa
 avstämma
 avstänga
 avstå
+avstöra
 avstöta
+avsvalna
+avsvimma
+avsvära sig
 avsyna
+avsäga sig
+avsända
 avsätta
 avsätta sig
 avsåga
+avsöka
 avsöndra
 avta
+avtacka
 avtala
+avtappa
 avteckna sig
 avtjäna
 avtona
+avtrappa
 avtrubba
 avträda
 avtvinga
 avtäcka
+avtåga
 avundas
 avvakta
 avvara
@@ -1098,6 +1159,7 @@ frita
 fritera
 frodas
 frossa
+frosta av
 frukta
 frysa
 frysa ihjäl
@@ -2113,6 +2175,7 @@ irra
 irritera
 irritera sig
 isa
+isa av
 isa ner
 iscensätta
 isolera
@@ -2137,6 +2200,7 @@ jäkta
 jämföra
 jämka
 jämna
+jämna av
 jämna ut
 jämra sig
 jämställa
@@ -2147,6 +2211,7 @@ kalla ihop
 kalla in
 kalla samman
 kalla upp
+kallna
 kamma
 kamma hem
 kamma igenom
@@ -2221,6 +2286,7 @@ klia
 klibba
 klicka
 klinga
+klinga av
 klinka
 klippa
 klippa sig
@@ -2261,6 +2327,7 @@ knastra
 knattra
 knega
 knipa
+knoppa av
 knorra
 knota
 knuffa
@@ -2526,6 +2593,7 @@ lasta över
 lattja
 le
 leda
+leda av
 ledsaga
 legitimera
 leka
@@ -2576,6 +2644,7 @@ ljuda
 ljuga
 ljusna
 locka
+locka av
 logaritmera
 logga
 logga in
@@ -2600,6 +2669,7 @@ lura på
 lura sig
 lura till sig
 lura ut
+lusa av
 luta
 luta av
 luta sig
@@ -2690,6 +2760,7 @@ lösa upp
 lösa ut
 lösgöra
 magasinera
+magra
 maila
 maka
 maka sig
@@ -2712,11 +2783,13 @@ maska
 maska av
 maskera
 massera
+masta av
 mata
 mata in
 mata ut
 matcha
 materialisera
+mattas av
 maximera
 medarbeta
 meddela
@@ -2814,6 +2887,7 @@ mäta ut
 mätta
 må
 måla
+måla av
 måla sig
 måla upp
 måla ut
@@ -2847,6 +2921,7 @@ narra i
 narras
 nationalisera
 navigera
+navla av
 nedbringa
 nedgradera
 nedgöra
@@ -3091,6 +3166,7 @@ polemisera
 polera
 politisera
 porla
+porträttera
 posta
 postdatera
 poängtera
@@ -3104,6 +3180,7 @@ presentera
 presidera
 preskribera
 pressa
+pressa av
 prestera
 pricka
 prioritera
@@ -3738,6 +3815,7 @@ slösa
 smacka
 smaka
 smaka av
+smalna
 smattra
 smeka
 smeta
@@ -3859,6 +3937,7 @@ spilla över
 spinna
 spinna loss
 spionera
+spisa av
 spjäla
 splittra
 spola
@@ -3965,6 +4044,7 @@ strecka
 strecka för
 strejka
 stressa
+stressa av
 stretcha
 strida
 stridulera
@@ -4088,6 +4168,8 @@ surra
 susa
 suspendera
 svaja
+svalka
+svalna
 svara
 svartlista
 sveda
@@ -4177,6 +4259,7 @@ såga av
 sålla
 såra
 söka
+söka av
 söka upp
 söla
 sömma
@@ -4371,6 +4454,7 @@ transkribera
 transpirera
 transplantera
 transportera
+trappa av
 trappa ner
 trappa upp
 trasa
