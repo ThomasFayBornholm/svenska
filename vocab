@@ -49,11 +49,8 @@
 		 <button class="putDefThree" id="iPut2" onclick="putDef('', 2)">2</button>			 			 
 		 </div>
 		 <div id="iDivMore">		
-		 <button class="putDefThree" onclick="putMore('EXEMPEL')" id="iPutEx">Ex</button>
-		 <button class="putDefThree" onclick="putMore('HISTORIK')" id="iPutHist">Hist</button>		
-		 <button class="putDefThree" onclick="clearMore()" id="iClearAll">Clear all</button>		
+		 <button class="putDef" onclick="putMore()" id="iPutMore">Put More Information</button>		 
 		 </div>
-
 	</div>		
 	<p class="pDef" id="iParDef" ondblclick="clearDef()"></p>			
 	<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
@@ -2218,12 +2215,17 @@ function nextWord(el,ev) {
 		console.log(error)
 	})		
 }
-function putMore(header) {
+function putMore() {
 	if (DEBUG) console.log("putMore()")	
 	let more = $('#iDefText').val();
 	more = more.replaceAll("\n","<br>");	
+	if (more.indexOf("<h>") != -1) {
+		more = more.replace("<h>","HISTORIK:");
+	} else {
+		more = more.replace("belagt","HISTORIK:<br>belagt");
+	}
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
-	fetch('backend/putMore.php?word=' + key + '&class=' + CLASS + '&header=' + header + '&more=' + more, {
+	fetch('backend/putMore.php?key=' + key + '&class=' + CLASS + '&more=' + more, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -2301,7 +2303,8 @@ function editMore(ev,key) {
 	ev.preventDefault();
 	$("#iPutDef").css("display", "none");
 	$('#iDefDiv').css("display", "block");
-	$("#iDivMore").css("display", "block");
+	$("#iDivMore").css("display", "block");	
+	$("#iPutMore").css("display", "block");	
 	$('#iDefText').focus();
 }
 function processKeyDown(elHTML,ev) {
@@ -2370,9 +2373,7 @@ function showTooltips() {
 		$('#iPut0').attr("title","");
 		$('#iPut1').attr("title","");
 		$('#iPut2').attr("title","");
-		$('#iPutEx').attr("title","");
-		$('#iPutHist').attr("title","");
-		$('#iClearAll').attr("title","");
+		$('#iPutMore').attr("title","");		
 	} else {
 		$('#iInput').attr("title","Search for word, has regex support.\nRight-click for svenska.se lookup" );
 		$('#iWordBox').attr("title","Scroll with mouse wheel to navigate individual words\nLeft click word = get definition\nRight click word = lookup@svensk.se");
@@ -2384,9 +2385,7 @@ function showTooltips() {
 		$('#iPut0').attr("title","Add/edit definition with score of '0/2'");
 		$('#iPut1').attr("title","Add/edit definition with score of '1/2'");
 		$('#iPut2').attr("title","Add/edit definition with score of '2/2'");
-		$('#iPutEx').attr("title","Add/edit example text");
-		$('#iPutHist').attr("title","Add/edit history text");
-		$('#iClearAll').attr("title","Clear all additional meta information.");
+		$('#iPutMore').attr("title","Add/edit example text");
 	}
 }
 function toggleTooltips() {
