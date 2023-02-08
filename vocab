@@ -20,7 +20,7 @@
 </head>
 <body onload="startup()">
 <div >
-<h1 id="iTitle" ondblclick="toggleTooltips()" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on web-page controls">Svenska Ordbok</h1>
+<h1 id="iTitle" ondblclick="toggleTooltips()" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on web-page controls">Ordbok</h1>
 </div>
 <div id="iCountDiv" class="centred">
 	<span class="counts countLeft" id="iCnt">test</span>
@@ -98,7 +98,7 @@ let SHOW_MORE = false;
 var TABS = [];
 var REGEX_WORDS = [];
 var N_REGEX = 0;
-
+var CACHED_DEF_HTML = "";
 var COLORS = ["red", "blue", "green"];
 var CLASSES = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","plural","superlativ","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
 
@@ -672,7 +672,7 @@ function displayDef(meta, def,word) {
 		delim = "<br>";
 	}
 	outDef = outDef.replaceAll(" </b>","</b>")
-	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event)"
+	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event) onmouseover=editCursor(event,this)"
 	if (SHOW_HELP) {
 		console.log("test")
 		tmpSpan += " title='Right click to edit definition'" 
@@ -878,8 +878,10 @@ function onlineLookup(elHTML, ev) {
 	ev.preventDefault()
 	word = elHTML.innerText;
 	if (word.length === 0) word = elHTML.value;
-	let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
-	window.open(bulletProofUrl(url), '_blank');
+	if (word.length > 0) {
+		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
+		window.open(bulletProofUrl(url), '_blank');
+	}
 }
 
 function wordCount() {
@@ -1259,8 +1261,10 @@ function drillDown() {
 	})
 }
 function setClass(c, seek = "") {
+	
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	LAST_CLASS = CLASS;
+	wordCount();
 	if (c != CLASS) {
 		REGEX_WORDS = [];
 		REGEX_WORDS = [];
@@ -1923,6 +1927,7 @@ function preProc(def) {
 			s = fmtVerbApart(s,/(ofta lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(vanligen lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
 			s = fmtVerbApart(s,/(vanligen lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(äv. lös sammansättn., se )([a-zöäå]+)(\s[a-zöäå_]+)/);			
 			// Format "fast sammansättn." grammer
 			s = fmtVerbTogether(s,/(vanligen fast sammansättn., se )([a-zöäå_]+)/);
 			s = fmtVerbTogether(s,/(vanligen fast sammansättn., jfr )([a-zöäå_]+)/);
@@ -1937,6 +1942,7 @@ function preProc(def) {
 			//s = grammer(s,"vanligen i förbindelse");
 			s = handlePrep(s);
 			s = s.replaceAll("_","");
+			s = simpleLink(s);
 			outDef += del + s;			
 			// HTML newline separator bon lines subsequent to the first
 			del = "<br>";
@@ -2018,12 +2024,15 @@ function showWords() {
 function highlight(el,event) {
 	if (event.type === "mouseover") {
 		el.style.cursor = "pointer";
-		el.style.borderColor = "blue";
-		if (el.nodeName === "P") el.style.backgroundColor="gray" 
 	} else {
 		el.style.cursor = "";
-		el.style.borderColor = "";
-		if (el.nodeName === "P") el.style.backgroundColor=""
+	}
+}
+function editCursor(event,el) {
+	if (event.type === "mouseover") {
+		el.style.cursor = "text";
+	} else {
+		el.style.cursor = "";
 	}
 }
 function toggleDebugEv(e) {
@@ -2261,8 +2270,16 @@ function toggleMore(key, show = false) {
 		.then(json => {								
 			if (json.length === 0) {
 				$(id).html("<br>No more information to show");				
-			} else {
-				$(id).html("<br>" + json);				
+			} else {								
+				let tmp = "<span onclick='showCachedDef(this)'"
+				tmp += " oncontextmenu=editMore(event,'" + key + "')";
+				if (SHOW_HELP) {
+					tmp += " title = 'Left click = back to definition(s) "
+					tmp += "\nRight click = edit information'";
+				}
+				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_","<b>" + key +  "</b><br>" + json);
+				CACHED_DEF_HTML = $('#iParDef').html();
+				$('#iParDef').html(tmp);						
 			}		
 			//$('#iParDef').text("");
 		})
@@ -2412,6 +2429,35 @@ function showLast(caller) {
 	console.log("LAST_WORD = " + LAST_WORD)
 	console.log("CLASS = " + CLASS)
 	console.log("CUR_WORD = " + CUR_WORD)
+}
+function showCachedDef(el) {
+	if (DEBUG) console.log("showCachedDef(el), el = " + el);
+	
+	el.innerHTML = CACHED_DEF_HTML;
+}
+function simpleLink(defLine) {	
+	if (DEBUG) console.log("simpleLink()");
+	// Support mulitple links per line. 
+	while (defLine.indexOf("<l>") != -1) {
+		pos1 = defLine.indexOf("<l>")
+		pos2 = defLine.indexOf("</l>")
+		if (pos1 != 1 && pos2 > pos1) {
+			let old = defLine.substr(pos1, pos2-pos1+4)
+			let word = defLine.substr(pos1 + 3,pos2-pos1-3)
+			let link = "<span onmouseover=highlight(this,event)";
+			link += " onclick=followLink(this)";
+			if (SHOW_HELP) {
+				link += " title='Navigate to '";
+			}	
+			link += "><b>" + word;
+			link += "</b></span>";
+			defLine = defLine.replace(old,link)
+		// Bail out if ill-formed element detected
+		} else {
+			return defLine;
+		}
+	}
+	return defLine;
 }
 </script>
 </html>
