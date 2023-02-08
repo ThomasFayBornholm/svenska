@@ -25,7 +25,6 @@ akta
 akta sig
 aktivera
 aktualisera
-alliera
 alliera sig
 allokera
 alludera
@@ -666,6 +665,7 @@ breda
 breda ut
 breda ut sig
 bredda
+bredsida
 brevrösta
 briljera
 bringa
@@ -751,6 +751,7 @@ casta
 censurera
 centralisera
 centrera
+chansa
 charma
 charmera
 checka
@@ -818,6 +819,7 @@ desarmera
 desavouera
 desinficera
 detachera
+detektera
 determinera
 detonera
 detronisera
@@ -993,6 +995,7 @@ evakuera
 evaluera
 examinera
 excitera
+exekvera
 exercera
 existera
 exkludera
@@ -1177,6 +1180,7 @@ fråga ut
 frångå
 frånta
 frånträda
+fråntvinga
 fröjda
 fröjda sig
 fröjdas
@@ -1188,7 +1192,6 @@ fullständiga
 fumla
 fundera
 fungera
-fungera (vardagl. funka)
 funka
 funktionera
 fuska
@@ -1700,14 +1703,22 @@ gengälda
 geniförklara
 genljuda
 genmäla
+genomarbeta
 genomdriva
+genomfara
 genomflyta
 genomföra
 genomgå
+genomkorsa
 genomleva
 genomlida
 genomlysa
+genomskåda
+genomströmma
 genomsyra
+geometrisera
+geotagga
+germanisera
 ges
 gestalta
 gestalta sig
@@ -1805,6 +1816,7 @@ gröpa ur
 gubba till sig
 gulla
 gunga
+guppa
 gymnastisera
 gympa
 gynna
@@ -2358,6 +2370,7 @@ koka över
 kola
 kolla
 kollapsa
+kollidera
 kolportera
 kombinera
 komma
@@ -2526,6 +2539,7 @@ kvälja
 kväsa
 kväva
 kyla av
+kyla ner
 kyssa
 käbbla
 käka
@@ -2595,6 +2609,7 @@ le
 leda
 leda av
 ledsaga
+legera
 legitimera
 leka
 lemlästa
@@ -2760,6 +2775,7 @@ lösa upp
 lösa ut
 lösgöra
 magasinera
+magnetisera
 magra
 maila
 maka
@@ -2866,10 +2882,12 @@ mula
 mullra
 mulna
 multiplicera
+multna
 mumsa
 mumsa i sig
 muntra upp
 murra
+musicera
 myllra
 mynna
 mynna ut
@@ -3044,6 +3062,7 @@ omställa
 omsätta
 omtala
 omtolka
+omtrycka
 omvandla
 omvälja
 omvända
@@ -3054,7 +3073,6 @@ onanera
 ondgöra sig
 ondulera
 oordna
-operationel
 operera
 operera bort
 operera in
@@ -3196,6 +3214,7 @@ producera
 professionalisera
 programmera
 projektera
+projicera
 proklamera
 promenera
 propagera
@@ -3259,6 +3278,7 @@ raka
 rama in
 ramla
 ramla på
+ramsa
 rangera ut
 rangla
 rangordna
@@ -3504,6 +3524,7 @@ sammanfatta
 sammanfoga
 sammanföra
 sammanhänga
+sammanjämka
 sammankalla
 sammankoppla
 sammanpacka
@@ -3519,6 +3540,7 @@ sammanväva
 samordna
 samsa
 samspela
+samstämma
 samtala
 samtycka
 samverka
@@ -3857,6 +3879,7 @@ smärta
 smådugga
 smågräla
 småle
+småspringa
 smörja
 snabba
 snabba på
@@ -4056,9 +4079,6 @@ strukturera
 strukturera om
 strula
 strunta
-strycka för
-strycka med
-strycka över
 stryka
 stryka för
 stryka med
@@ -4211,6 +4231,7 @@ syna ut
 synas
 synda
 synkopera
+synkronisera
 syra
 sysselsätta
 syssla
@@ -4377,6 +4398,7 @@ tillstå
 tillsätta
 tilltala
 tillträda
+tilltvinga sig
 tillvarata
 tillverka
 tillvälla sig
@@ -4974,6 +4996,7 @@ vintra in
 vippa
 vira
 virka
+virra
 virvla
 visa
 visa sig
