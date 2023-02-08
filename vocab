@@ -98,7 +98,6 @@ var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
 var COLORS = ["red", "blue", "green"];
 var CLASSES = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","plural","superlativ","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
-
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
 
@@ -877,7 +876,14 @@ function onlineLookup(elHTML, ev) {
 	if (word.length === 0) word = elHTML.value;
 	if (word.length > 0) {
 		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
-		window.open(bulletProofUrl(url), '_blank');
+		let tab1 = window.open(bulletProofUrl(url), '_blank');
+		let tab2 = window.open("http://localhost/svenska/backend/simple.php?word=" + word, '_blank');		
+		tab2.onbeforeunload = function() {
+			tab1.focus();
+		}
+		tab1.onfocus = function() {
+			console.log("fire")
+		}
 	}
 }
 
