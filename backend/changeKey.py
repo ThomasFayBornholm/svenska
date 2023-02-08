@@ -25,6 +25,7 @@ try:
     with open(dictSource,'r+',encoding="utf-8") as fh:
         data = json.load(fh)
         data[key] = newVal
+        print("(New key value) " + data[key]);
         fh.seek(0)
         json.dump(data,fh)
         fh.truncate()
