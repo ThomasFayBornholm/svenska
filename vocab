@@ -2,6 +2,7 @@
 <html lang="sv"></html>
 <head>
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ordbok</title>
 	<link rel="stylesheet" href="svenska.css">
 	<script src="jquery-3.6.0.js"></script>
 	<script src="jquery-ui.js"></script>
@@ -100,6 +101,8 @@ var COLORS = ["red", "blue", "green"];
 var CLASSES = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","plural","superlativ","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
+var TAB_DUMMY;
+var TAB_LOOKUP
 
 document.addEventListener("visibilitychange", (event) => {
 	if (TABS.length > 0) {
@@ -114,6 +117,7 @@ function startup() {
 	wordCount();
 	getWords(-1);
 	updateScore();
+	$('#iInput').focus();
 }
 
 function setN_CUR() {
@@ -876,15 +880,20 @@ function onlineLookup(elHTML, ev) {
 	if (word.length === 0) word = elHTML.value;
 	if (word.length > 0) {
 		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
-		let tab1 = window.open(bulletProofUrl(url), '_blank');
-		let tab2 = window.open("http://localhost/svenska/backend/simple.php?word=" + word, '_blank');		
-		tab2.onbeforeunload = function() {
-			tab1.focus();
-		}
-		tab1.onfocus = function() {
-			console.log("fire")
-		}
+		// Rebust escaping of special characters		
+		TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');				
+		//TAB_DUMMY.location.href = "http://localhost/svenska/dummy?word=test";
+		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no, width=600,height=600");
+		TAB_DUMMY.focus();
+		
+		setTimeout(switchTab, 1500);
+
 	}
+}
+
+function switchTab() {	
+	TAB_DUMMY.close()
+	TAB_LOOKUP.focus();		
 }
 
 function wordCount() {

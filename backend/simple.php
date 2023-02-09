@@ -23,11 +23,9 @@
 				array_push($outArr,$el); 
 			}
 		}
-	}
-	foreach($outArr as $el) {
-		echo $el . "<br>";
-	}
+	}	
 	if (count($outArr) === 0) {
-		echo "No matches.";
+		array_push($outArr,"No matches.");		
 	}
+	echo json_encode($outArr);
 ?>
