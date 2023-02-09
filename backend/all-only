@@ -196,6 +196,7 @@ alkan
 alkohol
 alkoholfri
 alkoholhaltig
+alkoholiserad
 all
 allaredan
 alldaglig
@@ -4190,6 +4191,7 @@ eftersträva
 eftersträvansvärd
 eftersända
 eftersätta
+eftersättsblad
 eftersökt
 eftertrakta
 eftertryck
@@ -4668,6 +4670,7 @@ farmor
 farofylld
 fars
 farsa
+farstu
 fart
 fartfylld
 farthållare
@@ -5698,6 +5701,7 @@ förbinda sig
 förbindelse
 förbipasserande
 förbise
+förbiseende
 förbittra
 förbittrad
 förbittring
@@ -6317,17 +6321,30 @@ förstfödd
 förstföddadj
 förstföderska
 förstklassig
+förstling
+förstnämnda
 förstocka
+förstockad
+förstockelse
 förstone
 förstoppa
+förstoppning
 förstora
 förstoring
+förstoringsapparat
 förstoringsglas
 försträcka
 förströ
 förströ sig
+förströdd
 förströelse
+förstubro
+förstucken
+förstudie
+förstuga
+förstukvist
 förstulen
+förstumma
 förställa
 förställa sig
 förställning
@@ -6335,23 +6352,36 @@ förstämd
 förstämma
 förstämning
 förständiga
+förständigande
 förstärka
 förstärkare
 förstärkning
+förstärkningsläge
+förstärkningsord
+förstäv
 förstå
+förstå sig på
 förståelig
 förståelse
+förstående
 förstånd
 förståndig
+förståndsfråga
+förståndsgåvor
+förstång
 förstås
 förståsigpåare
 förstöra
 förstörelse
 förstöring
+försumbar
 försumlig
 försumlighet
 försumma
+försummelse
 försumpas
+försumpning
+försupen
 försura
 försurning
 försvaga
@@ -6362,9 +6392,19 @@ försvarare
 försvarbar
 försvarlig
 försvarsadvokat
+försvarsdepartement
+försvarsgren
+försvarshemlighet
 försvarskraft
+försvarslinje
+försvarslös
 försvarsmakt
 försvarsminister
+försvarsmur
+försvarsområde
+försvarsspelare
+försvarsstab
+försvarstal
 försvarsväsen
 försvenska
 försvinna
@@ -6373,37 +6413,58 @@ försvära
 försvåra
 försyn
 försynda sig
+försyndelse
 försynt
 försäga sig
 försäkra
 försäkra sig
 försäkran
 försäkring
+försäkringsbedrägeri
+försäkringsbesked
 försäkringsbolag
 försäkringsbrev
 försäkringskassa
+försäkringspremie
 försälja
 försäljare
 försäljning
+försäljningschef
+försäljningspris
 försämra
 försämring
 försända
 försändelse
+försänka
+försänkning
 försätta
+försättsblad
+försättslins
+försångare
 försåt
 försåtlig
+försåvida
+försåvitt
 försök
 försöka
+försöka sig på
 försöksballong
+försöksdjur
+försöksgymnasium
 försöksheat
+försökskanin
 försöksvis
 försörja
+försörjare
 försörjning
+försörjningsbalans
 försörjningsstöd
 förta
 förta sig
 förtal
 förtala
+förtappad
+förtappelse
 förtecken
 förteckna
 förteckning
@@ -6411,6 +6472,7 @@ förtegen
 förtenna
 förtid
 förtida
+förtidsbörd
 förtidspension
 förtidspensionera
 förtidsrösta
@@ -8617,6 +8679,7 @@ inkräkta
 inkräktare
 inkännande
 inköp
+inköpspris
 inkörning
 inlagd
 inlandsis
@@ -10063,6 +10126,7 @@ konsultera
 konsulterande
 konsument
 konsumentförening
+konsumentpris
 konsumera
 konsumtion
 kontakt
@@ -10478,6 +10542,7 @@ kunna
 kunnande
 kunnig
 kunskap
+kunskapsfråga
 kupa
 kuperad
 kupig
@@ -11765,6 +11830,7 @@ medicinsk
 meditation
 meditativ
 medium
+medkännande
 medkänsla
 medla
 medlem
@@ -13854,6 +13920,7 @@ pil
 pilbåge
 pill
 pilot
+pilotstudie
 pilsner
 pilsnerfilm
 pimpinella
@@ -16085,6 +16152,7 @@ sky
 skydd
 skydda
 skyddskår
+skyddslös
 skyddstull
 skyddsängel
 skyfall
@@ -20938,6 +21006,7 @@ värmenät
 värmeutveckling
 värna
 värnkraft
+värnlös
 värnplikt
 värnpliktig
 värnpliktsarmé
