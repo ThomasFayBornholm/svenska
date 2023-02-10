@@ -883,7 +883,7 @@ function onlineLookup(elHTML, ev) {
 		// Rebust escaping of special characters		
 		TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');				
 		//TAB_DUMMY.location.href = "http://localhost/svenska/dummy?word=test";
-		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no, width=600,height=600");
+		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no, left=0, top=0, width=600,height=600");
 		TAB_DUMMY.focus();
 		
 		setTimeout(switchTab, 1500);
@@ -1101,8 +1101,9 @@ function seekWord(word, link = false) {
 	} else {
 		REGEX_WORDS = [];
 		N_REGEX = 0;
-		// Special exception for two special pronouns
+		// Special exceptions to capitalisation rules
 		if (word != "Ers" && word != "Eders") word = word.toLowerCase()
+		//if (word.indexOf("-") != -1) word = word.toLowerCase();
 		if (word === '') {
 			word = LAST_WORD;
 			$('#iInput').val(word);
@@ -2234,10 +2235,12 @@ function putMore() {
 	if (DEBUG) console.log("putMore()")	
 	let more = $('#iDefText').val();
 	more = more.replaceAll("\n","<br>");	
-	if (more.indexOf("<h>") != -1) {
-		more = more.replace("<h>","HISTORIK:");
-	} else {
-		more = more.replace("belagt","HISTORIK:<br>belagt");
+	if (more.indexOf("HISTORIK") == -1) {
+		if (more.indexOf("<h>") != -1) {
+			more = more.replace("<h>","HISTORIK:");
+		} else {
+			more = more.replace("belagt","HISTORIK:<br>belagt");
+		}
 	}
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
 	fetch('backend/putMore.php?key=' + key + '&class=' + CLASS + '&more=' + more, {
@@ -2263,6 +2266,10 @@ function putMore() {
 }
 function toggleMore(key, show = false) {	
 	if (DEBUG) console.log("toggleMore(key), key = " + key);		
+	if (show === false)  {
+	CACHED_DEF_HTML = $('#iParDef').html();
+	}		
+	
 	let start = key.indexOf("_");
 	if (start != -1) CUR_DEF = key.substring(start+1);
 	let id = "#iMore_" + key;
@@ -2295,7 +2302,7 @@ function toggleMore(key, show = false) {
 					tmp += "\nRight click = edit information'";
 				}
 				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_","<b>" + key +  "</b><br>" + json);
-				CACHED_DEF_HTML = $('#iParDef').html();
+								
 				$('#iParDef').html(tmp);						
 			}		
 			//$('#iParDef').text("");
