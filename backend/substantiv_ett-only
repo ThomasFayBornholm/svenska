@@ -19,6 +19,7 @@ aggregationstillstånd
 agn
 aktiebolag
 aktievärde
+akvarium
 album
 albumin
 alfabet
@@ -134,6 +135,7 @@ armveck
 armégevär
 arrangemang
 arrende
+arriärgarde
 arsel
 artilleri
 arv
@@ -408,6 +410,7 @@ bårhus
 böj
 bönehus
 böneutrop
+bönkaffe
 café
 centerparti
 centralvärme
@@ -802,15 +805,27 @@ försöksheat
 försörjningsstöd
 förtal
 förtecken
+förtjänsttecken
 förtroende
+förtroendekapital
+förtroenderåd
 förtroendeuppdrag
+förtroendevotum
 förtryck
+förtydligande
 förutseende
+förval
+förvaltarskap
+förvaltningsbolag
+förvaltningsutskott
+förvandlingsnummer
 förvar
+förverkande
 förvärv
 förvärvsarbete
 förvärvsavdrag
 förvärvsliv
+förvållande
 föräldrahem
 föräldrakooperativ
 föräldramöte
@@ -969,6 +984,7 @@ hjältemod
 hjärnspöke
 hjärta
 hjärtslag
+holdingbolag
 homoäktenskap
 honorar
 hopkok
@@ -1092,6 +1108,7 @@ instämmande
 insulin
 intag
 inteckningslån
+integritetsintrång
 intellekt
 intentionsdjup
 intercitytåg
@@ -1150,6 +1167,7 @@ kalas
 kalendarium
 kalenderår
 kall
+kallprat
 kalvkött
 kamouflage
 kamratskap
@@ -1384,6 +1402,7 @@ likhetstecken
 lillfinger
 lingon
 liv
+livdjur
 livmoderinlägg
 livsmedel
 ljud
@@ -1492,6 +1511,7 @@ medlemstapp
 medlidande
 medlut
 medvetande
+mejeri
 mejl
 mejlsvar
 mellangärde
@@ -1538,6 +1558,7 @@ misslyckande
 missmod
 missnöje
 misstag
+misstroendevotum
 missöde
 mittfält
 mjälthugg
@@ -2084,6 +2105,7 @@ slagskepp
 slagsmål
 slagträ
 slagverk
+slaktdjur
 slam
 slask
 slaveri
@@ -2466,6 +2488,7 @@ tråk
 trångmål
 tugg
 tummel
+tumult
 tun
 tungsinne
 tunnband
@@ -2526,6 +2549,7 @@ uppehälle
 uppehåll
 uppehållsrum
 uppehållstillstånd
+uppfyllande
 uppförande
 upphov
 upphörande
@@ -2677,6 +2701,8 @@ versmått
 vetande
 vete
 vetebröd
+vetenskapsråd
+veto
 vett
 vevlager
 vide

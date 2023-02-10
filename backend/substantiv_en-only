@@ -77,6 +77,7 @@ akalkuli
 akilleshäl
 akolut
 akolyt
+akronym
 akt
 akter
 aktie
@@ -553,6 +554,8 @@ attaché
 attack
 attan
 attentat
+attest
+attestant
 attityd
 attraktion
 au pair
@@ -1549,6 +1552,7 @@ bärsärk
 bättring
 bävan
 bäver
+bäverråtta
 både
 båge
 båglampa
@@ -1569,8 +1573,20 @@ böld
 bölja
 bön
 böna
+bönbok
+böndag
+bönekvarn
+böneman
+bönematta
+böneskrift
+böneutropare
+bönhörelse
+bönpall
+bönväxt
 börd
 börda
+bördsadel
+bördsstolt
 början
 börs
 börsmäklare
@@ -1755,6 +1771,7 @@ deltidsgrupp
 delägare
 demens
 dementi
+demo
 demokrat
 demokrati
 demonstrant
@@ -1772,6 +1789,7 @@ design
 desillusion
 desintegration
 desperation
+despot
 despoti
 despotism
 dessert
@@ -1919,6 +1937,7 @@ drottning
 drulle
 drummel
 dryck
+dryckesvara
 drägg
 dräktighet
 dränering
@@ -2004,6 +2023,7 @@ efterrationalisering
 efterrätt
 efterrättelse
 eftersläpning
+eftertrupp
 efterträdare
 eftervärld
 egenart
@@ -2184,6 +2204,7 @@ fallenhet
 fallhöjd
 fallskärm
 fallskärmsjägare
+fallvind
 falsarium
 familj
 familjemedlem
@@ -2301,9 +2322,11 @@ fiskleverolja
 fiskolja
 fission
 fitta
+fixering
 fjord
 fjordhäst
 fjortis
+fjutt
 fjäder
 fjäderpensel
 fjädring
@@ -2354,6 +2377,7 @@ flotta
 flottbas
 flotte
 flottilj
+flottyr
 fluga
 flugsmälla
 fluktuation
@@ -2519,6 +2543,7 @@ frisyr
 frisör
 fritagning
 fritid
+frityr
 frivillighet
 fromma
 front
@@ -2595,6 +2620,7 @@ fysiker
 fysioterapeut
 fäbless
 fägring
+fäktning
 fälg
 fälla
 fällning
@@ -2643,6 +2669,8 @@ för
 föraning
 förankring
 förare
+förbandslåda
+förbandsplats
 förbannelse
 förberedelse
 förbindelse
@@ -2873,11 +2901,14 @@ försäljning
 försäljningschef
 försämring
 försändelse
+försänkare
 försänkning
 försättslins
 försångare
 försöksballong
 försökskanin
+försöksperson
+försöksverksamhet
 försörjare
 försörjning
 försörjningsbalans
@@ -2887,38 +2918,64 @@ förteckning
 förtid
 förtidsbörd
 förtidspension
+förtidspensionär
+förtimring
 förtjusning
 förtjänst
+förtoning
 förtret
+förtretlighet
+förtroendeklyfta
+förtroendeman
+förtroendenämnd
 förtrogenhet
+förtrollning
+förtrupp
 förtryck
+förtryckare
 förtrytelse
 förträfflighet
 förträngning
 förtröstan
+förtunning
 förtur
 förtvining
 förtvivlan
+förtvätt
+förtvålning
+förtäring
+förtätning
+förtöjning
 förundersökning
+förundran
 förutsägelse
 förutsättning
 förvaltare
 förvaltning
+förvaltningsberättelse
+förvaltningsdomstol
+förvaltningsrätt
 förvandling
+förvandlingskonstnär
 förvanskning
 förvaring
 förvarning
+förveckling
+förvedning
+förvillelse
 förvirring
 förvisning
 förvissning
 förvittring
 förvridning
+förvrängning
 förväg
 förväntan
 förväntning
 förvärmare
 förvärvskälla
 förväxling
+förvållan
 förvåning
 föryngring
 föryngringsyta
@@ -3764,6 +3821,7 @@ incheckningsdisk
 incident
 indelning
 indignation
+indikation
 indikator
 individ
 individualitet
@@ -4086,6 +4144,7 @@ kabal
 kabel
 kabeljo
 kabin
+kabinettsfråga
 kabyss
 kadens
 kaffeböna
@@ -4104,6 +4163,7 @@ kakelugn
 kakform
 kakofoni
 kaktus
+kalabalik
 kalender
 kaliber
 kalkhalt
@@ -4122,6 +4182,7 @@ kameraman
 kamin
 kammare
 kammarherre
+kammarrätt
 kamomill
 kamouflering
 kamp
@@ -4240,6 +4301,7 @@ kejsare
 kemi
 kemikalie
 kemist
+kick
 kidnappning
 kikare
 kil
@@ -4701,6 +4763,7 @@ kulspetspenna
 kulstötning
 kult
 kulthandling
+kulting
 kultur
 kulturkrock
 kulvert
@@ -4736,6 +4799,7 @@ kustjägare
 kustremsa
 kutter
 kutym
+kuvös
 kvadrat
 kvadratmeter
 kvadratrot
@@ -4758,8 +4822,10 @@ kvinna
 kvinnlighet
 kvinnoroll
 kvist
+kvitten
 kvittens
 kvittering
+kvittning
 kvot
 kväll
 kvällning
@@ -4808,6 +4874,7 @@ kärnreaktor
 kärnskugga
 kärnved
 kärra
+kärrhök
 kärring
 kättare
 kätting
@@ -5078,6 +5145,7 @@ längtan
 länk
 länkare
 läns
+länsrätt
 länsstyrelse
 länstol
 läpp
@@ -5279,6 +5347,7 @@ medpatient
 medtävlare
 medverkan
 medvetenhet
+medvetslöshet
 medvind
 mekanik
 mekaniker
@@ -5472,6 +5541,7 @@ motti
 motvind
 mousse
 muck
+muezzin
 muffins
 mugg
 mula
@@ -5651,6 +5721,7 @@ nedtoning
 nedtrappning
 nefrit
 negation
+nejd
 nektarin
 nelson
 nerv
@@ -5840,6 +5911,7 @@ omloppsbana
 omläggning
 omnejd
 omnivor
+omoral
 omrörning
 omröstning
 oms
@@ -5959,6 +6031,7 @@ panda
 pandemi
 panegyrik
 panel
+panflöjt
 panik
 panna
 pansarskott
@@ -6016,6 +6089,7 @@ pastej
 pastor
 pastoral
 patient
+patientnämnd
 patina
 patriark
 patriotism
@@ -6788,6 +6862,7 @@ sardin
 sarkasm
 sarkofag
 satan
+satir
 satkärring
 satmara
 sats
@@ -6835,6 +6910,7 @@ semantik
 semester
 sena
 senap
+senat
 sensmoral
 sentens
 sentimentalitet
@@ -7373,6 +7449,7 @@ spårning
 spårstämpel
 spårvagn
 spårväg
+spökstad
 squash
 stab
 stabilitet
@@ -7380,6 +7457,7 @@ stack
 stackare
 stad
 stadga
+stadighet
 stadion
 stadsdel
 stagnation
@@ -7636,6 +7714,7 @@ svalka
 svallvåg
 svamp
 svan
+svans
 svansföring
 svanskota
 svartsjuka
@@ -7707,6 +7786,8 @@ syntes
 synvilla
 synvinkel
 syren
+syrgasmask
+syrinx
 syrra
 sysselsättning
 syssla
@@ -7800,6 +7881,7 @@ tallstekel
 talman
 tambur
 tamp
+tampong
 tand
 tandem
 tandemcykel
@@ -8063,6 +8145,9 @@ tortyr
 torv
 tosa
 tossa
+touch
+toucha
+touche
 toxikologi
 tradition
 tradjazz
@@ -8203,6 +8288,7 @@ tunnelbana
 tunntarm
 tupp
 tuppfäktning
+tupé
 tur
 turbin
 turbo
@@ -8245,6 +8331,7 @@ tyngd
 tyngdkraft
 tyngdpunkt
 typ
+tyrann
 tyrannisering
 tysk
 tyska
@@ -8824,7 +8911,11 @@ vertebrat
 vessla
 vetenskap
 vetenskapare
+vetenskapsman
+vetenskapsteori
 veteran
+veteranbil
+veteranrally
 veterinär
 vetskap
 vev
@@ -8835,6 +8926,7 @@ vidd
 video
 videobandspelare
 vidhäftning
+vidimering
 vidsyn
 vift
 viftning
