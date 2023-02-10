@@ -20,4 +20,9 @@ try:
     val = jsonDict[key]
     print(key + " -> " + val)
 except KeyError:
-    print("Key : " + key + " is not found in source")
+    if key == "0":
+        for key in jsonDict:
+            val = jsonDict[key]
+            print(key + " -> " + val)
+    else:
+        print("Key : " + key + " is not found in source")
