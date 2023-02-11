@@ -9,4 +9,4 @@ Copy-Item $name $dest;
 $name = "*-more";
 Copy-Item $name $dest;
 
-Copy-Item -recurse -force C:\xampp\htdocs\svenska $HOME
+Copy-Item -recurse -force C:\xampp\htdocs\svenska "C:\Users\SETHFAY\"
