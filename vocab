@@ -92,17 +92,18 @@ let DEBUG=false;
 let LAST_DEF = "";
 let LAST_CLASS = "all";
 let CONTROLS_VISIBLE=true;
-let SHOW_MORE = false;
 var TABS = [];
 var REGEX_WORDS = [];
 var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
-var COLORS = ["red", "blue", "green"];
+var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
+
 var CLASSES = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","plural","superlativ","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
 var TAB_DUMMY;
 var TAB_LOOKUP
+let ALL_DEFS = "";
 
 document.addEventListener("visibilitychange", (event) => {
 	if (TABS.length > 0) {
@@ -297,7 +298,7 @@ function getWords(ind = INC) {
 	// Ind is used to highlight and lookup a given word index from the returned list
 	// Global INC is used to get the starting index of the returned list	
 	if (DEBUG) console.log("getWords(), ind = " + ind + ", INC = ", + INC);	
-	SCROLL_INC=-1;
+	SCROLL_INC= -1;
 	N_FOUND=0;
 	$('#iParDef').text("");
 	if (N_REGEX > 0) {
@@ -512,7 +513,8 @@ function showWordMatches(follow) {
 			def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
 			delim="<br>";
 		}
-		LAST_DEF = def;				
+		LAST_DEF = def;	
+		LAST_WORD = word;
 		displayDef("",def, word);						
 		return;
 	})
@@ -531,6 +533,7 @@ function lookupWord(el,onlyLocal,inline) {
 		if (CLASS === "all") {
 			SCROLL_INC = parseInt(el.id.replace("w",""));			
 			let follow = false;
+
 			if (el.innerText.indexOf(">") != -1) {
 				follow = true;
 			}
@@ -680,7 +683,6 @@ function displayDef(meta, def,word) {
 	outDef = tmpSpan + ">" + fmtMeta(meta) + "</span>" + outDef;
 	$('#iParDef').html(outDef)
 	
-	SHOW_MORE = false;
 }
 // Make links to referenced words
 function makeLinks(def) {
@@ -1102,8 +1104,8 @@ function seekWord(word, link = false) {
 		REGEX_WORDS = [];
 		N_REGEX = 0;
 		// Special exceptions to capitalisation rules
-		if (word != "Ers" && word != "Eders") word = word.toLowerCase()
-		//if (word.indexOf("-") != -1) word = word.toLowerCase();
+		if (word != "Ers" && word != "Eders" && word.indexOf("-") === -1) word = word.toLowerCase()
+
 		if (word === '') {
 			word = LAST_WORD;
 			$('#iInput').val(word);
@@ -2108,7 +2110,14 @@ function lookupManyWords() {
 }
 
 function fmtMeta(meta) {
-	meta = meta.replace(CUR_WORD,"<b>" + CUR_WORD + "</b>");
+	let rep = "<span id='iWordRoot'"
+	rep += " onmouseover=highlight(this,event)";
+	rep += " onclick='changeScore(1)'";	
+	if (SHOW_HELP) {
+		rep += " title='Change score'"
+	}
+	rep += "><b>" + CUR_WORD + "</b></span>"
+	meta = meta.replace(CUR_WORD,rep);
 	metaArr = meta.split("<br>");
 	let tmpMeta = "";
 	delMeta = "";
@@ -2235,6 +2244,9 @@ function putMore() {
 	if (DEBUG) console.log("putMore()")	
 	let more = $('#iDefText').val();
 	more = more.replaceAll("\n","<br>");	
+	if (more.substring(0,4) === "<br>") {
+		more = more.substring(4);
+	}
 	if (more.indexOf("HISTORIK") == -1) {
 		if (more.indexOf("<h>") != -1) {
 			more = more.replace("<h>","HISTORIK:");
@@ -2267,7 +2279,7 @@ function putMore() {
 function toggleMore(key, show = false) {	
 	if (DEBUG) console.log("toggleMore(key), key = " + key);		
 	if (show === false)  {
-	CACHED_DEF_HTML = $('#iParDef').html();
+		CACHED_DEF_HTML = $('#iParDef').html();		
 	}		
 	
 	let start = key.indexOf("_");
@@ -2293,7 +2305,7 @@ function toggleMore(key, show = false) {
 		})
 		.then(json => {								
 			if (json.length === 0) {
-				$(id).html("<br>No more information to show");				
+				$(id).html(" --<br>No more information to show");				
 			} else {								
 				let tmp = "<span onclick='showCachedDef(this)'"
 				tmp += " oncontextmenu=editMore(event,'" + key + "')";
@@ -2323,6 +2335,10 @@ function toggleMore(key, show = false) {
 
 function editMore(ev,key) {
 	ev.preventDefault();
+	let tmp = $('#iParDef').html();
+	if (tmp.indexOf(" ++") != -1) {
+		CACHED_DEF_HTML = $('#iParDef').html();
+	}
 	$("#iPutDef").css("display", "none");
 	$('#iDefDiv').css("display", "block");
 	$("#iDivMore").css("display", "block");	
@@ -2341,7 +2357,7 @@ function processKeyDown(elHTML,ev) {
 		drillDown()
 	}
 	if (ev.location === 2) {
-		if (ev.key === "Control") {
+		if (ev.key === "Control") {			
 			if (CLASS != "all") {
 				setClass("all")
 			}
@@ -2423,10 +2439,15 @@ function toggleTooltips() {
 function defEntry(ev) {
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
-			putDef('',2);
-			$('#iInput').val("");
-			$('#iInput').focus();
-			seekWord(CUR_WORD);
+			if ($('#iPutDef').css("display") === "block") {
+				putDef('',2);
+				$('#iInput').val("");
+				$('#iInput').focus();
+				seekWord(CUR_WORD);
+			}
+			if ($('#iPutMore').css("display") === "block") { 
+				putMore()
+			}
 		}
 	} else if (ev.location === 3) {
 		if (ev.key === "0") {
@@ -2442,6 +2463,9 @@ function defEntry(ev) {
 			$('#iInput').focus();
 			seekWord(CUR_WORD);
 		}
+	}	
+	if (ev.key === "Escape") {		
+		$('#iDefDiv').css("display","none");
 	}
 }
 function showLast(caller) {
@@ -2479,6 +2503,27 @@ function simpleLink(defLine) {
 		}
 	}
 	return defLine;
+}
+
+function changeScore(diff) {
+	fetch('backend/changeScore.php?word=' + CUR_WORD + '&class=' + CLASS + '&diff=' + diff, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-type': 'application/json'
+		}		
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		if (json["res"] === "success") {		
+			let newScore = json["new"];
+			let id = "#w" + parseInt(SCROLL_INC);
+			$(id).css("color",SCORE_COLOURS[newScore]);			
+			updateScore();
+		}
+	})
 }
 </script>
 </html>
