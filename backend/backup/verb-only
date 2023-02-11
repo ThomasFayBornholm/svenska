@@ -25,7 +25,6 @@ akta
 akta sig
 aktivera
 aktualisera
-alliera
 alliera sig
 allokera
 alludera
@@ -156,6 +155,7 @@ assurera
 atombomba
 atrofiera
 attackera
+attestera
 attrahera
 auktorisera
 auskultera
@@ -353,6 +353,7 @@ avyttra
 avkasta
 aväta
 axla
+babbla
 backa
 backa upp
 bada
@@ -369,6 +370,7 @@ balka av
 bana
 banka
 banna
+bannlysa
 banta
 barka
 barlasta
@@ -594,6 +596,7 @@ bjuda upp
 bjuda ut
 blamera
 blamera sig
+blanchera
 blanda
 blanda samman
 blanda sig i
@@ -666,6 +669,7 @@ breda
 breda ut
 breda ut sig
 bredda
+bredsida
 brevrösta
 briljera
 bringa
@@ -745,12 +749,14 @@ böla
 bölja
 böna
 bönfalla
+bönhöra
 böra
 börja
 casta
 censurera
 centralisera
 centrera
+chansa
 charma
 charmera
 checka
@@ -998,6 +1004,7 @@ exekvera
 exercera
 existera
 exkludera
+exkommunicera
 expandera
 expediera
 experimentera
@@ -1016,6 +1023,7 @@ falla
 falla igenom
 falla undan
 falla ut
+falsa
 fantisera
 fara
 fara fram
@@ -1179,6 +1187,7 @@ fråga ut
 frångå
 frånta
 frånträda
+fråntvinga
 fröjda
 fröjda sig
 fröjdas
@@ -1477,16 +1486,19 @@ förorätta
 förpacka
 förpanta
 förpassa
+förpesta
 förplikta
 förpliktiga
 förpläga
 förpricka
+förpuppa
 förringa
 förrinna
 förruttna
 förrycka
 förränta
 förränta sig
+förrätta
 förråa
 förråda
 förråda sig
@@ -1548,6 +1560,7 @@ förstämma
 förständiga
 förstärka
 förstå
+förstå sig på
 förstöra
 försumma
 försumpas
@@ -1565,8 +1578,10 @@ försäkra sig
 försälja
 försämra
 försända
+försänka
 försätta
 försöka
+försöka sig på
 försörja
 förta
 förta sig
@@ -1624,6 +1639,7 @@ förvanska
 förvara
 förvarna
 förveda
+förvekliga
 förverka
 förverkliga
 förverkliga sig
@@ -1638,6 +1654,7 @@ förvittra
 förvrida
 förvränga
 förvägra
+förvälla
 förvända
 förvänta
 förvärldsliga
@@ -1660,6 +1677,7 @@ förånga
 förångas
 föröda
 förödmjuka
+förödmjuka sig
 föröka
 föröka sig
 föröva
@@ -1681,7 +1699,6 @@ garnera
 garva
 gastkrama
 ge
-ge (formellt giva)
 ge efter
 ge igen
 ge med sig
@@ -1701,13 +1718,18 @@ gengälda
 geniförklara
 genljuda
 genmäla
+genomarbeta
 genomdriva
+genomfara
 genomflyta
 genomföra
 genomgå
+genomkorsa
 genomleva
 genomlida
 genomlysa
+genomskåda
+genomströmma
 genomsyra
 geometrisera
 geotagga
@@ -1809,6 +1831,7 @@ gröpa ur
 gubba till sig
 gulla
 gunga
+guppa
 gymnastisera
 gympa
 gynna
@@ -1955,6 +1978,7 @@ hällregna
 hälsa
 hälsa på
 hämma
+hämnas
 hämta
 hämta in
 hända
@@ -2163,6 +2187,7 @@ intressera sig
 introducera
 inträda
 inträffa
+intränga
 intyga
 invadera
 invagga
@@ -2362,6 +2387,7 @@ koka över
 kola
 kolla
 kollapsa
+kollidera
 kolportera
 kombinera
 komma
@@ -2522,6 +2548,7 @@ kvadrera
 kvalificera
 kvarstå
 kvida
+kvitta
 kvittera
 kvittera ut
 kvittra
@@ -2873,10 +2900,12 @@ mula
 mullra
 mulna
 multiplicera
+multna
 mumsa
 mumsa i sig
 muntra upp
 murra
+musicera
 myllra
 mynna
 mynna ut
@@ -3051,6 +3080,7 @@ omställa
 omsätta
 omtala
 omtolka
+omtrycka
 omvandla
 omvälja
 omvända
@@ -3171,6 +3201,7 @@ polarisera
 polemisera
 polera
 politisera
+poppa upp
 porla
 porträttera
 posta
@@ -3488,6 +3519,7 @@ röna
 röra
 röra sig
 rösta
+röta
 röva
 sabba
 sabotera
@@ -3512,6 +3544,7 @@ sammanfatta
 sammanfoga
 sammanföra
 sammanhänga
+sammanjämka
 sammankalla
 sammankoppla
 sammanpacka
@@ -3527,6 +3560,7 @@ sammanväva
 samordna
 samsa
 samspela
+samstämma
 samtala
 samtycka
 samverka
@@ -3865,6 +3899,7 @@ smärta
 smådugga
 smågräla
 småle
+småspringa
 smörja
 snabba
 snabba på
@@ -4216,6 +4251,7 @@ syna ut
 synas
 synda
 synkopera
+synkronisera
 syra
 sysselsätta
 syssla
@@ -4312,6 +4348,7 @@ tala in
 tala om
 tala ut
 tampas
+tamponera
 tangera
 tanka
 tappa
@@ -4382,6 +4419,7 @@ tillstå
 tillsätta
 tilltala
 tillträda
+tilltvinga sig
 tillvarata
 tillverka
 tillvälla sig
@@ -4560,6 +4598,7 @@ tystna
 täcka
 tälja
 tälta
+tämja
 tända
 tända upp
 tänja
@@ -4750,7 +4789,6 @@ utdika
 utdunsta
 utdöma
 utebli
-utebliva
 utelämna
 utesluta
 utestänga
@@ -4924,6 +4962,7 @@ vattna ur
 vecka
 vederböra
 vederfaras
+vedergälla
 vederlägga
 ventilera
 verifiera
@@ -4979,6 +5018,7 @@ vintra in
 vippa
 vira
 virka
+virra
 virvla
 visa
 visa sig
