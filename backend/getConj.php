@@ -1,7 +1,16 @@
 <?php
+	function repText($inText,$replacements,$word) {
+		$tmp = $inText;
+		foreach($replacements as $r) {
+			if ($word != $r) {
+				$tmp = str_replace($r,"",$tmp);
+			}
+		}
+		return $tmp;
+	}
 	$path = getcwd() ."/";
 	$word = $_GET['word'];
-	$rest = "";	
+	$rest = "";		
 	$nFind = 1;
 	if (str_contains($word, " ")) {
 		$tmp = explode(" ", $word);
@@ -21,10 +30,13 @@
 		$classArr = array($class);
 	}
 	
+	
 	$out = array();
 	$out["class"]="";
 	$out["word"]="";
-	$meta = array(",","-","­","plural","singular","bestämd","ingen böjning");
+	$replacements = array("eller ","komparitiv ","superlativ ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>");
+	$test = "ge gav, gett, given givna, presens ger även åld. giva gav, givit, given givna, presens giver";
+
 	foreach ($classArr as $el) {
 		$name = $el . $trail;
 		// Get word list from "-only" listing
@@ -41,33 +53,18 @@
 				$lines = explode("<br>", $dict[$key]);
 				
 				$lineOne = $lines[0];
-				if ($word != "eller") {
-					$lineOne = str_replace("eller ", "", $lineOne);
-				}
-				if ($word != "komparitiv") {
-					$lineOne = str_replace("komparitiv ", "", $lineOne);
-				}
-				if ($word != "superlativ") {
-					$lineOne = str_replace("superlativ ", "", $lineOne);
-				}				
-				if ($word != "supinum") {
-					$lineOne = str_replace("supinum ", "", $lineOne);
-				}
-				if ($word != "objektsform") {
-					$lineOne = str_replace("objektsform ", "", $lineOne);
-				}
-				$lineOne = str_replace("i vissa stelnade uttryck används ","",$lineOne);
-				foreach($meta as $m) {
-					$lineOne = str_replace($m,"",$lineOne);
-				}	
+				$lineOne = repText($lineOne,$replacements,$word);
+							
 				
 				$words = explode(" ",$lineOne);
 				
 				$firstConj = $words[0];
-				foreach($words as $w) {					
+				foreach($words as $w) {
+
 					$w = str_replace("~",$firstConj, $w);					
 					$fuzzyE = str_replace("é","e",$w);
-					$fuzzyE = str_replace("é","e",$fuzzyE);						
+					$fuzzyE = str_replace("é","e",$fuzzyE);
+					
 					if ($word === $w or $word === $fuzzyE or (str_contains($lineOne,$word) and $el === "adverb")) {		
 						if (str_contains($lineOne,$rest)) {				
 							$keyCount = count(explode(" ", $key));	
