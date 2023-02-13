@@ -2164,7 +2164,6 @@ bemanningsföretag
 bemedlad
 bemyndiga
 bemyndigande
-bemäktiga
 bemäktiga sig
 bemänga
 bemärka
@@ -3025,6 +3024,7 @@ broskvävnad
 brott
 brotta
 brottas
+brottmål
 brottning
 brottslig
 brottslighet
@@ -3442,6 +3442,7 @@ civil
 civilbefolkning
 civilisation
 civiliserad
+civilmål
 clearing
 clementin
 clou
@@ -4221,6 +4222,7 @@ eftersom
 efterspel
 eftersträva
 eftersträvansvärd
+eftersägare
 eftersända
 eftersätta
 eftersättsblad
@@ -4374,6 +4376,8 @@ enbo
 encyklika
 encyklopedi
 endast
+endemi
+endemisk
 endera
 endokrin
 endräkt
@@ -4455,8 +4459,22 @@ enväldig
 envåldshärskare
 enzym
 ep
+epatraktor
+epicentrum
+epidemi
+epidemiolog
+epidemiologi
+epidemisk
 epidermis
+epiduralbedövning
+epiduralblockad
+epifani
+epifania
+epifys
 epifyt
+epigon
+epigoneri
+epilepsi
 epileptiker
 episkop
 epitet
@@ -4706,6 +4724,7 @@ farmor
 farofylld
 fars
 farsa
+farsot
 farstu
 fart
 fartfylld
@@ -7209,6 +7228,7 @@ gramse
 gran
 granat
 grand
+grand mal
 grann
 granne
 grannfejd
@@ -7400,6 +7420,7 @@ gudskelov
 gudstjänst
 gudstjänste
 gudunge
+guida
 guide
 gul
 gula
@@ -7655,6 +7676,7 @@ hammarklaver
 hammerless
 hamn
 hamna
+hampa
 hamra
 hamster
 hamsterhjul
@@ -7739,6 +7761,7 @@ harmonisera
 harmonisk
 harv
 hasard
+hasch
 hasselnöt
 hasta
 hastig
@@ -7887,6 +7910,8 @@ hetsa upp sig
 hetsig
 hetta
 hetta upp
+heuristik
+heuristisk
 hi
 hicka
 hickning
@@ -7932,6 +7957,8 @@ hjulspår
 hjälm
 hjälp
 hjälpa
+hjälpa till
+hjälpa upp
 hjälpkår
 hjälplig
 hjälplös
@@ -10275,6 +10302,7 @@ kontrovers
 kontroversiell
 kontur
 konung
+konungslig
 konvent
 konvention
 konventionell
@@ -11092,6 +11120,7 @@ lektion
 lem
 lemlästa
 len
+leninism
 lera
 lergods
 lerjord
@@ -11256,6 +11285,7 @@ livsnödvändig
 livsstil
 livstid
 livstidsdömd
+livsuppgift
 ljud
 ljuda
 ljudande
@@ -11776,21 +11806,42 @@ mantissa
 manual
 manus
 manuskript
+manusstopp
+manvarg
+manx
 manår
 manöver
+manöverduglig
 manövrera
+maoism
+maori
+maorisk
 mapp
+mar
 mara
+marasm
 maraton
 maratonlopp
 mardröm
+marg
 margarin
+margerit
 marginal
+marginalisera
+marginalränta
+marginalskatt
 marginell
 marig
+marijuana
 marin
 marina
+marinad
+marinbiologi
+marinblå
 marinera
+marinkår
+marinsoldat
+marionett
 maritim
 mark
 marka
@@ -13214,6 +13265,7 @@ oekonomisk
 oemotsäglig
 oemottaglig
 oenig
+oenighet
 oerfaren
 oerhörd
 oersättlig
@@ -13667,6 +13719,7 @@ osannolik
 oschyst
 osedlig
 osjälvisk
+osjälvständig
 oskadliggöra
 oskarp
 oskattbar
@@ -14033,6 +14086,7 @@ pessimist
 pessimistisk
 pest
 peta
+petit mal
 petitess
 petrifikat
 petroleum
@@ -15229,6 +15283,7 @@ ryckig
 ryckighet
 ryckning
 rygg
+ryggbedövning
 ryggmärg
 ryggrad
 ryggradsdjur
@@ -15657,6 +15712,8 @@ schema
 schemalagd
 schematisk
 schismatiker
+schizofren
+schizofreni
 schlager
 schysst
 scoop
@@ -16372,6 +16429,7 @@ skådespelarkonst
 skådespelerska
 skådis
 skål
+skåla
 skålformig
 skålgrop
 skånsk
@@ -17003,6 +17061,7 @@ spilla
 spilla över
 spillning
 spillra
+spinalanestesi
 spindel
 spinkig
 spinna
@@ -17176,6 +17235,7 @@ stagvända
 staka
 stake
 staket
+stalinism
 stall
 stam
 stamcell
@@ -18197,6 +18257,7 @@ taliban
 talkropp
 tall
 tallinje
+tallkottkörtel
 tallrik
 tallstekel
 talman
@@ -18893,6 +18954,7 @@ trettio
 trettionde
 trettiotal
 tretton
+trettondag
 trettonde
 tretår
 treva
@@ -19262,6 +19324,7 @@ tålamod
 tålig
 tålmodig
 tång
+tångkaviar
 tår
 tårta
 tårtgaffel
@@ -20702,6 +20765,7 @@ verklighetsfrämmande
 verkningsgrad
 verksam
 verksamhet
+verksamhetsområde
 verkstad
 verkstadsindustri
 verkställa
@@ -20713,6 +20777,7 @@ vers
 versal
 verse
 verserad
+versfot
 version
 versmått
 vertebrat
@@ -21021,6 +21086,7 @@ vägavgiftsställe
 vägbro
 vägg
 vägguttag
+vägleda
 vägledande
 vägledning
 vägra
