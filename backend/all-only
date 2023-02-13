@@ -65,6 +65,7 @@ ackordslön
 ackumulation
 ackumulator
 ackumulera
+ackusativ
 ackvirera
 ackvisition
 actionfilm
@@ -76,6 +77,7 @@ adel
 adelsman
 adept
 adjektiv
+adjunkt
 adjutant
 adjö
 adlig
@@ -2498,7 +2500,6 @@ betydelsenyans
 betydlig
 betydligt
 betyg
-betyg(s)sätta
 betygsätta
 betäckning
 betänka
@@ -3353,6 +3354,7 @@ cendré
 censur
 censurera
 center
+centerbord
 centerparti
 centimeter
 centimeter (förk. cm)
@@ -3553,6 +3555,7 @@ datera sig
 datera upp
 daterad
 datering
+dativ
 dator
 datum
 de
@@ -3671,6 +3674,7 @@ desertör
 design
 desillusion
 desillusionerad
+desinfektion
 desinficera
 desintegration
 deskriptiv
@@ -3786,6 +3790,7 @@ disciplinerad
 disciplinär
 disharmoni
 disig
+disjunktion
 disk
 diska
 diskho
@@ -4144,6 +4149,7 @@ dödläge
 dödsdom
 dödsfall
 dödskallefjäril
+dödsmask
 dödsskjutning
 dödsstraff
 dödvikt
@@ -4419,6 +4425,7 @@ enkelspårig
 enkelsäng
 enkelt
 enkrona
+enkät
 enkönad
 enlig
 enligt
@@ -5538,6 +5545,7 @@ fundament
 fundamental
 fundera
 fundering
+fundersam
 fungera
 funka
 funkis
@@ -6035,6 +6043,7 @@ förklara
 förklara bort
 förklara sig
 förklaring
+förklenande
 förklinga
 förklistra
 förklä
@@ -6893,6 +6902,7 @@ gendriva
 genealogi
 generad
 general
+generaldirektör
 generalisera
 generalisering
 generalist
@@ -6915,6 +6925,7 @@ genial
 genialisk
 genie
 geniförklara
+genitiv
 genklang
 genljud
 genljuda
@@ -7115,6 +7126,7 @@ globalisera
 globalisering
 globulin
 glorifiera
+glosa
 glossarium
 glugg
 glupsk
@@ -7199,6 +7211,7 @@ gorilla
 gosa
 gosig
 gosse
+gotländska
 gott
 gott om
 gottfinnande
@@ -7445,6 +7458,7 @@ gunstling
 gupp
 guppa
 gurka
+gutniska
 guvernant
 guvernement
 guvernör
@@ -7548,6 +7562,8 @@ göra åt
 görningen
 göromål
 göt
+göteborgare
+göteborgska
 ha
 habegär
 hack
@@ -7579,6 +7595,8 @@ halleluja
 hallon
 hallucination
 hallucinera
+halländska
+hallänning
 hallå
 halmstrå
 halogen
@@ -7793,6 +7811,7 @@ hederlig
 hedersam
 hedersbetygelse
 hederslegion
+hedersord
 hedersplats
 hedervärd
 hedning
@@ -8658,6 +8677,7 @@ inadekvat
 inaktiv
 inaktivera
 inaktivitet
+inaktuell
 inandas
 inandning
 inarbeta
@@ -8836,7 +8856,6 @@ inlärningssvårighet
 inlåna
 inlåning
 inlåningsränta
-inlåta
 inlåta sig
 inlöpa
 inmata
@@ -8887,9 +8906,11 @@ inrikes
 inrikesminister
 inrikespolitik
 inrikta
+inrikta sig
 inriktning
 inringa
 inringare
+inrop
 inropa
 inrotad
 inryckning
@@ -8912,6 +8933,7 @@ insistera
 insjukna
 insjö
 inskeppa
+inskjuta
 inskola
 inskott
 inskriva
@@ -9673,12 +9695,22 @@ katt
 kattguld
 kattunge
 kaus
+kausal
+kausalförhållande
+kausalitet
+kausativ
+kaustik
+kaution
+kav
+kava sig
 kavaj
 kavalkad
 kavall
 kavalleri
 kavallerist
 kavat
+kavern
+kaviar
 kavla
 kavla ner
 kavla upp
@@ -9945,6 +9977,7 @@ knuten
 knutpunkt
 knyck
 knycka
+knyckig
 knyppla
 knyppling
 knyta
@@ -10281,6 +10314,7 @@ kontinental
 kontingent
 kontinuerlig
 kontinuitet
+kontinuum
 konto
 kontor
 kontorsstol
@@ -10528,6 +10562,7 @@ kromosom
 krona
 kronisk
 kronofogde
+kronolekt
 kronologi
 kronvrak
 kronärtskocka
@@ -11117,6 +11152,7 @@ leksak
 lekskola
 leksugen
 lektion
+lektor
 lem
 lemlästa
 len
@@ -11760,6 +11796,8 @@ malja
 mall
 malm
 malmförande
+malmslig
+malmöitisk
 malträtera
 malör
 mamma
@@ -11769,6 +11807,7 @@ mana
 mana fram
 manager
 manchesterliberalism
+mandala
 mandarin
 mandarin 
 mandat
@@ -12844,6 +12883,7 @@ nedstämdhet
 nedsupen
 nedsutten
 nedsätta
+nedsättande
 nedsättning
 nedtagning
 nedteckna
@@ -12942,6 +12982,7 @@ nollställe
 nollvision
 nomad
 nomenklatur
+nominativ
 nominell
 nominera
 nominering
@@ -13046,6 +13087,7 @@ nyss
 nysta
 nysta av
 nysta upp
+nystan
 nytillsatt
 nytta
 nyttig
@@ -13058,6 +13100,7 @@ nyår
 nyårsafton
 näbb
 näckros
+nämen
 nämligen
 nämna
 nämnd
@@ -13151,6 +13194,7 @@ nöjesfiske
 nöjespark
 nöjsam
 nörd
+nördig
 nöt
 nöta
 nötfrukt
@@ -13326,6 +13370,7 @@ oförskämd
 oförskämdhet
 oförsonlig
 oförståelig
+oförstående
 oförsynt
 oförtjänt
 oförtruten
@@ -14195,6 +14240,7 @@ plattform
 plausibel
 plebs
 plenisal
+pleonasm
 plikt
 pliktig
 plir
@@ -15031,6 +15077,7 @@ restaurera
 restera
 restituera
 restprodukt
+restriktion
 restriktiv
 resultat
 resultera
@@ -15237,6 +15284,7 @@ rumsväxt
 rund
 runda
 runda av
+rundfråga
 rundkyrka
 rundnätt
 rundradio
@@ -15711,6 +15759,7 @@ schasa
 schema
 schemalagd
 schematisk
+schism
 schismatiker
 schizofren
 schizofreni
@@ -15741,6 +15790,7 @@ sedig
 sediment
 sedlig
 sedlighet
+sedvana
 sedvanlig
 sedvänja
 seeda
@@ -15752,6 +15802,7 @@ segelflyga
 segelflygning
 segelflygplan
 segeljakt
+segeljolle
 segelled
 segelsport
 seger
@@ -15763,6 +15814,7 @@ segla in
 segla upp
 segling
 segment
+segmentera
 segra
 segrare
 segregation
@@ -15851,6 +15903,7 @@ sida
 siden
 siderit
 sidled
+sidledes
 sido
 sidoeffekt
 sidorätt
@@ -16888,6 +16941,7 @@ socialistisk
 socialliberalism
 socialtjänst
 socialtjänste
+sociolekt
 sociologi
 socka
 socker
@@ -16902,6 +16956,8 @@ sockersjuka
 soffa
 soffbord
 soffkudde
+sofism
+sofisteri
 sofistikerad
 software
 sol
@@ -16930,6 +16986,7 @@ som vanligt
 somatisk
 sommar
 sommaraktig
+sommarhus
 sommarlig
 sommarlov
 sommarmånad
@@ -17008,7 +17065,6 @@ spatsera
 spe
 speaker
 specialfall
-specialisera
 specialisera sig
 specialist
 specialistläkare
@@ -17049,6 +17105,7 @@ spetig
 spets
 spetsa till
 spetsa till sig
+spetsfundighet
 spetsig
 spex
 spexa
@@ -17157,6 +17214,7 @@ språkbruk
 språkkurs
 språklig
 språklära
+språkpolis
 språkrör
 språksam
 språng
@@ -17390,6 +17448,8 @@ stjärnskott
 stjärnsystem
 stjärt
 sto
+stockholmare
+stockholmska
 stod
 stoff
 stoffera
@@ -17812,6 +17872,7 @@ svala
 svalka
 svallvåg
 svalna
+svamla
 svammel
 svamp
 svan
@@ -18189,6 +18250,7 @@ ta sig för
 ta sig före
 ta sig samman
 ta sig till
+ta sig ut
 ta till
 ta upp
 ta ut
@@ -18293,6 +18355,7 @@ tankearbete
 tankegång
 tankemässig
 tankemöda
+tankfull
 tanklös
 tanks
 tant
@@ -18309,6 +18372,9 @@ tass
 tatuera
 tatuering
 taukors
+taurin
+tautologi
+tautomeri
 tavla
 taxera
 taxering
@@ -19709,6 +19775,7 @@ uppställning
 uppstämma
 uppstå
 uppståndelse
+uppsvenska
 uppsvullen
 uppsvälld
 uppsyn
@@ -21011,6 +21078,7 @@ vitrysk
 viträv
 vits
 vitsa
+vitsig
 vitter
 vittna
 vittne
@@ -22759,5 +22827,3 @@ zucchini
 överösa
 övlig
 övning
-övningsbok
-övnings
