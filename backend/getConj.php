@@ -30,11 +30,10 @@
 		$classArr = array($class);
 	}
 	
-	
 	$out = array();
 	$out["class"]="";
 	$out["word"]="";
-	$replacements = array("eller ","komparitiv ","superlativ ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>");
+	$replacements = array("eller ","komparitiv ","superlativ ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>","genitiv ","dativ ");
 	$test = "ge gav, gett, given givna, presens ger även åld. giva gav, givit, given givna, presens giver";
 
 	foreach ($classArr as $el) {
