@@ -681,6 +681,7 @@ function displayDef(meta, def,word) {
 		tmpSpan += " title='Right click to edit definition'" 
 	}
 	outDef = tmpSpan + ">" + fmtMeta(meta) + "</span>" + outDef;
+	CACHED_DEF_HTML = outDef;
 	$('#iParDef').html(outDef)
 	
 }
