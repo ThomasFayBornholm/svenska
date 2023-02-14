@@ -2549,7 +2549,7 @@ function randomWord() {
 		return response.json();
 	})
 	.then(json => {
-		INC = json;
+		INC = json["ind"]-4;
 		getWords(3);
 	})
 	.catch(error => {

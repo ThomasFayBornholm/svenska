@@ -23,13 +23,16 @@
 	$words = preg_split("/\r\n|\r|\n/", $contents);
 	
 	$i = 0;
-	foreach($words as $w) {
-		
+	$res["ind"]=0;
+	$res["word"]="not found";
+	foreach($words as $w) {		
 		$i++;		
-		if ($w === $tmpWord) {			
-			echo json_encode($i);	
+		if ($w === $tmpWord) {
+			$res["ind"]=$i;
+			$res["word"] = $tmpWord;
+			echo json_encode($res);	
 			return;
 		}
 	}
-	echo json_encode(0);
+	echo json_encode($res);
 ?>
