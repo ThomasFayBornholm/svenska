@@ -2616,7 +2616,6 @@ biskop
 biskvi
 biskviporslin
 bister
-bistra
 bistra till
 bistå
 bistånd
@@ -7497,6 +7496,8 @@ gärd
 gärda
 gärna
 gärning
+gäspa
+gäspning
 gässling
 gäst
 gästfri
@@ -7736,6 +7737,7 @@ handleda
 handledare
 handledning
 handling
+handlingsfrihet
 handlingsförlamad
 handlingskraftig
 handlingsplan
@@ -7780,6 +7782,7 @@ harmonisk
 harv
 hasard
 hasch
+hashtag
 hasselnöt
 hasta
 hastig
@@ -11606,6 +11609,7 @@ lärobok
 läroplan
 lärorik
 lärosats
+lärosäte
 läroverk
 läsa
 läsa av
@@ -13062,6 +13066,7 @@ nyhet
 nyhetsbrev
 nyhetsflöde
 nyhetssajt
+nyinskriven
 nykomling
 nykter
 nykterism
@@ -13989,6 +13994,7 @@ parlament
 parlamentarisk
 parnass
 parodi
+parodiera
 parodisk
 paroll
 parsa
@@ -15260,6 +15266,10 @@ ruccola
 ruccolasallad
 rucka
 rucklig
+ruda
+rudiment
+rudimentär
+rudis
 ruelse
 ruffig
 rufs
@@ -17011,6 +17021,7 @@ soppatorsk
 soppig
 soppsked
 sopskyffel
+sorbet
 sorg
 sorgespel
 sorgfri
@@ -17399,6 +17410,7 @@ sticka sig
 sticka till
 sticka upp
 sticka ut
+stickande
 stickas
 stickel
 stickkontakt
@@ -17431,6 +17443,7 @@ stimulans
 stimulantia
 stimulera
 stimulus
+sting
 stingslig
 stinka
 stipel
@@ -17679,7 +17692,9 @@ styckevis
 styckning
 stygg
 styggelse
+stygn
 stympa
+styng
 styra
 styrdokument
 styre
@@ -18308,6 +18323,7 @@ tala ut
 talan
 talande
 talang
+talangfull
 talare
 talarkonst
 talekonst
@@ -18965,6 +18981,7 @@ trampmina
 trampolin
 trams
 tranch
+tranchera
 trans
 transaktion
 transfer
@@ -19007,6 +19024,7 @@ trava
 trava sig
 travbana
 trave
+travestera
 travtävling
 tredje
 tredjedag
@@ -22825,5 +22843,4 @@ zucchini
 överäta
 överårig
 överösa
-övlig
-övning
+�
