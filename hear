@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <head>
-	<link rel="stylesheet" href="svenska.css">
-	<script src="jquery-3.4.1.min.js"></script>
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hear</title>
+	<link rel="stylesheet" href="svenska.css">
+	
+	<script src="jquery-3.4.1.min.js"></script>	
+	
 </head>
 <body onload="init()">
 <div class="row columns_4" style="width: 400px">	
@@ -27,28 +30,46 @@
 			<source src="sounds/glass.mp3" type="audio/mpeg">
 			Your browser does not support the audio element.
 		</audio></p>
+		<label for="iLoop">Loop forever</label>
+		<input id="iLoop" type="checkbox" class="b2" >		
 	</div>
 </div>
 </audio><br>
 </div>
 <script>
+var LOOP = false;
 function init() {
+	size = "200px"
+	$('#btn1').css("width", size)
+	$('#btn2').css("width", size)
 	var a1 = document.getElementById("iFul");
 	a1.addEventListener("timeupdate", function() {
 		if (a1.currentTime > 0.7) {
 			playFull()
 		}
 	})
-	size = "200px"
-	
-	$('#btn1').css("width", size)
+	var a2 = document.getElementById("iFull");
+	a2.addEventListener("ended", function() {		
+		if (LOOP) {
+			play1();
+		}
+	})			
 	var a3 = document.getElementById("iGlas");
 	a3.addEventListener("timeupdate", function() {
 		if (a3.currentTime > 0.8) {
-			playGlass()
+			playGlass();
+		}
+	})		
+	var a4 = document.getElementById("iGlass");
+	a4.addEventListener("ended", function() {
+		if (LOOP) {
+			play2();
 		}
 	})	
-	$('#btn2').css("width", size)	
+	$('#iLoop').on("change",function() {
+		toggleChecked(this);
+	});
+	$('#iLoop').prop('checked',false);
 }
 function play1() {
 	var a = document.getElementById("iFul");
@@ -65,6 +86,13 @@ function play2() {
 function playGlass() {
 	var a = document.getElementById("iGlass");
 	a.play()
+}
+function toggleChecked(el) {
+	if (el.checked === true) {
+		LOOP = true;
+	} else {
+		LOOP = false;
+	}
 }
 </script>
 </body>
