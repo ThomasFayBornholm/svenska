@@ -2277,6 +2277,17 @@ function putMore() {
 		console.log(error)
 	})
 }
+// 1-based indices instead of 0-based for storage
+function keyForUser(key) {
+	start = key.indexOf("_");
+	let res = key;
+	if (start === -1) return key
+	zero_based_ind = parseInt(key.substring(start+1));
+	one_based_ind = zero_based_ind + 1
+	res = key.replace("_" + zero_based_ind, "_" + one_based_ind);	
+
+	return res
+}
 function toggleMore(key, show = false) {	
 	if (DEBUG) console.log("toggleMore(key), key = " + key);		
 	if (show === false)  {
@@ -2314,7 +2325,7 @@ function toggleMore(key, show = false) {
 					tmp += " title = 'Left click = back to definition(s) "
 					tmp += "\nRight click = edit information'";
 				}
-				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_","<b>" + key +  "</b><br>" + json);
+				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_","<b>" + keyForUser(key) +  "</b><br>" + json);
 								
 				$('#iParDef').html(tmp);						
 			}		
