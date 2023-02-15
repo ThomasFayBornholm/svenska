@@ -23,7 +23,7 @@
 <div >
 <h1 id="iTitle" ondblclick="toggleTooltips()" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on web-page controls">Ordbok</h1>
 </div>
-<div id="iCountDiv" class="centred">
+<div id="iCountDiv" class="centred" style="visibility: hidden">
 	<span class="counts countLeft" id="iCnt">test</span>
 	<span class="counts countTotal" id="iCntTotal" onclick="showToggle()" onmouseover="highlight(this,event)">Total</span>
 	<span class="counts" "score" id="iScore">{Score}</span>
@@ -76,7 +76,6 @@ let N_PREPOSITION = 0;
 let N_INTERJEKTION = 0;
 let N_PRONOMEN = 0;
 let N_PREFIX = 0;
-let N_SUPERLATIV = 0;
 let N_SLUTLED = 0;
 let N_NUMMER = 0;
 let N_SUBJUNKTION = 0;
@@ -98,7 +97,7 @@ var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
 var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
 
-var CLASSES = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","plural","superlativ","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
+var CLASSES = ["Class (short name)","substantiv_en (en)","verb","adjektiv (adj)","substantiv_ett (ett)","adverb (adv)","plural (plu)","preposition (prep)","pronomen (pro)","interjektion (int)","förled (för)","slutled (slut)","subjunktion (sub)","konjunktion (kon)","räkneord (räk)"]
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
 var TAB_DUMMY;
@@ -142,8 +141,6 @@ function setN_CUR() {
 		N_CUR = N_PREFIX;
 	} else if (CLASS === "plural") {
 		N_CUR = N_PLURAL;
-	} else if (CLASS === "superlativ") {
-		N_CUR = N_SUPERLATIV;
 	} else if (CLASS === "slutled") {
 		N_CUR = N_SLUTLED;
 	} else if (CLASS === "räkneord") {
@@ -222,7 +219,8 @@ function putDef(def, score) {
 	updateScore();
 }
 function updateScore() {
-	fetch('backend/getScore.php?class=' + CLASS, {
+	// Hash to prevent cached value being used by browser
+	fetch('backend/getScore.php?class=' + CLASS + '&hash=' + makeHash(), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -251,6 +249,8 @@ function updateScore() {
 			$('#iScore').html($('#iScore').html() + ";<span class='blueWord' onclick=seekWord('bluewords') oncontextmenu='nextWord(this,event)'>" + json["blueCount"] + "</span>")
 			$('#iScore').html($('#iScore').html() + "}");
 		}
+		// Only display counts once they are initialised.
+		$('#iCountDiv').css("visibility","");
 	})
 	.catch(error => {
 		console.log(error);
@@ -574,7 +574,11 @@ function lookupWord(el,onlyLocal,inline) {
 				}
 				let def = "";
 				let delim ="";			
-				let tmp = "<span title='Navigate to xxx' onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";			
+				let tmp = "<span ";
+				if (SHOW_HELP) {
+					tmp += "title='Navigate to xxx'";
+				}
+				tmp += "onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";			
 				for (let i = 0; i < keys.length; i++) {		
 					def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
 					delim="<br>";
@@ -679,7 +683,7 @@ function displayDef(meta, def,word) {
 	if (SHOW_HELP) {
 		console.log("test")
 		tmpSpan += " title='Right click to edit definition'" 
-	}
+	}	
 	outDef = tmpSpan + ">" + fmtMeta(meta) + "</span>" + outDef;
 	CACHED_DEF_HTML = outDef;
 	$('#iParDef').html(outDef)
@@ -771,9 +775,7 @@ function addLinks(refClass,def) {
 	delim = "";
 	beginSpan = "<span onclick=followLink(this)";
 	beginSpan += " onmouseover=highlight(this,event)";
-	if (SHOW_HELP) {
-		beginSpan += " title='Navigate to \"_w_\"'";
-	}
+	if (SHOW_HELP) beginSpan += " title='Navigate to \"_w_\"'";
 	beginSpan += ">"
 	spanTmp = beginSpan + "<b>_w_</b></span>";
 	for (line of defArr) {
@@ -900,7 +902,8 @@ function switchTab() {
 }
 
 function wordCount() {
-	fetch('backend/wordCount.php', {
+	// Hash to prevent cached result being returned.
+	fetch('backend/wordCount.php?hash=' + makeHash(), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -918,8 +921,7 @@ function wordCount() {
 		N_ADVERB = json["adverb"];
 		N_EN = json["substantiv_en"];
 		N_ETT = json["substantiv_ett"];		
-		N_PLURAL = json["plural"];
-		N_SUPERLATIV = json["superlativ"];
+		N_PLURAL = json["plural"];		
 		N_PREPOSITION = json["preposition"];
 		N_INTERJEKTION = json["interjektion"];
 		N_PRONOMEN = json["pronomen"];
@@ -1191,7 +1193,9 @@ function seekWord(word, link = false) {
 									}
 									let def = "";
 									let delim ="";									
-									let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
+									let tmp = "<span onmouseover=\"highlight(this,event)\""
+									if (SHOW_HELP) tmp += "title='Navigate to class \"_k_\"'";
+									tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
 									for (let i = 0; i < keys.length; i++) {			
 										let compDef = json[keys[i]];															
 										def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
@@ -1241,6 +1245,8 @@ function seekWord(word, link = false) {
 	if (DEBUG) console.log("END seekWord(); word = " + word + " -> INC = " + INC);			
 }
 function drillDown() {
+	if (DEBUG) console.log("drillDown()");
+	
 	let word = $('#iInput').val()
 	fetch('backend/getDefAll.php?word=' + word, {
 		method: 'get',
@@ -1261,7 +1267,9 @@ function drillDown() {
 				seekWord(word);
 				let def = "";
 				let delim ="";									
-				let tmp = "<span onmouseover=\"highlight(this,event)\" title='Navigate to class \"_k_\"' onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
+				let tmp = "<span onmouseover=\"highlight(this,event)\"";
+				if (SHOW_HELP) tmp += "title= 'Navigate to class \"_k_\"'";
+				tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
 				for (let i = 0; i < keys.length; i++) {			
 				let compDef = json[keys[i]];															
 				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
@@ -1423,8 +1431,7 @@ function fullClassName(name) {
 	if (name === "ett") return "substantiv_ett"
 	if (name === "adj") return "adjektiv"
 	if (name === "adv") return "adverb"
-	if (name === "sub") return "subjunktion"
-	if (name === "sup") return "superlativ"
+	if (name === "sub") return "subjunktion"	
 	if (name === "plu") return "plural"
 	if (name === "prep") return "preposition"
 	if (name === "pro") return "pronomen"
@@ -1976,7 +1983,9 @@ function fmtVerbTogether(s,regx) {
 	
 	if (m != null) {
 		if (m.length === 3) {			
-			let link = "<span onmouseover=highlight(this,event) title='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_",m[2]);				
+			let link = "<span onmouseover=highlight(this,event)";
+			if (SHOW_HELP) link += "title='Navigate to \"_w_\"'"
+			link += "onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_",m[2]);				
 			// Allow user to extend the verb to include another partikel e.g. "sig"
 			link = link.replaceAll("__"," ");
 			s = s.replace(m[0],"(" + m[1] + link + ")");
@@ -1993,7 +2002,12 @@ function  fmtVerbApart(s,regx) {
 			let repWord = m[2] + " " + m[3].substring(1);
 			
 			// remove leading space from second word and replace with regular space.
-			let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_", repWord);
+			let link = "<span onmouseover=highlight(this,event)";
+			if (SHOW_HELP) {
+				link += "title ='Navigate to \"_w_\"'";
+			}
+			link += "onclick=followLink(this)><b>_w_</b></span>";
+			link = link.replaceAll("_w_", repWord);
 			// Allow user to match only a single verb word
 			link = link.replaceAll(" __","");
 			link = link.replaceAll("___", " ");
@@ -2004,7 +2018,11 @@ function  fmtVerbApart(s,regx) {
 }
 function simpleRef(s) {
 	regx = "/\(se äv. ([a-zöäå]+)\)/"
-	let link = "<span onmouseover=highlight(this,event) title ='Navigate to \"_w_\"' onclick=followLink(this)><b>_w_</b></span>"
+	let link = "<span onmouseover=highlight(this,event)"
+	if (SHOW_HELP) {
+		link += "title ='Navigate to \"_w_\"'" 
+	}
+	link += "onclick=followLink(this)><b>_w_</b></span>"
 	m = s.match(regx);
 	if (m) {
 		s = s.replace(m[0],"(se äv. " + link.replaceAll("_w_",m[2]) + ")");
@@ -2371,7 +2389,10 @@ function processKeyDown(elHTML,ev) {
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
 			if (CLASS != "all") {
-				setClass("all")
+				setClass("all");
+				randomWord();
+			} else {
+				$('#iInput').val("");
 			}
 		}
 	}
@@ -2425,7 +2446,7 @@ function showTooltips() {
 		$('#iPut2').attr("title","");
 		$('#iPutMore').attr("title","");		
 	} else {
-		$('#iInput').attr("title","Search for word, has regex support.\nRight-click for svenska.se lookup" );
+		$('#iInput').attr("title","Search for word, has regex support.\nRight-click or 'down arrow' for svenska.se lookup" );
 		$('#iWordBox').attr("title","Scroll with mouse wheel to navigate individual words\nLeft click word = get definition\nRight click word = lookup@svensk.se");
 		$('#iInfo').attr("title","Mouse wheel/ or click left/right to navigate");
 		$('#iLast').attr("title","Back to last view");
@@ -2538,7 +2559,8 @@ function changeScore(diff) {
 	})
 }
 function randomWord() {
-	fetch('backend/randomWord.php?class=verb', {
+	// Hash is to prevent caching of the url by the browser. Server ignores the hash	
+	fetch('backend/randomWord.php?class=verb&hash=' + makeHash(), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -2550,11 +2572,18 @@ function randomWord() {
 	})
 	.then(json => {
 		INC = json["ind"]-4;
+		CUR_WORD = json["word"];
+		$('#iInput').val(CUR_WORD);
 		getWords(3);
 	})
 	.catch(error => {
 		console.log(error);
 	})	
+}
+function makeHash() {
+	let dt = new Date();
+	let hash = dt.getDate() + "/" + dt.getMonth() + "/" + dt.getFullYear() + " " + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+	return hash;
 }
 </script>
 </html>
