@@ -7,13 +7,11 @@
 	$out = array();
 	foreach($dict as $key=>$val) {		
 		$score = (int)$val;
-		if ($score === 1) {
+		if ($score < 2) {
 			array_push($out, $key);
 		}
 	}
-	
-	
-	
+
 	$randNum = rand(0,count($out));
 	$tmpWord = $out[$randNum];
 
