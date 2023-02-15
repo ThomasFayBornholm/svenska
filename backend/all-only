@@ -2351,6 +2351,7 @@ berömmelse
 beröra
 berörd
 beröring
+beröringspunkt
 beröva
 besatt
 besatthet
@@ -2757,6 +2758,7 @@ bläddra
 blända
 blända av
 blända ner
+bländare
 blänga
 blänk
 blänka
@@ -2837,6 +2839,7 @@ bomull
 bomärke
 bonad
 bonde
+bondehär
 bondgård
 bondlurk
 bondlurkig
@@ -3478,6 +3481,7 @@ cykla
 cyklisk
 cyklist
 cyklop
+cyklopöga
 cylinder
 cynisk
 cypress
@@ -3777,6 +3781,7 @@ diplom
 diplomat
 diplomati
 diplomatisk
+dippa
 direkt
 direktion
 direktiv
@@ -4762,6 +4767,7 @@ fastighet
 fastighetsskatt
 fastighetsskötare
 fastklistrad
+fastlagssöndag
 fastland
 fastlänning
 fastlåst
@@ -4820,6 +4826,7 @@ femtiolapp
 femtiotal
 femtonde
 fenomen
+feodal
 ferie
 fermentera
 fest
@@ -4827,9 +4834,11 @@ festa
 festival
 festlig
 fet
+fetisch
 fetma
 fetna
 fett
+fettisdag
 fettlöslig
 fettsugning
 fiasko
@@ -4900,6 +4909,7 @@ finna sig
 finnas
 finnas med
 finnas till
+finnmark
 finrum
 finsk
 finslipa
@@ -5203,6 +5213,7 @@ formge
 formlig
 formlära
 formlös
+formsand
 formulera
 formulering
 formulär
@@ -5254,7 +5265,6 @@ fotnot
 foto
 fotograf
 fotografera
-fotografera (vardagl. fota)
 fotografering
 fotografi
 foton
@@ -5582,6 +5592,7 @@ fylla ut
 fyllecell
 fyllig
 fyllning
+fylltratt
 fynd
 fyndig
 fyndighet
@@ -6068,6 +6079,7 @@ förkunskapskrav
 förkväva
 förkyla sig
 förkylning
+förkämpe
 förkärlek
 förköpa sig
 förlag
@@ -6108,6 +6120,7 @@ förläggare
 förläna
 förlänga
 förlängning
+förläning
 förläsa sig
 förlåt
 förlåta
@@ -7333,6 +7346,7 @@ grumsa
 grumsig
 grund
 grunda
+grundande
 grundare
 grundbetydelse
 grundbok
@@ -8770,6 +8784,7 @@ informativ
 informator
 informell
 informera
+informera sig
 infraljud
 infrastruktur
 infärga
@@ -8883,6 +8898,7 @@ innekatt
 innelag
 inner
 innerdörr
+innerlig
 innerstad
 inneröra
 innesluta
@@ -10076,6 +10092,12 @@ kollosal
 kolmonoxid
 kolon
 koloni
+kolonialvälde
+kolonilott
+kolonisation
+kolonisatör
+kolonisera
+kolonistuga
 kolonn
 kolorist
 koloristisk
@@ -10954,6 +10976,7 @@ kölvatten
 kön
 könsneutral
 könsorgan
+könssjukdom
 köp
 köpa
 köpa in
@@ -11388,6 +11411,8 @@ lokomotiv
 lomhörd
 longitud
 lopp
+loppis
+loppmarknad
 lord
 lort
 lossa
@@ -11441,6 +11466,8 @@ lunch
 lunchpaus
 lund
 lungsnäcka
+lungsot
+lungtuberkulos
 lupp
 lura
 lura av
@@ -11540,6 +11567,7 @@ lägga in
 lägga ner
 lägga om
 lägga på
+lägga på sig
 lägga samman
 lägga sig
 lägga sig i
@@ -13888,6 +13916,7 @@ oöverstiglig
 oöverträfflig
 oövervinnelig
 p-piller
+pacifist
 pack
 packa
 packa ihop
@@ -14174,6 +14203,7 @@ pinnig
 pinsam
 pint
 pipa
+pipa ner
 pipig
 piplärka
 pippa
@@ -14212,6 +14242,7 @@ plagiat
 plagiera
 plakat
 plan
+plana av
 planenlig
 planera
 planera in
@@ -14328,6 +14359,7 @@ poncho
 pondus
 ponny
 ponton
+pool
 poolbiljard
 popcorn
 poppa upp
@@ -15013,8 +15045,10 @@ repellera
 repertoar
 repetera
 repetitiv
+repig
 replik
 replikskifte
+repning
 reportage
 reporter
 reporänta
@@ -16605,6 +16639,7 @@ slott
 slug
 sluka
 slukare
+slukhål
 slump
 slumpa
 slumpa sig
@@ -16810,6 +16845,7 @@ småborgare
 småbröd
 smådugga
 småfranska
+småfågel
 småföretag
 smågräla
 småhus
@@ -17810,6 +17846,7 @@ stött
 stötta
 stöttrupp
 stövel
+sub
 subdominant
 subjekt
 subjektiv
@@ -17854,6 +17891,7 @@ sund
 sundhet
 sup
 supa
+super
 supera
 superb
 supermakt
@@ -17962,6 +18000,7 @@ svänga ihop
 svänga sig
 svänga till
 svänghjul
+svängig
 svängning
 svära
 svärd
@@ -18245,7 +18284,6 @@ sötsur
 sötvatten
 t-bana
 ta
-ta (el. taga)
 ta av
 ta bort
 ta efter
@@ -19211,6 +19249,7 @@ tuba
 tuberkulos
 tubkikare
 tudela
+tudelning
 tuff
 tuffing
 tugg
@@ -19394,6 +19433,7 @@ tänkespråk
 täppa
 tärd
 tärna
+tärning
 tät
 tätort
 tätting
@@ -19403,6 +19443,7 @@ tå
 tåg
 tågvirke
 tågvärd
+tåhätta
 tåhävning
 tåla
 tålamod
@@ -20712,6 +20753,7 @@ vapengömma
 vapensköld
 vapenstillestånd
 vapenvila
+vapenvägrare
 var
 vara
 vara sig
@@ -22844,4 +22886,3 @@ zucchini
 överäta
 överårig
 överösa
-�

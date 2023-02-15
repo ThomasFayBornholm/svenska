@@ -306,6 +306,7 @@ annonsör
 annotation
 annuitet
 anod
+anodonti
 anomi
 anonymitet
 anorak
@@ -1141,6 +1142,7 @@ berättelse
 berömdhet
 berömmelse
 beröring
+beröringspunkt
 besatthet
 besiktning
 besittning
@@ -1303,6 +1305,7 @@ blunder
 blus
 blyerts
 blyertspenna
+bländare
 blåbär
 blåklocka
 blåmanet
@@ -1343,6 +1346,7 @@ bombplan
 bomull
 bonad
 bonde
+bondehär
 bondgård
 bondlurk
 boning
@@ -2269,6 +2273,7 @@ fasthet
 fastighet
 fastighetsskatt
 fastighetsskötare
+fastlagssöndag
 fastlänning
 fastnätstelefon
 fatalism
@@ -2298,7 +2303,9 @@ femtiolapp
 ferie
 fest
 festival
+fetisch
 fetma
+fettisdag
 fettsugning
 fiber
 ficka
@@ -2331,6 +2338,7 @@ fingervisning
 fink
 finländare
 finländska
+finnmark
 fint
 fiol
 firma
@@ -2479,6 +2487,7 @@ form
 formation
 formel
 formlära
+formsand
 formulering
 fornkunskap
 forntid
@@ -2629,6 +2638,7 @@ fylking
 fylla
 fyllecell
 fyllning
+fylltratt
 fyndighet
 fyr
 fyrhörning
@@ -2764,6 +2774,7 @@ förklaring
 förknippning
 förkortning
 förkylning
+förkämpe
 förkärlek
 förlaga
 förlikning
@@ -2775,6 +2786,7 @@ förlust
 förlustelse
 förläggare
 förlängning
+förläning
 förlåt
 förlåtelse
 förman
@@ -3697,6 +3709,7 @@ hänsyftning
 hänsyn
 hänvisning
 häpnad
+här
 härd
 härförare
 härkomst
@@ -4495,6 +4508,10 @@ kolloid
 kolmonoxid
 kolon
 koloni
+kolonilott
+kolonisation
+kolonisatör
+kolonistuga
 kolonn
 kolorist
 koloxid
@@ -4936,6 +4953,7 @@ köl
 köld
 köldgrad
 kölhalning
+könssjukdom
 köpare
 köpcenter
 köpman
@@ -5118,6 +5136,8 @@ lokal
 lokalvårdare
 lokförare
 longitud
+loppis
+loppmarknad
 lord
 lots
 lottarörelse
@@ -5142,6 +5162,8 @@ lunch
 lunchpaus
 lund
 lungsnäcka
+lungsot
+lungtuberkulos
 lupp
 lurk
 lus
@@ -6080,6 +6102,7 @@ oxid
 oxidation
 ozon
 oändlighet
+pacifist
 packbox
 packning
 padda
@@ -6313,6 +6336,7 @@ poncho
 pondus
 ponny
 ponton
+pool
 poolbiljard
 popsångerska
 populism
@@ -6625,6 +6649,7 @@ repa
 reparation
 repertoar
 replik
+repning
 reporter
 reporänta
 representant
@@ -7342,6 +7367,7 @@ smärta
 småbil
 småborgare
 småfranska
+småfågel
 småplanet
 småpåve
 småsak
@@ -8365,6 +8391,7 @@ tub
 tuba
 tuberkulos
 tubkikare
+tudelning
 tuff
 tuffing
 tuggtobak
@@ -8437,12 +8464,14 @@ täckjacka
 tändsticka
 täppa
 tärna
+tärning
 tät
 tätort
 tätting
 tävling
 tå
 tågvärd
+tåhätta
 tåhävning
 tång
 tångkaviar
@@ -8945,6 +8974,7 @@ vapengömma
 vapensköld
 vapenstillestånd
 vapenvila
+vapenvägrare
 var
 vara
 varaktighet

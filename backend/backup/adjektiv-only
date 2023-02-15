@@ -686,6 +686,7 @@ empatisk
 empirisk
 enahanda
 enastående
+endemisk
 endokrin
 energetisk
 energisk
@@ -718,6 +719,7 @@ entydig
 enveten
 envis
 enväldig
+epidemisk
 erfaren
 erforderlig
 ergonometrisk
@@ -792,6 +794,7 @@ fel
 felaktig
 felfri
 feminin
+feodal
 festlig
 fet
 fettlöslig
@@ -938,6 +941,7 @@ fulländad
 fullödig
 fumlig
 fundamental
+fundersam
 funkis
 funktionell
 funktionsduglig
@@ -1009,6 +1013,7 @@ förhärdad
 förhärskande
 förhöjd
 förkastlig
+förklenande
 förkommen
 förkonstlad
 förkrossande
@@ -1328,6 +1333,7 @@ heterogen
 heterosexuell
 hetlevrad
 hetsig
+heuristisk
 himmelsblå
 himmelsk
 hisnande
@@ -1469,6 +1475,7 @@ imposant
 impulsiv
 inadekvat
 inaktiv
+inaktuell
 inavlad
 inbilsk
 inbiten
@@ -1513,6 +1520,7 @@ inländsk
 inne
 inneboende
 innehållsrik
+innerlig
 innevarande
 innovativ
 inomvärldslig
@@ -1645,6 +1653,9 @@ kass
 katabatisk
 katastrofal
 katolsk
+kausal
+kausativ
+kaustik
 kavat
 kaxig
 kemisk
@@ -1686,6 +1697,7 @@ knepig
 knivig
 knotig
 knuten
+knyckig
 knäpp
 knäsvag
 knölig
@@ -1743,6 +1755,7 @@ kontinental
 kontinuerlig
 kontrollerad
 kontroversiell
+konungslig
 konventionell
 konvex
 kooperativ
@@ -2020,12 +2033,16 @@ maktlös
 maliciös
 malign
 malmförande
+malmslig
+malmöitisk
 mammaledig
 manierad
 manifest
 manlig
 manschauvinistisk
 manstark
+manöverduglig
+maorisk
 marginell
 marig
 marin
@@ -2080,6 +2097,7 @@ minderårig
 mindre
 minimal
 minnesvärd
+minst
 miserabel
 misogyn
 missanpassad
@@ -2216,6 +2234,7 @@ nedslående
 nedstämd
 nedsupen
 nedsutten
+nedsättande
 nedtrampad
 nedtryckt
 nedärvd
@@ -2247,6 +2266,7 @@ nybliven
 nyckfull
 nyfiken
 nyfödd
+nyinskriven
 nykter
 nyliberal
 nymodig
@@ -2262,6 +2282,7 @@ närgången
 närig
 närliggande
 närmare
+närmast
 närstående
 närsynt
 närvarande
@@ -2274,6 +2295,7 @@ nödvändig
 nöjaktig
 nöjd
 nöjsam
+nördig
 oacceptabel
 oaktsam
 oangenäm
@@ -2381,6 +2403,7 @@ oförskylld
 oförskämd
 oförsonlig
 oförståelig
+oförstående
 oförsynt
 oförtjänt
 oförtruten
@@ -2542,6 +2565,7 @@ osannolik
 oschyst
 osedlig
 osjälvisk
+osjälvständig
 oskarp
 oskattbar
 oskiljbar
@@ -2810,6 +2834,7 @@ renhårig
 renlärig
 renons
 repetitiv
+repig
 representativ
 repressiv
 repulsiv
@@ -2854,6 +2879,8 @@ rostig
 rovgirig
 rubbad
 rucklig
+rudimentär
+rudis
 ruffig
 ruggig
 rumslig
@@ -2940,6 +2967,7 @@ schackmatt
 schangtil
 schemalagd
 schematisk
+schizofren
 schysst
 second hand
 sedelärande
@@ -2958,6 +2986,7 @@ selektiv
 semantisk
 sen
 senare
+senaste
 sensationell
 sentimental
 separat
@@ -2986,6 +3015,7 @@ sjyst
 själlös
 själslig
 själv
+självaste
 självbelåten
 självfallen
 självförglömmande
@@ -3203,6 +3233,7 @@ stel
 stenhård
 stereotyp
 steril
+stickande
 stilig
 stillsam
 stingslig
@@ -3280,6 +3311,7 @@ svidande
 svinaktig
 svindlande
 svulstig
+svängig
 svärmisk
 svår
 svårartad
@@ -3333,11 +3365,13 @@ taktfull
 taktisk
 taktlös
 talande
+talangfull
 talför
 talrik
 tam
 tanig
 tankemässig
+tankfull
 tanklös
 tapper
 tarvlig
@@ -3821,6 +3855,7 @@ vit
 vitaktig
 vital
 vitrysk
+vitsig
 vitter
 volatil
 von oben
@@ -4062,6 +4097,7 @@ yttre
 översnöad
 överspelad
 överspänd
+översta
 överstatlig
 överstånden
 överstökad
