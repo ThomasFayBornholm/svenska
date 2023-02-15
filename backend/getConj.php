@@ -25,7 +25,7 @@
 	$class = $_GET['class'];
 	$trail = "-meta";
 	if ($class === "all") {
-		$classArr = array("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "plural", "superlativ","preposition", "interjektion", "pronomen", "förled","slutled","räkneord","konjunktion","subjunktion");
+		$classArr = array("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "plural", "preposition", "interjektion", "pronomen", "förled","slutled","räkneord","konjunktion","subjunktion");
 	} else {
 		$classArr = array($class);
 	}

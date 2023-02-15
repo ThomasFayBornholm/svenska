@@ -8,7 +8,7 @@
 	$score["blueCount"] = 0;
 	$score["greenCount"] = 0;
 	if ($class === "all") {
-		$classes = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural","superlativ", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
+		$classes = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
 	} else {
 		$classes = array();
 		array_push($classes,$class);
