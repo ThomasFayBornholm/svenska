@@ -1137,6 +1137,7 @@ beriberi
 berlock
 bermudarigg
 bermudashorts
+berusning
 beräkning
 berättelse
 berömdhet
@@ -1246,6 +1247,7 @@ bisats
 bisittare
 biskop
 biskvi
+bismak
 bit
 biverkan
 biverkning
@@ -1305,6 +1307,7 @@ blunder
 blus
 blyerts
 blyertspenna
+bläckfisk
 bländare
 blåbär
 blåklocka
@@ -1682,6 +1685,7 @@ containerhamn
 cookie
 cosinus
 cotangens
+cracker
 crawl
 cred
 credit
@@ -2002,6 +2006,7 @@ dåsighet
 död
 dödlighet
 dödsdom
+dödsfara
 dödskallefjäril
 dödsmask
 dödsskjutning
@@ -2023,6 +2028,7 @@ efterbild
 efterbildning
 efterfrågan
 eftergift
+eftergivenhet
 efterhand
 efterhandskonstruktion
 efterkommande
@@ -2499,6 +2505,7 @@ fortifikation
 fortplantning
 fortsättning
 forward
+fosfor
 fosterfördrivning
 fot
 fotboll
@@ -3299,6 +3306,7 @@ gräsmark
 gräsmatta
 gräsplan
 gräsätare
+grävare
 grävling
 grävmaskin
 grävning
@@ -3319,6 +3327,7 @@ gudunge
 guide
 gula
 guldsmed
+guldstämpel
 guldtand
 gullhöna
 gumma
@@ -3353,6 +3362,8 @@ gängning
 gängtapp
 gärd
 gärning
+gärningsman
+gärningsperson
 gäspning
 gässling
 gäst
@@ -3724,8 +3735,10 @@ hästgård
 hästkraft
 hästskjuts
 hätskhet
+hävarm
 hävd
 hävstång
+hävstångsarm
 häxa
 håbrand
 håg
@@ -3764,7 +3777,6 @@ hårknut
 hårläggning
 hårmousse
 hårnål
-hårnålskurv
 hårnålskurva
 hårolja
 hårpensel
@@ -4067,6 +4079,7 @@ isolator
 israel
 istid
 isvak
+italienska
 iver
 jacka
 jackett
@@ -4190,6 +4203,7 @@ jäst
 jätte
 jättepanda
 jätteödla
+jävel
 jökel
 kabal
 kabel
@@ -4320,6 +4334,7 @@ kasse
 kassett
 kassun
 kassör
+kassörska
 kastpjäs
 kastrull
 kasus
@@ -4956,6 +4971,7 @@ kölhalning
 könssjukdom
 köpare
 köpcenter
+köping
 köpman
 kör
 körare
@@ -5101,6 +5117,7 @@ livbåt
 livmoder
 livränta
 livscykel
+livsfara
 livsform
 livsföring
 livskraft
@@ -5357,6 +5374,7 @@ marknadshyra
 marknadsskola
 marmelad
 marmor
+marodör
 mars
 marsch
 marskalk
@@ -5375,6 +5393,7 @@ maskros
 massa
 massage
 massaker
+massmördare
 massör
 mast
 master
@@ -6100,6 +6119,7 @@ ovän
 oxe
 oxid
 oxidation
+oxymoron
 ozon
 oändlighet
 pacifist
@@ -6137,11 +6157,13 @@ pappamånad
 pappenheimare
 papper
 pappersexercis
+pappersklämma
 papperskorg
 pappersmassa
 paprika
 parabel
 parad
+paradox
 paragraf
 parallellcirkel
 paralys
@@ -6182,6 +6204,7 @@ patient
 patientnämnd
 patina
 patriark
+patriot
 patriotism
 patrull
 paus
@@ -6312,6 +6335,7 @@ pojkspoling
 pojkvän
 poker
 pol
+polack
 polare
 polaritet
 polarräv
@@ -6326,6 +6350,7 @@ politik
 politiker
 polityr
 pollett
+polska
 polyamori
 polyeder
 polygon
@@ -6368,6 +6393,7 @@ praktik
 praktikant
 pralin
 praxis
+precision
 preciös
 predikan
 predikant
@@ -6587,6 +6613,7 @@ realtid
 reassurans
 recensent
 recension
+reception
 receptionist
 recession
 reda
@@ -6747,6 +6774,7 @@ rodel
 roll
 rom
 roman
+romantik
 rond
 rondell
 ros
@@ -6775,6 +6803,7 @@ rullning
 rullskridsko
 rullstol
 rumpa
+rumsarrest
 rumstemperatur
 rumsväxt
 rundfråga
@@ -6920,7 +6949,9 @@ same
 samhällsekonomi
 samhällsklass
 samhällssyn
+samhörighet
 samklang
+samkänsla
 samlare
 samlevnad
 samling
@@ -7122,6 +7153,7 @@ sjörövare
 sjösjuka
 sjötunga
 skada
+skadegörare
 skadegörelse
 skaft
 skakning
@@ -7161,6 +7193,7 @@ skidsport
 skiffer
 skiffergas
 skiftning
+skiftnyckel
 skildrare
 skildring
 skiljevägg
@@ -7356,6 +7389,7 @@ smuggling
 smula
 smuts
 smyg
+smäck
 smädelse
 smälek
 smäll
@@ -7472,7 +7506,10 @@ spaltmeter
 spaltning
 spanare
 spaning
+spanjor
+spanjorska
 spann
+spanska
 sparbössa
 spark
 sparkstötting
@@ -7756,6 +7793,7 @@ studio
 studsare
 stuga
 stukning
+stump
 stund
 stuss
 stut
@@ -8057,6 +8095,7 @@ tenor
 tent
 tenta
 tentamen
+teolog
 teologi
 teori
 teosofi
@@ -8232,6 +8271,7 @@ tolkning
 tolvtaggare
 tom
 tomat
+tomflaska
 tomgång
 tomhylsa
 tomt
@@ -9007,6 +9047,7 @@ vattenskida
 vattentäkt
 vattenväxt
 vattenyta
+vaxkaka
 vaxpropp
 vd
 ve
@@ -9077,6 +9118,7 @@ villa
 villervalla
 villfarelse
 villolära
+villoväg
 viltveterinär
 vimpel
 vind
