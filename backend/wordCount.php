@@ -8,13 +8,14 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
+	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
 
 	$nTot = 0;
 	$nAll = 0;
 	$nAdj = 0;
 	$nVerb = 0;
 	$nAdverb = 0;
+	$nFraser = 0;
 	$nSub_en= 0;
 	$nSub_ett= 0;
 	$nPlural = 0;
@@ -44,8 +45,10 @@
 				$nAdverb = count($words);
 			} else if ($f_base === "substantiv_en") {
 				$nSub_en = count($words);
-			} else if ($f_base === "substantiv_ett") {
+			} else if ($f_base === "substantiv_ett") {				
 				$nSub_ett = count($words);
+			} else if ($f_base === "fraser") {
+				$nFraser = count($words);			
 			} else if ($f_base === "plural") {
 				$nPlural = count($words);
 			} else if ($f_base === "preposition") {
@@ -69,12 +72,13 @@
 		fclose($infile);
 	}
 	
-	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nPlural + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled;
+	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nFraser + $nPlural + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled;
 	$count["total"] = $nTot;
 	$count["all"] = $nAll;
 	$count["adj"] = $nAdj;
 	$count["verb"] = $nVerb;
 	$count["adverb"] = $nAdverb;
+	$count["fraser"] = $nFraser;
 	$count["substantiv_en"] = $nSub_en;
 	$count["substantiv_ett"] = $nSub_ett;
 	$count["plural"] = $nPlural;

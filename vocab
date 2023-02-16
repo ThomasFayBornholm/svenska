@@ -69,6 +69,7 @@ let N_TOT=0;
 let N_ADJ=0;
 let N_VERB=0;
 let N_ADVERB=0;
+let N_FRASER=0;
 let N_EN=0;
 let N_ETT=0;
 let N_PLURAL=0;
@@ -97,7 +98,7 @@ var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
 var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
 
-var CLASSES = ["Class (short name)","substantiv_en (en)","verb","adjektiv (adj)","substantiv_ett (ett)","adverb (adv)","plural (plu)","preposition (prep)","pronomen (pro)","interjektion (int)","förled (för)","slutled (slut)","subjunktion (sub)","konjunktion (kon)","räkneord (räk)"]
+var CLASSES = ["Class (short name)","substantiv_en (en)","verb","adjektiv (adj)","substantiv_ett (ett)","adverb (adv)","fraser (fra)","plural (plu)","preposition (prep)","pronomen (pro)","interjektion (int)","förled (för)","slutled (slut)","subjunktion (sub)","konjunktion (kon)","räkneord (räk)"]
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
 var TAB_DUMMY;
@@ -131,6 +132,8 @@ function setN_CUR() {
 		N_CUR = N_EN;
 	} else if (CLASS === "substantiv_ett") {
 		N_CUR = N_ETT;
+	} else if (CLASS === "fraser") {
+		N_CUR = N_FRASER;
 	} else if (CLASS === "preposition") {
 		N_CUR = N_PREPOSITION;
 	} else if (CLASS === "interjektion") {
@@ -811,8 +814,7 @@ function followLink(el) {
 	}
 	word = word.replace("!","");
 	CUR_WORD = word;
-	if (DEBUG) console.log("followLink(" + word + ")");
-	$('#iInput').val(word);	
+	if (DEBUG) console.log("followLink(" + word + ")");	
 	let oldINC = INC;
 	seekWord(word, true);
 }
@@ -919,6 +921,7 @@ function wordCount() {
 		N_ADJ = json["adj"];
 		N_VERB = json["verb"];
 		N_ADVERB = json["adverb"];
+		N_FRASER = json["fraser"];
 		N_EN = json["substantiv_en"];
 		N_ETT = json["substantiv_ett"];		
 		N_PLURAL = json["plural"];		
@@ -1431,6 +1434,7 @@ function fullClassName(name) {
 	if (name === "ett") return "substantiv_ett"
 	if (name === "adj") return "adjektiv"
 	if (name === "adv") return "adverb"
+	if (name === "fra") return "fraser"
 	if (name === "sub") return "subjunktion"	
 	if (name === "plu") return "plural"
 	if (name === "prep") return "preposition"
