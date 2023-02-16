@@ -1223,6 +1223,7 @@ function seekWord(word, link = false) {
 											setClass(json["class"],json["word"]);
 										} else {								
 											$('#iParDef').html("No matches in any word class.");	
+											$('#iInput').val(word);
 										}
 									})
 									.catch(error => {
