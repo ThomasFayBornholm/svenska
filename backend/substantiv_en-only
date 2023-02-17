@@ -2009,6 +2009,7 @@ dödsdom
 dödsfara
 dödskallefjäril
 dödsmask
+dödsruna
 dödsskjutning
 dödvikt
 dörr
@@ -3634,6 +3635,7 @@ hotelse
 hovmästare
 hovrätt
 hud
+huligan
 hum
 humanist
 humanitet
@@ -4246,6 +4248,10 @@ kalops
 kalori
 kalsong
 kalv
+kalvinism
+kalvinist
+kalvjärpe
+kalvko
 kam
 kamel
 kamera
@@ -4390,6 +4396,7 @@ kind
 kinematik
 kines
 kinesiska
+kinetik
 kiosk
 kirurg
 kirurgi
@@ -5087,6 +5094,7 @@ liga
 liggare
 liggstol
 liggvagn
+ligist
 likbegängelse
 likhet
 liknelse
@@ -5132,6 +5140,7 @@ livslängd
 livsstil
 livstid
 livsuppgift
+ljudhastighet
 ljudlära
 ljudnivå
 ljudstyrka
@@ -5139,6 +5148,7 @@ ljudvåg
 ljumske
 ljung
 ljusbåge
+ljushastighet
 ljuskägla
 ljuspunkt
 ljusstake
@@ -5445,6 +5455,7 @@ medelväg
 medelålder
 medgivande
 medgång
+medhjälp
 medhjälpare
 median
 medicin
@@ -5532,6 +5543,7 @@ ministerpresident
 minnesbild
 minneslund
 minnesregel
+minnesruna
 minoritet
 minskning
 minsvepare
@@ -5834,6 +5846,7 @@ nedtrappning
 nefrit
 negation
 nejd
+nekrolog
 nektarin
 nelson
 nerv
@@ -6641,7 +6654,12 @@ reflektion
 reflex
 reflexion
 reform
+reformist
+refraktion
+refraktor
 refräng
+refug
+regal
 regel
 regeneration
 regering
@@ -6782,6 +6800,7 @@ rocka
 rockärm
 roddbåt
 rodel
+roligan
 roll
 rom
 roman
@@ -6808,6 +6827,7 @@ ruda
 rudiment
 ruelse
 rugby
+rullad
 rullbräda
 rulle
 rullning
@@ -6879,7 +6899,10 @@ rätt
 rättegång
 rättelse
 rättighet
+rättsordning
 rättssak
+rättsstat
+rättssäkerhet
 rättsvetenskap
 rättvisa
 rättvisefråga
@@ -9330,6 +9353,7 @@ våg
 våglängd
 vågmästare
 vågmästarposition
+våldsvåg
 våldtäkt
 vålnad
 vånda

@@ -4167,6 +4167,7 @@ dödsfall
 dödsfara
 dödskallefjäril
 dödsmask
+dödsruna
 dödsskjutning
 dödsstraff
 dödvikt
@@ -4547,6 +4548,7 @@ estetisk
 estimera
 estradör
 etablera
+etablera sig
 etablerad
 etablissemang
 etage
@@ -5743,6 +5745,7 @@ följdriktig
 följd­riktighet
 följeslagare
 följetong
+fölsto
 fönster
 fönsterbräda
 fönsterbänk
@@ -8142,6 +8145,7 @@ hugga till
 huggkniv
 huka
 huka sig
+huligan
 hulka
 hum
 human
@@ -8513,6 +8517,7 @@ högfärd
 högfärdig
 höggravid
 höghjuling
+höghus
 höginkomst
 högkinesiska
 högkonjunktur
@@ -9592,6 +9597,11 @@ kalops
 kalori
 kalsong
 kalv
+kalvinism
+kalvinist
+kalvinistisk
+kalvjärpe
+kalvko
 kalvkött
 kam
 kamel
@@ -9824,6 +9834,8 @@ kines
 kinesa
 kinesisk
 kinesiska
+kinestetisk
+kinetik
 kinkig
 kiosk
 kirra
@@ -11307,6 +11319,7 @@ liggare
 liggstol
 liggvagn
 light
+ligist
 lik
 lika
 lika barn leka bäst
@@ -11415,6 +11428,7 @@ ljud
 ljuda
 ljudande
 ljudenlig
+ljudhastighet
 ljudhärmande
 ljudlig
 ljudlära
@@ -11428,6 +11442,7 @@ ljung
 ljus
 ljusblå
 ljusbåge
+ljushastighet
 ljuskägla
 ljusna
 ljuspunkt
@@ -11576,9 +11591,11 @@ lydelse
 lydnad
 lyft
 lyfta
+lyfta blicken
 lyfta fram
 lyfta sig
 lyfta ut
+lyftblock
 lyhörd
 lykta
 lyktstolpe
@@ -12129,6 +12146,7 @@ medge
 medgivande
 medgång
 medgörlig
+medhjälp
 medhjälpare
 medhåll
 medhårs
@@ -12303,6 +12321,7 @@ minnesbild
 minneslund
 minnesmärke
 minnesregel
+minnesruna
 minnesvärd
 minoritet
 minoritetsspråk
@@ -13009,6 +13028,7 @@ negligera
 nej
 nejd
 neka
+nekrolog
 nektarin
 nelson
 ner
@@ -13844,6 +13864,7 @@ oroa
 oroa sig
 oroande
 orolig
+orosmoln
 orosmoment
 oroväckande
 orsak
@@ -14363,6 +14384,8 @@ plenisal
 pleonasm
 plikt
 pliktig
+plinga
+plinga på
 plir
 plira
 plocka
@@ -15015,7 +15038,15 @@ reflex
 reflexion
 reform
 reformera
+reformert
+reformist
+reformistisk
+refraktion
+refraktor
 refräng
+refug
+refusera
+regal
 regel
 regelbunden
 regellös
@@ -15344,6 +15375,7 @@ roffa
 rofferi
 rogivande
 rolig
+roligan
 roll
 rollfack
 rollsätta
@@ -15407,6 +15439,7 @@ ruggig
 ruinera
 ruinera sig
 rulla
+rullad
 rullbräda
 rulle
 rullning
@@ -15576,8 +15609,11 @@ rättsfall
 rättsinnig
 rättskaffens
 rättslig
+rättsordning
 rättssak
 rättssamhälle
+rättsstat
+rättssäkerhet
 rättsvetenskap
 rättsväsende
 rättvis
@@ -15585,6 +15621,7 @@ rättvisa
 rättvisefråga
 räv
 rå
+råbarkad
 råd
 råda
 rådande
@@ -16395,6 +16432,7 @@ skolbuss
 skolgång
 skolgård
 skollov
+skolverk
 skona
 skoning
 skoningslös
@@ -17234,6 +17272,7 @@ specifik
 specifikation
 speditör
 spegel
+spegelteleskop
 spegla
 spegla sig
 spejare
@@ -18856,6 +18895,7 @@ tills vidare
 tillsammans
 tillsats
 tillse
+tillskansa sig
 tillskapa
 tillskjuta
 tillskott
@@ -21631,6 +21671,7 @@ våld
 våldsam
 våldsbejakande
 våldsdåd
+våldsvåg
 våldta
 våldtäkt
 vålla
