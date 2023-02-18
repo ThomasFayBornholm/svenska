@@ -1805,6 +1805,7 @@ function preProc(def) {
 			s = addMeta(s, /ej officiell svensk beteckning/);
 			s = addMeta(s, /nu­mera ej officiell beteckning/);
 			s = addMeta(s, /förskönande om­skrivning/);
+			s = addMeta(s, /ur­sprungligen bibliskt/);
 			s = addMeta(s, /bibliskt/);
 			s = addMeta(s,/ofta fysik och teknik/);
 			// Remove any reference numbers other than that at line start
@@ -2329,9 +2330,9 @@ function keyForUser(key) {
 }
 function toggleMore(key, show = false) {	
 	if (DEBUG) console.log("toggleMore(key), key = " + key);		
-	if (show === false)  {
-		CACHED_DEF_HTML = $('#iParDef').html();		
-	}		
+	if (tmp.indexOf(" --") === -1 && tmp.indexOf(" ++") != -1) {
+		CACHED_DEF_HTML = $('#iParDef').html();
+	}
 	
 	let start = key.indexOf("_");
 	if (start != -1) CUR_DEF = key.substring(start+1);
@@ -2387,8 +2388,8 @@ function toggleMore(key, show = false) {
 function editMore(ev,key) {
 	ev.preventDefault();
 	let tmp = $('#iParDef').html();
-	if (tmp.indexOf(" ++") != -1) {
-		CACHED_DEF_HTML = $('#iParDef').html();
+	if (tmp.indexOf(" --") === -1 && tmp.indexOf(" ++") != -1) {
+		CACHED_DEF_HTML = $('#iParDef').html();		
 	}
 	$("#iPutDef").css("display", "none");
 	$('#iDefDiv').css("display", "block");
@@ -2414,6 +2415,7 @@ function processKeyDown(elHTML,ev) {
 				randomWord();
 			} else {
 				$('#iInput').val("");
+				REGEX_WORDS = [];
 			}
 		}
 	}
