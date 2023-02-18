@@ -1607,10 +1607,14 @@ function preProc(def) {
 	let twoWords = "";
 	let threeWords = "";
 	let fourWords = "";
+	// Longer matching only for phrases
+	let fiveFras = "";
+	let sixFras = "";
 	if (opts.length > 1) twoWords = firstWord + " " + opts[1];		
 	if (opts.length > 2) threeWords = twoWords + " " + opts[2];
 	if (opts.length > 3) fourWords = threeWords + " " + opts[3];
-	
+	if (opts.length > 4 && CLASS === "fraser") fiveFras = fourWords + " " + opts[4]; 
+	if (opts.length > 5 && CLASS === "fraser") sixFras = fiveFras + " " + opts[5];
 	var m;
 	if (CLASS === "slutled") {
 		m = "-" + CUR_WORD;
@@ -1620,7 +1624,7 @@ function preProc(def) {
 		m = CUR_WORD;
 	}	
 	
-	if (firstWord === m || twoWords === m || threeWords === m || fourWords === m) {		
+	if (firstWord === m || twoWords === m || threeWords === m || fourWords === m || fiveFras === m || sixFras === m) {		
 		meta = defArr[0].replaceAll("_"," ");		
 		let del = "";
 		def = "";
