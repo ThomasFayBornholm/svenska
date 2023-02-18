@@ -1110,7 +1110,7 @@ function seekWord(word, link = false) {
 		REGEX_WORDS = [];
 		N_REGEX = 0;
 		// Special exceptions to capitalisation rules
-		if (word != "Ers" && word != "Eders" && word.indexOf("-") === -1) word = word.toLowerCase()
+		if (word != "Ers" && word != "Eders" && word.indexOf("-") === -1 && CLASS != "fraser") word = word.toLowerCase()
 
 		if (word === '') {
 			word = LAST_WORD;
@@ -1352,8 +1352,8 @@ function editDef() {
 		$('#iDefDiv').css("display", "block");
 		$('#iPutDef').css("display", "block");
 		$('#iDivMore').css("display", "none");
-		$('#iDefText').focus();		
-	}
+		$('#iDefText').focus();				
+	}	
 }
 function editDefWrapper(e) {
 	e.preventDefault()
@@ -1535,6 +1535,7 @@ function addWord() {
 						})
 						getWords();
 						wordCount();
+						
 					}
 				})
 				.catch(error => {
@@ -1543,12 +1544,19 @@ function addWord() {
 			// Navigate to newly added word for convenience.
 			} else if (op === "add") {
 				seekWordSingleClass(word)
+				if (CLASS === "fraser") {
+					let tmp = $('#iInput').val();
+					tmp += "\nfras\n\n"
+					$('#iDefText').val(tmp);
+				}
+				$('#iDefText').focus();
 			}
 		})
 		.catch(error => {
 			console.log(error);	
 		})
 	}
+	
 }
 
 function addMeta(def, regx) {
@@ -1610,11 +1618,15 @@ function preProc(def) {
 	// Longer matching only for phrases
 	let fiveFras = "";
 	let sixFras = "";
+	let sevenFras = "";
+	let eightFras = "";
 	if (opts.length > 1) twoWords = firstWord + " " + opts[1];		
 	if (opts.length > 2) threeWords = twoWords + " " + opts[2];
 	if (opts.length > 3) fourWords = threeWords + " " + opts[3];
 	if (opts.length > 4 && CLASS === "fraser") fiveFras = fourWords + " " + opts[4]; 
 	if (opts.length > 5 && CLASS === "fraser") sixFras = fiveFras + " " + opts[5];
+	if (opts.length > 5 && CLASS === "fraser") sevenFras = sixFras + " " + opts[6];
+	if (opts.length > 5 && CLASS === "fraser") eightFras = sevenFras + " " + opts[7];
 	var m;
 	if (CLASS === "slutled") {
 		m = "-" + CUR_WORD;
@@ -1623,8 +1635,8 @@ function preProc(def) {
 	} else {
 		m = CUR_WORD;
 	}	
-	
-	if (firstWord === m || twoWords === m || threeWords === m || fourWords === m || fiveFras === m || sixFras === m) {		
+	LongFrasMatch = fiveFras === m || sixFras === m || sevenFras === m || eightFras === m;	
+	if (firstWord === m || twoWords === m || threeWords === m || fourWords === m || LongFrasMatch) {		
 		meta = defArr[0].replaceAll("_"," ");		
 		let del = "";
 		def = "";
