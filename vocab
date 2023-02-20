@@ -58,7 +58,11 @@
 </div>	
 </body>
 <script>
-
+$(window).focus(function() {
+	if ($('#iDefDiv').css("display") === "none") {
+		$('#iInput').focus();
+	}
+});
 
 let INC = 0;
 let N_INC= 8;
@@ -175,7 +179,7 @@ function fmtDef(def) {
 	return def;
 }
 
-function putDef(def, score) {	
+function putDef(def, score) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
 	}
@@ -201,16 +205,11 @@ function putDef(def, score) {
 			let tmpInd = parseInt(SCROLL_INC) + parseInt(1);		
 			TABS[tmpInd].focus();
 			scrollDown()
-		}
-		if (SCROLL_INC != N_FOUND-1) {
-			updateDef();
-			getWords();
-			updateScore();	
-		} else {
-			updateDef();
-			getWords();
-			updateScore();	
-		}
+		}		
+		updateDef();
+		getWords();
+		updateScore();	
+		wordCount();
 		displaySelection();
 		// Race condition here between file write and def display	
 		/*
@@ -1076,7 +1075,10 @@ function seekWord(word, link = false) {
 				INC = 0;
 				SCROLL_INC = -1;
 				getWords(INC)
-			}			
+			} else {
+				$('iWords').html("");
+				console.log("no matches")
+			}
 		})
 		.catch(error => {
 			console.log(error);
