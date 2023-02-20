@@ -141,6 +141,7 @@ artilleri
 arv
 arvegods
 arvode
+arvord
 arvsanlag
 as
 atomnummer
@@ -313,10 +314,12 @@ bildningsvärde
 biljettpris
 bilåkande
 bind
+bindeord
 binom
 biskviporslin
 bistånd
 biträde
+bjälklag
 blad
 bladveck
 blask
@@ -340,6 +343,7 @@ blötdjur
 boende
 bokband
 bokbål
+bokningsnummer
 bolag
 bollplank
 bollträ
@@ -590,6 +594,7 @@ familjeträd
 fartyg
 farvatten
 farväl
+fastlagsris
 fastland
 fat
 fatöl
@@ -902,6 +907,7 @@ grafem
 gram
 grannland
 grannskap
+granris
 grepp
 griskött
 groddjur
@@ -910,6 +916,7 @@ groll
 grums
 grundande
 grundlag
+grundtal
 grundämne
 grupparbete
 grupphus
@@ -1115,6 +1122,7 @@ inköp
 inköpspris
 inljud
 inlägg
+innanmäte
 innehav
 innehåll
 innelag
@@ -1209,6 +1217,7 @@ kartogram
 kasino
 kast
 kasus
+katalognummer
 kattguld
 kausalförhållande
 kavalleri
@@ -1289,6 +1298,7 @@ konto
 kontor
 kontrakt
 kontrollmärke
+kontrollnummer
 kontrollrum
 kontrolltorn
 konvent
@@ -1460,6 +1470,7 @@ lyft
 lyftblock
 lynne
 lysrör
+lystmäte
 lyte
 läder
 läge
@@ -1484,6 +1495,7 @@ lågvatten
 lågvattenmärke
 lån
 långfinger
+lånord
 lår
 lås
 lödder
@@ -1602,6 +1614,7 @@ mobilnummer
 mod
 mode
 modelejon
+modeord
 moderbolag
 moderfartyg
 modersmål
@@ -1751,7 +1764,9 @@ ord
 ordalag
 ordbok
 ordförandeskap
+ordförråd
 ordled
+ordningstal
 ordspråk
 ordstäv
 ordval
@@ -1886,6 +1901,7 @@ påhäng
 pålägg
 påpekande
 påsklov
+påskris
 påslag
 påslakan
 påstående
@@ -1946,6 +1962,7 @@ riktmärke
 ringfinger
 ringrev
 ris
+risgryn
 rivjärn
 roder
 rofferi
@@ -1969,6 +1986,7 @@ ryggsim
 rykte
 rymdmått
 räcke
+räkneord
 räknesätt
 ränteläge
 rättesnöre
@@ -2092,6 +2110,7 @@ skodon
 skolbarn
 skollov
 skolverk
+skonummer
 skott
 skottår
 skov
@@ -2237,6 +2256,7 @@ specialfall
 spegelteleskop
 spekulum
 spel
+spelrum
 spex
 spionage
 spioneri
@@ -2412,11 +2432,13 @@ tag
 tagande
 tagel
 tak
+taklag
 takskägg
 tal
 talesätt
 talfel
 talkropp
+talorgan
 talsystem
 tandem
 tandkött

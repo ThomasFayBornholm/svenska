@@ -1400,6 +1400,7 @@ bottenplan
 bottensats
 bottenskola
 bottenvåning
+bottin
 boulevard
 bourgeoisie
 boutique
@@ -1531,6 +1532,7 @@ buske
 buss
 busschaufför
 busshållplats
+busslinje
 bussning
 busstation
 butik
@@ -1635,6 +1637,7 @@ ceremoni
 ceremonimästare
 cession
 champagne
+champinjon
 chans
 chansning
 charlatan
@@ -1923,6 +1926,7 @@ dotter
 drabant
 drabbning
 dragbasun
+dragkamp
 dragkedja
 dragning
 dragningskraft
@@ -2012,6 +2016,7 @@ dödlighet
 dödsdom
 dödsfara
 dödskallefjäril
+dödskamp
 dödsmask
 dödsruna
 dödsskjutning
@@ -2312,6 +2317,7 @@ felmarginal
 felsägning
 feminism
 feminist
+femkamp
 femma
 femtedel
 femtiokronorssedel
@@ -2689,6 +2695,7 @@ färg
 färja
 färjelinje
 färjeterminal
+färla
 färs
 fästman
 fästmö
@@ -3068,6 +3075,7 @@ gallup
 galning
 galopp
 galopptävling
+galosch
 gamling
 gammelfarfar
 gammelfarmor
@@ -3325,6 +3333,7 @@ grävmaskin
 grävning
 gråal
 gråsej
+gråtrut
 gröda
 grönkål
 grönsak
@@ -3525,6 +3534,7 @@ havre
 havsgräns
 havshorisont
 havslax
+havstrut
 havstulpan
 havsörn
 he-man
@@ -4326,6 +4336,7 @@ karbin
 kardan
 kardinal
 karenstid
+karess
 karies
 karikatyr
 karisma
@@ -4452,6 +4463,7 @@ klisterstift
 klo
 kloak
 klocka
+klockarkärlek
 klokskap
 klosett
 klot
@@ -4920,6 +4932,7 @@ kviga
 kvinna
 kvinnlighet
 kvinnoroll
+kvinnosak
 kvist
 kvitten
 kvittens
@@ -4963,6 +4976,7 @@ käpp
 käpphäst
 käresta
 kärlek
+kärleksaffär
 kärlkramp
 kärna
 kärnfamilj
@@ -5029,11 +5043,13 @@ landsfader
 landsfiskal
 landsflykt
 landsförrädare
+landskamp
 landsman
 landsort
 landsting
 landsväg
 landsättning
+landtunga
 lanka
 lansering
 lantbrukare
@@ -5130,6 +5146,7 @@ linje
 linjedomare
 linjefart
 linjeman
+linjetrafik
 lins
 lira
 lisa
@@ -5472,6 +5489,7 @@ medhjälp
 medhjälpare
 median
 medicin
+medisterkorv
 meditation
 medkänsla
 medlem
@@ -5485,6 +5503,7 @@ medverkan
 medvetenhet
 medvetslöshet
 medvind
+medvurst
 mekanik
 mekaniker
 mekanism
@@ -5765,6 +5784,7 @@ måne
 mångfald
 mångfoting
 månghörning
+mångkamp
 mård
 mås
 måtta
@@ -5922,6 +5942,7 @@ nubb
 nubbe
 nudel
 numerär
+nummerrevy
 nunna
 nutid
 ny
@@ -5956,6 +5977,8 @@ närhet
 näring
 näringsidkare
 näringsminister
+närkamp
+närstrid
 närvaro
 näsa
 näsborre
@@ -6172,6 +6195,7 @@ palm
 palt
 pamflett
 pamp
+pampusch
 panda
 pandemi
 panegyrik
@@ -6294,6 +6318,7 @@ pessimist
 pest
 petit mal
 petitess
+petmoj
 petroleum
 pianist
 piga
@@ -6720,7 +6745,9 @@ renässans
 repa
 reparation
 repertoar
+repetition
 replik
+repmånad
 repning
 reporter
 reporänta
@@ -6976,6 +7003,7 @@ saft
 saga
 sajt
 sak
+sakframställning
 sakfråga
 sakkunskap
 saklighet
@@ -7141,6 +7169,7 @@ silhuett
 silkesvante
 sill
 sillfisk
+silltrut
 silver
 silverfisk
 simand
@@ -7175,6 +7204,7 @@ situation
 sjal
 sjalett
 sjua
+sjukamp
 sjukdom
 sjukersättning
 sjukförsäkring
@@ -7273,6 +7303,7 @@ skojare
 skola
 skolbuss
 skolgård
+skomakare
 skoning
 skopa
 skopning
@@ -8287,6 +8318,7 @@ timjan
 timme
 tina
 tingsrätt
+tiokamp
 tisdag
 tistel
 titel
@@ -9047,6 +9079,7 @@ vals
 valsverk
 valuta
 valutakurs
+valör
 vampyr
 vana
 vandel
@@ -9158,6 +9191,7 @@ vibration
 vidd
 video
 videobandspelare
+videokonst
 vidhäftning
 vidimering
 vidsyn
