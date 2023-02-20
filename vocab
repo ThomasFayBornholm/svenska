@@ -683,14 +683,16 @@ function displayDef(meta, def,word) {
 	}
 	outDef = outDef.replaceAll(" </b>","</b>")
 	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event) onmouseover=editCursor(event,this)"
-	if (SHOW_HELP) {
-		console.log("test")
+	if (SHOW_HELP) {		
 		tmpSpan += " title='Right click to edit definition'" 
 	}	
 	outDef = tmpSpan + ">" + fmtMeta(meta) + "</span>" + outDef;
 	CACHED_DEF_HTML = outDef;
 	$('#iParDef').html(outDef)
-	
+	if (SHOW_HELP) {
+		$('#iWordRoot').css("white-space: pre-wrap");
+		$('#iWordRoot').attr("title","asdfa\u000dasdfasdf");
+	}	
 }
 // Make links to referenced words
 function makeLinks(def) {
@@ -1620,13 +1622,18 @@ function preProc(def) {
 	let sixFras = "";
 	let sevenFras = "";
 	let eightFras = "";
+	let nineFras = "";
+	let tenFras = "";
 	if (opts.length > 1) twoWords = firstWord + " " + opts[1];		
 	if (opts.length > 2) threeWords = twoWords + " " + opts[2];
 	if (opts.length > 3) fourWords = threeWords + " " + opts[3];
 	if (opts.length > 4 && CLASS === "fraser") fiveFras = fourWords + " " + opts[4]; 
 	if (opts.length > 5 && CLASS === "fraser") sixFras = fiveFras + " " + opts[5];
-	if (opts.length > 5 && CLASS === "fraser") sevenFras = sixFras + " " + opts[6];
-	if (opts.length > 5 && CLASS === "fraser") eightFras = sevenFras + " " + opts[7];
+	if (opts.length > 6 && CLASS === "fraser") sevenFras = sixFras + " " + opts[6];
+	if (opts.length > 7 && CLASS === "fraser") eightFras = sevenFras + " " + opts[7];
+	if (opts.length > 8 && CLASS === "fraser") nineFras = eightFras + " " + opts[8];
+	if (opts.length > 9 && CLASS === "fraser") tenFras = nineFras + " " + opts[9];
+	
 	var m;
 	if (CLASS === "slutled") {
 		m = "-" + CUR_WORD;
@@ -1635,7 +1642,7 @@ function preProc(def) {
 	} else {
 		m = CUR_WORD;
 	}	
-	LongFrasMatch = fiveFras === m || sixFras === m || sevenFras === m || eightFras === m;	
+	LongFrasMatch = fiveFras === m || sixFras === m || sevenFras === m || eightFras === m || nineFras || tenFras;	
 	if (firstWord === m || twoWords === m || threeWords === m || fourWords === m || LongFrasMatch) {		
 		meta = defArr[0].replaceAll("_"," ");		
 		let del = "";
@@ -1677,7 +1684,7 @@ function preProc(def) {
 				s = s.slice(1,s.length)
 			}
 			// Defuault to "pretty" leading bullet point
-			if (s[0].match(/[a-zдце]+/) != null) {
+			if (s[0].match(/[a-zдце([]+/) != null) {
 				s = `\u25CF ` + s;
 			}
 			// Leading Meta tags
@@ -2153,10 +2160,9 @@ function lookupManyWords() {
 function fmtMeta(meta) {
 	let rep = "<span id='iWordRoot'"
 	rep += " onmouseover=highlight(this,event)";
-	rep += " onclick='changeScore(1)'";	
-	if (SHOW_HELP) {
-		rep += " title='Change score'"
-	}
+	rep += " oncontextmenu='changeScore(event,-1)'";	
+	rep += " onclick='changeScore(event,1)'";	
+	
 	rep += "><b>" + CUR_WORD + "</b></span>"
 	meta = meta.replace(CUR_WORD,rep);
 	metaArr = meta.split("<br>");
@@ -2325,7 +2331,9 @@ function keyForUser(key) {
 	zero_based_ind = parseInt(key.substring(start+1));
 	one_based_ind = zero_based_ind + 1
 	res = key.replace("_" + zero_based_ind, "_" + one_based_ind);	
-
+	res = res.replaceAll("-"," ");
+	res = res.replaceAll("_", " (");
+	res = res + ")";
 	return res
 }
 function toggleMore(key, show = false) {	
@@ -2358,9 +2366,9 @@ function toggleMore(key, show = false) {
 		.then(json => {								
 			if (json.length === 0) {
 				$(id).html(" --<br>No more information to show");				
-			} else {								
-				let tmp = "<span onclick='showCachedDef(this)'"
-				tmp += " oncontextmenu=editMore(event,'" + key + "')";
+			} else {												
+				let tmp = "<span oncontextmenu=editMore(event,'" + key + "')";
+				tmp += " onclick='showCachedDef(this)'";
 				if (SHOW_HELP) {
 					tmp += " title = 'Left click = back to definition(s) "
 					tmp += "\nRight click = edit information'";
@@ -2386,6 +2394,8 @@ function toggleMore(key, show = false) {
 }
 
 function editMore(ev,key) {
+	if (DEBUG) console.log(ev,key)
+	console.log(key)
 	ev.preventDefault();
 	let tmp = $('#iParDef').html();
 	if (tmp.indexOf(" --") === -1 && tmp.indexOf(" ++") != -1) {
@@ -2423,8 +2433,10 @@ function processKeyDown(elHTML,ev) {
 		scrollViewDown();
 	} else if (ev.key === "PageUp") {
 		scrollViewUp(ev);
-	}
-	
+	} else if (ev.key === '§' || ev.key === '`') {
+		getLastWord();
+		ev.preventDefault();		
+	}	
 }
 function clearMore() {
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
@@ -2561,7 +2573,10 @@ function simpleLink(defLine) {
 	return defLine;
 }
 
-function changeScore(diff) {
+function changeScore(ev,diff) {
+	ev.preventDefault();
+	ev.stopPropagation();
+	$('#iDefDiv').css("display","none");
 	fetch('backend/changeScore.php?word=' + CUR_WORD + '&class=' + CLASS + '&diff=' + diff, {
 		method: 'get',
 		mode: 'cors',
