@@ -25,6 +25,7 @@ absolutist
 absorption
 acceleration
 accelerator
+accent
 acceptans
 accesstid
 ackordslön
@@ -1314,10 +1315,12 @@ blus
 blyerts
 blyertspenna
 bläckfisk
+bläckpenna
 bländare
 blåbär
 blåklocka
 blåmanet
+blåpenna
 blåsa
 blåsinstrument
 blåst
@@ -1558,6 +1561,7 @@ byråkrati
 byssja
 byst
 byxa
+byxkjol
 byäldste
 bäck
 bädd
@@ -1958,6 +1962,7 @@ drivrutin
 drog
 dromedar
 droppe
+drott
 drottning
 drulle
 drummel
@@ -2299,6 +2304,7 @@ fasthet
 fastighet
 fastighetsskatt
 fastighetsskötare
+fastlagsbulle
 fastlagssöndag
 fastlänning
 fastnätstelefon
@@ -2333,6 +2339,7 @@ festival
 fetisch
 fetma
 fettisdag
+fettisdagsbulle
 fettsugning
 fiber
 ficka
@@ -2699,6 +2706,7 @@ färdighet
 färdplan
 färdriktning
 färg
+färgpenna
 färja
 färjelinje
 färjeterminal
@@ -3599,6 +3607,7 @@ herrgårdsvagn
 hertig
 hets
 hetta
+hetvägg
 heuristik
 hicka
 hickning
@@ -3838,9 +3847,11 @@ höghjuling
 höginkomst
 högkinesiska
 högkonjunktur
+högplatå
 högskola
 högskolebehörighet
 högskolepoäng
+högslätt
 högspänning
 högspänningsanläggning
 högstadieålder
@@ -3864,6 +3875,7 @@ hörsel
 höst
 höstmånad
 hötjuga
+hövding
 hövlighet
 iakttagare
 iakttagelse
@@ -4305,6 +4317,7 @@ kanalje
 kandidat
 kandidatur
 kanel
+kanelbulle
 kanin
 kanjon
 kanna
@@ -4345,6 +4358,8 @@ karavan
 karbamid
 karbin
 kardan
+kardel
+kardemumma
 kardinal
 karenstid
 karess
@@ -4736,6 +4751,7 @@ korgboll
 korint
 kork
 kornknarr
+korp
 korporation
 korrekthet
 korrektion
@@ -4845,6 +4861,7 @@ kroppstyngd
 kroppsvisitation
 kroppsvätska
 krosskada
+kroton
 krubba
 kruka
 krukväxt
@@ -4893,6 +4910,7 @@ kulting
 kultur
 kulturkrock
 kulvert
+kummel
 kund
 kundvagn
 kung
@@ -5319,6 +5337,7 @@ låga
 låginkomst
 lågkonjunktur
 lågsko
+lågslätt
 lågspänning
 långa
 långsida
@@ -5857,6 +5876,7 @@ nattvard
 natur
 naturfärg
 naturlag
+naturreligion
 naturresurs
 naturtillgång
 naturvetenskap
@@ -6284,6 +6304,7 @@ patriark
 patriot
 patriotism
 patrull
+patrullbåt
 paus
 paviljong
 pedagog
@@ -6389,6 +6410,7 @@ plats
 platsannons
 platta
 plattform
+platå
 plebs
 plenisal
 pleonasm
@@ -6569,6 +6591,8 @@ prägel
 präst
 pråm
 prövning
+psalm
+psalmbok
 psykiater
 psykiatri
 psykolog
@@ -6985,6 +7009,7 @@ råvara
 rödbeta
 rödförskjutning
 rödlista
+rödpenna
 rödräv
 rödsot
 röja
@@ -7110,6 +7135,8 @@ schism
 schismatiker
 schizofreni
 schlager
+schweizare
+schweiziska
 sed
 sedel
 sedlighet
@@ -7141,6 +7168,7 @@ sele
 selleri
 semantik
 semester
+semla
 sena
 senap
 senat
@@ -7412,6 +7440,7 @@ sköld
 sköldkörtel
 sköldpadda
 skönhet
+skönhetsdrottning
 skönlitteratur
 skörd
 skördemaskin
@@ -7441,6 +7470,7 @@ slingerväxt
 slinka
 slip
 sliper
+slipover
 slips
 slirighet
 slits
@@ -7633,6 +7663,7 @@ specialisttandläkare
 specifikation
 speditör
 spegel
+spegelbricka
 spejare
 spekulation
 spelare
@@ -7826,6 +7857,7 @@ stormflod
 stormsteg
 storslägga
 storstad
+storväst
 story
 straffskatt
 straight
@@ -9254,6 +9286,7 @@ vindruva
 vindstilla
 vingbredd
 vinge
+vingpenna
 vink
 vinkel
 vinkelhastighet
@@ -9387,6 +9420,8 @@ värnpliktsarmé
 värvning
 väsentlighet
 väska
+väst
+väster
 västerbottning
 västerbottniska
 västerled
