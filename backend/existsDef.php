@@ -21,7 +21,7 @@
 	$scoreName = $class . "-score";
 	$scoreContents = file_get_contents($path . $scoreName);
 	$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);		
-	$wordArr = preg_split ("/\,/", $words);
+	$wordArr = preg_split ("/\|/", $words);
 
 	$i =0;
 	if ($dict) {
