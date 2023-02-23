@@ -1053,8 +1053,8 @@ function seekWord(word, link = false) {
 	}
 
 	$('#iCntRegex').html("");
-	// Regex support
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
+	// Regex support
 	reg2 = word.indexOf("$") != -1 || word.indexOf("[") != -1 || word.indexOf("]") != -1;
 	scoreMatch = word.indexOf("redwords") != -1 || word.indexOf("bluewords") != - 1;
 	if (reg1 || reg2) {				
@@ -1824,9 +1824,11 @@ function preProc(def) {
 					trail = trail.replaceAll(i,"");
 				}
 			}
+			trail = fmtParticles(trail);
 			s = s.slice(0,2) + trail;		
 			s = s.replaceAll("  ", " ");
 			s = s.replaceAll("  ", " ");
+			/*
 			let match = s.match(/[\s]+[,]+/i);
 			if (match) {
 				s = s.replaceAll(match[0],",");				
@@ -1854,6 +1856,9 @@ function preProc(def) {
 				let rep = strMatch.slice(0,9) + " " + strMatch.slice(9,strMatch.length) + ")";
 				s = s.replace(strMatch, rep);
 			}
+			*/
+			
+			/*
 			s = s.replace("ibland med partikel","(ibland med partikel");
 			s = s.replace("vanligen med partikel","(vanligen med partikel");
 			s = s.replace("ofta med partikel","(ofta med partikel");
@@ -1865,6 +1870,7 @@ function preProc(def) {
 			s = s.replace(f2,f2.replace(")","") + ")");
 			s = s.replace(f3,f3.replace(")","") + ")");
 			s = s.replace(f4,f4.replace(")","") + ")");
+			*/
 			if (s.includes("((")) s = s.replace("((", "(");
 			// Trailing spaces (or non-breaking space) can break links, remove
 			let lastCh = s.charAt(s.length-1);			
@@ -2007,6 +2013,26 @@ function preProc(def) {
 	// That's it!
 	return out;
 }
+
+function fmtParticles(s) {
+	if (DEBUG) console.log("fmtParticles(s)");
+	// Particles appear comma delimited with space delimiter before the last particle.
+
+	const regex1 = /.*med partikel, sär­skilt(([a-zöäå]+, )*[a-zöäå]+).*/;	
+	match = s.match(regex1);
+	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)"); 
+	
+	const regex2 = /.*med partikel, t.ex.(([a-zöäå]+, )*[a-zöäå]+).*/;
+	match = s.match(regex2);
+	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");
+	
+	const regex3 = /.*med partikeln(([a-zöäå]+, )*[a-zöäå]+).*/;
+	match = s.match(regex3);
+	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");
+	
+	return s;
+}
+
 function fmtVerbTogether(s,regx) {
 	if (DEBUG) console.log("fmtVerbTogether(s,regx), s = " + s + ", regx = " + regx);	
 	m = s.match(regx);
@@ -2023,20 +2049,19 @@ function fmtVerbTogether(s,regx) {
 	}
 	return s
 }
+
 function  fmtVerbApart(s,regx) {
 	if (DEBUG) console.log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
 	m = s.match(regx);
 	if (m != null) {
+		console.log(m)
 		if (DEBUG) console.log("fmtVerbApart: Match!");
-		if (m.length === 4) {
+		if (m.length === 4) {		
 			let repWord = m[2] + " " + m[3].substring(1);
 			
 			// remove leading space from second word and replace with regular space.
 			let link = "<span onmouseover=highlight(this,event)";
-			if (SHOW_HELP) {
-				link += "title ='Navigate to \"_w_\"'";
-			}
-			link += "onclick=followLink(this)><b>_w_</b></span>";
+			link += " onclick=followLink(this)><b>_w_</b></span>";
 			link = link.replaceAll("_w_", repWord);
 			// Allow user to match only a single verb word
 			link = link.replaceAll(" __","");
