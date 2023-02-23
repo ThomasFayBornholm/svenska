@@ -308,7 +308,7 @@ function getWords(ind = INC) {
 		N_FOUND = N_REGEX - ind;
 		if (N_FOUND > N_INC) N_FOUND = N_INC;	
 		for (i = ind+1; i < N_FOUND + ind; i++) {
-			list += "," + REGEX_WORDS[i];
+			list += "|" + REGEX_WORDS[i];
 		}
 		displayWords(list,-1)
 	} else {
@@ -329,7 +329,7 @@ function getWords(ind = INC) {
 				let list = json[0];
 				let scores = [];
 				for (i = 1; i < N_FOUND; i++) {
-					list += "," + json[i];
+					list += "|" + json[i];
 				}			
 				displayWords(list,ind)
 			}
@@ -358,7 +358,7 @@ function displayWords(list,ind) {
 		res = json["stat"];
 		let score = json["score"];
 		let del = "";
-		let words = list.split(",");	
+		let words = list.split("|");	
 		N_FOUND = words.length;		
 		for (let i = 0; i < N_FOUND; i++) {
 			let tmp = 1 << i;
@@ -1496,15 +1496,7 @@ function removeWord() {
 }
 function addWord(remove = false) {	
 	if (DEBUG) console.log("addWord()");	
-	let word = $('#iInput').val();	
-	if (word.indexOf('+') != -1) {
-		tmp = word.split('+');
-		word = tmp[0];
-		tmpClass = tmp[1];
-		if (tmpClass.length > 1) setClass(tmpClass);
-		$('#iInput').val(word);
-		
-	}
+	let word = $('#iInput').val();		
 	let del = word[word.length-1] === "." || remove;
 	if (word[0] === '.') word = word.slice(1,word.length);
 	if (word[word.length-1] === '.') word = word.slice(0,word.length-1);
@@ -1577,7 +1569,7 @@ function addMeta(def, regx) {
 	// Only apply one meta tag
 	if (def[2] === "[" && def.indexOf("]") > 2) return def;	
 	// Probably don't actual need regex but leave "ias is" for now
-	let rawStr = regx.source;
+	let rawStr = regx.source;	
 	browserDependentDelim = "";
 	if (navigator.userAgent.indexOf("Chrome") != -1 ) {
 		browserDependentDelim = " ";
