@@ -626,7 +626,8 @@ function lookupWord(el,onlyLocal,inline) {
 						window.open(bulletProofUrl(url), '_blank');
 					}
 					*/
-					seekWordSingleClass(word);
+					// Possible recursion here
+					// seekWordSingleClass(word);
 					$('#iParDef').html("");
 					$('#iDefDiv').css("display", "block");
 				}
@@ -998,7 +999,7 @@ function newInputWrapper(e) {
 }
 
 function seekWordSingleClass(word) {	
-	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)	
+	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)		
 	if (word.length > 0) {
 		LAST_WORD = CUR_WORD;
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
@@ -1029,6 +1030,7 @@ function seekWordSingleClass(word) {
 			console.log(error);
 		})		
 	}	
+	$('#iInput').focus();
 }
 
 /* Priorities for search
@@ -1251,6 +1253,7 @@ function seekWord(word, link = false) {
 		}
 	}
 	if (DEBUG) console.log("END seekWord(); word = " + word + " -> INC = " + INC);			
+	$('#iInput').focus();
 }
 function drillDown() {
 	if (DEBUG) console.log("drillDown()");
@@ -1487,7 +1490,11 @@ function removeClassDesc(word) {
 	return word.slice(0,start-1)
 			
 }
-function addWord() {	
+function removeWord() {
+	if (DEBUG) console.log("removeWord()");
+	addWord(true);
+}
+function addWord(remove = false) {	
 	if (DEBUG) console.log("addWord()");	
 	let word = $('#iInput').val();	
 	if (word.indexOf('+') != -1) {
@@ -1498,7 +1505,7 @@ function addWord() {
 		$('#iInput').val(word);
 		
 	}
-	let del = word[word.length-1] === ".";
+	let del = word[word.length-1] === "." || remove;
 	if (word[0] === '.') word = word.slice(1,word.length);
 	if (word[word.length-1] === '.') word = word.slice(0,word.length-1);
 	if (word.length > 0) {
@@ -2419,6 +2426,10 @@ function processKeyDown(elHTML,ev) {
 		$('#iDefText').focus();
 	} else if (ev.key === "ArrowDown" && CLASS === "all") {
 		drillDown()
+	} else if (ev.key === "Insert") {
+		addWord();
+	} else if (ev.key === "Delete") {
+		removeWord();
 	}
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
