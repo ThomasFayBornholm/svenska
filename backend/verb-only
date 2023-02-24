@@ -1404,7 +1404,6 @@ förhåna
 förhöja
 förhöra
 förhöra sig
-förinna
 förinnerliga
 förinställa
 förinta
@@ -1499,7 +1498,6 @@ förpläga
 förpricka
 förpuppa
 förringa
-förrinna
 förruttna
 förrycka
 förränta
@@ -1550,7 +1548,6 @@ försonas
 försova sig
 förspilla
 förspörja
-förstaplats
 förstatliga
 förstelna
 förstena
@@ -2559,6 +2556,7 @@ kröka
 kröna
 kubera
 kugga
+kullkasta
 kulminera
 kultivera
 kungöra
@@ -2713,6 +2711,7 @@ logga in
 logga ur
 logga ut
 lokalisera
+lokalisera sig
 lossa
 lossna
 lotsa
@@ -3097,6 +3096,7 @@ omhulda
 omhägna
 omhänderta
 omhölja
+omintetgöra
 omkomma
 ommöblera
 omnämna
@@ -4185,6 +4185,9 @@ stupa
 stycka
 stympa
 styra
+styra om
+styra sig
+styra ut
 styrka
 städa
 städning
@@ -4238,6 +4241,7 @@ stöna
 stöpa
 störa
 störta
+störta sig
 stöta
 stöta av
 stöta på
