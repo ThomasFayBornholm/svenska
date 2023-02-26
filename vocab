@@ -217,6 +217,7 @@ function putDef(def, score) {
 			lookupWord(LAST_OBJ,true,true);
 		}
 		*/
+		$('#iInput').focus();
 	})
 	updateScore();
 }
@@ -1825,52 +1826,11 @@ function preProc(def) {
 				}
 			}
 			trail = fmtParticles(trail);
+			trail = fmtPrep(trail);
 			s = s.slice(0,2) + trail;		
 			s = s.replaceAll("  ", " ");
 			s = s.replaceAll("  ", " ");
-			/*
-			let match = s.match(/[\s]+[,]+/i);
-			if (match) {
-				s = s.replaceAll(match[0],",");				
-			}
 			
-			let m = s.match(regex1);
-			let m_alt = s.match(regex1_alt);
-			let m2 = s.match(regex2);
-			let m3 = s.match(regex3);
-			let rep = ""
-			if (m3 != null) {
-				let strMatch = m3[0];
-				let rep = strMatch.slice(0,5) + " " + strMatch.slice(5,strMatch.length) + ")";
-				s = s.replace(strMatch, rep);
-			} else if (m2 != null) {
-				let strMatch = m2[0];
-				rep = strMatch.slice(0,5) + " " + strMatch.slice(5,strMatch.length) + ")";
-				s = s.replace(strMatch, rep);
-			} else if (m != null) {
-				let strMatch = m[0];
-				let rep = strMatch.slice(0,5) + " " + strMatch.slice(5,strMatch.length) + ")";
-				s = s.replace(strMatch, rep);
-			} else if (m_alt != null) {
-				let strMatch = m_alt[0];
-				let rep = strMatch.slice(0,9) + " " + strMatch.slice(9,strMatch.length) + ")";
-				s = s.replace(strMatch, rep);
-			}
-			*/
-			
-			/*
-			s = s.replace("ibland med partikel","(ibland med partikel");
-			s = s.replace("vanligen med partikel","(vanligen med partikel");
-			s = s.replace("ofta med partikel","(ofta med partikel");
-			let f1 = "utan) större betydelse­skillnad";
-			let f2 = "), utan större betydelse­förändring";
-			let f3 = "), utan större betydelse­skillnad";
-			let f4 = "utan) större betydelse­förändring";
-			s = s.replace(f1, f1.replace(")","") + ")");
-			s = s.replace(f2,f2.replace(")","") + ")");
-			s = s.replace(f3,f3.replace(")","") + ")");
-			s = s.replace(f4,f4.replace(")","") + ")");
-			*/
 			if (s.includes("((")) s = s.replace("((", "(");
 			// Trailing spaces (or non-breaking space) can break links, remove
 			let lastCh = s.charAt(s.length-1);			
@@ -1879,7 +1839,7 @@ function preProc(def) {
 			}
 			// ToDo Move the (many) grammer pattern definitions to the function body
 			// grammer information
-			
+			s = grammer(s, "i negerade och frågande samman­hang")
 			s = grammer(s, "ofta i substantivisk an­vändning")
 			s = grammer(s, "nästan en­bart bestämd form sing.")
 			s = grammer(s, "vanligen i böjda former");
@@ -1893,6 +1853,7 @@ function preProc(def) {
 			s = grammer(s,"sär­skilt i pass. konstruktioner");
 			s = grammer(s,"i konstruktion med komparativ");
 			s = grammer(s,"ofta substantiverat");
+			s = grammer(s, "ofta refl. el. perfekt particip");
 			s = grammer(s, "ofta refl. el. pass.");
 			s = grammer(s,"ofta refl.");			
 			s = grammer(s,"med konjunktionen",);
@@ -1920,9 +1881,12 @@ function preProc(def) {
 			// ToDo regex this one			
 			s = grammer(s,"vanligen i vissa ut\u00ADtryck");
 			s = grammer(s,"utan böjning, i vissa ut\u00ADtryck");
+			s = grammer(s,"sär­skilt i vissa ut­tryck");
+			s = grammer(s, "sär­skilt i ett ut­tryck");
 			s = grammer(s,"i vissa ut\u00ADtryck");
+			s = grammer(s,"vanligen i några ut\u00ADtryck");
 			s = grammer(s,"i några ut\u00ADtryck");
-			s = grammer(s, "ofta pass. el. perfekt particip");
+			s = grammer(s, "ofta pass. el. perfekt particip");			
 			s = grammer(s,"ofta pass.");			
 			s = grammer(s,"vanligen pass. el. presens particip");
 			s = grammer(s,"vanligen pass. el. perfekt particip");
@@ -1930,6 +1894,7 @@ function preProc(def) {
 			s = grammer(s,"vanligen pass. el. part.");
 			s = grammer(s,"vanligen refl. el. pass.");
 			s = grammer(s,"ofta bestämd form");
+			s = grammer(s,"ofta i perfekt particip");
 			s = grammer(s,"ofta perfekt particip");
 			s = grammer(s,"ofta presens particip");
 			s = grammer(s, "nästan en­bart pres. el. pret.");
@@ -1945,13 +1910,16 @@ function preProc(def) {
 			s = grammer(s,"nästan en\u00ADbart i sammansättn.");
 			s = grammer(s,"nästan en­bart predikativt");
 			s = grammer(s,"endast predikativt");
-			s = grammer(s,"vanligen i konstruktioner");
+			s = grammer(s,"vanligen i konstruktioner");			
 			s = grammer(s,"vanligen i konstruktion");
+			s = grammer(s,"vanligen i opersonlig konstruktion");			
 			s = grammer(s,"vanligen i opersonliga konstruktioner");			
 			s = grammer(s,"i opersonliga konstruktioner");			
+			s = grammer(s,"i opersonlig konstruktion");			
 			s = grammer(s,"vanligen opersonlig konstruktion");
 			s = grammer(s,"vanligen koll.");
 			s = grammer(s, "ofta koll.");
+			s = grammer(s,"ofta i nekande ut­tryck");
 			s = grammer(s,"i nekande ut­tryck");
 			s = grammer(s,"ofta i nekande el. frågande ut­tryck");
 			s = grammer(s,"ofta i nekande konstruktion");
@@ -1998,8 +1966,7 @@ function preProc(def) {
 			s = simpleRef(s);		
 			s = simpleBold(s);		
 			// ToDo Regex this to include the verb
-			//s = grammer(s,"vanligen i förbindelse");
-			s = handlePrep(s);
+			//s = grammer(s,"vanligen i förbindelse");			
 			s = s.replaceAll("_","");
 			s = simpleLink(s);
 			outDef += del + s;			
@@ -2018,18 +1985,63 @@ function fmtParticles(s) {
 	if (DEBUG) console.log("fmtParticles(s)");
 	// Particles appear comma delimited with space delimiter before the last particle.
 
-	const regex1 = /.*med partikel, sär­skilt(([a-zöäå]+, )*[a-zöäå]+).*/;	
+	const regex1 = /.*med partikel, (sär­skilt)(([a-zöäå]+, )*[a-zöäå]+).*/;		
 	match = s.match(regex1);
-	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)"); 
 	
-	const regex2 = /.*med partikel, t.ex.(([a-zöäå]+, )*[a-zöäå]+).*/;
-	match = s.match(regex2);
+	if (match) s = "(" + s.replace(match[1] + match[2], match[1] + " <b>" + match[2] + "</b>)"); 
+	
+	const regex2 = /.*med partikel[n]?[,]? t.ex.(([a-zöäå]+, )*[a-zöäå]+).*/;
+	match = s.match(regex2);	
 	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");
-	
-	const regex3 = /.*med partikeln(([a-zöäå]+, )*[a-zöäå]+).*/;
+
+	const regex3 = /.*med partikeln([a-zöäå]+).*/;
 	match = s.match(regex3);
 	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");
 	
+	const regex4 = /.*med partik[elnarn]+ som an.ger (?:rörelse)?riktning.*(t(?:ill)?\.ex\.|sär.skilt)/;
+	match = s.match(regex4);
+	if (match) {
+		let tmp = s.replace(match[0],"");
+		let tmpArr = tmp.split(",");
+		let old = "";
+		let rep = "";
+		let d = ""
+		for(i = 0; i < tmpArr.length; i++) {
+			let t = tmpArr[i]
+			
+			if (t.indexOf(" ") != -1) {
+				if (t.indexOf(" ") === 0) t = t.substr(1);				
+				old += d + t.split(" ")[0];
+				if (t.indexOf(" ") != -1) break;
+			} else {
+				old += d + tmpArr[i];
+			}
+			d = ", "
+		}
+		rep = " <b>" + old + "</b>)";
+		s = "(" + s.replace(match[0] + old,match[0] + rep);
+	}
+		
+	const regex5 = /.*med någon av partiklarna(([a-zöäå]+, )*[a-zöäå]+).*/;
+	match = s.match(regex5);	
+	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");		
+	
+	s = s.replace("utan</b>) större betydelse­skillnad", "</b> utan större betydelse­skillnad)");
+	s = s.replace("), utan större betydelse­skillnad",", utan större betydelse­skillnad)");
+	// Ugly hack for now
+	if (s.indexOf("([") != -1) {
+		s = s.replace("([","[");
+		s = s.replace("]","] (");
+		s = s.replace("( ","(");
+	}
+	return s;
+}
+
+function fmtPrep(s) {
+	const regex1 = /.*med prep.(([a-zöäå]+, )*[a-zöäå]+).*/;
+	match = s.match(regex1);
+	// Includes prep in replace for case where 'med' is the preposition
+	if (match) s = "(" + s.replace("prep." + match[1],"prep. <b>" + match[1] + "</b>)");	
 	return s;
 }
 
@@ -2039,9 +2051,8 @@ function fmtVerbTogether(s,regx) {
 	
 	if (m != null) {
 		if (m.length === 3) {			
-			let link = "<span onmouseover=highlight(this,event)";
-			if (SHOW_HELP) link += "title='Navigate to \"_w_\"'"
-			link += "onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_",m[2]);				
+			let link = "<span onmouseover=highlight(this,event)";			
+			link += " onclick=followLink(this)><b>_w_</b></span>".replaceAll("_w_",m[2]);				
 			// Allow user to extend the verb to include another partikel e.g. "sig"
 			link = link.replaceAll("__"," ");
 			s = s.replace(m[0],"(" + m[1] + link + ")");
@@ -2215,18 +2226,7 @@ function ScrollViewDownWrapper() {
 		scrollViewDown();
 	}
 }
-function handlePrep(s) {
-	// Can have 0, 1 or more preposition words
-	// Works for a single preposition word
-	// Maybe support multiple words later
-	regx = /med prep.[a-zöäå]/;
-	let m = s.match(regx);
-	if (m != null) {
-		s = s.replace(m[0], "(" + m[0] + ")");
-		s = s.replace("prep.", "prep. ");		
-	}
-	return s;
-}
+
 function bulletProofUrl(url) {
 	// Manually do escaping of Swedish unicode characters as browsers can misbehave here
 	
