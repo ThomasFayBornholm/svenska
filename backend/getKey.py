@@ -21,8 +21,11 @@ try:
     print(key + " -> " + val)
 except KeyError:
     if key == "0":
-        for key in jsonDict:
-            val = jsonDict[key]
-            print(key + " -> " + val)
+        with open("listing", 'w', encoding = "utf-8") as outfile:            
+            d = ""
+            for key in jsonDict:                
+                val = jsonDict[key]                
+                outfile.write(d + key + " -> " + val)                
+                d = "\n"
     else:
         print("Key : " + key + " is not found in source")
