@@ -500,6 +500,7 @@ drag
 dragdjur
 drama
 draperi
+dregel
 drev
 dricka
 dricksvatten
@@ -665,6 +666,7 @@ fogeord
 fokus
 folk
 folkhem
+folklustspel
 folkmord
 folkmål
 folkparti
@@ -719,6 +721,7 @@ funktionsplagg
 funktionsvärde
 furstendöme
 fusk
+fyllo
 fynd
 fyrfotadjur
 fyrop
@@ -1068,6 +1071,7 @@ härnadståg
 hästdjur
 hästminne
 hästskomagnet
+häxeri
 hål
 håll
 hålligång
@@ -1109,6 +1113,7 @@ ide
 ideal
 identitetskort
 idiom
+idrottsgymnasium
 igenkännande
 illamående
 illdåd
@@ -1232,6 +1237,7 @@ kapital
 kapitel
 kapprum
 kar
+kardborreband
 karosseri
 kartogram
 kasino
@@ -1275,6 +1281,7 @@ klädstreck
 knack
 knallskott
 knarr
+knattelag
 knatter
 kneg
 knep
@@ -1491,6 +1498,7 @@ luftförsvar
 luftherravälde
 luftmotstånd
 luftrör
+luftvärn
 lumppapper
 lurendrejeri
 lustspel
@@ -1562,6 +1570,7 @@ maskrosbarn
 maskulinum
 massmedium
 material
+matfett
 matriarkat
 matsvinn
 mausoleum
@@ -1677,6 +1686,7 @@ murbruk
 museum
 musiköra
 mutbrott
+mygel
 mynt
 mys
 mysteriespel
@@ -1958,6 +1968,7 @@ rassel
 recept
 rede
 redskap
+redskapsskjul
 referat
 regelverk
 regemente
@@ -2073,7 +2084,17 @@ samsyn
 samtal
 samtycke
 samvete
+samvetskval
+samvetsskäl
+samvälde
+samägande
 sandrev
+sanktuarium
+sanningskorn
+sanningskrav
+sanningsserum
+sanningsvittne
+sanningsvärde
 scenario
 sceneri
 schack
@@ -2125,6 +2146,7 @@ skalarfält
 skall
 skalskydd
 skalv
+skaplynne
 skarpsinne
 skede
 skelett
@@ -2410,6 +2432,7 @@ substantiv
 sudd
 suddgummi
 suffix
+sug
 sugrör
 suicid
 sulfat
@@ -2590,9 +2613,11 @@ trick
 tripp
 troll
 trossamfund
+trosskydd
 trots
 trubbel
 truckflak
+truppslag
 tryck
 tryckaccent
 tryckalster
@@ -2883,6 +2908,7 @@ världskrig
 världsrykte
 värme
 värmenät
+värn
 väsen
 väsende
 västerlandet
