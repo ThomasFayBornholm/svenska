@@ -709,6 +709,7 @@ function makeLinks(def) {
 	def = addLinks("SE", def);		
 	return def;
 }
+
 function linkSingleWord(def) {	
 	if (DEBUG) console.log("linkSingleWord(def), def = " + def);
 	if (def.substr(0,6) === "till '") return def;
@@ -753,11 +754,10 @@ function linkSingleWord(def) {
 						tmp = tmp.slice(0,tmp.length-1);
 					}
 				}
-				
-				let cnt = tmp.match(/ /g);
-				if (cnt === null) {
-					let offset = 1;
-					if (cnt === null) offset = 0
+				// What is this doing and why?
+				let cnt = tmp.match(/ /g);				
+				if (cnt === null) {					
+					let offset = 0
 					let word = tmp.substr(offset).replaceAll("­","");
 					line = line.replace(word, tmpSpan.replaceAll("_w_",word));				
 				} 
@@ -1079,8 +1079,10 @@ function seekWord(word, link = false) {
 				SCROLL_INC = -1;
 				getWords(INC)
 			} else {
-				$('iWords').html("");
-				console.log("no matches")
+				for (i = 0; i < 8; i++) {
+					id = "#w" + i;
+					$(id).html("")					
+				}
 			}
 		})
 		.catch(error => {
@@ -1117,7 +1119,7 @@ function seekWord(word, link = false) {
 		REGEX_WORDS = [];
 		N_REGEX = 0;
 		// Special exceptions to capitalisation rules
-		if (word != "Ers" && word != "Eders" && word.indexOf("-") === -1 && CLASS != "fraser") word = word.toLowerCase()
+		if (word != "Ers" && word != "Eders" && word != "I" &&word.indexOf("-") === -1 && CLASS != "fraser") word = word.toLowerCase()
 
 		if (word === '') {
 			word = LAST_WORD;
