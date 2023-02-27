@@ -1296,6 +1296,7 @@ blodpalt
 blodplasma
 blodpropp
 blodshämnd
+blodskam
 blodsugare
 blodundersökning
 blodåder
@@ -1853,6 +1854,7 @@ diabild
 diafragma
 diagnos
 diagnostik
+diagonal
 dialekt
 dialog
 dialys
@@ -2053,6 +2055,7 @@ dödvikt
 dörr
 dörrklocka
 dörrknackning
+dörrspegel
 dörrvakt
 e-post
 ebb
@@ -2119,14 +2122,25 @@ elektricitet
 elektrifiering
 elektriker
 elektrod
+elektrokemi
 elektrolys
 elektrolyt
+elektromagnet
+elektromagnetism
 elektron
 elektronblixt
+elektronegativitet
 elektronik
+elektrostatik
+elektroterapi
+elementaranalys
 elementarande
+elementarladdning
 elementarpartikel
+elementarskola
 elev
+elevassistent
+elevation
 elevator
 elit
 ellips
@@ -2358,6 +2372,7 @@ felaktighet
 felbedömning
 felmarginal
 felsägning
+femhörning
 feminism
 feminist
 femkamp
@@ -2382,6 +2397,9 @@ fiende
 fientlighet
 figur
 fika
+fiktion
+fiktionalism
+fiktionalist
 fil
 fildelare
 fildelning
@@ -2638,6 +2656,7 @@ frihjulsnav
 friidrott
 friidrottare
 frikadell
+friktion
 friluftsmåleri
 friluftsteater
 fripassagerare
@@ -3411,6 +3430,7 @@ gudstjänst
 gudunge
 guide
 gula
+guldskiva
 guldsmed
 guldstjärna
 guldstämpel
@@ -3929,12 +3949,22 @@ hök
 hölja
 höna
 hönsgård
+hörapparat
+hörbarhetströskel
+hörbok
+hörförståelse
 hörhåll
 hörlur
+hörna
+hörnflagga
+hörnpelare
 hörntand
 hörsal
 hörsel
 hörselgång
+hörselklass
+hörslinga
+hörsnäcka
 höst
 höstmånad
 hötjuga
@@ -4004,6 +4034,7 @@ inbillning
 inbjudan
 inblandning
 inbuktning
+incest
 incheckning
 incheckningsdisk
 incident
@@ -4344,6 +4375,9 @@ kabinettsfråga
 kabyss
 kadens
 kaffeböna
+kaffegök
+kaffehalva
+kaffekask
 kaffekopp
 kaffemaskin
 kaj
@@ -5079,6 +5113,8 @@ kylkonserv
 kypare
 kypert
 kyrka
+kyrkgång
+kyrkobibel
 kyrkogård
 kyrkoherde
 kyrkomusiker
@@ -5373,6 +5409,7 @@ lutning
 luva
 luvtröja
 luxation
+lya
 lycka
 lycksökare
 lyckönskan
@@ -6524,6 +6561,7 @@ plan
 planering
 planet
 plangeometri
+planimetri
 plank
 planka
 plantering
@@ -6532,6 +6570,7 @@ plastik
 plastmamma
 plastpappa
 platina
+platinaskiva
 plats
 platsannons
 platta
@@ -6895,6 +6934,7 @@ rekapitulation
 reklam
 rekommendation
 rekrytering
+rektangel
 rektor
 relation
 relevans
@@ -7150,6 +7190,7 @@ röja
 rök
 rökdetektor
 rökgas
+rökgång
 röntgen
 röntgenstrålning
 röra
@@ -7447,10 +7488,13 @@ sjundedel
 sjuttiotalist
 själ
 själavård
+självaktning
 självbedrägeri
 självbehärskning
+självförakt
 själviakttagelse
 självklarhet
+självkännedom
 självmedicinering
 självständighet
 självsvält
@@ -7532,6 +7576,7 @@ skojare
 skola
 skolbuss
 skolgård
+skolpeng
 skomakare
 skoning
 skopa
@@ -7734,6 +7779,7 @@ snaps
 snara
 snarkning
 snaskighet
+sned
 snickare
 snigel
 snipa
@@ -8335,6 +8381,7 @@ sömn
 söndag
 sönderdelning
 sönderfallshastighet
+söndring
 sörja
 sörlänning
 sötsak
@@ -8402,6 +8449,7 @@ tapet
 tapp
 tappt
 tarm
+task
 tass
 tatuering
 taurin
@@ -8830,6 +8878,7 @@ tusenlapp
 tusensköna
 tusing
 tuskaft
+tuta
 tvedräkt
 tvekan
 tvetydighet
@@ -9391,6 +9440,7 @@ variabel
 variant
 variation
 varietet
+varmgång
 varmluftballong
 varning
 varningsklocka
@@ -9408,6 +9458,7 @@ vattenkran
 vattenmelon
 vattenrutschbana
 vattenskida
+vattenspegel
 vattentäkt
 vattenväxt
 vattenyta
