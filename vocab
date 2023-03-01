@@ -958,6 +958,7 @@ function showToggle() {
 	}
 	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
+
 function newInputWrapper(e) {
 	if (DEBUG) console.log("newInputWrapper()");
 	e.preventDefault();
@@ -1029,8 +1030,8 @@ function seekWordSingleClass(word) {
 		})
 		.catch(error => {
 			console.log(error);
-		})		
-	}	
+		})
+	}
 	$('#iInput').focus();
 }
 
@@ -1052,7 +1053,8 @@ function seekWord(word, link = false) {
 	while (word.substr(word.length-1) === " ") {
 		word = word.substr(0,word.length-1)
 	}
-
+	// Always regex for phrases
+	if (CLASS === "fraser") word = ".*" + word;
 	$('#iCntRegex').html("");
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
 	// Regex support
@@ -1070,8 +1072,8 @@ function seekWord(word, link = false) {
 			return response.json()
 		})
 		.then(json => {
-			REGEX_WORDS = json;			
-			N_REGEX = json.length;			
+			REGEX_WORDS = json["matches"];			
+			N_REGEX = json["count"];			
 			$('#iScore').html("");
 			$('#iCntRegex').html("*" + N_REGEX + "*");			
 			if (N_REGEX > 0) {
@@ -1549,6 +1551,8 @@ function addWord(remove = false) {
 				})
 			// Navigate to newly added word for convenience.
 			} else if (op === "add") {
+				// Undesirable to have '­' character in word keys as user not expected to specifiy these. 
+				word = word.replace("­","");
 				seekWordSingleClass(word)
 				if (CLASS === "fraser") {
 					let tmp = $('#iInput').val();
@@ -1598,6 +1602,7 @@ function preProc(def) {
 	// return def and meta components
 	// " ++" is a user-control, remove is present in definition
 	def = def.replaceAll(" ++","");
+		
 	// Check if any meta information exists		
 	if (def[0] === " ") def = def.slice(1);
 	let meta = "";
@@ -1698,6 +1703,7 @@ function preProc(def) {
 			s = addMeta(s, /var­dagligt, något ålderdomligt; kan upp­fattas som ned­sättande/);
 			s = addMeta(s, /var­dagligt; något ålderdomligt/);
 			s = addMeta(s, /något hög­tidligt el. ålderdomligt/);
+			s = addMeta(s, /något hög­tidligt; mindre brukligt/);
 			s = addMeta(s, /ofta i poetiska samman­hang/);
 			s = addMeta(s, /språk­vetenskap/);
 			s = addMeta(s, /sär­skilt i affärs­mässiga och vetenskapliga samman­hang/);
