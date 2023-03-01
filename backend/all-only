@@ -281,6 +281,7 @@ alliera sig
 allierad
 alligator
 allihop
+allmoge
 allmosa
 allmän
 allmänanda
@@ -360,6 +361,7 @@ amplitud
 ampull
 amputation
 amputera
+amylas
 ana
 anabaptism
 anabaptist
@@ -1754,6 +1756,7 @@ badmadrass
 badmatta
 badort
 badrum
+badställe
 badvatten
 bagage
 bagagelucka
@@ -3185,6 +3188,7 @@ brottsjö
 brottslig
 brottslighet
 brottsling
+brottställe
 browser
 brud
 brudgum
@@ -3672,19 +3676,54 @@ dag för dag
 dag ut och dag in
 dagarna i ända
 dagas
+dagavdelning
 dagbarnvårdare
+dagbefäl
+dagblad
+dagblind
 dagbok
+dagbrott
+dagbrytning
 dagbräckning
+dagcenter
+dagcentral
+dagdjur
 dagdrivare
 dagdriveri
+dagdröm
+dagdrömma
+dagdrömmare
 dagdrömmeri
 dagen d
 dagen till ära
+dagen-efter-piller
+dagen-efter-stämning
 dagens (rätt)
+dagerrotyp
+dagerrotypi
+dagfjäril
+dagg
+dagga
+daggblå
+daggdroppe
+daggfrisk
+daggig
+daggkåpa
+daggmask
+daggpunkt
 daghem
+daghotell
 dagis
+dagjämning
+dagjämningspunkt
+dagkirurgi
+daglega
 daglig
+dagligdags
 dagligen
+dagligstuga
+dagligvara
+daglönare
 dagmamma
 dagmatte
 dagning
@@ -3695,12 +3734,38 @@ dagpatient
 dagpenning
 dagrum
 dags
+dagsaktuell
+dagsbehov
+dagsbot
+dagsedel
+dagshandlare
+dagskassa
+dagsled
+dagsljus
 dagsläge
+dagslända
+dagslön
+dagsmarsch
 dagsmeja
+dagsnyheter
+dagspress
+dagsranson
+dagsresa
+dagstemperatur
 dagstidning
+dagsverkare
+dagsverke
 dagsvers
+dagteckna
+dagtid
 dagtinga
+dagtraktamente
 dagvatten
+dagverksamhet
+dagvill
+dagvisa
+dagvård
+dagöppning
 dahlia
 dal
 dala
@@ -3930,10 +3995,12 @@ det ska du få för
 det står inte rätt till med någon/något
 det står/är skrivet i stjärnorna
 det var nära ögat
+det var så dags (då)
 det vete fan
 det vete fåglarna
 det vill mycket till
 det vill säga
+det är dags (att)
 det är fråga om
 det är hög tid
 det är högt i tak
@@ -4711,6 +4778,7 @@ en ropandes röst i öknen
 en slocknad stjärna
 en strid om ord
 en vacker dag
+en viss potentat
 en vit vecka
 ena
 enahanda
@@ -4904,6 +4972,7 @@ ett slag i an­siktet
 ett slag i luften
 ett slag under bältet
 ett varnande exempel
+ett visst ställe
 etta
 etui
 etylalkohol
@@ -6029,6 +6098,7 @@ fy
 fylking
 fylla
 fylla i
+fylla på
 fylla upp
 fylla ut
 fylla år
@@ -7994,6 +8064,8 @@ gråsej
 gråta
 gråtmild
 gråtrut
+gråvide
+gråvit
 gröda
 grön
 grönkål
@@ -8180,6 +8252,7 @@ göka
 göl
 gömfröig
 gömma
+gömställe
 göra
 göra (en) stor affär av något
 göra (ett) stort nummer av något
@@ -8237,6 +8310,7 @@ ha någon på tråden
 ha något för ögonen
 ha något på hjärtat
 ha något till hands
+ha något visst
 ha ryggen fri
 ha sett sina bästa dagar
 ha sin gång
@@ -8857,6 +8931,7 @@ hunk
 hunsa
 hur
 hur (ända) in i vassen
+hur dags?
 hur det nu var
 hur i hela världen
 hur lever livet med dig?
@@ -12193,6 +12268,7 @@ lantbrukare
 lanterna
 lantgård
 lantlig
+lantställe
 lapidarisk
 lapp
 lappa
@@ -12536,6 +12612,7 @@ locka
 locka av
 lockfågel
 lockig
+lod
 lodjur
 lodlinje
 lodrät
@@ -12630,6 +12707,7 @@ lumpen
 lumppapper
 lunch
 lunchpaus
+lunchställe
 lund
 lungsnäcka
 lungsot
@@ -12785,6 +12863,7 @@ lämpad
 lämplig
 län
 länd
+lända
 ländrygg
 länga
 längd
@@ -13245,6 +13324,7 @@ maträtt
 matsal
 matsedel
 matstrupe
+matställe
 matsvinn
 matsäck
 matt
@@ -13966,6 +14046,7 @@ målvakt
 mån
 månad
 månad ut och månad in
+månadslön
 månadsskifte
 månadsvis
 månatligen
@@ -14100,15 +14181,19 @@ nativitet
 natriumklorid
 natt
 natt och dag
+nattdjur
 nattduksbord
 nattdukslampa
 nattens drottning
+nattetid
+nattfjäril
 nattlig
 nattlinne
 nattmara
 nattmössa
 nattro
 nattskjorta
+nattslända
 nattsmyg
 nattstånden
 nattuggla
@@ -14479,6 +14564,7 @@ näring
 näringsidkare
 näringsliv
 näringsminister
+näringsställe
 näringsvärde
 närkamp
 närliggande
@@ -14517,6 +14603,7 @@ nätverk
 nätverka
 nätverkare
 nätverksnav
+nätvinge
 näva
 näve
 nå
@@ -14671,6 +14758,7 @@ odds
 odelad
 odemokratisk
 odiskutabel
+odjur
 odla
 odling
 odräglig
@@ -16143,6 +16231,7 @@ på rak arm
 på raken
 på resande fot
 på sin vakt
+på sina ställen
 på sistone
 på skoj
 på stubinen
@@ -16911,6 +17000,8 @@ rysning
 ryss
 ryta
 rytm
+rytmisk
+rytmisk gymnastik
 ryttare
 räcka
 räcka lång näsa åt någon/något
@@ -17209,6 +17300,7 @@ samlas
 samlevnad
 samling
 samlingsbegrepp
+samlingspunkt
 samlingsregering
 samlingsutställning
 samliv
@@ -18462,6 +18554,7 @@ släktled
 släktnamn
 släktskap
 släktträd
+slända
 släng
 slänga
 slänga i sig
@@ -18591,6 +18684,7 @@ smuggla
 smuggling
 smula
 smultron
+smultronställe
 smussel
 smussla
 smuts
@@ -18858,6 +18952,7 @@ sommarmånad
 sommarsjuka
 sommarsolstånd
 sommarstuga
+sommarställe
 somna
 somna in
 son
@@ -19364,6 +19459,7 @@ stjärn
 stjärna
 stjärnanis
 stjärnbild
+stjärndygn
 stjärnfamilj
 stjärnhop
 stjärnskott
@@ -20186,6 +20282,7 @@ sätta åt
 sätteri
 sävlig
 så
+så (här/där) dags
 så (ända) in i vassen
 så att säga
 så fan heller!
@@ -20790,6 +20887,7 @@ tillreda
 tillrop
 tillryggalägga
 tillräcklig
+tillräkna
 tillrättalägga
 tillrättavisa
 tillrättavisning
@@ -21247,6 +21345,7 @@ tross
 trossamfund
 trossats
 trosskydd
+trosviss
 trots
 trotsa
 trottoar
@@ -22956,6 +23055,7 @@ vara någons melodi
 vara på benen
 vara på benen igen
 vara på fri fot
+vara på gränsen att
 vara på hugget
 vara på håret
 vara på sin plats
@@ -23083,7 +23183,9 @@ vecka
 vecka ut och vecka in
 veckberg
 veckodag
+veckopress
 veckotidning
+veckovill
 vedeldning
 vederböra
 vederbörande
@@ -24153,6 +24255,7 @@ zucchini
 äppelvecklare
 äpple
 äpplig
+är det dags att göra något nu?
 ära
 ärans fält
 ärbar
@@ -25202,4 +25305,4 @@ zucchini
 övervakning
 övervallning
 
-över­leva sig
+över

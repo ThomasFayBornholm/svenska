@@ -211,6 +211,7 @@ badhus
 badkar
 badort
 badrum
+badställe
 badvatten
 bagage
 bagageutrymme
@@ -378,6 +379,7 @@ brohuvud
 brosk
 brott
 brottmål
+brottställe
 bruk
 bruksdjur
 brukssamhälle
@@ -450,12 +452,21 @@ cyankalium
 cykelställ
 cyklop
 cyklopöga
+dagbefäl
+dagblad
+dagcenter
+dagdjur
 dagdriveri
 dagdrömmeri
 daghem
+daghotell
 dagis
 dagrum
+dagsbehov
+dagsljus
 dagsläge
+dagsverke
+dagtraktamente
 dagvatten
 damm
 damspel
@@ -954,6 +965,7 @@ gränsskikt
 gränssnitt
 gränsöverskridande
 gräs
+gråvide
 guld
 guldkorn
 gummi
@@ -966,6 +978,7 @@ gäng
 gängstål
 gästgiveri
 gångjärn
+gömställe
 göra
 göromål
 göt
@@ -1463,6 +1476,7 @@ landslag
 landsmål
 landsting
 lantbruk
+lantställe
 lappkast
 lappri
 lapptäcke
@@ -1501,6 +1515,7 @@ ljud
 ljus
 ljushuvud
 lock
+lod
 lodjur
 logement
 lokalnät
@@ -1519,6 +1534,7 @@ luftmotstånd
 luftrör
 luftvärn
 lumppapper
+lunchställe
 lurendrejeri
 lustspel
 lyft
@@ -1591,6 +1607,7 @@ massmedium
 material
 matfett
 matriarkat
+matställe
 matsvinn
 mausoleum
 maximum
@@ -1737,6 +1754,7 @@ namn
 narkotikum
 narrspel
 nationalepos
+nattdjur
 nattduksbord
 nattlinne
 naturnamn
@@ -1777,6 +1795,7 @@ nyttodjur
 nyval
 nyår
 näringsliv
+näringsställe
 näringsvärde
 närområde
 näs
@@ -1796,6 +1815,7 @@ obs
 observandum
 odal
 odds
+odjur
 offer
 oflyt
 oftalmoskop
@@ -2289,6 +2309,7 @@ smisk
 smolk
 sms
 smultron
+smultronställe
 smussel
 smycke
 smäck
@@ -2335,6 +2356,7 @@ sommardäck
 sommarhus
 sommarlov
 sommarsolstånd
+sommarställe
 sorgespel
 sorl
 sortiment
@@ -2406,6 +2428,7 @@ stillestånd
 stim
 sting
 stipendium
+stjärndygn
 stjärnskott
 stjärnsystem
 sto
