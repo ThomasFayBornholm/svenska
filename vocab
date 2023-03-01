@@ -1697,6 +1697,8 @@ function preProc(def) {
 			s = addMeta(s, /var­dagligt, kan upp­fattas som ned­sättande/);
 			s = addMeta(s, /var­dagligt, något ålderdomligt; kan upp­fattas som ned­sättande/);
 			s = addMeta(s, /var­dagligt; något ålderdomligt/);
+			s = addMeta(s, /något hög­tidligt el. ålderdomligt/);
+			s = addMeta(s, /ofta i poetiska samman­hang/);
 			s = addMeta(s, /språk­vetenskap/);
 			s = addMeta(s, /sär­skilt i affärs­mässiga och vetenskapliga samman­hang/);
 			s = addMeta(s, /samman­fattande, formell beteckning/);
