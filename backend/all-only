@@ -2983,6 +2983,8 @@ bollplank
 bollpojke
 bollträ
 bolsjevikisk
+bolån
+bolåneinstitut
 bom
 bomb
 bomba
@@ -4005,9 +4007,11 @@ det ringer ingen klocka
 det ska du få för
 det står inte rätt till med någon/något
 det står/är skrivet i stjärnorna
+det var det värsta!
 det var nära ögat
 det var som fasen!
 det var så dags (då)
+det var värst vad ...
 det vete fan
 det vete fasen
 det vete fåglarna
@@ -8346,6 +8350,7 @@ ha sina sidor
 ha sista ordet
 ha sitt huvud för sig
 ha spelat ut sin roll
+ha stadigt sällskap
 ha vassa arm­bågar
 ha ögon i nacken
 ha ögonen med sig
@@ -9384,6 +9389,10 @@ högtalare
 högtid
 högtidlig
 högtidlighålla
+högtysk
+högtyska
+högutbildad
+högvarv
 högvatten
 högvilt
 högättad
@@ -10087,6 +10096,7 @@ inte kunna ha någon i möblerade rum
 inte kunna nämnas på samma dag
 inte lägga två strån i kors för någon/något
 inte minst
+inte något/inget vidare
 inte på långa vägar
 inte röra någon i ryggen
 inte se mycket ut för världen
@@ -10095,6 +10105,7 @@ inte se/tänka längre än näsan räcker
 inte sitta i sjön
 inte skräda orden
 inte spela någon roll
+inte så värst
 inte tro sina ögon
 inte tro sina öron
 inte vara Guds bästa barn
@@ -10106,6 +10117,7 @@ inte vara torr bak­om öronen
 inte veta på vilken fot man ska stå
 inte veta sig någon levande(s) råd
 inte veta vilket ben man ska stå på
+inte vidare värst
 inteckna
 inteckning
 inteckningslån
@@ -10878,6 +10890,9 @@ kika
 kikare
 kil
 kila
+kila runt hörnet
+kila stadigt
+kila vidare
 kille
 killing
 kilo
@@ -11614,8 +11629,10 @@ korta av
 korta varor
 kortbana
 kortbyxor
+kortdistans
 kortege
 kortfattad
+kortfilm
 korthet
 korthus
 kortis
@@ -13009,18 +13026,38 @@ lågslätt
 lågspänning
 lågstadium
 lågtstående
+lågtysk
+lågtyska
+lågutbildad
+lågvarv
 lågvatten
 lågvattenmärke
+lågvuxen
+lågvärdig
 lån
 låna
 låna sitt öra till någon
+lånebibliotek
+låneexpedition
+låneform
+lånefälla
+lånegaranti
+lånekarusell
+lånekort
+lånetak
 lång
 lång ränta
 långa
 långbyxor
+långdistans
+långdragen
+långfil
+långfilm
 långfinger
 långgrund
 långhalsad
+långkörare
+långmjölk
 långsam
 långsida
 långsiktig
@@ -13417,6 +13454,7 @@ meddela sig
 meddelande
 meddelarskydd
 medel
+medeldistans
 medelhöjd
 medelklass
 medellivslängd
@@ -14073,6 +14111,7 @@ mål
 måla
 måla av
 måla fan på väggen
+måla in sig i ett hörn
 måla sig
 måla upp
 måla ut
@@ -14498,6 +14537,7 @@ notskrift
 nougat
 novation
 novell
+novellfilm
 november
 nu
 nu för tiden
@@ -14686,11 +14726,14 @@ nåt
 nåta
 nåväl
 nöd
+nödanrop
 nöden har ingen lag
+nöden är uppfinningarnas moder
 nöden är upp­finningarnas moder
 nödfall
 nödga
 nödhjälp
+nödsignal
 nödtorft
 nödtorftig
 nödutgång
@@ -15814,6 +15857,8 @@ platsannons
 platt
 platta
 plattform
+plattysk
+plattyska
 platå
 plausibel
 plebs
@@ -16973,6 +17018,7 @@ runga
 runka
 runsten
 runt
+runt hörnet
 runtom
 runtomkring
 rus
@@ -19186,6 +19232,7 @@ spis
 spisa av
 spisel
 spiselhäll
+spisning
 spjut
 spjutkastning
 spjäla
@@ -20280,6 +20327,7 @@ sällan
 sällhet
 sällsam
 sällskap
+sällskapa
 sällskapsdjur
 sällskapssjuk
 sällsynt
@@ -21515,6 +21563,7 @@ trögfattad
 tröghet
 tröghetslag
 tröja
+tröska
 tröskel
 tröst
 trösta
@@ -21733,6 +21782,7 @@ tärd
 tärna
 tärning
 tät
+täte
 täthet
 tätort
 tätting
@@ -22351,6 +22401,8 @@ utagerande
 utan
 utan en tråd på kroppen
 utan rast och/eller ro
+utan vidare
+utan vidare spisning
 utandas
 utandning
 utanför
@@ -23106,6 +23158,7 @@ vara född med en silver­sked i mun(nen)
 vara född under en lycklig stjärna
 vara för handen
 vara huvudet högre
+vara i gott sällskap
 vara i händerna på någon/något
 vara i slag
 vara i var mans mun
@@ -23116,6 +23169,7 @@ vara kemiskt fri från något
 vara lika som bär
 vara liten i maten
 vara lätt på foten
+vara med på ett hörn
 vara nummer ett
 vara nära att
 vara någon upp i dagen
