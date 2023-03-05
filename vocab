@@ -965,6 +965,8 @@ function newInputWrapper(e) {
 	let word = $('#iInput').val();
 	if (word.indexOf("@") === 0) {
 		let newClass  = fullClassName(word.substr(1));
+		REGEX_WORDS = [];		
+		N_REGEX = 0;
 		if (newClass != "list") {
 			setClass(newClass);		
 		} else {
@@ -1054,7 +1056,10 @@ function seekWord(word, link = false) {
 		word = word.substr(0,word.length-1)
 	}
 	// Always regex for phrases
-	if (CLASS === "fraser") word = ".*" + word;
+	if (CLASS === "fraser") {
+		word = ".*" + word;
+		word = word.replaceAll("/","\/");
+	}
 	$('#iCntRegex').html("");
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
 	// Regex support
@@ -1305,8 +1310,7 @@ function setClass(c, seek = "") {
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	LAST_CLASS = CLASS;
 	wordCount();
-	if (c != CLASS) {
-		REGEX_WORDS = [];
+	if (c != CLASS) {		
 		REGEX_WORDS = [];
 		N_REGEX = 0;
 		$('#iCntRegex').html("");
@@ -1504,6 +1508,7 @@ function addWord(remove = false) {
 	let word = $('#iInput').val();		
 	let del = word[word.length-1] === "." || remove;
 	if (word[0] === '.') word = word.slice(1,word.length);
+	word = word.replaceAll("/","\/");
 	if (word[word.length-1] === '.') word = word.slice(0,word.length-1);
 	if (word.length > 0) {
 		let op = "add"	
@@ -1903,6 +1908,7 @@ function preProc(def) {
 			s = grammer(s,"vanligen pass. och perfekt particip");
 			s = grammer(s,"vanligen pass. el. part.");
 			s = grammer(s,"vanligen refl. el. pass.");
+			s = grammer(s,"vanligen refl. el. perfekt particip.");
 			s = grammer(s,"ofta bestämd form");
 			s = grammer(s,"ofta i perfekt particip");
 			s = grammer(s,"ofta perfekt particip");
@@ -2445,6 +2451,7 @@ function editMore(ev,key) {
 }
 function processKeyDown(elHTML,ev) {
 	if (DEBUG) console.log("processKeyDown(ev)")	
+	
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
 	}
@@ -2470,12 +2477,13 @@ function processKeyDown(elHTML,ev) {
 		}
 	}
 	if (ev.key === "PageDown") {
+		ev.preventDefault();
 		scrollViewDown();
 	} else if (ev.key === "PageUp") {
 		scrollViewUp(ev);
 	} else if (ev.key === '§' || ev.key === '`') {
-		getLastWord();
-		ev.preventDefault();		
+		ev.preventDefault();
+		getLastWord();	
 	}	
 }
 function clearMore() {
