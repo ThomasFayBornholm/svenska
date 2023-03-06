@@ -311,6 +311,8 @@ betyg
 bevarande
 bevis
 bi
+bibelord
+bibelspråk
 bibliotek
 bidrag
 bifall
@@ -341,6 +343,7 @@ blodmjöl
 blodprov
 blodtryck
 blogginlägg
+blomfoder
 blomster
 bläck
 blänk
@@ -419,6 +422,7 @@ byggenskap
 byggnadsverk
 bymoln
 byte
+bytesobjekt
 bäcken
 bälte
 bär
@@ -426,6 +430,7 @@ båg
 bågskytte
 bål
 bårhus
+båthus
 böj
 bönehus
 böneutrop
@@ -561,6 +566,7 @@ eftersök
 eftertryck
 egensinne
 ego
+ekfat
 ekipage
 eko
 ekonomibiträde
@@ -714,6 +720,7 @@ fotfäste
 foto
 fotografi
 fotspår
+fotvalv
 fraktfartyg
 framdäck
 framhjul
@@ -730,6 +737,7 @@ frontavsnitt
 fruktkött
 fruntimmer
 frysfack
+frälsningsmöte
 frändskap
 fräs
 frågetecken
@@ -941,6 +949,7 @@ gods
 godståg
 godtycke
 golv
+gomtak
 gottfinnande
 gradtal
 grafem
@@ -1013,6 +1022,7 @@ hamsterhjul
 handbagage
 handeldvapen
 handelsbolag
+handelshus
 handfat
 handgemäng
 handgången
@@ -1265,6 +1275,7 @@ kall
 kallprat
 kallvatten
 kalvkött
+kalvstek
 kamouflage
 kamratskap
 kansli
@@ -1349,6 +1360,7 @@ kommentarsfält
 kommunalråd
 kommunistparti
 kompani
+kompasshus
 kompilat
 komplement
 komplimang
@@ -1404,6 +1416,7 @@ krigsfartyg
 krikon
 kriterium
 krokben
+kronblad
 kronvrak
 kroppsarbete
 kroppsbyggande
@@ -1426,6 +1439,7 @@ kugghjul
 kulsprutegevär
 kulsprutepistol
 kulturarv
+kulturhus
 kulturkrig
 kummel
 kungadöme
@@ -1454,6 +1468,7 @@ känselspröt
 känsloliv
 kärl
 kärleksgnabb
+kärnhus
 kärnkraftverk
 kärnvapen
 kärnvirke
@@ -1560,6 +1575,7 @@ läge
 läger
 lägerbål
 läggspel
+läkarhus
 läkemedel
 läkkött
 lämmeltåg
@@ -1702,6 +1718,7 @@ mms
 mobilnummer
 mod
 mode
+modehus
 modelejon
 modeord
 moderbolag
@@ -1767,7 +1784,9 @@ nafs
 nagelsax
 nageltrång
 nagelört
+nakterhus
 namn
+namnbyte
 narkotikum
 narrspel
 nationalepos
@@ -1804,6 +1823,7 @@ nuläge
 nummer
 nybygge
 nyckelax
+nyförvärv
 nyhetsbrev
 nyhetsflöde
 nyp
@@ -1841,6 +1861,7 @@ ogräs
 ok
 okvädningsord
 okynne
+oljebyte
 oljekraftverk
 oljepris
 oljud
@@ -2002,6 +2023,7 @@ pågående
 påhitt
 påhopp
 påhäng
+pålstek
 pålägg
 påpekande
 påskeld
@@ -2089,8 +2111,12 @@ rusmedel
 russ
 russin
 ryck
+ryggläge
 ryggradsdjur
 ryggsim
+ryggskott
+ryggslut
+ryggstöd
 rykte
 rymdmått
 räcke
@@ -2239,6 +2265,7 @@ skolbarn
 skollov
 skolverk
 skonummer
+skotstek
 skott
 skottår
 skov
@@ -2270,6 +2297,7 @@ skum
 skutt
 skvaller
 skydd
+skyddshelgon
 skyfall
 skymford
 skytte
@@ -2394,6 +2422,7 @@ spegelmonogram
 spegelteleskop
 spekulum
 spel
+spelarbyte
 spelrum
 spex
 spionage
@@ -2441,6 +2470,7 @@ stavhopp
 stearin
 stearinljus
 steg
+stenansikte
 stenparti
 stick
 stickord
@@ -2571,6 +2601,7 @@ sömnmedel
 sönderfall
 sötvatten
 tack
+tacktal
 tag
 tagande
 tagel
@@ -2692,6 +2723,7 @@ trehjuling
 trettiotal
 trick
 tripp
+trix
 troll
 trossamfund
 trosskydd
@@ -2938,6 +2970,7 @@ vetebröd
 vetenskapsråd
 veto
 vett
+vevhus
 vevlager
 vide
 vidunder

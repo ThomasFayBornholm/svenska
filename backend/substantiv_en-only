@@ -821,6 +821,7 @@ bak
 bakdel
 bakelse
 bakform
+bakfot
 bakfylla
 bakgrund
 bakplåt
@@ -1118,6 +1119,7 @@ bergakung
 bergamott
 bergart
 bergbana
+bergborrning
 bergek
 bergfink
 berggrund
@@ -1286,6 +1288,7 @@ bleckblåsinstrument
 blekselleri
 blick
 blindgata
+blindpatron
 blindtarm
 blinker
 blinkning
@@ -1310,6 +1313,7 @@ blogg
 bloggare
 bloggerska
 blomholk
+blomkrona
 blomkruka
 blomkål
 blomma
@@ -1359,6 +1363,7 @@ bokhandel
 bokhylla
 boklåda
 bokning
+bokrygg
 bokstav
 bokstavstro
 boll
@@ -1398,6 +1403,7 @@ borgensförbindelse
 borgmästare
 boricka
 borr
+borrkrona
 borrmaskin
 borrsväng
 borste
@@ -1485,10 +1491,12 @@ brottsling
 browser
 brud
 brudgum
+brudkrona
 brugd
 brukare
 bruksanvisning
 bruksort
+brukspatron
 brunch
 brunn
 brunnsort
@@ -1579,6 +1587,7 @@ byråkrat
 byråkrati
 byssja
 byst
+byteshandel
 byxa
 byxkjol
 byäldste
@@ -2154,6 +2163,7 @@ ejder
 ek
 eker
 ekipering
+eklampsi
 eko
 ekonom
 ekonomi
@@ -2373,6 +2383,7 @@ famn
 fan
 fana
 fanatism
+fanken
 fantasi
 fantast
 fantom
@@ -2434,6 +2445,7 @@ femhörning
 feminism
 feminist
 femkamp
+femkrona
 femma
 femtedel
 femtiokronorssedel
@@ -2760,6 +2772,8 @@ fräken
 fräkne
 frälsare
 frälsning
+frälsningsarmén
+frälsningssoldat
 främling
 frände
 fräs
@@ -3422,6 +3436,7 @@ grej
 grek
 gren
 greve
+grevinna
 grevé
 grill
 grillbar
@@ -3937,6 +3952,7 @@ häxsabbat
 håbrand
 håg
 håkäring
+hålfot
 hålighet
 hållare
 hållbarhet
@@ -4008,6 +4024,7 @@ högspänningsanläggning
 högstadieålder
 högtalare
 högtid
+högtrycksrygg
 högtyska
 högvarv
 höjd
@@ -4341,6 +4358,7 @@ isvak
 italienska
 iver
 jacka
+jacketkrona
 jackett
 jagare
 jage
@@ -4432,6 +4450,8 @@ jujutsu
 jukebox
 jul
 julafton
+julgran
+julgransfot
 juli
 julklapp
 julle
@@ -4650,6 +4670,7 @@ kedja
 kedjekrans
 kedjereaktion
 kejsare
+kejsarkrona
 kemi
 kemikalie
 kemist
@@ -4725,6 +4746,7 @@ klubba
 klubbafton
 klump
 klumpeduns
+klumpfot
 klunga
 klunk
 klyfta
@@ -4950,6 +4972,7 @@ kontinuitet
 kontinuum
 kontorsstol
 kontradiktion
+kontraktsvård
 kontrast
 kontroll
 kontrollavgift
@@ -5077,9 +5100,11 @@ krok
 krokant
 kromosom
 krona
+kronhjort
 kronofogde
 kronolekt
 kronologi
+kronopark
 kronärtskocka
 kropp
 kroppkaka
@@ -5153,6 +5178,7 @@ kummel
 kund
 kundvagn
 kung
+kungakrona
 kungörelse
 kunskap
 kunskapsfråga
@@ -5317,6 +5343,7 @@ lakrits
 laktos
 lakun
 lampa
+lampfot
 landgång
 landhöjning
 landis
@@ -5492,6 +5519,7 @@ lottarörelse
 lotus
 lovprisning
 lp
+luciakrona
 lucka
 luffare
 luft
@@ -5504,6 +5532,7 @@ luftström
 luftväg
 luftvägsinfektion
 lukt
+lumbago
 luminans
 lump
 lunch
@@ -5538,6 +5567,7 @@ lymfkörtel
 lymmel
 lyriker
 lysning
+lyspatron
 lyssnare
 lyster
 lystnad
@@ -6294,6 +6324,7 @@ nymf
 nymodighet
 nymåne
 nysning
+nystart
 nytta
 nyttighet
 nytändning
@@ -6313,6 +6344,7 @@ näsa
 näsborre
 näsdroppe
 näsduk
+näsrygg
 näthinna
 nätmaska
 nättelduk
@@ -6602,6 +6634,7 @@ patina
 patriark
 patriot
 patriotism
+patron
 patrull
 patrullbåt
 patt
@@ -6723,6 +6756,7 @@ plats
 platsannons
 platta
 plattform
+plattfot
 plattyska
 platå
 plebs
@@ -6787,6 +6821,7 @@ populist
 por
 pornografi
 porr
+porslinskrona
 port
 portalfigur
 portfölj
@@ -6924,6 +6959,7 @@ publicist
 publicistik
 publik
 publikation
+puckelrygg
 pudding
 pudel
 puff
@@ -7023,6 +7059,7 @@ rashygien
 rasism
 rasist
 rast
+rastplats
 ration
 rationalism
 ratt
@@ -7260,6 +7297,7 @@ ryckighet
 ryckning
 rygg
 ryggbedövning
+ryggkota
 ryggmärg
 ryggrad
 ryl
@@ -7390,6 +7428,7 @@ salmiak
 salpingit
 saltbildare
 salva
+salvationist
 salvia
 samarbetsman
 samba
@@ -7825,6 +7864,8 @@ skvadron
 skvätt
 sky
 skyddskår
+skyddspatron
+skyddstillsyn
 skyddstull
 skyddsängel
 skyffel
@@ -8232,6 +8273,7 @@ stekburgare
 stekpanna
 stekvändare
 sten
+stenfot
 stenkoll
 stensöta
 stentorsstämma
@@ -8335,6 +8377,7 @@ strof
 struktur
 struma
 strumpa
+strumpfot
 struntsak
 strut
 struts
@@ -8452,6 +8495,7 @@ svalka
 svallvåg
 svamp
 svan
+svankrygg
 svans
 svansföring
 svanskota
@@ -8596,6 +8640,7 @@ tabell
 tablett
 tabloid
 tablå
+tabu
 tabulator
 taburett
 tacka
@@ -9042,6 +9087,7 @@ tröja
 tröska
 tröskel
 tröst
+trötthet
 tub
 tuba
 tuberkulos
@@ -9141,6 +9187,7 @@ tårta
 tårtgaffel
 töm
 törn
+törnekrona
 törst
 tös
 ubåt
@@ -9811,6 +9858,7 @@ vitterhet
 vittring
 vittvätt
 vodka
+vokalmusik
 volley
 volleyboll
 volontär
@@ -10175,6 +10223,7 @@ zucchini
 ärkebiskop
 ärkefiende
 ärkehertig
+ärkeängel
 ärlighet
 ärm
 ärmbräda
