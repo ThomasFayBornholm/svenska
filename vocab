@@ -1511,6 +1511,8 @@ function addWord(remove = false) {
 	let del = (word[word.length-1] === "." && word.indexOf("..") === -1) || remove;
 	if (word[0] === '.') word = word.slice(1,word.length);
 	word = word.replaceAll("/","\/");
+	// Don't want characters in the storage key that the user would not enter
+	word = word.replaceAll("­","");
 	if (word[word.length-1] === '.' && del) word = word.slice(0,word.length-1);
 	if (word.length > 0) {
 		let op = "add"	
