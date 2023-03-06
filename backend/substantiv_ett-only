@@ -228,6 +228,7 @@ balanssinne
 balloptikon
 bambuskott
 band
+bandage
 baner
 bank
 barbari
@@ -344,6 +345,7 @@ blodprov
 blodtryck
 blogginlägg
 blomfoder
+blomskaft
 blomster
 bläck
 blänk
@@ -623,6 +625,7 @@ externat
 extremvärde
 fabeldjur
 fack
+fackförbund
 fackspråk
 faktum
 fall
@@ -1304,6 +1307,7 @@ kex
 kilogram
 kisel
 kitt
+klackjärn
 klagomål
 klamp
 klander
@@ -1460,6 +1464,7 @@ kyffe
 kylskåp
 kynne
 kyrkoår
+kyrktorn
 källvärde
 kännemärke
 kännetecken
@@ -1695,6 +1700,7 @@ minne
 minnesmärke
 minoritetsspråk
 minus
+minutpris
 minvärde
 mirakel
 missbruk
@@ -1835,6 +1841,7 @@ näringsliv
 näringsställe
 näringsvärde
 närområde
+närsamtal
 näs
 näsblod
 näste
@@ -1881,6 +1888,7 @@ omsvep
 omtal
 omval
 opium
+oppositionsparti
 oratorium
 ord
 ordalag
@@ -1920,6 +1928,8 @@ parlament
 partaj
 parti
 particip
+partipris
+partitur
 partnerskap
 party
 pass
@@ -2082,13 +2092,31 @@ resultat
 rev
 revben
 rike
+riks
+riksarkiv
 riksdagsbeslut
+riksdagshus
+riksdagsmandat
 riksdagsparti
+riksdagstryck
 riksdagsval
-riksförbund
+riksgenomsnitt
+riksmål
+riksmöte
+riksnät
+riksplan
+riksråd
+riksröse
+rikssamtal
 riksspråk
+rikssvärd
+riksvapen
 riksäpple
+riktmedel
 riktmärke
+riktnummer
+riktpris
+rim
 ringfinger
 ringrev
 ris
@@ -2146,6 +2174,7 @@ sagodjur
 sakförhållande
 sakläge
 salt
+saltkött
 saltvatten
 saluvärde
 samarbete
@@ -2185,6 +2214,7 @@ sanningsvärde
 scenario
 sceneri
 schack
+schackparti
 schampo
 schema
 scoop
@@ -2336,6 +2366,7 @@ slutfall
 slutled
 slutljud
 slutskede
+slädparti
 släkte
 släktled
 släktnamn
@@ -2453,6 +2484,7 @@ spöregn
 spörsmål
 stackmoln
 stadium
+stadsbud
 staffage
 staket
 stall
@@ -2802,6 +2834,7 @@ ungdjur
 ungdomsarbete
 ungdomsförbund
 ungdomsråd
+ungnöt
 universitet
 universum
 uns
