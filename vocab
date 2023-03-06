@@ -1058,7 +1058,9 @@ function seekWord(word, link = false) {
 	// Always regex for phrases
 	if (CLASS === "fraser") {
 		word = ".*" + word;
-		word = word.replaceAll("/","\/");
+		word = word.replaceAll("/","\\/");
+		word = word.replaceAll("(","\\(");
+		word = word.replaceAll(")","\\)");
 	}
 	$('#iCntRegex').html("");
 	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
@@ -1506,10 +1508,10 @@ function removeWord() {
 function addWord(remove = false) {	
 	if (DEBUG) console.log("addWord()");	
 	let word = $('#iInput').val();		
-	let del = word[word.length-1] === "." || remove;
+	let del = (word[word.length-1] === "." && word.indexOf("..") === -1) || remove;
 	if (word[0] === '.') word = word.slice(1,word.length);
 	word = word.replaceAll("/","\/");
-	if (word[word.length-1] === '.') word = word.slice(0,word.length-1);
+	if (word[word.length-1] === '.' && del) word = word.slice(0,word.length-1);
 	if (word.length > 0) {
 		let op = "add"	
 		if (del) op = "remove"
@@ -1854,9 +1856,10 @@ function preProc(def) {
 			}
 			// ToDo Move the (many) grammer pattern definitions to the function body
 			// grammer information
-			s = grammer(s, "i negerade och frågande samman­hang")
-			s = grammer(s, "ofta i substantivisk an­vändning")
-			s = grammer(s, "nästan en­bart bestämd form sing.")
+			s = grammer(s, "anv. som plur.");
+			s = grammer(s, "i negerade och frågande samman­hang");
+			s = grammer(s, "ofta i substantivisk an­vändning");
+			s = grammer(s, "nästan en­bart bestämd form sing.");
 			s = grammer(s, "vanligen i böjda former");
 			s = grammer(s, "nästan alltid bestämd form sing. och med versal");
 			s = grammer(s, "ofta bestämd form sing. och med versal");
