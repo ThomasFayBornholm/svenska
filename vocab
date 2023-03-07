@@ -1005,6 +1005,8 @@ function newInputWrapper(e) {
 function seekWordSingleClass(word) {	
 	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)		
 	if (word.length > 0) {
+		// Any user supplied break breaks are discarded.
+		word = word.replaceAll("­","");
 		LAST_WORD = CUR_WORD;
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
@@ -1046,6 +1048,9 @@ function seekWordSingleClass(word) {
 // Link is set if this seek is called from a clickable link
 function seekWord(word, link = false) {	
 	if (DEBUG) console.log("seekWord(word, link),word = " + word + ", link = " + link)
+	// Any user supplied break breaks are discarded.
+	word = word.replaceAll("­","");
+	console.log(word)
 	REGEX_WORDS = [];
 	if (word[word.length-1] === "." || word.indexOf('+') != -1) {		
 		addWord();
@@ -1702,7 +1707,7 @@ function preProc(def) {
 				s = s.slice(1,s.length)
 			}
 			// Defuault to "pretty" leading bullet point
-			if (s[0].match(/[a-zäöå([]+/) != null) {
+			if (s[0].match(/[<a-zäöå([]+/) != null) {
 				s = `\u25CF ` + s;
 			}
 			// Leading Meta tags
