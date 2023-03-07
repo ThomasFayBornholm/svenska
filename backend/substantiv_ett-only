@@ -1213,6 +1213,7 @@ inkännande
 inköp
 inköpspris
 inljud
+inlopp
 inlägg
 innanmäte
 innehav
@@ -1285,7 +1286,13 @@ järn
 järnbruk
 kadaver
 kaffe
+kaffeautomat
+kaffeblask
+kaffebord
 kaffebröd
+kaffefilter
+kafferep
+kaffeträd
 kakaofett
 kakaopulver
 kakaosmör
@@ -1703,6 +1710,7 @@ medlemskort
 medlemsland
 medlemstapp
 medlidande
+medljud
 medlut
 medvetande
 mejeri
@@ -2203,6 +2211,7 @@ rättssamhälle
 rättsväsende
 rå
 råd
+rådhus
 rådjur
 rån
 råplugg
@@ -2305,11 +2314,23 @@ sjukhus
 sjukvårdsbiträde
 sjuttiotal
 självbedrägeri
+självbestämmande
 självfall
 självförsvar
 självförtroende
+självförverkligande
+självhushåll
+självkostnadspris
+självljud
 självmord
+självmål
+självplock
+självporträtt
+självstudium
 självstyre
+självsvåld
+självtest
+självändamål
 sjå
 sjöflygplan
 sjögräs
@@ -2537,7 +2558,12 @@ spöregn
 spörsmål
 stackmoln
 stadium
+stadsbibliotek
 stadsbud
+stadshotell
+stadshus
+stadsliv
+stadsvapen
 staffage
 staket
 stall
@@ -3046,6 +3072,7 @@ varv
 vatten
 vattendrag
 vattenfall
+vattenkraftverk
 vattenstånd
 vattenur
 vax
@@ -3080,6 +3107,7 @@ viltkött
 vin
 vinbär
 vindfälle
+vindkraftverk
 vindspel
 vinkeljärn
 vinterdäck
@@ -3126,6 +3154,7 @@ världshav
 världskrig
 världsrykte
 värme
+värmekraftverk
 värmenät
 värn
 väsen
@@ -3175,6 +3204,7 @@ zoo
 ädelmod
 ädelpekoral
 ägande
+ägarskap
 ägg
 äggkläckningsmaskin
 äggläggningsrör
