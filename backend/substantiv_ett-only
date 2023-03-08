@@ -20,6 +20,9 @@ aggregationstillstånd
 agn
 akterspegel
 aktiebolag
+aktiebrev
+aktiekapital
+aktiesparande
 aktievärde
 akvarium
 album
@@ -356,8 +359,25 @@ blåsväder
 blötdjur
 boende
 bokband
+bokbord
 bokbål
+bokcafé
+bokförlag
+bokhantverk
+bokmärke
+bokmål
 bokningsnummer
+bokomslag
+bokslut
+bokstavsbarn
+bokstavsbetyg
+bokstavsparti
+bokstavsrim
+bokstipendium
+bokstöd
+boktryck
+boktryckeri
+bokverk
 bolag
 bollplank
 bollsinne
@@ -1116,6 +1136,7 @@ huvudbry
 huvudkontor
 hyckleri
 hydroplan
+hyperaktivitetssyndrom
 hyreshus
 hyss
 häfte
@@ -1152,13 +1173,18 @@ hårstrå
 hårsvall
 hårvatten
 högblad
+högdjur
+högerparti
 högfjäll
 högfrekvensegenskap
 höghus
+höginkomstland
 högkvarter
 högmod
+högnivåspråk
 högrev
 högstadium
+högtryck
 högvatten
 högvilt
 höjdhopp
@@ -1221,6 +1247,7 @@ innehåll
 innelag
 inneröra
 inpass
+inrim
 inrop
 insegel
 inskott
@@ -1301,6 +1328,7 @@ kakel
 kalas
 kalendarium
 kalenderår
+kalfjäll
 kall
 kallprat
 kallvatten
@@ -1322,6 +1350,7 @@ karosseri
 kartogram
 kasino
 kast
+kastspö
 kasus
 katalognummer
 kattguld
@@ -1637,7 +1666,14 @@ läte
 lättsinne
 lättvin
 lågblad
+lågenergisamhälle
 lågfjäll
+låghus
+låginkomstland
+lågland
+låglöneland
+lågnivåspråk
+lågpriskort
 lågstadium
 lågtryck
 lågvatten
@@ -1645,7 +1681,14 @@ lågvattenmärke
 lån
 lånekort
 lånetak
+långbord
 långfinger
+långhus
+långkok
+långlopp
+långmod
+långnäbb
+långskepp
 lånord
 lår
 lås
@@ -1699,6 +1742,7 @@ medborgarskap
 meddelande
 meddelarskydd
 medel
+medelinkomstland
 medeltal
 medelvärde
 medgivande
@@ -2038,6 +2082,7 @@ postfack
 postludium
 postnummer
 postulat
+potatismos
 prat
 precedensfall
 predikat
@@ -2181,6 +2226,7 @@ rofferi
 rollfack
 rop
 ros
+rotmos
 rotorblad
 rotsystem
 rottecken
@@ -2437,6 +2483,7 @@ slutbetyg
 slutfall
 slutled
 slutljud
+slutrim
 slutskede
 slädparti
 släkte
@@ -2530,6 +2577,7 @@ spel
 spelarbyte
 spelrum
 spex
+spinnspö
 spionage
 spioneri
 spjut
@@ -2661,6 +2709,9 @@ supinum
 svaj
 svammel
 svar
+svavel
+svavelväte
+sveamål
 svedjebruk
 svek
 svensktalande
@@ -2738,6 +2789,7 @@ teach-in
 team
 tecken
 teckenspråk
+tefat
 tekniksprång
 telefonnummer
 telefonsamtal
@@ -2829,6 +2881,7 @@ trafikljus
 trakasseri
 tramp
 trams
+transept
 trappräcke
 trappsteg
 trassel
@@ -2868,6 +2921,7 @@ tungsinne
 tunnband
 tvistemål
 tvivel
+tvärskepp
 tvärsnitt
 tvärstopp
 tvättfat
@@ -2896,6 +2950,7 @@ tö
 töcken
 u-land
 uddljud
+uddrim
 ultimatum
 ultraljud
 umbärande
@@ -3076,6 +3131,7 @@ vattenkraftverk
 vattenstånd
 vattenur
 vax
+veck
 veckberg
 vedernamn
 vedträ
