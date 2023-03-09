@@ -344,6 +344,7 @@ ans
 ansamling
 ansats
 ansiktsbjudning
+ansiktsblidnhet
 ansiktsblind
 ansiktsblindhet
 ansiktsigenkänning
@@ -373,6 +374,7 @@ ansvarsförbindelse
 ansvarskänsla
 ansvarsnämnd
 ansvällning
+ansök
 ansökan
 ansökning
 ansökningstid
@@ -515,6 +517,7 @@ aritmetik
 ark
 arkeologi
 arketyp
+arkiater
 arkipelag
 arkitekt
 arkitektur
@@ -533,6 +536,7 @@ artighetsfras
 artikel
 artilleripjäs
 artist
+artskillnad
 artär
 arvfiende
 arvsfaktor
@@ -1256,23 +1260,96 @@ bigarrå
 bikupa
 bil
 bilaga
+bilbarnstol
+bilbatteri
+bilbesiktning
+bilbomb
 bild
+bildbyline
+bildbyrå
+bilddyrkan
+bilderbok
+bildgåta
 bildhuggare
+bildhuggarkonst
+bildhuggeri
+bildkonst
 bildläsare
 bildning
+bildningshögfärd
+bildningsnivå
+bildningsorganisation
+bildningsroman
+bildningstörst
+bildningsverksamhet
+bildprakt
+bildredaktör
+bildrulle
+bildruta
+bildsignal
 bildskrift
 bildskärm
+bildskärpa
+bildsnidare
+bildsnideri
+bildsten
 bildstod
+bildstormare
+bildstrid
+bildsvit
+bildtelefon
+bildtext
+bildvävnad
+bildåre
+bildöverföring
+bilfärja
 bilförare
+bilförlossning
+bilingualism
+bilism
 bilist
+biljakt
 biljard
+biljardboll
+biljardkö
+biljardsalong
 biljett
+biljettautomat
+biljettexpedition
+biljettkontroll
 biljettlucka
+biljettmaskin
+biljettvisering
+biljon
+bilkarta
+bilkår
+bilkårist
+bilkö
+bill
+billast
+billighet
+billots
 bilmekaniker
+bilnyckel
 bilolycka
+bilorientering
+bilparkering
+bilpool
+bilprovning
+bilrally
+bilring
+bilskatt
+bilskola
+bilstol
+bilstöld
+biltunnel
 biltvättanläggning
 biluthyrning
+bilverkstad
 bilväg
+bilägare
+bimbo
+bimetall
 bindare
 bindel
 bindevokal
@@ -1471,6 +1548,7 @@ borttagning
 bortträngning
 borätt
 boskap
+boskillnad
 boss
 bostad
 bostadsmarknad
@@ -1653,6 +1731,7 @@ byäldste
 bäck
 bädd
 bägare
+bälteskudde
 bänk
 bärare
 bärgning
@@ -1982,6 +2061,7 @@ dialekt
 dialog
 dialys
 diamant
+diarium
 diarré
 diaspora
 diatrib
@@ -2204,6 +2284,7 @@ eftergift
 eftergivenhet
 efterhand
 efterhandskonstruktion
+efterklang
 efterkommande
 efterkonstruktion
 efterkrigstid
@@ -2552,12 +2633,14 @@ filt
 filé
 fimp
 final
+finans
 finansiering
 finanskris
 finansminister
 finanspolitik
 finansrådgivare
 finess
+finger
 fingernagel
 fingerspets
 fingertopp
@@ -2750,6 +2833,7 @@ fotografering
 foton
 fotoresistor
 fotskrapa
+fotsvamp
 frack
 fradga
 frakt
@@ -2857,6 +2941,7 @@ fråga
 frågeform
 frågespalt
 frågesport
+frågestund
 frågeställning
 frånsida
 frånvaro
@@ -2923,6 +3008,7 @@ färjeterminal
 färla
 färs
 fästman
+fästmo
 fästmö
 fästning
 fågel
@@ -3462,6 +3548,7 @@ gnejs
 gnista
 gnom
 gnutta
+gnäll
 go-go-flicka
 gobeläng
 godbit
@@ -3500,6 +3587,7 @@ grad
 gradation
 gradient
 gradmätning
+gradskillnad
 graf
 grafit
 grammatik
@@ -3612,6 +3700,7 @@ gudinna
 gudom
 gudsfruktan
 gudstjänst
+gudstjänste
 gudunge
 guide
 gula
@@ -3849,6 +3938,7 @@ hemmaplan
 hemort
 hemresa
 hemsida
+hemskillnad
 hemställan
 hemuppgift
 hemvist
@@ -4197,6 +4287,7 @@ ideologi
 idiolekt
 idiot
 idisslare
+idolatri
 idrott
 idrottare
 idrottsdag
@@ -4875,6 +4966,7 @@ klartext
 klass
 klassificering
 klassiker
+klasskillnad
 klasskonferens
 klasslärare
 klassresa
@@ -5506,6 +5598,7 @@ köpman
 kör
 körare
 körning
+körskola
 körtel
 köttbulle
 köttfärs
@@ -5656,6 +5749,7 @@ liturgi
 livbåt
 livmoder
 livrem
+livräddning
 livränta
 livscykel
 livsfara
@@ -5713,7 +5807,6 @@ lp
 luciakrona
 lucka
 luffare
-luft
 luftaffär
 luftfart
 luftförorening
@@ -5930,6 +6023,7 @@ manager
 manchesterliberalism
 mandala
 mandarin
+mandarin 
 mandatperiod
 mandel
 mandolin
@@ -6085,6 +6179,7 @@ mekanism
 melanin
 melankoli
 mellanhand
+mellanskillnad
 mellanstadielärare
 mellantid
 mellanvåg
@@ -6215,6 +6310,7 @@ modellera
 modenyck
 moderat
 moderator
+moderator 
 modernisering
 modernäring
 modfälldhet
@@ -6252,6 +6348,7 @@ morfinist
 morfologi
 morgon
 morgondag
+morgonstund
 mormon
 mormor
 morot
@@ -6439,7 +6536,6 @@ nattmara
 nattmössa
 nattro
 nattskjorta
-nattslända
 nattsmyg
 nattuggla
 nattvakt
@@ -6495,6 +6591,7 @@ nerv
 nervgift
 nervositet
 nesa
+nettoström
 neurit
 neuros
 neutralitet
@@ -6599,6 +6696,7 @@ näsborre
 näsdroppe
 näsduk
 näsrygg
+nästipp
 nätdrift
 näthinna
 nätmaska
@@ -6903,6 +7001,7 @@ paus
 paviljong
 pedagog
 pedal
+pekbok
 pelare
 pelikan
 pelikanfågel
@@ -7116,6 +7215,7 @@ poäng
 praktik
 praktikant
 pralin
+pratstund
 praxis
 precision
 preciös
@@ -7201,6 +7301,7 @@ protektionism
 protes
 protest
 proton
+protopl
 protoplasma
 prototyp
 protozo
@@ -7295,6 +7396,7 @@ påve
 påverkan
 pöbel
 quisling
+quizza
 rabalder
 rabarber
 rabatt
@@ -7458,6 +7560,7 @@ resistans
 resistor
 resning
 resolution
+resonans
 resorption
 respekt
 respiration
@@ -7471,6 +7574,7 @@ restprodukt
 restriktion
 resumé
 resurs
+resväska
 retardation
 retning
 retorik
@@ -8183,6 +8287,7 @@ skogsindustri
 skojare
 skola
 skolbuss
+skolgång
 skolgård
 skolpeng
 skomakare
@@ -8344,7 +8449,6 @@ slägga
 släkt
 släktforskning
 släkting
-slända
 släng
 slänggunga
 slängkappa
@@ -8432,6 +8536,7 @@ snö
 snöboll
 snödriva
 snölykta
+snöplog
 snörpvad
 socialdemokrat
 socialhjälp
@@ -8439,6 +8544,7 @@ socialism
 socialist
 socialliberalism
 socialtjänst
+socialtjänste
 sociolekt
 sociologi
 socka
@@ -8703,6 +8809,7 @@ stig
 stil
 stilettklack
 stilfigur
+stillfilm
 stillhet
 stiltje
 stimulans
@@ -8932,6 +9039,7 @@ svedjebrukare
 svensexa
 svensk
 svenska
+svetsloppa
 svetsning
 svett
 svikt
@@ -9142,6 +9250,7 @@ teknik
 tekniker
 teknokrat
 teknologi
+telefax
 telefon
 telefoni
 telefonkiosk
@@ -9392,6 +9501,7 @@ trafikkorsning
 trafikled
 trafikomläggning
 trafiksignal
+trafikskola
 trafikstockning
 tragedi
 tragik
@@ -9924,6 +10034,7 @@ utgård
 utgåva
 uthamn
 uthuggning
+uthyra
 uthyrning
 uthållighet
 uthållighetstävling
@@ -10142,6 +10253,7 @@ varmluft
 varmluftballong
 varning
 varningsklocka
+varsebliva
 varseblivning
 varulv
 vas
@@ -10153,6 +10265,7 @@ vattenkanna
 vattenklosset
 vattenkokare
 vattenkran
+vattenloppa
 vattenmelon
 vattenrutschbana
 vattenskida
@@ -10195,6 +10308,7 @@ verktygssats
 veronika
 vers
 versal
+verse
 versfot
 version
 vertebrat
@@ -10397,6 +10511,7 @@ världsmästare
 världsrymd
 världstid
 världsvana
+världs­vana
 värme
 värmeanläggning
 värmebölja
@@ -10709,6 +10824,7 @@ zucchini
 ättestupa
 ättika
 ättiksgurka
+ättiksprit
 ättiksyra
 ättling
 äventyrare
@@ -10766,6 +10882,7 @@ zucchini
 åldersbestämning
 åldersdemens
 åldersforskning
+åldersfördelning
 åldersförändring
 åldersgrupp
 åldersgräns
