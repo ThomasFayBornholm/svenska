@@ -1852,10 +1852,12 @@ bakelse
 bakerst
 bakform
 bakfot
+bakfull
 bakfylla
 bakgrund
 bakhal
 bakhjul
+bakis
 baklänges
 bakochfram
 bakom
@@ -3007,6 +3009,7 @@ blicka
 blidka
 blind
 blindgata
+blindgångare
 blindpatron
 blindtarm
 blinka
@@ -3289,6 +3292,7 @@ borste
 borstsvans
 bort
 borta
+bortalag
 bortanför
 bortaplan
 bortarbeta
@@ -4258,6 +4262,7 @@ despotisk
 despotism
 dess
 dessbättre
+dessemellan
 dessert
 dessertkniv
 dessertost
@@ -4327,6 +4332,8 @@ determinera
 detonation
 detonera
 detronisera
+detta och detta
+detta om detta
 devalvera
 devis
 devot
@@ -4782,6 +4789,7 @@ dänga
 där
 därav
 därefter
+däremellan
 däremot
 därest
 därför
@@ -4820,6 +4828,7 @@ döda
 dödlig
 dödlighet
 dödläge
+dödsbodelägare
 dödsdom
 dödsfall
 dödsfara
@@ -4869,69 +4878,146 @@ efter hand
 efter råd och lägenhet
 efter sitt sinne
 efterapa
+efterarbete
+efterarvinge
+efterbehandla
+efterbesiktning
+efterbeskattning
+efterbeställning
+efterbevakning
 efterbild
 efterbilda
 efterbildning
 efterbliven
+efterblomning
+efterbrännare
+efterbörd
+efterdatera
+efterdebitera
+efterdyning
+efterfest
 efterforska
+efterforskning
 efterfråga
 efterfrågan
+efterfrågande
+efterfrågestyrd
+efterfrågetryck
+efterfrågeökning
+efterfrågning
 efterfölja
 efterföljande
+efterföljare
+efterföljd
 eftergift
 eftergiven
 eftergivenhet
 eftergivlig
+efterglans
+eftergranskning
+eftergymnasial
 efterhand
 efterhandskonstruktion
 efterhängsen
 efterhärma
+efterhålla
 efterhöra
+efterjäsning
 efterklang
 efterklok
 efterkomma
 efterkommande
 efterkonstruktion
-efterkrigstid
+efterkontroll
+efterkrav
+efterkrigstiden
 efterkälken
+efterkänning
 efterled
+efterleva
 efterlevande
+efterlevandepension
+efterlevandeskydd
+efterlevnad
 efterlikna
 efterlysa
 efterlysning
 efterlyst
 efterlämna
+efterlängtad
+efterlåten
+eftermarknad
 eftermiddag
+eftermogna
 eftermäle
 efternamn
+efternatten
+efterord
+efterplock
+efterprövning
 efterrationalisering
+efterräkning
 efterrätt
 efterrättelse
+eftersats
 eftersinna
 eftersinnande
 efterskalv
 efterskott
+efterskrift
 efterskänka
+efterslag
+eftersläckning
+eftersläng
+eftersläntrare
 eftersläpning
+eftersmak
+eftersnack
 eftersom
+eftersommar
+efterspana
+efterspaning
 efterspel
+eftersteka
 eftersträva
 eftersträvansvärd
+efterstygn
+efterställd
+eftersyn
+eftersynkronisering
 eftersägare
 eftersända
 eftersätta
 eftersättsblad
 eftersök
+eftersöka
 eftersökt
+eftertanke
+eftertaxering
+eftertext
 eftertrakta
+eftertraktansvärd
 eftertrupp
 eftertryck
+eftertrycklig
 efterträda
 efterträdare
 eftertänksam
+efterundersökning
+efterverkan
+efterverkning
+eftervinter
+eftervärkar
 eftervärld
+efterväxt
+eftervård
 efteråt
 egal
+egalisera
+egalitarism
+egalitet
+egalitär
+egeisk
 egen
 egenart
 egenartad
@@ -5243,6 +5329,7 @@ epigon
 epigoneri
 epilepsi
 epileptiker
+epilog
 episkop
 episkopal
 episkopat
@@ -6074,6 +6161,7 @@ fors
 forsa
 forska
 forskare
+forskarlag
 forskarnivå
 forskarstuderande
 forskning
@@ -6611,6 +6699,7 @@ få påökt
 få se på annat
 få sina fiskar varma
 få sista ordet
+få sitta emellan
 få skylla sig själv eller ha sig själv att skylla
 få stora darren
 få stryka på foten
@@ -6828,6 +6917,7 @@ fördöma
 fördömande
 fördömd
 före
+före detta
 förebild
 förebrå
 förebråelse
@@ -6988,6 +7078,7 @@ förhasta sig
 förhastad
 förhinder
 förhindra
+förhistoria
 förhoppning
 förhoppningsfull
 förhoppningsvis
@@ -8368,6 +8459,7 @@ gravid
 graviditet
 graviditetstest
 gravitation
+gravitationslagen
 gravitet
 gravlägga
 gravsänka
@@ -9130,6 +9222,7 @@ heldragen
 helfabrikat
 helfart
 helg
+helga
 helgd
 helgdag
 helgon
@@ -9179,6 +9272,7 @@ hemma
 hemmagjord
 hemmahörande
 hemmakatt
+hemmalag
 hemmansägare
 hemmaplan
 hemmastadd
@@ -9357,6 +9451,7 @@ hop
 hopa sig
 hopas
 hopbringa
+hopdragning
 hopkok
 hopkommen
 hopp
@@ -9944,6 +10039,7 @@ höja
 höjd
 höjdare
 höjdhopp
+höjdhoppare
 höjdkurva
 höjdled
 höjdpunkt
@@ -13025,6 +13121,7 @@ landsflykt
 landsförrädare
 landskamp
 landskap
+landskapslag
 landslag
 landsman
 landsmål
@@ -13086,6 +13183,7 @@ lattjo
 lav
 lava
 lavaflöde
+lavasjö
 lavering
 lavett
 lavin
@@ -13379,6 +13477,7 @@ ljudande
 ljudenlig
 ljudhastighet
 ljudhärmande
+ljudlag
 ljudlig
 ljudlära
 ljudnivå
@@ -13687,6 +13786,7 @@ längd
 längdenhet
 längdgrad
 längdhopp
+längdhoppare
 längdriktning
 längdskidåkning
 längdsnitt
@@ -13936,6 +14036,7 @@ låt oss
 låt vara att
 låta
 låta bli
+låta detta vara detta
 låta förstå något
 låta kvasten gå
 låta maten tysta mun(nen)
@@ -14547,6 +14648,7 @@ minneslund
 minnesmärke
 minnesregel
 minnesruna
+minnesstund
 minnesvärd
 minoritet
 minoritetsspråk
@@ -14614,6 +14716,8 @@ missnöje
 misspryda
 missriktad
 missräkning
+missta
+missta sig
 misstag
 misstanke
 misstolka
@@ -14633,6 +14737,7 @@ missvisande
 missvisning
 missöde
 mista
+mista sig
 misär
 mitt
 mittemot
@@ -15102,6 +15207,7 @@ nabb
 nablaoperator
 nabo
 naboland
+nachspiel
 nacka
 nackdel
 nacke
@@ -16234,6 +16340,7 @@ orkidé
 orm
 orma
 ormbunke
+ornament
 oro
 oroa
 oroa sig
@@ -16951,9 +17058,12 @@ postbox
 postdatera
 postering
 postfack
+postförskott
+postgymnasial
 postkontor
 postludium
 postnummer
+postskriptum
 postulat
 postum
 potatis
@@ -17126,6 +17236,7 @@ projicera
 proklamera
 proletariat
 proletär
+prolog
 promemoria
 promenad
 promenera
@@ -18872,6 +18983,7 @@ sentiment
 sentimental
 sentimentalitet
 sentinelprovtagning
+senvinter
 separat
 separatfred
 separation
@@ -19051,6 +19163,7 @@ sitta inne
 sitta långt inne
 sitta ner/still i båten
 sitta som berget
+sitta som en smäck
 sitta som ett tänt/tända ljus
 sitta som på nålar
 sitta upp
@@ -19227,13 +19340,16 @@ sjätte
 sjättedel
 sjå
 sjö
+sjödistrikt
 sjöelefant
 sjöfart
 sjöflygplan
 sjögräs
 sjögång
+sjökort
 sjöman
 sjön suger
+sjönöd
 sjörobot
 sjörövare
 sjösjuk
@@ -20119,6 +20235,7 @@ snaskighet
 snatta
 snatteri
 sned
+snedfördelning
 snedvrida
 snegla
 snickare
@@ -20370,6 +20487,7 @@ sparbössa
 spark
 sparka
 sparka någon snett upp­åt
+sparka någon snett uppåt
 sparka ut
 sparkstötting
 sparre
@@ -20412,10 +20530,12 @@ spel
 spela
 spela allan
 spela andra fiolen
+spela andrafiolen
 spela andra­fiolen
 spela apa
 spela av
 spela första fiolen
+spela förstafiolen
 spela första­fiolen
 spela in
 spela någon ett spratt
@@ -22594,7 +22714,6 @@ tomflaska
 tomglas
 tomgång
 tomhylsa
-tomma ord
 tomrum
 tomt
 ton
@@ -23129,6 +23248,7 @@ tygel
 tygla
 tyngd
 tyngdkraft
+tyngdlagen
 tyngdpunkt
 typ
 typisk
@@ -25646,6 +25766,7 @@ yttring
 ytvatten
 ytvidd
 yxa
+yxskaft
 zebra
 zink
 zon
