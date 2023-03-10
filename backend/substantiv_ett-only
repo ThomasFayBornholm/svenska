@@ -18,6 +18,7 @@ agg
 aggregat
 aggregationstillstånd
 agn
+akterskepp
 akterspegel
 aktiebolag
 aktiebrev
@@ -223,6 +224,7 @@ bagage
 bagageutrymme
 bajs
 bakhjul
+bakhåll
 bakrus
 bakslag
 bakspår
@@ -240,6 +242,7 @@ bank
 barbari
 barn
 barnbarn
+barnbidrag
 barnrikehus
 barrträd
 bastubad
@@ -354,6 +357,7 @@ bjälklag
 blad
 bladguld
 bladveck
+blandspråk
 blask
 bleke
 blixtljus
@@ -708,6 +712,7 @@ femtiotal
 fenomen
 fett
 fiasko
+fickformat
 fickkniv
 fickur
 fiendskap
@@ -720,10 +725,12 @@ finrum
 firmamärke
 fiske
 fjant
+fjäderfä
 fjäll
 fjärilsim
 fjärrvärme
 flabb
+flaggskepp
 flak
 flams
 flasköl
@@ -1453,6 +1460,7 @@ komma
 kommanditbolag
 kommentarsfält
 kommunalråd
+kommunalval
 kommunistparti
 kompani
 kompasshus
@@ -1524,6 +1532,7 @@ krusbär
 krut
 kryddsmör
 kryphål
+krypskytte
 krypto
 kryss
 krysshult
@@ -1635,6 +1644,8 @@ lik
 likhetstecken
 lillfinger
 lingon
+lingonpäron
+linjeskepp
 liv
 livdjur
 livgarde
@@ -1662,10 +1673,12 @@ ludd
 luder
 luftdrag
 luftförsvar
+luftgevär
 luftherravälde
 luftmotstånd
 luftombyte
 luftrör
+luftskepp
 luftslott
 luftvärn
 lumppapper
@@ -1678,6 +1691,7 @@ lynne
 lysrör
 lystmäte
 lyte
+lyxliv
 läder
 läge
 läger
@@ -1842,6 +1856,7 @@ misstag
 misstroendevotum
 missöde
 mittfält
+mittskepp
 mjälthugg
 mjöl
 mjölksocker
@@ -1951,6 +1966,8 @@ nitrogen
 nittiotal
 nittonhundra-talet
 nittonhundratalet
+njurbäcken
+njurbälte
 nobelpris
 norrsken
 nu
@@ -1961,6 +1978,7 @@ nyckelax
 nyförvärv
 nyhetsbrev
 nyhetsflöde
+nylon
 nyp
 nystan
 nyttodjur
@@ -2081,6 +2099,7 @@ periodtal
 periskop
 persiljesmör
 personnummer
+personval
 perspektiv
 petrifikat
 pi
@@ -2111,6 +2130,7 @@ pojkstreck
 polarsken
 polynom
 popcorn
+popup-fönster
 porl
 porslin
 porto
@@ -2286,6 +2306,7 @@ ryggslut
 ryggstöd
 rykte
 rymdmått
+rymdskepp
 räcke
 räkneord
 räknesätt
@@ -2382,6 +2403,8 @@ set
 sex
 sexualliv
 siden
+sidnummer
+sidoskepp
 sidotema
 sigill
 signalement
@@ -2431,6 +2454,7 @@ skalskydd
 skalv
 skaplynne
 skarpsinne
+skattetryck
 skede
 skelett
 sken
@@ -2452,6 +2476,7 @@ skjutvapen
 skodon
 skolbarn
 skollov
+skolskepp
 skolverk
 skonummer
 skotstek
@@ -2721,6 +2746,7 @@ ströbröd
 strög
 strössel
 studentförbund
+studiebidrag
 studium
 stup
 stycke
@@ -2737,6 +2763,7 @@ stål
 stånd
 stöd
 stöp
+störtlopp
 subjekt
 substantiv
 sudd
@@ -2818,6 +2845,7 @@ talfel
 talkropp
 talorgan
 talsystem
+tamdjur
 tandem
 tandkött
 tand­skydd
@@ -3168,6 +3196,7 @@ varmvatten
 varsel
 varuhus
 varumärke
+varuprov
 varv
 vatten
 vattendrag
@@ -3198,6 +3227,7 @@ vevhus
 vevlager
 vide
 vidunder
+vikingaskepp
 vikingatåg
 vildskott
 villebråd
@@ -3258,6 +3288,7 @@ värme
 värmekraftverk
 värmenät
 värn
+värv
 väsen
 väsende
 västerlandet

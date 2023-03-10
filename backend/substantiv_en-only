@@ -3,8 +3,10 @@ AP-fond
 AV-central
 B-nivå
 C-nivå
+D-mark
 D-nivå
 Europa
+NN
 Orienten
 abandon
 abborre
@@ -895,7 +897,9 @@ bark
 barkis
 barlast
 barm
+barmark
 barmhärtighet
+barnamördare
 barnatro
 barncykel
 barndom
@@ -1222,11 +1226,13 @@ besvärjelse
 besvärlighet
 besättning
 besökare
+besöksbok
 beta
 betalning
 bete
 beteckning
 beteendepsykologi
+betesmark
 beting
 betingelse
 betjäning
@@ -1243,6 +1249,7 @@ bevakning
 bevekelsegrund
 bevisning
 beväpning
+beväring
 bevågenhet
 bh
 biathlon
@@ -1452,6 +1459,7 @@ blåpenna
 blåsa
 blåsinstrument
 blåst
+blåval
 blödning
 blöja
 boboll
@@ -1515,6 +1523,7 @@ bonde
 bondehär
 bondgård
 bondlurk
+bondtur
 boning
 bonus
 bonusförälder
@@ -2919,6 +2928,7 @@ frekvens
 frenesi
 frestelse
 frett
+friare
 fribytare
 frid
 fridag
@@ -3056,8 +3066,8 @@ färjelinje
 färjeterminal
 färla
 färs
+färskvara
 fästman
-fästmo
 fästmö
 fästning
 fågel
@@ -3190,6 +3200,7 @@ förmyndare
 förmåga
 förmån
 förmögenhet
+förmögenhetsskatt
 förnedring
 förnedringsklausul
 förnekare
@@ -3472,6 +3483,7 @@ gavel
 gegga
 geggamoja
 gejser
+gelike
 gelé
 gem
 gemen
@@ -3741,6 +3753,7 @@ gråsten
 gråtrut
 gröda
 grönkål
+grönlandsval
 grönsak
 gubbe
 gud
@@ -3800,6 +3813,7 @@ gärningsperson
 gäspning
 gässling
 gäst
+gästbok
 gästgivargård
 gågata
 gång
@@ -3811,6 +3825,7 @@ gårdag
 gårdsgata
 gårdskarl
 gås
+gåslever
 gåta
 gåva
 gödning
@@ -3903,6 +3918,7 @@ handel
 handelskammare
 handelsman
 handelspolitik
+handelsvara
 handflata
 handfull
 handfängsel
@@ -4136,6 +4152,7 @@ hylsa
 hymn
 hynda
 hyperbol
+hypersexualitet
 hypotenusa
 hypotes
 hyra
@@ -4468,6 +4485,7 @@ inkarnation
 inklination
 inkompetens
 inkomst
+inkomstskatt
 inkoppling
 inkorg
 inkrustation
@@ -4512,6 +4530,7 @@ insinuation
 insjö
 inskrivning
 inskränkning
+insmuggling
 insolation
 inspelning
 inspiration
@@ -4642,12 +4661,14 @@ jage
 jagkänsla
 jakt
 jakthamn
+jaktmark
 jalusi
 jamb
 januari
 jargong
 jazz
 jetdrift
+jetong
 jetström
 jingel
 joggning
@@ -5069,6 +5090,7 @@ klämma
 klängväxt
 klänning
 kläpp
+klärvoajant
 klätterväxt
 klättring
 klöver
@@ -5178,6 +5200,7 @@ kommission
 kommissionär
 kommitté
 kommun
+kommunalskatt
 kommunikation
 kommuniké
 kommunion
@@ -5393,6 +5416,7 @@ kreativitet
 kreatör
 kredit
 kremering
+kreolspråk
 krets
 kretsgång
 krevad
@@ -5498,9 +5522,11 @@ kulthandling
 kulting
 kultur
 kulturkrock
+kultursida
 kulvert
 kulörtvätt
 kummel
+kumpan
 kund
 kundvagn
 kung
@@ -5550,6 +5576,7 @@ kvarleva
 kvarlåtenskap
 kvarn
 kvarsittning
+kvarskatt
 kvarstad
 kvart
 kvartil
@@ -5867,6 +5894,7 @@ luffare
 luftaffär
 luftfart
 luftförorening
+luftgitarr
 luftkuddefarkost
 luftpump
 luftrörskatarr
@@ -5916,6 +5944,7 @@ lyssnare
 lyster
 lystnad
 lyteskomik
+lyx
 lyxkryssning
 läcka
 läderhud
@@ -6670,6 +6699,8 @@ nittiotalism
 nivå
 njure
 njurinflammation
+njursten
+njurtalg
 njutning
 nod
 noggrannhet
@@ -6728,6 +6759,8 @@ nykterism
 nykterist
 nyliberalism
 nymf
+nymfoman
+nymfomani
 nymodighet
 nymåne
 nynorska
@@ -6949,6 +6982,7 @@ otur
 output
 oval
 ovanlighet
+ovansida
 ovation
 overall
 overheadprojektor
@@ -6967,6 +7001,7 @@ packbox
 packning
 padda
 paddel
+pagina
 pain riche
 pajas
 pakt
@@ -7081,6 +7116,7 @@ pensionär
 penultima
 peperoni
 peppar
+pepparkaka
 perception
 perestrojka
 perfektion
@@ -7121,6 +7157,8 @@ petroleum
 pianist
 piazza
 pickup
+pidgin
+piedestal
 pietism
 piga
 pigg
@@ -7141,6 +7179,7 @@ pingst
 pingstlilja
 pingvin
 pinne
+pinnstol
 pint
 pipa
 pipeline
@@ -7240,9 +7279,15 @@ ponny
 ponton
 pool
 poolbiljard
+pop
+popmusik
 popsångerska
 populism
 populist
+populärkonsert
+populärpress
+populärvetenskap
+popup
 por
 pornografi
 porr
@@ -7274,6 +7319,7 @@ poäng
 praktik
 praktikant
 pralin
+pratkvarn
 pratstund
 praxis
 precision
@@ -7632,6 +7678,7 @@ restaurang
 restaurangvagn
 restprodukt
 restriktion
+restskatt
 resumé
 resurs
 resväska
@@ -7762,6 +7809,7 @@ rundfråga
 rundkyrka
 rundradio
 rundskrivelse
+rundtur
 runsten
 ruska
 rusning
@@ -7911,6 +7959,7 @@ sallat
 salmiak
 salpingit
 saltbildare
+saltöken
 salva
 salvationist
 salvia
@@ -7976,6 +8025,7 @@ sandjägare
 sandrevel
 sandskädda
 sandwich
+sandöken
 sanitet
 sanitetsartikel
 sanitetsbinda
@@ -8023,6 +8073,7 @@ satsmelodi
 satsning
 satsuma
 satsyta
+satyriasis
 savann
 sax
 saxofon
@@ -8148,10 +8199,14 @@ shorts
 show
 sida
 siderit
+sidfläsk
 sidled
+sidlinje
 sidoeffekt
+sidoinkomst
 sidorätt
 siffra
+sightseeing
 signal
 signaleld
 signalpolitik
@@ -8309,6 +8364,8 @@ skattebetalare
 skattehöjning
 skattesats
 skattesänkning
+skattgömma
+skattkammare
 skattrådgivare
 sked
 skeleton
@@ -8316,6 +8373,7 @@ skena
 skenhändelse
 skepnad
 skepparkrans
+skeppslista
 skepsis
 skickelse
 skicklighet
@@ -8466,6 +8524,7 @@ slagdänga
 slagkraft
 slagskugga
 slaktare
+slalom
 slam
 slamkrypare
 slang
@@ -8730,6 +8789,7 @@ spont
 sporre
 sport
 sportgren
+sportsida
 sportvagn
 spray
 spretighet
@@ -8856,6 +8916,7 @@ stenfot
 stenkoll
 stensöta
 stentorsstämma
+stenöken
 stereo
 stereometri
 stereotyp
@@ -8915,6 +8976,7 @@ stormakt
 stormarknad
 stormflod
 stormsteg
+storslalom
 storslägga
 storstad
 storväst
@@ -9013,6 +9075,7 @@ styresman
 styrka
 styrketräning
 styrning
+styrränta
 styrsel
 styvdotter
 styvfar
@@ -9063,6 +9126,7 @@ sump
 sumpmark
 sundhet
 sup
+super-G
 supermakt
 supermarket
 suppleant
@@ -9112,6 +9176,8 @@ svindel
 svindlare
 svininfluensa
 svinstia
+svintur
+svit
 svordom
 svulst
 svägerska
@@ -9183,6 +9249,7 @@ sägen
 säkerhet
 säkerhetspolis
 säkerhetspolitik
+säkerhetsrisk
 säkerhetssynpunkt
 säkring
 säkringslåda
@@ -9749,6 +9816,7 @@ tvistighet
 tvivel
 tvären
 tvärslå
+tvärvetenskap
 tvätt
 tvättkorg
 tvättlina
@@ -9808,6 +9876,7 @@ uggla
 ugn
 ull
 ulster
+ulv
 umami
 umgängeston
 undanflykt
@@ -10244,12 +10313,15 @@ vaktmästare
 vakuumpump
 val
 valack
+valaffisch
 valberedning
 valdag
 valfilm
 valframgång
 valfrihet
 valfusk
+valfångst
+valhemlighet
 valkampanj
 valkrets
 vall
@@ -10269,6 +10341,7 @@ vals
 valsverk
 valuta
 valutakurs
+valvaka
 valör
 vampyr
 vana
@@ -10446,6 +10519,7 @@ vingpenna
 vink
 vinkel
 vinkelhastighet
+vinkelspets
 vinnare
 vinnarskalle
 vinning
@@ -10521,6 +10595,7 @@ vägg
 vägledning
 vägran
 vägrare
+vägren
 vägsalt
 väktare
 väl
