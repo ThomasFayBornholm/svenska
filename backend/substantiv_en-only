@@ -499,6 +499,7 @@ arbetsköpare
 arbetslöshet
 arbetsmarknad
 arbetsmedicin
+arbetsmiljö
 arbetsmätning
 arbetsplats
 arbetsplenum
@@ -903,6 +904,7 @@ barnamördare
 barnatro
 barncykel
 barndom
+barndomen
 barnfamilj
 barnflicka
 barnkammare
@@ -1462,6 +1464,7 @@ blåst
 blåval
 blödning
 blöja
+boaorm
 boboll
 bock
 bod
@@ -1665,8 +1668,11 @@ bränsletank
 bräsch
 brådska
 bråkdel
+bråkmakare
+bråkstake
 brånad
 bråte
+brödföda
 brödrost
 brödskiva
 bröllopsdag
@@ -1705,6 +1711,7 @@ bunt
 bur
 burk
 burka
+buse
 business
 businessklass
 buske
@@ -1810,6 +1817,7 @@ cell
 cellulosa
 cellulosalack
 cembalo
+cement
 censur
 center
 centimeter
@@ -2828,6 +2836,7 @@ fläkt
 flärpa
 fläskfärs
 fläta
+flåbuse
 flöjt
 flört
 fnurra
@@ -3192,6 +3201,7 @@ förläning
 förlåt
 förlåtelse
 förman
+förmedlare
 förmedling
 förmiddag
 förminskning
@@ -3589,6 +3599,7 @@ glasnost
 glass
 glasvar
 glasyr
+glasögonorm
 gletscher
 glidning
 glimlampa
@@ -3632,6 +3643,7 @@ godtemplarorden
 goja
 gokart
 golf
+golfare
 golfboll
 golfplats
 golfspelare
@@ -3693,6 +3705,7 @@ grind
 grip
 gripfot
 gris
+griskulting
 groda
 grodd
 grop
@@ -3764,7 +3777,6 @@ gudinna
 gudom
 gudsfruktan
 gudstjänst
-gudstjänste
 gudunge
 guide
 gula
@@ -3817,6 +3829,7 @@ gästbok
 gästgivargård
 gågata
 gång
+gångare
 gångbana
 gångfot
 gångväg
@@ -4095,6 +4108,7 @@ hotelse
 hovmästare
 hovrätt
 hud
+huggorm
 huligan
 hum
 humanist
@@ -4163,6 +4177,7 @@ hyresvärd
 hyska
 hysteri
 hytt
+hytta
 hyvel
 häck
 häckla
@@ -4504,6 +4519,7 @@ inlåningsränta
 inmatning
 innebandy
 innebörd
+innehavare
 innehållsförteckning
 innekatt
 innerdörr
@@ -5516,6 +5532,7 @@ kullerbytta
 kulmen
 kulpenna
 kulspetspenna
+kulspruta
 kulstötning
 kult
 kulthandling
@@ -5843,6 +5860,7 @@ livslängd
 livsstil
 livstid
 livsuppgift
+livvakt
 ljudhastighet
 ljudlag
 ljudlära
@@ -6325,7 +6343,10 @@ miljon
 miljonär
 miljö
 miljöfråga
+miljöförstörning
+miljögift
 miljöpolitik
+miljöskildring
 milliliter
 millimeter
 millisekund
@@ -6430,6 +6451,7 @@ mopp
 mor
 moral
 morbror
+mordkomplott
 morell
 morfar
 morfinist
@@ -6976,6 +6998,8 @@ osthyvel
 ostron
 ostronkniv
 osäkerhet
+otack
+otack är världens lön
 otidighet
 otro
 otur
@@ -7236,6 +7260,7 @@ plupp
 plural
 plusgrad
 pläd
+plätt
 plånbok
 plånboksfråga
 plåt
@@ -7474,6 +7499,7 @@ pyramid
 pyrit
 pyroteknik
 pyrrhusseger
+pytonorm
 päls
 pärla
 pärlemor
@@ -8347,6 +8373,7 @@ skalbagge
 skald
 skall
 skalle
+skallerorm
 skallskada
 skalm
 skalär
@@ -8393,6 +8420,7 @@ skilsmässa
 skinka
 skinksmörgås
 skinnskalle
+skipper
 skiss
 skissning
 skit
@@ -8411,6 +8439,7 @@ skolbuss
 skolgång
 skolgård
 skolpeng
+skolskjutning
 skomakare
 skoning
 skopa
@@ -8817,6 +8846,7 @@ språkpolis
 språkrör
 språkstrid
 spydighet
+spädgris
 spänn
 spänning
 spännvidd
@@ -9310,6 +9340,7 @@ tacksamhet
 tacksägelse
 tafatt
 tafs
+taft
 tagg
 tagning
 taikonaut
@@ -9485,6 +9516,7 @@ tidvattenhöjd
 tiebreak
 tiger
 tigerhaj
+tigerorm
 tiggare
 tik
 tillbakablick
