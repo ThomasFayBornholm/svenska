@@ -21,6 +21,7 @@
 			}
 			if (array_key_exists($word, $dict)) {
 				$outArr[$el] = $dict[$word];						
+			}
 		}
 	}
 	echo json_encode($outArr);
