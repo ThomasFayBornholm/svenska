@@ -1,5 +1,6 @@
 (alla) vinklar och vrår
 (bara) i förbigående
+(den) vita mössan
 (det är inte lätt att) lära gamla hundar sitta
 (det är) sak samma
 (en) Gudi behaglig (gärning)
@@ -87,11 +88,13 @@ Heliga tre­faldighets dag
 Herrens hus
 I
 Kristi kropp
+Lilla björn(en)
 NN
 Orienten
 Plats!
 Rom byggdes inte på en dag
 Sista Dagars Heliga
+Stora björn(en)
 U-rör
 a
 a vista
@@ -1880,6 +1883,7 @@ bakfot
 bakfull
 bakfylla
 bakgrund
+bakgård
 bakhal
 bakhjul
 bakhåll
@@ -1899,6 +1903,7 @@ bakslug
 baksmälla
 bakspår
 bakstöt
+baksäte
 baktala
 baktanke
 bakterie
@@ -2745,6 +2750,7 @@ bevingad
 bevingat ord
 bevis
 bevisa
+bevisföring
 bevisligen
 bevisning
 bevittna
@@ -2990,7 +2996,10 @@ bjällra
 bjärt
 björk
 björn
+björnkram
 björnram
+björnskinnsmössa
+björntjänst
 blackjack
 blad
 bladet vände sig
@@ -3386,6 +3395,7 @@ bottenplan
 bottensats
 bottenskola
 bottenskrap
+bottenskvätt
 bottenvåning
 bottin
 bottna
@@ -3519,6 +3529,7 @@ brukssamhälle
 brum
 brun
 brunaktig
+brunbjörn
 brunbränd
 brunch
 brunn
@@ -3566,6 +3577,7 @@ bräcklig
 bräda
 brädd
 bräde
+brädgård
 brädspel
 bräken
 bränd
@@ -3701,6 +3713,7 @@ by
 byffé
 byfogde
 bygd
+bygdegård
 bygga
 bygga samman
 bygga upp
@@ -3792,6 +3805,7 @@ bågskytt
 bågskytte
 bål
 bårhus
+bås
 båt
 båta
 båthus
@@ -5792,6 +5806,7 @@ fattas
 fattbar
 fattig
 fattigdom
+fattigdomsbevis
 fattigvård
 fatöl
 favorit
@@ -6399,6 +6414,7 @@ framställning
 framstå
 framstående
 framsynt
+framsäte
 framtid
 framtida
 framtidslöfte
@@ -6512,6 +6528,7 @@ frita
 fritagning
 fritera
 fritid
+fritidsgård
 fritt vivre
 frityr
 frivillig
@@ -6956,6 +6973,7 @@ förargad
 förargas
 förargelseväckande
 förarglig
+förarsäte
 förband
 förbandslåda
 förbandsplats
@@ -8065,6 +8083,7 @@ gamla stilen
 gamla världen
 gamling
 gammal
+gammal i gården
 gammaldags
 gammalkyrklig
 gammalmodig
@@ -8654,6 +8673,7 @@ gripfot
 gris
 griskulting
 griskött
+grizzlybjörn
 groda
 grodd
 groddjur
@@ -8895,6 +8915,7 @@ gå bak­om ryggen på någon
 gå bort
 gå den långa vägen
 gå dit näsan pekar
+gå från gård och grund
 gå från klarhet till klarhet
 gå från ord till handling
 gå för långt
@@ -8964,8 +8985,11 @@ gångväg
 gåpåig
 gård
 gårdag
+gårdsfolk
 gårdsgata
+gårdshus
 gårdskarl
+gårdsplan
 gås
 gåslever
 gåta
@@ -9430,6 +9454,7 @@ hem
 hembakad
 hembiträde
 hembränd
+hembygdsgård
 hemfalla
 hemförlova
 hemgift
@@ -10209,6 +10234,7 @@ högst
 högstadielärare
 högstadieålder
 högstadium
+högsäte
 högtalare
 högtid
 högtidlig
@@ -11020,6 +11046,7 @@ inte veta sig någon levande(s) råd
 inte veta vilket ben man ska stå på
 inte vidare värst
 inte vilja för död och pina
+inte väcka den björn som sover
 inteckna
 inteckning
 inteckningslån
@@ -12188,6 +12215,7 @@ knölig
 ko
 koagulera
 koagulering
+koala
 koalition
 kobbe
 kobent
@@ -12982,6 +13010,7 @@ kulthandling
 kulting
 kultivera
 kultur
+kulturartikel
 kulturarv
 kulturell
 kulturhus
@@ -13483,10 +13512,13 @@ le
 led
 leda
 leda av
+leda i bevis
 ledamot
+ledande artikel
 ledande fråga
 ledare
 ledarskap
+ledarskifte
 ledband
 ledbar
 leddjur
@@ -13610,6 +13642,7 @@ ligga för döden
 ligga i
 ligga i linje med något
 ligga i luften
+ligga i selen
 ligga i tiden
 ligga i vida fältet
 ligga i öppen dag
@@ -13757,6 +13790,7 @@ livsförnödenheter
 livsglad
 livskraft
 livskraftig
+livsleda
 livslängd
 livslång
 livsmedel
@@ -14436,6 +14470,7 @@ magnetisera
 magnetisk
 magnifik
 magra
+magsaft
 magsäck
 magsår
 magåkomma
@@ -15279,6 +15314,7 @@ mottagande
 mottagare
 mottaglig
 mottagning
+mottagningsbevis
 mottagningssköterska
 motti
 motto
@@ -15456,6 +15492,7 @@ målare
 måleri
 målerisk
 målgrupp
+målgård
 målinriktad
 mållinje
 målmedveten
@@ -17763,6 +17800,7 @@ pundare
 pundhuvud
 pung
 punga ut
+pungbjörn
 pungdjur
 punkt
 punktera
@@ -17793,6 +17831,7 @@ pyssla
 pytonorm
 pytteliten
 päls
+pälssäl
 pärla
 pärlemor
 pärm
@@ -18000,6 +18039,7 @@ rassla
 rassmässig
 rast
 rasta
+rastgård
 rastlös
 rastplats
 rata
@@ -18131,6 +18171,7 @@ regnmoln
 regnområde
 regnskog
 regnskur
+regnskvätt
 regnväder
 regression
 regressiv
@@ -19344,6 +19385,7 @@ seldon
 sele
 selektiv
 selleri
+seltyg
 semantik
 semantisk
 semester
@@ -19625,6 +19667,7 @@ sjalett
 sjaskig
 sju
 sjua
+sjubb
 sjuk
 sjuk humor
 sjuka hus
@@ -19642,6 +19685,7 @@ sjukskriven
 sjuksköterska
 sjukvård
 sjukvårdare
+sjukvårdsartikel
 sjukvårdsbiträde
 sjunde
 sjundedel
@@ -19783,6 +19827,8 @@ sjätte
 sjättedel
 sjå
 sjö
+sjöbjörn
+sjöbuss
 sjödistrikt
 sjöelefant
 sjöfart
@@ -20322,6 +20368,7 @@ slafsig
 slag
 slag i slag
 slaganfall
+slagbjörn
 slagdänga
 slagen
 slagfält
@@ -21004,6 +21051,7 @@ spekulera
 spekulum
 spel
 spela
+spela a prima vista
 spela allan
 spela andra fiolen
 spela andrafiolen
@@ -21689,8 +21737,14 @@ ströva
 stubin
 stucken
 student
+studentbetyg
 studentexamen
 studentförbund
+studenthem
+studentikos
+studentkår
+studentliv
+studentmössa
 studera
 studerad
 studerande
@@ -23220,6 +23274,7 @@ tjänstvillig
 tjärn
 toa
 toalett
+toalettartikel
 toalettpapper
 toapapper
 tobak
@@ -23504,6 +23559,7 @@ tropik
 tropiskt år
 tropp
 trosa
+trosartikel
 troskyldig
 tross
 trossamfund
@@ -23760,6 +23816,7 @@ tvärvetenskap
 tvärvända
 tvätt
 tvätta
+tvättbjörn
 tvättfat
 tvättkorg
 tvättlina
@@ -23982,6 +24039,7 @@ underkänna
 underlag
 underlakan
 underland
+underledare
 underlig
 underliggande
 underliv
@@ -25173,6 +25231,7 @@ valrätt
 valrörelse
 vals
 valsa
+valsituation
 valspråk
 valsverk
 valuta
@@ -25716,6 +25775,7 @@ vingla
 vinglig
 vinglös
 vingpenna
+vingård
 vink
 vinka
 vinka av
@@ -26106,6 +26166,7 @@ värmeenergi
 värmegrad
 värmekraftverk
 värmekälla
+värmeledare
 värmelära
 värmemängd
 värmenät
@@ -26320,6 +26381,7 @@ yoghurt
 yppa
 ypperlig
 yppig
+yr i mössan
 yrka
 yrkande
 yrke

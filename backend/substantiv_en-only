@@ -854,6 +854,7 @@ bakform
 bakfot
 bakfylla
 bakgrund
+bakgård
 bakplåt
 baksida
 baksmälla
@@ -1251,6 +1252,7 @@ betäckning
 betänklighet
 bevakning
 bevekelsegrund
+bevisföring
 bevisning
 beväpning
 beväring
@@ -1392,7 +1394,10 @@ bjälke
 bjällra
 björk
 björn
+björnkram
 björnram
+björnskinnsmössa
+björntjänst
 blackjack
 bladselleri
 bladstekel
@@ -1578,6 +1583,7 @@ bottenfällning
 bottenplan
 bottensats
 bottenskola
+bottenskvätt
 bottenvåning
 bottin
 boulevard
@@ -1648,6 +1654,7 @@ brukare
 bruksanvisning
 bruksort
 brukspatron
+brunbjörn
 brunch
 brunn
 brunnsort
@@ -1662,6 +1669,7 @@ brytpunkt
 bräck
 bräda
 brädd
+brädgård
 bräken
 brännboll
 brännolja
@@ -1733,6 +1741,7 @@ by
 byffé
 byfogde
 bygd
+bygdegård
 byggare
 byggnad
 byggnadsarbetare
@@ -2996,6 +3005,7 @@ frisyr
 frisör
 fritagning
 fritid
+fritidsgård
 frityr
 frivillighet
 fromma
@@ -3740,6 +3750,7 @@ grip
 gripfot
 gris
 griskulting
+grizzlybjörn
 groda
 grodd
 grop
@@ -3877,6 +3888,7 @@ gård
 gårdag
 gårdsgata
 gårdskarl
+gårdsplan
 gås
 gåslever
 gåta
@@ -4049,6 +4061,7 @@ helpension
 heltid
 helton
 heltäckningsmatta
+hembygdsgård
 hemfalla
 hemgift
 hemhjälp
@@ -5200,6 +5213,7 @@ knäskål
 knöl
 ko
 koagulering
+koala
 koalition
 kobbe
 kobolt
@@ -5596,6 +5610,7 @@ kult
 kulthandling
 kulting
 kultur
+kulturartikel
 kulturkrock
 kultursida
 kulvert
@@ -5925,6 +5940,7 @@ livsfara
 livsform
 livsföring
 livskraft
+livsleda
 livslängd
 livsstil
 livstid
@@ -6168,6 +6184,7 @@ mage
 magi
 magister
 magnet
+magsaft
 magsäck
 magåkomma
 mahogny
@@ -6649,6 +6666,7 @@ måfå
 måg
 målare
 målgrupp
+målgård
 mållinje
 målning
 målstolpe
@@ -7576,6 +7594,7 @@ pump
 pumpa
 pundare
 pung
+pungbjörn
 punkt
 punktering
 puns
@@ -7597,6 +7616,7 @@ pyroteknik
 pyrrhusseger
 pytonorm
 päls
+pälssäl
 pärla
 pärlemor
 pärm
@@ -7667,6 +7687,7 @@ rashygien
 rasism
 rasist
 rast
+rastgård
 rastplats
 ration
 rationalism
@@ -7723,6 +7744,7 @@ regnbågsforell
 regnbågshinna
 regnskog
 regnskur
+regnskvätt
 regression
 rehabilitering
 reinkarnation
@@ -8385,6 +8407,7 @@ situation
 sjal
 sjalett
 sjua
+sjubb
 sjukamp
 sjukdom
 sjukersättning
@@ -8397,6 +8420,7 @@ sjukpenning
 sjuksköterska
 sjukvård
 sjukvårdare
+sjukvårdsartikel
 sjundedel
 sjuttiotalist
 själ
@@ -8454,6 +8478,8 @@ självutplåning
 självövervinnelse
 sjättedel
 sjö
+sjöbjörn
+sjöbuss
 sjödistrikt
 sjöelefant
 sjöfart
@@ -8654,6 +8680,7 @@ sköt
 skötare
 skötsel
 sladd
+slagbjörn
 slagdänga
 slagkraft
 slagskugga
@@ -9195,6 +9222,8 @@ strömställare
 stubin
 student
 studentexamen
+studentkår
+studentmössa
 studerande
 studie
 studierektor
@@ -9725,6 +9754,7 @@ tjänstledighet
 tjärn
 toa
 toalett
+toalettartikel
 tobak
 toffel
 tofsmes
@@ -9869,6 +9899,7 @@ trop
 tropik
 tropp
 trosa
+trosartikel
 tross
 trossats
 trottoar
@@ -9978,6 +10009,7 @@ tvären
 tvärslå
 tvärvetenskap
 tvätt
+tvättbjörn
 tvättkorg
 tvättlina
 tvåa
@@ -10050,6 +10082,7 @@ underhandling
 underhud
 underhållning
 underklass
+underledare
 underläpp
 underlåtenhet
 underordning
@@ -10499,6 +10532,7 @@ valross
 valrätt
 valrörelse
 vals
+valsituation
 valsverk
 valuta
 valutakurs
@@ -10681,6 +10715,7 @@ vindstilla
 vingbredd
 vinge
 vingpenna
+vingård
 vink
 vinkel
 vinkelhastighet
@@ -10826,6 +10861,7 @@ värmebölja
 värmeenergi
 värmegrad
 värmekälla
+värmeledare
 värmelära
 värmemängd
 värmeutveckling
