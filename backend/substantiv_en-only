@@ -527,6 +527,7 @@ arkitektur
 arm
 armada
 armbåge
+armgång
 armhåla
 armlängd
 armé
@@ -1754,6 +1755,7 @@ bärare
 bärgning
 bärkraft
 bärsärk
+bärsärkagång
 bättring
 bävan
 bäver
@@ -2109,6 +2111,7 @@ diod
 diplomat
 diplomati
 dipsoman
+direkthet
 direktion
 direktör
 disciplin
@@ -2230,6 +2233,7 @@ dubbelmoral
 dubbelnelson
 dubbelstjärna
 dubbelsäng
+duell
 duglighet
 duk
 duma
@@ -2439,6 +2443,7 @@ empirism
 emulsion
 en
 enbo
+enbuske
 encyklika
 encyklopedi
 endemi
@@ -2455,6 +2460,7 @@ enhjuling
 enighet
 enkammarriksdag
 enkelbeckasin
+enkelhet
 enkelsäng
 enkrona
 enkät
@@ -2590,6 +2596,7 @@ fallenhet
 fallhöjd
 fallskärm
 fallskärmsjägare
+fallstudie
 fallvind
 falsarium
 familj
@@ -2750,6 +2757,7 @@ fjärdedel
 fjäril
 fjärrkontroll
 fjärrkyla
+fjärt
 fjäsk
 flabb
 fladdermus
@@ -3590,6 +3598,7 @@ gissning
 gitarr
 givakt
 givare
+gjord
 gjutform
 glaciär
 gladiator
@@ -3602,6 +3611,7 @@ glasyr
 glasögonorm
 gletscher
 glidning
+glima
 glimlampa
 glimmer
 glimt
@@ -3737,6 +3747,7 @@ grunka
 grupp
 gruppering
 gruppledare
+grusgång
 gruva
 gruvarbetare
 gruvgång
@@ -3830,8 +3841,10 @@ gästgivargård
 gågata
 gång
 gångare
+gångart
 gångbana
 gångfot
+gånggrift
 gångväg
 gård
 gårdag
@@ -3845,6 +3858,7 @@ gödning
 gödsel
 gök
 göl
+gördel
 görningen
 göt
 göteborgare
@@ -4077,7 +4091,9 @@ hjärtefråga
 hjärtesak
 hjärtevän
 hjärtinfarkt
+hjärtinsufficiens
 hjärtlighet
+hjärtsvikt
 hjässa
 ho
 hobby
@@ -4289,6 +4305,7 @@ hårväxt
 hårvård
 håv
 höft
+höfthållare
 höftled
 hög
 högadel
@@ -4874,6 +4891,7 @@ kalvjärpe
 kalvko
 kam
 kamel
+kameleont
 kamera
 kameraman
 kamin
@@ -5118,6 +5136,7 @@ knape
 knapp
 knark
 knarkare
+knarkarkvart
 knarkkurir
 knarr
 knasboll
@@ -5375,6 +5394,7 @@ korrosion
 korrumpering
 korruption
 korsbefruktning
+korsett
 korsfästelse
 korsgång
 korsning
@@ -5498,6 +5518,7 @@ kruskål
 krusta
 krycka
 krydda
+kryddkrasse
 kryddsalt
 kryddträdgård
 kryddväxt
@@ -6548,11 +6569,13 @@ mynning
 mynta
 myr
 myra
+myrlejonslända
 mysticism
 myt
 mytologi
 mäklare
 mängd
+mängdlära
 människa
 människoapa
 människosyn
@@ -6722,6 +6745,7 @@ nivå
 njure
 njurinflammation
 njursten
+njursvikt
 njurtalg
 njutning
 nod
@@ -7095,6 +7119,7 @@ partisan
 partner
 passage
 passagerare
+passgång
 passion
 passivitet
 passkontroll
@@ -7444,6 +7469,7 @@ provokation
 provtagning
 provtjänstgöring
 prutmån
+prutt
 prydnad
 prydnadssten
 pryl
@@ -8197,6 +8223,7 @@ serenitet
 sergeant
 serie
 seriefigur
+serietidning
 serveess
 server
 servering
@@ -8374,6 +8401,7 @@ skald
 skall
 skalle
 skallerorm
+skallgång
 skallskada
 skalm
 skalär
@@ -8441,6 +8469,7 @@ skolgård
 skolpeng
 skolskjutning
 skomakare
+skongång
 skoning
 skopa
 skopning
@@ -8649,6 +8678,7 @@ småpåve
 småsak
 småstad
 smörgås
+smörgåskrasse
 smörgåstårta
 smörja
 smörkräm
@@ -9307,6 +9337,7 @@ sång
 sångare
 sångerska
 sångfågel
+sårskorpa
 sås
 såt
 sökande
@@ -9345,6 +9376,7 @@ tagg
 tagning
 taikonaut
 tajming
+takkam
 takometer
 takränna
 takt
@@ -9651,6 +9683,7 @@ torsk
 torso
 tortyr
 torv
+torvmull
 tosa
 tossa
 touch
@@ -9840,6 +9873,7 @@ tusing
 tuskaft
 tuta
 tvedräkt
+tvekamp
 tvekan
 tvetydighet
 tvilling
@@ -10616,6 +10650,7 @@ vurpa
 vy
 väckarklocka
 väckelse
+väderkvarn
 väderlek
 väderprognos
 vädersatellit
@@ -10751,6 +10786,7 @@ våda
 vådeld
 våffla
 våg
+vågkam
 våglängd
 vågmästare
 vågmästarposition
