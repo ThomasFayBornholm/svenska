@@ -863,6 +863,7 @@ fel
 felaktig
 felfri
 feminin
+femuddig
 feodal
 festlig
 fet
@@ -1281,6 +1282,7 @@ glädjande
 glädjefattig
 glänsande
 glåmig
+glödhet
 glömsk
 gnatig
 gnetig
@@ -1574,6 +1576,7 @@ idyllisk
 idérik
 igenkännande
 igenkännbar
+ihjälfrusen
 ihärdig
 ihålig
 ihållande
@@ -1815,6 +1818,7 @@ kemisk
 kinesisk
 kinestetisk
 kinkig
+kitslig
 kittlig
 kladdig
 klandervärd
@@ -1863,6 +1867,7 @@ kobent
 kognatisk
 kognitiv
 kokett
+kokhet
 koko
 kokt
 kolerisk
@@ -2010,7 +2015,12 @@ kärlig
 kärnfull
 kärv
 kåserisk
+könlig
+könlös
+könsbunden
+könslig
 könsneutral
+könsöverskridande
 labil
 lack
 laddad
@@ -2155,6 +2165,8 @@ lättköpt
 lättlurad
 lättmetall
 lättnad
+lättretad
+lättretlig
 lättrogen
 lättrökt
 lättrörd
@@ -2722,6 +2734,7 @@ omtalad
 omtyckt
 omtänksam
 omtöcknad
+omutlig
 omvänd
 omväxlande
 omärklig
@@ -2912,6 +2925,7 @@ patriarkal
 patriotisk
 patt
 pedagogisk
+pensionsgrundande
 perfekt
 perfektiv
 perfid
@@ -3035,6 +3049,7 @@ radioaktiv
 raffinerad
 rafflande
 rak
+rakryggad
 ram
 randig
 rangerad
@@ -3679,6 +3694,7 @@ särdeles
 säregen
 särpräglad
 särskild
+särskilja
 sävlig
 sårbar
 såt
@@ -3686,6 +3702,7 @@ södra
 sökt
 sömnig
 sömnlös
+sönderslagen
 söndervittrad
 söndrig
 söt
@@ -3858,6 +3875,7 @@ tyrannisk
 tysk
 tyst
 tystlåten
+täck
 täckt
 tänjbar
 tänkbar
