@@ -20,15 +20,7 @@
 				$del = "";
 			}
 			if (array_key_exists($word, $dict)) {
-				$outArr[$el] = $dict[$word];			
-			// Handle trailing special character 'é' when the user enters plain 'e'
-			} else if (str_contains($word,'e')) {				
-				$pos = strpos($word,'e');
-				$wordFuzzy = substr($word,0,$pos) . 'é';
-				if (array_key_exists($wordFuzzy, $dict)) {
-					$outArr[$el] = $dict[$wordFuzzy];
-				}
-			}
+				$outArr[$el] = $dict[$word];						
 		}
 	}
 	echo json_encode($outArr);

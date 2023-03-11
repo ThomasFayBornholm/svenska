@@ -363,7 +363,6 @@ function getWords(ind = INC) {
 }
 
 function displayWords(list,ind) {
-	console.log("displayWords(), list = " + list + ", ind = " + ind)
 	if (DEBUG) console.log("displayWords(), list = " + list + ", ind = " + ind)
 	let out = ""
 	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list, {
@@ -1340,9 +1339,12 @@ function regexSearch(word) {
 }
 
 function drillDown() {
+	console.log("drillDown()");
 	if (DEBUG) console.log("drillDown()");
+	// Take word from iWords to allow for special characters such as 'é'
+	let id = "#w" + SCROLL_INC;
+	let word = $(id).text()
 	
-	let word = $('#iInput').val()
 	fetch('backend/getDefAll.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -1821,33 +1823,33 @@ function grammar(def) {
 	 "vanligen bestämd form sing. och med versal",
 	 "med subst. som för­led",
 	 "vanligen placerat efter huvud­ordet",
-	"ofta med versal",
-	"ofta med efter­följande bi­sats",
-	"sär­skilt i pass. konstruktioner",
-	"i konstruktion med komparativ",
-	"ofta substantiverat",
+	 "ofta med versal",
+	 "ofta med efter­följande bi­sats",
+	 "sär­skilt i pass. konstruktioner",
+	 "i konstruktion med komparativ",
+	 "ofta substantiverat",
 	 "ofta refl. el. perfekt particip",
 	 "ofta refl. el. pass.",
-	"ofta refl."			,
-	"med konjunktionen",,
-	"vanligen pres.",
-	"endast pres. el. pret.",
-	"i bestämd form",
-	"vanligen bestämd form sing.",
-	"ofta bestämd form sing.",
-	"vanligen bestämd form",
-	"ofta plur.",
-	"knappast plur.; i vissa ut\u00ADtryck",
-	"knappast plur.",
-	"vanligen plur.",
-	"sällan plur.",
-	"vanligen part.",
+	 "ofta refl."			,
+	 "med konjunktionen",,
+	 "vanligen pres.",
+	 "endast pres. el. pret.",
+	 "i bestämd form",
+	 "vanligen bestämd form sing.",
+	 "ofta bestämd form sing.",
+	 "vanligen bestämd form",
+	 "ofta plur.",
+	 "knappast plur.; i vissa ut\u00ADtryck",
+	 "knappast plur.",
+	 "vanligen plur.",
+	 "sällan plur.",
+	 "vanligen part.",
 	// ToDo regex to get word reference	,
-	"ofta i sammansättn."		,
-	"mest i sammansättn.",
-	"nu­mera vanligen i sammansätt."	,
-	"vanligen i sammansättn. och i vissa uttryck",
-	"vanligen i sammansättn.",
+	 "ofta i sammansättn."		,
+	 "mest i sammansättn.",
+	 "nu­mera vanligen i sammansätt."	,
+	 "vanligen i sammansättn. och i vissa uttryck",
+	 "vanligen i sammansättn.",
 	"vanligen i vissa sammansätt."			,
 	"i vissa ut­tryck och sammansättn."			,
 	"i sammansättn.",
@@ -1915,6 +1917,7 @@ function grammar(def) {
 	 "ej predikativt",
 	 "vanligen pass.",
 	 "vanligen presens particip",
+	 "vanligen pret.",
 	]
 	for (i = 0; i < gArr.length; i++) {
 		let rep = gArr[i];
