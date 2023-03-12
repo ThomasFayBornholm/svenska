@@ -3320,7 +3320,9 @@ bordsduk
 bordskavaljer
 bordskniv
 bordssalt
+bordsstudsare
 bordsvatten
+bordun
 boreal
 borg
 borgare
@@ -3391,6 +3393,7 @@ botanisera
 botemedel
 botten
 bottenfällning
+bottenlös
 bottenplan
 bottensats
 bottenskola
@@ -3473,6 +3476,7 @@ brist
 brista
 bristande
 bristfällig
+bristningsgräns
 britt
 brittisk
 bro
@@ -4177,6 +4181,7 @@ datering
 dativ
 dator
 datum
+datumgräns
 davidsstjärna
 de
 de röda khmererna
@@ -4578,6 +4583,7 @@ dogm
 dok
 doktor
 doktorand
+doktorsgrad
 doktrin
 dokument
 dokumentarisk
@@ -4769,6 +4775,7 @@ drönarbild
 drönare
 drös
 du
+du milde!
 du må tro att ...
 dubb
 dubbel
@@ -5342,6 +5349,7 @@ energi
 energieffektivisera
 energieffektivisering
 energigröda
+energiknippe
 energisk
 energiskog
 energisystem
@@ -5957,6 +5965,7 @@ finta
 fintvätt
 finurlig
 fiol
+fiolsträng
 fippla
 fipplig
 fira
@@ -5971,6 +5980,7 @@ fiskalisk
 fiskare
 fiske
 fiskebåt
+fiskegräns
 fiskehamn
 fiskerättighet
 fiskhåv
@@ -6639,6 +6649,7 @@ fröjda
 fröjda sig
 fröjdas
 fröken
+frömjöl
 fröväxt
 fröämne
 fuffens
@@ -8576,6 +8587,7 @@ grabbig
 grace
 grad
 gradation
+gradbeteckning
 gradera
 gradient
 gradmätning
@@ -8764,7 +8776,11 @@ gräma
 gräma sig
 gräns
 gränsa
+gränsbevakning
+gränsfall
+gränskontroll
 gränslös
+gränslös sjukvård
 gränsskikt
 gränssnitt
 gränstrakt
@@ -9073,6 +9089,7 @@ ha mycket att stå i
 ha myror i baken/benen
 ha många bollar i luften
 ha många järn i elden
+ha många/flera strängar på sin lyra
 ha näsa för något
 ha någon på tråden
 ha något för ögonen
@@ -9451,6 +9468,7 @@ heltäckande
 heltäckningsmatta
 helvete
 hem
+hembageri
 hembakad
 hembiträde
 hembränd
@@ -10031,6 +10049,7 @@ hålla ihop
 hålla inne
 hålla med
 hålla mun(nen)
+hålla målro vid makt
 hålla näsan över vattenytan/vattnet
 hålla näsan över vatten­ytan/vattnet
 hålla någon om ryggen
@@ -11447,8 +11466,11 @@ julle
 julstjärna
 jumper
 jungfru
+jungfrukammare
+jungman
 juni
 junior
+junker
 junta
 juridik
 juridisk
@@ -11611,6 +11633,7 @@ kalkyl
 kalkylator
 kalkylera
 kall
+kall mur
 kalla
 kalla ihop
 kalla in
@@ -11905,6 +11928,7 @@ kinesisk
 kinesiska
 kinestetisk
 kinetik
+kinetisk energi
 kinkig
 kiosk
 kirra
@@ -12235,6 +12259,7 @@ kofångare
 kognatisk
 kognitiv
 kohage
+koj
 koja
 kok
 koka
@@ -12537,6 +12562,7 @@ konsultation
 konsultativ
 konsultera
 konsulterande
+konsulär
 konsument
 konsumentförening
 konsumentpris
@@ -12580,6 +12606,7 @@ kontroversiell
 kontur
 konung
 konungslig
+konvektion
 konvent
 konvention
 konventionell
@@ -12917,8 +12944,11 @@ kryddväxt
 krylla
 krympa
 krypa
+krypa bakom någon/något
 krypa ihop
+krypa till kojs
 krypa till korset
+krypa/kräla i stoftet
 kryphål
 krypskytte
 kryptera
@@ -13263,6 +13293,7 @@ kärleksgnabb
 kärlig
 kärlkramp
 kärna
+kärnenergi
 kärnfamilj
 kärnfråga
 kärnfull
@@ -13293,6 +13324,7 @@ kålrot
 kår
 kåsera
 kåseri
+kåserisamling
 kåserisk
 kåsör
 kö
@@ -14209,6 +14241,7 @@ lättjefull
 lättklädd
 lättköpt
 lättlurad
+lättmatros
 lättmetall
 lättmjölk
 lättnad
@@ -14493,13 +14526,29 @@ maklig
 makrill
 makrokosmos
 makt
+makt och myndighet
+maktbalans
+maktblock
+maktbolag
 maktdelning
+maktfaktor
 maktfullkomlig
 maktfördelning
+maktgalen
 makthavare
+makthunger
+maktkamp
 maktkoncentration
+maktlysten
 maktlös
+maktmedel
+maktmissbruk
+maktmänniska
+maktordning
+maktpåliggande
 maktskifte
+maktspel
+maktspråk
 maktövertagande
 mal
 mala
@@ -14949,8 +14998,11 @@ mikrougn
 mikrovågsugn
 mil
 mild
+milda makter!
 mildra
 mildring
+mildväder
+mildögd
 militant
 militär
 miljard
@@ -15184,6 +15236,7 @@ moln
 molnfri
 molnig
 molntäcke
+moltiga
 moment
 momentarm
 momentum
@@ -15602,6 +15655,7 @@ naiv
 naivitet
 naken
 nakenfröig
+nakna jungfrun
 nakterhus
 nalkas
 nalla
@@ -16159,6 +16213,7 @@ nöjd
 nöje
 nöjesbransch
 nöjesfiske
+nöjeslysten
 nöjespark
 nöjsam
 nörd
@@ -16687,6 +16742,7 @@ ordna sig
 ordning
 ordning på torpet
 ordningsföljd
+ordningsmakt
 ordningsregel
 ordningstal
 ordningsvakt
@@ -16955,6 +17011,7 @@ panikslagen
 panisk
 pank
 panna
+pannben
 panorama
 pansar
 pansarglas
@@ -17114,6 +17171,7 @@ pendang
 pendel
 pendla
 pendlare
+pendyl
 peng
 pengar under bordet
 penicillin
@@ -17281,6 +17339,7 @@ pissdålig
 pissoar
 pist
 pistasch
+pistill
 pistol
 pitcha
 pitepalt
@@ -17421,6 +17480,7 @@ polera
 policy
 polis
 polisbil
+polismakt
 polisman
 polisstat
 polisstation
@@ -17429,6 +17489,7 @@ politiker
 politisera
 politisk
 polityr
+pollen
 pollett
 polsk
 polska
@@ -17507,6 +17568,7 @@ potens
 potentat
 potential
 potentiell
+potentiell energi
 pott
 poäng
 poängtera
@@ -17963,6 +18025,7 @@ radikalism
 radio
 radioaktiv
 radioaktivitet
+radiokåseri
 radioröst
 raffinemang
 raffinera
@@ -18486,6 +18549,7 @@ ringa ut
 ringakta
 ringfinger
 ringklocka
+ringmur
 ringrev
 ringrostig
 rinna
@@ -19035,6 +19099,7 @@ samhällsengagemang
 samhällsklass
 samhällsomstörtande
 samhällsordning
+samhällsorgan
 samhällssyn
 samhörighet
 samisk
@@ -19111,6 +19176,8 @@ sammanväva
 samman­satt tal
 sammelsurium
 sammet
+sammetsblick
+sammetsröst
 samordna
 samordnare
 samordning
@@ -20191,6 +20258,7 @@ skrävla
 skrå
 skråla
 skröplig
+skudda stoftet av sina fötter
 skugga
 skuggbild
 skuggornas värld
@@ -20213,6 +20281,7 @@ skummjölk
 skumpa
 skur
 skura
+skurhink
 skurk
 skurkaktig
 skutt
@@ -20538,6 +20607,7 @@ slätt
 slätvar
 slå
 slå an
+slå an en sträng hos någon
 slå av
 slå ett slag för något
 slå fast
@@ -20560,6 +20630,7 @@ slå på
 slå runt
 slå samman
 slå sig
+slå sig för pannan
 slå sig ner
 slå sig på
 slå sina kloka huvuden ihop
@@ -20681,6 +20752,7 @@ smältverk
 smärre
 smärt
 smärta
+smärtgräns
 smärtsam
 smärtstillande
 små
@@ -20845,6 +20917,7 @@ snörik
 snörpvad
 snörvla
 snöskred
+snösträng
 snötäcke
 snötäckt
 sober
@@ -20886,6 +20959,7 @@ solarkonstant
 solcell
 soldat
 soldränkt
+solenergi
 solglasögon
 solid
 solidarisk
@@ -21131,6 +21205,7 @@ spjälsäng
 spjärna mot udden
 splinta
 split
+splitt(er) naken
 splitter
 splittra
 splittring
@@ -21188,6 +21263,7 @@ sprit
 sprita
 spritdryck
 sprits
+spritt (språngande) naken
 spritta
 sprucken röst
 sprucken stämma
@@ -21236,6 +21312,7 @@ späda
 spädbarn
 spädgris
 spänd
+spänd som en fiolsträng
 spänn
 spänna
 spänna bågen (för) högt/hårt
@@ -21596,6 +21673,7 @@ straffområde
 straffskatt
 straight
 stram
+strama upp sig
 strand
 strandhugg
 strandskata
@@ -21699,6 +21777,7 @@ sträckmuskel
 sträckning
 sträng
 stränginstrument
+strängt taget (adv.)
 sträv
 sträva
 strävan
@@ -21924,11 +22003,13 @@ stående
 stål
 stånd
 ståndaktig
+ståndare
 ståndman
 ståndort
 ståndpunkt
 stång
 stånga
+stånga sin panna blodig
 stångas
 stångpiska
 stånka
@@ -22034,6 +22115,7 @@ sura
 surdeg
 surfa
 surfing
+surhetsgrad
 surmulen
 surpris
 surra
@@ -22153,6 +22235,7 @@ svälla
 svält
 svälta
 svälta ihjäl
+svältgräns
 svämma över
 sväng
 svänga
@@ -22555,6 +22638,7 @@ ta sig
 ta sig an
 ta sig för
 ta sig för mycket till bästa
+ta sig för pannan
 ta sig före
 ta sig samman
 ta sig till
@@ -22840,6 +22924,7 @@ terrass
 territoriell
 territorium
 terror
+terrorbalans
 terrorbrott
 terrorism
 terrorist
@@ -22961,6 +23046,7 @@ tidvattenhöjd
 tidvis
 tiebreak
 tiga
+tiga som muren
 tiger
 tigerhaj
 tigerorm
@@ -23098,6 +23184,8 @@ tillskjuta
 tillskott
 tillskriva
 tillskära
+tillskärare
+tillskärning
 tillsluta
 tillsluten
 tillslutning
@@ -23357,6 +23445,7 @@ torped
 torr
 torrboll
 torrdocka
+torrnålsgravyr
 torsdag
 torsk
 torska
@@ -23621,6 +23710,7 @@ träbock
 träd
 träda emellan
 träda fram
+trädgräns
 trädgård
 trädgårdsarbete
 trädgårdsväxt
@@ -23709,6 +23799,7 @@ tull
 tulla
 tullfri
 tullkontor
+tullmur
 tulpan
 tum
 tumla
@@ -23912,6 +24003,7 @@ tänka till
 tänka ut
 tänka över
 tänkande
+tänkarpanna
 tänkbar
 tänkespråk
 tänkesätt
@@ -24050,6 +24142,7 @@ underläpp
 underlätta
 underlåta
 underlåtenhet
+underlåtenhetssynd
 undermedveten
 underminera
 undermålig
@@ -24242,6 +24335,7 @@ uppgå
 uppgång
 uppgörelse
 upphandla
+upphandlare
 upphandling
 upphetsa
 upphetta
@@ -25574,9 +25668,14 @@ verklighetsflykt
 verklighetsfrämmande
 verkningseld
 verkningsgrad
+verkningslös
 verksam
 verksamhet
+verksamhetsbehov
+verksamhetsberättelse
 verksamhetsområde
+verksamhetsstöd
+verksamhetsår
 verkstad
 verkstadsindustri
 verkställa
@@ -25588,6 +25687,7 @@ vermiceller
 veronika
 vers
 versal
+versamhetserättelse
 verse
 verserad
 versfot
@@ -26167,9 +26267,11 @@ värmegrad
 värmekraftverk
 värmekälla
 värmeledare
+värmeledning
 värmelära
 värmemängd
 värmenät
+värmepanna
 värmeutveckling
 värn
 värna
@@ -26209,6 +26311,7 @@ västlig
 västra
 väta
 väte
+vätejonkoncentration
 vätesulfid
 vätgas
 vätska
@@ -27772,6 +27875,4 @@ zygot
 övningsköra
 övningskörning
 övningslärare
-övningsämne
-övre
-övrig
+ö

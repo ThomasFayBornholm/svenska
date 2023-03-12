@@ -1549,6 +1549,8 @@ bordsdam
 bordsduk
 bordskavaljer
 bordssalt
+bordsstudsare
+bordun
 borg
 borgare
 borgarklass
@@ -1626,6 +1628,7 @@ bridge
 brigad
 brisad
 brist
+bristningsgräns
 britt
 bro
 broccoli
@@ -2012,6 +2015,7 @@ dataregister
 datering
 dativ
 dator
+datumgräns
 davidsstjärna
 deadline
 debatt
@@ -2173,6 +2177,7 @@ doft
 dogm
 doktor
 doktorand
+doktorsgrad
 doktrin
 dokumentation
 dokumentär
@@ -2750,11 +2755,13 @@ finnmark
 fint
 fintvätt
 fiol
+fiolsträng
 firma
 fisk
 fiskal
 fiskare
 fiskebåt
+fiskegräns
 fiskehamn
 fiskerättighet
 fiskhåv
@@ -3703,6 +3710,7 @@ grabb
 grace
 grad
 gradation
+gradbeteckning
 gradient
 gradmätning
 gradskillnad
@@ -3793,6 +3801,8 @@ grytstek
 grädde
 gräddtårta
 gräns
+gränsbevakning
+gränskontroll
 gränstrakt
 gräsand
 gräshoppa
@@ -4836,8 +4846,11 @@ julle
 julstjärna
 jumper
 jungfru
+jungfrukammare
+jungman
 juni
 junior
+junker
 junta
 juridik
 jurist
@@ -5226,6 +5239,7 @@ kofot
 kofta
 kofångare
 kohage
+koj
 koja
 koka
 kokbok
@@ -5400,6 +5414,7 @@ kontrollstämpel
 kontrovers
 kontur
 konung
+konvektion
 konvention
 konvergens
 konversation
@@ -5730,6 +5745,7 @@ kärlek
 kärleksaffär
 kärlkramp
 kärna
+kärnenergi
 kärnfamilj
 kärnfråga
 kärnklyvning
@@ -5749,7 +5765,7 @@ kåkstad
 kål
 kålrot
 kår
-kåseri
+kåserisamling
 kåsör
 kö
 köksmaskin
@@ -6096,6 +6112,7 @@ läsebok
 läskedryck
 läsning
 lätthet
+lättmatros
 lättmjölk
 läxa
 låda
@@ -6200,10 +6217,16 @@ makeup
 makrill
 makrokosmos
 makt
+maktbalans
 maktdelning
+maktfaktor
 maktfördelning
 makthavare
+makthunger
+maktkamp
 maktkoncentration
+maktmänniska
+maktordning
 mal
 malis
 malja
@@ -7061,6 +7084,7 @@ ordlek
 ordlista
 ordning
 ordningsföljd
+ordningsmakt
 ordningsregel
 ordningsvakt
 ordrot
@@ -7233,6 +7257,7 @@ pellejöns
 pendang
 pendel
 pendlare
+pendyl
 peng
 penis
 penna
@@ -7328,6 +7353,7 @@ pisksnärtskada
 pissoar
 pist
 pistasch
+pistill
 pistol
 pitepalt
 pitprops
@@ -7394,6 +7420,7 @@ polcirkel
 policy
 polis
 polisbil
+polismakt
 polisman
 polisstat
 polisstation
@@ -7894,6 +7921,7 @@ riktpunkt
 rimfrost
 ring
 ringklocka
+ringmur
 rippel
 rishög
 risk
@@ -8139,6 +8167,8 @@ sammanställning
 sammansvärjning
 sammansättning
 sammanvägning
+sammetsblick
+sammetsröst
 samordnare
 samordning
 sampla
@@ -8622,6 +8652,7 @@ skult
 skummjölk
 skumpa
 skur
+skurhink
 skurk
 skvadron
 skvätt
@@ -8771,6 +8802,7 @@ smällare
 smältost
 smältsäkring
 smärta
+smärtgräns
 småbil
 småborgare
 småfranska
@@ -8824,6 +8856,7 @@ snödriva
 snölykta
 snöplog
 snörpvad
+snösträng
 socialdemokrat
 socialhjälp
 socialism
@@ -8848,6 +8881,7 @@ sol
 solarkonstant
 solcell
 soldat
+solenergi
 solidaritet
 solitär
 solkräm
@@ -9262,6 +9296,7 @@ stängel
 stängsel
 stäv
 stå
+ståndare
 ståndman
 ståndort
 ståndpunkt
@@ -9303,6 +9338,7 @@ suppleant
 supé
 surdeg
 surfing
+surhetsgrad
 surpris
 susen
 suspension
@@ -9352,6 +9388,7 @@ svordom
 svulst
 svägerska
 svält
+svältgräns
 sväng
 svängbro
 svängning
@@ -9588,6 +9625,7 @@ termistor
 termometer
 terrass
 terror
+terrorbalans
 terrorism
 terrorist
 terräng
@@ -9689,6 +9727,8 @@ tillkommelse
 tillkomst
 tillrättavisning
 tillsats
+tillskärare
+tillskärning
 tillslutning
 tillspetsning
 tillstrykan
@@ -9797,6 +9837,7 @@ torpare
 torped
 torrboll
 torrdocka
+torrnålsgravyr
 torsdag
 torsk
 torso
@@ -9920,6 +9961,7 @@ tryffelsvamp
 trygghet
 träblåsinstrument
 träbock
+trädgräns
 trädgård
 trädgårdsväxt
 trädgårdsärt
@@ -9960,6 +10002,7 @@ tukt
 tularemi
 tull
 tullkontor
+tullmur
 tulpan
 tum
 tumlare
@@ -10037,6 +10080,7 @@ täckjacka
 tändhatt
 tändsats
 tändsticka
+tänkarpanna
 täppa
 tärna
 tärning
@@ -10085,6 +10129,7 @@ underklass
 underledare
 underläpp
 underlåtenhet
+underlåtenhetssynd
 underordning
 underrätt
 underrättelse
@@ -10159,6 +10204,7 @@ uppgivelse
 uppgivenhet
 uppgång
 uppgörelse
+upphandlare
 upphandling
 upphettning
 upphovsman
@@ -10637,6 +10683,7 @@ verklighet
 verklighetsflykt
 verkningseld
 verksamhet
+verksamhetsberättelse
 verkstad
 verkstadsindustri
 verktygslåda
@@ -10644,6 +10691,7 @@ verktygssats
 veronika
 vers
 versal
+versamhetserättelse
 verse
 versfot
 version
@@ -10862,8 +10910,10 @@ värmeenergi
 värmegrad
 värmekälla
 värmeledare
+värmeledning
 värmelära
 värmemängd
+värmepanna
 värmeutveckling
 värnkraft
 värnplikt
@@ -10881,6 +10931,7 @@ västern
 västgöte
 västkant
 väta
+vätejonkoncentration
 vätesulfid
 vätgas
 vätska
