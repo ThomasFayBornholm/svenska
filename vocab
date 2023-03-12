@@ -1657,8 +1657,10 @@ function addWord(remove = false) {
 function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta()");	
-	regexArr = [
-			// Next one is without terminating '.' character
+	regexArr = [			
+		/mest i äldre tid/,
+		/ofta i offentligt språk/,
+		/ofta i politiska samman­hang/,
 		/ej i fack­mässiga samman­hang/,
 		/var­dagligt, kan upp­fattas som ned­sättande/,
 		/var­dagligt, något ålderdomligt; kan upp­fattas som ned­sättande/,
@@ -1858,6 +1860,7 @@ function grammar(def) {
 	"utan böjning, i vissa ut\u00ADtryck",
 	"sär­skilt i vissa ut­tryck",
 	 "sär­skilt i ett ut­tryck",
+	"vanligen i vissa ut\u00ADtryck",
 	"i vissa ut\u00ADtryck",
 	"vanligen i några ut\u00ADtryck",
 	"i några ut\u00ADtryck",
