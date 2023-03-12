@@ -138,6 +138,7 @@ allätare
 allé
 almanacka
 alp
+alpacka
 alpinism
 alstring
 alt
@@ -1638,6 +1639,7 @@ broder
 broförbindelse
 broms
 bronkit
+bronsmedalj
 bror
 brorsdotter
 brorson
@@ -2521,7 +2523,6 @@ epigon
 epilepsi
 epileptiker
 epilog
-episkop
 episkopat
 episod
 epistel
@@ -2940,10 +2941,12 @@ fotnot
 foto
 fotograf
 fotografering
+fotogravyr
 foton
 fotoresistor
 fotskrapa
 fotsvamp
+fotvård
 frack
 fradga
 frakt
@@ -3533,6 +3536,7 @@ gasol
 gastillförsel
 gasutveckling
 gata
+gatlykta
 gatubild
 gatukors
 gatukorsning
@@ -3742,7 +3746,9 @@ graviditetstest
 gravitation
 gravitationslagen
 gravitet
+gravlykta
 gravsänka
+gravvård
 gravyr
 gravör
 grej
@@ -3836,6 +3842,7 @@ gudstjänst
 gudunge
 guide
 gula
+guldmedalj
 guldskiva
 guldsmed
 guldstjärna
@@ -4087,6 +4094,7 @@ hemskillnad
 hemställan
 hemuppgift
 hemvist
+hemvård
 heraldik
 herbivor
 herde
@@ -5530,6 +5538,8 @@ krigsman
 krigsrätt
 krigstillstånd
 kriminalitet
+kriminalvård
+kriminalvårdare
 kriminolog
 kris
 krisp
@@ -5818,6 +5828,8 @@ lagstiftning
 lakrits
 laktos
 lakun
+lama
+lamaism
 lampa
 lampfot
 landgång
@@ -6356,6 +6368,8 @@ maxim
 maximering
 med
 medalj
+medaljong
+medaljör
 medarbetare
 medborgaranda
 medborgare
@@ -6458,6 +6472,7 @@ miljöförstörning
 miljögift
 miljöpolitik
 miljöskildring
+miljövård
 milliliter
 millimeter
 millisekund
@@ -6478,6 +6493,7 @@ minneslund
 minnesregel
 minnesruna
 minnesstund
+minnesvård
 minoritet
 minskning
 minsvepare
@@ -6714,6 +6730,7 @@ möbel
 möbelklädsel
 möda
 mödomshinna
+mödravård
 möhippa
 möjlighet
 mördare
@@ -7956,6 +7973,7 @@ rost
 rostsvamp
 rot
 rotation
+rotogravyr
 rotselleri
 rotting
 rotvälta
@@ -8147,6 +8165,7 @@ samhällsekonomi
 samhällsklass
 samhällsordning
 samhällssyn
+samhällsvård
 samhörighet
 samklang
 samkänsla
@@ -8402,6 +8421,8 @@ sillfisk
 silltrut
 silver
 silverfisk
+silvermedalj
+silversked
 simand
 simbassäng
 simfot
@@ -9561,6 +9582,7 @@ tandröta
 tandställning
 tandval
 tandvärk
+tandvård
 tangens
 tangent
 tanke
@@ -9589,6 +9611,8 @@ teater
 teaterpjäs
 teaterstycke
 teckning
+teddy
+teddybjörn
 tekanna
 teknik
 tekniker
@@ -9968,6 +9992,7 @@ trädgårdsärt
 trädkramare
 träff
 träförädling
+trägravyr
 tränare
 träng
 trängning
@@ -9977,6 +10002,7 @@ träskalle
 träsked
 träsmak
 träta
+trätjära
 tråd
 trådbuss
 tråkmåns
