@@ -409,7 +409,9 @@ bollträ
 bolån
 bombhot
 bombplan
+bomsegel
 bomärke
+bondehemman
 boningshus
 bonusbarn
 bord
@@ -431,6 +433,7 @@ brak
 brandalarm
 brandförsvar
 brandlarm
+brandsegel
 brandskydd
 bredband
 brev
@@ -465,6 +468,7 @@ brödraskap
 bröl
 bröllop
 bröst
+bröstregister
 bröstsim
 bud
 budgetår
@@ -508,7 +512,14 @@ chips
 cigarettpaket
 cirkulär
 citat
+civilförsvar
+civilkurage
+civilmotstånd
 civilmål
+civilstånd
+civiltryckeri
+civiläktenskap
+collage
 college
 containerfartyg
 cumulusmoln
@@ -704,6 +715,7 @@ fall
 fallskärmsavtal
 fallskärmshopp
 familjehotell
+familjejordbruk
 familjenamn
 familjeträd
 fanstyg
@@ -803,6 +815,7 @@ fotbollslag
 fotfäste
 foto
 fotografi
+fotomontage
 fotspår
 fotvalv
 fraktfartyg
@@ -1039,6 +1052,7 @@ godståg
 godtrosförvärv
 godtycke
 golv
+gomsegel
 gomtak
 gottfinnande
 gradtal
@@ -1299,6 +1313,7 @@ inkast
 inkännande
 inköp
 inköpspris
+inland
 inljud
 inlopp
 inlägg
@@ -1403,6 +1418,7 @@ kaos
 kapell
 kapillärrör
 kapital
+kapitalkonto
 kapitel
 kapprum
 kar
@@ -1503,7 +1519,10 @@ konstnärkynne
 konstverk
 konsumentpris
 konto
+kontokort
+kontonummer
 kontor
+kontoutdrag
 kontrakt
 kontrollmärke
 kontrollnummer
@@ -1524,6 +1543,8 @@ korsord
 korsstygn
 korståg
 korthus
+kortison
+kortregister
 kortslutningsställe
 kortspel
 kostnadsläge
@@ -1579,6 +1600,7 @@ kungadöme
 kungarike
 kungsvatten
 kunnande
+kustland
 kustområde
 kutter
 kuvert
@@ -1857,6 +1879,7 @@ mellanskikt
 mellanslag
 mellanstadium
 mellanöra
+memento
 memorandum
 memorial
 men
@@ -2092,6 +2115,7 @@ omtal
 omval
 opium
 oppositionsparti
+optimum
 oratorium
 ord
 ordalag
@@ -2126,6 +2150,7 @@ pansarglas
 par
 paradis
 paraffin
+paragraftecken
 paraply
 parhus
 pariserhjul
@@ -2155,9 +2180,19 @@ perfekt
 periodtal
 periskop
 persiljesmör
+personalrum
+personangrepp
+personbevis
+personkonto
+personnamn
 personnummer
+personobjekt
+personregister
+persontåg
 personval
 perspektiv
+perspektivfönster
+pet
 petrifikat
 pi
 pianino
@@ -2179,6 +2214,7 @@ plir
 plommon
 plugg
 plus
+pluskonto
 pluskvamperfekt
 plåster
 podium
@@ -2234,6 +2270,7 @@ pränt
 prål
 prång
 psyke
+pucko
 pulsåderbråck
 pund
 pundhuvud
@@ -2382,6 +2419,8 @@ rådhus
 rådjur
 rån
 råplugg
+råsegel
+rö
 rödljus
 röj
 rön
@@ -2395,6 +2434,8 @@ sabotage
 sagodjur
 sakförhållande
 sakläge
+sakobjekt
+sakregister
 salongslejon
 salt
 saltkött
@@ -2579,6 +2620,7 @@ skutt
 skvaller
 skydd
 skyddshelgon
+skyddsnät
 skyfall
 skymford
 skytte
@@ -2649,10 +2691,20 @@ smäck
 smäll
 smältverk
 småbarn
+småborgerskap
+småbruk
 småbröd
+småfolk
 småföretag
+smågli
 småhus
+småjordbruk
+småkrafs
 småleende
+småplock
+småprat
+småsyskon
+småtteri
 småvilt
 smör
 smörgåskniv
@@ -2662,6 +2714,7 @@ snabbstål
 snack
 snask
 snatteri
+snedsegel
 sniff
 snilledrag
 snitt
@@ -2700,9 +2753,11 @@ sorl
 sortiment
 sovrum
 spackel
+spadtag
 spann
 spannmål
 sparande
+sparkonto
 spatium
 specialfall
 spegelglas
@@ -2787,7 +2842,9 @@ stoft
 stop
 stopmått
 stopp
+storband
 stordåd
+storfrämmande
 storfurstendöme
 storföretag
 storhetsvansinne
@@ -2823,6 +2880,7 @@ studentliv
 studiebidrag
 studium
 stup
+stuprör
 stycke
 styckebruk
 stygn
@@ -2891,6 +2949,7 @@ säkerhetsmål
 säkerhetssystem
 sällskap
 sällskapsdjur
+sällskapsspel
 sändebud
 sänkningstecken
 säte
@@ -3101,6 +3160,7 @@ tågvirke
 tålamod
 tö
 töcken
+törne
 u-land
 uddljud
 uddrim
@@ -3324,7 +3384,9 @@ vin
 vinbär
 vindfälle
 vindkraftverk
+vindskydd
 vindspel
+vindsutrymme
 vinkeljärn
 vinterdäck
 vinterlov

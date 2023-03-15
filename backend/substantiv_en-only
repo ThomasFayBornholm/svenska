@@ -856,6 +856,7 @@ bakfot
 bakfylla
 bakgrund
 bakgård
+bakkappa
 bakplåt
 baksida
 baksmälla
@@ -1535,6 +1536,8 @@ bonad
 bonde
 bondehär
 bondgård
+bondkomik
+bondkomiker
 bondlurk
 bondtur
 boning
@@ -1776,6 +1779,7 @@ bärkraft
 bärstol
 bärsärk
 bärsärkagång
+bärvåg
 bättring
 bävan
 bäver
@@ -1895,20 +1899,40 @@ citadell
 citrin
 citron
 citrongräs
+citybike
+cityshorts
 civilbefolkning
+civilekonom
+civilingenjör
 civilisation
+civilitet
+civillag
+civilplikt
 civilprocess
 civilrätt
 clearing
 clementin
+cliffhanger
 clou
 clown
+clubsandwich
+clubstek
+coach
+cockpit
 cocktail
+cocktailbar
+coda
+coitus
+cola
+community
 container
 containerhamn
+controller
 cookie
+coroner
 cosinus
 cotangens
+coupe
 cracker
 crawl
 cred
@@ -2023,6 +2047,7 @@ deadline
 debatt
 debattartikel
 debattör
+debet
 debilitet
 december
 deciliter
@@ -2134,6 +2159,7 @@ dinosaurie
 diod
 diplomat
 diplomati
+diplomingenjör
 dipsoman
 direkthet
 direktion
@@ -2167,6 +2193,7 @@ division
 dixieland
 djungel
 djupled
+djupverkan
 djurläkare
 djurpark
 djurrätt
@@ -2685,6 +2712,7 @@ fattigvård
 favorit
 favör
 fax
+feature
 feber
 februari
 federation
@@ -2765,6 +2793,7 @@ fiskebåt
 fiskegräns
 fiskehamn
 fiskerättighet
+fiskhamn
 fiskhåv
 fiskleverolja
 fiskolja
@@ -2807,6 +2836,7 @@ flaskhals
 flasknosdelfin
 flasköppnare
 flata
+flatfisk
 flathet
 flatlus
 flersamhet
@@ -2835,6 +2865,7 @@ flottyr
 fluga
 flugsmälla
 fluktuation
+flundra
 fluor
 fluorid
 flygare
@@ -2984,6 +3015,7 @@ frenesi
 frestelse
 frett
 friare
+fribonde
 fribytare
 frid
 fridag
@@ -3044,6 +3076,7 @@ frysdisk
 fräken
 fräkne
 frälsare
+frälsebonde
 frälsning
 frälsningsarmén
 frälsningssoldat
@@ -3506,6 +3539,7 @@ galenskap
 galge
 gallblåsa
 gallfeber
+gallring
 gallup
 galning
 galopp
@@ -3525,6 +3559,7 @@ gardering
 garderob
 gardian
 gardin
+gardinkappa
 gardinluft
 gardinstång
 gardist
@@ -3848,6 +3883,7 @@ guldsmed
 guldstjärna
 guldstämpel
 guldtand
+gulhämpling
 gulkropp
 gullhöna
 gumma
@@ -3866,6 +3902,8 @@ guvernant
 guvernör
 gycklare
 gylta
+gymnasieekonom
+gymnasieingenjör
 gymnasielärare
 gymnasieskola
 gymnasist
@@ -3937,6 +3975,7 @@ halmhatt
 halogen
 hals
 halsbränna
+halsduk
 halsfluss
 halskedja
 halskota
@@ -4082,6 +4121,7 @@ hembygdsgård
 hemfalla
 hemgift
 hemhjälp
+heminredning
 hemisfär
 hemlighet
 hemmakatt
@@ -4407,6 +4447,7 @@ högtid
 högtrafik
 högtrycksrygg
 högtyska
+högvakt
 högvarv
 höjd
 höjdare
@@ -4497,6 +4538,7 @@ impost
 impotens
 impressionism
 impuls
+in vitro-fertilisering
 inackordering
 inaktivitet
 inandning
@@ -4609,6 +4651,7 @@ inombordare
 inombordsmotor
 inomhusbruk
 input
+inredning
 inrikesminister
 inrikespolitik
 inriktning
@@ -4618,13 +4661,26 @@ inrättning
 inrådan
 insamling
 insats
+insekt
+insekticid
+insektsätare
+insemination
+insexnyckel
 insida
+inside information
+insider
 insikt
 insinuant
 insinuation
 insjö
+insjöfisk
+inskjutning
+inskolning
+inskrift
+inskription
 inskrivning
 inskränkning
+inskärning
 insmuggling
 insolation
 inspelning
@@ -4862,6 +4918,7 @@ junker
 junta
 juridik
 jurist
+jury
 justitieminister
 justitieombudsman
 juvel
@@ -4939,6 +4996,7 @@ kakform
 kakofoni
 kaktus
 kalabalik
+kalaskula
 kalender
 kaliber
 kalkhalt
@@ -5083,6 +5141,7 @@ katolik
 katt
 kattpest
 kattunge
+kattvind
 kaus
 kausalitet
 kaution
@@ -5127,7 +5186,9 @@ kittling
 kittost
 kiwi
 kjol
+klack
 klackring
+klackspark
 klaffbro
 klagan
 klamp
@@ -5149,11 +5210,13 @@ klatsch
 klausul
 klavecin
 klaviatur
+klematis
 klenod
 klensmed
 klenät
 klibbal
 klick
+klicker
 klient
 klimatfråga
 klimatförändring
@@ -5222,6 +5285,7 @@ knivrygg
 knop
 knopp
 knota
+knussel
 knut
 knuta
 knutpunkt
@@ -5259,6 +5323,7 @@ koks
 koksalt
 kokvrå
 kola
+kolare
 kolartro
 koldioxid
 koleld
@@ -5275,6 +5340,7 @@ kollektivism
 kollektivtrafik
 kollision
 kolloid
+kolmila
 kolmonoxid
 kolon
 koloni
@@ -5353,6 +5419,7 @@ konferens
 konfetti
 konfident
 konfiguration
+konfirmand
 konfirmation
 konflikt
 konflikthantering
@@ -5552,7 +5619,9 @@ kristyr
 krita
 kritik
 kritiker
+kritikstorm
 krock
+krocket
 krockkudde
 krog
 krogkund
@@ -5638,6 +5707,7 @@ kultur
 kulturartikel
 kulturkrock
 kultursida
+kultursnobb
 kulvert
 kulörtvätt
 kummel
@@ -5774,6 +5844,7 @@ kåkfarare
 kåkstad
 kål
 kålrot
+kåpa
 kår
 kåserisamling
 kåsör
@@ -5818,6 +5889,7 @@ ladugård
 lag
 lager
 lagergång
+lagerkrans
 lagkapten
 lagledare
 laglighet
@@ -5849,6 +5921,7 @@ landsting
 landsväg
 landsättning
 landtunga
+landvind
 lanka
 lansering
 lantbrukare
@@ -5891,6 +5964,7 @@ legitimation
 legitimitet
 legoknekt
 leguan
+lejonkula
 lek
 lekplats
 leksak
@@ -5935,6 +6009,7 @@ likvid
 likvidation
 likör
 lillasyster
+lillaxel
 lillebror
 lime
 limpa
@@ -6460,6 +6535,7 @@ mikrofon
 mikrougn
 mikrovågsugn
 mil
+mila
 mildring
 militär
 miljard
@@ -6476,12 +6552,14 @@ miljövård
 milliliter
 millimeter
 millisekund
+milsten
 milstolpe
 mimosa
 mina
 mineralolja
 miniatyrisering
 minibuss
+minidator
 minimering
 minimigräns
 minimjölk
@@ -6645,6 +6723,7 @@ mun
 munk
 munkavle
 munkjacka
+munkkåpa
 munterhet
 muntration
 mur
@@ -6703,6 +6782,7 @@ mätinstrument
 mätning
 måfå
 måg
+målarduk
 målare
 målgrupp
 målgård
@@ -6760,6 +6840,7 @@ nanoteknik
 narkoman
 narkotikahaj
 narr
+narrkåpa
 nation
 nationaldräkt
 nationalekonomi
@@ -7090,6 +7171,7 @@ opponent
 opportunism
 opposition
 optiker
+optimism
 optimist
 optimistjolle
 ordblindhet
@@ -7114,6 +7196,7 @@ organisation
 organism
 organist
 orgel
+orgelstämma
 orgie
 orientering
 orienteringstävling
@@ -7155,6 +7238,7 @@ ovanlighet
 ovansida
 ovation
 overall
+overheadbild
 overheadprojektor
 overksamhet
 ovilja
@@ -7206,6 +7290,7 @@ pappersexercis
 pappersklämma
 papperskorg
 pappersmassa
+pappersnäsduk
 papperssax
 papperstidning
 paprika
@@ -7315,16 +7400,54 @@ persienn
 persika
 persilja
 person
+persona
 personal
 personalavdelning
+personalchef
+personalism
 personalmatsal
+personalorganisation
+personaltidning
+personalunion
+personalutbildning
 personbil
 personbästa
+persondator
+personfråga
+personförsäkring
+persongalleri
+personhistoria
+personifikation
+personkemi
+personkilometer
+personkult
 personlighet
+personlighetsklyvning
+personröst
+personskildring
+personsökare
 persontrafik
+personundersökning
 personuppgift
+personvagn
+personvåg
+perspektivbild
+perspektivförskjutning
+perspiration
+perturbation
+peruk
+perukmakare
+perukstock
+perversion
+perversitet
+peso
+pessimism
 pessimist
 pest
+pesticid
+pestilens
+pesto
+petflaska
 petit mal
 petitess
 petmoj
@@ -7397,6 +7520,7 @@ platinaskiva
 plats
 platsannons
 platta
+plattfisk
 plattform
 plattfot
 plattyska
@@ -7487,6 +7611,7 @@ position
 positivism
 positron
 post
+postanvisning
 postbox
 postering
 postkontor
@@ -7598,6 +7723,7 @@ proviant
 provins
 provning
 provokation
+provrörsbefruktning
 provtagning
 provtjänstgöring
 prutmån
@@ -7625,6 +7751,7 @@ publicist
 publicistik
 publik
 publikation
+puck
 puckelrygg
 pudding
 pudel
@@ -7894,8 +8021,10 @@ ribba
 ribbstol
 riddare
 ridhäst
+ridlärare
 ridsport
 ridå
+riesling
 rigg
 rikedom
 rikeman
@@ -8221,6 +8350,7 @@ sandjord
 sandjägare
 sandrevel
 sandskädda
+sandstorm
 sandwich
 sandöken
 sanitet
@@ -8276,6 +8406,7 @@ sax
 saxofon
 scanner
 scen
+scenvind
 schism
 schismatiker
 schizofreni
@@ -8287,7 +8418,10 @@ sedel
 sedlighet
 sedvana
 sedvänja
+segelarea
 segelbåt
+segelduk
+segelfart
 segelflygning
 segelflygplan
 segeljakt
@@ -8296,6 +8430,9 @@ segelled
 segelsport
 seger
 segerherre
+segerhuva
+segerkrans
+seghet
 segling
 segment
 segrare
@@ -8411,6 +8548,7 @@ signalpolitik
 signalspaning
 signaltrupp
 signatur
+signetring
 signor
 sikt
 sil
@@ -8568,6 +8706,7 @@ skata
 skateboard
 skatt
 skattebetalare
+skattebonde
 skattehöjning
 skattesats
 skattesänkning
@@ -8640,6 +8779,7 @@ skrift
 skrivare
 skrivbok
 skrivelse
+skrivkramp
 skrivning
 skrivstil
 skrivtavla
@@ -8825,14 +8965,34 @@ smältsäkring
 smärta
 smärtgräns
 småbil
+småbit
+småbonde
 småborgare
+småborgerlig
+småborgerlighet
+småbåtshamn
 småfranska
 småfågel
+småföretagare
+småhandlare
+småkaka
+småkusiner
 småkyrka
+smålom
+småländska
+smålänning
+småmynt
 småplanet
+småpotatis
 småpåve
 småsak
+småskola
+småsparare
+småspik
 småstad
+småttighet
+småtting
+småvarmt
 smörgås
 smörgåskrasse
 smörgåstårta
@@ -8861,7 +9021,9 @@ snopp
 snowboard
 snudd
 snurr
+snurrevad
 snuskighet
+snusnäsduk
 snut
 snuva
 snyftning
@@ -8877,6 +9039,8 @@ snödriva
 snölykta
 snöplog
 snörpvad
+snöslunga
+snöstorm
 snösträng
 socialdemokrat
 socialhjälp
@@ -8915,6 +9079,7 @@ solrosolja
 solsida
 solsting
 soluppgång
+solvind
 sommar
 sommarmånad
 sommarsjuka
@@ -8997,6 +9162,7 @@ spiralrörelse
 spis
 spisel
 spiselhäll
+spiskåpa
 spisning
 spjutkastning
 spjäla
@@ -9045,6 +9211,9 @@ spännvidd
 spänst
 spärr
 spärreld
+spärrkonto
+spärrvakt
+spätlese
 spådom
 spårning
 spårstämpel
@@ -9133,6 +9302,7 @@ stekburgare
 stekel
 stekpanna
 stekvändare
+stelkramp
 sten
 stenfot
 stenkoll
@@ -9184,11 +9354,25 @@ stolthet
 stomme
 stoppare
 stor
+storasyrra
 storasyster
+storaxel
+storbild
+storbilds-tv
+storbonde
+storbåt
 storcirkel
+stordator
+stordia
+stordrift
 store
 storebror
+storebrorsa
 storfamilj
+storfavorit
+storfinansen
+storfräsare
+storfurste
 storhet
 stork
 storlek
@@ -9198,6 +9382,7 @@ stormakt
 stormarknad
 stormflod
 stormsteg
+stormvarning
 storslalom
 storslägga
 storstad
@@ -9248,6 +9433,7 @@ strut
 struts
 strykbräda
 strykfågel
+strykkappa
 strykning
 sträcka
 sträckmuskel
@@ -9284,6 +9470,7 @@ studie
 studierektor
 studiero
 studio
+studs
 studsare
 stuga
 stugby
@@ -9294,6 +9481,7 @@ stuss
 stut
 styckning
 styggelse
+styrekonom
 styrelse
 styresman
 styrka
@@ -9397,6 +9585,7 @@ svenska
 svetsloppa
 svetsning
 svett
+svettning
 svikt
 svimning
 svindel
@@ -9618,6 +9807,7 @@ teknik
 tekniker
 teknokrat
 teknologi
+tekula
 telefax
 telefon
 telefoni
@@ -9663,6 +9853,7 @@ test
 testator
 testballong
 testikel
+tetanus
 tetraeder
 tetragon
 text
@@ -9784,6 +9975,7 @@ tistel
 titel
 titt
 tittare
+tittarstorm
 tjallare
 tjej
 tjockis
@@ -9909,6 +10101,7 @@ transit
 transkription
 translator
 transmission
+transparang
 transparens
 transplantation
 transport
@@ -10103,6 +10296,7 @@ tystnadsplikt
 täckdikning
 täckelse
 täckjacka
+tältduk
 tändhatt
 tändsats
 tändsticka
@@ -10116,10 +10310,12 @@ täthet
 tätort
 tätting
 tävling
+tävlingsjury
 tå
 tågvärd
 tåhätta
 tåhävning
+tåkappa
 tång
 tångkaviar
 tår
@@ -10127,6 +10323,7 @@ tårta
 tårtgaffel
 töm
 törn
+törnbuske
 törnekrona
 törst
 tös
@@ -10230,6 +10427,7 @@ uppgivelse
 uppgivenhet
 uppgång
 uppgörelse
+upphalare
 upphandlare
 upphandling
 upphettning
@@ -10609,6 +10807,8 @@ valsverk
 valuta
 valutakurs
 valvaka
+valvind
+valvkappa
 valör
 vampyr
 vana
@@ -10680,6 +10880,7 @@ vattentillförsel
 vattentäkt
 vattenväxt
 vattenyta
+vaxduk
 vaxkaka
 vaxpropp
 vd
@@ -10802,6 +11003,7 @@ vinsch
 vinst
 vinter
 vinterek
+vinterhämpling
 vinterkväll
 vintermånad
 vintertid
@@ -11006,6 +11208,7 @@ vågkam
 våglängd
 vågmästare
 vågmästarposition
+vågrörelse
 våldsvåg
 våldtäkt
 våldtäktsman
@@ -11045,6 +11248,7 @@ whiteboard
 workshop
 yacht
 yllefilt
+yllehalsduk
 yllesocka
 yngling
 ynkedom
