@@ -8,6 +8,7 @@ U-rör
 abonnemang
 accenttecken
 ackord
+adamsäpple
 adjektiv
 adoptivbarn
 adrenalin
@@ -163,6 +164,7 @@ attackplan
 attribut
 auditorium
 augment
+augustipäron
 automatkarbin
 avancemang
 avantgarde
@@ -247,6 +249,7 @@ barn
 barnbarn
 barnbidrag
 barnrikehus
+barometerstånd
 barrträd
 bastubad
 batteri
@@ -412,6 +415,7 @@ bombplan
 bomsegel
 bomärke
 bondehemman
+bondestånd
 boningshus
 bonusbarn
 bord
@@ -687,6 +691,7 @@ episkop
 epitet
 epos
 erbjudande
+erisäpple
 erkännande
 ess
 etablissemang
@@ -746,6 +751,7 @@ finger
 finrum
 firmamärke
 fiske
+fiskekort
 fjant
 fjäderfä
 fjäll
@@ -756,7 +762,10 @@ flaggskepp
 flak
 flams
 flasköl
+flerbarnstillägg
 flerfamiljshus
+flerfärgstryck
+flerpartisystem
 flertal
 flimmerhår
 flin
@@ -776,6 +785,7 @@ flyglarm
 flygnummer
 flygplan
 flygvapen
+flytplagg
 fläderbär
 flämt
 fläng
@@ -829,6 +839,7 @@ franskbröd
 frekvensberoende
 frihetsvärde
 frihjul
+frikort
 frimärke
 frisim
 frislag
@@ -1010,6 +1021,7 @@ garnityr
 garv
 gasolkök
 gathörn
+gatukök
 gehör
 gem
 geni
@@ -1036,6 +1048,7 @@ glasbruk
 glasöga
 glid
 glidflygplan
+glidlager
 glimmer
 glinder
 glitter
@@ -1086,10 +1099,12 @@ gränsskikt
 gränssnitt
 gränsöverskridande
 gräs
+gråpäron
 gråvide
 grönområde
 guld
 guldkorn
+guldäpple
 gummi
 gupp
 guvernement
@@ -1191,6 +1206,7 @@ hopprep
 hor
 hormon
 horn
+hornlager
 hospital
 hot
 hotell
@@ -1285,6 +1301,8 @@ illdåd
 imperfekt
 imperium
 impulsköp
+inbetalningskort
+inbjudningskort
 inbrott
 inbyte
 inbördeskrig
@@ -1353,6 +1371,7 @@ intestatarv
 intresse
 intressegrupp
 intresseområde
+introduktionserbjudande
 intryck
 inträde
 intrång
@@ -1375,6 +1394,7 @@ jordbruk
 jordbruksverk
 jordeliv
 jordgolv
+jordlager
 jordregister
 jordskalv
 jordsken
@@ -1383,6 +1403,7 @@ jordskred
 jordslag
 jordsvin
 jordtag
+julkort
 jäkt
 jämnmod
 järn
@@ -1423,6 +1444,7 @@ kapitel
 kapprum
 kar
 kardborreband
+karlatag
 karosseri
 kartogram
 kasino
@@ -1542,12 +1564,15 @@ korsförhör
 korsord
 korsstygn
 korståg
+kort
 korthus
 kortison
 kortregister
 kortslutningsställe
 kortspel
+korvstånd
 kostnadsläge
+krafttag
 kraftuttryck
 kraftverk
 kraftvärme
@@ -1590,6 +1615,7 @@ kubikmått
 kuckel
 kuddvar
 kugghjul
+kullager
 kulsprutegevär
 kulsprutepistol
 kulturarv
@@ -1619,6 +1645,7 @@ kyrkoår
 kyrksilver
 kyrktorn
 källvärde
+kämpatag
 kännemärke
 kännetecken
 känselhår
@@ -1758,6 +1785,7 @@ läkkött
 lämmeltåg
 län
 längdhopp
+längdmått
 längdsnitt
 lärande
 lärkträd
@@ -1798,6 +1826,7 @@ lödder
 löfte
 löftesbrott
 löje
+lönnfack
 lönnmord
 löpband
 lösenord
@@ -1988,11 +2017,13 @@ mästerverk
 mätande
 mål
 måleri
+månadskort
 månadsskifte
 månsken
 måste
 mått
 måttband
+måttsystem
 möbeltyg
 mög
 mögel
@@ -2053,6 +2084,7 @@ nyhetsbrev
 nyhetsflöde
 nylon
 nyp
+nypon
 nysilver
 nystan
 nyttodjur
@@ -2133,6 +2165,7 @@ ornament
 orosmoln
 ortnamn
 os
+oskick
 ovett
 oväder
 oväsen
@@ -2231,6 +2264,7 @@ porto
 porträtt
 postfack
 postförskott
+postkort
 postludium
 postnummer
 postskriptum
@@ -2389,6 +2423,7 @@ rottecken
 rov
 rovdjur
 rufs
+rullager
 rum
 rus
 rusmedel
@@ -2428,6 +2463,7 @@ rönnbär
 rör
 rörelsekapital
 rörsocker
+röstkort
 röstläge
 röveri
 sabotage
@@ -2889,6 +2925,7 @@ styrdokument
 styre
 styvbarn
 ställe
+ställningskrig
 ställningstagande
 ställverk
 stål
@@ -2967,6 +3004,7 @@ sömnmedel
 sönderfall
 sötvatten
 tack
+tackkort
 tacktal
 tadel
 tag
@@ -3082,6 +3120,7 @@ tonläge
 tonnage
 toppmöte
 torg
+torgstånd
 torn
 torp
 totalförsvar
@@ -3130,6 +3169,7 @@ tun
 tungsinne
 tunnband
 tunnbröd
+tvistefrö
 tvistemål
 tvivel
 tvärskepp
@@ -3244,6 +3284,7 @@ utanförskapsområde
 utanverk
 utbetalningskort
 utbildningsbidrag
+utbildningsdepartement
 utbildningsprogram
 utbrott
 utbud
@@ -3391,6 +3432,7 @@ vinkeljärn
 vinterdäck
 vinterlov
 vintersolstånd
+vinteräpple
 virke
 virrvarr
 virus

@@ -31,6 +31,8 @@ accelerator
 accent
 acceptans
 accesstid
+ackja
+ackordshets
 ackordslön
 ackumulation
 ackumulator
@@ -1250,6 +1252,7 @@ betraktelse
 betydelse
 betydelselära
 betydelsenyans
+betygshets
 betäckning
 betänklighet
 bevakning
@@ -1403,6 +1406,7 @@ björntjänst
 blackjack
 bladselleri
 bladstekel
+bladställning
 blandfärs
 blandning
 blandras
@@ -1586,6 +1590,7 @@ bosättning
 bot
 botten
 bottenfällning
+bottenfärg
 bottenplan
 bottensats
 bottenskola
@@ -1755,6 +1760,7 @@ byggnad
 byggnadsarbetare
 byggnadskonst
 byggnadsplats
+byggnadsställning
 byggnation
 byggsats
 byk
@@ -2522,6 +2528,7 @@ enkelhet
 enkelsäng
 enkrona
 enkät
+enmansvalkrets
 ensak
 ensamhet
 ensemble
@@ -2839,9 +2846,15 @@ flata
 flatfisk
 flathet
 flatlus
+flerbarnsfamilj
+flermansvalkrets
 flersamhet
+flervalstest
+flervalsuppgift
 flexibilitet
 flexion
+flextid
+flexur
 flicka
 flickvän
 flinga
@@ -2900,6 +2913,7 @@ flyktingpolitik
 flytdocka
 flytt
 flyttfågel
+flytväst
 fläck
 fläckfeber
 fläcktyfus
@@ -2909,6 +2923,7 @@ flärpa
 fläskfärs
 fläta
 flåbuse
+flåhacka
 flöjt
 flört
 fnurra
@@ -3150,7 +3165,10 @@ färdighet
 färdplan
 färdriktning
 färg
+färg-tv
+färgfilm
 färgpenna
+färgprakt
 färja
 färjelinje
 färjeterminal
@@ -3826,6 +3844,7 @@ grundskola
 grundskoleförordning
 grundskollärare
 grundsyn
+grundutbildning
 grundval
 grunka
 grupp
@@ -4052,6 +4071,7 @@ handledare
 handledning
 handling
 handlingsfrihet
+handlingskraft
 handlingsplan
 handläggare
 handläggning
@@ -4152,6 +4172,7 @@ herrgårdsvagn
 hertig
 hetluft
 hets
+hetsjakt
 hetta
 hetvägg
 heuristik
@@ -4616,6 +4637,7 @@ ingång
 inhalation
 inhamn
 inkallelse
+inkapsling
 inkarnation
 inklination
 inkompetens
@@ -4929,6 +4951,7 @@ jämförelse
 jämkning
 jämlike
 jämlikhet
+jämmer
 jämställdhet
 jämvikt
 jänta
@@ -5112,6 +5135,7 @@ kartong
 kase
 kaskad
 kassa
+kassation
 kasse
 kassett
 kassun
@@ -5156,6 +5180,8 @@ kedjekrans
 kedjereaktion
 kejsare
 kejsarkrona
+kejsarpingvin
+kejsarörn
 kemi
 kemikalie
 kemist
@@ -5191,9 +5217,12 @@ klackring
 klackspark
 klaffbro
 klagan
+klagolåt
 klamp
 klan
 klang
+klangfärg
+klant
 klapp
 klappjakt
 klarhet
@@ -5249,6 +5278,7 @@ klyfta
 klyka
 klyvning
 klädhängare
+klädkammare
 klädsel
 kläm
 klämma
@@ -5256,6 +5286,7 @@ klängväxt
 klänning
 kläpp
 klärvoajant
+klätterställning
 klätterväxt
 klättring
 klöver
@@ -5336,6 +5367,7 @@ koll
 kollaboratör
 kollaps
 kollega
+kollektion
 kollektivism
 kollektivtrafik
 kollision
@@ -5552,6 +5584,7 @@ kortvåg
 korund
 korv
 korvett
+korvkiosk
 koryfé
 kos
 kosmetik
@@ -5568,6 +5601,7 @@ kotte
 kovändning
 krabba
 kraft
+kraftkarl
 kraftmätning
 kraftöverföring
 krage
@@ -5768,6 +5802,7 @@ kvartil
 kvartsfart
 kvartsfinal
 kvast
+kverulans
 kviga
 kvinna
 kvinnlighet
@@ -5783,6 +5818,7 @@ kväll
 kvällning
 kvällskurs
 kvällsmat
+kvällstidning
 kvällsvard
 kyckling
 kyla
@@ -5936,6 +5972,7 @@ laser
 last
 lastbil
 lastbilschaufför
+lastpall
 latens
 latitud
 lav
@@ -6000,6 +6037,7 @@ ligist
 likbegängelse
 like
 likhet
+likkista
 liknelse
 likriktare
 likspänning
@@ -6079,6 +6117,7 @@ logopedi
 logotyp
 lojalitet
 lokal
+lokalfärg
 lokalsamtal
 lokaltidning
 lokalvårdare
@@ -6262,6 +6301,7 @@ långpanna
 långpromenad
 långrev
 långsida
+långtradare
 långvåg
 låsning
 låt
@@ -6592,6 +6632,7 @@ misshällighet
 missil
 mission
 missionär
+missionärsställning
 missräkning
 misstanke
 misstro
@@ -6664,6 +6705,7 @@ morfologi
 morgon
 morgondag
 morgonstund
+morgontidning
 mormon
 mormor
 mormorsstång
@@ -6784,6 +6826,7 @@ måfå
 måg
 målarduk
 målare
+målarfärg
 målgrupp
 målgård
 mållinje
@@ -7006,6 +7049,7 @@ nymodighet
 nymåne
 nynorska
 nypa
+nyponsoppa
 nysning
 nystart
 nytta
@@ -7078,6 +7122,7 @@ ockupant
 ockupation
 odalbonde
 odling
+odlingskrage
 odygd
 odyssé
 odör
@@ -7098,6 +7143,7 @@ okapi
 okränkbarhet
 oktober
 olaglighet
+olat
 oldtimer
 olikhet
 oliv
@@ -7221,6 +7267,7 @@ oräknelig
 orätt
 orättvisa
 osanning
+osed
 ost
 osteoporos
 osthyvel
@@ -7234,6 +7281,7 @@ otro
 otur
 output
 oval
+ovana
 ovanlighet
 ovansida
 ovation
@@ -7262,6 +7310,7 @@ pakt
 palestinier
 palett
 pall
+pallkrage
 palm
 palt
 pamflett
@@ -7319,6 +7368,7 @@ paroll
 parsing
 part
 partianhängare
+partifärg
 partihandel
 partikularism
 partiledare
@@ -7378,6 +7428,7 @@ peperoni
 peppar
 pepparkaka
 perception
+perenn
 perestrojka
 perfektion
 periferi
@@ -7490,6 +7541,7 @@ pirra
 piruett
 piska
 pisksnärtskada
+piskställning
 pissoar
 pist
 pistasch
@@ -7638,6 +7690,7 @@ premiss
 premiär
 premiärminister
 prenumeration
+preparand
 preparat
 presenning
 presens
@@ -7664,6 +7717,7 @@ prioritering
 pris
 priskontroll
 prislapp
+prispall
 prisutdelning
 privatisering
 privatist
@@ -7854,6 +7908,7 @@ rapport
 rapportering
 rapportör
 ras
+rashets
 rashygien
 rasism
 rasist
@@ -8150,6 +8205,7 @@ ryggbedövning
 ryggkota
 ryggmärg
 ryggrad
+ryggsäck
 ryl
 rymd
 rymdfarare
@@ -8169,6 +8225,7 @@ räddhåga
 räddning
 räddningsbåt
 räddningsplanka
+räddningsväst
 rädisa
 rädsla
 räffla
@@ -8293,6 +8350,7 @@ same
 samhällsekonomi
 samhällsklass
 samhällsordning
+samhällsställning
 samhällssyn
 samhällsvård
 samhörighet
@@ -8556,7 +8614,9 @@ silhuett
 silkesvante
 sill
 sillfisk
+sillpudding
 silltrut
+sillåda
 silver
 silverfisk
 silvermedalj
@@ -8778,6 +8838,7 @@ skribent
 skrift
 skrivare
 skrivbok
+skrivbordslåda
 skrivelse
 skrivkramp
 skrivning
@@ -8883,6 +8944,7 @@ slamkrypare
 slang
 slant
 slantsingling
+slarva
 slatt
 slav
 slemhinna
@@ -9184,7 +9246,9 @@ spricka
 spridning
 springa
 springare
+springbrunn
 springflod
+springkälla
 springpojke
 springschas
 sprit
@@ -9506,9 +9570,11 @@ stängsel
 stäv
 stå
 ståndare
+ståndkrage
 ståndman
 ståndort
 ståndpunkt
+ståndsperson
 stång
 stångpiska
 stånka
@@ -9962,6 +10028,7 @@ tilläggspension
 tillämpning
 tillåtelse
 tillönskan
+timbre
 timesharing
 timjan
 timme
@@ -10160,6 +10227,7 @@ trosa
 trosartikel
 tross
 trossats
+trotjänare
 trottoar
 trovärdighet
 truck
