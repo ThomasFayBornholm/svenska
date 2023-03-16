@@ -318,15 +318,14 @@ function retreat(e) {
 
 function getWords(ind = INC) {
 	// Ind is used to highlight and lookup a given word index from the returned list
-	// Global INC is used to get the starting index of the returned list	
+	// Global INC is used to get the starting index of the returned list		
 	if (DEBUG) console.log("getWords(), ind = " + ind + ", INC = ", + INC);	
 	SCROLL_INC= -1;
 	N_FOUND=0;
 	$('#iParDef').text("");
 	if (N_REGEX > 0) {
 		list = REGEX_WORDS[ind];	
-		N_FOUND = N_REGEX - ind;
-		console.log(N_FOUND)
+		N_FOUND = N_REGEX - ind;		
 		if (N_FOUND > N_INC) N_FOUND = N_INC;	
 		for (i = ind+1; i < N_FOUND + ind; i++) {
 			list += "|" + REGEX_WORDS[i];
@@ -667,6 +666,7 @@ function lookupWord(el,onlyLocal,inline) {
 		}
 	}
 }
+
 function displayDef(meta, def,word) {
 	if (DEBUG) console.log("displayDef(meta,def,word)");	
 	let defRaw = def.split("<br>");
@@ -699,7 +699,7 @@ function displayDef(meta, def,word) {
 			if (SHOW_HELP) {
 				outDef += "title='Show more information'"
 			}
-			outDef += "onclick=toggleMore('" + key + "') oncontextmenu=editMore(event,'" + key + "')> <i>++</i></span>";
+			if (CLASS != "fraser") outDef += "onclick=toggleMore('" + key + "') oncontextmenu=editMore(event,'" + key + "')> <i>++</i></span>";
 		} else {
 			outDef += delim + defLines[j];
 		}
@@ -1026,6 +1026,7 @@ function newInputWrapper(e) {
 }
 
 function seekWordSingleClass(word) {	
+	CUR_DEF = 0; // CUR_DEF only valid for current word.
 	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)		
 	if (word.length > 0) {
 		// Any user supplied break breaks are discarded.
@@ -1657,7 +1658,12 @@ function addWord(remove = false) {
 function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta()");	
-	regexArr = [			
+	regexArr = [
+		/kemi/,
+		/var­dagligt, dialektalt/,
+		/ekonomi, juridik/,
+		/endast vid beskrivning av äldre förhållanden/,
+		/ofta i natur­namn/,
 		/mest i äldre tid/,
 		/ofta i offentligt språk/,
 		/ofta i politiska samman­hang/,
@@ -1810,11 +1816,11 @@ function addMeta(def) {
 	return def;
 }
 
-function grammar(def) {
-	console.log("grammar()");
+function grammar(def) {	
 	if (DEBUG) console.log("grammar()");
 	// Only one grammer expression is permitted.
 	gArr = [
+	 "endast obestämd form sing.; i mer el. mindre adjektivisk an­vändning",
 	 "anv. som plur.",
 	 "i negerade och frågande samman­hang",
 	 "ofta i substantivisk an­vändning",
@@ -2331,6 +2337,7 @@ function fmtMeta(meta) {
 		} else if (i === 1) {
 			delMeta = "<br>ORDKLASS: ";
 		} else if (i === 2) {
+			if (CLASS === "fraser") break;
 			delMeta = "<br>UTTAL: ";
 		} else {
 			delMeta = "<br>";
@@ -2574,6 +2581,7 @@ function processKeyDown(elHTML,ev) {
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
 			if (CLASS != "all") {
+				clearRegexMode();				
 				setClass("all");
 				randomWord();
 			} else {
