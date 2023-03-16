@@ -1820,6 +1820,7 @@ function grammar(def) {
 	if (DEBUG) console.log("grammar()");
 	// Only one grammer expression is permitted.
 	gArr = [
+	"vanligen i nekande och frågande ut­tryck",
 	 "endast obestämd form sing.; i mer el. mindre adjektivisk an­vändning",
 	 "anv. som plur.",
 	 "i negerade och frågande samman­hang",
