@@ -1,6 +1,7 @@
 (i) enskild ställning
 (inte) i första taget
 (sista) spiken i kistan
+(släkt) i rakt/rätt nedstigande led
 .. .och på den vägen är det
 .. och på den vägen är det
 abdikera
@@ -147,11 +148,40 @@ arbetsbefria
 argumentera
 arkebusera
 arkivera
+armbågsben
+armbågsrum
+armbågsveck
+armböjning
+armera
+armering
+armfoting
+armled
+armékår
+aromaterapeut
+aromaterapi
+arpeggio
 arrangera
 arrendera ut
 arrestera
+arrivist
+arrogans
+arsenal
+arsenik
+art director
+artad
+artighetsbetygelse
+artighetsvisit
+artikelserie
+artikulation
+artikulationsställe
+artikulationssätt
+artikulatorisk
 artikulera
 artikulera sig
+artillerist
+artistisk
+artistnamn
+artnamn
 asfaltera
 aska
 aspirera
@@ -761,6 +791,7 @@ byta in
 byta om
 byta upp sig
 byta ut
+byta/växla ringar
 bädda
 bära
 bära av
@@ -840,6 +871,7 @@ crawla
 cykla
 cylinderhatt
 dagas
+dagdrivarliv
 dagdrömma
 dagga
 dagteckna
@@ -861,6 +893,7 @@ datera
 datera sig
 datera upp
 de
+de djupa leden
 debattera
 debitera
 dechiffrera
@@ -875,6 +908,7 @@ dekorera
 dela
 dela av
 dela in
+dela ljuvt och lett
 dela med sig
 dela sig
 dela upp
@@ -888,6 +922,7 @@ demilitarisera
 demolera
 demonisera
 demonstrera
+den lede
 denotera
 deponera
 deportera
@@ -988,6 +1023,7 @@ droppa
 drunkna
 drunkning
 dryfta
+dryghet
 drämma
 dränera
 dränka
@@ -1283,6 +1319,7 @@ fortplanta
 fortskrida
 fortsätta
 fostra
+fotbollsplan
 fotografera
 fotomontage
 fradga
@@ -3238,6 +3275,7 @@ matta
 mattas av
 maximera
 med förenade krafter
+med namns nämnande
 med upphöjt lugn
 medarbeta
 meddela
@@ -3453,6 +3491,9 @@ nysta av
 nysta upp
 nyttja
 nämna
+nämnare
+nämndeman
+nämnvärd
 näpsa
 nära
 närma
@@ -3662,9 +3703,11 @@ placera om
 placera sig
 pladdra
 plagiera
+plan B
 plana av
 planera
 planera in
+planhalva
 planka
 planlägga
 planta
@@ -3715,6 +3758,10 @@ presidera
 preskribera
 pressa
 pressa av
+pressveck
+pressylta
+prestationsångest
+prestav
 prestera
 pretendera
 pricka
@@ -3776,6 +3823,7 @@ putta
 pynta
 pyssla
 pärla
+på det sluttande planet
 på friarstråt
 på rymmarstråt
 på studs
@@ -3945,8 +3993,10 @@ rivalisera
 ro
 roa
 roa sig
+rockring
 roffa
 rollsätta
+romerska ringar
 ropa
 ropa in
 ropa upp
@@ -4093,6 +4143,7 @@ sammansmälta
 sammanstråla
 sammanställa
 sammansvärja sig
+sammansättningsled
 sammanträda
 sammanträffa
 sammanväga
@@ -4394,6 +4445,7 @@ slumpa
 slumpa sig
 slunga
 sluta
+sluta leden
 sluta om
 sluta sig
 sluta upp
@@ -4669,6 +4721,8 @@ spricka
 spricka ut
 sprida
 sprida sig
+sprida sig som en löpeld
+sprida sig som ringar på vattnet
 spridas
 springa
 springbrunn
@@ -4960,12 +5014,14 @@ svänga
 svänga ihop
 svänga sig
 svänga till
+svängrum
 svära
 svärma
 sväva
 sy
 sy ihop
 sy in
+sydsluttning
 syfta
 symbolisera
 sympatisera
@@ -5378,6 +5434,7 @@ tysta
 tystna
 täcka
 tälja
+täljare
 tälta
 tältduk
 tämja
@@ -5552,6 +5609,7 @@ ursäkta sig
 uruppföra
 urvattna
 utagera
+utan namns nämnande
 utandas
 utannonsera
 utanordna
@@ -5851,6 +5909,7 @@ vissna
 vistas
 visualisera
 vitsa
+vittflyhande planer
 vittna
 vittra
 vobba
@@ -19762,6 +19821,4 @@ zygot
 överända
 överäta
 överårig
-överösa
-övlig
-öv
+överö
