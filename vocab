@@ -1867,6 +1867,7 @@ function grammar(def) {
 	// Only one grammer expression is permitted.
 	gArr = [
 	 "nästan en­bart perfekt particip",
+	 "vanligen i nekande och frågande ut­tryck",
 	 "endast obestämd form sing.; i mer el. mindre adjektivisk an­vändning",
 	 "anv. som plur.",
 	 "i negerade och frågande samman­hang",

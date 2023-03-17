@@ -531,18 +531,36 @@ arkitektur
 arm
 armada
 armbåge
+armböjning
+armering
+armfoting
 armgång
 armhåla
+armled
 armlängd
 armé
+armékår
+aromaterapeut
+aromaterapi
 arrangör
 arrest
+arrivist
+arrogans
+arsenal
+arsenik
 art
+art director
 artefakt
 artighet
+artighetsbetygelse
 artighetsfras
+artighetsvisit
 artikel
+artikelserie
+artikulation
+artikulationsställe
 artilleripjäs
+artillerist
 artist
 artskillnad
 artär
@@ -2288,6 +2306,7 @@ drulle
 drummel
 dryck
 dryckesvara
+dryghet
 drägg
 dräktighet
 dränering
@@ -2995,6 +3014,7 @@ fosfor
 fosterfördrivning
 fot
 fotboll
+fotbollsplan
 fotbollsspelare
 fotbroms
 fotgängare
@@ -7094,7 +7114,9 @@ nytändning
 nyårsafton
 näbb
 näckros
+nämnare
 nämnd
+nämndeman
 närgångenhet
 närhet
 näring
@@ -7595,6 +7617,7 @@ plan
 planering
 planet
 plangeometri
+planhalva
 planimetri
 plank
 planka
@@ -7738,9 +7761,12 @@ president
 preskription
 press
 presskonferens
+pressylta
 prestanda
 prestation
 prestationslön
+prestationsångest
+prestav
 prestige
 pretention
 prickskytt
@@ -8175,6 +8201,7 @@ robot
 rock
 rock'n'roll
 rocka
+rockring
 rockärm
 roddbåt
 rodel
@@ -9745,6 +9772,7 @@ svårighet
 swing
 sydkant
 sydpol
+sydsluttning
 sydväst
 syl
 sylf
@@ -10433,7 +10461,11 @@ tystnadsplikt
 täckdikning
 täckelse
 täckjacka
+<<<<<<< HEAD
 täkt
+=======
+täljare
+>>>>>>> 84321c16d85070b3210a095d6b2332128536e379
 tältduk
 tändhatt
 tändsats
