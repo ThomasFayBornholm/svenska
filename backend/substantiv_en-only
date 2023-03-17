@@ -1233,6 +1233,7 @@ bestörtning
 besvikelse
 besvärjelse
 besvärlighet
+besvärstid
 besättning
 besökare
 besöksbok
@@ -1624,6 +1625,7 @@ brasklapp
 brassa
 bratvurst
 braxen
+bredbandstelefoni
 bredd
 breddgrad
 bredsida
@@ -1640,6 +1642,7 @@ brist
 bristningsgräns
 britt
 bro
+brobänk
 broccoli
 brock
 brodd
@@ -1798,7 +1801,12 @@ bågsekund
 bågskytt
 bål
 båt
+båtmössa
 båtnad
+båtplats
+båtshake
+båtsman
+båtyxa
 bödel
 bög
 böj
@@ -1861,6 +1869,7 @@ centralstation
 ceremoni
 ceremonimästare
 cession
+cesur
 champagne
 champinjon
 chans
@@ -2091,6 +2100,7 @@ delägare
 demens
 dementi
 demo
+demografi
 demokrat
 demokrati
 demonstrant
@@ -2222,6 +2232,7 @@ dolk
 dollar
 dom
 domare
+domarring
 domherre
 domicil
 dominans
@@ -2535,6 +2546,7 @@ ensemble
 enstöring
 entertainer
 entitet
+entrecote
 entreprenör
 entré
 entusiasm
@@ -2606,6 +2618,7 @@ examen
 examination
 excitation
 exekution
+exekvering
 exhalation
 exil
 existens
@@ -2640,6 +2653,9 @@ extremism
 extremist
 extremitet
 fabrik
+fabrikant
+fabrikation
+fabriksskorsten
 fabrikör
 facett
 facilitet
@@ -3041,6 +3057,7 @@ frigörelse
 frihamn
 frihandel
 frihet
+frihetstiden
 frihjulsdiod
 frihjulsnav
 friidrott
@@ -3724,6 +3741,7 @@ glänta
 glöd
 glödlampa
 glömska
+gnagare
 gnejs
 gnista
 gnom
@@ -3844,13 +3862,16 @@ grundskola
 grundskoleförordning
 grundskollärare
 grundsyn
+grundtanke
 grundutbildning
 grundval
 grunka
 grupp
 gruppering
 gruppledare
+grusgrop
 grusgång
+grustäkt
 gruva
 gruvarbetare
 gruvgång
@@ -3877,6 +3898,7 @@ grävmaskin
 grävning
 gråal
 gråberg
+grålla
 gråsej
 gråsten
 gråtrut
@@ -4092,6 +4114,7 @@ harkrank
 harm
 harmoni
 harpest
+harr
 harv
 hasard
 hashtag
@@ -4236,6 +4259,7 @@ hoppare
 hopslagning
 hora
 horisont
+hormonspiral
 horn
 horsgök
 hosta
@@ -4807,6 +4831,8 @@ invitation
 invändning
 invånare
 inäga
+ip-adress
+ip-telefoni
 iris
 ironi
 irrfärd
@@ -5542,6 +5568,13 @@ kopilot
 kopp
 koppa
 koppar
+kopparglans
+kopparkis
+kopparorm
+kopparslagare
+kopparspiral
+kopparåldern
+kopparödla
 koppling
 kopplingston
 kopula
@@ -5750,6 +5783,7 @@ kund
 kundvagn
 kung
 kungakrona
+kungstanke
 kungörelse
 kunskap
 kunskapsfråga
@@ -6306,6 +6340,7 @@ långvåg
 låsning
 låt
 löddra
+lödkolv
 lögn
 löjtnant
 lök
@@ -6318,6 +6353,7 @@ löpsten
 lördag
 lösen
 lösning
+lövtäkt
 mack
 macka
 mackapär
@@ -7254,6 +7290,7 @@ orkester
 orkidé
 orm
 ormbunke
+ormslå
 oro
 orosmoment
 orre
@@ -7937,6 +7974,7 @@ recession
 reda
 redaktion
 redaktör
+redare
 redning
 redogörelse
 redovisning
@@ -8178,6 +8216,8 @@ rullning
 rullskridsko
 rullstol
 rumpa
+rumpmas
+rumpstek
 rumsarrest
 rumstemperatur
 rumsväxt
@@ -8776,11 +8816,35 @@ skattrådgivare
 sked
 skeleton
 skena
+skenbild
+skendöd
+skenfrukt
+skenfäktning
 skenhändelse
+skenrättegång
+skenvärld
 skepnad
+skeppare
+skepparexamen
 skepparkrans
+skeppsapotek
+skeppsbro
+skeppsbroadel
+skeppsbrott
+skeppsbåt
+skeppsgosse
+skeppshandel
+skeppsklocka
+skeppslag
 skeppslista
+skeppsmask
+skeppsmätning
+skeppspojke
+skeppsredare
+skeppsskorpa
+skeppssättning
 skepsis
+sketch
 skickelse
 skicklighet
 skida
@@ -9022,6 +9086,7 @@ smälek
 smäll
 smälla
 smällare
+smältning
 smältost
 smältsäkring
 smärta
@@ -10107,6 +10172,8 @@ tonsill
 tonsättare
 tonvikt
 tonåring
+topograf
+topografi
 topp
 topping
 topplanterna
@@ -10127,6 +10194,7 @@ torso
 tortyr
 torv
 torvmull
+torvtäkt
 tosa
 tossa
 touch
@@ -10355,6 +10423,7 @@ tyngdkraft
 tyngdlagen
 tyngdpunkt
 typ
+typograf
 tyrann
 tyrannisering
 tysk
@@ -10364,6 +10433,7 @@ tystnadsplikt
 täckdikning
 täckelse
 täckjacka
+täkt
 tältduk
 tändhatt
 tändsats
@@ -10545,6 +10615,7 @@ uppsägning
 uppsägningstid
 uppsättning
 uppsökning
+upptagning
 upptecknare
 uppteckning
 upptäckt
