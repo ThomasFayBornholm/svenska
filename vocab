@@ -35,6 +35,7 @@
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(this,event)">				
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 	</form>
+	<p id="iCurWord" class="centred">CURRENT_WORD</p>
 	
 </div>
 <div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()">
@@ -100,6 +101,7 @@ let N_DEFS = 0;
 let LAST_WORD="";
 let CUR_WORD="";
 let CUR_DEF="0";
+let N_DEF = 0;
 let CLASS = "all";
 var LAST_OBJ;
 let DEBUG=false;
@@ -136,6 +138,26 @@ function startup() {
 	focusInput()
 }
 
+function getInput() {
+	if (DEBUG) console.log("getWord");
+	let word = $('#iInput').val();
+	if (word.length === 0) word = "0";
+	if (word === "~") word = CUR_WORD;
+	$('#iInput').val(word);
+	return word;
+}
+
+function setCUR_WORD(word) {
+	CUR_WORD = word;
+	// Don't think this feedback is useful
+	//$('#iCurWord').html("CURRENT_WORD: " + word);
+	$('#iCurWord').html("");
+	$('#iInput').val("");
+}
+
+function setN_DEF(n_def) {
+	N_DEF = n_def;
+}
 function setN_CUR() {
 	if (DEBUG) console.log("setN_CUR()")
 	if (CLASS === "adjektiv") {
@@ -405,7 +427,7 @@ function displayWords(list,ind) {
 		
 		if (ind > -1) {
 			let el = document.getElementById("w" + ind);
-			CUR_WORD = el.innerText;
+			setCUR_WORD(el.innerText);
 			lookupWord(el,false,true);
 		}				
 	})
@@ -691,6 +713,7 @@ function displayDef(meta, def,word) {
 	}
 	let outDef = "";
 	let delim = "";	
+	setN_DEF(defLines.length);
 	for (j = 0; j < defLines.length; j++) {
 		let key = word.replaceAll(" ","-") + "_" + j;
 		let id = "iMore_" + key;	
@@ -714,7 +737,8 @@ function displayDef(meta, def,word) {
 	CACHED_DEF_HTML = outDef;
 	$('#iParDef').html(outDef)
 	if (SHOW_HELP) {
-		$('#iWordRoot').css("white-space: pre-wrap");
+		// ToDo remove temp test
+		$('#iWordRoot').css("white-space: pre-wrap");		
 		$('#iWordRoot').attr("title","asdfa\u000dasdfasdf");
 	}	
 }
@@ -839,7 +863,7 @@ function followLink(el) {
 		word = word.replaceAll(rep[0], " ");
 	}
 	word = word.replace("!","");
-	CUR_WORD = word;
+	setCUR_WORD(word);
 	if (DEBUG) console.log("followLink(" + word + ")");	
 	let oldINC = INC;
 	seekWord(word, true);
@@ -911,6 +935,7 @@ function onlineLookup(elHTML, ev) {
 	ev.preventDefault()
 	word = elHTML.innerText;
 	if (word.length === 0) word = elHTML.value;
+	if (word.length === 0) word = CUR_WORD;
 	if (word.length > 0) {
 		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
 		// Rebust escaping of special characters		
@@ -985,7 +1010,13 @@ function showToggle() {
 function newInputWrapper(e) {
 	if (DEBUG) console.log("newInputWrapper()");
 	e.preventDefault();
-	let word = $('#iInput').val();
+	let word = getInput();
+	// Navigation only to a given word class.
+	regexNumeric = /^\d*$/
+	if (word.match(regexNumeric)) {
+		handleNumericInput();
+		return;
+	}
 	if (word.indexOf("@") === 0) {
 		let newClass  = fullClassName(word.substr(1));
 		REGEX_WORDS = [];		
@@ -1003,6 +1034,7 @@ function newInputWrapper(e) {
 		}
 		$('#iInput').val("");
 		return;
+	// Navigate to word class + query
 	} else if (word.indexOf("@") != -1) {
 		// Add word
 		let tmp  = word.split("@");
@@ -1013,16 +1045,28 @@ function newInputWrapper(e) {
 		
 		setClass(fullClassName(newClass));
 		$('#iInput').val(word);
-		newInputWrapper(e);
+		newInputWrapper(e);		
 		return;
-	} else if (word.indexOf(",") === 0 || word.indexOf(",") === word.length-1) {	
-		word = word.replaceAll(",","");
+	} else if (word.indexOf(",") === word.length-1) {	
+		// Trim query identifier
+		word = word.substr(0,word.length-1)		
 		$('#iInput').val(word);
 		addWord();
 		seekWordSingleClass(word);
 		return;
 	}
 	seekWord(word);
+}
+
+function handleNumericInput() {
+	if (DEBUG) console.log("handleNumericInput()")
+	let storedInd = parseInt($('#iInput').val()) - 1;	
+	if (storedInd === -1) { 
+		hideAllMore();		
+		showCachedDef($("iMore").get(0));
+	}
+	$('#iInput').val("");
+	toggleMore(CUR_WORD.replaceAll(" ","-") + "_" + storedInd, true);
 }
 
 function seekWordSingleClass(word) {	
@@ -1044,7 +1088,7 @@ function seekWordSingleClass(word) {
 		})
 		.then(json => {
 			if (json > -1) {
-				CUR_WORD = word;
+				setCUR_WORD(word);
 				// Put selected word in the middle of the word collection				
 				INC = json - 3;
 				let ind = 3;
@@ -1054,6 +1098,8 @@ function seekWordSingleClass(word) {
 					ind = json;
 				}
 				getWords(ind);
+			} else {
+				noMatchSingleClass();
 			}
 		})
 		.catch(error => {
@@ -1166,7 +1212,7 @@ function seekWord(word, link = false) {
 		if (!link) {
 			//LAST_WORD = CUR_WORD;
 		}
-		CUR_WORD = word;
+		setCUR_WORD(word);
 		if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
 		// Special case of prefixes and suffices
 		if (word.substr(word.length-1) === "-") {
@@ -1300,7 +1346,11 @@ function seekWord(word, link = false) {
 }
 
 function noMatch(word) {
-	$('#iParDef').html("No matches in any word class.");	
+	$('#iParDef').html("No match in any word class: <b>" + word + "</b>");	
+	$('#iInput').val(word);
+}
+function noMatchSingleClass(word) {
+	$('#iParDef').html("No match: " + CLASS);	
 	$('#iInput').val(word);
 }
 
@@ -1340,7 +1390,6 @@ function regexSearch(word) {
 }
 
 function drillDown() {
-	console.log("drillDown()");
 	if (DEBUG) console.log("drillDown()");
 	// Take word from iWords to allow for special characters such as 'é'
 	let id = "#w" + SCROLL_INC;
@@ -1383,11 +1432,7 @@ function drillDown() {
 	})
 }
 function setClass(c, seek = "") {
-	if (CLASS === "fraser") {
-		toggleRegexMode(true);
-	} else {
-		clearRegexMode();
-	}
+	if (c === "all") clearRegexMode();	
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	LAST_CLASS = CLASS;
 	wordCount();
@@ -1659,6 +1704,7 @@ function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta()");	
 	regexArr = [
+		/dialektalt; något ned­sättande/,
 		/kemi/,
 		/var­dagligt, dialektalt/,
 		/ekonomi, juridik/,
@@ -1820,6 +1866,7 @@ function grammar(def) {
 	if (DEBUG) console.log("grammar()");
 	// Only one grammer expression is permitted.
 	gArr = [
+	 "nästan en­bart perfekt particip",
 	 "endast obestämd form sing.; i mer el. mindre adjektivisk an­vändning",
 	 "anv. som plur.",
 	 "i negerade och frågande samman­hang",
@@ -2376,13 +2423,14 @@ function keyNav(ev) {
 	ev.preventDefault();
 	console.log("nav");
 }
+
 function editNext() {
 	if (DEBUG) console.log("editNext()")
 	if (SCROLL_INC < N_FOUND-1) {
 		SCROLL_INC++;
 	}
 	let cur = "#w" + SCROLL_INC;
-	CUR_WORD = $(cur).text();
+	setCUR_WORD($(cur).text());
 	editDef();
 	// ToDo show any current definition
 }
@@ -2486,9 +2534,11 @@ function keyForUser(key) {
 	res = key.replace("_" + zero_based_ind, "_" + one_based_ind);	
 	res = res.replaceAll("-"," ");
 	res = res.replaceAll("_", " (");
+	res = res + "/" + N_DEF;
 	res = res + ")";
 	return res
 }
+
 function toggleMore(key, show = false) {	
 	if (DEBUG) console.log("toggleMore(key), key = " + key);		
 	if (tmp.indexOf(" --") === -1 && tmp.indexOf(" ++") != -1) {
@@ -2518,9 +2568,9 @@ function toggleMore(key, show = false) {
 		})
 		.then(json => {								
 			if (json.length === 0) {
-				$(id).html(" --<br>No more information to show");				
+				$(id).html(" --<br>***No more information to show");				
 			} else {												
-				let tmp = "<span oncontextmenu=editMore(event,'" + key + "')";
+				let tmp = "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";
 				tmp += " onclick='showCachedDef(this)'";
 				if (SHOW_HELP) {
 					tmp += " title = 'Left click = back to definition(s) "
@@ -2536,7 +2586,7 @@ function toggleMore(key, show = false) {
 			console.log(error);
 		})
 	} else {
-		$('#iMore').remove();
+		$('#iMore').html("");
 		$(id).text(" ++");
 		if (SHOW_HELP) {
 			$(id).attr("title","Show more information");
@@ -2546,9 +2596,12 @@ function toggleMore(key, show = false) {
 	}	
 }
 
+function hideAllMore() {
+	$('#iMore').css("diplay","none");
+}
+
 function editMore(ev,key) {
-	if (DEBUG) console.log(ev,key)
-	console.log(key)
+	if (DEBUG) console.log(ev,key)	
 	ev.preventDefault();
 	let tmp = $('#iParDef').html();
 	if (tmp.indexOf(" --") === -1 && tmp.indexOf(" ++") != -1) {
@@ -2580,8 +2633,7 @@ function processKeyDown(elHTML,ev) {
 	}
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
-			if (CLASS != "all") {
-				clearRegexMode();				
+			if (CLASS != "all") {				
 				setClass("all");
 				randomWord();
 			} else {
@@ -2705,11 +2757,13 @@ function showLast(caller) {
 	console.log("CLASS = " + CLASS)
 	console.log("CUR_WORD = " + CUR_WORD)
 }
+
 function showCachedDef(el) {
 	if (DEBUG) console.log("showCachedDef(el), el = " + el);
-	
-	el.innerHTML = CACHED_DEF_HTML;
+	$('#iParDef').html(CACHED_DEF_HTML);	
+	$('#iParDef').css("display","block");
 }
+
 function simpleLink(defLine) {	
 	if (DEBUG) console.log("simpleLink()");
 	// Support mulitple links per line. 
@@ -2772,8 +2826,7 @@ function randomWord() {
 	})
 	.then(json => {
 		INC = json["ind"]-4;
-		CUR_WORD = json["word"];
-		$('#iInput').val(CUR_WORD);
+		setCUR_WORD(json["word"]);		
 		getWords(3);
 	})
 	.catch(error => {
@@ -2798,6 +2851,7 @@ function toggleRegexMode(force = false) {
 }
 
 function clearRegexMode() {
+	if (DEBUG) console.log("clearRegexMode()");
 	REGEX_MODE = false;
 	$('#iInput').css("background", "")
 }
