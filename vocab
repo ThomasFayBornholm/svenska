@@ -139,7 +139,7 @@ function startup() {
 }
 
 function getInput() {
-	if (DEBUG) console.log("getWord");
+	if (DEBUG) console.log("getInput()");
 	let word = $('#iInput').val();
 	if (word.length === 0) word = "0";
 	if (word === "~") word = CUR_WORD;
@@ -2520,6 +2520,7 @@ function putMore() {
 		$('#iDefDiv').css("display", "none");
 		$('#iDivMore').css("display", "none");
 		toggleMore(key,true)
+		$('#iInput').focus();
 	})
 	.catch(error => {
 		console.log(error)
@@ -2653,6 +2654,7 @@ function processKeyDown(elHTML,ev) {
 		getLastWord();	
 	}	
 }
+
 function clearMore() {
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;
 	if (DEBUG) console.log("clearMore(key), key = " + key)
