@@ -1,6 +1,8 @@
+ 
 (ha) gråten i halsen
 (hamna) på överblivna kartan(hamna) på överblivna kartan(hamna) på överblivna kartan(i) enskild ställning
 (inte) i första taget
+(si) så där
 (sista) spiken i kistan
 (släkt) i rakt/rätt nedstigande led
 .. .och på den vägen är det
@@ -683,6 +685,7 @@ blåsa av
 blåsa under
 blåsa upp
 blåsa ut
+blåslampa
 blöda
 blöta
 bo
@@ -704,6 +707,7 @@ bondestånd
 bondkomik
 bondkomiker
 borgen
+borgenär
 borra
 borra sig
 borsta
@@ -715,6 +719,7 @@ borträkna
 bortse
 bortslumpa
 bortta
+borttagning
 bortvräka
 bosätta sig
 bota
@@ -830,6 +835,7 @@ böna
 bönfalla
 bönhöra
 böra
+bördshögfärd
 börja
 börja på ny kula
 början till slutet
@@ -914,8 +920,10 @@ datera sig
 datera upp
 de
 de djupa leden
+de små stegens tyranni
 debattera
 debitera
+debitor
 dechiffrera
 decimera
 dedicera
@@ -941,9 +949,13 @@ dementera
 demilitarisera
 demografi
 demografisk
+demokrat
+demokrati
+demokratisk
 demolera
 demonisera
 demonstrera
+den där
 den lede
 denotera
 deponera
@@ -1012,6 +1024,7 @@ dra ihop
 dra ihop sig
 dra in
 dra in sig
+dra jämnt
 dra på
 dra på sig
 dra samman
@@ -1082,6 +1095,7 @@ dåna
 dåra
 dåsa
 dö
+dö knall och fall
 döda
 dölja
 döma
@@ -1265,6 +1279,8 @@ fiskekort
 fiskhamn
 fixa
 fixa sig
+fjun
+fjunig
 fjädra
 fjälla
 fjällvandra
@@ -1344,6 +1360,7 @@ folkstorm
 forcera
 fordra
 fordras
+fordringsägare
 forma
 forma om
 formalisera
@@ -1429,6 +1446,7 @@ fråga
 fråga efter
 fråga sig
 fråga ut
+från alla håll och kanter
 från hjässan till fotabjället
 frångå
 frånta
@@ -1451,6 +1469,8 @@ fuska
 fuskåka
 fylla
 fylla i
+fylla jämnt
+fylla moppe
 fylla på
 fylla upp
 fylla ut
@@ -1477,6 +1497,7 @@ fästa sig
 få
 få bita i det sura äpplet
 få gult kort
+få på moppe
 få rött kort
 få tummen ur (arslet/ändan)
 få ut
@@ -1967,6 +1988,7 @@ ge
 ge efter
 ge igen
 ge med sig
+ge någon på moppe
 ge något till känna
 ge sig
 ge sig hän
@@ -2058,6 +2080,7 @@ godta
 gola
 golfa
 golva
+golvlampa
 gomsegel
 gosa
 gottgöra
@@ -2128,6 +2151,7 @@ gymnastisera
 gympa
 gynna
 gäcka
+gäldenär
 gälla
 gänga
 gänga sig
@@ -2201,6 +2225,7 @@ halvsula
 hamla
 hamna
 hamra
+handel och vandel
 handha
 handla
 handleda
@@ -2349,6 +2374,7 @@ hålla i sig
 hålla igen
 hålla ihop
 hålla inne
+hålla jämna steg med någon/något
 hålla låda
 hålla med
 hålla måttet
@@ -2612,6 +2638,7 @@ isa
 isa av
 isa ner
 iscensätta
+isig
 isolera
 ituta
 ivra
@@ -2817,6 +2844,7 @@ knyta an
 knyta sig
 knyta upp
 knäcka
+knäled
 knäppa
 knäppa av
 knäppa på
@@ -2902,6 +2930,7 @@ konsumera
 kontakta
 kontra
 kontrastera
+kontring
 kontrollera
 kontrollstämpla
 konungarnas konung
@@ -2964,6 +2993,7 @@ kratsa
 kratta
 kraxa
 kreditkort
+kreditor
 kremera
 kretsa
 krevera
@@ -3111,6 +3141,7 @@ lagra
 lagstifta
 lagt kort ligger
 laka ur
+lamphållare
 lamslå
 landa
 landvind
@@ -3132,7 +3163,10 @@ lattja
 le
 leda
 leda av
+ledbrosk
+ledhuvud
 ledsaga
+ledskål
 legera
 legitimera
 lejonkula
@@ -3162,6 +3196,7 @@ ligga för
 ligga i
 ligga nere
 ligga på
+ligga steget före
 ligga till
 ligga under
 ligga ute
@@ -3205,9 +3240,11 @@ lossa
 lossna
 lotsa
 lotsa sig fram
+lotsled
 lova
 lovorda
 lovprisa
+luftled
 lugn i stormen!
 lugn som en filbunke
 lugna
@@ -3311,6 +3348,8 @@ låsa in
 låsa sig
 låsa upp
 låta
+låta flitens lampa lysa/brinna
+låta udda vara jämnt
 låta vänta på sig
 låtsas
 låtsas om
@@ -3368,6 +3407,7 @@ materialisera
 matta
 mattas av
 maximera
+med flit
 med förenade krafter
 med namns nämnande
 med upphöjt lugn
@@ -3435,6 +3475,7 @@ moltiga
 monopolisera
 montera
 montera ner
+moppe
 moralisera
 morgontidning
 morsa
@@ -3445,6 +3486,7 @@ motbevisa
 motionera
 motivera
 motläsa
+motortrafikled
 motse
 motstå
 motsvara
@@ -3596,6 +3638,8 @@ närma
 närma sig
 närvara
 näsduk
+nätt och jämt
+nätt opp/upp
 nätverka
 nå
 något växer inte på träd/trän
@@ -3651,6 +3695,7 @@ omplantera
 ompröva
 omringa
 omräkna
+omskapa
 omskola
 omskola sig
 omskriva
@@ -3923,6 +3968,7 @@ pynta
 pyssla
 pärla
 <<<<<<< HEAD
+på alla håll och kanter
 på fastande/tom mage
 på fläcken
 =======
@@ -3930,6 +3976,7 @@ på det sluttande planet
 >>>>>>> 84321c16d85070b3210a095d6b2332128536e379
 på friarstråt
 på rymmarstråt
+på sina håll
 på studs
 på torra vägen
 på våta vägen
@@ -4231,6 +4278,8 @@ sakta sig
 saligförklara
 salivera
 samarbeta
+samfärdsel
+samfärdsled
 samhällsställning
 samla
 samla ihop
@@ -4369,6 +4418,7 @@ skallra
 skandalisera
 skandera
 skapa
+skapa om
 skarva
 skatta
 skattebonde
@@ -4504,6 +4554,16 @@ skräpa
 skrävla
 skråla
 skugga
+skuldbelägga
+skuldebrev
+skulderblad
+skulderbred
+skuldergördel
+skulderled
+skuldfälla
+skuldmedveten
+skuldränta
+skuldsanering
 skuldsätta
 skulptera
 skumpa
@@ -4927,6 +4987,7 @@ stava
 stava av
 stava sig igenom
 stavig
+steg för steg
 stegra
 stegra sig
 steka
@@ -5253,6 +5314,7 @@ ta efter
 ta emot
 ta fram
 ta för sig
+ta första steget
 ta i
 ta ifrån
 ta igen sig
@@ -5272,6 +5334,7 @@ ta sig före
 ta sig samman
 ta sig till
 ta sig ut
+ta steget fullt ut
 ta ställning för någon/något
 ta ställning mot någon/något
 ta till
@@ -5308,6 +5371,7 @@ tamponera
 tangera
 tanka
 tanka ner
+tankeled
 tapetsera
 tappa
 tas
@@ -5542,6 +5606,7 @@ träta
 tråka
 tråka ut
 tråla
+trög
 tröska
 trösta
 trötta
@@ -5949,6 +6014,7 @@ valsa
 valvind
 valvkappa
 vandra
+vandringsled
 vanhedra
 vanhelga
 vanka
@@ -5962,6 +6028,8 @@ vantrivas
 vanvårda
 vanvörda
 vanära
+var och en
+var och varannan
 vara
 vara i arbetstagen
 vara i någons kläder
@@ -5971,6 +6039,7 @@ vara sig
 vara stor i orden
 vara trög i magen
 vara åt skogen
+varhelst
 variera
 varma färger
 varna
@@ -6075,7 +6144,7 @@ vissna
 vistas
 visualisera
 vitsa
-vittflyhande planer
+vittflygande planer
 vittna
 vittra
 vobba
@@ -6099,6 +6168,7 @@ väcka upp
 vädja
 vädra
 väga
+väga jämnt
 väga ned
 väga upp
 vägen till mannens hjärta går genom magen
@@ -6599,7 +6669,6 @@ mana fram
 manager
 manchesterliberalism
 mandala
-mandarin
 mandarin 
 mandat
 mandatperiod
@@ -19994,4 +20063,4 @@ zygot
 överösa
 =======
 överö
->>>>>>> 84321c16d85070b3210a095d6b2332128536e379
+>>>>>>> 84321c16d85070b3210a09

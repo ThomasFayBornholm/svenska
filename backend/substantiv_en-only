@@ -1494,6 +1494,7 @@ blåmes
 blåpenna
 blåsa
 blåsinstrument
+blåslampa
 blåst
 blåval
 blödning
@@ -1583,6 +1584,7 @@ borgare
 borgarklass
 borgen
 borgensförbindelse
+borgenär
 borgmästare
 boricka
 borr
@@ -1850,6 +1852,7 @@ bönväxt
 börd
 börda
 bördsadel
+bördshögfärd
 bördsstolt
 början
 börs
@@ -2082,6 +2085,7 @@ debattartikel
 debattör
 debet
 debilitet
+debitor
 december
 deciliter
 decimeter
@@ -2993,6 +2997,7 @@ forcering
 fordonsskatt
 fordran
 fordring
+fordringsägare
 forell
 form
 formation
@@ -3793,6 +3798,7 @@ golfboll
 golfplats
 golfspelare
 golftävling
+golvlampa
 gom
 gomspene
 gonad
@@ -3976,6 +3982,7 @@ gyttja
 gyttjebrottning
 gäck
 gädda
+gäldenär
 gällning
 gänga
 gängback
@@ -5370,6 +5377,7 @@ knyck
 knyppling
 knytnäve
 knäckare
+knäled
 knäppning
 knäskål
 knöl
@@ -5561,6 +5569,7 @@ kontorsstol
 kontradiktion
 kontraktsvård
 kontrast
+kontring
 kontroll
 kontrollavgift
 kontrollstämpel
@@ -5677,6 +5686,7 @@ kreationist
 kreativitet
 kreatör
 kredit
+kreditor
 kremering
 kreolspråk
 krets
@@ -5994,6 +6004,7 @@ lama
 lamaism
 lampa
 lampfot
+lamphållare
 landgång
 landhöjning
 landis
@@ -6045,6 +6056,7 @@ ledare
 ledighet
 ledning
 ledningsförmåga
+ledskål
 ledsnad
 ledstång
 ledtråd
@@ -6183,6 +6195,7 @@ loppis
 loppmarknad
 lord
 lots
+lotsled
 lottarörelse
 lotus
 lovprisning
@@ -6195,6 +6208,7 @@ luftfart
 luftförorening
 luftgitarr
 luftkuddefarkost
+luftled
 luftpump
 luftrörskatarr
 luftström
@@ -6421,7 +6435,6 @@ man
 manager
 manchesterliberalism
 mandala
-mandarin
 mandarin 
 mandatperiod
 mandel
@@ -6750,6 +6763,7 @@ montering
 montör
 moped
 mopp
+moppe
 mor
 moral
 morbror
@@ -6785,6 +6799,7 @@ motoffensiv
 motor
 motorbåt
 motorcykel
+motortrafikled
 motorväg
 motpart
 motprestation
@@ -8414,6 +8429,8 @@ samarbetsman
 samba
 sambo
 same
+samfärdsel
+samfärdsled
 samhällsekonomi
 samhällsklass
 samhällsordning
@@ -8954,8 +8971,12 @@ skuggbild
 skuggregering
 skuggsida
 skuld
+skuldergördel
+skulderled
 skuldkänsla
 skuldra
+skuldränta
+skuldsanering
 skuldsättning
 skull
 skulle
@@ -10987,6 +11008,7 @@ vandel
 vandrare
 vandrarkänga
 vandring
+vandringsled
 vanesak
 vanfrejd
 vanheder
