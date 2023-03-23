@@ -651,6 +651,7 @@ blanda
 blanda bort korten för någon
 blanda samman
 blanda sig i
+blandare
 blekna
 bli
 bli av
@@ -730,6 +731,7 @@ bottna
 boxas
 braka
 brandsegel
+brandspruta
 brassa
 breda
 breda ut
@@ -968,6 +970,7 @@ desavouera
 desinficera
 det andliga ståndet
 det bidde (bara) en tumme
+det har någon inte med att göra
 det suger i magen (på någon)
 det vänder sig i magen på någon
 det är inte klokt
@@ -1006,6 +1009,7 @@ distribuera
 dividera
 djupfrysa
 djurens konung
+djurisk
 djärvas
 docka
 dofta
@@ -1251,6 +1255,7 @@ felbedöma
 felcitera
 felgrepp
 fermentera
+fernissa
 festa
 fetma
 fetna
@@ -1475,6 +1480,7 @@ fylla moppe
 fylla på
 fylla upp
 fylla ut
+fylleslag
 fyra
 fyra av
 fyrdubbla
@@ -2199,6 +2205,7 @@ göra åt
 ha
 ha en klump i halsen/magen
 ha mage att göra något
+ha något som i en liten ask
 ha tumme med någon
 ha tummen mitt i handen
 ha vind i seglen
@@ -2298,6 +2305,7 @@ hornlager
 hosta
 hosta upp
 hota
+hovbeslag
 hugga
 hugga för sig
 hugga i
@@ -2309,6 +2317,7 @@ humma
 hungra
 hungra ihjäl
 hunsa
+hur som haver
 hurra
 husera
 hushålla
@@ -2362,9 +2371,11 @@ härröra sig
 härska
 härskna
 härstamma
+hästsko
 häva
 hävda
 hävda sig
+hävningsrätt
 hålla
 hålla av
 hålla efter
@@ -2420,8 +2431,10 @@ hötta
 hövas
 i klump
 i kraft av
+i längden
 i smått
 i stånd
+i stöten
 i ur och skur
 iaktta
 idas
@@ -2575,6 +2588,7 @@ inskärning
 inskärpa
 insomna
 inspektera
+inspektor
 inspela
 inspirera
 inspärra
@@ -2593,7 +2607,9 @@ inta
 intala
 inte bli klok på någon/något
 inte finnas på kartan
+inte ha något att vinka på
 inte se skogen för alla/bara träd
+inte veta till sig av något
 inteckna
 integrera
 intellektualisera
@@ -2663,6 +2679,7 @@ jubla
 julkort
 jury
 justera
+justitiemord
 jäkta
 jämföra
 jämka
@@ -2734,6 +2751,7 @@ kejsarpingvin
 kejsarörn
 kela
 kidnappa
+kidnappare
 kika
 kila
 kinesa
@@ -3001,6 +3019,7 @@ kretsa
 krevera
 kriga
 krigsplacera
+krigsrubrik
 kringgärda
 kringgå
 kringränna
@@ -3118,6 +3137,7 @@ köpa
 köpa in
 köpa upp
 köpa ut
+köpeskilling
 köpslå
 kör i vind!
 köra
@@ -3238,6 +3258,7 @@ logga ut
 lokalfärg
 lokalisera
 lokalisera sig
+lokalpress
 loppa
 lossa
 lossna
@@ -3295,6 +3316,7 @@ lägga fram
 lägga för
 lägga ihop
 lägga in
+lägga in en stöt på någon
 lägga korten på bordet
 lägga ner
 lägga om
@@ -3367,6 +3389,7 @@ löpa
 löpa in
 löpa samman
 löpa ut
+löpande rigg
 löpande text
 lösa
 lösa av
@@ -3390,6 +3413,7 @@ manifestera
 manifestera sig
 manipulera
 mankera
+mantalslängd
 manövrera
 marginalisera
 marinera
@@ -3431,6 +3455,7 @@ memento
 memorera
 mena
 mena på
+mest vid beskrivning av äldre förhållandenanpassa organisationen av krigsmakt till fredsförhållandensom krigsminister 1919 skulle Churchill sätta armén på fredsfot
 meta
 mildra
 milsten
@@ -3466,6 +3491,7 @@ missunna
 missuppfatta
 missvisa
 mista
+mitos
 mixtra
 mjuka upp
 mjuka upp sig
@@ -3482,6 +3508,15 @@ montera
 montera ner
 moppe
 moralisera
+mordbrand
+mordbrännare
+mordförsök
+mordisk
+mordkommission
+mordlust
+mordlysten
+mordlystnad
+mordängel
 morgontidning
 morsa
 mosa
@@ -3521,6 +3556,7 @@ mynta
 mäkla
 mäkta
 mänga
+människoande
 märka
 märka ut
 mäta
@@ -3540,6 +3576,7 @@ målarfärg
 månadskort
 mångdubbla
 mångfaldiga
+mårddjur
 mått och steg
 måtta
 måttet är rågat
@@ -3641,12 +3678,15 @@ näpsa
 nära
 närma
 närma sig
+närmare besett
 närvara
 näsduk
 nätt och jämt
 nätt opp/upp
 nätverka
 nå
+nå ända fram
+någons ande svävar över något
 något växer inte på träd/trän
 nåta
 nödga
@@ -3747,6 +3787,7 @@ ormslå
 oroa
 oroa sig
 orsaka
+osams
 osed
 oskadliggöra
 oskick
@@ -3971,6 +4012,7 @@ putsa
 putta
 pynta
 pyssla
+pälsdjur
 pärla
 <<<<<<< HEAD
 på alla håll och kanter
@@ -4006,6 +4048,8 @@ påtvinga
 påverka
 påvisa
 quizza
+rabbla
+rabblande
 rada upp
 radera
 raffinera
@@ -4251,6 +4295,7 @@ råka ut
 råkas
 råma
 råna
+rånmord
 råsegel
 rö
 rödlista
@@ -4268,6 +4313,7 @@ röra
 röra sig
 rösta
 röstkort
+röstlängd
 röta
 röva
 sabba
@@ -4416,6 +4462,7 @@ sjökort
 sjösätta
 skada
 skada sig
+skadedjur
 skaffa
 skaffa undan
 skaka
@@ -4577,6 +4624,7 @@ skumpa
 skura
 skutta
 skvala
+skvallerpress
 skvallra
 skvalpa
 skvätta
@@ -4633,6 +4681,7 @@ skövla
 slacka
 slaka
 slakta
+slammer
 slamra
 slantsingla
 slappa
@@ -4836,6 +4885,7 @@ sno ihop
 sno på
 sno sig
 snobbig
+snodd
 snoka
 snoppa
 snoppa av
@@ -5097,7 +5147,9 @@ studera
 studs
 studsa
 stuka
+stup i ett
 stupa
+stupfull
 stuprör
 stycka
 stympa
@@ -5151,6 +5203,12 @@ stå till
 stå upp
 stå ut
 stå över
+stående armé
+stående fågelhund
+stående längd
+stående ovationer
+stående rigg
+stående rubrik
 ståndkrage
 ståndsperson
 stånga
@@ -5173,6 +5231,7 @@ stöta sig
 stöta till
 stöta ut
 stötta
+stötvis
 subskribera
 substantivera
 substituera
@@ -5278,6 +5337,7 @@ särbehandla
 särredovisa
 särskilja
 sätta
+sätta armén på fredsfot
 sätta av
 sätta dit
 sätta fast
@@ -5411,6 +5471,7 @@ till känna
 tillaga
 tillbakabildas
 tillbakavisa
+tillbaks
 tillbe
 tillbringa
 tilldela
@@ -5505,6 +5566,7 @@ tjäla
 tjäna
 tjäna av
 tjäna ut
+tjänsteande
 tjänstgöra
 tolerera
 tolka
@@ -5722,6 +5784,7 @@ underlätta
 underlåta
 underminera
 underordna
+underrubrik
 underrätta
 underrätta sig
 underskatta
@@ -5733,6 +5796,7 @@ understödja
 undersöka
 undersöka sig
 underteckna
+undertitel
 undertrycka
 undervisa
 undervärdera
@@ -6041,6 +6105,7 @@ var och varannan
 vara
 vara i arbetstagen
 vara i någons kläder
+vara i stöten
 vara intecknad upp över skorstenen
 vara på god väg
 vara sig
@@ -6078,7 +6143,6 @@ veta av
 veta med sig
 veta om
 veta sig
-veta till sig
 vetenskapa
 veva
 vibrera
@@ -17104,7 +17168,6 @@ utkämpa
 utkörare
 utkörd
 utland
-utlandseloktorat
 utlandslektor
 utlandslektorat
 utlandsskuld
@@ -17904,7 +17967,6 @@ veta med sig
 veta om
 veta sig
 veta sin plats
-veta till sig
 veta var man har någon
 veta varken ut eller in
 vetande

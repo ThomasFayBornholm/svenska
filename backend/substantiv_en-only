@@ -929,7 +929,6 @@ barnamördare
 barnatro
 barncykel
 barndom
-barndomen
 barnfamilj
 barnflicka
 barnkammare
@@ -1426,6 +1425,7 @@ blackjack
 bladselleri
 bladstekel
 bladställning
+blandare
 blandfärs
 blandning
 blandras
@@ -1635,6 +1635,7 @@ brandman
 brandskada
 brandsläckare
 brandsoldat
+brandspruta
 brandstation
 brandvarnare
 bransch
@@ -2780,6 +2781,7 @@ femtiokronorssedel
 femtiolapp
 fenotyp
 ferie
+fernissa
 fest
 festival
 fetisch
@@ -4410,9 +4412,11 @@ hästansikte
 hästgård
 hästkraft
 hästskjuts
+hästsko
 hätskhet
 hävarm
 hävd
+hävningsrätt
 hävstång
 hävstångsarm
 häxa
@@ -4756,6 +4760,7 @@ inskränkning
 inskärning
 insmuggling
 insolation
+inspektor
 inspelning
 inspiration
 installation
@@ -5240,6 +5245,7 @@ kemikalie
 kemist
 khmer
 kick
+kidnappare
 kidnappning
 kikare
 kil
@@ -5699,6 +5705,7 @@ krigsherre
 krigslycka
 krigsmakt
 krigsman
+krigsrubrik
 krigsrätt
 krigstillstånd
 kriminalitet
@@ -5971,6 +5978,7 @@ könsutjämning
 könsvarelse
 köpare
 köpcenter
+köpeskilling
 köping
 köpman
 kör
@@ -6184,6 +6192,7 @@ logotyp
 lojalitet
 lokal
 lokalfärg
+lokalpress
 lokalsamtal
 lokaltidning
 lokalvårdare
@@ -6452,6 +6461,7 @@ mannamån
 manschett
 manslem
 manspillan
+mantalslängd
 mantissa
 manual
 manvarg
@@ -6708,6 +6718,7 @@ misstro
 misströstan
 missvisning
 misär
+mitos
 mitt
 mittenväljare
 mittlinje
@@ -6767,7 +6778,13 @@ moppe
 mor
 moral
 morbror
+mordbrand
+mordbrännare
+mordkommission
 mordkomplott
+mordlust
+mordlystnad
+mordängel
 morell
 morfar
 morfinist
@@ -6880,6 +6897,7 @@ mäklare
 mängd
 mängdlära
 människa
+människoande
 människoapa
 människosyn
 människoätare
@@ -8389,6 +8407,7 @@ rörmontör
 rörpost
 rörtång
 röst
+röstlängd
 röstning
 rösträtt
 röta
@@ -8989,6 +9008,7 @@ skur
 skurhink
 skurk
 skvadron
+skvallerpress
 skvätt
 sky
 skyddskår
@@ -9190,6 +9210,7 @@ snirkel
 snittmängd
 snoa
 snobb
+snodd
 snok
 snooker
 snopp
@@ -10183,6 +10204,7 @@ tjäle
 tjänare
 tjänis
 tjänst
+tjänsteande
 tjänsteman
 tjänstepension
 tjänstesektor
@@ -10546,6 +10568,7 @@ underläpp
 underlåtenhet
 underlåtenhetssynd
 underordning
+underrubrik
 underrätt
 underrättelse
 underrättelsetjänst
@@ -10557,6 +10580,7 @@ understatement
 undersåte
 undersökning
 underteckning
+undertitel
 undertröja
 undervisning
 undervisningstimme
