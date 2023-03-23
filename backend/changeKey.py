@@ -8,6 +8,7 @@ try:
     dictSource = sys.argv[1]
     key = sys.argv[2]
     newVal = sys.argv[3]
+    print(newVal)
 except:
     usage()
     
@@ -16,6 +17,7 @@ with open(dictSource, 'r', encoding = "utf=8") as infile:
 
 
 # Permit only changing of existing keys
+
 try:
     val = jsonDict[key]
     print("(Current key) " + key + " -> " + val)
@@ -24,8 +26,12 @@ try:
         exit()
     with open(dictSource,'r+',encoding="utf-8") as fh:
         data = json.load(fh)
-        data[key] = newVal
-        print("(New key value) " + data[key]);
+        if newVal == "rm":
+            data.pop(key, None)
+            print("Deleted key: " + key);
+        else:
+            data[key] = newVal        
+            print("(New key value) " + data[key]);
         fh.seek(0)
         json.dump(data,fh)
         fh.truncate()
