@@ -860,6 +860,7 @@ chockhöja
 cirkla
 cirkulera
 ciselera
+citatord
 citera
 citybike
 cityshorts
@@ -933,6 +934,8 @@ dedicera
 definiera
 definiera om
 degenerera
+degradera
+degradering
 deklarera
 deklinera
 dekorera
@@ -971,6 +974,7 @@ desinficera
 det andliga ståndet
 det bidde (bara) en tumme
 det har någon inte med att göra
+det naturliga urvalet
 det suger i magen (på någon)
 det vänder sig i magen på någon
 det är inte klokt
@@ -1148,6 +1152,7 @@ ekonomisera
 elda
 elda upp
 elektrifiera
+elevunderlag
 eliminera
 eloxera
 emballera
@@ -1167,6 +1172,7 @@ enervera
 engagera
 enkelrikta
 enmansvalkrets
+ensamrätt
 enstavig
 entlediga
 entrecote
@@ -1356,6 +1362,8 @@ flåhacka
 flåsa
 flöda
 flöda över
+flödesdiagram
+flödesschema
 flörta
 fnissa
 fnittra
@@ -1430,6 +1438,7 @@ frisera sig
 friska
 friska upp
 friskna till
+friskulptur
 friställa
 frita
 fritera
@@ -2920,6 +2929,7 @@ kompilera
 komplettera
 komplicera
 komponera
+kompress
 komprimera
 kompromissa
 koncentrera
@@ -2930,6 +2940,7 @@ konferera
 konfigurera
 konfirmand
 konfirmera
+konform avbildning
 konfrontera
 konfundera
 kongruera
@@ -3708,6 +3719,7 @@ ofullborda
 ogilla
 oja sig
 okeja
+okoncentrerad
 okväda
 olat
 omarbeta
@@ -3818,6 +3830,7 @@ paradera
 parafera
 paralysera
 parasitera
+parenkym
 parera
 parkera
 parodiera
@@ -4058,6 +4071,7 @@ ragga
 ragga upp
 raka
 raka puckar
+raklödder
 rama in
 ramla
 ramla på
@@ -4121,6 +4135,7 @@ rekommendera
 rekonstruera
 rekrytera
 relatera
+relief
 remittera
 rena
 rendera
@@ -4223,6 +4238,7 @@ rumpstek
 rumstera
 runda
 runda av
+rundskulptur
 runga
 runka
 rusa
@@ -4561,6 +4577,7 @@ skola om
 skona
 skopa
 skotta
+skottlinje
 skovla
 skralna
 skramla
@@ -4788,6 +4805,7 @@ smyga
 smyga in
 smyga sig
 smyga sig in
+smygvinkel
 smäda
 smälla
 smälla av
@@ -5189,6 +5207,7 @@ stänga upp
 stänga ute
 stänka
 stärka
+stärkelse
 stävja
 stå
 stå bakom
@@ -5217,6 +5236,7 @@ stånka
 ståta
 stödja
 stödja sig
+stödjevävnad
 stöka till
 stöna
 stöpa
@@ -5261,6 +5281,7 @@ svalna
 svamla
 svansa
 svara
+svaromål
 svart låda
 svartlista
 svassa
