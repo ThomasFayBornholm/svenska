@@ -874,6 +874,7 @@ bakelse
 bakform
 bakfot
 bakfylla
+bakgata
 bakgrund
 bakgård
 bakkappa
@@ -2611,6 +2612,8 @@ eskader
 eskort
 esplanad
 espresso
+estländska
+estniska
 estrad
 estradör
 etanol
@@ -3003,6 +3006,7 @@ fordran
 fordring
 fordringsägare
 forell
+forensik
 form
 formation
 formel
@@ -3192,6 +3196,7 @@ fyrmänning
 fyrsiding
 fyrskaft
 fyrsprång
+fyrtaktsmotor
 fysik
 fysiker
 fysioterapeut
@@ -3325,6 +3330,7 @@ förhoppning
 förhud
 förhållningsorder
 förintelse
+förkalkning
 förkastning
 förklaring
 förknippning
@@ -3603,6 +3609,7 @@ galax
 galenskap
 galge
 gallblåsa
+gallerist
 gallfeber
 gallring
 gallup
@@ -3636,11 +3643,25 @@ gasol
 gastillförsel
 gasutveckling
 gata
+gatflicka
 gatlykta
+gatpojke
+gatsopare
+gatsten
+gatubeläggning
 gatubild
+gatufrid
+gatuförsäljare
 gatukors
 gatukorsning
+gatumusik
+gatupratare
+gaucho
+gaullism
+gaullist
 gaur
+gauss
+gausskurva
 gavel
 gegga
 geggamoja
@@ -3774,6 +3795,7 @@ glömska
 gnagare
 gnejs
 gnista
+gnoding
 gnom
 gnutta
 gnäll
@@ -3877,6 +3899,7 @@ grotesk
 grotta
 grovlek
 grovtarm
+grumling
 grund
 grundare
 grundbetydelse
@@ -5083,8 +5106,10 @@ kalabalik
 kalaskula
 kalender
 kaliber
+kalk
 kalkhalt
 kalkon
+kalksten
 kalkyl
 kalkylator
 kallelse
@@ -5258,6 +5283,7 @@ kilo
 kilometer
 kilt
 kind
+kindknota
 kinematik
 kines
 kinesiska
@@ -5375,8 +5401,11 @@ knippa
 kniv
 knivlåda
 knivrygg
+knix
 knop
 knopp
+knorrhane
+knot
 knota
 knussel
 knut
@@ -5457,6 +5486,7 @@ komfort
 komfortzon
 komik
 kommandobrygga
+kommandoton
 kommendant
 kommendör
 kommentar
@@ -5506,6 +5536,7 @@ konditor
 kondom
 konduktans
 konduktivitet
+konduktor
 konduktör
 konfekt
 konfektion
@@ -5713,6 +5744,7 @@ krigsrubrik
 krigsrätt
 krigstillstånd
 kriminalitet
+kriminalteknik
 kriminalvård
 kriminalvårdare
 kriminolog
@@ -7233,6 +7265,9 @@ ofrihet
 oförmåga
 oförskämdhet
 oföränderlighet
+ogräsfisk
+ogärning
+ogärningsman
 ohyra
 okapi
 okränkbarhet
@@ -7268,6 +7303,8 @@ omföderska
 omfördelning
 omgivning
 omgång
+omkastare
+omkopplare
 omkostnad
 omkrets
 omkörning
@@ -7279,6 +7316,7 @@ omoral
 omrörning
 omröstning
 oms
+omskiftare
 omskrivning
 omsorg
 omställning
@@ -7542,6 +7580,7 @@ permission
 permutation
 peroxid
 perrong
+pers
 persedel
 persienn
 persika
@@ -7587,6 +7626,7 @@ perukmakare
 perukstock
 perversion
 perversitet
+peseta
 peso
 pessimism
 pessimist
@@ -7805,6 +7845,7 @@ prestationslön
 prestationsångest
 prestav
 prestige
+pretendent
 pretention
 prickskytt
 prilla
@@ -7969,7 +8010,6 @@ påve
 påverkan
 pöbel
 quisling
-quizza
 rabalder
 rabarber
 rabatt
@@ -8297,6 +8337,7 @@ ruska
 rusning
 rusningstid
 rusningstrafik
+rustning
 ruta
 ruter
 rutin
@@ -8490,6 +8531,7 @@ sampla
 sampling
 samregering
 samstämmighet
+samtalston
 samtid
 samtidighet
 samvaro
@@ -8924,6 +8966,7 @@ skiffer
 skiffergas
 skiftning
 skiftnyckel
+skifttangent
 skildrare
 skildring
 skiljevägg
@@ -9512,6 +9555,7 @@ stelkramp
 sten
 stenfot
 stenkoll
+stenläggning
 stensöta
 stentorsstämma
 stenöken
@@ -10061,6 +10105,7 @@ tertiär
 tertiärtiden
 tes
 tesaurus
+tesla
 test
 testator
 testballong
@@ -10251,6 +10296,7 @@ tonfisk
 tonhöjd
 tonika
 tonsill
+tonstyrka
 tonsättare
 tonvikt
 tonåring
@@ -10323,6 +10369,7 @@ transparens
 transplantation
 transport
 trappa
+trappgavel
 trasa
 trasmatta
 trast
@@ -10333,11 +10380,13 @@ trave
 travtävling
 tredjedag
 tredjedel
+trefjärdedelstakt
 trehörning
 trekammarbrunn
 treklang
 trend
 trendsport
+tretakt
 trettondag
 tretår
 trevare
@@ -10370,6 +10419,7 @@ trombon
 trombos
 tron
 tronföljd
+tronpretendent
 trop
 tropik
 tropp
@@ -10379,6 +10429,7 @@ tross
 trossats
 trotjänare
 trottoar
+trottoarpratare
 trovärdighet
 truck
 trumma
@@ -10486,6 +10537,7 @@ tvist
 tvistighet
 tvivel
 tvären
+tvärgata
 tvärslå
 tvärvetenskap
 tvätt
@@ -10496,6 +10548,7 @@ tvåa
 tvål
 tvåpol
 tvåsamhet
+tvåtaktsmotor
 twill
 tydlighet
 tyfus
@@ -10536,6 +10589,7 @@ tätting
 tävling
 tävlingsjury
 tå
+tåfjutt
 tågvärd
 tåhätta
 tåhävning
@@ -10669,6 +10723,7 @@ upplag
 upplaga
 upplevelse
 upplysning
+uppläggning
 upplåning
 upplåtelse
 upplösning
@@ -10999,6 +11054,7 @@ vagn
 vaja
 vajer
 vakt
+vaktavlösning
 vaktel
 vaktmästare
 vakuumpump
@@ -11256,6 +11312,9 @@ vispgrädde
 vispning
 visshet
 vistelse
+vitalism
+vitalitet
+vitalkapacitet
 vitbeta
 vitbok
 vitlök
