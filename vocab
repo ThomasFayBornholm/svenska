@@ -551,7 +551,7 @@ function showWordMatches(follow) {
 		if (keys.length === 1 && keys[0] != CLASS && follow) {			
 			// Go direct to class if no ambiguity in found word(s)
 			setClass(keys[0]);
-			seekWord(word);
+			seekWordSingleClass(word);
 		}
 		let def = "";
 		let delim ="";			
@@ -1704,6 +1704,7 @@ function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta()");	
 	regexArr = [
+		/nästan en­bart i fack­språk/,
 		/skämtsamt/,
 		/dialektalt; något ned­sättande/,
 		/kemi/,
@@ -2175,6 +2176,10 @@ function fmtParticles(s) {
 	
 	const regex4 = /.*med partik[elnarn]+ som an.ger (?:rörelse)?riktning.*(t(?:ill)?\.ex\.|sär.skilt)/;
 	match = s.match(regex4);
+	
+	const regex5 = /.*med partik[elnarn]+ som betecknar riktning.*(t(?:ill)?\.ex\.|sär.skilt)/;
+	match = s.match(regex5);
+	
 	if (match) {
 		let tmp = s.replace(match[0],"");
 		let tmpArr = tmp.split(",");
@@ -2197,8 +2202,8 @@ function fmtParticles(s) {
 		s = "(" + s.replace(match[0] + old,match[0] + rep);
 	}
 		
-	const regex5 = /.*med någon av partiklarna(([a-zöäå]+, )*[a-zöäå]+).*/;
-	match = s.match(regex5);	
+	const regex6 = /.*med någon av partiklarna(([a-zöäå]+, )*[a-zöäå]+).*/;
+	match = s.match(regex6);	
 	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");		
 	
 	s = s.replace("utan</b>) större betydelse­skillnad", "</b> utan större betydelse­skillnad)");
