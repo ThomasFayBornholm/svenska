@@ -905,6 +905,7 @@ bana
 banan
 banbrytare
 banderoll
+bandhund
 bandit
 bandtång
 bandy
@@ -928,6 +929,7 @@ barmark
 barmhärtighet
 barnamördare
 barnatro
+barnbespisning
 barncykel
 barndom
 barnfamilj
@@ -941,6 +943,7 @@ barnsits
 barnskötare
 barnsäng
 barnvagn
+barnvakt
 barock
 baron
 barriär
@@ -1685,6 +1688,7 @@ brottslighet
 brottsling
 browser
 brud
+brudbukett
 brudgum
 brudkrona
 brugd
@@ -2770,6 +2774,7 @@ feber
 februari
 federation
 feedback
+fegis
 fejd
 fela
 felaktighet
@@ -2861,6 +2866,7 @@ fjordhäst
 fjortis
 fjutt
 fjäder
+fjäderdräkt
 fjäderpensel
 fjädervåg
 fjädring
@@ -2984,6 +2990,7 @@ folkdräkt
 folkförflyttning
 folkgrupp
 folkhögskola
+folklek
 folklighet
 folkmassa
 folkmun
@@ -3061,6 +3068,7 @@ framryckning
 framsida
 framställan
 framställning
+framtand
 framtid
 framtidsman
 framtidstro
@@ -3183,6 +3191,7 @@ funktionär
 fura
 furste
 fusion
+fux
 fylking
 fylla
 fyllecell
@@ -3203,6 +3212,7 @@ fysiker
 fysioterapeut
 fäbless
 fägring
+fähund
 fäktning
 fälg
 fälla
@@ -3973,6 +3983,20 @@ gudstjänst
 gudunge
 guide
 gula
+guldbagge
+guldfasan
+guldfeber
+guldfisk
+guldfux
+guldgruva
+guldgrävare
+guldhamster
+guldkalv
+guldkant
+guldklimp
+guldklocka
+guldkrog
+guldkrona
 guldmedalj
 guldskiva
 guldsmed
@@ -3997,6 +4021,7 @@ gutniska
 guvernant
 guvernör
 gycklare
+gylf
 gylta
 gymnasieekonom
 gymnasieingenjör
@@ -4335,6 +4360,7 @@ humla
 hummer
 humor
 hund
+hundblick
 hundradel
 hundrakronorssedel
 hundralapp
@@ -4446,6 +4472,7 @@ hävd
 hävningsrätt
 hävstång
 hävstångsarm
+hävstångseffekt
 häxa
 häxdans
 häxjakt
@@ -4623,6 +4650,7 @@ iller
 illusion
 illustration
 illvilja
+ilmarsch
 ilning
 ilska
 image
@@ -4919,6 +4947,7 @@ jage
 jagkänsla
 jakt
 jakthamn
+jakthund
 jaktmark
 jalusi
 jamb
@@ -5045,6 +5074,7 @@ järnmalm
 järnridå
 järnspat
 järnväg
+järnvägsknut
 järpe
 järtecken
 jäsning
@@ -5136,6 +5166,7 @@ kamouflering
 kamp
 kampanil
 kampanj
+kamphund
 kamplust
 kampsport
 kamrat
@@ -5285,6 +5316,7 @@ kilometer
 kilt
 kind
 kindknota
+kindtand
 kinematik
 kines
 kinesiska
@@ -5338,6 +5370,7 @@ klicker
 klient
 klimatfråga
 klimatförändring
+klimp
 klinga
 klinik
 klink
@@ -5351,6 +5384,7 @@ klo
 kloak
 klocka
 klockarkärlek
+klockstapel
 klokskap
 klosett
 klot
@@ -5443,6 +5477,7 @@ kokett
 koketteri
 kokill
 kokong
+kokplatta
 koks
 koksalt
 kokvrå
@@ -5681,6 +5716,7 @@ kortege
 kortfilm
 korthet
 kortis
+kortlek
 kortsida
 kortslutning
 kortvägg
@@ -5854,6 +5890,7 @@ kulörtvätt
 kummel
 kumpan
 kund
+kundtjänst
 kundvagn
 kung
 kungakrona
@@ -6076,6 +6113,7 @@ lantgård
 lapp
 lappmes
 lapsus
+laptop
 larv
 lasagne
 laser
@@ -6114,6 +6152,7 @@ legoknekt
 leguan
 lejonkula
 lek
+lekman
 lekplats
 leksak
 lekskola
@@ -6421,10 +6460,14 @@ låsning
 låt
 löddra
 lödkolv
+lödning
 lögn
 löjtnant
 lök
 lön
+löneförhöjning
+lönelyft
+lönerörelse
 lönn
 lönsamhet
 löpare
@@ -6768,8 +6811,10 @@ mjukvara
 mjältbrand
 mjälte
 mjölk
+mjölkkossa
 mjölkprodukt
 mjölksyra
+mjölktand
 moatjé
 mobbning
 mobil
@@ -7046,6 +7091,7 @@ naturrätt
 naturtillgång
 naturvetenskap
 naturvård
+navel
 navelsträng
 navigation
 navigationssatellit
@@ -7087,9 +7133,10 @@ nektarin
 nelson
 nerv
 nervgift
+nervknut
 nervositet
+nervtråd
 nesa
-nettoström
 neurit
 neuros
 neutralitet
@@ -7218,6 +7265,7 @@ nåt
 nöd
 nödhjälp
 nödsignal
+nödsituation
 nödtorft
 nödutgång
 nödvändighet
@@ -7481,12 +7529,14 @@ papperstidning
 paprika
 parabel
 parad
+paradmarsch
 paradox
 paragraf
 parallellcirkel
 paralys
 parameter
 parasit
+pardans
 pardon
 parentes
 parentestecken
@@ -7500,6 +7550,7 @@ parnass
 parningslek
 parodi
 parodiker
+parodontit
 paroll
 parsing
 part
@@ -7554,6 +7605,7 @@ penningpolitik
 penningsumma
 pennvässare
 pensel
+penselföring
 pension
 pensionsförsäkring
 pensionspoäng
@@ -7578,6 +7630,7 @@ peristyl
 perkolation
 perkolator
 permanens
+permanent
 permission
 permutation
 peroxid
@@ -7710,6 +7763,7 @@ platina
 platinaskiva
 plats
 platsannons
+platt-tv
 platta
 plattfisk
 plattform
@@ -8181,6 +8235,7 @@ resistor
 resning
 resolution
 resonans
+resonör
 resorption
 respekt
 respiration
@@ -8265,7 +8320,10 @@ riktningskoefficient
 riktpunkt
 rimfrost
 ring
+ringdans
+ringhörna
 ringklocka
+ringlek
 ringmur
 rippel
 rishög
@@ -8524,6 +8582,7 @@ sammansmältning
 sammanställning
 sammansvärjning
 sammansättning
+sammansättningsfabrik
 sammanvägning
 sammetsblick
 sammetsröst
@@ -8725,6 +8784,7 @@ servett
 servettring
 service
 serviceman
+servicenäring
 servis
 setboll
 sevärdhet
@@ -8992,6 +9052,7 @@ skog
 skogsindustri
 skojare
 skola
+skolbespisning
 skolbuss
 skolgång
 skolgård
@@ -9157,6 +9218,7 @@ sluss
 slut
 slutdestination
 slutenvård
+slutledning
 slutlön
 slutpunkt
 slutresultat
@@ -9278,6 +9340,7 @@ snuva
 snyftning
 snyltare
 snyltgäst
+snytbagge
 snäcka
 snäppa
 snärt
@@ -9297,7 +9360,7 @@ socialism
 socialist
 socialliberalism
 socialtjänst
-socialtjänste
+socialtjänstlag
 sociolekt
 sociologi
 socka
@@ -9316,6 +9379,7 @@ solarkonstant
 solcell
 soldat
 solenergi
+solfjäder
 solidaritet
 solitär
 solkräm
@@ -9514,7 +9578,10 @@ stank
 stannfågel
 stans
 stapel
+stapelavlöpning
 stapelbädd
+stapelplats
+stapelvara
 starksprit
 starkvind
 starr
@@ -9803,6 +9870,7 @@ suppleant
 supé
 surdeg
 surfing
+surfplatta
 surhetsgrad
 surpris
 susen
@@ -9855,6 +9923,7 @@ svulst
 svägerska
 svält
 svältgräns
+svältlön
 sväng
 svängbro
 svängning
@@ -9888,6 +9957,7 @@ syn
 synagoga
 synaps
 synd
+syndabekännelse
 syndikalism
 syndikat
 synergi
@@ -9931,6 +10001,7 @@ säkringslåda
 säl
 säljare
 sällhet
+sällskapsdans
 sämja
 sändare
 sändning
@@ -10007,6 +10078,7 @@ talare
 talarkonst
 talarstol
 talekonst
+talesperson
 talg
 taliban
 tall
@@ -10022,6 +10094,7 @@ tand
 tandem
 tandemcykel
 tandkräm
+tandlossning
 tandläkare
 tandprotes
 tandrot
@@ -10225,6 +10298,7 @@ timbre
 timesharing
 timjan
 timme
+timmersvans
 timvisare
 tina
 tingsrätt
@@ -10238,6 +10312,7 @@ tittare
 tittarstorm
 tjallare
 tjej
+tjock-tv
 tjockis
 tjocklek
 tjockolja
@@ -10262,6 +10337,7 @@ tjänare
 tjänis
 tjänst
 tjänsteande
+tjänstebil
 tjänsteman
 tjänstepension
 tjänstesektor
@@ -10428,6 +10504,7 @@ tropik
 tropp
 trosa
 trosartikel
+trosbekännelse
 tross
 trossats
 trotjänare
@@ -11059,7 +11136,9 @@ vajer
 vakt
 vaktavlösning
 vaktel
+vakthund
 vaktmästare
+vaktparad
 vakuumpump
 val
 valack
@@ -11147,6 +11226,7 @@ varning
 varningsklocka
 varsebliva
 varseblivning
+vart
 varulv
 vas
 vasografi
@@ -11357,6 +11437,7 @@ väderkvarn
 väderlek
 väderprognos
 vädersatellit
+vädertjänst
 vädjan
 väft
 väg
@@ -11433,6 +11514,7 @@ värmeledning
 värmelära
 värmemängd
 värmepanna
+värmeplatta
 värmeutveckling
 värnkraft
 värnplikt
