@@ -343,6 +343,7 @@ bibliotek
 bidrag
 bifall
 bifallsrop
+bihang
 bilbälte
 bildband
 bildkryss
@@ -622,6 +623,7 @@ drev
 dricka
 dricksvatten
 driftliv
+driftstopp
 driv
 drivband
 drivhus
@@ -679,6 +681,7 @@ ekipage
 eko
 ekonomibiträde
 ekosystem
+elddon
 eldupphör
 eldvapen
 eldvatten
@@ -878,6 +881,7 @@ frisim
 frislag
 frontavsnitt
 fruktkött
+fruktämne
 fruntimmer
 frysfack
 frälsningsmöte
@@ -1997,6 +2001,7 @@ milligram
 mindretal
 mineral
 mineralvatten
+mineralämne
 minfält
 mingel
 minimum
@@ -2544,6 +2549,7 @@ rån
 rånmord
 råplugg
 råsegel
+råämne
 rö
 rödljus
 röj
@@ -2558,6 +2564,7 @@ röveri
 sabotage
 saffransbröd
 sagodjur
+sagoskimmer
 sakförhållande
 sakläge
 sakobjekt
@@ -2658,6 +2665,7 @@ sinnelag
 sinnesintryck
 sinneslugn
 sinnesorgan
+sjukavdrag
 sjukhus
 sjukvårdsbiträde
 sjuttiotal
@@ -2696,6 +2704,7 @@ skalskydd
 skalv
 skaplynne
 skarpsinne
+skatteavdrag
 skattetryck
 skede
 skelett
@@ -2816,6 +2825,7 @@ slödder
 slöjmoln
 slöseri
 smaksinne
+smakämne
 smalben
 smatter
 smeknamn
@@ -2934,6 +2944,7 @@ spröt
 späck
 spädbarn
 spår
+spårämne
 spö
 spöke
 spöregn
@@ -3532,6 +3543,7 @@ vevhus
 vevlager
 vide
 vidunder
+vigselformulär
 vikingaskepp
 vikingatåg
 vildskott

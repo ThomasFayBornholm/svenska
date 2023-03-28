@@ -1,4 +1,5 @@
 (det får) bära eller brista
+(det) skulle bara fattas annat
 (ertappas) med fingrarna i kakburken/syltburken
 (gå) ton i ton
 (ha) gråten i halsen
@@ -45,6 +46,7 @@ akta
 akta sig
 aktivera
 aktualisera
+alliansring
 alliera sig
 allmänorientering
 allokera
@@ -166,6 +168,7 @@ arbeta ut
 arbeta över
 arbetsbefria
 arbetsdomstol
+arbetsfred
 arbetstillstånd
 argumentera
 arkebusera
@@ -652,6 +655,7 @@ bida
 bidra
 bifoga
 bigott
+bihang
 bila
 bilda
 bildtext
@@ -1022,6 +1026,7 @@ det bidde (bara) en tumme
 det har någon inte med att göra
 det kliar i fingrarna på någon
 det naturliga urvalet
+det skulle bara fattas
 det suger i magen (på någon)
 det vänder sig i magen på någon
 det är illa vulet
@@ -1050,6 +1055,7 @@ direktsända
 dirigera
 disciplinera
 diska
+diskontinuitet
 diskriminera
 diskutabel
 diskutera
@@ -1059,6 +1065,7 @@ disputera
 dissimilera
 distrahera
 distribuera
+diversehandel
 dividera
 djupfrysa
 djurens konung
@@ -1069,6 +1076,7 @@ dofta
 dokumentera
 domarring
 dominera
+don efter person
 donera
 dopa
 doppa sig
@@ -1076,6 +1084,7 @@ dra
 dra av
 dra fram
 dra för
+dra fördel av något
 dra ifrån
 dra igång
 dra ihop
@@ -1094,6 +1103,7 @@ dra upp
 dra ut
 dra åt skogen
 dra över
+dra/kasta ett löjets skimmer över något
 drabba
 drabba ihop
 drabba samman
@@ -1106,6 +1116,7 @@ dricka upp
 dricka ur
 dricksa
 drifta
+driftstopp
 driftsätta
 drilla
 drista sig
@@ -1208,6 +1219,7 @@ eklärera
 ekonomisera
 elda
 elda upp
+elddon
 elektrifiera
 elevunderlag
 eliminera
@@ -1224,6 +1236,7 @@ en gång i tiden
 en händelse som ser ut som en tanke
 en katt bland hermelinerna
 en läpparnas bekännelse
+en ohelig allians
 en sak i taget
 en spik i någons/någots likkista
 en storm i ett vattenglas
@@ -1290,7 +1303,9 @@ explodera
 exponera
 exportera
 expropriera
+extra
 extrahera
+extrajudiciell
 extrapolera
 fabricera
 fabrikant
@@ -1481,6 +1496,7 @@ fortplanta
 fortskrida
 fortsätta
 fostra
+fotbeklädnad
 fotbollsplan
 fotografera
 fotomontage
@@ -1547,6 +1563,7 @@ frodas
 frossa
 frosta av
 frukta
+fruktämne
 frusta
 frysa
 frysa ihjäl
@@ -2671,6 +2688,7 @@ i den högre skolan
 i klump
 i kraft av
 i längden
+i ny och nedan
 i smått
 i stånd
 i stöten
@@ -2695,6 +2713,7 @@ illustrera
 ilmarsch
 imitera
 imma
+immateriella tillgångar
 immigrera
 implantera
 implementera
@@ -2952,6 +2971,8 @@ jämna av
 jämna ut
 jämra sig
 jämställa
+jämte
+jämtlänning
 järnbröllop
 järnvägsknut
 jäsa
@@ -3025,6 +3046,7 @@ kejsarens nya kläder
 kejsarpingvin
 kejsarörn
 kela
+kemiskt ren
 kidnappa
 kidnappare
 kika
@@ -3252,6 +3274,7 @@ kontrastera
 kontring
 kontrollera
 kontrollstämpla
+kontrollör
 konungarnas konung
 konversera
 konvertera
@@ -3435,6 +3458,7 @@ känna sig
 känna sig för
 känna till
 känna/se vart/hur vinden blåser
+kännarblick
 kännas
 kännas vid
 känneteckna
@@ -3696,6 +3720,7 @@ läsa upp
 läsa ut
 lätta
 läxa upp
+låda
 låga
 låna
 långfristig
@@ -3732,6 +3757,7 @@ löpa ut
 löpande rigg
 löpande text
 löpning
+lördagsbilaga
 lösa
 lösa av
 lösa den gordiska knuten
@@ -3809,10 +3835,12 @@ mena på
 meritera
 meritera sig
 meriterad
+mesallians
 meta
 mildra
 milsten
 mimik
+mineralämne
 miniatyrisera
 minidator
 minimera
@@ -4044,6 +4072,7 @@ nysta
 nysta av
 nysta upp
 nyttja
+nyutkommen
 nyårsvaka
 nämna
 nämnare
@@ -4371,6 +4400,8 @@ postdatera
 postkort
 poängtera
 praktisera
+praktisk filosofi
+praktiskt taget (adv.)
 prata
 prata i vädret
 precis
@@ -4581,6 +4612,7 @@ rensa
 rensa bort
 rensa upp
 rensa ut
+rent av
 rent spel
 repa
 repa in
@@ -4761,6 +4793,7 @@ råma
 råna
 rånmord
 råsegel
+råämne
 rö
 rödlista
 röja
@@ -4789,6 +4822,7 @@ sadla av
 sadla om
 sadla på
 saffransbröd
+sagoskimmer
 sakna
 saknas
 sakrament
@@ -4796,6 +4830,7 @@ sakta
 sakta sig
 saligförklara
 salivera
+salu
 saluföra
 salutorg
 samarbeta
@@ -4926,6 +4961,7 @@ sitta inne
 sitta upp
 sitta åt
 sjabbla
+sjukavdrag
 sjunga
 sjunga in
 sjunga ut
@@ -4955,6 +4991,7 @@ skapa om
 skarpt läge
 skarva
 skatta
+skatteavdrag
 skattebonde
 skava
 ske
@@ -5260,6 +5297,7 @@ slösa
 smacka
 smaka
 smaka av
+smakämne
 smalna
 smattra
 smeka
@@ -5481,6 +5519,7 @@ spiskåpa
 spjäla
 spjälka
 splinta
+splitter ny
 splittra
 spola
 spola om
@@ -5518,6 +5557,7 @@ spä
 spä på
 späda
 spänna
+spänna blicken i någon
 spänta
 spärra
 spärra av
@@ -5531,6 +5571,7 @@ spåra upp
 spåra ur
 spåren förskräcker
 spårvidd
+spårämne
 spöka
 spöka ut
 spöregna
@@ -5915,6 +5956,7 @@ söka av
 söka upp
 söla
 sömma
+söndagsbilaga
 sönderdela
 sönderfalla
 sörja
@@ -6019,6 +6061,7 @@ tenta
 tenta upp
 tentera
 tentera upp
+teoretisk filosofi
 tesla
 testa
 tetanus
@@ -6086,6 +6129,7 @@ tillträda
 tilltvinga sig
 tillvarata
 tillverka
+tillvita
 tillvälla sig
 tillägga
 tillägna
@@ -6594,6 +6638,7 @@ utlåta sig
 utlöpa
 utlösa
 utmana
+utmana löjet
 utmanövrera
 utmatta
 utmejsla
@@ -6677,6 +6722,7 @@ utöka
 utöva
 vabba
 vackla
+vad fattas dig?
 vada
 vaddera
 vadå
@@ -6684,6 +6730,7 @@ vagga
 vagga in
 vaja
 vaka
+vakant
 vakare
 vakna
 vakna till
@@ -6732,6 +6779,7 @@ vara sig
 vara slängd i käften
 vara stor i käften
 vara stor i orden
+vara till sin fördel
 vara trög i magen
 vara uppe med solen
 vara åt skogen
@@ -6790,6 +6838,7 @@ vidröra
 vidta
 vifta
 viga
+vigselformulär
 vika
 vika av
 vika ner sig
@@ -6990,6 +7039,7 @@ yttra sig
 älta
 ämna
 ämna sig
+ämnesomsättning
 ända
 ändas
 ändra
@@ -7228,6 +7278,7 @@ yttra sig
 överträffa
 övertyga
 övervaka
+övervakare
 övervara
 övervinna
 övervintra
@@ -15977,7 +16028,6 @@ till och med
 till punkt och pricka
 till reds
 till rätta
-till salu
 till sist
 till skillnad från/mot
 till slut
