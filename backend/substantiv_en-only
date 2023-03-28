@@ -133,6 +133,7 @@ allmoge
 allmosa
 allmänanda
 allmänhet
+allmänorientering
 allmänprevention
 allsidighet
 allusion
@@ -1516,6 +1517,7 @@ bogserare
 bogserbil
 bogserbåt
 bogsering
+boj
 boja
 bojkott
 bok
@@ -1730,6 +1732,7 @@ bråkstake
 brånad
 bråte
 brödföda
+brödkaka
 brödrost
 brödskiva
 bröllopsdag
@@ -2885,6 +2888,7 @@ fjäsk
 flabb
 fladdermus
 flaga
+flagellant
 flagg
 flagga
 flaggstång
@@ -3028,6 +3032,7 @@ fors
 forskare
 forskarnivå
 forskning
+fortgång
 fortifikation
 fortplantning
 fortsättning
@@ -3062,6 +3067,7 @@ framfart
 framförhållning
 framgaffel
 framgång
+framkallare
 framkomlighet
 framkomst
 frammarsch
@@ -3156,6 +3162,7 @@ frysdisk
 fräken
 fräkne
 frälsare
+frälsarkrans
 frälsebonde
 frälsning
 frälsningsarmén
@@ -3775,6 +3782,7 @@ girering
 girlang
 gissel
 gisslan
+gisslare
 gissning
 gitarr
 givakt
@@ -5093,6 +5101,7 @@ jätteödla
 jävel
 jökel
 kabal
+kabaré
 kabel
 kabeljo
 kabin
@@ -6232,6 +6241,7 @@ liter
 litotes
 litteratur
 liturgi
+livboj
 livbåt
 livmoder
 livrem
@@ -6248,6 +6258,7 @@ livsstil
 livstid
 livsuppgift
 livvakt
+ljudboj
 ljudhastighet
 ljudlag
 ljudlära
@@ -6319,6 +6330,7 @@ lump
 lunch
 lunchpaus
 lund
+lunginflammation
 lungsnäcka
 lungsot
 lungtuberkulos
@@ -6347,6 +6359,7 @@ lyktstolpe
 lymfkörtel
 lymmel
 lyriker
+lysboj
 lysgas
 lysning
 lyspatron
@@ -6478,11 +6491,13 @@ löjtnant
 lök
 lön
 löneförhöjning
+lönekaka
 lönelyft
 lönerörelse
 lönn
 lönsamhet
 löpare
+löpning
 löpsedel
 löpsten
 lördag
@@ -6668,7 +6683,6 @@ medelpunkt
 medeltid
 medelväg
 medelålder
-medgivande
 medgång
 medhjälp
 medhjälpare
@@ -6840,9 +6854,9 @@ modellera
 modenyck
 moderat
 moderator
-moderator 
 modernisering
 modernäring
+modersmjölksersättning
 modfälldhet
 modifikation
 modul
@@ -7088,6 +7102,7 @@ nattetid
 nattfjäril
 nattmara
 nattmössa
+nattorientering
 nattro
 nattskjorta
 nattsmyg
@@ -7211,6 +7226,7 @@ numerär
 nummerrevy
 nunna
 nutid
+nutidsorientering
 ny
 nyans
 nybyggare
@@ -7242,6 +7258,7 @@ nytta
 nyttighet
 nytändning
 nyårsafton
+nyårsvaka
 näbb
 näckros
 nämnare
@@ -7439,7 +7456,11 @@ organist
 orgel
 orgelstämma
 orgie
+orienterare
 orientering
+orienteringslampa
+orienteringspunkt
+orienteringstavla
 orienteringstävling
 originalitet
 orimlighet
@@ -7800,6 +7821,7 @@ plånbok
 plånboksfråga
 plåt
 plåtskada
+pneumoni
 podcast
 podd
 poesi
@@ -9040,6 +9062,7 @@ skidpist
 skidsport
 skiffer
 skiffergas
+skift
 skiftning
 skiftnyckel
 skifttangent
@@ -9223,6 +9246,7 @@ slips
 slirighet
 slits
 slot
+slowmotion
 sluka
 slukare
 slump
@@ -9384,6 +9408,7 @@ sockerbeta
 sockerbit
 sockerdricka
 sockerglasyr
+sockerkaka
 sockersjuka
 soffa
 soffkudde
@@ -9487,6 +9512,7 @@ spion
 spiral
 spiralfjäder
 spiralrörelse
+spiraltrappa
 spis
 spisel
 spiselhäll
@@ -9991,6 +10017,7 @@ syntax
 syntes
 synvilla
 synvinkel
+syra-bas-indikator
 syren
 syrgasmask
 syrinx
@@ -10466,6 +10493,7 @@ transplantation
 transport
 trappa
 trappgavel
+trappuppgång
 trasa
 trasmatta
 trast
@@ -10665,11 +10693,8 @@ tystnadsplikt
 täckdikning
 täckelse
 täckjacka
-<<<<<<< HEAD
 täkt
-=======
 täljare
->>>>>>> 84321c16d85070b3210a095d6b2332128536e379
 tältduk
 tändhatt
 tändsats
@@ -11150,6 +11175,8 @@ vagina
 vagn
 vaja
 vajer
+vaka
+vakare
 vakt
 vaktavlösning
 vaktel
@@ -11236,6 +11263,7 @@ variabel
 variant
 variation
 varietet
+varieté
 varmgång
 varmluft
 varmluftballong
@@ -11359,6 +11387,7 @@ vimpel
 vind
 vinda
 vindel
+vindeltrappa
 vindhastighet
 vindkraft
 vindkraftspark

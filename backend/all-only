@@ -4,6 +4,7 @@
 (ha) gråten i halsen
 (hamna) på överblivna kartan(hamna) på överblivna kartan(hamna) på överblivna kartan(i) enskild ställning
 (inte) i första taget
+(jaså,) på så sätt
 (komma) som sänd från himlen
 (liten men) naggande god
 (si) så där
@@ -45,6 +46,7 @@ akta sig
 aktivera
 aktualisera
 alliera sig
+allmänorientering
 allokera
 allt mellan himmel och jord
 alludera
@@ -84,6 +86,7 @@ anhopa sig
 anhängiggöra
 anhålla
 animera
+ankarboj
 ankarspel
 anklaga
 anknyta
@@ -163,6 +166,7 @@ arbeta ut
 arbeta över
 arbetsbefria
 arbetsdomstol
+arbetstillstånd
 argumentera
 arkebusera
 arkivera
@@ -725,6 +729,7 @@ blöta
 bo
 bo in sig
 bogsera
+boj
 bojkotta
 boka
 boka av
@@ -813,6 +818,7 @@ bränna vid
 brännmärka
 brådska
 bråka
+brödkaka
 bröla
 brösta av
 bua
@@ -836,6 +842,7 @@ bygga samman
 bygga upp
 bygga ut
 byggnadsställning
+byggnadstillstånd
 byka
 byta
 byta av
@@ -1294,6 +1301,7 @@ fabrikspris
 fabriksskorsten
 fabrikör
 fabulera
+faderlös
 faktagranska
 faktorisera
 faldig
@@ -1378,6 +1386,7 @@ fjäska
 flacka
 fladdra
 flaga
+flagellant
 flagga
 flagga ut
 flaggspel
@@ -1465,6 +1474,7 @@ forsa
 forska
 forsla
 fortgå
+fortgång
 fortleva
 fortlöpa
 fortplanta
@@ -1489,6 +1499,7 @@ framgå
 framhäva
 framhålla
 framkalla
+framkallare
 framkasta
 framkomma
 framlägga
@@ -1542,6 +1553,7 @@ frysa ihjäl
 frysa in
 frysa ut
 frälsa
+frälsarkrans
 frälsebonde
 främja
 fräsa
@@ -1619,6 +1631,7 @@ få ut
 få åter
 få/ha tag i/på någon
 få/ha tag i/på något
+få/insupa något med modersmjölken
 fålla
 fånga
 fånga in
@@ -2185,6 +2198,7 @@ gippa
 gissa
 gissa sig till
 gissla
+gisslare
 gitta
 gjuta
 gjuta av
@@ -2719,6 +2733,8 @@ infektera
 inferera
 infiltrera
 infinna sig
+inflammationshämmande
+inflammera
 inflika
 influera
 inflyta
@@ -2835,6 +2851,7 @@ insätta
 insöndra
 inta
 intala
+inte (vara värd) ett ruttet lingon
 inte bli gammal
 inte bli klok på någon/något
 inte en gång
@@ -2847,6 +2864,8 @@ inte ha något att vinka på
 inte lyfta ett finger
 inte lägga fingrarna emellan
 inte låta gräset gro under fötterna
+inte på (några) villkors vis
+inte på några villkor
 inte röra ett finger
 inte se skogen för alla/bara träd
 inte vara gott att ...
@@ -2937,6 +2956,7 @@ järnbröllop
 järnvägsknut
 jäsa
 jäva
+kabaré
 kaffeblask
 kajka
 kakelplatta
@@ -3330,6 +3350,7 @@ krympa
 krypa
 krypa bakom någon/något
 krypa ihop
+krypa/kräla i stoftet
 kryptera
 kryssa
 kryssa för
@@ -3446,6 +3467,7 @@ ladda ner
 ladda upp
 ladda ur sig
 laga
+laga förfall
 laga sig
 lagerkrans
 lagföra
@@ -3514,6 +3536,7 @@ ligga för
 ligga i
 ligga nere
 ligga på
+ligga på svaj
 ligga steget före
 ligga till
 ligga under
@@ -3542,9 +3565,11 @@ lista sig
 lista sig till
 lista ut
 lita
+livboj
 livskraft
 livsuppehälle
 ljuda
+ljudboj
 ljuga
 ljusna
 lobotomera
@@ -3578,6 +3603,7 @@ lugna puckar
 lugna sig
 lugnet före stormen
 lukta
+lunginflammation
 lura
 lura av
 lura i
@@ -3605,6 +3631,7 @@ lysa
 lysa igenom
 lysa upp
 lysa ut
+lysboj
 lyssna
 lyssna av
 lyssna in
@@ -3693,6 +3720,7 @@ lödning
 löna sig
 löneanspråk
 löneförhöjning
+lönekaka
 lönelyft
 lönepåslag
 lönerörelse
@@ -3703,6 +3731,7 @@ löpa samman
 löpa ut
 löpande rigg
 löpande text
+löpning
 lösa
 lösa av
 lösa den gordiska knuten
@@ -3780,7 +3809,6 @@ mena på
 meritera
 meritera sig
 meriterad
-mest vid beskrivning av äldre förhållandenanpassa organisationen av krigsmakt till fredsförhållandensom krigsminister 1919 skulle Churchill sätta armén på fredsfot
 meta
 mildra
 milsten
@@ -3828,8 +3856,11 @@ mjölktand
 mobba
 mobilisera
 modellera
+moderator
 moderera
+moderlös
 modernisera
+modersmjölksersättning
 modifiera
 mojna
 moltiga
@@ -3944,6 +3975,7 @@ narras
 narrkåpa
 nationalisera
 nattgammal
+nattorientering
 navel
 navigera
 navla av
@@ -3995,6 +4027,7 @@ nosa sig
 notera
 nu går skam på torra land!
 nubba
+nutidsorientering
 nyansera
 nybilda
 nydana
@@ -4011,6 +4044,7 @@ nysta
 nysta av
 nysta upp
 nyttja
+nyårsvaka
 nämna
 nämnare
 nämndeman
@@ -4154,6 +4188,10 @@ organisera
 organisera sig
 orientera
 orientera sig
+orienterare
+orienteringslampa
+orienteringspunkt
+orienteringstavla
 orka
 orka med
 orma
@@ -4162,6 +4200,7 @@ oroa
 oroa sig
 orrspel
 orsaka
+osa
 osa katt
 osams
 osed
@@ -4313,6 +4352,7 @@ plåga
 plåna ut
 plåta
 plöja
+pneumoni
 pocka
 pola
 polarisera
@@ -4361,6 +4401,7 @@ prispall
 prissätta
 privatisera
 problematisera
+problemorienterad
 processa
 producera
 professionalisera
@@ -4421,10 +4462,14 @@ på det sluttande planet
 på friarstråt
 på gatan
 på gator och torg
+på inga villkor
+på inget/intet vis
 på rymmarstråt
 på sina håll
 på smällen
 på studs
+på svaj
+på så vis
 på torra vägen
 på våta vägen
 på/under småtimmarna
@@ -4822,6 +4867,8 @@ se till
 se upp
 se ut
 se över
+sedefördärv
+sedeförfall
 seeda
 sega
 sega sig
@@ -4956,6 +5003,7 @@ skicka efter
 skicka in
 skicka sig
 skida
+skift
 skifta
 skifttangent
 skikta
@@ -5146,6 +5194,7 @@ slita ut sig
 slockna
 sloka
 slopa
+slowmotion
 sluka
 slumpa
 slumpa sig
@@ -5368,6 +5417,7 @@ snöstorm
 socialisera
 socialtjänst
 socialtjänstlag
+sockerkaka
 sola
 sola sig
 solfjäder
@@ -5425,6 +5475,7 @@ spilla över
 spinna
 spinna loss
 spionera
+spiraltrappa
 spisa av
 spiskåpa
 spjäla
@@ -5573,8 +5624,9 @@ storslägga
 straffa
 straffa sig
 strama upp sig
+streama
+streaming
 strecka
-strecka för
 streetsmart
 strejka
 stressa
@@ -5582,6 +5634,7 @@ stressa av
 stretcha
 strida
 stridsäpple
+stridulation
 stridulera
 strila
 strimla
@@ -5619,6 +5672,7 @@ studera
 studs
 studsa
 stuka
+stunda
 stup i ett
 stupa
 stupfull
@@ -5742,6 +5796,7 @@ svaromål
 svart låda
 svartlista
 svassa
+svavelosande
 svavla
 sveda
 svedja
@@ -5792,6 +5847,7 @@ syndabekännelse
 synkopera
 synkronisera
 syra
+syra-bas-indikator
 sysselsätta
 syssla
 systematisera
@@ -5860,6 +5916,7 @@ söka upp
 söla
 sömma
 sönderdela
+sönderfalla
 sörja
 ta
 ta av
@@ -5880,6 +5937,7 @@ ta in
 ta itu
 ta med
 ta ner
+ta ner månen
 ta nya tag
 ta någon till äkta
 ta något med en klackspark
@@ -6049,9 +6107,11 @@ titta efter
 titta fram
 titta in
 titta till
+titta under lugg
 titta upp
 titta ut
 titta över
+titta/se i månen efter något
 tittarstorm
 titulera
 titulera sig
@@ -6135,6 +6195,8 @@ trappa av
 trappa ner
 trappa upp
 trappgavel
+trapphus
+trappuppgång
 trasa
 trasa sig
 traska
@@ -6151,6 +6213,7 @@ trefjärdedelstakt
 tretakt
 treva
 treva sig
+trigga
 trilla
 trilskas
 trimma
@@ -6293,6 +6356,7 @@ töras
 törnbuske
 törne
 uggla
+ultrarapid
 umbära
 umgås
 undanbe
@@ -6364,6 +6428,7 @@ uppdra
 uppdriva
 uppehålla
 uppehålla sig
+uppehållstillstånd
 uppenbara
 uppenbara sig
 uppfatta
@@ -6619,6 +6684,7 @@ vagga
 vagga in
 vaja
 vaka
+vakare
 vakna
 vakna till
 vakna upp
@@ -6629,6 +6695,7 @@ vaktparad
 vakuumförpacka
 valla
 valsa
+valvaka
 valvind
 valvkappa
 vandra
@@ -6655,6 +6722,7 @@ vara i arbetstagen
 vara i någons kläder
 vara i sjunde himlen
 vara i stöten
+vara i välsignat tillstånd
 vara intecknad upp över skorstenen
 vara kvar i garderoben
 vara på god väg
@@ -6670,6 +6738,7 @@ vara åt skogen
 varg i veum
 varhelst
 variera
+varieté
 varma färger
 varna
 varsebli
@@ -6747,6 +6816,7 @@ vina
 vind
 vind för våg
 vinda
+vindeltrappa
 vindla
 vindla sig
 vindskydd
@@ -7070,6 +7140,7 @@ yttra sig
 öppen vind
 öppna
 örfila
+öroninflammation
 öronmärka
 ösa
 ösa på
@@ -7955,7 +8026,6 @@ moder
 moder Svea
 moder jord
 moderat
-moderator
 moderator 
 moderbolag
 moderera
@@ -14515,7 +14585,6 @@ strax efter
 streber
 streck
 strecka
-strecka för
 strejk
 strejka
 stress
@@ -20707,6 +20776,3 @@ zygot
 över­leva sig själv
 över­träffa sig själv
 överända
-överäta
-överårig
-överös
