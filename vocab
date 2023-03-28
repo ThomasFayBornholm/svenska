@@ -1705,6 +1705,7 @@ function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta()");	
 	regexArr = [
+		/något hög­tidligt; något ålderdomligt/,
 		/var­dagligt el. i barn­språk/,
 		/nästan en­bart i fack­språk/,
 		/skämtsamt/,
@@ -2164,7 +2165,8 @@ function fmtParticles(s) {
 	if (DEBUG) console.log("fmtParticles(s)");
 	// Particles appear comma delimited with space delimiter before the last particle.
 
-	const regex1 = /.*med partikel, (sär­skilt)(([a-zöäå]+, )*[a-zöäå]+).*/;		
+	//const regex1 = /.*med partikel(?: eller dylikt),(sär­skilt)(([a-zöäå]+, )*[a-zöäå]+).*/;		
+	const regex1 = /.*med partikel(?: eller dylikt)?(?:, )(sär­skilt)(([a-zöäå]+, )*[a-zöäå]+).*/;		
 	match = s.match(regex1);
 	
 	if (match) s = "(" + s.replace(match[1] + match[2], match[1] + " <b>" + match[2] + "</b>)"); 
