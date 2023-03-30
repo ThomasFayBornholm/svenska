@@ -628,6 +628,7 @@ besöka
 beta
 beta av
 betacka sig
+betagen
 betala
 betala av
 betala sig
@@ -971,6 +972,7 @@ dammtorka
 dana
 dangla
 dansa
+dansa efter någons pipa
 darra
 datera
 datera sig
@@ -1050,6 +1052,9 @@ devalvera
 dia
 diagnostisera
 diamantbröllop
+diameter
+diarieföra
+diarienummer
 differentiera
 diffundera
 dika
@@ -1090,6 +1095,7 @@ dominera
 don efter person
 donera
 dopa
+dopp i grytan
 doppa sig
 dra
 dra av
@@ -1456,6 +1462,9 @@ flimra
 flippa
 flisa
 flisa sig
+flitig som en myra
+flitig som ett bi
+flitiga Lisa
 florera
 flottyrkoka
 fluktuera
@@ -1682,6 +1691,7 @@ följa upp
 för fulla segel
 för gott
 för min del
+för närvarande
 föra
 föra bort
 föra en tynande tillvaro
@@ -2248,9 +2258,11 @@ gjuta över
 glad i hatten
 glamma
 glasera
+glatt muskulatur
 glaukom
 glesa ut
 glida
+glidfriktion
 glidlager
 glimma
 glimra
@@ -2430,6 +2442,7 @@ gå ut
 gå vidare i texten
 gå vägen
 gå åt
+gå åt pipan
 gå över
 gå/barka åt skogen
 gång efter annan
@@ -2461,6 +2474,7 @@ ha fjärilar i magen
 ha för avsikt
 ha gröna fingrar
 ha hjärtat i halsgropen
+ha hårda nävar
 ha mage att göra något
 ha något i bakfickan
 ha något i bakhuvudet
@@ -2723,6 +2737,7 @@ i ett nu
 i klump
 i kraft av
 i längden
+i lönn
 i ny och nedan
 i nästa nu
 i samma nu
@@ -2746,6 +2761,7 @@ ignorera
 igångsätta
 ihågkomma
 ila
+illgärning
 illuminera
 illustrera
 ilmarsch
@@ -3446,6 +3462,7 @@ kullager
 kullkasta
 kulminera
 kultivera
+kulturgärning
 kultursnobb
 kundtjänst
 kungstanke
@@ -3478,6 +3495,7 @@ kvittra
 kväka
 kvälja
 kväljas
+kvällsdopp
 kvällstidning
 kväsa
 kväva
@@ -3487,6 +3505,7 @@ kyssa
 käbbla
 käka
 käka upp
+käkrem
 kämpa
 kämpa emot
 kämpa ner
@@ -3720,6 +3739,7 @@ lägga ihop
 lägga in
 lägga in en stöt på någon
 lägga korten på bordet
+lägga manken till
 lägga ner
 lägga om
 lägga på
@@ -3792,11 +3812,16 @@ lödning
 löna sig
 löneanspråk
 löneförhöjning
+löneglidning
 lönekaka
 lönelyft
 lönepåslag
 lönerörelse
 lönnfack
+lönnkrog
+lönnlig
+lönnmörda
+lönnsirap
 löpa
 löpa in
 löpa samman
@@ -3831,7 +3856,9 @@ mangla
 manifestera
 manifestera sig
 manipulera
+manke
 mankera
+mankhöjd
 mantalslängd
 manövrera
 marginalisera
@@ -3959,6 +3986,7 @@ mordlust
 mordlysten
 mordlystnad
 mordängel
+morgondopp
 morgontidning
 morsa
 mosa
@@ -3991,6 +4019,9 @@ munskänk
 muntra upp
 murra
 musicera
+muskulatur
+musmatta
+mustang
 mygla
 myllra
 mynna
@@ -4038,6 +4069,7 @@ mönstra upp
 mönstra ut
 mörda
 mörklägga
+mörksens gärningar
 mösspartiet
 möta
 mötas
@@ -4059,6 +4091,7 @@ nationalisera
 nattgammal
 nattorientering
 navel
+naverlönn
 navigera
 navla av
 nedbringa
@@ -4106,6 +4139,7 @@ normalisera
 normera
 nosa
 nosa sig
+nostalgi
 notera
 nu eller aldrig
 nu gäller det!
@@ -4948,6 +4982,7 @@ sansa sig
 saponifiera
 sarga
 satsa
+scanna
 scenvind
 schablonavdrag
 schacka
@@ -5192,10 +5227,13 @@ skräddarsy
 skrälla
 skrämma
 skrämmas
+skrän
 skräna
 skräpa
 skrävla
+skrål
 skråla
+skråväsen
 skugga
 skuggspel
 skuldbelägga
@@ -5249,6 +5287,7 @@ skära
 skära av
 skära för
 skära ner
+skära pipor i vassen
 skära sig
 skära till
 skära upp
@@ -5505,6 +5544,7 @@ snäppa
 snärja
 snärja in sig
 snärja sig
+snärpa
 snäsa
 snäva
 snåla
@@ -5521,6 +5561,7 @@ socialisera
 socialtjänst
 socialtjänstlag
 sockerkaka
+sockerlönn
 sola
 sola sig
 solfjäder
@@ -6053,6 +6094,7 @@ ta med
 ta ner
 ta ner månen
 ta nya tag
+ta någon på bar gärning
 ta någon till äkta
 ta något med en klackspark
 ta på
@@ -6824,6 +6866,7 @@ vakthund
 vaktparad
 vakuumförpacka
 valla
+valrossmustasch
 valsa
 valvaka
 valvind
@@ -20911,5 +20954,4 @@ zygot
 övervåning
 över­falla
 över­leva sig själv
-över­träffa sig själv
-överända
+över­träffa s

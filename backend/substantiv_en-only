@@ -2182,6 +2182,7 @@ dialekt
 dialog
 dialys
 diamant
+diameter
 diarium
 diarré
 diaspora
@@ -3808,6 +3809,7 @@ glasvar
 glasyr
 glasögonorm
 gletscher
+glidfriktion
 glidning
 glima
 glimlampa
@@ -4671,6 +4673,7 @@ ihålighet
 ikon
 ilfart
 iller
+illgärning
 illusion
 illustration
 illvilja
@@ -5915,6 +5918,7 @@ kulthandling
 kulting
 kultur
 kulturartikel
+kulturgärning
 kulturkrock
 kultursida
 kultursnobb
@@ -6017,6 +6021,7 @@ käftsmäll
 kägel
 kägla
 käke
+käkrem
 kälkbacke
 kälke
 källa
@@ -6506,10 +6511,13 @@ löjtnant
 lök
 lön
 löneförhöjning
+löneglidning
 lönekaka
 lönelyft
 lönerörelse
 lönn
+lönnkrog
+lönnsirap
 lönsamhet
 löpare
 löpning
@@ -6579,6 +6587,8 @@ mani
 manick
 manifestation
 manipulering
+manke
+mankhöjd
 manlighet
 mannamån
 manschett
@@ -7000,10 +7010,13 @@ musiknot
 muskel
 muskelkraft
 muskelvärk
+muskulatur
 muslim
 muslin
+musmatta
 mussla
 must
+mustang
 mustasch
 muta
 muta in
@@ -7139,6 +7152,7 @@ naturvetenskap
 naturvård
 navel
 navelsträng
+naverlönn
 navigation
 navigationssatellit
 navkapsel
@@ -7226,6 +7240,7 @@ nordpol
 norm
 norrman
 noshörning
+nostalgi
 not
 nota
 notarie
@@ -9404,6 +9419,7 @@ snyltgäst
 snytbagge
 snäcka
 snäppa
+snärpa
 snärt
 snäsa
 snö
@@ -9432,6 +9448,7 @@ sockerbit
 sockerdricka
 sockerglasyr
 sockerkaka
+sockerlönn
 sockersjuka
 soffa
 soffkudde
@@ -11234,6 +11251,7 @@ valnöt
 valp
 valprövningsnämnd
 valross
+valrossmustasch
 valrätt
 valrörelse
 vals
