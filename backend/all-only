@@ -44,6 +44,7 @@ aga
 agera
 agglomerera
 aggregera
+akademisk kvart
 akta
 akta sig
 aktivera
@@ -171,6 +172,7 @@ arbeta över
 arbetsbefria
 arbetsdomstol
 arbetsfred
+arbetsnedläggelse
 arbetstillstånd
 argumentera
 arkebusera
@@ -246,6 +248,7 @@ avdela
 avdramatisera
 avdriva
 avdunsta
+avdunstning
 avdöma
 avfalla
 avfetta
@@ -262,6 +265,7 @@ avgifta
 avgränsa
 avguda
 avgå
+avgångsbetyg
 avgöra
 avhandla
 avhjälpa
@@ -1026,6 +1030,7 @@ desinficera
 det andliga ståndet
 det ante mig
 det bidde (bara) en tumme
+det gör varken till eller från
 det har någon inte med att göra
 det kan göra/vara detsamma
 det kliar i fingrarna på någon
@@ -1078,6 +1083,7 @@ djurisk
 djärvas
 docka
 dofta
+doktorsdisputation
 dokumentera
 domarring
 dominera
@@ -1107,6 +1113,7 @@ dra till sig
 dra upp
 dra ut
 dra åt skogen
+dra åt svångremmen
 dra över
 dra/kasta ett löjets skimmer över något
 drabba
@@ -1171,6 +1178,9 @@ dyrka upp
 dämma
 dämpa
 dänga
+då och då
+då så
+dålig förlorare
 dåna
 dåra
 dåsa
@@ -1334,6 +1344,7 @@ falla ut
 falsa
 falskspel
 familjejordbruk
+fanerogam
 fantisera
 fara
 fara fram
@@ -1342,6 +1353,7 @@ fasa ut
 fascinera
 fasettera
 fast sammansättning
+fast situation
 fasta
 fasthålla
 fastlägga
@@ -1622,6 +1634,7 @@ fyra
 fyra av
 fyrdubbla
 fyrtaktsmotor
+fyrtio
 fysiljera
 fähund
 fälla
@@ -1646,6 +1659,7 @@ få gult kort
 få hjulen att snurra
 få på moppe
 få rött kort
+få sin beskärda del
 få sin vilja fram
 få smäll på fingrarna
 få spel
@@ -1803,6 +1817,7 @@ förföra
 förfördela
 förgapa sig
 förgasa
+förgasare
 förgifta
 förglömma
 förgrena sig
@@ -1903,6 +1918,7 @@ förmärka
 förmå
 förmå sig
 förmånsbeskatta
+förmånserbjudande
 förmörka
 förnedra
 förneka
@@ -2169,6 +2185,7 @@ gaullist
 gauss
 gausskurva
 ge
+ge akt på något
 ge efter
 ge igen
 ge med sig
@@ -2223,6 +2240,7 @@ gissa sig till
 gissla
 gisslare
 gitta
+giv akt!
 gjuta
 gjuta av
 gjuta in
@@ -2262,6 +2280,7 @@ gnugga
 gny
 gnägga
 gnälla
+god förlorare
 godkänna
 godspela
 godta
@@ -2425,8 +2444,10 @@ göra an
 göra av
 göra bort
 göra bort sig
+göra gällande
 göra ner
 göra processen kort (med någon)
+göra sig gällande
 göra upp
 göra åt
 ha
@@ -2504,11 +2525,13 @@ hedra
 heja
 heja på
 hejda
+hela
 helga
 heliga tre konungar
 hemförlova
 heminredning
 hemlighålla
+hemska tanke!
 hemsöka
 hermelin
 heta
@@ -2685,21 +2708,28 @@ höra samman
 höra till
 höra upp
 höras
+hörnskåp
 hörsamma
 hörspel
 hösta in
 hötta
 hövas
+i akt och mening
 i allt väsentligt
 i den högre skolan
 i detsamma
+i detta nu
+i ett nu
 i klump
 i kraft av
 i längden
 i ny och nedan
+i nästa nu
+i samma nu
 i smått
 i stånd
 i stöten
+i trängre mening
 i ur och skur
 iaktta
 idas
@@ -2927,6 +2957,7 @@ intyga
 invadera
 invagga
 invandra
+invariant
 inverka
 invertera
 investera
@@ -3024,6 +3055,7 @@ kapsejsa
 kapsla in
 kapuschong
 karakterisera
+karburator
 karlatag
 kartera
 kartlägga
@@ -3135,6 +3167,7 @@ klä av
 klä om
 klä på
 klä sig
+klä sina tankar i ord
 klä upp
 klä ut
 kläcka
@@ -3181,6 +3214,7 @@ knyta an
 knyta sig
 knyta upp
 knyta upp svansen på någon
+knyta vänskapsband
 knäcka
 knäled
 knäppa
@@ -3407,6 +3441,7 @@ kröka
 kröna
 kubera
 kugga
+kula
 kullager
 kullkasta
 kulminera
@@ -3599,6 +3634,8 @@ lista sig
 lista sig till
 lista ut
 lita
+lite här och var
+lite si och så
 livboj
 livskraft
 livsuppehälle
@@ -3828,6 +3865,7 @@ med flit
 med förenade krafter
 med namns nämnande
 med svansen mellan benen
+med tanke på
 med upphöjt lugn
 medarbeta
 meddela
@@ -3846,6 +3884,7 @@ memento
 memorera
 mena
 mena på
+meningsbyggnad
 meritera
 meritera sig
 meriterad
@@ -3948,6 +3987,7 @@ multna
 mumsa
 mumsa i sig
 munkkåpa
+munskänk
 muntra upp
 murra
 musicera
@@ -4067,7 +4107,10 @@ normera
 nosa
 nosa sig
 notera
+nu eller aldrig
+nu gäller det!
 nu går skam på torra land!
+nu och då
 nubba
 nutidsorientering
 nyansera
@@ -4079,6 +4122,7 @@ nypa till
 nypas
 nypon
 nyponsoppa
+nypremiär
 nyrekrytera
 nysa
 nyskapa
@@ -4093,6 +4137,7 @@ nämnare
 nämndeman
 nämnvärd
 näpsa
+när det (väl) gäller
 nära
 näringsrik
 närma
@@ -4477,6 +4522,7 @@ pränta i
 pränta in
 pråla
 pröva
+prövotid
 publicera
 publicera sig
 puck
@@ -4528,6 +4574,7 @@ påkommande
 påla
 påminna
 påpeka
+påseende
 påskina
 påskynda
 påstå
@@ -4794,6 +4841,7 @@ rättfärdiga
 rättfärdiga sig
 rå
 råda
+råda delade/skilda meningar om något
 rådbråka
 rådfråga
 rådgöra
@@ -4975,6 +5023,7 @@ sitta i
 sitta inne
 sitta upp
 sitta åt
+situationsrik
 sjabbla
 sjukavdrag
 sjunga
@@ -5233,6 +5282,7 @@ slappna av
 slarva
 sleva
 slicka
+slid
 slingra
 slingra sig
 slinka
@@ -5743,6 +5793,7 @@ styrekonom
 styrka
 städa
 städning
+städskåp
 ställa
 ställa av
 ställa in
@@ -5811,7 +5862,9 @@ störta
 störta sig
 stöta
 stöta av
+stöta och blöta något
 stöta på
+stöta på patrull
 stöta samman
 stöta sig
 stöta till
@@ -5912,6 +5965,8 @@ säga
 säga emot
 säga ifrån
 säga sig
+säga sitt hjärtas mening
+säga tack och farväl/hej till någon/något
 säga till
 säga upp
 säga upp sig
@@ -6006,12 +6061,14 @@ ta sig
 ta sig an
 ta sig för
 ta sig före
+ta sig i akt
 ta sig orådet före att
 ta sig samman
 ta sig till
 ta sig ton
 ta sig ut
 ta sin mats/Mats ur skolan
+ta sitt förnuft till fånga
 ta steget fullt ut
 ta ställning för någon/något
 ta ställning mot någon/något
@@ -6021,6 +6078,7 @@ ta till krafttag
 ta till sig
 ta till sjappen
 ta till storsläggan
+ta tillfället i akt
 ta törn
 ta upp
 ta ut
@@ -6034,7 +6092,9 @@ tabba sig
 tabellera
 tabubelägga
 tabulera
+tack vare
 tacka
+tackar som frågar!
 tackkort
 tackla
 tackla av
@@ -6060,6 +6120,7 @@ tangera
 tanka
 tanka ner
 tankeled
+tankesmedja
 tapetsera
 tappa
 tas
@@ -6091,6 +6152,7 @@ tiga
 tigga
 till en början
 till känna
+till och från
 till äventyrs
 till överlopps
 tillaga
@@ -6261,6 +6323,7 @@ trappuppgång
 trasa
 trasa sig
 traska
+traska patrull(o)
 trassera
 trassla
 trassla in sig
@@ -6608,6 +6671,7 @@ utdöma
 utebli
 utelämna
 utesluta
+uteslutningsmetod
 utestänga
 utexaminera
 utexperimentera
@@ -6740,6 +6804,7 @@ utöva
 vabba
 vackla
 vad fattas dig?
+vad gäller någon/något
 vad vill detta säga?
 vada
 vaddera
@@ -6842,6 +6907,7 @@ veva
 vibrera
 vicka
 vid pass
+vid tillfälle
 vidarebefordra
 vidbränna
 vidga
@@ -6896,6 +6962,7 @@ vinka av
 vinkla
 vinna
 vinscha
+vinskänk
 vinterhämpling
 vinterspel
 vinteräpple
@@ -6925,6 +6992,7 @@ vitsa
 vittflygande planer
 vittna
 vittra
+vitvaror
 vobba
 voja sig
 vomera
@@ -6983,6 +7051,7 @@ vänta in
 vänta sig
 vänta smått
 vänta ut
+vänteläge
 väpna
 värdera
 värdera ner
@@ -7059,6 +7128,7 @@ yttra sig
 ämna
 ämna sig
 ämnesomsättning
+än si, än så
 ända
 ändas
 ändra
@@ -15355,7 +15425,6 @@ säga ifrån
 säga något rent ut
 säga sig
 säga sig själv(t)
-säga tack och färväl/hej till någon/något
 säga till
 säga upp
 säga upp sig
@@ -16042,7 +16111,6 @@ till känna
 till ljusan dag
 till mötes
 till nöds
-till och från eller från och till
 till och med
 till punkt och pricka
 till reds
