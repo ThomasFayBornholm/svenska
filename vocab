@@ -219,6 +219,10 @@ function putDef(def, score) {
 		def = $('#iDefText').val();
 	}
 	if (DEBUG) console.log("START putDef(def, score); def = '" + def + ",score ´" + score + "; SCROLL_INC = " + SCROLL_INC);
+	if (CLASS === "fraser") {
+		putFrasDef(score);
+		return;
+	}
 	let processed = preProc(def);
 	def = processed[0];
 	meta = processed[1];
@@ -233,7 +237,7 @@ function putDef(def, score) {
 	.then(response => {
 		$('#iDefText').val("");
 		$('#iDefDiv').css("display", "none");
-		// Reset highlighting of m	issing definition
+		// Reset highlighting of missing definition
 		LAST_OBJ.innerHTML = LAST_OBJ.innerText;		
 		// Find last non-null tabindex
 		if (TABS.length > 0) {
@@ -256,6 +260,40 @@ function putDef(def, score) {
 	})
 	updateScore();
 }
+
+function putFrasDef(score) {
+	if (DEBUG) console.log("putFrasDef()")
+	let def = $('#iDefText').val();
+	if (def.indexOf("%%") == -1) {
+		return;
+	}
+	let tmp = def.split("%% ");
+	CUR_WORD = tmp[0];
+	let meta = tmp[0] + "<br>fras";	
+	
+	let processed = preProc(tmp[1]);	
+	def = processed[0];	
+	
+	fetch('backend/putDef.php?class=fraser&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta + "&score=" + score, {
+		method: 'get',
+		mode:	'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	fetch('backend/addWord.php?word=' + CUR_WORD + '&class=fraser', {
+		method: 'get',
+		mode:	'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}	
+	})
+	$('#iDefText').val("");
+	setTimeout(seekWordSingleClass,500);		
+	
+}
+
+
 function updateScore() {
 	if (DEBUG) console.log("updateScore()")
 	// Hash to prevent cached value being used by browser
@@ -386,6 +424,7 @@ function getWords(ind = INC) {
 function displayWords(list,ind) {
 	if (DEBUG) console.log("displayWords(), list = " + list + ", ind = " + ind)
 	let out = ""
+	list = list.replaceAll("  "," ");
 	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list, {
 		method: 'get',
 		mode: 'cors',
@@ -414,7 +453,7 @@ function displayWords(list,ind) {
 			for (let i = 0; i < N_FOUND; i++) {
 				let tmp = "#w" + i;
 				if (score[i] > 1) {
-					$(tmp).css("color","darkgreen");
+			 		$(tmp).css("color","darkgreen");
 				} else if (score[i] > 0) {
 					$(tmp).css("color","steelblue");
 				} else {
@@ -427,8 +466,10 @@ function displayWords(list,ind) {
 		
 		if (ind > -1) {
 			let el = document.getElementById("w" + ind);
-			setCUR_WORD(el.innerText);
-			lookupWord(el,false,true);
+			if (el)  {
+				setCUR_WORD(el.innerText);
+				lookupWord(el,false,true);
+			}
 		}				
 	})
 	.catch(error => {
@@ -1069,7 +1110,7 @@ function handleNumericInput() {
 	toggleMore(CUR_WORD.replaceAll(" ","-") + "_" + storedInd, true);
 }
 
-function seekWordSingleClass(word) {	
+function seekWordSingleClass(word = CUR_WORD) {	
 	CUR_DEF = 0; // CUR_DEF only valid for current word.
 	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)		
 	if (word.length > 0) {
@@ -1458,12 +1499,14 @@ function setClass(c, seek = "") {
 	if (seek.length > 0) seekWordSingleClass(seek);
 	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);	
 }
+
 function getLastWord() {
 	if (DEBUG) console.log("getLastWord()")	
 	setClass(LAST_CLASS);
 	$('#iInput').val(LAST_WORD);
 	seekWordSingleClass(LAST_WORD);	
 }
+
 function countDefs() {
 	N_DEFS = 0;
 	fetch('backend/countDef.php?class=' + CLASS, {
@@ -1489,7 +1532,7 @@ function countDefs() {
 
 function editDef() {	
 	if (DEBUG) console.log("editDef()")	
-	if ($('#iParDef').text() != "") {
+	if ($('#iParDef').text() != "" || CLASS === "fraser") {
 		showWords();
 		$('#iDefDiv').css("display", "block");
 		$('#iPutDef').css("display", "block");
@@ -1497,10 +1540,12 @@ function editDef() {
 		focusDef();
 	}	
 }
+
 function editDefWrapper(e) {
 	e.preventDefault()
 	editDef()
 }
+
 function clearDef() {
 	if (DEBUG) console.log("clearDef()");
 	if ($('#iWords').css("visibility") === "hidden") {
@@ -1513,6 +1558,7 @@ function clearDef() {
 		}
 	}
 }
+
 function pretty(def) {
 	if (DEBUG) console.log("pretty(def); def = " + def);
 	let out = "";
@@ -1570,6 +1616,7 @@ function pretty(def) {
 	if (out[out.length-1] === ",") out = out.slice(0,out.length-1)
 	return out;
 }
+
 function fullClassName(name) {
 	if (name === "") return "all"
 	if (name === "a") return "all"
@@ -1591,6 +1638,7 @@ function fullClassName(name) {
 	if (name === "int") return "interjektion"
 	return name
 }
+
 function guessClass(word) {
 	// Prefer explicit definition of class
 	if (word.includes('(') && word.includes(')')) {
@@ -1618,6 +1666,7 @@ function guessClass(word) {
 	if (word.endsWith("ism")) return "substantiv_en"
 	return "substantiv_en"
 }
+
 function removeClassDesc(word) {
 	let start = word.indexOf('(');
 	let end = word.indexOf(')');
@@ -1625,14 +1674,22 @@ function removeClassDesc(word) {
 	return word.slice(0,start-1)
 			
 }
+
 function removeWord() {
 	if (DEBUG) console.log("removeWord()");
 	addWord(true);
 }
+
 function addWord(remove = false) {	
 	if (DEBUG) console.log("addWord()");	
+	
 	let word = $('#iInput').val();		
 	let del = (word[word.length-1] === "." && word.indexOf("..") === -1) || remove;
+	if (CLASS === "fraser" && !del) {
+		editDef();
+		return;
+	}
+	
 	if (word[0] === '.') word = word.slice(1,word.length);
 	word = word.replaceAll("/","\/");
 	// Don't want characters in the storage key that the user would not enter
@@ -1687,18 +1744,45 @@ function addWord(remove = false) {
 				// Undesirable to have '­' character in word keys as user not expected to specifiy these. 
 				word = word.replace("­","");
 				seekWordSingleClass(word)
-				if (CLASS === "fraser") {
-					// 
-					let tmp = $('#iInput').val().replaceAll("­","");
-					tmp += "\nfras\n\n"
-					$('#iDefText').val(tmp);
-				}
 			}
 		})
 		.catch(error => {
 			console.log(error);	
 		})
 	}	
+}
+
+function addWordWithEnum() {
+	if (DEBUG) console.log("addWordWithEnum()");
+	// Get enum index
+	let word = $('#iInput').val();		
+	if (word.length === 1) return;
+	CUR_WORD = word.replace("#","");	
+	fetch('backend/getIndEnum.php?word=' + CUR_WORD + '&class=' + CLASS, {
+		nethod: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}	
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		let indEnum = json;
+		CUR_WORD = CUR_WORD + "  " + indEnum;
+		fetch('backend/addWord.php?class=' + CLASS + "&word=" + CUR_WORD, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		setTimeout(seekWordSingleClass, 500);
+	})
+	.catch(error => {
+		console.log(error);
+	})	
 }
 
 function addMeta(def) {
@@ -2000,7 +2084,7 @@ function grammar(def) {
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = '" + def + "'")
 	// return def and meta components
-	// " ++" is a user-control, remove is present in definition
+	// " ++" is a user-control, remove if present in definition
 	def = def.replaceAll(" ++","");
 		
 	// Check if any meta information exists		
@@ -2051,7 +2135,12 @@ function preProc(def) {
 	} else {
 		m = CUR_WORD;
 	}	
-	LongFrasMatch = fiveFras === m || sixFras === m || sevenFras === m || eightFras === m || nineFras || tenFras;	
+	// If the word differs only by conjugation from others in the word class then an additional enumeration is used.
+	// Remove this enumeration when checking matching of root word for meta data extraction
+	for (i = 2; i < 9; i++) {
+		m = m.replace(" " + i, "");
+	}
+	LongFrasMatch = fiveFras === m || sixFras === m || sevenFras === m || eightFras === m || nineFras === m || tenFras === m;	
 	if (firstWord === m || twoWords === m || threeWords === m || fourWords === m || LongFrasMatch) {		
 		meta = defArr[0].replaceAll("_"," ");		
 		let del = "";
@@ -2158,7 +2247,7 @@ function preProc(def) {
 	}
 	var out = []
 	out[0] = outDef;
-	out[1] = meta;
+	out[1] = meta;	
 	// That's it!
 	return out;
 }
@@ -2282,6 +2371,7 @@ function simpleRef(s) {
 	}
 	return s;
 }
+
 function simpleBold(s) {
 	regx = "((vanligen (?:med )?komparativ)([a-zöäå]+))"
 	let bold = "<b>_w_</b>";
@@ -2291,6 +2381,7 @@ function simpleBold(s) {
 	}	
 	return s;
 }
+
 function withParticle(s) {
 	rep = "ibland with partikel";
 	s = s.replace(rep, "(" + rep);
@@ -2304,6 +2395,7 @@ function withParticle(s) {
 }
 
 function showWords() {
+	if (DEBUG) console.log("showWords");
 	if ($('#iWords').css("visibility") == "hidden") {
 		$('#iWords').css("visibility", "visible");
 	}
@@ -2386,9 +2478,14 @@ function fmtMeta(meta) {
 	rep += " onmouseover=highlight(this,event)";
 	rep += " oncontextmenu='changeScore(event,-1)'";	
 	rep += " onclick='changeScore(event,1)'";	
+	// Remove any disambiguation suffix when more than one entry exists for root key
+	tmpCUR_WORD = CUR_WORD
+	for (i = 2; i < 9; i++) {
+		tmpCUR_WORD = tmpCUR_WORD.replace(" " + i, "");		
+	}
 	
-	rep += "><b>" + CUR_WORD + "</b></span>"
-	meta = meta.replace(CUR_WORD,rep);
+	rep += "><b>" + tmpCUR_WORD + "</b></span>"
+	meta = meta.replace(tmpCUR_WORD,rep);
 	metaArr = meta.split("<br>");
 	let tmpMeta = "";
 	delMeta = "";
@@ -2630,7 +2727,7 @@ function editMore(ev,key) {
 }
 
 function processKeyDown(elHTML,ev) {
-	if (DEBUG) console.log("processKeyDown(ev)")	
+	if (DEBUG) console.log("processKeyDown(ev), ev.key = " + ev.key)	
 	
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
@@ -2645,6 +2742,8 @@ function processKeyDown(elHTML,ev) {
 		addWord();
 	} else if (ev.key === "Delete") {
 		removeWord();
+	} else if (ev.key === "#") {
+		addWordWithEnum();
 	}
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
