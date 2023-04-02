@@ -14,6 +14,8 @@
 
 	$outfile = fopen($fileName, "w") or die("Could not open file: " . $fileName);
 	$word = $_GET['word'];
+	// No characters that are not visible to user in key
+	$word = str_replace("­","",$word);
 	$elements= preg_split("/\r\n|\r|\n/", $contents);
 
 	// Previous action has checked that the word does not already exist in the listing 

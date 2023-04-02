@@ -390,7 +390,11 @@ function getWords(ind = INC) {
 		for (i = ind+1; i < N_FOUND + ind; i++) {
 			list += "|" + REGEX_WORDS[i];
 		}
-		displayWords(list,-1)
+		if (N_REGEX === 1) {
+				displayWords(list,0)
+		} else {
+			displayWords(list,-1)
+		}
 	} else {
 		fetch("backend/getWords.php?class=" + CLASS + "&start=" + INC + "&num=" + N_INC, {
 			method: 'get',
@@ -1202,7 +1206,7 @@ function seekWord(word, link = false) {
 			$('#iCntRegex').html("*" + N_REGEX + "*");			
 			if (N_REGEX > 0) {
 				INC = 0;
-				SCROLL_INC = -1;
+				SCROLL_INC = -1;				
 				getWords(INC)
 			} else {
 				for (i = 0; i < 8; i++) {
@@ -2474,6 +2478,7 @@ function lookupManyWords() {
 }
 
 function fmtMeta(meta) {
+	
 	let rep = "<span id='iWordRoot'"
 	rep += " onmouseover=highlight(this,event)";
 	rep += " oncontextmenu='changeScore(event,-1)'";	
@@ -2483,19 +2488,21 @@ function fmtMeta(meta) {
 	for (i = 2; i < 9; i++) {
 		tmpCUR_WORD = tmpCUR_WORD.replace(" " + i, "");		
 	}
-	
 	rep += "><b>" + tmpCUR_WORD + "</b></span>"
+	if (CLASS === "fraser") {
+		let tmpMeta = rep = "<i>" + rep + "</i><br>"
+		return tmpMeta
+	}
 	meta = meta.replace(tmpCUR_WORD,rep);
 	metaArr = meta.split("<br>");
 	let tmpMeta = "";
-	delMeta = "";
+	delMeta = "";	
 	for (let i = 0; i < metaArr.length; i++) {						
 		if (i == 0) {
 			delMeta = "";
 		} else if (i === 1) {
 			delMeta = "<br>ORDKLASS: ";
 		} else if (i === 2) {
-			if (CLASS === "fraser") break;
 			delMeta = "<br>UTTAL: ";
 		} else {
 			delMeta = "<br>";

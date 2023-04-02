@@ -26,8 +26,14 @@
 	$i =0;
 	if ($dict) {
 		foreach($wordArr as $w) {
-			if (array_key_exists($w, $dict) && array_key_exists($w, $dictMeta)) {
-				$res["stat"] += 1 << $i;			
+			if (array_key_exists($w, $dict)) {
+				if ($class != "fraser") {
+					if (array_key_exists($w, $dictMeta)) {
+						$res["stat"] += 1 << $i;			
+					}
+				} else {
+					$res["stat"] += 1 << $i;			
+				}
 			}
 			else if (array_key_exists($w, $dict) && str_contains($dict[$w],"till '")) {
 				$res["stat"] += 1 << $i;			
