@@ -36,6 +36,7 @@ acklimatisera
 ackompanjera
 ackordshets
 ackordslön
+ackordssättning
 ackumulera
 ackvirera
 adamsäpple
@@ -508,6 +509,7 @@ befrukta
 befrämja
 befullmäktiga
 befästa
+befästningsverk
 begabba
 begagna
 begagna sig
@@ -727,6 +729,7 @@ blixtra till
 blockera
 blogga
 blomma
+blomsteruppsats
 blomstra
 blomstra upp
 blotta
@@ -752,6 +755,7 @@ blöda
 blöta
 bo
 bo in sig
+bo/leva i kappsäck
 bogsera
 boj
 bojkotta
@@ -760,6 +764,7 @@ boka av
 bokföra
 bokna
 bokstavera
+bokverk
 bolla
 bollspel
 bomba
@@ -770,6 +775,7 @@ bondehemman
 bondestånd
 bondkomik
 bondkomiker
+bordsuppsats
 borgen
 borgenär
 borra
@@ -1277,6 +1283,7 @@ en flytande likkista
 en grön vinter
 en gång för alla
 en gång i tiden
+en gökunge i boet
 en händelse som ser ut som en tanke
 en katt bland hermelinerna
 en läpparnas bekännelse
@@ -1317,6 +1324,7 @@ ertappa
 erövra
 eskalera
 eskortera
+essä
 estimera
 estländsk
 estländska
@@ -1601,6 +1609,7 @@ fribrottning
 fribärande
 fridlysa
 fridlysning
+frieri
 frige
 frigöra
 frihetsberöva
@@ -1643,6 +1652,7 @@ fråga ut
 frågetecken i marginalen
 från alla håll och kanter
 från hjässan till fotabjället
+från vaggan till graven
 frångå
 frånta
 frånträda
@@ -1698,6 +1708,7 @@ färg-tv
 färga
 färgfilm
 färgprakt
+färgsätta
 färja
 fästa
 fästa sig
@@ -1747,6 +1758,7 @@ föra sig
 föra upp
 föra ut
 föra över
+föra/ro något
 förakta
 förallmänliga
 förandliga
@@ -2259,6 +2271,7 @@ ge upp
 ge ut
 ge åter
 gegga
+gemensamhetsgrav
 gena
 gendriva
 generalisera
@@ -2361,6 +2374,7 @@ grassera
 gratinera
 gratta
 gratulera
+grav  2
 gravera
 gravlägga
 gravsätta
@@ -2552,6 +2566,8 @@ haka loss
 haka sig
 haka upp sig
 hakkors
+hal som en ål
+hal som såpa
 hala
 halka
 hallucinera
@@ -2810,6 +2826,7 @@ i ny och nedan
 i nästa nu
 i rättvisans namn
 i samma nu
+i själva verket
 i smått
 i stora drag
 i stånd
@@ -2920,6 +2937,7 @@ inlemma
 inlinda
 inlägga
 inlämna
+inlärningssvårigheter
 inlåna
 inlåta sig
 inlöpa
@@ -3109,10 +3127,12 @@ jämställa
 jämte
 jämtlänning
 järnbröllop
+järnverk
 järnvägsknut
 jäsa
 jäva
 kabaré
+kacka i eget bo
 kaffeblask
 kajka
 kakelplatta
@@ -3333,6 +3353,7 @@ koka in
 koka ner
 koka soppa på en spik
 koka över
+koketteri
 kokplatta
 kola
 kolla
@@ -3357,9 +3378,11 @@ komma in
 komma in i bilden
 komma mellan barken och trädet
 komma på
+komma på pränt
 komma på skam
 komma sig
 komma sig för
+komma sättande(s)
 komma till
 komma ut
 komma ut ur garderoben
@@ -3451,6 +3474,7 @@ koppla till
 koppla upp
 koppla ur
 kopulera
+kordial
 korrigera
 korrodera
 korrumpera
@@ -3650,6 +3674,7 @@ laka ur
 lamphållare
 lamslå
 landa
+landsätta
 landvind
 lansera
 lappa
@@ -3930,6 +3955,7 @@ lösa ut
 lösgöra
 lösmynt
 lövtäkt
+lövverk
 mackla
 magasinera
 mager som en skrika
@@ -3970,6 +3996,7 @@ maska
 maska av
 maskera
 massera
+massgrav
 massmörda
 masta av
 mata
@@ -4106,6 +4133,8 @@ mottaga
 motverka
 moussera
 mucka
+mudderverk
+muddra
 mula
 mullra
 mulna
@@ -4117,6 +4146,7 @@ munkkåpa
 munskänk
 muntra upp
 murra
+murverk
 museiföremål
 musicera
 muskulatur
@@ -4335,6 +4365,7 @@ ogynnsam
 ogärning
 ogärningsman
 ogästvänlig
+ohanterlig
 oja sig
 okeja
 okoncentrerad
@@ -4687,6 +4718,7 @@ putta
 pynta
 pyssla
 pälsdjur
+pälsverk
 pärla
 på (sin) mammas gata
 på alla håll och kanter
@@ -4814,6 +4846,7 @@ remittera
 rena
 rendera
 rengöra
+reningsverk
 renodla
 renovera
 rensa
@@ -4893,6 +4926,10 @@ rita
 riva
 rivalisera
 ro
+ro hem något
+ro hit med något!
+ro i hamn med något
+ro i land (med) något
 roa
 roa sig
 rockring
@@ -5174,6 +5211,7 @@ sitta
 sitta av
 sitta emellan
 sitta i
+sitta i orubbat bo
 sitta inne
 sitta upp
 sitta åt
@@ -5319,6 +5357,7 @@ skrattare
 skrattgrop
 skrattmås
 skrida
+skrida till verket
 skrika
 skritta
 skriva
@@ -6033,6 +6072,7 @@ stående längd
 stående ovationer
 stående rigg
 stående rubrik
+stålverk
 ståndkrage
 ståndsperson
 stånga
@@ -6179,8 +6219,10 @@ särbehandla
 särredovisa
 särskilja
 sätta
+sätta (lite) rotation
 sätta armén på fredsfot
 sätta av
+sätta bo
 sätta dit
 sätta en ära i något
 sätta fast
@@ -6193,8 +6235,15 @@ sätta igång
 sätta ihop
 sätta in
 sätta käppar i hjulet/hjulen för någon/något
+sätta munlås på någon
 sätta ner
+sätta någon på (en) piedestal
+sätta någon på det hala
+sätta någon på pottan
+sätta någon på pottkanten
 sätta någon/något ur spel
+sätta något i verket
+sätta något på pränt
 sätta något på spel
 sätta på
 sätta samman
@@ -6208,6 +6257,7 @@ sätta ut
 sätta värde på någon/något
 sätta åt
 sätta/satsa allt på ett kort
+sättpotatis
 så
 så gott som
 så länge
@@ -6324,6 +6374,7 @@ tas
 tatuera
 taxera
 te sig
+teamwork
 teblask
 teckna
 teckna ner
@@ -6593,6 +6644,7 @@ tråka ut
 tråla
 trög
 tröska
+tröskverk
 trösta
 trötta
 trötta ut
@@ -6839,6 +6891,7 @@ ursäkta
 ursäkta sig
 uruppföra
 urvattna
+urverk
 utagera
 utan krus
 utan namns nämnande
@@ -7074,6 +7127,7 @@ vara trög i magen
 vara uppe med solen
 vara vid (sina) sunda vätskor
 vara åt skogen
+vara/komma i hamn
 varg i veum
 vargavinter
 varhelst
@@ -7280,6 +7334,7 @@ världsläge
 värma
 värma upp
 värmeplatta
+värmeverk
 värna
 värva
 väsa
@@ -7345,6 +7400,7 @@ yttra sig
 älga
 älska
 älta
+ämbetsverk
 ämna
 ämna sig
 ämnesomsättning
