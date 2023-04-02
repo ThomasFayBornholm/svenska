@@ -2722,6 +2722,7 @@ faktura
 fakultet
 fallbeskrivning
 fallenhet
+fallgrop
 fallhöjd
 fallskärm
 fallskärmsjägare
@@ -2833,6 +2834,7 @@ fildelare
 fildelning
 filial
 film
+filmrulle
 filmstjärna
 filosof
 filosofi
@@ -2871,6 +2873,7 @@ fiskerättighet
 fiskhamn
 fiskhåv
 fiskleverolja
+fiskmås
 fiskolja
 fission
 fitta
@@ -3309,6 +3312,7 @@ förbrukningsartikel
 förbrytare
 förbränning
 förbundskansler
+förbundskapten
 förbättring
 förbättringsprojekt
 förbön
@@ -4458,6 +4462,7 @@ hytta
 hyvel
 häck
 häckla
+häcklöpning
 häcksax
 hädanfärd
 hägring
@@ -4980,6 +4985,7 @@ iver
 jacka
 jacketkrona
 jackett
+jackpot
 jagare
 jage
 jagkänsla
@@ -6256,6 +6262,7 @@ lina
 lind
 linda
 lindning
+linearritning
 linfärja
 linjal
 linje
@@ -6546,6 +6553,7 @@ madrass
 maffia
 magasinering
 mage
+maggrop
 magi
 magister
 magnet
@@ -7056,6 +7064,7 @@ mängdlära
 människa
 människoande
 människoapa
+människospillra
 människosyn
 människoätare
 mänsklighet
@@ -7521,6 +7530,7 @@ orkester
 orkidé
 orm
 ormbunke
+ormgrop
 ormslå
 oro
 orosmoment
@@ -7837,6 +7847,7 @@ planhalva
 planimetri
 plank
 planka
+planritning
 plantering
 plast
 plastik
@@ -8578,6 +8589,7 @@ rödpenna
 rödräv
 rödsot
 röja
+röjning
 rök
 rökdetektor
 rökgas
@@ -9166,6 +9178,9 @@ skottlinje
 skottlossning
 skottspole
 skovel
+skrattare
+skrattgrop
+skrattmås
 skrattsalva
 skribent
 skrift
@@ -9351,6 +9366,7 @@ smed
 smekmånad
 smet
 smidning
+smilgrop
 smitta
 smocka
 smoking
@@ -9496,6 +9512,7 @@ solvind
 sommar
 sommarmånad
 sommarsjuka
+sommarsport
 sommarstuga
 sommartid
 son
@@ -10655,6 +10672,7 @@ träta
 trätjära
 tråd
 trådbuss
+trådrulle
 tråkmåns
 trål
 trålare
@@ -11323,6 +11341,7 @@ vardag
 vardagslag
 varelse
 varg
+vargavinter
 vargtimme
 varhärd
 variabel
@@ -11489,6 +11508,7 @@ vinterek
 vinterhämpling
 vinterkväll
 vintermånad
+vintersport
 vintertid
 vinäger
 vinättika
@@ -11714,7 +11734,9 @@ vårdgivare
 vårdkase
 vårdtagare
 vårmånad
+vårrulle
 vårta
+vårvinter
 våtmark
 våtservett
 vördnad
