@@ -2751,6 +2751,8 @@ function processKeyDown(elHTML,ev) {
 		removeWord();
 	} else if (ev.key === "#") {
 		addWordWithEnum();
+	} else if (ev.key === '"') {
+		defaultMeta();
 	}
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
@@ -2980,6 +2982,39 @@ function clearRegexMode() {
 
 function bodyListener(ev) {
 	if (ev.key === "Home") focusInput();
+}
+function defaultMeta() {
+	let meta = "";
+	let len = CUR_WORD.length;
+	if (CLASS === "substantiv_en") {
+		meta = CUR_WORD + " ~en ~ar<br>substantiv";			
+		if (CUR_WORD.slice(-3) === "het") meta = meta.replace("~ar","~er");
+	} else if (CLASS === "substantiv_ett") {
+		meta = CUR_WORD + " ~et ~er<br>substantiv";
+	} else if (CLASS === "adjektiv") {
+		meta = CUR_WORD + " ~t ~a<br>adjektiv";
+		if (CUR_WORD.slice(-2) === "ad") meta = CUR_WORD + " " + CUR_WORD.slice(len - 2) + "at" + " " + CUR_WORD + "e<br>adjektiv";
+	} else if (CLASS === "verb") {
+		meta = CUR_WORD + " ~de ~t<br>verb";
+	}
+	// So far only support for "en" words
+	if (CLASS != "substantiv_en" && CLASS != "adjektiv" && CLASS != "verb" && CLASS != "substantiv_ett") return;
+	fetch('backend/putDef.php?score=&def=' + '&meta=' + meta + '&class=' + CLASS + '&word=' + CUR_WORD, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		seekWordSingleClass();
+	})
+	.catch(error => {
+		console.log(error);
+	})
 }
 </script>
 </html>

@@ -31,4 +31,5 @@
 		$arr[$word] = $score;
 		file_put_contents($path . $name, json_encode($arr));
 	}
+	echo json_encode("success");
 ?>
