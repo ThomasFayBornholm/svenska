@@ -355,7 +355,6 @@ ans
 ansamling
 ansats
 ansiktsbjudning
-ansiktsblidnhet
 ansiktsblind
 ansiktsblindhet
 ansiktsigenkänning
@@ -600,6 +599,7 @@ asyl
 asynkronmotor
 atavism
 ateism
+ateist
 ateroskleros
 atlas
 atlet
@@ -1414,6 +1414,7 @@ biografi
 biokemi
 biolog
 biologi
+biopsi
 biprodukt
 bisats
 bisittare
@@ -1494,6 +1495,7 @@ blues
 bluff
 blunder
 blus
+blyackumulator
 blyerts
 blyertspenna
 bläckfisk
@@ -1881,6 +1883,7 @@ cafeteria
 caffe latte
 café au lait
 cafévagn
+camber
 camembert
 camping
 campingplats
@@ -1911,6 +1914,7 @@ ceremoni
 ceremonimästare
 cession
 cesur
+chambre séparée
 champagne
 champinjon
 chans
@@ -2271,6 +2275,7 @@ dogm
 doktor
 doktorand
 doktorsdisputation
+doktorsexamen
 doktorsgrad
 doktrin
 dokumentation
@@ -2342,6 +2347,7 @@ drägg
 dräktighet
 dränering
 dräng
+drätselkammare
 dröm
 drönarbild
 drönare
@@ -2703,6 +2709,7 @@ exspiration
 extas
 extension
 extrakt
+extravagans
 extremhöger
 extremism
 extremist
@@ -2803,6 +2810,7 @@ fela
 felaktighet
 felbedömning
 felmarginal
+felmedicinering
 felsägning
 femhörning
 feminism
@@ -2823,6 +2831,7 @@ fetma
 fettisdag
 fettisdagsbulle
 fettsugning
+fettvävnad
 fiber
 ficka
 ficklampa
@@ -3081,6 +3090,7 @@ fotsvamp
 fotvård
 frack
 fradga
+fragmentering
 frakt
 fraktion
 fraktur
@@ -3191,6 +3201,7 @@ frälsning
 frälsningsarmén
 frälsningssoldat
 främling
+främmat
 frände
 fräs
 fräta
@@ -4307,6 +4318,7 @@ hemvård
 heraldik
 herbivor
 herde
+hereditet
 heresi
 heretiker
 hermelin
@@ -4614,6 +4626,7 @@ högprosa
 högrelief
 högskola
 högskolebehörighet
+högskoleexamen
 högskolepoäng
 högslätt
 högspänning
@@ -4913,6 +4926,7 @@ interaktion
 interdental
 interdikt
 interferens
+interferens  2
 interglacial
 interimsregering
 interimsstyrelse
@@ -5217,6 +5231,7 @@ kameraman
 kamin
 kammare
 kammarherre
+kammarmusik
 kammarrätt
 kamomill
 kamouflering
@@ -5456,6 +5471,7 @@ klumpeduns
 klumpfot
 klunga
 klunk
+klut
 klyfta
 klyka
 klyvning
@@ -6165,6 +6181,7 @@ landskapslag
 landslag
 landsman
 landsort
+landssorg
 landsting
 landsväg
 landsättning
@@ -6187,7 +6204,10 @@ lastbil
 lastbilschaufför
 lastlucka
 lastpall
+lasur
+lasyr
 latens
+latenstid
 latitud
 lav
 lava
@@ -6237,6 +6257,7 @@ leverantör
 leverpastej
 levnad
 levnadskostnad
+levnadsregel
 lian
 libell
 liberal
@@ -6353,6 +6374,7 @@ loppmarknad
 lord
 lots
 lotsled
+lotsutkik
 lottarörelse
 lotus
 lovprisning
@@ -6361,6 +6383,7 @@ luciakrona
 lucka
 luffare
 luftaffär
+luftfarkost
 luftfart
 luftförorening
 luftgitarr
@@ -6404,6 +6427,7 @@ lydelse
 lydnad
 lykta
 lyktstolpe
+lymfa
 lymfkörtel
 lymmel
 lyriker
@@ -6794,6 +6818,7 @@ meritokrati
 merkantilism
 merkantilist
 merkaptan
+merkostnad
 merlot
 merpart
 mes
@@ -7044,6 +7069,7 @@ musiknot
 muskel
 muskelkraft
 muskelvärk
+muskelvävnad
 muskulatur
 muslim
 muslin
@@ -7279,6 +7305,7 @@ norrman
 noshörning
 nostalgi
 not
+not  2
 nota
 notarie
 notation
@@ -7310,6 +7337,7 @@ nyetablering
 nyfikenhet
 nygrad
 nyhet
+nyhetsbyrå
 nyhetssajt
 nykomling
 nykterism
@@ -8050,6 +8078,7 @@ profil
 profilbild
 prognos
 programledare
+programmering
 programvara
 projektil
 projektion
@@ -8269,6 +8298,7 @@ regi
 regim
 region
 regissör
+registrator
 registrering
 reglering
 regnbåge
@@ -8526,6 +8556,7 @@ ryggsäck
 ryl
 rymd
 rymdfarare
+rymdfarkost
 rymdgeometri
 rymdsond
 rymning
@@ -8536,6 +8567,7 @@ ryss
 rytm
 ryttare
 räcka
+räckhåll
 räckvidd
 räd
 räddhåga
@@ -8566,6 +8598,7 @@ rätsida
 rätt
 rätta
 rättegång
+rättegångsfullmakt
 rättelse
 rättighet
 rättskänsla
@@ -9167,6 +9200,7 @@ skock
 skog
 skogsindustri
 skogsnäva
+skogstrakt
 skojare
 skola
 skolbespisning
@@ -9327,6 +9361,7 @@ slip
 sliper
 slipover
 slips
+slipsten
 slirighet
 slits
 slot
@@ -9842,6 +9877,7 @@ storväst
 story
 straffskatt
 straight
+stramalj
 strand
 strandpromenad
 strandskata
@@ -9919,6 +9955,7 @@ studentexamen
 studentkår
 studentmössa
 studerande
+studerkammare
 studie
 studierektor
 studiero
@@ -10096,6 +10133,7 @@ syndikalism
 syndikat
 synergi
 synergism
+synhåll
 synkop
 synkope
 synkretism
@@ -10285,6 +10323,7 @@ telefoni
 telefonkiosk
 telegraf
 telegrafi
+telegrambyrå
 telesatellit
 television
 tematik
@@ -10458,6 +10497,7 @@ tjocklek
 tjockolja
 tjockskalle
 tjocktarm
+tjomme
 tjugoett
 tjugondel
 tjur
@@ -10606,6 +10646,7 @@ trehörning
 trekammarbrunn
 treklang
 trend
+trendskapare
 trendsport
 tretakt
 trettondag
@@ -10714,6 +10755,7 @@ tularemi
 tull
 tullkontor
 tullmur
+tulltjänsteman
 tulpan
 tum
 tumlare
@@ -10733,6 +10775,7 @@ tupp
 tuppfäktning
 tupé
 tur
+tur  2
 turbin
 turbo
 turbulens
@@ -10820,6 +10863,7 @@ tår
 tårta
 tårtgaffel
 töm
+töntstämpel
 törn
 törnbuske
 törnekrona
@@ -11136,7 +11180,6 @@ utgård
 utgåva
 uthamn
 uthuggning
-uthyra
 uthyrning
 uthållighet
 uthållighetstävling
@@ -11266,6 +11309,7 @@ uv
 uvular
 vaccination
 vad
+vad  2
 vadare
 vadd
 vadeinlaga
@@ -11298,8 +11342,10 @@ valhemlighet
 valkampanj
 valkrets
 vall
+vallare
 vallgrav
 vallmo
+vallning
 vallokal
 vallåt
 valmanifest
@@ -11371,7 +11417,6 @@ varmluft
 varmluftballong
 varning
 varningsklocka
-varsebliva
 varseblivning
 vart
 varulv
@@ -11433,8 +11478,6 @@ verktygssats
 veronika
 vers
 versal
-versamhetserättelse
-verse
 versfot
 version
 vertebrat
@@ -11741,7 +11784,6 @@ våldtäktsman
 vålnad
 vånda
 våning
-våningsplan
 våningssäng
 vår
 vård
