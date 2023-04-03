@@ -46,6 +46,7 @@ administrera
 adoptera
 adressera
 adsorbera
+affektionsvärde
 afficiera
 affirmera
 affärsbiträde
@@ -675,6 +676,7 @@ bevara
 beveka
 bevilja
 bevisa
+bevisvärde
 bevittna
 bevuxen
 beväpna
@@ -840,6 +842,7 @@ brottets bana
 brudbukett
 bruka
 bruksföremål
+bruksvärde
 brutet tak
 brutto
 bruttovikt
@@ -900,6 +903,7 @@ byta in
 byta om
 byta upp sig
 byta ut
+bytesvärde
 bä
 byta/växla ringar
 bädda
@@ -4095,6 +4099,7 @@ marginalisera
 marinera
 markera
 marknadsföra
+marknadsvärde
 marsch pannkaka!
 marschera
 marter
@@ -4276,6 +4281,7 @@ mäkta
 mänga
 människoande
 människospillra
+människovärde
 märka
 märka ut
 mäta
@@ -4930,6 +4936,7 @@ ratta in
 rea
 reagera
 realisera
+realvärde
 recensera
 reda
 reda av
@@ -6532,6 +6539,7 @@ tappa
 tas
 tatuera
 taxera
+taxeringsvärde
 te sig
 teamwork
 teblask
@@ -6627,6 +6635,7 @@ tillämpa
 tillåta
 tillåta sig
 tillönska
+timarvode
 timbre
 timmersvans
 timra
@@ -7449,6 +7458,7 @@ vittra
 vitvaror
 vobba
 voja sig
+vokalist
 vomera
 vricka
 vrida
@@ -7475,6 +7485,7 @@ väga upp
 vägen till mannens hjärta går genom magen
 vägleda
 vägra
+väl bekomme!
 välja
 välja bort
 välja in
@@ -7511,6 +7522,9 @@ vänta ut
 vänteläge
 väpna
 värdeföremål
+värdegemenskap
+värdekonservativ
+värdeneutral
 värdera
 värdera ner
 värdera om
@@ -19734,10 +19748,8 @@ väpnare
 värd
 värde
 värdefull
-värdekonservativ
 värdelös
 värdemängd
-värdeneutral
 värdepapper
 värdera
 värdera ner
