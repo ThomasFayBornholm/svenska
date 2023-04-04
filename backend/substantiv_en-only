@@ -41,6 +41,7 @@ ackumulator
 ackusativ
 ackvisition
 actionfilm
+adapter
 addition
 adel
 adelsman
@@ -571,6 +572,7 @@ artillerist
 artist
 artskillnad
 artär
+arv
 arvfiende
 arvsfaktor
 arvshygien
@@ -633,6 +635,9 @@ aubergine
 aubrietia
 audiens
 augusti
+auktion
+auktionist
+auktionsutropare
 auktor
 auktorisation
 auktorisering
@@ -773,6 +778,7 @@ avreglering
 avresa
 avrinning
 avrivning
+avrundning
 avräkning
 avräkningsnota
 avrättning
@@ -847,7 +853,6 @@ avvikelse
 avvisare
 avväg
 avvägning
-av­skiljare
 axel
 axelrem
 axill
@@ -1457,6 +1462,7 @@ blinkning
 blixt
 blockad
 blockbildning
+blockskiva
 blodbrist
 blodförlust
 blodgivare
@@ -1762,6 +1768,8 @@ budgivning
 budo
 buffel
 buffé
+bugg
+bugg  2
 bugning
 buk
 bukett
@@ -2182,6 +2190,8 @@ detaljhandlare
 detaljist
 detektor
 determinant
+determinism
+determinist
 detonation
 devis
 dia
@@ -2696,6 +2706,7 @@ explikation
 exploatering
 explosion
 exponent
+exponentialfunktion
 exponering
 export
 exposition
@@ -2826,6 +2837,7 @@ ferie
 fernissa
 fest
 festival
+festtalare
 fetisch
 fetma
 fettisdag
@@ -2849,6 +2861,7 @@ fildelare
 fildelning
 filial
 film
+filmare
 filmrulle
 filmstjärna
 filosof
@@ -4097,6 +4110,7 @@ gängback
 gängning
 gängtapp
 gärd
+gärdsgård
 gärning
 gärningsman
 gärningsmannaprofil
@@ -4405,6 +4419,7 @@ hosta
 hostning
 hotbild
 hotelse
+hovleverantör
 hovmästare
 hovrätt
 hud
@@ -4513,6 +4528,7 @@ häpnad
 här
 härd
 härdlack
+härdning
 härförare
 härkomst
 härlighet
@@ -5819,6 +5835,7 @@ kotte
 kovändning
 krabba
 kraft
+kraftansträngning
 kraftkarl
 kraftmätning
 kraftöverföring
@@ -5851,6 +5868,7 @@ krevad
 kricka
 krigare
 krigföring
+krigsförbrytare
 krigsherre
 krigslycka
 krigsmakt
@@ -5918,6 +5936,7 @@ krusta
 krycka
 krydda
 kryddkrasse
+kryddnejlika
 kryddsalt
 kryddträdgård
 kryddväxt
@@ -6007,6 +6026,8 @@ kutter
 kutym
 kuvertväska
 kuvös
+kvackare
+kvacksalvare
 kvadrat
 kvadratmeter
 kvadratrot
@@ -6151,6 +6172,7 @@ laddningsbärare
 ladugård
 lag
 lager
+lager  2
 lagergång
 lagerkrans
 lagkapten
@@ -6223,6 +6245,7 @@ leda
 ledamot
 ledare
 ledighet
+ledkapsel
 ledning
 ledningsförmåga
 ledskål
@@ -6342,6 +6365,7 @@ ljusbåge
 ljushastighet
 ljuskägla
 ljuspunkt
+ljussläckare
 ljusstake
 lo
 lobotomi
@@ -6579,6 +6603,7 @@ lördag
 lördagsbilaga
 lösen
 lösning
+lösöreauktion
 lövtäkt
 mack
 macka
@@ -6747,6 +6772,7 @@ matt
 matta
 matte
 matvara
+matvrå
 maxim
 maximering
 mc
@@ -7251,6 +7277,8 @@ nedtrappning
 nefrit
 negation
 nejd
+nejlika
+nejlikväxt
 nekrolog
 nektarin
 nelson
@@ -7270,6 +7298,7 @@ nia
 nidbild
 niece
 nihilism
+nihilist
 niondel
 nipflod
 nippel
@@ -7374,6 +7403,9 @@ närkamp
 närsalt
 närstrid
 närvaro
+närvarokontroll
+närvarolista
+närvaroplikt
 näsa
 näsborre
 näsdroppe
@@ -7593,7 +7625,6 @@ ostron
 ostronkniv
 osäkerhet
 otack
-otack är världens lön
 otidighet
 otro
 otur
@@ -7708,6 +7739,7 @@ pasta
 pastej
 pastor
 pastoral
+pastorsadjunkt
 patient
 patientnämnd
 patina
@@ -8150,6 +8182,7 @@ pulka
 pulpet
 pulsåder
 pulver
+pulversläckare
 pump
 pumpa
 pundare
@@ -8273,6 +8306,7 @@ reda
 redaktion
 redaktör
 redare
+redigerare
 redning
 redogörelse
 redovisning
@@ -8629,6 +8663,7 @@ råtta
 råvara
 rödbeta
 rödförskjutning
+rödgran
 rödlista
 rödpenna
 rödräv
@@ -8978,6 +9013,7 @@ silltrut
 sillåda
 silver
 silverfisk
+silvergran
 silvermedalj
 silversked
 simand
@@ -9116,6 +9152,7 @@ skallskada
 skalm
 skalär
 skam
+skamvrå
 skandal
 skapare
 skapelse
@@ -9205,6 +9242,7 @@ skojare
 skola
 skolbespisning
 skolbuss
+skolfrånvaro
 skolgång
 skolgård
 skolpeng
@@ -9330,6 +9368,7 @@ skördetid
 skördetröska
 sköt
 skötare
+sköterska
 skötsel
 sladd
 slagbjörn
@@ -9385,6 +9424,7 @@ slutspurt
 slutsten
 sluttning
 slyngel
+släckare
 släde
 slägga
 släkt
@@ -9629,6 +9669,7 @@ spetsfundighet
 spik
 spiksko
 spillning
+spillo
 spillra
 spinalanestesi
 spindel
@@ -9693,6 +9734,7 @@ spänst
 spärr
 spärreld
 spärrkonto
+spärrning
 spärrvakt
 spätlese
 spådom
@@ -10245,6 +10287,7 @@ takometer
 takränna
 takstol
 takt
+takterrass
 taktik
 taktkänsla
 takträdgård
@@ -10257,6 +10300,7 @@ talekonst
 talesperson
 talg
 taliban
+talja
 tall
 tallinje
 tallkottkörtel
@@ -10829,6 +10873,7 @@ tyrann
 tyrannisering
 tysk
 tyska
+tysthet
 tystnad
 tystnadsplikt
 täckdikning
@@ -10890,8 +10935,10 @@ undergång
 underhandling
 underhud
 underhållning
+underkant
 underklass
 underledare
+underleverantör
 underläpp
 underlåtenhet
 underlåtenhetssynd
@@ -10949,6 +10996,12 @@ uniform
 uniformsplikt
 union
 universaltid
+universitetsadjunkt
+universitetsfilial
+universitetsinstitution
+universitetskansler
+universitetslektor
+universitetsstad
 uppbackare
 uppbindning
 uppbyggnad
@@ -11026,6 +11079,8 @@ uppsökning
 upptagning
 upptecknare
 uppteckning
+upptäckare
+upptäckarglädje
 upptäckt
 upptäcktsfärd
 upptäcktsresa
@@ -11563,6 +11618,7 @@ vinruta
 vinsch
 vinskänk
 vinst
+vinstandel
 vinter
 vinterek
 vinterhämpling
@@ -11620,6 +11676,7 @@ vred
 vrede
 vret
 vridning
+vrå
 vråk
 vrångbild
 vulkan
@@ -11681,6 +11738,7 @@ väpnare
 värd
 värdegemenskap
 värdemängd
+värdenihilism
 värdering
 värdesak
 värdfolk
@@ -11796,6 +11854,7 @@ vårmånad
 vårrulle
 vårta
 vårvinter
+våtarv
 våtmark
 våtservett
 vördnad

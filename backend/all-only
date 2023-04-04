@@ -21,11 +21,15 @@
 (tortyr av) tredje graden
 .. .och på den vägen är det
 .. och på den vägen är det
+Hans Majestät (konungen)
+Hennes Majestät (drottningen)
 Högsta domstolen
 Högsta sovjet
+Kunglig majestät (Kungl. Maj:t)
 abdikera
 abonnera
 abortera
+absolut gehör
 absorbent
 absorbera
 abstrahera
@@ -41,6 +45,7 @@ ackordssättning
 ackumulera
 ackvirera
 adamsäpple
+adapter
 addera
 administrera
 adoptera
@@ -60,6 +65,7 @@ akta
 akta sig
 aktivera
 aktualisera
+alkoholpåverkad
 alla fakta på bordet
 alliansring
 alliera sig
@@ -69,6 +75,7 @@ allokera
 allt mellan himmel och jord
 alludera
 alstra
+alternativ
 alternera
 amma
 amortera
@@ -224,6 +231,7 @@ artillerist
 artistisk
 artistnamn
 artnamn
+arv
 asfaltera
 aska
 aspirera
@@ -239,6 +247,10 @@ attestera
 attrahera
 audiovisuell
 augustipäron
+auktion
+auktionera
+auktionist
+auktionsutropare
 auktorisera
 auskultera
 av noll och intet värde
@@ -278,6 +290,7 @@ avfölja
 avföra
 avge
 avgifta
+avgr  -1
 avgränsa
 avguda
 avgå
@@ -359,6 +372,7 @@ avresa
 avrinna
 avromantisera
 avrunda
+avrundning
 avrusta
 avräkna
 avrätta
@@ -458,6 +472,7 @@ baka samman
 bakgata
 bakhuvud
 bakkappa
+bakom lås och bom
 baktala
 bala
 bala sig
@@ -727,6 +742,7 @@ blandare
 blekna
 bli
 bli av
+bli hängd i tysthet
 bli pannkaka av alltihop/alltsammans
 bli till
 bli till sig
@@ -739,6 +755,9 @@ blixtljus
 blixtra
 blixtra till
 blockera
+blockhus
+blockskiva
+blocktyg
 blogga
 blomma
 blomsteruppsats
@@ -771,6 +790,7 @@ bo
 bo in sig
 bo/leva i kappsäck
 bogsera
+bohag
 boj
 bojkotta
 boka
@@ -879,6 +899,8 @@ bubbla
 budord
 buga
 buga sig
+bugg
+bugg  2
 bukta
 bukta sig
 bulla upp
@@ -1067,7 +1089,9 @@ demonstratris
 demonstratör
 demonstrera
 den där
+den förlorade sonen
 den högre skolan
+den inversa funktionen
 den lede
 den som ger sig in i leken får leken tåla
 denotera
@@ -1101,6 +1125,8 @@ det är inte klokt
 detachera
 detektera
 determinera
+determinism
+determinist
 detonera
 detronisera
 devalvera
@@ -1116,6 +1142,7 @@ diffundera
 dika
 dikta
 dikta upp
+diktatorisk
 diktera
 dilla
 dimensionera
@@ -1155,6 +1182,7 @@ dopa
 dopp i grytan
 doppa sig
 dra
+dra (det) tyngsta lasset
 dra av
 dra fram
 dra för
@@ -1392,6 +1420,7 @@ experimentera
 explicera
 exploatera
 explodera
+exponentialfunktion
 exponera
 exportera
 expropriera
@@ -1460,6 +1489,8 @@ fernissa
 festa
 festföremål
 festspel
+festtal
+festtalare
 fetma
 fetna
 fettvävnad
@@ -1469,6 +1500,7 @@ fiffla
 fika
 filea
 filma
+filmare
 filmrulle
 filtrera
 fimpa
@@ -1558,6 +1590,7 @@ flottyrkoka
 fluktuera
 flundra
 fly
+fly/rymma fältet
 flyga
 flyta
 flyta in
@@ -1565,6 +1598,7 @@ flyta ovanpå
 flytplagg
 flytta
 flytta fram
+flyttlass
 flyttstäda
 flytväst
 fläcka
@@ -1803,6 +1837,7 @@ för fullt
 för gott
 för min del
 för närvarande
+för så vitt
 föra
 föra bort
 föra en tynande tillvaro
@@ -2218,6 +2253,7 @@ förutspå
 förutsäga
 förutsätta
 förvalta
+förvalta sitt pund
 förvaltningsdomstol
 förvandla
 förvanska
@@ -2380,6 +2416,7 @@ gjuta över
 glad i hatten
 gladlynt
 glamma
+glasa in
 glasera
 glatt muskulatur
 glaukom
@@ -2431,6 +2468,7 @@ gott om något
 gottgöra
 gradera
 graduera
+gran
 granatsplitter
 granska
 grassera
@@ -2488,6 +2526,7 @@ gråt och tandagnisslan
 gråta
 gråta ut
 gråtfärdig
+gröna fältets schack
 grönska
 gröpa ur
 gubba till sig
@@ -2533,6 +2572,7 @@ gälla
 gänga
 gänga sig
 gärda
+gärdsgård
 gäspa
 gå
 gå an
@@ -2563,6 +2603,7 @@ gå någons ära förnär
 gå på
 gå på gatan
 gå samman
+gå skilda vägar
 gå till
 gå till storms mot någon/något
 gå under
@@ -2611,6 +2652,7 @@ ha häcken full
 ha hårda nävar
 ha mage att göra något
 ha noll koll
+ha någon i hasorna
 ha någon/något i sitt våld
 ha någon/något på gaffeln
 ha något i bakfickan
@@ -2686,6 +2728,7 @@ heliga tre konungar
 hemförlova
 heminredning
 hemlighålla
+hemmets lugna vrå
 hemska tanke!
 hemsöka
 hereditet
@@ -2732,6 +2775,7 @@ hosta
 hosta upp
 hota
 hovbeslag
+hovleverantör
 hugga
 hugga för sig
 hugga i
@@ -2786,17 +2830,22 @@ hänga
 hänga ihop
 hänga läpp
 hänga med
+hänga på gärsgårn
+hänga på låset
 hänga samman
 hänga sig
 hänga upp sig
 hänga ut
 hänga över
 hänge sig
+hänglås
 hänrycka
 hänskjuta
 hänsyfta
 hänvisa
+härda
 härda ut
+härdning
 härja
 härleda
 härleda sig
@@ -2831,6 +2880,7 @@ hålla låda
 hålla med
 hålla måttet
 hålla någon kort
+hålla någon/något i schack
 hålla någots fana högt
 hålla på
 hålla samman
@@ -2890,6 +2940,7 @@ i den högre skolan
 i det längsta
 i detsamma
 i detta nu
+i ensamt majestät
 i ett nu
 i grova drag
 i högsta grad
@@ -2903,6 +2954,7 @@ i ny och nedan
 i nästa nu
 i rättvisans namn
 i samma nu
+i sista sekunken
 i själva verket
 i smått
 i stora drag
@@ -2910,6 +2962,7 @@ i stånd
 i stöten
 i trängre mening
 i ur och skur
+i vida kretsar
 i vår Herres hage
 i ärlighetens namn
 iaktta
@@ -2989,6 +3042,7 @@ inge
 ingen fara på taket
 ingen nämnd och ingen glömd
 inget/intet nytt under solen
+inglasa
 ingripa
 ingå
 inhibera
@@ -3108,6 +3162,8 @@ inte lyfta ett finger
 inte lägga fingrarna emellan
 inte låta gräset gro under fötterna
 inte med bästa vilja i världen
+inte mycket att hänga i gran(en)
+inte mycket att hänga i julgran(en)
 inte på (några) villkors vis
 inte på några villkor
 inte röra ett finger
@@ -3117,6 +3173,7 @@ inte vara gott att ...
 inte veta till sig av något
 inteckna
 integrera
+integrerad krets
 intellektualisera
 intellektualism
 intensifiera
@@ -3444,13 +3501,16 @@ koka över
 koketteri
 kokkärl
 kokplatta
+kokvrå
 kola
 kolla
 kollapsa
+kollegieblock
 kollektion
 kollidera
 kolonisera
 kolportera
+kombinationslås
 kombinationsspel
 kombinera
 komma
@@ -3484,6 +3544,7 @@ komma/vara någon/något på spåren
 kommandoton
 kommendera
 kommentera
+kommunblock
 kommunicera
 kompensera
 kompilera
@@ -3586,11 +3647,13 @@ kosta på sig
 kotlettfisk
 kovända
 krackelera
+kraftansträngning
 kraftkarl
 krafttag
 krama
 kramgo
 kramkalas
+krascha
 kratsa
 kratta
 kraxa
@@ -3600,6 +3663,7 @@ kremera
 kretsa
 krevera
 kriga
+krigsförbrytare
 krigsplacera
 krigsrubrik
 krigsspel
@@ -3626,6 +3690,7 @@ krusa
 krusa sig
 krya på sig
 krydda
+kryddnejlika
 krylla
 krympa
 krypa
@@ -3673,6 +3738,7 @@ kunskapsstoff
 kupa
 kuppa
 kura
+kura ihop sig
 kurera
 kursa
 kuscha
@@ -3681,6 +3747,9 @@ kustland
 kuttra
 kuva
 kvacka
+kvackare
+kvacksalvare
+kvadda
 kvadrera
 kvalificera
 kvarstå
@@ -3758,6 +3827,7 @@ ladda ur sig
 laga
 laga förfall
 laga sig
+lager  2
 lagerkrans
 lagföra
 lagra
@@ -3797,6 +3867,7 @@ leda
 leda av
 ledbrosk
 ledhuvud
+ledkapsel
 ledsaga
 ledskål
 legera
@@ -3832,6 +3903,7 @@ ligga efter
 ligga fast
 ligga för
 ligga i
+ligga i vida fältet
 ligga nere
 ligga på
 ligga på svaj
@@ -3870,6 +3942,7 @@ lista ut
 lita
 lite här och var
 lite si och så
+liten tuva stjälper
 livboj
 livskraft
 livsuppehälle
@@ -3878,6 +3951,7 @@ ljudabsorbent
 ljudboj
 ljuga
 ljusna
+ljussläckare
 lobotomera
 locka
 locka av
@@ -3903,6 +3977,7 @@ lovorda
 lovprisa
 luftfarkost
 luftled
+luftv  -1
 lugn i stormen!
 lugn som en filbunke
 lugna
@@ -3935,12 +4010,14 @@ lyfta
 lyfta fram
 lyfta sig
 lyfta ut
+lyftblock
 lykta
 lymfa
 lymfkärl
 lymfsystem
 lysa
 lysa igenom
+lysa med sin frånvaro
 lysa upp
 lysa ut
 lysboj
@@ -3983,6 +4060,7 @@ lägga/sätta kraft bakom orden
 läka
 lämna
 lämna av
+lämna fältet fritt för någon/något
 lämna in
 lämna någon i sticket
 lämna ut
@@ -4065,6 +4143,8 @@ lösa upp
 lösa ut
 lösgöra
 lösmynt
+lösöre
+lösöreauktion
 lövtäkt
 lövverk
 mackla
@@ -4118,6 +4198,7 @@ matcha
 materialisera
 matta
 mattas av
+matvrå
 maximera
 mc
 med (vett och) vilja
@@ -4202,6 +4283,7 @@ mjuka upp sig
 mjölkkossa
 mjölktand
 mobba
+mobilier
 mobilisera
 modellera
 moderator
@@ -4334,6 +4416,7 @@ namnge
 nappa
 nappa till sig
 nappa åt sig
+narkotikapåverkad
 narra
 narra av
 narra i
@@ -4369,12 +4452,16 @@ nedvärdera
 negativ bild
 negera
 negligera
+nejlika
+nejlikväxt
 neka
 nervknut
 nervtråd
 neutralisera
 nicka
 niga
+nihilism
+nihilist
 niosvansad katt
 nivellera
 njuta
@@ -4436,6 +4523,9 @@ närma
 närma sig
 närmare besett
 närvara
+närvarokontroll
+närvarolista
+närvaroplikt
 näsduk
 nätspel
 nätt och jämt
@@ -4456,6 +4546,7 @@ nödvändiggöra
 nöja sig
 nöta
 obducera
+obehörig vinst
 obemedlad
 obs
 observera
@@ -4567,6 +4658,7 @@ ordhållig
 ordkarg
 ordna
 ordna sig
+ordrik
 orera
 organisera
 organisera sig
@@ -4638,6 +4730,7 @@ passa sig
 passa upp
 passera
 passivera
+pastorsadjunkt
 patcha
 patinera
 patrask
@@ -4818,6 +4911,7 @@ provocera
 provocera fram
 provrörsbefruktning
 provtjänstgöra
+prunk
 prunka
 pruta
 prutta
@@ -4836,8 +4930,10 @@ pudla
 pulla
 pulsa
 pulsera
+pulversläckare
 pulvrisera
 pumpa
+pund sterling
 punga ut
 punktera
 punschrulle
@@ -4867,12 +4963,14 @@ på inget/intet vis
 på närhåll
 på ort och ställe
 på rymmarstråt
+på sekunden
 på sina håll
 på smällen
 på studs
 på svaj
 på så vis
 på torra vägen
+på vinst och förlust
 på våta vägen
 på/under småtimmarna
 påa
@@ -4936,6 +5034,7 @@ ratta in
 rea
 reagera
 realisera
+realiter
 realvärde
 recensera
 reda
@@ -4947,6 +5046,7 @@ reda ut
 redare
 rederi
 redigera
+redigerare
 redogöra
 redovisa
 redubbla
@@ -5057,6 +5157,7 @@ rispa
 rista
 rista  2
 rita
+ritblock
 riva
 rivalisera
 ro
@@ -5066,6 +5167,7 @@ ro i hamn med något
 ro i land (med) något
 roa
 roa sig
+roa sig kungligt
 rockring
 roffa
 rollsätta
@@ -5183,6 +5285,7 @@ råsegel
 råämne
 rö
 rödbrokig
+rödgran
 rödlista
 röja
 röja av
@@ -5343,6 +5446,7 @@ sill i kapprock
 sillpudding
 sillåda
 silverbröllop
+silvergran
 silvra
 simma
 simulera
@@ -5386,6 +5490,7 @@ skalla
 skallra
 skam den som ger sig
 skam till sägandes
+skamvrå
 skandalisera
 skandera
 skapa
@@ -5475,6 +5580,7 @@ skjuta till
 skjuta upp
 skjuta över
 skjutsa
+skoblock
 skog på rot
 skogens konung
 skogsnäva
@@ -5487,6 +5593,8 @@ skola  2
 skola in
 skola om
 skolbespisning
+skolfrånvaro
+skolk
 skona
 skopa
 skotta
@@ -5534,6 +5642,7 @@ skrymma
 skrymta
 skrynkla
 skryta
+skrytsam
 skräcka
 skräda
 skrädda
@@ -5582,6 +5691,7 @@ skymfa
 skymma
 skymta
 skynda
+skynda långsamt
 skynda på
 skynda sig
 skynda till
@@ -5619,9 +5729,11 @@ skönja
 skönmåla
 skörda
 skörda lagrar
+sköt
 sköta
 sköta sig
 sköta/spela sina kort väl
+sköterska
 skövla
 slacka
 slaka
@@ -5667,6 +5779,7 @@ slutkörd
 slutledning
 slutta
 släcka
+släckare
 slägga
 slänga
 slänga i sig
@@ -5954,9 +6067,11 @@ spikrak
 spiksäker
 spilla
 spilla över
+spillo
 spinna
 spinna loss
 spionera
+spiralblock
 spiraltrappa
 spisa av
 spiskåpa
@@ -6010,6 +6125,7 @@ spärra in
 spärra upp
 spärra ut
 spärrad utbildning
+spärrning
 spå
 spåra
 spåra upp
@@ -6234,6 +6350,7 @@ stående längd
 stående ovationer
 stående rigg
 stående rubrik
+stålsätta sig
 stålverk
 ståndkrage
 ståndsmässig
@@ -6358,6 +6475,9 @@ syra-bas-indikator
 sysselsätta
 syssla
 systematisera
+systerfartyg
+systerskap
+systerson
 säga
 säga emot
 säga ifrån
@@ -6429,6 +6549,7 @@ så gott som
 så länge
 så till den (milda) grad
 så vind och skörda storm
+så vitt (jag vet)
 såga
 såga av
 sålla
@@ -6518,6 +6639,7 @@ tagga
 tagga ner
 takbjälke
 takt och ton
+takterrass
 taktfast
 taktstreck
 tala
@@ -6525,7 +6647,9 @@ tala in
 tala om
 tala till punkt
 tala ut
+tala vitt och brett om något
 talesperson
+talja
 tampas
 tamponera
 tandlossning
@@ -6616,6 +6740,7 @@ tillskära
 tillsluta
 tillspetsa
 tillspilloge
+tillspillogiven
 tillströmma
 tillstyrka
 tillstå
@@ -6641,6 +6766,7 @@ timmersvans
 timra
 tina
 tinga
+tingshus
 tippa
 tipsa
 titta
@@ -6796,6 +6922,7 @@ trycka av
 trycka om
 trycka på
 trycka till
+tryckt krets
 trygga
 tryta
 trä
@@ -6878,6 +7005,7 @@ tygla
 typograf
 tyrannisera
 tysta
+tysthet
 tystna
 täcka
 täkt
@@ -6933,11 +7061,13 @@ undergräva
 undergå
 underhandla
 underhålla
+underkant
 underkasta
 underkasta sig
 underkuva
 underkvista
 underkänna
+underleverantör
 underlägga sig
 underlätta
 underlåta
@@ -6958,6 +7088,7 @@ underteckna
 undertitel
 undertrycka
 undervisa
+undervisningssjukhus
 undervärdera
 undfalla sig
 undfly
@@ -6973,6 +7104,14 @@ undulera
 undvara
 undvika
 uniformera
+universitetsadjunkt
+universitetsbibliotek
+universitetsfilial
+universitetsinstitution
+universitetskansler
+universitetslektor
+universitetssjukhus
+universitetsstad
 unna
 upp som en sol och ner som en pannkaka
 upparbeta
@@ -7050,6 +7189,8 @@ uppteckna
 upptrappa
 uppträda
 upptäcka
+upptäckare
+upptäckarglädje
 upptända
 uppvakta
 uppvisa
@@ -7317,6 +7458,7 @@ vara trög i magen
 vara uppe med solen
 vara vid (sina) sunda vätskor
 vara åt skogen
+vara/hänga någon i hasorna
 vara/komma i hamn
 varg i veum
 vargavinter
@@ -7334,6 +7476,7 @@ varva ner
 varva upp
 varvad utbildning
 vattenfylla
+vattenlås
 vattna
 vattna sig
 vattna ur
@@ -7424,6 +7567,7 @@ vinkla
 vinna
 vinscha
 vinskänk
+vinstandel
 vinterhämpling
 vinterspel
 vintersport
@@ -7471,6 +7615,7 @@ vräka
 vräka i sig
 vräka sig
 vräka ur sig
+vrå
 vråla
 vurpa
 väcka
@@ -7525,6 +7670,7 @@ värdeföremål
 värdegemenskap
 värdekonservativ
 värdeneutral
+värdenihilism
 värdera
 värdera ner
 värdera om
@@ -7581,6 +7727,7 @@ vårrulle
 vårtrött
 vårvinter
 våta
+våtarv
 vörda
 walkie-talkie
 wrestling
@@ -7600,6 +7747,7 @@ yttra
 yttra sig
 £$€{[]}\!!"
 äckla
+ädelgran
 äga
 ägna
 ägna sig
@@ -7624,6 +7772,7 @@ yttra sig
 äntra
 äpplet faller inte långt från trädet
 ära
+ärans fält
 ärekränka
 ärga
 ärja
@@ -16609,7 +16758,6 @@ till tusen
 till varje pris
 tillaga
 tillbaka
-tillbakabildad
 tillbakabildas
 tillbakablick
 tillbakadragen
@@ -16714,7 +16862,6 @@ tillskära
 tillskärare
 tillskärning
 tillsluta
-tillsluten
 tillslutning
 tillspetsa
 tillspetsning
@@ -17278,7 +17425,6 @@ trävirke
 trä­fritt papper
 tråd
 trådbuss
-trådlindad
 trådlös
 tråk
 tråka
@@ -18933,7 +19079,6 @@ var dag har nog av sin (egen) plåga
 var femte (tionde, tjugonde etc.) minut
 var fjortonde dag
 var och en
-var och varann
 var ska sleven vara om inte i grytan
 var som helst
 vara
