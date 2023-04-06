@@ -1,20 +1,32 @@
 <?php
 	$class = $_GET['class'];
+	
 	$path = getcwd() ."/";
 	
 	$score = array();
+	$score['id'] = $_GET['id'];
 	$score["total"] = 0;
 	$score["redCount"] = 0;
 	$score["blueCount"] = 0;
 	$score["greenCount"] = 0;
+	$score["percent"] = 0;
+	$score["count"] = 0;
+	
 	if ($class === "all") {
-		$classes = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
+		$classes = ["adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
 	} else {
 		$classes = array();
 		array_push($classes,$class);
 	}
 	foreach ($classes as $class) {
 		$scoreName = $class . "-score";	
+		// "<class>-only" is the authoritative listing for total word count
+		$f = $path . $class . "-only";
+		$infile = fopen($f , "r") or die("Could not open file: " . $f);
+		if (filesize($f) != 0) {
+			$contents = fread($infile, filesize($f));
+			$score["count"] = count(preg_split("/\r\n|\r|\n/", $contents));
+		}
 		if (file_exists($scoreName)) {
 			$scoreContents = file_get_contents($path . $scoreName);
 			$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);		
@@ -32,5 +44,6 @@
 			}
 		}
 	}
+	$score["percent"] = (int)($score["total"] / $score["count"] / 2 * 10000) / 100;
 	echo json_encode($score);
 ?>

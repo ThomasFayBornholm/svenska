@@ -114,7 +114,8 @@ var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
 var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
 let REGEX_MODE = false;
-var CLASSES = ["Class (short name)","substantiv_en (en)","verb","adjektiv (adj)","substantiv_ett (ett)","adverb (adv)","fraser (fra)","plural (plu)","preposition (prep)","pronomen (pro)","interjektion (int)","förled (för)","slutled (slut)","subjunktion (sub)","konjunktion (kon)","räkneord (räk)"]
+var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk"]
+var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
 var TAB_DUMMY;
@@ -297,7 +298,7 @@ function putFrasDef(score) {
 function updateScore() {
 	if (DEBUG) console.log("updateScore()")
 	// Hash to prevent cached value being used by browser
-	fetch('backend/getScore.php?class=' + CLASS + '&hash=' + makeHash(), {
+	fetch('backend/getScore.php?id=0&class=' + CLASS + '&hash=' + makeHash(), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -984,12 +985,11 @@ function onlineLookup(elHTML, ev) {
 	if (word.length > 0) {
 		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
 		// Rebust escaping of special characters		
-		TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');				
-		//TAB_DUMMY.location.href = "http://localhost/svenska/dummy?word=test";
-		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no, left=0, top=0, width=600,height=600");
+		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");		
+		TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
 		TAB_DUMMY.focus();
 		
-		setTimeout(switchTab, 1500);
+		setTimeout(switchTab, 1000);
 
 	}
 }
@@ -1013,7 +1013,7 @@ function wordCount() {
 	})
 	.then(json => {
 		N_TOT = json["total"];
-		N_ALL = json["all"];
+		N_ALL = json["all"];		
 		N_ADJ = json["adj"];
 		N_VERB = json["verb"];
 		N_ADVERB = json["adverb"];
@@ -1066,16 +1066,47 @@ function newInputWrapper(e) {
 		let newClass  = fullClassName(word.substr(1));
 		REGEX_WORDS = [];		
 		N_REGEX = 0;
+		
 		if (newClass != "list") {
 			setClass(newClass);		
 		} else {
-			let delim = "";
-			let out = "";
-			for (let i = 0; i < CLASSES.length; i++) {
-				out += delim + CLASSES[i];
-				delim = "<br>";
+			var tmpOut = [];
+			let done = 0;
+			let score_all = 0;
+			for (let i = 0; i < CLASS_LIST.length; i++) {
+				let c = CLASS_LIST[i];
+				// ID used to get deterministic ordering of classes
+				fetch('backend/getScore.php?class=' + c + '&id=' + i, {
+					method: 'get',
+					mode: 'cors',
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				})
+				.then(response => {
+					return response.json();
+				})
+				.then(json => {
+					done++;
+					let id = json['id'];				
+					tmpOut[id] = " {" + json["count"] + "; " + json["percent"] + "%}";
+					score_all += parseInt(json["total"]);
+					let out = "<b>all {" + N_TOT + "; " + "score_all" + "%}</b>";
+					if (done == CLASS_LIST.length) {
+						for (i = 0; i < CLASSES.length; i++) {
+							out += "<br>" + CLASSES[i] + tmpOut[i];
+						}
+						score_all = Math.round(score_all / N_TOT / 2 * 100 * 100) / 100;
+						out = out.replace("score_all",score_all);
+					}					
+					
+					$('#iWords').html(out);									
+				})
+				.catch(error => {
+					console.log(error);
+				})			
 			}
-			$('#iWords').html(out);			
+			$('#iParDef').html("");
 		}
 		$('#iInput').val("");
 		return;
@@ -1793,6 +1824,8 @@ function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta()");	
 	regexArr = [
+		/något ålderdomligt], ur­sprungligen bibliskt/,
+		/sär­skilt i juridiska samman­hang/,
 		/starkt ned­sättande; något ålderdomligt/,
 		/ned­sättande, något ålderdomligt/,
 		/något hög­tidligt; något ålderdomligt/,
@@ -2990,18 +3023,22 @@ function bodyListener(ev) {
 function defaultMeta(hasPlural = true) {
 	let meta = "";
 	let len = CUR_WORD.length;
+	let lastChar = CUR_WORD.slice(-1)
 	if (CLASS === "substantiv_en") {
 		meta = CUR_WORD + " ~en"
 		if (hasPlural) meta += " ~ar"
 		meta += "<br>substantiv";			
 		if (CUR_WORD.slice(-3) === "het") meta = meta.replace("~ar","~er");
+		if (lastChar === "e" || lastChar === "a") {
+			meta = meta.replace("~en","~n").replace(" ~ar","");
+		}
 	} else if (CLASS === "substantiv_ett") {
 		meta = CUR_WORD + " ~et"
-		if (hasPlural) meta += " ~er"
+		if (hasPlural) meta += " ~en"
 		meta += "<br>substantiv";
-		if (CUR_WORD.slice(-4) === "ande" || CUR_WORD.slice(-1) === "e") {
+		if (CUR_WORD.slice(-4) === "ande" || lastChar === "e") {
 			meta = meta.replace("~et","~t");
-			meta = meta.replace("~er","~n");
+			meta = meta.replace("~en","~n");
 		}
 	} else if (CLASS === "adjektiv") {
 		meta = CUR_WORD + " ~t ~a<br>adjektiv";
