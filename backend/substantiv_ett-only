@@ -10,6 +10,7 @@ accenttecken
 ackord
 adamsäpple
 adjektiv
+adjektivattribut
 adoptivbarn
 adrenalin
 adverb
@@ -50,7 +51,7 @@ andetag
 andeväsen
 andningshål
 andrag
-andrahvärde
+andrahandsvärde
 andranamn
 andraspråk
 andrum
@@ -167,6 +168,7 @@ arvode
 arvord
 arvsanlag
 as
+asplöv
 atomnummer
 atomspektrum
 atomur
@@ -780,6 +782,7 @@ felgrepp
 femininum
 femtiotal
 fenomen
+feriejobb
 festföremål
 festspel
 festtal
@@ -951,6 +954,9 @@ födelsetal
 fögderi
 fölsto
 fönster
+fönsterglas
+fönsterkuvert
+fönsterplats
 förakt
 förarsäte
 förband
@@ -1088,6 +1094,7 @@ gatuplan
 gehör
 gem
 geni
+genitivattribut
 genljud
 genmäle
 genom
@@ -1177,6 +1184,7 @@ gulden
 guldfiskminne
 guldkorn
 guldläge
+guldsnitt
 guldäpple
 gummi
 gupp
@@ -1233,6 +1241,7 @@ hangarfartyg
 hankön
 hantverk
 hardjur
+harmonium
 hasch
 hat
 hattpartiet
@@ -1245,6 +1254,7 @@ hederspris
 hekto
 hektogram
 helgon
+helhetsintryck
 helljus
 helsike
 heltal
@@ -1461,6 +1471,7 @@ intyg
 intåg
 invektiv
 invånarantal
+isberg
 isflak
 iste
 ister
@@ -1716,6 +1727,7 @@ kubikmått
 kuckel
 kuddvar
 kugghjul
+kulhål
 kullager
 kulsprutegevär
 kulsprutepistol
@@ -1744,6 +1756,7 @@ kväve
 kyffe
 kylskåp
 kynne
+kyrkfönster
 kyrkoår
 kyrksilver
 kyrktorn
@@ -2799,6 +2812,7 @@ skollov
 skolskepp
 skolverk
 skonummer
+skosnöre
 skotstek
 skott
 skotthåll
@@ -2842,6 +2856,7 @@ skydd
 skyddshelgon
 skyddsnät
 skyfall
+skyltfönster
 skymford
 skytte
 skägg
@@ -2930,6 +2945,7 @@ småsyskon
 småtteri
 småvilt
 smör
+smörberg
 smörgåskniv
 smörj
 smörkniv
@@ -3333,6 +3349,7 @@ totalförsvar
 trafikljus
 trakasseri
 tramp
+trampfartyg
 trams
 transept
 trapphus
@@ -3385,6 +3402,7 @@ tvivel
 tvärskepp
 tvärsnitt
 tvärstopp
+tvättbräde
 tvättfat
 tvättmedel
 tvättställ
@@ -3393,10 +3411,12 @@ tvåtusentalet
 tyckande
 tycke
 tyg
+tyg  2
 typsnitt
 typvärde
 tyranni
 tysthetslöfte
+täckdike
 täcke
 täckhår
 täcknamn
@@ -3645,6 +3665,7 @@ vindskontor
 vindskydd
 vindspel
 vindsutrymme
+vingel
 vinkeljärn
 vinterdäck
 vinterlov

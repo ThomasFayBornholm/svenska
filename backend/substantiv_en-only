@@ -8,6 +8,7 @@ D-nivå
 Europa
 NN
 Orienten
+REM-sömn
 abandon
 abborre
 abbot
@@ -480,6 +481,7 @@ apperception
 applikation
 applåd
 apposition
+appreciering
 approach
 aprikos
 april
@@ -585,6 +587,7 @@ asbestcement
 ask
 aska
 askorbinsyra
+asp
 aspekt
 aspiration
 assignation
@@ -916,6 +919,7 @@ bambu
 bambubjörn
 bana
 banan
+bananstock
 banbrytare
 banderoll
 bandhund
@@ -1290,6 +1294,7 @@ betydelsenyans
 betygshets
 betäckning
 betänklighet
+beundran
 bevakning
 bevekelsegrund
 bevisföring
@@ -1474,6 +1479,7 @@ blodplasma
 blodpropp
 blodshämnd
 blodskam
+blodstockning
 blodsugare
 blodundersökning
 blodåder
@@ -1565,6 +1571,7 @@ bokstavsskrift
 bokstavstro
 boktryckare
 boktryckarkonst
+bolagsstämma
 boll
 bollkalle
 bollpojke
@@ -1639,6 +1646,7 @@ bottenplan
 bottensats
 bottenskola
 bottenskvätt
+bottenstock
 bottenvåning
 bottin
 boulevard
@@ -1647,6 +1655,7 @@ boutique
 bov
 bowling
 box
+boxare
 boxning
 boxningsring
 bragd
@@ -1895,6 +1904,7 @@ camber
 camembert
 camping
 campingplats
+canasta
 cancer
 cannabis
 cape
@@ -2039,6 +2049,7 @@ dagerrotyp
 dagerrotypi
 dagfjäril
 dagg
+dagg  2
 daggdroppe
 daggkåpa
 daggmask
@@ -2168,6 +2179,7 @@ dental
 departementschef
 deplacement
 deportation
+depreciering
 depression
 deputation
 depå
@@ -2365,6 +2377,7 @@ drös
 dubb
 dubbelagent
 dubbeldäckare
+dubbelhaka
 dubbelhet
 dubbelmoral
 dubbelnelson
@@ -2571,6 +2584,7 @@ ellips
 ellipsoid
 elmotor
 elnätsoperatör
+elorgel
 elström
 emfas
 emigrant
@@ -2796,6 +2810,7 @@ faster
 fastetid
 fasthet
 fastighet
+fastighetsmäklare
 fastighetsskatt
 fastighetsskötare
 fastlagsbulle
@@ -2822,6 +2837,7 @@ felaktighet
 felbedömning
 felmarginal
 felmedicinering
+felprocent
 felsägning
 femhörning
 feminism
@@ -2860,6 +2876,7 @@ fil
 fildelare
 fildelning
 filial
+filibuster
 film
 filmare
 filmrulle
@@ -3042,6 +3059,7 @@ folkhögskola
 folklek
 folklighet
 folkmassa
+folkmelodi
 folkmun
 folkmängd
 folkomröstning
@@ -3135,6 +3153,7 @@ fras
 frasering
 fred
 fredag
+fredsmäklare
 fregatt
 frekvens
 frenesi
@@ -3822,6 +3841,7 @@ getabock
 geting
 getost
 getto
+gevärsstock
 giftlära
 gigant
 gigg
@@ -3953,6 +3973,7 @@ gravsänka
 gravvård
 gravyr
 gravör
+gray
 grej
 grek
 gren
@@ -4079,6 +4100,7 @@ gummiplatta
 gummistövel
 gumse
 gunga
+gungbräda
 gungning
 gungstol
 gunst
@@ -4143,7 +4165,6 @@ gödsel
 gök
 göl
 gördel
-görningen
 göt
 göteborgare
 göteborgska
@@ -5017,6 +5038,7 @@ isolator
 isolering
 isoleringscell
 israel
+isterhaka
 istid
 isvak
 italienska
@@ -5248,6 +5270,7 @@ kamin
 kammare
 kammarherre
 kammarmusik
+kammarorgel
 kammarrätt
 kamomill
 kamouflering
@@ -5493,6 +5516,7 @@ klyka
 klyvning
 klädhängare
 klädkammare
+klädmal
 klädsel
 kläm
 klämma
@@ -5675,6 +5699,7 @@ konfident
 konfiguration
 konfirmand
 konfirmation
+konfiskation
 konflikt
 konflikthantering
 konfrontation
@@ -5778,6 +5803,7 @@ koppling
 kopplingston
 kopula
 korall
+korallö
 korg
 korgboll
 korint
@@ -6135,6 +6161,7 @@ kö
 köksmaskin
 köksrulle
 köksträdgård
+köksö
 köl
 köld
 köldgrad
@@ -6435,6 +6462,7 @@ lus
 lust
 lusta
 lustighet
+lustlögnare
 luta
 lutfisk
 lutheran
@@ -6583,6 +6611,7 @@ löddra
 lödkolv
 lödning
 lögn
+lögnare
 löjtnant
 lök
 lön
@@ -6653,7 +6682,8 @@ man
 manager
 manchesterliberalism
 mandala
-mandarin 
+mandarin
+mandarin  2
 mandatperiod
 mandel
 mandolin
@@ -6824,6 +6854,7 @@ mellantid
 mellanvåg
 melodi
 melodifestival
+melodistämma
 melon
 mem
 memorial
@@ -7012,6 +7043,8 @@ morfinist
 morfologi
 morgon
 morgondag
+morgondagg
+morgonluft
 morgonstund
 morgontidning
 mormon
@@ -7430,6 +7463,7 @@ nödsituation
 nödtorft
 nödutgång
 nödvändighet
+nödvändighetsvara
 nöjesbransch
 nöjespark
 nörd
@@ -7567,6 +7601,7 @@ optimistjolle
 ordblindhet
 orden
 order
+orderstock
 ordföljd
 ordförande
 ordlek
@@ -7613,6 +7648,7 @@ orsakssamband
 ort
 ortodrom
 ortoped
+ortosömn
 oräknelig
 orätt
 orättvisa
@@ -7701,6 +7737,7 @@ parallellcirkel
 paralys
 parameter
 parasit
+parasömn
 pardans
 pardon
 parentes
@@ -7876,6 +7913,7 @@ pik
 pil
 pilot
 pilotstudie
+pilotundersökning
 pilsner
 pilsnerfilm
 pimpinella
@@ -7919,6 +7957,7 @@ planhalva
 planimetri
 plank
 planka
+planlösning
 planritning
 plantering
 plast
@@ -8359,9 +8398,11 @@ religion
 religionsfrihet
 relästation
 rem
+rem  2
 remanens
 remdrift
 remi
+remiss
 remissinstans
 remsa
 ren
@@ -8865,6 +8906,7 @@ schweizare
 schweiziska
 sed
 sedel
+sedelstock
 sedlighet
 sedvana
 sedvänja
@@ -8992,6 +9034,7 @@ sidlinje
 sidoeffekt
 sidoinkomst
 sidorätt
+sievert
 siffra
 sightseeing
 signal
@@ -9043,6 +9086,7 @@ sirap
 siren
 siska
 sits
+sittbräda
 sittbänk
 sittning
 sittplats
@@ -9196,6 +9240,7 @@ skeppsklocka
 skeppslag
 skeppslista
 skeppsmask
+skeppsmäklare
 skeppsmätning
 skeppspojke
 skeppsredare
@@ -9339,6 +9384,7 @@ skämtteckning
 skänk
 skänkel
 skära
+skärbräda
 skärgård
 skärm
 skärning
@@ -9521,6 +9567,7 @@ snipa
 snipe
 snippa
 snirkel
+snitt
 snittmängd
 snoa
 snobb
@@ -9597,6 +9644,7 @@ solsting
 soluppgång
 solvind
 sommar
+sommarferie
 sommarmånad
 sommarsjuka
 sommarsport
@@ -9659,6 +9707,7 @@ spekulation
 spelare
 spelkonsol
 spellista
+spelmansstämma
 spelning
 spelplan
 spenat
@@ -9829,6 +9878,7 @@ stekburgare
 stekel
 stekpanna
 stekvändare
+stelhet
 stelkramp
 sten
 stenfot
@@ -9861,6 +9911,7 @@ stiltje
 stimulans
 stimulus
 stipel
+stipulation
 stjälk
 stjälkselleri
 stjärn
@@ -9871,8 +9922,10 @@ stjärnfamilj
 stjärnhop
 stjärt
 stjärtmes
+stock
 stockholmare
 stockholmska
+stockning
 stod
 stol
 stola
@@ -9955,6 +10008,7 @@ stringens
 stripa
 stripklubb
 strof
+stroke
 struktur
 struma
 strumpa
@@ -10501,9 +10555,9 @@ tillskärare
 tillskärning
 tillslutning
 tillspetsning
-tillstrykan
 tillströmning
 tillstymmelse
+tillstyrkan
 tillställning
 tillståndsbevis
 tillsyn
@@ -10521,6 +10575,7 @@ timbre
 timesharing
 timjan
 timme
+timmerstock
 timmersvans
 timvisare
 tina
@@ -10650,6 +10705,7 @@ traktat
 traktering
 traktor
 trall
+trall  2
 tralla
 tramp
 trampcykel
@@ -10852,6 +10908,7 @@ tvärslå
 tvärvetenskap
 tvätt
 tvättbjörn
+tvättbräda
 tvättkorg
 tvättlina
 tvåa
@@ -10893,12 +10950,14 @@ tät
 täte
 täthet
 tätort
+tätplacering
 tätting
 tävling
 tävlingsjury
 tå
 tåfjutt
 tågvärd
+tågända
 tåhätta
 tåhävning
 tåkappa
@@ -11363,6 +11422,7 @@ utövare
 uv
 uvular
 vaccination
+vacklan
 vad
 vad  2
 vadare
@@ -11614,11 +11674,13 @@ vinkelspets
 vinnare
 vinnarskalle
 vinning
+vinranka
 vinruta
 vinsch
 vinskänk
 vinst
 vinstandel
+vinstock
 vinter
 vinterek
 vinterhämpling
