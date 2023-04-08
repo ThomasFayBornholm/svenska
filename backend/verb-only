@@ -25,6 +25,7 @@ akta
 akta sig
 aktivera
 aktualisera
+alienera
 alliera sig
 allokera
 alludera
@@ -526,6 +527,7 @@ beslå
 bespara
 bespisa
 bestiga
+bestjäla
 bestraffa
 bestrida
 bestryka
@@ -691,6 +693,7 @@ brotta
 brottas
 bruka
 bry sig
+brygga
 brygga över
 bryna
 bryta
@@ -816,6 +819,7 @@ definiera
 definiera om
 degenerera
 degradera
+deklamera
 deklarera
 deklinera
 dekorera
@@ -928,6 +932,9 @@ driva upp
 driva ut
 droga
 droppa
+dropptorka
+drulla
+drumla
 drunkna
 drunkning
 dryfta
@@ -1061,6 +1068,7 @@ exponera
 exportera
 expropriera
 extrahera
+extrainkalla
 extrapolera
 fabricera
 fabulera
@@ -1094,6 +1102,7 @@ felcitera
 fermentera
 fernissa
 festa
+feströka
 fetma
 fetna
 fickparkera
@@ -2265,6 +2274,7 @@ inringa
 inropa
 inrymma
 inrätta
+inrätta sig
 insalta
 insamla
 inse
@@ -2459,6 +2469,7 @@ klibba
 klicka
 klinga
 klinga av
+klinga ut
 klinka
 klippa
 klippa sig
@@ -2580,6 +2591,7 @@ konfirmera
 konfiskera
 konfrontera
 konfundera
+kongruensböjning
 kongruera
 konjugera
 konka
@@ -2699,6 +2711,7 @@ kuppa
 kura
 kura ihop sig
 kurera
+kurra
 kursa
 kuscha
 kuska
@@ -3101,6 +3114,8 @@ multna
 mumsa
 mumsa i sig
 muntra upp
+mura
+mura igen
 murra
 musicera
 mygla
@@ -3557,6 +3572,7 @@ rea
 reagera
 realisera
 recensera
+recitera
 reda
 reda av
 reda sig
@@ -3799,6 +3815,7 @@ sammanfalla
 sammanfatta
 sammanfoga
 sammanföra
+sammangadda sig
 sammanhänga
 sammanjämka
 sammankalla
@@ -4200,6 +4217,7 @@ snagga sig
 snappa
 snappa upp
 snarka
+snaska
 snatta
 snedvrida
 snegla
@@ -4304,12 +4322,14 @@ sprida sig
 spridas
 springa
 sprita
+spritsa
 spritta
 sprudla
 spruta
 spränga
 sprängvärka
 sprätta
+sprätta  2
 spurta
 spy
 spy ur sig
@@ -5755,6 +5775,7 @@ yttra sig
 överträffa
 övertyga
 övervaka
+övervalla
 övervara
 övervinna
 övervintra

@@ -69,12 +69,14 @@
 (tortyr av) tredje graden
 (tredje) gången gillt
 (vad/var/varför) i all sin dar
+(vara med/ute) i svängen
 (vara ute) på hal is
 (vara) som hund och katt
 (vara) till sig
 (vara) under vapen
 (vid) full tid
 (vilja både) äta kakan och ha den kvar
+... och fan och hans mormor/moster
 ... och på den vägen är det
 ... och fan och hans mormor/moster
 Arons skägg
@@ -132,6 +134,7 @@ allt vad något heter
 allt är inte guld som glimmar
 alltid samma visa
 alter ego
+amerikansk fotboll
 ana oråd
 analytiska språk
 anfall är bästa försvar
@@ -157,6 +160,7 @@ backe upp och backe ner
 bakom lyckta/slutna dörrar
 bakom lås och bom
 bakre vokal
+balansera på slak lina
 bana väg för något
 bara till namnet
 barn och blomma
@@ -169,6 +173,7 @@ ber en ursäkt
 bereda väg(en) för någon/något
 berget födde en råtta
 beta hur en slipsten ska dras
+betingad reflex
 bevingat ord
 beväpnad till tänderna
 binda ris åt egen rygg
@@ -217,6 +222,7 @@ bo/leva i kappsäck
 bollen är/ligger hos någon
 bortom all ära och redlighet
 bringa någon om livet
+brinna i knutarna
 brinna som fnöske
 brottets bana
 brustet hjärta
@@ -362,14 +368,17 @@ domens dag
 don efter person
 dopp i grytan
 dra (det) tyngsta lasset
+dra (stora) växlar på något
 dra det kortaste strået
 dra det längsta strået
+dra en vals
 dra fördel av något
 dra fötterna efter sig
 dra in klorna
 dra jämnt
 dra ner byxorna på någon
 dra någon vid näsan
+dra något i långbänk
 dra på mun(nen)
 dra på trissor!
 dra sitt strå till stacken
@@ -383,11 +392,13 @@ dra/kasta ett löjets skimmer över något
 dra/rycka undan mattan för någon/något
 dra/skära alla över en kam
 dra/släpa benen efter sig
+dra/stryka ett streck över något
 drag under galoscherna
 dreja bi
 dricka kaffe på bit
 drivande hund
 du milde!
+du min skapare!
 du må tro att ...
 dum som en gås
 dum som ett spån
@@ -456,6 +467,7 @@ en storm i ett vattenglas
 en strid om ord
 en tro som kan försätta berg
 en tyst minut
+en ulv i fårakläder
 en vacker dag
 en viss potentat
 en vit fläck på kartan
@@ -485,6 +497,7 @@ ett rött skynke
 ett slag i ansiktet
 ett slag i luften
 ett slag under bältet
+ett streck i räkningen
 ett taget namn
 ett tu tre
 ett varnande exempel
@@ -604,6 +617,7 @@ få på tafsen
 få på truten
 få påökt
 få rött kort
+få se på andra bullar
 få se på annat
 få sin beskärda del
 få sin vilja fram
@@ -617,6 +631,7 @@ få spel
 få stora darren
 få stryka på foten
 få svar på tal
+få syn på någon/något
 få syn på någån/något
 få sätta livet till
 få tummen ur (arslet/ändan)
@@ -719,6 +734,7 @@ ge sig till tåls
 ge sig tusan på något
 ge upp andan
 ge vid handen
+ge/få betalt/igen för gammal ost
 gemene/menige man
 genom tiderna
 genvägar är (ofta) senvägar
@@ -763,6 +779,7 @@ guldkantade papper
 gyllene snittet
 gå (in) i väggen
 gå av stapeln
+gå bakom knuten
 gå bakom ryggen på någon
 gå bet (på något)
 gå brandvakt
@@ -793,6 +810,7 @@ gå i sömnen
 gå i taket (av ilska)
 gå man ur huse
 gå ner för räkning
+gå ner i varv
 gå någon djupt till sinnes
 gå någons ära förnär
 gå på gatan
@@ -823,6 +841,7 @@ gång på gång
 göra (en) stor affär av något
 göra (ett) stort nummer av något
 göra en höna av en fjäder
+göra en pudel
 göra en stor grej av något
 göra gällande
 göra heder åt något
@@ -899,6 +918,7 @@ ha någon i hasorna
 ha någon på tråden
 ha någon/något i sitt våld
 ha någon/något på gaffeln
+ha något emot någon/något
 ha något för ögonen
 ha något i bakfickan
 ha något i bakhuvudet
@@ -1006,6 +1026,7 @@ hämta andan
 hänga i luften
 hänga läpp
 hänga med huvudet
+hänga med i svängarna
 hänga på en skör tråd
 hänga på ett hår
 hänga på gärsgårn
@@ -1042,6 +1063,7 @@ hålla sig för skratt
 hålla sig i skinnet
 hålla sig på mattan
 hålla sig väl med någon
+hålla streck
 hålla ställningarna
 hålla stånd
 hålla tand för tunga
@@ -1097,6 +1119,7 @@ i ett för allt
 i ett nu
 i flygande fläng
 i fråga om
+i fyllan och villan
 i förbigående sagt
 i förekommande fall
 i första hand
@@ -1110,6 +1133,7 @@ i grunden
 i högan sky
 i högsta grad
 i klara verben
+i klingande mynt
 i klump
 i korta drag
 i kraft av
@@ -1206,6 +1230,7 @@ inte med bästa vilja i världen
 inte mer än jämnt
 inte mycket att hänga i gran(en)
 inte mycket att hänga i julgran(en)
+inte någon emot
 inte något/inget vidare
 inte på (några) villkors vis
 inte på långa vägar
@@ -1296,8 +1321,10 @@ klockan är bara barnet
 klok gubbe
 klok gumma
 klok som en bok/pudel/uggla
+klyva näbb
 klä sig i säck och aska
 klä sina tankar i ord
+klä skott för någon/något
 klädda kort
 knacka dörr
 knappt kunna stå på benen
@@ -1331,6 +1358,7 @@ komma till rätta med något
 komma till saken
 komma till sin rätt
 komma upp i smöret
+komma upp i varv
 komma ut ur garderoben
 komma/vara någon/något på spåren
 konform avbildning
@@ -1342,6 +1370,7 @@ kort och gott
 kort ränta
 kort sagt
 korta varor
+kost och logi
 kosta skjortan
 kratsa kastanjerna ur elden (för någon)
 kritisk upplaga
@@ -1369,6 +1398,7 @@ kvinnlig tronföljd
 känna marken bränna under fötterna
 känna marken gunga under fötterna
 känna någon (bara) till namnet
+känna någon på pulsen
 känna sig lätt om hjärtat
 känna sig som en annan/ny människa
 känna sig/vara tung i huvudet
@@ -1468,6 +1498,7 @@ lugna puckar
 lugnet före stormen
 lukta/smaka apa
 lura skjortan av någon
+lyckans ost
 lyfta på hatten för någon/något
 lyfta sig (själv) i håret
 lyfta/lätta på förlåten
@@ -1533,6 +1564,7 @@ låta tungan löpa
 låta tusen blommor blomma
 låta udda vara jämnt
 låta vänta på sig
+löpa linan ut
 löpande rigg
 löpande text
 lösa den gordiska knuten
@@ -1570,6 +1602,7 @@ med kropp och själ
 med liv och lust/själ
 med mera
 med namns nämnande
+med näbbar och klor
 med något i högsta hugg
 med nöd och näppe
 med oförrättat ärende
@@ -1585,14 +1618,17 @@ med öppna ögon
 medaljens/myntets baksida
 medaljens/myntets framsida
 mellan fyra ögon
+mellan hammaren och städet
 mellan skål och vägg
 mellan tummen och pekfingret
+mellan varven
 menlösa barns dag
 mer eller mindre
 mer och mer
 mera till namnet än till gagnet
 milda makter!
 minst sagt
+mitt i planeten
 mjuk fråga
 mjuk valuta
 mjuk vokal
@@ -1639,6 +1675,7 @@ nya kvastar sopar bäst
 nya stilen
 nya världen
 nypa sig i armen
+nyttig idiot
 när allt kommer omkring
 när andan faller på
 när det (väl) gäller
@@ -1681,7 +1718,9 @@ olympiska lekar
 om det kniper
 om det vill sig illa
 om det vill sig väl
+om inte annat
 ombytta roller
+optisk villa
 ord för ord
 ord och inga visor
 ordning på torpet
@@ -1697,6 +1736,7 @@ pengar under bordet
 persona grata
 persona non grata
 plan B
+planskild korsning
 platon(i)sk kärlek
 platt fall
 platt skatt
@@ -1716,6 +1756,7 @@ prins av blodet
 prisa sin lyckliga stjärna
 proportionella val
 prova/pröva vingarna
+pudelns kärna
 pund sterling
 på (sin) mammas gata
 på Guds försyn
@@ -1767,6 +1808,7 @@ på tu man hand
 på vinst och förlust
 på våta vägen
 på år och dag/dar
+på återseende!
 på öppet köp
 på/i det stora hela
 på/under småtimmarna
@@ -1868,11 +1910,13 @@ se i syne
 se ljuset i (slutet av) tunneln
 se långt efter någon
 se mellan/genom fingrarna med något
+se någon på något
 se någon/något över axeln
 se något genom rosafärgade glasögon
 se något i ett nytt ljus
 se om sitt hus
 se rött
+se spöken (mitt på ljusa dagen)
 se syner
 se tiden an
 se ut som (om) man sålt smöret och tappat pengarna
@@ -1988,6 +2032,7 @@ slå ihjäl/döda tiden
 slå in öppna dörrar
 slå klackarna i taket
 slå knut på sig själv
+slå mynt av (något)
 slå näven i bordet
 slå någon på fingrarna
 slå någon ur brädet
@@ -2016,6 +2061,7 @@ snabba ryck
 snart sagt
 snubblande nära
 som att tala till en vägg
+som en (annan) idiot
 som en blixt från en klar himmel
 som en flock vargar
 som en oljad blixt
@@ -2083,6 +2129,7 @@ spärrad utbildning
 spåren förskräcker
 stark som en björn/häst/oxe
 starka glas­ögon
+starka glasögon
 statens kaka är liten men säker
 statuera (ett) exempel
 steg för steg
@@ -2108,6 +2155,7 @@ strid på kniven
 struket mått
 stryka eld
 stryka flagg
+strykande åtgång
 sträcka på benen
 sträcka vapen
 strängt taget (adv.)
@@ -2117,6 +2165,7 @@ stup i ett
 stup i kvarten
 styra och ställa
 styra/vakta sin tunga
+styv i korken
 ställa allt till rätta
 ställa någon mot väggen
 ställa något på huvudet
@@ -2189,6 +2238,8 @@ sur som ättika
 surt förvärvade
 surt, sa räven om rönnbären
 svaga glas­ögon
+svaga glasögon
+svara/ge igen med samma mynt
 svart humor
 svart hål
 svart låda
@@ -2208,6 +2259,7 @@ svår sjö
 syllabisk vers
 synda på nåden
 synodisk månad
+synoptiska evangelierna
 syntetiska språk
 säga något rent ut
 säga sig själv(t)
@@ -2253,6 +2305,7 @@ sätta till alla klutar
 sätta värde på någon/något
 sätta/satsa allt på ett kort
 så (här/där) dags
+så (ända) in i baljan
 så (ända) in i vassen
 så att säga
 så fan heller!
@@ -2267,6 +2320,7 @@ så till sägandes
 så vind och skörda storm
 så vitt (jag vet)
 såta vänner
+söndra och härska
 ta avstånd från någon/något
 ta bladet från munnen
 ta dagen som den kommer
@@ -2348,6 +2402,7 @@ ta till vapen
 ta till vara
 ta tillfället i akt
 ta törn
+ta ut något i förskott
 ta ut sin rätt
 ta vara på någon/något
 ta vägen
@@ -2361,6 +2416,7 @@ tacka vet jag någon/något
 tackar (allra) mjukast!
 tackar som frågar!
 takt och ton
+tala allvar med någon
 tala fritt ur hjärtat
 tala för döva öron
 tala för varan
@@ -2392,6 +2448,7 @@ tids nog
 tiga som muren
 tigga stryk
 till dels
+till den verkan det hava kan
 till en början
 till en del
 till exempel
@@ -2417,6 +2474,7 @@ titta för djupt i glaset
 titta stort på någon
 titta under lugg
 titta/se i månen efter något
+tjuta med ulvarna
 tom i bollen
 tomma ord
 totalt krig
@@ -2425,6 +2483,7 @@ trampa vatten
 traska patrull(o)
 tre kronor
 tre vise män
+tredje klassens någon/något
 tredje man
 tredje världen
 trettioåriga kriget
@@ -2455,12 +2514,14 @@ tänka högt
 tänka på (den) senare delen
 törsta ihjäl
 udda vecka
+undandra sig någons bedömning
 undantaget som bekräftar regeln
 under alla omständigheter
 under bar himmel
 under falsk flagg
 under hand
 under knapphetens kalla stjärna
+under strecket
 under tiden
 underordnad sats
 universell tid
@@ -2510,6 +2571,7 @@ vara dagen efter
 vara den resandes ensak
 vara den vuxna i rummet
 vara dödens lammunge
+vara en annan femma
 vara en man kort
 vara en skugga av sitt forna jag
 vara en syn för gudar
@@ -2598,9 +2660,11 @@ vara stor i käften
 vara stor i maten
 vara stor i orden
 vara stor i truten
+vara svag för någon/något
 vara tidens melodi
 vara till sin fördel
 vara trög i magen
+vara uppe i varv
 vara uppe med solen
 vara ur räkningen
 vara ur slag
@@ -2618,6 +2682,7 @@ vara/stå på talefot med någon
 varg i veum
 variera konfekten
 varken fågel eller fisk
+varken hackat eller malet
 varma färger
 varvad utbildning
 vecka ut och vecka in
@@ -2651,6 +2716,7 @@ visa klorna
 visa lejonklo
 visa någon på dörren
 visa någon till rätta
+visa sig på styva linan
 visa/bestämma var skåpet ska stå
 visa/se vad någon går för
 visst fan!

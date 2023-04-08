@@ -89,6 +89,7 @@ airbag
 akademi
 akalkuli
 akilleshäl
+akillesreflex
 akolut
 akolyt
 akronym
@@ -127,6 +128,8 @@ alkalimetall
 alkan
 alkohol
 alkoholfri
+alkoholist
+alkoholistanstalt
 allegori
 allemansrätt
 allergi
@@ -187,6 +190,7 @@ anakoret
 anakronism
 analfabet
 analfabetism
+analogi
 analogibildning
 analogislut
 analys
@@ -350,6 +354,7 @@ anordning
 anorektiker
 anorexi
 anpart
+anpassling
 anpassning
 anpassningsgrupp
 anrättning
@@ -594,6 +599,7 @@ assignation
 assistent
 association
 assonans
+asteni
 asterisk
 asteroid
 astigmatism
@@ -833,6 +839,7 @@ avsändare
 avsättning
 avsökare
 avsöndring
+avtackning
 avtagsväg
 avtalsfrihet
 avtalspension
@@ -866,6 +873,7 @@ baccarat
 back
 backe
 backhoppare
+backslash
 backspegel
 backspänning
 backstugusittare
@@ -903,6 +911,7 @@ bakterie
 bakteriofag
 bakugn
 bal
+bal  2
 balans
 balansgång
 balansräkning
@@ -913,6 +922,7 @@ baljväxt
 balk
 balkong
 ballad
+balsamvinäger
 baluster
 balustrad
 bambu
@@ -983,8 +993,10 @@ bastu
 basun
 batalj
 bataljon
+bataljonschef
 batch
 batteridrift
+baud
 bearbetning
 bearnaisesås
 beat
@@ -1432,6 +1444,7 @@ biskop
 biskopsstol
 biskvi
 bismak
+biståndsbedömare
 bit
 biverkan
 biverkning
@@ -1573,6 +1586,7 @@ boktryckare
 boktryckarkonst
 bolagsstämma
 boll
+bollbehandling
 bollkalle
 bollpojke
 bolstervar
@@ -1585,6 +1599,7 @@ bombmatta
 bombning
 bombplan
 bomull
+bomullsbal
 bonad
 bonde
 bondehär
@@ -1669,6 +1684,7 @@ brandsläckare
 brandsoldat
 brandspruta
 brandstation
+brandsyn
 brandvarnare
 bransch
 brant
@@ -1712,6 +1728,7 @@ broschyr
 broskfisk
 broskvävnad
 brottning
+brottsbalk
 brottslighet
 brottsling
 browser
@@ -1733,6 +1750,7 @@ brutalitet
 bruttoinkomst
 bruttovikt
 brygga
+bryggning
 brylling
 brysselkål
 brytning
@@ -1974,6 +1992,7 @@ cirkulationsplats
 cirkus
 cistern
 citadell
+citation
 citrin
 citron
 citrongräs
@@ -2011,6 +2030,7 @@ coroner
 cosinus
 cotangens
 coupe
+cowboy
 cracker
 crawl
 cred
@@ -2279,6 +2299,7 @@ distribution
 distributör
 divergens
 diversehandel
+divis
 division
 dixieland
 djungel
@@ -2286,6 +2307,7 @@ djupled
 djupverkan
 djurläkare
 djurpark
+djurpsykologi
 djurrätt
 djurvän
 djävul
@@ -2346,6 +2368,7 @@ drill
 drillborr
 drilling
 drink
+drinkare
 driv
 driva
 drivbänk
@@ -2391,7 +2414,9 @@ dumhet
 dumper
 dumskalle
 dumsnut
+dunderfiasko
 dunge
+dunjacka
 dunk
 dunst
 duration
@@ -2710,6 +2735,7 @@ existens
 exklusion
 exkretion
 exkurs
+exoplanet
 exorcist
 expansion
 expedit
@@ -2853,6 +2879,7 @@ ferie
 fernissa
 fest
 festival
+feströkare
 festtalare
 fetisch
 fetma
@@ -2887,14 +2914,13 @@ filt
 filé
 fimp
 final
-finans
 finansiering
+finansiär
 finanskris
 finansminister
 finanspolitik
 finansrådgivare
 finess
-finger
 fingernagel
 fingerspets
 fingertopp
@@ -3070,9 +3096,11 @@ folksaga
 folkstorm
 folksägen
 folktro
+folkvett
 follikel
 fon
 fond
+fondemission
 fonetik
 fonologi
 forcering
@@ -3273,6 +3301,7 @@ fux
 fylking
 fylla
 fyllecell
+fyllerist
 fyllning
 fylltratt
 fyndighet
@@ -3322,6 +3351,7 @@ fästning
 fågel
 fågelholk
 fågelsång
+fåglalåt
 fålla
 fång
 fånga
@@ -3864,6 +3894,7 @@ gjutform
 glaciär
 gladiator
 glans
+glansroll
 glasbur
 glasnost
 glass
@@ -3891,6 +3922,7 @@ glödlampa
 glömska
 gnagare
 gnejs
+gnidare
 gnista
 gnoding
 gnom
@@ -3920,6 +3952,7 @@ golf
 golfare
 golfboll
 golfplats
+golfrunda
 golfspelare
 golftävling
 golvlampa
@@ -4033,6 +4066,7 @@ gryning
 gryta
 grytstek
 grädde
+gräddsnäcka
 gräddtårta
 gräns
 gränsbevakning
@@ -4150,6 +4184,7 @@ gångbana
 gångbro
 gångfot
 gånggrift
+gånglåt
 gångväg
 gård
 gårdag
@@ -4315,6 +4350,7 @@ hedersplats
 hederssak
 hedning
 hegemoni
+hejaramsa
 hejare
 hejarklack
 hejduk
@@ -4325,6 +4361,7 @@ helg
 helgd
 helgdag
 helhet
+helhetssyn
 helighet
 helikopter
 helkonserv
@@ -4467,7 +4504,9 @@ husar
 husarrest
 husbil
 husbonde
+husesyn
 hushållning
+hushållsassistent
 hushållsrulle
 husmanskost
 husmor
@@ -4530,6 +4569,7 @@ hälla
 hälsa
 hälsning
 hälsningsfras
+hälsokost
 hälsovård
 hälta
 hämnd
@@ -4994,6 +5034,7 @@ intervjuundersökning
 intolerans
 intonation
 intoxikation
+intressegemenskap
 intresseorganisation
 intressesfär
 intrig
@@ -5201,6 +5242,7 @@ kabinettsfråga
 kabyss
 kadens
 kaffebricka
+kaffebryggare
 kaffebuske
 kaffeböna
 kaffedrink
@@ -5317,6 +5359,7 @@ kapplöpning
 kapprustning
 kappsäck
 kapsel
+kapsyl
 kapten
 kapuschong
 karakteristik
@@ -5354,6 +5397,7 @@ karta
 kartager
 kartbild
 kartbok
+kartell
 kartläggning
 kartläsare
 kartmätare
@@ -5567,6 +5611,7 @@ knytnäve
 knäckare
 knäled
 knäppning
+knäreflex
 knäskål
 knöl
 ko
@@ -5599,6 +5644,7 @@ kokvrå
 kola
 kolare
 kolartro
+kolborste
 koldioxid
 koleld
 kolera
@@ -5610,6 +5656,7 @@ koll
 kollaboratör
 kollaps
 kollega
+kollekt
 kollektion
 kollektivism
 kollektivtrafik
@@ -5636,6 +5683,7 @@ kometkarriär
 komfort
 komfortzon
 komik
+komiker
 kommandobrygga
 kommandoton
 kommendant
@@ -5808,6 +5856,8 @@ korg
 korgboll
 korint
 kork
+korkskruv
+korksula
 kornblixt
 kornknarr
 korp
@@ -5863,6 +5913,7 @@ krabba
 kraft
 kraftansträngning
 kraftkarl
+kraftlöshet
 kraftmätning
 kraftöverföring
 krage
@@ -5924,6 +5975,7 @@ krocket
 krockkudde
 krog
 krogkund
+krogsväng
 krok
 krokant
 kromosom
@@ -5995,6 +6047,7 @@ kuliss
 kull
 kulle
 kullerbytta
+kulmage
 kulmen
 kulpenna
 kulspetspenna
@@ -6034,6 +6087,7 @@ kurd
 kuriositet
 kurir
 kurort
+kurra
 kurs
 kursdeltagare
 kursgård
@@ -6275,9 +6329,11 @@ ledighet
 ledkapsel
 ledning
 ledningsförmåga
+ledsagare
 ledskål
 ledsnad
 ledstång
+ledsyn
 ledtråd
 legation
 legend
@@ -6372,13 +6428,16 @@ livsform
 livsföring
 livskraft
 livsleda
+livsledsagare
 livslängd
 livsstil
+livssyn
 livstid
 livsuppgift
 livvakt
 ljudabsorbent
 ljudboj
+ljudförstärkare
 ljudhastighet
 ljudlag
 ljudlära
@@ -6411,6 +6470,7 @@ logotyp
 lojalitet
 lokal
 lokalfärg
+lokaliseringspolitik
 lokalpress
 lokalsamtal
 lokaltidning
@@ -6618,6 +6678,7 @@ lön
 löneförhöjning
 löneglidning
 lönekaka
+löneklass
 lönelyft
 lönerörelse
 lönn
@@ -6634,6 +6695,7 @@ lösen
 lösning
 lösöreauktion
 lövtäkt
+machete
 mack
 macka
 mackapär
@@ -6775,6 +6837,7 @@ master
 masturbation
 masugn
 mat
+matberedare
 match
 matchboll
 matematik
@@ -6811,6 +6874,7 @@ medalj
 medaljong
 medaljör
 medarbetare
+medbedömare
 medborgaranda
 medborgare
 medeldistans
@@ -6827,6 +6891,7 @@ medhjälp
 medhjälpare
 median
 medicin
+medicinboll
 medisterkorv
 meditation
 medkänsla
@@ -7321,6 +7386,8 @@ nervknut
 nervositet
 nervtråd
 nesa
+nettoinkomst
+neuralgi
 neurit
 neuros
 neutralitet
@@ -7369,6 +7436,7 @@ nostalgi
 not
 not  2
 nota
+notapparat
 notarie
 notation
 notering
@@ -7395,6 +7463,7 @@ nybörjare
 nyck
 nyckel
 nyckelpiga
+nyemission
 nyetablering
 nyfikenhet
 nygrad
@@ -7563,6 +7632,7 @@ omröstning
 oms
 omskiftare
 omskrivning
+omslutning
 omsorg
 omställning
 omständighet
@@ -7604,6 +7674,7 @@ order
 orderstock
 ordföljd
 ordförande
+ordklass
 ordlek
 ordlista
 ordning
@@ -7618,6 +7689,7 @@ oreda
 oregano
 orenlighet
 organisation
+organisatör
 organism
 organist
 orgel
@@ -7630,6 +7702,7 @@ orienteringspunkt
 orienteringstavla
 orienteringstävling
 originalitet
+oriktighet
 orimlighet
 ork
 orkan
@@ -7747,6 +7820,7 @@ parfym
 paria
 paritet
 park
+parkering
 parkeringsplats
 parnass
 parningslek
@@ -7777,6 +7851,7 @@ pastej
 pastor
 pastoral
 pastorsadjunkt
+patellarreflex
 patient
 patientnämnd
 patina
@@ -8139,6 +8214,7 @@ processor
 producent
 produkt
 produktion
+produktionsapparat
 produktivitet
 profession
 professor
@@ -8219,6 +8295,8 @@ puff
 puka
 pulka
 pulpet
+puls
+puls  2
 pulsåder
 pulver
 pulversläckare
@@ -8263,6 +8341,7 @@ påfyllning
 påföljd
 påk
 påkörning
+påläggning
 påläggskalv
 påpetare
 påringning
@@ -8370,6 +8449,7 @@ regering
 regi
 regim
 region
+regionalpolitik
 regissör
 registrator
 registrering
@@ -8601,6 +8681,7 @@ rumpstek
 rumsarrest
 rumstemperatur
 rumsväxt
+runda
 rundfråga
 rundkyrka
 rundradio
@@ -8712,6 +8793,7 @@ rödsot
 röja
 röjning
 rök
+rökare
 rökdetektor
 rökgas
 rökgång
@@ -9074,6 +9156,7 @@ singelolycka
 singular
 sinkadus
 sinnebild
+sinnesanalogi
 sinnesfrid
 sinnesrörelse
 sinnessjukdom
@@ -9209,6 +9292,7 @@ skatnäva
 skatt
 skattebetalare
 skattebonde
+skatteflykt
 skattehöjning
 skattesats
 skattesänkning
@@ -9228,6 +9312,7 @@ skenvärld
 skepnad
 skeppare
 skepparexamen
+skepparhistoria
 skepparkrans
 skeppsapotek
 skeppsbro
@@ -9291,6 +9376,7 @@ skolfrånvaro
 skolgång
 skolgård
 skolpeng
+skolpojke
 skolskjutning
 skomakare
 skongång
@@ -9332,6 +9418,7 @@ skruvnyckel
 skruvtving
 skräck
 skräckfilm
+skräcksyn
 skräcködla
 skräddare
 skrämsel
@@ -9425,6 +9512,7 @@ slaktare
 slalom
 slam
 slamkrypare
+slamsa
 slang
 slant
 slantsingling
@@ -9592,6 +9680,7 @@ snäppa
 snärpa
 snärt
 snäsa
+snåljåp
 snö
 snöboll
 snödriva
@@ -9698,6 +9787,7 @@ speaker
 specialist
 specialistläkare
 specialisttandläkare
+specialitet
 specifikation
 speditör
 spegel
@@ -9740,6 +9830,7 @@ splittring
 spoiler
 spole
 spoling
+sponsor
 spont
 sporre
 sport
@@ -10029,6 +10120,7 @@ sträva
 strävan
 stråhatt
 stråk
+stråkinstrument
 strålblomma
 stråle
 strålglans
@@ -10040,6 +10132,7 @@ stråtrövare
 ström
 strömbegränsning
 strömbrytare
+strömkantring
 strömming
 strömmätare
 strömning
@@ -10229,6 +10322,7 @@ syndikalism
 syndikat
 synergi
 synergism
+synestesi
 synhåll
 synkop
 synkope
@@ -10239,6 +10333,7 @@ synnerhet
 synnerv
 synod
 synonym
+synoptiker
 synpunkt
 syntax
 syntes
@@ -10256,6 +10351,7 @@ syster
 systerdotter
 systerson
 syv
+säckpipa
 säd
 sädesavgång
 sädesskyl
@@ -10379,6 +10475,7 @@ tandvärk
 tandvård
 tangens
 tangent
+tank
 tanke
 tankegång
 tankemöda
@@ -10549,6 +10646,7 @@ tillintetgörelse
 tillit
 tillkommelse
 tillkomst
+tillkännagivelse
 tillrättavisning
 tillsats
 tillskärare
@@ -10666,6 +10764,7 @@ toppända
 topspin
 tordönsröst
 tordönsstämma
+torkare
 torktumlare
 tornado
 tornering
@@ -10697,6 +10796,7 @@ trafikomläggning
 trafiksignal
 trafikskola
 trafikstockning
+trafikvett
 tragedi
 tragik
 trailer
@@ -10798,6 +10898,7 @@ truck
 trumma
 trumpet
 trupp
+trust
 trut
 tryckaccent
 tryckare
@@ -10842,6 +10943,7 @@ tröska
 tröskel
 tröst
 trötthet
+tsunami
 tub
 tuba
 tuberkulos
@@ -11446,6 +11548,7 @@ vakuumpump
 val
 valack
 valaffisch
+valapparat
 valberedning
 valdag
 valfilm
@@ -11530,6 +11633,7 @@ varieté
 varmgång
 varmluft
 varmluftballong
+varmvattenberedare
 varning
 varningsklocka
 varseblivning
@@ -11650,6 +11754,7 @@ vinda
 vindel
 vindeltrappa
 vindhastighet
+vindkantring
 vindkraft
 vindkraftspark
 vindling
@@ -11707,6 +11812,7 @@ visning
 visp
 vispgrädde
 vispning
+visselpipa
 visshet
 vistelse
 vitalism
@@ -12197,6 +12303,7 @@ zygot
 åklagare
 åklagarmyndighet
 åkning
+åkomma
 åkpåse
 åksjuka
 åktur
