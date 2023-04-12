@@ -430,6 +430,7 @@ betänklig
 betänksam
 beundransvärd
 bevekande
+bevekelsegrund
 bevingad
 bevuxen
 bevågen
@@ -476,6 +477,7 @@ blind
 blivande
 blixtsnabb
 blodfattig
+blodfull
 blodig
 blodlös
 blodtörstig
@@ -627,6 +629,7 @@ diametral
 didaktisk
 dieseldriven
 diffus
+diger
 digital
 diktatorisk
 dilettantisk
@@ -640,6 +643,7 @@ disciplinär
 disig
 diskontinuerlig
 diskret
+diskrimineringsgrund
 diskutabel
 disparat
 disponibel
@@ -717,8 +721,6 @@ eftergymnasial
 efterhängsen
 efterklok
 efterlevande
-efterlevnad
-efterlyst
 efterlängtad
 efterlåten
 eftersinnande
@@ -965,6 +967,7 @@ flytbar
 flyttbar
 fläckfri
 fläckig
+fläckvis
 fläng
 flängd
 flärdfull
@@ -985,6 +988,8 @@ fortlöpande
 fossil
 fragil
 fragmentarisk
+fraktal
+framavlad
 framfusig
 framförliggande
 framgångsrik
@@ -1017,9 +1022,7 @@ fridfull
 fridsam
 frigjord
 frigående
-frihetsberövad
 frikostig
-frilagd
 frimodig
 frisk
 frispråkig
@@ -1049,7 +1052,6 @@ ful
 full
 fullbokad
 fullfjädrad
-fullgjord
 fullgod
 fullkomlig
 fullmatad
@@ -1093,6 +1095,7 @@ fåmäld
 fången
 fånig
 fåordig
+fåtalig
 fåvitsk
 föga
 följande
@@ -1106,11 +1109,11 @@ förbaskad
 förbehållsam
 förberedande
 förberedd
-förbestämd
 förbi
 förbipasserande
 förbittrad
 förbjuden
+förbluffande
 förbunden
 fördelaktig
 fördetta
@@ -1279,6 +1282,7 @@ gemen
 gemensam
 gemytlig
 gen
+genant
 generad
 generell
 generisk
@@ -1371,6 +1375,7 @@ gredelin
 grekisk
 grekisk-ortodox
 grekisk-romersk
+grinig
 gripande
 gripen
 gropig
@@ -1388,6 +1393,7 @@ gruvlig
 grym
 gräll
 grälsjuk
+gränjävlig
 gränslös
 gränsöverskridande
 gräsbevuxen
@@ -1547,6 +1553,7 @@ hygglig
 hygienisk
 hyperkänslig
 hypokondrisk
+hädangången
 hädisk
 häftig
 hälsosam
@@ -1614,8 +1621,12 @@ högprofilerad
 högskoleförberedande
 högspänd
 högtidlig
+högtravande
+högtstående
 högtysk
 högutbildad
+högväxt
+högvördig
 högättad
 höjd
 hörande
@@ -1682,6 +1693,7 @@ inbyggd
 inbördes
 incestuös
 indefinit
+indelningsgrund
 indignerad
 indirekt
 indisk
@@ -1738,6 +1750,7 @@ innerlig
 innersta
 innevarande
 innovativ
+inofficiell
 inomvärldslig
 inpiskad
 inre
@@ -1752,6 +1765,7 @@ inskränkt
 inslagen
 insolvent
 instabil
+instinktiv
 institutionell
 inställbar
 inställd
@@ -1788,6 +1802,7 @@ intersex
 intersexuell
 interurban
 intetsägande
+intilliggande
 intim
 intolerant
 intorkad
@@ -1796,6 +1811,7 @@ intresserad
 intresseväckande
 intrigant
 intrikat
+intuitiv
 invariant
 invecklad
 invers
@@ -1864,6 +1880,7 @@ kallblodig
 kallhamrad
 kallsinnig
 kalvinistisk
+kameral
 kammarlärd
 kamratlig
 kanadensisk
@@ -2068,6 +2085,7 @@ kurdisk
 kuriös
 kursiv
 kuslig
+kustnära
 kvadratisk
 kvalfull
 kvalificerad
@@ -2110,6 +2128,7 @@ könsöverskridande
 labil
 lack
 laddad
+lagbunden
 lagd
 laglig
 lagom
@@ -2450,6 +2469,7 @@ modig
 modlös
 mogen
 moj
+molekylär
 molnfri
 molnig
 monarkisk
@@ -2522,6 +2542,7 @@ möjlig
 mör
 mörk
 mörklagd
+mörkrädd
 naggande
 naiv
 naken
@@ -2536,6 +2557,7 @@ nativ
 nattgammal
 nattlig
 nattstånden
+naturfärgad
 naturlig
 naturnära
 nazistisk
@@ -2701,6 +2723,7 @@ odräglig
 oduglig
 odygdig
 odödlig
+odöpt
 oeftergivlig
 oefterhärmlig
 oefterrättlig
@@ -2833,6 +2856,7 @@ olovlig
 olycklig
 olycksalig
 olycksbådande
+olycksdrabbad
 olympisk
 olämplig
 olärd
@@ -2849,6 +2873,7 @@ omedelbar
 omedgörlig
 omedveten
 omfattande
+omfångsrik
 omgående
 omild
 omisskännlig
@@ -2940,9 +2965,11 @@ orörlig
 osagd
 osammanhängande
 osams
+osann
 osannolik
 oschyst
 osedlig
+osedvanlig
 osjälvisk
 osjälvständig
 oskarp
@@ -3206,6 +3233,7 @@ ram
 randig
 rangerad
 ranglig
+rankig
 rapp
 rar
 rasande
@@ -3312,6 +3340,7 @@ ruffig
 ruggig
 rumslig
 rund
+rundhyllt
 rundnätt
 rusig
 ruskig
@@ -3347,6 +3376,7 @@ rådande
 rådgivande
 rådig
 rådlig
+rådlös
 rådvill
 röd
 rödbrokig
@@ -3467,6 +3497,7 @@ sexig
 sexsiffrig
 sexuell
 sidoordnad
+silkeslen
 silveraktig
 singular
 sinnessvag
@@ -3550,6 +3581,7 @@ skicklig
 skild
 skildkönad
 skiljaktig
+skinntorr
 skjutbar
 skogstäckt
 skoj
@@ -3558,7 +3590,6 @@ skojig
 skolad
 skoningslös
 skonsam
-skorsten
 skotskrutig
 skottsäker
 skral
@@ -3682,6 +3713,7 @@ snobbig
 snopen
 snusförnuftig
 snuskig
+snustorr
 snygg
 snäll
 snäv
@@ -3775,6 +3807,7 @@ stingslig
 stollig
 stolpig
 stolt
+stolts
 stor
 storartad
 storblommig
@@ -3786,6 +3819,7 @@ storvulen
 storväxt
 straight
 stram
+strapatsrik
 strategisk
 streetsmart
 stridbar
@@ -3811,16 +3845,17 @@ stupfull
 stupid
 stygg
 styv
+styvmoderlig
 styvnackad
 ställbar
 ställföreträdande
 ständig
-stävjande
 stående
 ståndaktig
 ståndsmässig
 ståtlig
 stökig
+störig
 stött
 stötvis
 subjektiv
@@ -3853,6 +3888,7 @@ svensk
 svenskspråkig
 svettig
 svidande
+sviklig
 svimfärdig
 svinaktig
 svindlande
@@ -3862,6 +3898,7 @@ svärmisk
 svår
 svårartad
 svårflörtad
+svårframkomlig
 svårhanterlig
 svårslagen
 svårtillgänglig
@@ -4037,6 +4074,7 @@ trumpen
 trygg
 trygghetsskapande
 träaktig
+träffad
 träffande
 träfri
 trådlös
@@ -4104,6 +4142,7 @@ underbar
 underbemannad
 underblåst
 underdånig
+undergiven
 underhållande
 underjordisk
 underkänd
@@ -4468,6 +4507,7 @@ vulgär
 vuxen
 väderberoende
 vägledande
+välbehållen
 välbekant
 välbemedlad
 välbeställd
@@ -4489,6 +4529,7 @@ vällustig
 välmenande
 välmående
 välnärd
+väloljad
 välplacerad
 välplanerad
 välsedd
