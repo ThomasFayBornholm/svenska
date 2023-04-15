@@ -178,6 +178,7 @@ amnesti
 amning
 amorbåge
 amortering
+amperemeter
 amplitud
 ampull
 amputation
@@ -962,6 +963,7 @@ barmark
 barmhärtighet
 barnamördare
 barnatro
+barnavårdscentral
 barnbespisning
 barncykel
 barndom
@@ -980,6 +982,7 @@ barntillsyn
 barnvagn
 barnvakt
 barock
+barometer
 baron
 barriär
 barservering
@@ -2895,6 +2898,7 @@ favör
 fax
 feature
 feber
+febertermometer
 februari
 federation
 feedback
@@ -3796,6 +3800,7 @@ galning
 galopp
 galopptävling
 galosch
+galvanometer
 gamet
 gamling
 gammelfarfar
@@ -4353,6 +4358,7 @@ handboja
 handbok
 handboll
 handbroms
+handdator
 handduk
 handel
 handelsgödsel
@@ -4443,6 +4449,7 @@ heltid
 helton
 heltäckningsmatta
 hembygdsgård
+hemdator
 hemfalla
 hemgift
 hemhjälp
@@ -5938,6 +5945,7 @@ konvektion
 konvention
 konvergens
 konversation
+konversion
 konvoj
 konvulsion
 kooperation
@@ -6022,6 +6030,7 @@ kostymbal
 kota
 kotlett
 kotlettfisk
+kotpelare
 kotte
 kovändning
 krabba
@@ -6245,6 +6254,7 @@ kvartsfart
 kvartsfinal
 kvast
 kverulans
+kvicksilverpelare
 kviga
 kvinna
 kvinnlighet
@@ -6834,6 +6844,8 @@ maggrop
 magi
 magister
 magnet
+magnetism
+magnetisör
 magsaft
 magsäck
 magåkomma
@@ -8216,6 +8228,7 @@ pleonasm
 plikt
 plog
 plomb
+plombering
 plugg
 plump
 plundring
@@ -8836,6 +8849,7 @@ rost
 rostsvamp
 rot
 rotation
+rotfyllning
 rotogravyr
 rotselleri
 rotting
@@ -10003,6 +10017,7 @@ spelning
 spelplan
 spelöppning
 spenat
+spene
 sperma
 speta
 spets
@@ -10366,6 +10381,7 @@ stuss
 stut
 styckning
 styggelse
+styr
 styrekonom
 styrelse
 styresman
@@ -10374,6 +10390,7 @@ styrketräning
 styrning
 styrränta
 styrsel
+styrstång
 styvdotter
 styvfar
 styvmor
@@ -10679,6 +10696,7 @@ tampong
 tand
 tandem
 tandemcykel
+tandfyllning
 tandkräm
 tandlossning
 tandläkare
@@ -11228,7 +11246,6 @@ tvetydighet
 tvilling
 tvist
 tvistighet
-tvivel
 tvären
 tvärflöjt
 tvärgata
@@ -12073,6 +12090,7 @@ volley
 volleyboll
 volontär
 volt
+voltmeter
 volym
 votering
 vovve

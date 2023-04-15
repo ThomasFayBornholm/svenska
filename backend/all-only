@@ -107,6 +107,7 @@ alternera
 amerikansk fotboll
 amma
 amortera
+amperemeter
 amputera
 ana
 ana oråd
@@ -122,6 +123,7 @@ andas in
 andas ut
 andra
 andrahandsvärde
+aneroidbarometer
 anfalla
 anfräta
 anfäkta
@@ -140,6 +142,7 @@ anhopa
 anhopa sig
 anhängiggöra
 anhålla
+animal magnetism
 animera
 ankarboj
 ankarspel
@@ -540,10 +543,14 @@ banta
 bara skrapa på ytan
 barka
 barlasta
+barnarbete
+barnavårdscentral
 barnbespisning
+barnlös
 barnsbörd
 barntillsyn
 barnvakt
+barometer
 barometerstånd
 basa
 basera
@@ -1267,6 +1274,7 @@ det är högt i tak
 det är illa vulet
 det är inte klokt
 detachera
+detaljgranska
 detektera
 determinera
 determinism
@@ -1672,6 +1680,7 @@ fattas
 fattig som en kyrkråtta/lus/skåpråtta
 fattiga riddare
 feature
+febertermometer
 fegis
 fejka
 fela
@@ -2581,6 +2590,7 @@ gallerist
 gallra
 gallring
 galoppera
+galvanometer
 gama
 gammal som gatan
 gammal är äldst
@@ -2901,6 +2911,7 @@ gå i någons ledband
 gå i någons spår
 gå i putten
 gå i sjön
+gå i stöpet
 gå i taket (av ilska)
 gå ifrån
 gå igen
@@ -2927,6 +2938,7 @@ gå vägen
 gå åt
 gå åt pipan
 gå över
+gå över styr
 gå/barka åt skogen
 gång efter annan
 gång på gång
@@ -3024,6 +3036,7 @@ hamla
 hamna
 hamna på glasberget
 hamra
+handdator
 handel och vandel
 handelsgödsel
 handgranat
@@ -3039,6 +3052,7 @@ hantera
 hardjur
 hare
 harma
+harma sig
 harmonisera
 harmonium
 harmynt
@@ -3062,6 +3076,7 @@ helhetsintryck
 helhetssyn
 heliga tre konungar
 helsiden
+hemdator
 hemförlova
 heminredning
 hemkonsulent
@@ -4053,6 +4068,7 @@ kontrollstämpla
 kontrollör
 konungarnas konung
 konversera
+konversion
 konvertera
 kooperera
 koordinera
@@ -4109,6 +4125,7 @@ kosta
 kosta på
 kosta på sig
 kotlettfisk
+kotpelare
 kovända
 krackelera
 kraftansträngning
@@ -4235,6 +4252,8 @@ kvarndamm
 kvarstå
 kverulans
 kverulera
+kvicksilver
+kvicksilverpelare
 kvida
 kvitta
 kvittera
@@ -4368,6 +4387,7 @@ ledskål
 ledsyn
 legera
 legitimera
+legitimera sig
 lejonkula
 lek
 leka
@@ -4684,6 +4704,8 @@ mager som en skrika
 mager som ett skelett
 maggrop
 magnetisera
+magnetism
+magnetisör
 magra
 maila
 maka
@@ -5152,6 +5174,7 @@ nöta
 obducera
 obehörig vinst
 obemedlad
+obesvarad
 obs
 observera
 obstruera
@@ -5167,6 +5190,7 @@ offerera
 offra
 ofreda
 ofullborda
+oförlåtlig
 ogemen
 ogenomsläpplig
 ogenomtränglig
@@ -5254,6 +5278,7 @@ omvända
 omvärdera
 omväxla
 omändra
+omänsklig
 onanera
 ondgöra sig
 ondulera
@@ -5263,11 +5288,14 @@ operera
 operera bort
 operera in
 operera sig
+opersonlig
 opponera
 opponera sig
 optimism
 optimum
 optisk villa
+oral
+oral galvanism
 orda
 orderstock
 ordfogning
@@ -5309,6 +5337,7 @@ osedvanlig
 oskadliggöra
 oskick
 oskriven
+osystematisk
 otack är världens lön
 otrivsam
 ovana
@@ -5469,6 +5498,7 @@ plira
 plocka
 ploga
 plombera
+plombering
 plugga
 plundra
 plädera
@@ -5882,6 +5912,7 @@ rosengård
 rosta
 rota
 rotera
+rotfyllning
 rubba
 rubricera
 rucka
@@ -6163,6 +6194,11 @@ sentera
 separera
 servera
 servicenäring
+sex appeal
+sexliv
+sexmord
+sexualliv
+sexualmord
 shoppa
 sia
 siameskatt
@@ -6865,6 +6901,7 @@ spela över
 spelmansstämma
 spelöppning
 spendera
+spene
 spetsa till
 spetsa till sig
 spexa
@@ -7124,12 +7161,15 @@ stupfull
 stuprör
 stycka
 stympa
+styr
 styra
 styra om
 styra sig
 styra ut
 styrekonom
 styrka
+styrstång
+styrsystem
 styv i korken
 styvmoderlig
 städa
@@ -7239,6 +7279,8 @@ sudda
 suga
 suga av
 suga i
+suga musten ur någon
+suga på ramarna
 suga upp
 suga ut
 sula
@@ -7367,6 +7409,7 @@ sänka
 sänka ner
 sänka sig
 särbehandla
+särkullbarn
 särredovisa
 särskilja
 sätta
@@ -7455,6 +7498,8 @@ ta hem spelet
 ta i
 ta i med hårdhandskarna
 ta ifrån
+ta igen på gungorna
+ta igen på gungorna vad man förlorar på karusellen
 ta igen sig
 ta in
 ta intryck av något
@@ -7536,6 +7581,7 @@ talja
 tallticka
 tampas
 tamponera
+tandfyllning
 tandlossning
 tangera
 tank
@@ -7569,6 +7615,7 @@ tentera
 tentera upp
 teoretisk filosofi
 tequila
+termometer
 tesla
 testa
 tetanus
@@ -7906,6 +7953,7 @@ tvinga sig till
 tvinga till sig
 tvinna
 tvistefrö
+tvivelsutan
 tvivla
 tvära
 tvärbromsa
@@ -8591,6 +8639,7 @@ vitvaror
 vobba
 voja sig
 vokalist
+voltmeter
 vomera
 vricka
 vrida
@@ -8673,6 +8722,7 @@ värdesak
 värdesätta
 värja
 värka
+värkbruten
 världsläge
 värma
 värma upp
@@ -18545,7 +18595,6 @@ tvehågsen
 tveka
 tvekamp
 tvekan
-tvekande
 tveklös
 tveksam
 tvetydig
@@ -18567,7 +18616,6 @@ tvistighet
 tvivel
 tvivelaktig
 tvivla
-tvivlande
 tvär
 tvära
 tvärbromsa
