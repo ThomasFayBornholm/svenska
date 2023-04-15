@@ -915,6 +915,7 @@ baktanke
 bakterie
 bakteriofag
 bakugn
+bakväxel
 bal
 bal  2
 balans
@@ -975,6 +976,7 @@ barnsbörd
 barnsits
 barnskötare
 barnsäng
+barntillsyn
 barnvagn
 barnvakt
 barock
@@ -1485,8 +1487,10 @@ blindtarm
 blinker
 blinkning
 blixt
+blixthalka
 blockad
 blockbildning
+blockflöjt
 blockskiva
 blodbrist
 blodcirkulation
@@ -1660,7 +1664,12 @@ borttagning
 bortträngning
 borätt
 boskap
+boskapsdrift
+boskapshjord
+boskapsskötsel
 boskillnad
+bosnier
+bosniska
 boss
 bostad
 bostadsmarknad
@@ -1733,6 +1742,8 @@ brodd
 broder
 broförbindelse
 broms
+bromskloss
+bromspedal
 bronkit
 bronsmedalj
 bror
@@ -1851,6 +1862,7 @@ byfogde
 bygd
 bygdegård
 byggare
+byggkloss
 byggnad
 byggnadsarbetare
 byggnadskonst
@@ -2142,6 +2154,7 @@ damask
 dambinda
 damm
 dammanläggning
+dammlucka
 dammsugare
 dammtrasa
 damp
@@ -2297,6 +2310,8 @@ disciplin
 disharmoni
 disjunktion
 disk
+diskare
+diskborste
 diskho
 diskmaskin
 diskontinuitet
@@ -2428,6 +2443,7 @@ dubbelmoral
 dubbelnelson
 dubbelstjärna
 dubbelsäng
+dubblett
 duell
 duglighet
 duk
@@ -3099,10 +3115,12 @@ fläta
 flåbuse
 flåhacka
 flöjt
+flöjtist
 flört
-fnurra
+fnöskticka
 foderkaka
 fog
+fogning
 folie
 foliehatt
 folkbildning
@@ -3133,6 +3151,7 @@ fond
 fondemission
 fonetik
 fonologi
+fontän
 forcering
 fordonsskatt
 fordran
@@ -3157,6 +3176,7 @@ fortplantning
 fortsättning
 forward
 fosfor
+fosterdiagnostik
 fosterfördrivning
 fot
 fotbeklädnad
@@ -3202,6 +3222,7 @@ framtid
 framtidsman
 framtidstro
 framtoning
+framväxel
 framåtanda
 franchise
 franchising
@@ -3391,6 +3412,7 @@ fångenskap
 fångst
 fåra
 fårhage
+fårticka
 fåtölj
 föda
 födelse
@@ -3824,6 +3846,7 @@ gavel
 gegga
 geggamoja
 gejser
+gelbgjutare
 gelike
 gelé
 gem
@@ -3926,6 +3949,7 @@ gitarr
 givakt
 givare
 gjord
+gjutare
 gjutform
 glaciär
 gladiator
@@ -4172,6 +4196,7 @@ gulkropp
 gullhöna
 gumma
 gummibåt
+gummihandske
 gummiplatta
 gummistövel
 gumse
@@ -4255,6 +4280,9 @@ hagelbössa
 haj
 haka
 hake
+hakebössa
+halka
+halkkörning
 hall
 hallon
 hallucination
@@ -4484,6 +4512,7 @@ hjälpsändning
 hjälte
 hjältinna
 hjärna
+hjärnblödning
 hjärndöd
 hjärnskakning
 hjärtdöd
@@ -4546,6 +4575,7 @@ hunger
 hungersnöd
 hunk
 hurra
+hurts
 husar
 husarrest
 husbil
@@ -4564,7 +4594,9 @@ huva
 huvtröja
 huvudbonad
 huvuddel
+huvudentré
 huvudfaktor
+huvudingång
 huvudkudde
 huvudman
 huvudperson
@@ -4626,6 +4658,7 @@ hämtning
 händelse
 hänförelse
 hängbro
+hängivelse
 hängivenhet
 hängning
 hänryckning
@@ -4822,6 +4855,7 @@ identitet
 ideologi
 idiolekt
 idiot
+idioträddning
 idisslare
 idolatri
 idrott
@@ -4881,6 +4915,7 @@ inbetalning
 inbillning
 inbjudan
 inblandning
+inblick
 inbuktning
 incest
 incheckning
@@ -5482,6 +5517,8 @@ kassa
 kassation
 kasse
 kassett
+kassettradio
+kassler
 kassun
 kassör
 kassörska
@@ -5616,8 +5653,10 @@ klockarkärlek
 klockstapel
 klokskap
 klosett
+kloss
 klot
 klotblixt
+klots
 klubb
 klubba
 klubbafton
@@ -6196,6 +6235,7 @@ kvantitet
 kvarleva
 kvarlåtenskap
 kvarn
+kvarndamm
 kvarsittning
 kvarskatt
 kvarstad
@@ -6290,6 +6330,7 @@ kår
 kåserisamling
 kåsör
 kö
+köksingång
 köksmaskin
 köksrulle
 köksträdgård
@@ -6342,6 +6383,7 @@ lagring
 lagspelare
 lagstiftare
 lagstiftning
+laguppställning
 lakrits
 laktos
 lakun
@@ -6409,6 +6451,7 @@ ledighet
 ledkapsel
 ledning
 ledningsförmåga
+ledningsvävnad
 ledsagare
 ledskål
 ledsnad
@@ -6996,6 +7039,7 @@ mekaniker
 mekanism
 melanin
 melankoli
+mellandagsrea
 mellanhand
 mellanskillnad
 mellanstadielärare
@@ -7479,6 +7523,7 @@ nekrolog
 nektarin
 nelson
 nerv
+nervcell
 nervgift
 nervknut
 nervositet
@@ -7563,6 +7608,7 @@ nybyggnation
 nybörjare
 nyck
 nyckel
+nyckelknippa
 nyckelpiga
 nyemission
 nyetablering
@@ -7777,6 +7823,7 @@ ordblindhet
 orden
 order
 orderstock
+ordfogning
 ordföljd
 ordförande
 ordklass
@@ -7818,6 +7865,7 @@ ormbunke
 ormgrop
 ormslå
 oro
+oroshärd
 orosmoment
 orre
 orrhöna
@@ -7942,6 +7990,8 @@ partifärg
 partihandel
 partikularism
 partiledare
+partiordförande
+partipiska
 partisan
 partner
 passage
@@ -8197,6 +8247,7 @@ polcirkel
 policy
 polis
 polisbil
+polisdistrikt
 polismakt
 polisman
 polisstat
@@ -8284,6 +8335,7 @@ presentatör
 president
 preskription
 press
+pressare
 presskonferens
 pressylta
 prestanda
@@ -8339,6 +8391,7 @@ programförklaring
 programledare
 programmering
 programvara
+progress
 projektil
 projektion
 projektor
@@ -8520,10 +8573,12 @@ rationalism
 ratt
 ravin
 razzia
+rea
 reagens
 reaktion
 reaktionsdrift
 reaktor
+realisation
 realitet
 reality-tv
 realpolitik
@@ -8575,6 +8630,7 @@ regnbågshinna
 regnskog
 regnskur
 regnskvätt
+regress
 regression
 rehabilitering
 reinkarnation
@@ -8590,6 +8646,7 @@ relief
 reliefkarta
 religion
 religionsfrihet
+religionsförföljelse
 relästation
 rem
 rem  2
@@ -8950,6 +9007,7 @@ röv
 sabel
 sackaros
 sadel
+sadelstolpe
 safari
 safir
 saft
@@ -9107,6 +9165,7 @@ saxofon
 scanner
 scen
 scenvind
+schackpjäs
 schism
 schismatiker
 schizofreni
@@ -9577,6 +9636,7 @@ skurk
 skvadron
 skvallerpress
 skvätt
+skvätta
 sky
 skyddskår
 skyddspatron
@@ -9720,6 +9780,8 @@ smet
 smidning
 smilgrop
 smitta
+smitthärd
+smittkälla
 smocka
 smoking
 smuggling
@@ -9738,6 +9800,7 @@ smältost
 smältsäkring
 smärta
 smärtgräns
+smärtlindring
 småbil
 småbit
 småbonde
@@ -9761,6 +9824,7 @@ småpotatis
 småpåve
 småsak
 småskola
+småsnäppa
 småsparare
 småspik
 småstad
@@ -9855,6 +9919,7 @@ solitär
 solkatt
 solkräm
 solnedgång
+soloflygning
 sololja
 solpark
 solros
@@ -10341,6 +10406,7 @@ stödåtgärd
 stöld
 stör
 störning
+störtblödning
 stöt
 stötesten
 stötfångare
@@ -10605,6 +10671,7 @@ tallinje
 tallkottkörtel
 tallrik
 tallstekel
+tallticka
 talman
 tambur
 tamp
@@ -10685,6 +10752,7 @@ teolog
 teologi
 teori
 teosofi
+tequila
 terapeut
 term
 termin
@@ -10954,9 +11022,12 @@ tragedi
 tragik
 trailer
 trakt
+traktan
 traktat
 traktering
 traktor
+traktör
+traktörpanna
 trall
 trall  2
 tralla
@@ -11159,6 +11230,7 @@ tvist
 tvistighet
 tvivel
 tvären
+tvärflöjt
 tvärgata
 tvärslå
 tvärvetenskap
@@ -11256,6 +11328,7 @@ underkant
 underklass
 underledare
 underleverantör
+underlägsenhet
 underläpp
 underlåtenhet
 underlåtenhetssynd
@@ -11347,6 +11420,7 @@ upphandlare
 upphandling
 upphettning
 upphovsman
+upphovsperson
 upphovsrätt
 upphällning
 upphöjelse
@@ -11354,7 +11428,6 @@ upphöjning
 uppkomling
 uppkomst
 uppkoppling
-upplag
 upplaga
 upplevelse
 upplivning
@@ -11374,6 +11447,7 @@ upprepning
 uppriktighet
 upprinnelse
 upprustning
+uppryckning
 uppräkning
 upprättelse
 uppsats
@@ -11559,6 +11633,7 @@ uthållighetstävling
 utilism
 utilist
 utilitarism
+utilitarist
 utjord
 utjämning
 utjämningsmandat
@@ -11709,6 +11784,7 @@ valapparat
 valberedning
 valbyrå
 valdag
+valdistrikt
 valfilm
 valframgång
 valfrihet
@@ -11828,6 +11904,7 @@ veckodag
 veckopress
 veckotidning
 veckända
+ved
 vedeldning
 vedergällning
 vedersakare
@@ -11971,6 +12048,7 @@ visning
 visp
 vispgrädde
 vispning
+visselblåsare
 visselpipa
 visshet
 vistelse
@@ -12627,6 +12705,7 @@ zygot
 ödeläggelse
 ödemark
 ödesdrama
+ödesfråga
 ödesgemenskap
 ödesgudinna
 ödestro
@@ -12672,6 +12751,7 @@ zygot
 ölgubbe
 ölhall
 öljett
+ölkagge
 ölmage
 ölost
 ölrättighet
@@ -12798,6 +12878,7 @@ zygot
 överlopps
 överloppsgärning
 överläggning
+överlägsenhet
 överläkare
 överläpp
 överlärare

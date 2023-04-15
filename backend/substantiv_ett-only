@@ -474,6 +474,7 @@ brevpapper
 broderi
 broderskap
 brohuvud
+bromsbelägg
 brosk
 brospann
 brott
@@ -664,6 +665,7 @@ dun
 dunder
 dunk
 duntäcke
+duplikat
 duschförhänge
 dussin
 dygn
@@ -855,6 +857,7 @@ fläng
 flöde
 flödesdiagram
 flödesschema
+flöjtsolo
 fnask
 fnöske
 foder
@@ -896,6 +899,7 @@ fotomontage
 fotspår
 fotvalv
 fraktfartyg
+framdrev
 framdäck
 framhjul
 framsteg
@@ -994,6 +998,7 @@ föreningsliv
 företag
 företräde
 förfall
+förfarande
 förfaringssätt
 författarskap
 förfogande
@@ -1097,6 +1102,7 @@ garage
 garde
 garn
 garnityr
+garnnystan
 garv
 gasolkök
 gathörn
@@ -1573,6 +1579,8 @@ karlatag
 karosseri
 kartogram
 kasino
+kassettak
+kassettdäck
 kast
 kastspö
 kasus
@@ -1923,6 +1931,7 @@ luftslott
 luftvärn
 lumppapper
 lunchställe
+lungödem
 lurendrejeri
 lussekatt
 lustspel
@@ -2383,6 +2392,7 @@ parlament
 partaj
 parti
 particip
+partiorgan
 partipris
 partitur
 partnerskap
@@ -2556,6 +2566,7 @@ raseri
 rassel
 rayon
 realvärde
+reapris
 recept
 rede
 rederi
@@ -2743,6 +2754,7 @@ scenario
 sceneri
 schablonavdrag
 schack
+schackbräde
 schackdrag
 schackparti
 schackproblem
@@ -2841,6 +2853,7 @@ skaplynne
 skarpsinne
 skatteavdrag
 skattetryck
+skavsår
 skede
 skelett
 sken
@@ -3042,6 +3055,7 @@ soffbord
 sofisteri
 software
 solljus
+solo
 solsken
 solskyddsmedel
 solstånd
@@ -3661,7 +3675,7 @@ vad
 vadben
 vagnsätt
 vakuum
-vakuum­rör
+vakuumrör
 val
 valdeltagande
 valfläsk
@@ -3686,6 +3700,7 @@ varumärke
 varumärkesskydd
 varuprov
 varv
+vaselin
 vatten
 vattendrag
 vattenfall
