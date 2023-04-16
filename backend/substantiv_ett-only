@@ -139,6 +139,7 @@ arbetsrum
 arbetssätt
 arbetstillfälle
 arbetstillstånd
+arbetsutskott
 argument
 ark
 arkiv
@@ -480,6 +481,7 @@ brosk
 brospann
 brott
 brottmål
+brottstycke
 brottställe
 bruk
 bruksdjur
@@ -899,6 +901,7 @@ fotografi
 fotomontage
 fotspår
 fotvalv
+fragment
 fraktfartyg
 framdrev
 framdäck
@@ -979,6 +982,7 @@ fönsterplats
 förakt
 förarsäte
 förband
+förband  2
 förbarmande
 förbehåll
 förbiseende
@@ -1170,6 +1174,7 @@ granatsplitter
 grannland
 grannskap
 granris
+gravkor
 grepp
 griskött
 groddjur
@@ -1232,6 +1237,7 @@ hagel
 hagelgevär
 hakkors
 halmstrå
+halsbloss
 halveringsmål
 halvklot
 halvkväden
@@ -1350,6 +1356,7 @@ häkte
 hällregn
 händelseförlopp
 hänglås
+hängsle
 hänseende
 härnadståg
 hästdjur
@@ -1704,12 +1711,14 @@ kopparmynt
 kopparstick
 koppel
 koppleri
+kor
 korallrev
 korn
 korollarium
 kors
 korsben
 korsförhör
+korskrank
 korsord
 korsstygn
 korståg
@@ -1758,6 +1767,7 @@ kryphål
 krypskytte
 krypto
 kryss
+kryssförband
 krysshult
 kryssningsfartyg
 kräftsmör
@@ -1910,6 +1920,7 @@ lockbete
 lockpris
 lod
 lodjur
+loftgångshus
 logement
 lokalförsvar
 lokalnät
@@ -2154,6 +2165,7 @@ moderbolag
 moderfartyg
 moderliv
 modersmål
+mods
 moln
 molntäcke
 moment
@@ -2206,6 +2218,7 @@ människovärde
 märke
 mästerskap
 mästerverk
+mätglas
 mål
 måleri
 målkalas
@@ -3035,6 +3048,7 @@ snatteri
 snedsegel
 snedstreck
 sniff
+snille
 snilledrag
 snitt
 snor
@@ -3227,6 +3241,7 @@ stål
 stålverk
 stånd
 stöd
+stödförband
 stödområde
 stöp
 störtlopp
@@ -3249,7 +3264,6 @@ svavelväte
 sveamål
 svedjebruk
 svek
-svensktalande
 svepe
 svepskäl
 svettband
@@ -3460,6 +3474,7 @@ trosskydd
 trots
 trubbel
 truckflak
+trumfkort
 truppslag
 tryck
 tryckaccent

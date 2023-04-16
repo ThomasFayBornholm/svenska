@@ -563,6 +563,7 @@ armékår
 aromaterapeut
 aromaterapi
 arrangör
+arrendator
 arrest
 arrivist
 arrogans
@@ -1284,6 +1285,7 @@ bespisning
 besserwisser
 best
 bestraffning
+bestrålning
 bestyrelse
 beställning
 bestämdhet
@@ -1830,6 +1832,7 @@ bugg  2
 bugning
 buk
 bukett
+bukgjord
 bukhinna
 bukhåla
 bukt
@@ -2088,6 +2091,7 @@ cypress
 cysta
 cytoplasma
 dadel
+dadelpalm
 dag
 dagavdelning
 dagbarnvårdare
@@ -2390,6 +2394,7 @@ dotter
 drabant
 drabbning
 dragbasun
+draghållfasthet
 dragkamp
 dragkedja
 dragning
@@ -2403,6 +2408,7 @@ drevjakt
 dricka
 dricks
 drift
+drift  2
 driftstörning
 drill
 drillborr
@@ -2514,6 +2520,7 @@ döskalle
 e-post
 ebb
 ebonit
+ebonitstav
 ed
 edamerost
 edition
@@ -3221,6 +3228,7 @@ framryckning
 framsida
 framställan
 framställning
+framstöt
 framtand
 framtid
 framtidsman
@@ -3450,6 +3458,7 @@ förbrukning
 förbrukningsartikel
 förbrytare
 förbränning
+förbrödring
 förbundskansler
 förbundskapten
 förbättring
@@ -3929,6 +3938,7 @@ geront
 gerontologi
 gest
 gestalt
+gestaltning
 gesäll
 get
 getabock
@@ -4471,6 +4481,7 @@ hemvård
 heraldik
 herbivor
 herde
+herdestund
 hereditet
 heresi
 heretiker
@@ -4522,6 +4533,7 @@ hjärna
 hjärnblödning
 hjärndöd
 hjärnskakning
+hjärntumör
 hjärtdöd
 hjärteangelägenhet
 hjärtefråga
@@ -5039,6 +5051,7 @@ inrättning
 inrådan
 insamling
 insats
+inscenering
 insekt
 insekticid
 insektsätare
@@ -5716,6 +5729,7 @@ kniv
 knivlåda
 knivrygg
 knix
+knoge
 knop
 knopp
 knorrhane
@@ -5757,6 +5771,7 @@ kokett
 koketteri
 kokill
 kokong
+kokospalm
 kokplatta
 koks
 koksalt
@@ -5815,6 +5830,7 @@ kommission
 kommissionär
 kommitté
 kommun
+kommunalpamp
 kommunalskatt
 kommunikation
 kommuniké
@@ -6002,6 +6018,7 @@ korsgång
 korsning
 korsrygg
 korsväg
+kortavledning
 kortbana
 kortdistans
 kortege
@@ -6377,6 +6394,7 @@ köttfärs
 köttkvarn
 labb
 lack
+ladda
 laddning
 laddningsbärare
 laddstolpe
@@ -6476,6 +6494,7 @@ legitimitet
 legoknekt
 leguan
 lejonkula
+lejonparten
 lek
 lekatt
 lekkamrat
@@ -6593,7 +6612,9 @@ lobotomi
 lock
 lockfågel
 lodlinje
+loftgång
 logg
+loggfil
 logi
 logik
 logistik
@@ -6669,6 +6690,7 @@ luxation
 lya
 lycka
 lycka  2
+lyckokänsla
 lycksökare
 lyckönskan
 lyckönskning
@@ -6736,6 +6758,7 @@ läsare
 läsebok
 läskedryck
 läsning
+läst
 lätthet
 lättmatros
 lättmjölk
@@ -7264,6 +7287,7 @@ morot
 morsa
 morse
 mortalitet
+morän
 moské
 mossa
 mosse
@@ -7354,6 +7378,7 @@ mygga
 myglare
 mykolog
 mykologi
+mylla
 myndighet
 myndighetsperson
 mynning
@@ -7759,6 +7784,7 @@ oljeborrning
 oljekaka
 oljekanna
 oljemålning
+oljepalm
 oljesump
 oljetankar
 oljetanker
@@ -7795,6 +7821,7 @@ omröstning
 oms
 omskiftare
 omskrivning
+omslagspojke
 omslutning
 omsorg
 omställning
@@ -7849,6 +7876,7 @@ ordningsvakt
 ordrot
 ordskrift
 ordvits
+ordvändning
 oreda
 oregano
 orenlighet
@@ -8008,6 +8036,7 @@ partisan
 partner
 passage
 passagerare
+passare
 passgång
 passion
 passivitet
@@ -9021,6 +9050,7 @@ röv
 sabel
 sackaros
 sadel
+sadelgjord
 sadelstolpe
 safari
 safir
@@ -9711,6 +9741,7 @@ sladd
 slagbjörn
 slagdänga
 slagkraft
+slagruta
 slagskugga
 slaktare
 slalom
@@ -9739,7 +9770,9 @@ sliper
 slipover
 slips
 slipsten
+slira
 slirighet
+slirkoppling
 slits
 slot
 slowmotion
@@ -10273,6 +10306,7 @@ storlek
 storleksordning
 storm
 stormakt
+storman
 stormarknad
 stormflod
 stormsteg
@@ -10467,6 +10501,7 @@ suveränitet
 svaghet
 sval
 svala
+svalgång
 svalka
 svallvåg
 svamp
@@ -10488,8 +10523,8 @@ svavelsyra
 svavelsyrlighet
 sveda
 svedja
-svedjebruk
 svedjebrukare
+svedjemark
 svensexa
 svensk
 svenska
@@ -10690,6 +10725,7 @@ tallrik
 tallstekel
 tallticka
 talman
+talroll
 tambur
 tamp
 tampong
@@ -10920,7 +10956,10 @@ tiokamp
 tiondel
 tisdag
 tistel
+tistelborre
 titel
+titelbortläggning
+titelroll
 titt
 tittare
 tittarstorm
@@ -10946,6 +10985,7 @@ tjuvnad
 tjuvsena
 tjuvskytt
 tjuvstart
+tjuvtitt
 tjuvåkare
 tjäle
 tjänare
@@ -11137,6 +11177,7 @@ trottoar
 trottoarpratare
 trovärdighet
 truck
+trumf
 trumma
 trumpet
 trupp
@@ -11327,6 +11368,7 @@ udde
 uggla
 ugn
 ull
+ulltistel
 ulster
 ulv
 umami
@@ -11430,6 +11472,7 @@ uppförsbacke
 uppgift
 uppgivelse
 uppgivenhet
+uppgropning
 uppgång
 uppgörelse
 upphalare
@@ -12124,6 +12167,7 @@ vägran
 vägrare
 vägren
 vägsalt
+vägtistel
 vägvisare
 väktare
 väl
