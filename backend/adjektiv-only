@@ -22,6 +22,7 @@ afghansk
 afrikansk
 aggressiv
 agnatisk
+agnostisk
 agreabel
 agrikulturell
 agronomie
@@ -471,7 +472,6 @@ blandad
 blank
 blaserad
 blasfemisk
-blask
 blasé
 blek
 blind
@@ -866,6 +866,7 @@ fabriksny
 fabulös
 facklig
 fackmässig
+fadd
 faderlös
 fager
 faktisk
@@ -959,6 +960,7 @@ flitig
 floskulös
 flott
 flummig
+fluorescerande
 flyende
 flygande
 flygfärdig
@@ -1420,6 +1422,7 @@ guldkantad
 gullig
 gyllene
 gynnsam
+gäll
 gänglig
 gängse
 gästfri
@@ -1862,6 +1865,7 @@ junior
 juridisk
 juste
 juvenil
+jädra
 jämbördig
 jämförande
 jämförbar
@@ -2125,6 +2129,7 @@ kärlig
 kärnfrisk
 kärnfull
 kärnsund
+kärringaktig
 kärv
 kåserisk
 könlig
@@ -2374,7 +2379,6 @@ maktpåliggande
 maliciös
 malign
 malmförande
-malmslig
 malmöitisk
 malplacerad
 mammaledig
@@ -2829,6 +2833,8 @@ ohederlig
 ohejdad
 ohyfsad
 ohygglig
+ohygienisk
+ohälsosam
 ohämmad
 ohållbar
 ohöljd
@@ -3000,6 +3006,7 @@ osolidarisk
 ostadig
 ostgratinerad
 ostörd
+osund
 osviklig
 osymmetrisk
 osympatisk
@@ -3069,6 +3076,7 @@ oäkta
 oändlig
 oärlig
 oåterkallelig
+oåtkomlig
 oöm
 oönskad
 oöverkomlig
@@ -3268,11 +3276,13 @@ real
 realiserbar
 realistisk
 redbar
+redig
 redlig
 redlös
 redo
 redundant
 reell
+reflexmässig
 reformert
 reformistisk
 regal
@@ -3349,8 +3359,10 @@ romersk-katolsk
 rosa
 rosenkindad
 rosig
+rostfri
 rostig
 rovgirig
+rovlysten
 rubbad
 rucklig
 rudimentär
@@ -3668,6 +3680,7 @@ slaskig
 slavisk
 slem
 slemmig
+slipprig
 slirig
 sliten
 slug
@@ -3818,6 +3831,7 @@ stavelsebildande
 stekhet
 stekt
 stel
+stendöd
 stenhård
 stereotyp
 steril
@@ -3838,6 +3852,7 @@ storskalig
 storslagen
 storvulen
 storväxt
+straffmyndig
 straight
 stram
 strapatsrik
@@ -3857,6 +3872,8 @@ sträv
 strävsam
 strålande
 strålsjuk
+ström
+strömförande
 stucken
 studentikos
 studerad
@@ -3961,6 +3978,7 @@ sökt
 sölig
 sömnig
 sömnlös
+sönderbruten
 sönderslagen
 söndervittrad
 söndrig
@@ -4027,6 +4045,7 @@ tillgiven
 tillgjord
 tillgänglig
 tillhörande
+tillknycklad
 tillknäppt
 tillkommande
 tillkrånglad
@@ -4478,6 +4497,7 @@ vidrig
 vidsittande
 vidsträckt
 vidstående
+vig
 viktig
 vild
 viljelös

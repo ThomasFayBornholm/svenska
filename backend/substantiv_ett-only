@@ -313,6 +313,7 @@ benrangel
 bensinstopp
 benskydd
 bensår
+beredelseord
 beredskapsarbete
 beredskapslager
 beredskapsläge
@@ -335,6 +336,7 @@ beslutsunderlag
 bestånd
 besvär
 besök
+besöksrum
 beta
 betalkort
 bete
@@ -405,6 +407,7 @@ blomfoder
 blomskaft
 blomster
 bläck
+bläckhorn
 blänk
 blåljus
 blåsväder
@@ -469,6 +472,7 @@ brandförsvar
 brandlarm
 brandsegel
 brandskydd
+brandtal
 bravurnummer
 bredband
 brev
@@ -649,6 +653,7 @@ draperi
 dregel
 drev
 dricka
+dricksglas
 dricksvatten
 driftliv
 driftstopp
@@ -914,6 +919,7 @@ franskbröd
 fribord
 fribrev
 frieri
+frihetsstraff
 frihjul
 frikort
 frimärke
@@ -962,6 +968,7 @@ fängelsestraff
 färdbevis
 färdled
 färgband
+färgfoto
 färgämne
 färskvatten
 fäste
@@ -996,6 +1003,7 @@ före
 förebud
 föredrag
 föredöme
+föregående
 föregångsland
 förehavande
 föremål
@@ -1020,6 +1028,7 @@ förlag
 förled
 förlopp
 förlöjligande
+förmodande
 förmånserbjudande
 förnamn
 förnuft
@@ -1238,6 +1247,7 @@ hagelgevär
 hakkors
 halmstrå
 halsbloss
+halskrås
 halveringsmål
 halvklot
 halvkväden
@@ -1536,6 +1546,7 @@ jordslag
 jordsvin
 jordtag
 julkort
+jurt
 justitiemord
 jäkt
 jämnmod
@@ -1606,6 +1617,8 @@ kisel
 kitt
 klackjärn
 klagomål
+klammer
+klammeri
 klamp
 klander
 klappträ
@@ -1623,12 +1636,14 @@ klimat
 klimax
 klink
 klipp
+klirr
 kliv
 klockslag
 klokhuvud
 klor
 kloster
 klot
+klotter
 klunk
 klädesplagg
 klädskåp
@@ -1771,10 +1786,14 @@ kryssförband
 krysshult
 kryssningsfartyg
 kräftsmör
+kräk
 kräkmedel
+kräks
 kräldjur
 kråkslott
 krångel
+krås
+krås  2
 kubikmått
 kuckel
 kuddvar
@@ -2206,6 +2225,7 @@ murverk
 museiföremål
 museum
 musiköra
+muskelknippe
 mutbrott
 mygel
 mynt
@@ -2272,6 +2292,7 @@ nedstråk
 nedåtgående
 negativ
 nej
+nervknippe
 nervkrig
 nettolön
 neutrum
@@ -2427,6 +2448,7 @@ pensionsvillkor
 pensum
 pentagram
 pentry
+pepparrotskött
 perfekt
 periodtal
 periskop
@@ -2653,6 +2675,7 @@ ris
 risgryn
 ritblock
 rivjärn
+rivningshus
 roder
 rofferi
 rollfack
@@ -2773,6 +2796,7 @@ schackbräde
 schackdrag
 schackparti
 schackproblem
+schakt
 schampo
 schema
 scoop
@@ -2829,6 +2853,7 @@ sinnelag
 sinnesintryck
 sinneslugn
 sinnesorgan
+sisyfosarbete
 sjukavdrag
 sjukhus
 sjukvårdsbiträde
@@ -2858,6 +2883,7 @@ sjögräs
 sjökort
 sjölejon
 sjömärke
+sjöskum
 sjöslag
 skadedjur
 skadestånd
@@ -2916,6 +2942,7 @@ skred
 skrev
 skri
 skriftermål
+skriftetal
 skriftspråk
 skrik
 skrin
@@ -3335,11 +3362,13 @@ talesätt
 talfel
 talkropp
 talorgan
+talrör
+talspråk
 talsystem
 tamdjur
 tandem
 tandkött
-tand­skydd
+tandskydd
 tangentbord
 tankearbete
 tankeled
@@ -3715,6 +3744,7 @@ vapen
 var
 vara
 vardagsrum
+varghagel
 varmvatten
 varsel
 varuhus
@@ -3777,6 +3807,7 @@ vindskydd
 vindspel
 vindsutrymme
 vingel
+vinglas
 vinkeljärn
 vinterdäck
 vinterlov
