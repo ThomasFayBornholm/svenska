@@ -521,6 +521,7 @@ arbetskraft
 arbetskraftsinvandring
 arbetskraftsutvandring
 arbetsköpare
+arbetslivserfarenhet
 arbetslöshet
 arbetsmarknad
 arbetsmedicin
@@ -922,6 +923,7 @@ bakterie
 bakteriofag
 bakugn
 bakväxel
+bakända
 bal
 bal  2
 balans
@@ -1023,7 +1025,6 @@ beblandelse
 bebop
 bebyggelse
 bebådelse
-bebådelsedag
 bechamelsås
 beckasin
 becquerel
@@ -1869,6 +1870,7 @@ busshållplats
 busslinje
 bussning
 busstation
+butelj
 butik
 butiksägare
 by
@@ -2267,6 +2269,7 @@ despoti
 despotism
 dessert
 dessertost
+destruent
 destruktivitet
 detalj
 detaljhandel
@@ -2633,6 +2636,7 @@ ekvator
 el
 elakhet
 elasticitet
+elbil
 elchock
 eld
 eldbegängelse
@@ -2677,6 +2681,7 @@ elmotor
 elnätsoperatör
 elorgel
 elström
+emeritus
 emfas
 emigrant
 emigration
@@ -2808,6 +2813,7 @@ exorcist
 expansion
 expedit
 expedition
+expeditionsministär
 expeditionsregering
 expert
 expertis
@@ -4236,9 +4242,13 @@ gulkropp
 gullhöna
 gumma
 gummibåt
+gummigutta
 gummihandske
+gummikula
 gummiplatta
+gummisnodd
 gummistövel
+gump
 gumse
 gunga
 gungbräda
@@ -4248,6 +4258,7 @@ gunst
 gunstling
 gurka
 gutniska
+guttaperka
 guvernant
 guvernör
 gycklare
@@ -4342,12 +4353,14 @@ halskota
 halsmandel
 halt
 halva
+halvbutelj
 halvdvala
 halvering
 halveringstid
 halvfabrikat
 halvfart
 halvfigur
+halvflaska
 halvgud
 halvhet
 halvklass
@@ -4929,6 +4942,7 @@ idrottsstjärna
 idyll
 idylliker
 idé
+ifyllnad
 igelkott
 ihärdighet
 ihålighet
@@ -5047,6 +5061,7 @@ inkoppling
 inkorg
 inkrustation
 inkräktare
+inkvisition
 inkörning
 inkörsport
 inlagring
@@ -5111,6 +5126,7 @@ inspektor
 inspelning
 inspiration
 installation
+installatör
 instans
 instinkt
 institution
@@ -6918,6 +6934,7 @@ magister
 magnet
 magnetism
 magnetisör
+magnumbutelj
 magsaft
 magsäck
 magåkomma
@@ -7254,6 +7271,7 @@ missräkning
 misstanke
 misstro
 misströstan
+missuppfattning
 missvisning
 misär
 mitos
@@ -7625,6 +7643,7 @@ nerv
 nervcell
 nervgift
 nervknut
+nervkollaps
 nervositet
 nervtråd
 nesa
@@ -8025,6 +8044,8 @@ pagina
 pain riche
 pajas
 paketering
+paketinlämning
+paketresa
 pakt
 palestinier
 palett
@@ -8356,6 +8377,7 @@ poker
 pol
 polack
 polare
+polarexpedition
 polaritet
 polarräv
 polcirkel
@@ -8619,6 +8641,7 @@ påannons
 påbröd
 pådrivare
 påfart
+påfrestning
 påfyllning
 påföljd
 påk
@@ -8702,6 +8725,7 @@ reality-tv
 realpolitik
 realtid
 reassurans
+rebus
 recensent
 recension
 reception
@@ -8913,6 +8937,7 @@ riktningskoefficient
 riktpunkt
 rimfrost
 ring
+ringaktning
 ringdans
 ringhörna
 ringklocka
@@ -10185,6 +10210,7 @@ sponsor
 spont
 sporre
 sport
+sportbil
 sportgren
 sportsida
 sportvagn
@@ -10545,6 +10571,7 @@ stämma
 stämning
 stämpel
 stängel
+stängning
 stängsel
 stärkelse
 stäv
@@ -10936,6 +10963,7 @@ terrorist
 terräng
 terrängcykel
 terrängvagn
+terrängvinst
 tertiär
 tertiärtiden
 tes
@@ -11133,6 +11161,7 @@ tolkning
 tolvtaggare
 tom
 tomat
+tombutelj
 tomflaska
 tomgång
 tomhet
@@ -11662,6 +11691,7 @@ uppsökning
 upptagning
 upptecknare
 uppteckning
+upptrappning
 upptäckare
 upptäckarglädje
 upptäckt
@@ -11933,6 +11963,7 @@ uttalsbeteckning
 utter
 utvandrare
 utvandring
+utvecklare
 utveckling
 utvecklingslära
 utvidgning
@@ -12135,6 +12166,7 @@ veteran
 veteranbil
 veteranrally
 veterinär
+vetorätt
 vetskap
 vev
 vevarm
@@ -12213,6 +12245,8 @@ vinst
 vinstandel
 vinstock
 vinter
+vinterbadare
+vinterdräkt
 vinterek
 vinterhämpling
 vinterkväll
@@ -12313,6 +12347,7 @@ välgörenhet
 väljarbarometer
 väljare
 väljarkår
+välkomma
 väll
 vällevnad
 vällevnadsman
@@ -12433,6 +12468,7 @@ växtsaft
 växtstekel
 våda
 vådeld
+våffeldag
 våffla
 våg
 våg  2
@@ -12455,6 +12491,8 @@ vårdenhet
 vårdgivare
 vårdkase
 vårdtagare
+vårflod
+vårfrudag
 vårmånad
 vårrulle
 vårta
