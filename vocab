@@ -21,18 +21,25 @@
 </head>
 <body onload="startup()" onkeydown="bodyListener(event)">
 <div >
+<div class="titleLeft">
+<span class="counts" id="iCntTotal">xx xxx</span>
+</div>
+<div class="titleCentre">
 <h1 id="iTitle" ondblclick="toggleTooltips()" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on web-page controls">Ordbok</h1>
 </div>
+<div class="titleRight">
+<span class="counts" id="iTotalScore">xx.xx%</span>
+</div>
+</div>
 <div id="iCountDiv" class="centred" style="visibility: hidden">
-	<span class="counts countLeft" id="iCnt">test</span>
-	<span class="counts countTotal" id="iCntTotal" onclick="showToggle()" onmouseover="highlight(this,event)">Total</span>
+	<span class="counts countLeft" id="iCnt">test</span>	
 	<span class="counts" "score" id="iScore">{Score}</span>
 	<span class="counts" id="iCntRegex"></span>	
 </div>
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
 	<form class="centred" onsubmit="newInputWrapper(event)">		
-		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(this,event)">				
+		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 	</form>
 	<p id="iCurWord" class="centred">CURRENT_WORD</p>
@@ -122,6 +129,13 @@ var TAB_DUMMY;
 var TAB_LOOKUP
 let ALL_DEFS = "";
 
+let TOTAL_SCORE = 0;
+let TARGET_DAILY = 0;
+let TARGET_MONDAY = 0;
+let RATE = 0;
+let END_DATE = 0;
+let END_DATE_STR = "1970-01-01"
+
 document.addEventListener("visibilitychange", (event) => {
 	if (TABS.length > 0) {
 		if (document.visibilityState == "visible") {
@@ -136,7 +150,8 @@ function startup() {
 	wordCount();		
 	updateScore();
 	randomWord();
-	focusInput()
+	focusInput();
+	setTimeout(setTargets,2000);
 }
 
 function getInput() {
@@ -159,6 +174,7 @@ function setCUR_WORD(word) {
 function setN_DEF(n_def) {
 	N_DEF = n_def;
 }
+
 function setN_CUR() {
 	if (DEBUG) console.log("setN_CUR()")
 	if (CLASS === "adjektiv") {
@@ -195,11 +211,9 @@ function setN_CUR() {
 		N_CUR = N_ALL;
 	}
 	if (CLASS === "all") {
-		$('#iCnt').text("");
-		$('#iCntTotal').text(' [' + N_TOT.toLocaleString('sv') + ']');
+		$('#iCnt').text("");		
 	} else {
-		$('#iCnt').text(N_CUR.toLocaleString('sv'));
-		$('#iCntTotal').text("");
+		$('#iCnt').text(N_CUR.toLocaleString('sv'));		
 	}	
 	
 	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
@@ -260,6 +274,7 @@ function putDef(def, score) {
 		focusInput()
 	})
 	updateScore();
+	getDiff();
 }
 
 function putFrasDef(score) {
@@ -313,22 +328,35 @@ function updateScore() {
 		if (N_TOT > 0) {
 			score = Math.round(json["total"]/(N_CUR*2) * 1000)/10;
 		}
-		if (CLASS === "all") {
-			score = Math.round(json["total"]/(N_TOT*2) * 1000)/10;
-			let tmp = N_TOT.toLocaleString('sv');
-			tmp += " {" + score + "%}";						
-			$('#iCntTotal').html(tmp);
-			$('#iCntTotal').css("display","inline-block");
-			$('#iScore').html("");
-		} else {
-			$('#iCntTotal').css("display","none");
+		// Score for all classes is already available
+		if (CLASS != "all") {			
 			$('#iScore').html("{" + score + "%");
 			$('#iScore').html($('#iScore').html() + " <span class='redWord' onclick=seekWord('redwords') oncontextmenu='nextWord(this,event)'>" + json["redCount"] + "</span>")
 			$('#iScore').html($('#iScore').html() + ";<span class='blueWord' onclick=seekWord('bluewords') oncontextmenu='nextWord(this,event)'>" + json["blueCount"] + "</span>")
 			$('#iScore').html($('#iScore').html() + "}");
+		} else {
+			$('#iScore').html("");
 		}
 		// Only display counts once they are initialised.
-		$('#iCountDiv').css("visibility","");
+		$('#iCountDiv').css("visibility","");		
+		fetch('backend/getScore.php?id=0&class=all&hash=' + makeHash(), {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {			
+			TOTAL_SCORE = json["percent"];								
+			getDiff();
+			
+		})
+		.catch(error => {
+			console.log(error);
+		})
 	})
 	.catch(error => {
 		console.log(error);
@@ -1030,6 +1058,7 @@ function wordCount() {
 		N_KONJUNKTION = json["konjunktion"];
 		N_SUBJUNKTION = json["subjunktion"];
 		setN_CUR();		
+		$('#iCntTotal').html(N_TOT.toLocaleString('sv'));
 	})
 	.catch(error => {
 		console.log(error);
@@ -1066,8 +1095,7 @@ function newInputWrapper(e) {
 		let newClass  = fullClassName(word.substr(1));
 		REGEX_WORDS = [];		
 		N_REGEX = 0;
-		
-		if (newClass != "list") {
+		if (newClass != "all") {
 			setClass(newClass);		
 		} else {
 			var tmpOut = [];
@@ -1089,7 +1117,7 @@ function newInputWrapper(e) {
 				.then(json => {
 					done++;
 					let id = json['id'];				
-					tmpOut[id] = " {" + json["count"] + "; " + json["percent"] + "%}";
+					tmpOut[id] = " {" + json["count"] + "; " + round(json["percent"],2) + "%}";
 					score_all += parseInt(json["total"]);
 					let out = "<b>all {" + N_TOT + "; " + "score_all" + "%}</b>";
 					if (done == CLASS_LIST.length) {
@@ -1098,8 +1126,9 @@ function newInputWrapper(e) {
 						}
 						score_all = Math.round(score_all / N_TOT / 2 * 100 * 100) / 100;
 						out = out.replace("score_all",score_all);
-					}					
-					
+					}		
+					let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>100% date: " + END_DATE_STR + fmtUnit(END_DATE,"days") + "<br>***<br>";
+					out = header + out;
 					$('#iWords').html(out);									
 				})
 				.catch(error => {
@@ -1132,6 +1161,12 @@ function newInputWrapper(e) {
 		return;
 	}
 	seekWord(word);
+}
+
+function fmtUnit(val, unit) {
+	if (DEBUG) console.log("fmtUnit()");
+	let tmp = " (" + val + " " + unit + ")";
+	return tmp;
 }
 
 function handleNumericInput() {
@@ -1527,9 +1562,10 @@ function setClass(c, seek = "") {
 		INC = 0;
 		SCROLL_INC=-1;
 		setN_CUR();	
-		countDefs();
 		getWords(-1);
 		updateScore();
+	} else {
+		getWords();
 	}
 	if (seek.length > 0) seekWordSingleClass(seek);
 	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);	
@@ -1544,25 +1580,28 @@ function getLastWord() {
 
 function countDefs() {
 	N_DEFS = 0;
-	fetch('backend/countDef.php?class=' + CLASS, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		if (json != "Failed to read definition file.") {	
-			N_DEFS=json;
-			if (DEBUG) console.log("countDefs(); N_DEFS = " + N_DEFS);
-			$('#iDefProg').css("width", N_DEFS/N_CUR * 100 + "%");
-		} else {
-			if (DEBUG) console.log("countDefs(); N_DEFS = " + N_DEFS);
-		}
-	})
+	// No sense in associating definitions with the 'all' word listing
+	if (CLASS != "all") {
+		fetch('backend/countDef.php?class=' + CLASS, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			if (json != "Failed to read definition file.") {	
+				N_DEFS=json["cnt"];
+				if (DEBUG) console.log("countDefs(); N_DEFS = " + N_DEFS);
+				$('#iDefProg').css("width", N_DEFS/N_CUR * 100 + "%");
+			} else {
+				if (DEBUG) console.log("countDefs(); N_DEFS = " + N_DEFS);
+			}
+		})
+	}
 }
 
 function editDef() {	
@@ -1824,6 +1863,12 @@ function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) console.log("addMeta()");	
 	regexArr = [
+		/var­dagligt, skämtsamt/,
+		/ålderdomligt el. ironiskt/,
+		/sjö­fart/,
+		/något ålderdomligt el. dialektalt/,
+		/hög­tidligt el. skämtsamt/,
+		/handels­namn/,
 		/något ålderdomligt], ur­sprungligen bibliskt/,
 		/sär­skilt i juridiska samman­hang/,
 		/starkt ned­sättande; något ålderdomligt/,
@@ -2767,14 +2812,15 @@ function editMore(ev,key) {
 	focusDef();
 }
 
-function processKeyDown(elHTML,ev) {
+function processKeyDown(ev) {
 	if (DEBUG) console.log("processKeyDown(ev), ev.key = " + ev.key)	
 	
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
 	}
 	if (ev.key === "ArrowUp") {
-		onlineLookup(elHTML,ev);
+		let el = document.getElementById("iInput");
+		onlineLookup(el,ev);
 		// ?!
 		focusDef()
 	} else if (ev.key === "ArrowDown" && CLASS === "all") {
@@ -2787,6 +2833,9 @@ function processKeyDown(elHTML,ev) {
 		addWordWithEnum();
 	} else if (ev.key === '"') {
 		defaultMeta();
+	} else if (ev.key === "¤") {
+		togglePlural();
+		ev.preventDefault();
 	} else if (ev.key === '!') {
 		defaultMeta(false);
 	}
@@ -2847,8 +2896,7 @@ function showTooltips() {
 		$('#iWordBox').attr("title","");
 		$('#iInfo').attr("title","");		
 		$('#iLast').attr("title","");
-		$('#iParDef').attr("title","");
-		$('#iCntTotal').attr("title","");
+		$('#iParDef').attr("title","");		
 		$('#iDefText').attr("title","");
 		$('#iPut0').attr("title","");
 		$('#iPut1').attr("title","");
@@ -2860,7 +2908,6 @@ function showTooltips() {
 		$('#iInfo').attr("title","Mouse wheel/ or click left/right to navigate");
 		$('#iLast').attr("title","Back to last view");
 		$('#iParDef').attr("title","Double click to hide");
-		$('#iCntTotal').attr("title","Click to toggle control view");
 		$('#iDefText').attr("title","Enter definition text");
 		$('#iPut0').attr("title","Add/edit definition with score of '0/2'");
 		$('#iPut1').attr("title","Add/edit definition with score of '1/2'");
@@ -2969,6 +3016,7 @@ function changeScore(ev,diff) {
 			let id = "#w" + parseInt(SCROLL_INC);
 			$(id).css("color",SCORE_COLOURS[newScore]);			
 			updateScore();
+			getDiff();
 		}
 	})
 }
@@ -3065,5 +3113,83 @@ function defaultMeta(hasPlural = true) {
 		console.log(error);
 	})
 }
+
+function togglePlural() {
+	if (DEBUG) console.log("togglePlural()");
+	// Go direct to the backend to make the change.	
+	// Only support "en" words for now.
+	if (CLASS === "substantiv_en") {
+		fetch('backend/togglePlural.php?word=' + CUR_WORD, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			if (json["status"] === "updated") {
+				updateDef();
+			}
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	}
+	
+}
+
+
+// Gamificiation of progress, show daily and weekly goal + end date
+function setTargets() {
+	if (DEBUG) console.log("setTargets()");
+	fetch('backend/setTargets.php?cur_score=' + $('#iTotalScore').text().replace("%",""), {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		RATE = json["rate"];
+		TARGET_DAILY = json["targetDaily"]
+		TARGET_MONDAY = json["targetWeekly"];
+		END_DATE = json["endDate"]
+		END_DATE_STR = json["endDateStr"];
+		getDiff();
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
+function getDiff() {
+	if (DEBUG) console.log("getDiff()");
+	let diff = "";
+	let fmt = "";
+	if (TARGET_DAILY != 0) {		
+		// Express diff as a percentage of the intended rate
+		diff = Math.round((TOTAL_SCORE - TARGET_DAILY) / RATE * 100 * 10);
+		if (diff > 0) {
+			fmt = " <span class='diffPlus'>_diff_</span>";
+		} else {
+			fmt = " <span class='diffMinus'>_diff_</span>";
+		}
+		fmt = fmt.replace("_diff_",diff);
+	}
+	$('#iTotalScore').html(round(TOTAL_SCORE,2) + "%" + fmt);
+	
+}
+
+function round(dec, places) {
+	let mult = 10 ** places;	
+	return Math.round(dec * mult) / mult;
+}
+
 </script>
 </html>
