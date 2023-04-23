@@ -508,6 +508,7 @@ borgerlig
 bortglömd
 bortkastad
 bortkommen
+bortrest
 bortskämd
 bortsprungen
 bortsprängd
@@ -593,6 +594,7 @@ daggvåt
 daglig
 dagsaktuell
 dagvill
+dansant
 dansk
 daterad
 debil
@@ -650,6 +652,7 @@ diskrimineringsgrund
 diskutabel
 disparat
 disponibel
+dissonant
 distingerad
 distinkt
 distraherad
@@ -816,6 +819,7 @@ enveten
 envig
 envis
 enväldig
+enögd
 epidemisk
 episkopal
 episodisk
@@ -873,6 +877,7 @@ fager
 faktisk
 fakultativ
 fallen
+fallfärdig
 falsk
 familjär
 fanatisk
@@ -1127,8 +1132,6 @@ fördjupande
 fördold
 fördomsfull
 fördömd
-förebyggande
-föregiven
 föregående
 förekommande
 förenlig
@@ -1167,7 +1170,6 @@ förment
 förmäten
 förmånlig
 förmögen
-förnedrande
 förnuftig
 förnuftsstridig
 förnuftsvidrig
@@ -1399,7 +1401,6 @@ gruvlig
 grym
 gräll
 grälsjuk
-gränjävlig
 gränslös
 gränsöverskridande
 gräsbevuxen
@@ -1507,6 +1508,7 @@ hermeneutisk
 heroisk
 hes
 het
+hetero
 heterodox
 heterogen
 heterosexuell
@@ -1683,6 +1685,7 @@ illojal
 illustrativ
 illvillig
 ilsken
+imbecill
 immanent
 immateriell
 immig
@@ -1981,6 +1984,7 @@ kokt
 kolerisk
 kollektiv
 kolossal
+kolsvart
 kolsyrad
 komfortabel
 komisk
@@ -1996,6 +2000,7 @@ kompetent
 komplett
 komplex
 komplicerad
+koncentrisk
 konceptuell
 koncis
 konfedererad
@@ -2038,6 +2043,7 @@ kopparröd
 koppelvan
 kordial
 korkad
+korpsvart
 korpulent
 korrekt
 korrupt
@@ -2113,6 +2119,7 @@ kvav
 kvick
 kvicktänkt
 kvinnlig
+kvistfri
 kvistig
 kylig
 kymig
@@ -2162,6 +2169,7 @@ lapidarisk
 larvig
 lat
 latent
+latinamerikansk
 latinsk
 lattjo
 lavinartad
@@ -2365,6 +2373,7 @@ lösbar
 löslig
 lösmynt
 lössläppt
+löstagbar
 maffig
 mager
 magerlagd
@@ -2556,6 +2565,7 @@ måttfull
 måttlig
 måttlös
 möblerbar
+mödosam
 möjlig
 mör
 mörk
@@ -2575,6 +2585,7 @@ nativ
 nattgammal
 nattlig
 nattstånden
+nattsvart
 naturfärgad
 naturlig
 naturnära
@@ -2712,6 +2723,7 @@ oberäknad
 oberäknelig
 oberättigad
 oberörd
+obeskrivlig
 obestridd
 obestridlig
 obestämbar
@@ -2926,6 +2938,7 @@ ond
 ondsint
 ondskefull
 oneklig
+onomastisk
 onomatopoetisk
 onyttig
 onåbar
@@ -3184,6 +3197,7 @@ porig
 portabel
 porös
 positiv
+postdoktoral
 postgymnasial
 postum
 potentiell
@@ -3193,6 +3207,7 @@ pratsam
 pratsjuk
 precis
 preciös
+predikativ
 pregnant
 prekär
 preliminär
@@ -3334,6 +3349,7 @@ restriktiv
 retfull
 retlig
 retorisk
+retsam
 reumatisk
 revolutionerande
 revolutionär
@@ -3383,6 +3399,7 @@ rundhyllt
 rundnätt
 rusig
 ruskig
+rustik
 rutig
 rutinerad
 rutten
@@ -3669,6 +3686,7 @@ skämd
 skämmig
 skämtsam
 skär
+skärande
 skålformig
 skånsk
 skön
@@ -3720,6 +3738,7 @@ smäcker
 smädlig
 smärre
 smärt
+smärtlindrande
 smärtsam
 smärtstillande
 små
@@ -4087,6 +4106,7 @@ tolerabel
 tolerant
 tom
 tonal
+topless
 topografisk
 toppseedad
 torftig
@@ -4153,6 +4173,8 @@ tveksam
 tvetydig
 tvivelaktig
 tvär
+tvärbrant
+tvärgående
 tvärrandig
 tvåbent
 tvådelad
@@ -4468,6 +4490,7 @@ vass
 vattenlevande
 vattenlöslig
 vattensjuk
+vattentät
 vaxartad
 veckovill
 vederbörande
@@ -4566,6 +4589,7 @@ välbetänkt
 välbärgad
 väldig
 väldoftande
+väldresserad
 välfödd
 välförsedd
 välgödd
