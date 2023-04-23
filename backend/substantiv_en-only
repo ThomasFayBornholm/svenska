@@ -999,6 +999,7 @@ baron
 barriär
 barrskog
 barservering
+barstol
 baryton
 bas
 basar
@@ -1528,6 +1529,7 @@ blodpalt
 blodplasma
 blodpropp
 blodpöl
+blodsdroppe
 blodshämnd
 blodskam
 blodspillan
@@ -1612,6 +1614,7 @@ bokförläggare
 bokhandel
 bokhandlare
 bokhylla
+bokhållare
 bokklubb
 boklåda
 bokmal
@@ -1655,6 +1658,7 @@ bondkomiker
 bondlurk
 bondpermission
 bondtur
+bong
 boning
 bonus
 bonusförälder
@@ -2364,6 +2368,8 @@ diskmaskin
 diskontinuitet
 diskretion
 diskriminering
+diskrimineringsgrund
+diskrimineringsombudsman
 disktrasa
 diskurs
 diskus
@@ -2660,7 +2666,11 @@ ekipering
 eklampsi
 eklärering
 eko
+ekolog
+ekologi
+ekologism
 ekonom
+ekonometri
 ekonomi
 ekonomibyggnad
 ekorre
@@ -3440,6 +3450,7 @@ fusion
 fux
 fylking
 fylla
+fyllbult
 fyllecell
 fyllerist
 fyllning
@@ -3502,6 +3513,7 @@ fångst
 fåntratt
 fåra
 fårhage
+fårskalle
 fårticka
 fåtölj
 föda
@@ -4523,8 +4535,11 @@ hastighetstävling
 hatt
 haubits
 havandeskapsförgiftning
+haverikommission
 haverist
+haverrot
 havre
+havregrynsgröt
 havsgräns
 havshorisont
 havskatt
@@ -5878,6 +5893,7 @@ knut
 knuta
 knutpunkt
 knyck
+knylhavre
 knyppling
 knytnäve
 knäckare
@@ -7069,6 +7085,7 @@ mall
 malm
 malm  2
 malmslig
+malpåse
 malör
 mamma
 man
@@ -7311,6 +7328,8 @@ mil
 mila
 mildring
 militär
+militärdiktatur
+militärtjänst
 miljard
 miljardär
 miljon
@@ -8013,6 +8032,7 @@ omläggning
 omnejd
 omnivor
 omoral
+ompyssling
 omrörning
 omröstning
 oms
@@ -8281,6 +8301,7 @@ penis
 penna
 penning
 penningpolitik
+penningpåse
 penningsumma
 penningtvätt
 pennvässare
@@ -8413,6 +8434,7 @@ piplärka
 pippi
 pir
 pirat
+piratkopia
 pirra
 piruett
 piska
@@ -8895,6 +8917,7 @@ regnbåge
 regnbågsfamilj
 regnbågsforell
 regnbågshinna
+regndroppe
 regnskog
 regnskur
 regnskvätt
@@ -9477,6 +9500,7 @@ segelflygplan
 segeljakt
 segeljolle
 segelled
+segelskuta
 segelsport
 seger
 segerherre
@@ -9837,6 +9861,7 @@ skiftnyckel
 skifttangent
 skildrare
 skildring
+skiljedomare
 skiljevägg
 skillnad
 skilsmässa
@@ -9938,6 +9963,7 @@ skumpa
 skur
 skurhink
 skurk
+skuta
 skvadron
 skvallerpress
 skvätt
@@ -10196,6 +10222,7 @@ snåljåp
 snö
 snöboll
 snödriva
+snödroppe
 snölykta
 snöplog
 snörning
@@ -11025,6 +11052,7 @@ talesperson
 talg
 taliban
 talja
+talkör
 tall
 tallinje
 tallkottkörtel
@@ -11476,6 +11504,7 @@ trissa
 tristess
 triumfator
 triumfbåge
+trivialitet
 trivsel
 tro
 trofasthet
@@ -11724,6 +11753,7 @@ underdrift
 undergång
 underhandling
 underhud
+underhuggare
 underhållning
 underkant
 underklass
@@ -11882,6 +11912,7 @@ upptäcktsfärd
 upptäcktsresa
 upptäcktsresande
 uppvaktning
+uppvisning
 uppvärmning
 uppväxt
 uppövning
@@ -12286,6 +12317,7 @@ vas
 vasografi
 vass
 vattenbruk
+vattendroppe
 vattenflygplan
 vattenkanna
 vattenklosett
@@ -12321,6 +12353,7 @@ vedergällning
 vedersakare
 vegetation
 vegetationsperiod
+vekling
 vektor
 velociped
 ven
