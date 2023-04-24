@@ -49,6 +49,7 @@ Högsta sovjet
 Kristi blodsdroppe
 Kunglig majestät (Kungl. Maj:t)
 Marie bebådelsedag
+Nobel
 REM-sömn
 abdikera
 abiotisk
@@ -556,6 +557,7 @@ baka
 baka ihop
 baka in
 baka samman
+bakben
 bakgata
 bakhuvud
 bakkappa
@@ -865,6 +867,8 @@ bita sig fast
 bita sig i läppen
 biton
 biträda
+bitti
+bittida
 bjuda
 bjuda emot
 bjuda in
@@ -915,6 +919,7 @@ blodfull
 blodomlopp
 blodpöl
 blodsdroppe
+blodsjukdom
 blodspillan
 blodstockning
 blodsutgjutelse
@@ -1050,6 +1055,7 @@ brinna i knutarna
 brinna som fnöske
 brisera
 brista
+bristsjukdom
 brits
 brobänk
 brodda
@@ -1130,6 +1136,7 @@ bura in
 burka
 burr
 busa
+buss
 bussa
 butelj
 butta
@@ -1154,6 +1161,7 @@ bytesvärde
 bä
 byta/växla ringar
 bädda
+bädda in
 bälg
 bära
 bära av
@@ -1188,6 +1196,7 @@ börja
 börja på ny kula
 början till slutet
 börsmäklare
+bösta
 camber
 campa
 canasta
@@ -1204,6 +1213,7 @@ chambre séparée
 chansa
 charma
 charmera
+charmör
 checka
 checka in
 checka ut
@@ -1258,6 +1268,7 @@ coroner
 coupe
 cowboy
 crawla
+crème-de-la-crème
 cykla
 cylinderhatt
 dadelpalm
@@ -1371,9 +1382,12 @@ det gör någon ont om någon
 det gör varken till eller från
 det har någon inte med att göra
 det kan göra/vara detsamma
+det kan hända att ...
+det kan väl hända
 det kliar i fingrarna på någon
 det liknar ingenting
 det låter höra sig
+det må vara hänt
 det naturliga urvalet
 det ska gudarna veta
 det skulle bara fattas
@@ -1422,6 +1436,7 @@ dippa
 direkt anföring
 direkt tal
 direktsända
+dirigent
 dirigera
 disciplinera
 diska
@@ -1463,6 +1478,7 @@ dominera
 don efter person
 donationsbrev
 donera
+donjuan
 dopa
 dopp i grytan
 doppa sig
@@ -1923,6 +1939,7 @@ finta
 fippla
 fira
 fira av
+fisa
 fiska
 fiskekort
 fiskhamn
@@ -2098,6 +2115,7 @@ frakta
 fraktal
 fram till småtimmarna
 framavlad
+framben
 frambesvärja
 frambringa
 framdrev
@@ -2174,7 +2192,9 @@ frossare
 frosseri
 frosta av
 frukta
+fruktträd
 fruktämne
+fruntimmerskarl
 frusta
 frysa
 frysa ihjäl
@@ -2251,6 +2271,7 @@ fyrspann
 fyrtaktsmotor
 fyrtio
 fysiljera
+fysisk person
 fähund
 fälla
 fälla ihop
@@ -2363,6 +2384,7 @@ förarbete
 förarga
 förarga sig
 förargas
+förargelse
 förband  2
 förbanna
 förbarma sig
@@ -2934,6 +2956,7 @@ ges
 gestalta
 gestalta sig
 gestaltning
+gestaltpsykologi
 gevärsstock
 gifta bort
 gifta sig
@@ -3620,6 +3643,7 @@ hårdra
 hårdträna
 hårman
 hårtofs
+hårtång
 höga vederbörande
 högakta
 högerklicka
@@ -3684,6 +3708,7 @@ i den högre skolan
 i det längsta
 i detsamma
 i detta nu
+i egen hög person
 i enlighet med
 i ensamt majestät
 i ett nu
@@ -3707,6 +3732,7 @@ i ny och nedan
 i nästa nu
 i onödan
 i oträngt mål
+i parti och minut
 i runda slängar
 i rättvisans namn
 i samma nu
@@ -3773,6 +3799,9 @@ inbjuda
 inbjudningskort
 inblick
 inbringa
+inbäddad
+inbäddad journalist
+inbäddad reporter
 inchecka
 indela
 indelningsgrund
@@ -3867,6 +3896,7 @@ inpassa
 inplanera
 inpränta
 inrama
+inrapportera
 inre monolog
 inreda
 inredning
@@ -4072,6 +4102,7 @@ ju fler kockar desto sämre soppa
 jubla
 julbelysning
 julkort
+juridisk person
 jurt
 jury
 justera
@@ -4173,6 +4204,7 @@ kasta av
 kasta fram
 kasta krona och/eller klave
 kasta loss
+kasta någon under bussen
 kasta om
 kasta sig
 kasta upp
@@ -4368,6 +4400,7 @@ knäppa till
 knäppa upp
 knäreflex
 knåda
+koagulation
 koagulera
 koda
 koda av
@@ -4529,8 +4562,6 @@ koppla
 koppla av
 koppla bort
 koppla ifrån
-koppla ihop
-koppla in
 koppla loss
 koppla om
 koppla på
@@ -4719,6 +4750,7 @@ kverulera
 kvicksilver
 kvicksilverpelare
 kvida
+kvinnotjusare
 kvissla
 kvistfri
 kvisthål
@@ -4942,6 +4974,8 @@ linda in
 linda någon kring sitt finger
 lindra
 linearritning
+lingonbuske
+lingonris
 linjespel
 linka
 lipa
@@ -5154,6 +5188,7 @@ långfristig
 långgrund
 långledas
 långpromenad
+långrev
 långskott
 långtradare
 långtråkig
@@ -5167,6 +5202,8 @@ låta udda vara jämnt
 låta vänta på sig
 låtsas
 låtsas om
+låtsas som om det regnar
+låtsas som om ingenting har hänt
 löda
 löddra
 löddra sig
@@ -5175,6 +5212,7 @@ lödning
 lögn, förbannad lögn och statistik
 lögnare
 löjlighet
+lökkupol
 löna sig
 löneanspråk
 löneavtal
@@ -5253,6 +5291,7 @@ manke
 mankera
 mankhöjd
 manskör
+mansperson
 mantalslängd
 mantel
 manteldjur
@@ -5350,6 +5389,7 @@ mervärdesskatt
 mesallians
 meta
 metallstycke
+metrev
 mezzosopran
 migrän
 mikra
@@ -5466,6 +5506,7 @@ motionsslinga
 motivera
 motläsa
 motortrafikled
+motorvagn
 motse
 motström
 motstå
@@ -5482,6 +5523,7 @@ mudderverk
 muddra
 mula
 mullra
+mullsork
 mulna
 multiplicera
 multiplikationstabell
@@ -5552,6 +5594,7 @@ målsägande
 målsägare
 målvakt
 månadskort
+måndagsmorgon
 många bäckar små
 mångdubbla
 mångfaldiga
@@ -5668,6 +5711,7 @@ nivellera
 njuta
 njuta i fulla drag
 nobba
+nobel
 noll och nada
 nolla
 nollställa
@@ -5732,6 +5776,7 @@ nämndeman
 nämnvärd
 näpsa
 när det (väl) gäller
+när det regnar på prästen så skvätter det på klockaren
 nära
 näringsrik
 närma
@@ -5934,6 +5979,7 @@ orienterare
 orienteringslampa
 orienteringspunkt
 orienteringstavla
+origo
 oriktighet
 orka
 orka med
@@ -5957,6 +6003,7 @@ osedvanlig
 oskadliggöra
 oskick
 oskriven
+ostkupa
 osund
 osystematisk
 otack är världens lön
@@ -6197,6 +6244,7 @@ predisponera
 preferera
 prenumerera
 preparand
+presbyter
 presentera
 presidera
 preskribera
@@ -6226,6 +6274,7 @@ prisge
 priskrig
 prispall
 prissätta
+pristagare
 privatisera
 problematisera
 problemorienterad
@@ -6323,11 +6372,13 @@ på grund av
 på högsta ort
 på inga villkor
 på inget/intet vis
+på låtsas
 på löpande band
 på närhåll
 på ort och ställe
 på rymmarstråt
 på sekunden
+på sin ålders höst
 på sina håll
 på smällen
 på studs
@@ -6407,6 +6458,7 @@ rappa
 rappa på
 rappa till
 rapportera
+rapportera in
 raring
 rasa
 rasera
@@ -6462,6 +6514,7 @@ regla
 reglementera
 reglera
 regna
+regna bort
 regna småspik
 regndroppe
 regress
@@ -6696,6 +6749,7 @@ räkna om
 räkna samman
 räkna upp
 räkna ut
+rälsbuss
 rämna
 ränna
 räta
@@ -6806,6 +6860,7 @@ sammanfoga
 sammanföra
 sammangadda sig
 sammanhänga
+sammanhållen
 sammanjämka
 sammankalla
 sammankoppla
@@ -6957,6 +7012,7 @@ singla
 sinnesanalogi
 sippra
 sira
+sirapssöt
 sistnämnda
 sisyfosarbete
 sitta
@@ -7000,6 +7056,7 @@ sjösätta
 skada
 skada sig
 skadedjur
+skadereglering
 skaffa
 skaffa undan
 skaka
@@ -7669,6 +7726,7 @@ sova som en gris
 sova som en stock
 sova ut
 sova över
+sovmorgon
 sovra
 spackla
 spadtag
@@ -7726,6 +7784,7 @@ spionera
 spiralblock
 spiraltrappa
 spisa av
+spiskupa
 spiskåpa
 spjutspets
 spjutspetsforskning
@@ -7876,6 +7935,7 @@ stipulera
 stirra
 stjäla
 stjälpa
+stjälpa i sig
 stock
 stocka
 stocka sig
@@ -8281,6 +8341,7 @@ sänka ner
 sänka sig
 särbehandla
 särkullbarn
+särling
 särredovisa
 särskilja
 sätta
@@ -8329,6 +8390,7 @@ så
 så (ända) in i baljan
 så (ända) in i vassen
 så gott som
+så ligger det till
 så länge
 så till den (milda) grad
 så vind och skörda storm
@@ -8390,6 +8452,7 @@ ta någon i kragen
 ta någon på bar gärning
 ta någon till äkta
 ta något med en klackspark
+ta parti för någon/något
 ta på
 ta på sig
 ta sig
@@ -8495,6 +8558,7 @@ teblask
 teckna
 teckna ner
 teckna sig
+teg
 tekula
 telefonera
 telefonväktare
@@ -8565,6 +8629,7 @@ tillkalla
 tillknycklad
 tillkomma
 tillkoppla
+tillkoppling
 tillkännage
 tillkännagivelse
 tillmäta
@@ -8826,7 +8891,9 @@ tryta
 trä
 träda emellan
 träda fram
+träddiagram
 träde
+trädtopp
 träffa
 träffa på
 träffad
@@ -8854,6 +8921,7 @@ tröttna
 tsunami
 tudela
 tugga
+tuggbuss
 tuggummi
 tuktad sten
 tulla
@@ -8980,6 +9048,8 @@ töras
 törnbuske
 törne
 uggla
+ugnsgrädda
+ugnssteka
 ulltistel
 ultrarapid
 umbära
@@ -9176,6 +9246,7 @@ uruppföra
 urvattna
 urverk
 utagera
+utan anseende till person
 utan krus
 utan namns nämnande
 utandas
@@ -9480,10 +9551,12 @@ varvad utbildning
 vaselin
 vattendroppe
 vattenfylla
+vattenkaskad
 vattenklosett
 vattenkrasse
 vattenlås
 vattenskopa
+vattensork
 vattentät
 vattentäta skott
 vattna
@@ -9500,6 +9573,7 @@ vederfaras
 vedergälla
 vederlägga
 vegetativa nervsystemet
+veklagan
 vekling
 ventilera
 verifiera
@@ -9581,6 +9655,7 @@ vindkantring
 vindla
 vindla sig
 vindskontor
+vindskupa
 vindskydd
 vindspel
 vindsutrymme
@@ -9690,6 +9765,7 @@ vägvisare
 väl bekomme!
 välbehållen
 väldresserad
+välfägnad
 välja
 välja bort
 välja in
@@ -9806,6 +9882,7 @@ våta
 våtarv
 våtvärmande/våtvarmt omslag
 vörda
+vördnadsvärd
 walkie-talkie
 wrestling
 x antal
@@ -9885,6 +9962,7 @@ yttra sig
 åka ur
 åka ut
 åkalla
+åkerlapp
 åklaga
 åkomma
 åla
@@ -14882,9 +14960,7 @@ sammanbinda
 sammanbiten
 sammanblanda
 sammanbrott
-sammanbunden
 sammanbygga
-sammanbyggd
 sammandrabba
 sammandrabbning
 sammandrag

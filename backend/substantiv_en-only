@@ -1531,6 +1531,7 @@ blodpropp
 blodpöl
 blodsdroppe
 blodshämnd
+blodsjukdom
 blodskam
 blodspillan
 blodstockning
@@ -1771,6 +1772,7 @@ brigad
 brisad
 brist
 bristningsgräns
+bristsjukdom
 brits
 britt
 bro
@@ -2034,6 +2036,7 @@ chans
 chansning
 charlatan
 charm
+charmör
 chaufför
 check
 chef
@@ -2118,6 +2121,7 @@ cred
 credit
 cricket
 croissant
+crème-de-la-crème
 cup
 cupcake
 cykel
@@ -2358,6 +2362,7 @@ dipsoman
 direkthet
 direktion
 direktör
+dirigent
 disciplin
 disharmoni
 disjunktion
@@ -2435,6 +2440,7 @@ domän
 donation
 donator
 doning
+donjuan
 dopning
 dopplereffekt
 dos
@@ -3402,6 +3408,7 @@ fruktsallad
 fruktsalt
 fruktskorv
 fruktträdgård
+fruntimmerskarl
 frustration
 frys
 frysbox
@@ -3541,6 +3548,7 @@ för
 föraning
 förankring
 förare
+förargelse
 förbandslåda
 förbandsplats
 förbannelse
@@ -4035,6 +4043,7 @@ gerontologi
 gest
 gestalt
 gestaltning
+gestaltpsykologi
 gesäll
 get
 getabock
@@ -4905,6 +4914,7 @@ hårtest
 hårtofs
 hårtork
 hårtuss
+hårtång
 hårväxt
 hårvård
 håv
@@ -5909,6 +5919,7 @@ knäreflex
 knäskål
 knöl
 ko
+koagulation
 koagulering
 koala
 koalition
@@ -6446,6 +6457,7 @@ kvinna
 kvinnlighet
 kvinnoroll
 kvinnosak
+kvinnotjusare
 kvissla
 kvist
 kvitten
@@ -6735,6 +6747,8 @@ linda
 lindning
 linearritning
 linfärja
+lingonbuske
+lingonris
 linjal
 linje
 linjedomare
@@ -7020,6 +7034,7 @@ lögnare
 löjlighet
 löjtnant
 lök
+lökkupol
 lön
 löneförhöjning
 löneglidning
@@ -7120,6 +7135,7 @@ mannamån
 manschett
 manskör
 manslem
+mansperson
 manspillan
 mantalslängd
 mantel
@@ -7319,6 +7335,7 @@ meter
 metkrok
 metod
 metodik
+metrev
 metropol
 mezzosopran
 microsekund
@@ -7515,6 +7532,7 @@ motor
 motorbåt
 motorcykel
 motortrafikled
+motorvagn
 motorväg
 motpart
 motprestation
@@ -7542,6 +7560,7 @@ muffins
 mugg
 mula
 mull
+mullsork
 mullvad
 multipel
 multiplikand
@@ -7644,6 +7663,7 @@ mån
 månad
 månadslön
 måndag
+måndagsmorgon
 måne
 mångfald
 mångfoting
@@ -8124,6 +8144,7 @@ orienteringspunkt
 orienteringstavla
 orienteringstävling
 originalitet
+origo
 oriktighet
 orimlighet
 ork
@@ -8154,6 +8175,7 @@ osed
 ost
 osteoporos
 osthyvel
+ostkupa
 ostron
 ostronkniv
 osäkerhet
@@ -8619,6 +8641,7 @@ premiärminister
 prenumeration
 preparand
 preparat
+presbyter
 presenning
 presens
 present
@@ -8653,6 +8676,7 @@ pris
 priskontroll
 prislapp
 prispall
+pristagare
 prisutdelning
 privatisering
 privatist
@@ -9245,6 +9269,7 @@ räkning
 räksmörgås
 räl
 räls
+rälsbuss
 rämna
 ränna
 rännil
@@ -10317,6 +10342,7 @@ sork
 sort
 sosse
 souvenir
+sovmorgon
 sovstad
 sovsäck
 sovvagn
@@ -10389,6 +10415,7 @@ spiraltrappa
 spis
 spisel
 spiselhäll
+spiskupa
 spiskåpa
 spisning
 spjutkastning
@@ -10988,6 +11015,7 @@ sänkning
 särart
 särbo
 särklass
+särling
 särprägel
 särskola
 särställning
@@ -11131,6 +11159,7 @@ teaterstycke
 teckning
 teddy
 teddybjörn
+teg
 tekanna
 teknik
 tekniker
@@ -11276,6 +11305,7 @@ tillintetgörelse
 tillit
 tillkommelse
 tillkomst
+tillkoppling
 tillkännagivelse
 tillnyktring
 tillrättavisning
@@ -11572,6 +11602,7 @@ trädgård
 trädgårdsväxt
 trädgårdsärt
 trädkramare
+trädtopp
 träff
 träförädling
 trägravyr
@@ -11607,6 +11638,7 @@ tubkikare
 tudelning
 tuff
 tuffing
+tuggbuss
 tuggtobak
 tukt
 tularemi
@@ -12334,6 +12366,7 @@ vattenbruk
 vattendroppe
 vattenflygplan
 vattenkanna
+vattenkaskad
 vattenklosett
 vattenkokare
 vattenkran
@@ -12344,6 +12377,7 @@ vattenmelon
 vattenrutschbana
 vattenskida
 vattenskopa
+vattensork
 vattenspegel
 vattentillförsel
 vattentäkt
@@ -12368,6 +12402,7 @@ vedergällning
 vedersakare
 vegetation
 vegetationsperiod
+veklagan
 vekling
 vektor
 velociped
@@ -12462,6 +12497,7 @@ vindrutespolare
 vindrutetorkare
 vindruva
 vindskala
+vindskupa
 vindsnurra
 vindstilla
 vingbredd
@@ -12579,6 +12615,7 @@ vägtistel
 vägvisare
 väktare
 väl
+välfägnad
 välfärd
 välgärning
 välgång
