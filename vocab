@@ -238,11 +238,15 @@ function putDef(def, score) {
 		putFrasDef(score);
 		return;
 	}
-	let processed = preProc(def);
-	def = processed[0];
-	meta = processed[1];
 	
-	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta + "&score=" + score, {
+	if (def.slice(0,1) === "\n") def = def.slice(1);
+	
+	
+	let processed = preProc(def);
+	def = processed[0];	
+	meta = processed[1];
+	more = processed[2];
+	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta + "&score=" + score + "&more=" + more, {
 		method: 'get',
 		mode:	'cors',
 		headers: {
@@ -2166,17 +2170,18 @@ function grammar(def) {
 }
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = '" + def + "'")
-	// return def and meta components
+	// takes user input and splits into "meta", "def" and "more" components
+	let meta = "";	
+	
 	// " ++" is a user-control, remove if present in definition
 	def = def.replaceAll(" ++","");
 		
 	// Check if any meta information exists		
 	if (def[0] === " ") def = def.slice(1);
-	let meta = "";
 	
 	let defArr = def.split("\n");
 	// Concenate if multiple spellings are present
-	
+	// *** META ***
 	if (defArr.length > 3 && defArr[1] === "eller" || defArr[1] === "även" || defArr[1] === "även åld." || defArr[1] === "även vardagligt" || defArr[1] === "eller vardagligt") {
 		defArr[0] = defArr[0] + " </i>" + defArr[1] + " <i>" + defArr[2];
 		// Move remaining items up two elements
@@ -2223,6 +2228,7 @@ function preProc(def) {
 	for (i = 2; i < 9; i++) {
 		m = m.replace(" " + i, "");
 	}
+	/// *** META + DEF ****
 	LongFrasMatch = fiveFras === m || sixFras === m || sevenFras === m || eightFras === m || nineFras === m || tenFras === m;	
 	if (firstWord === m || twoWords === m || threeWords === m || fourWords === m || LongFrasMatch) {		
 		meta = defArr[0].replaceAll("_"," ");		
@@ -2241,14 +2247,48 @@ function preProc(def) {
 				del = "\n";
 			}
 		}
-	}
-	
+	}	
+	/// *** DEF ***
 	// Split definition
 	def = def.replaceAll(" JFR", "\nJFR");
 	def = def.replaceAll(" SE", "\nSE");
 	def = def.replaceAll(" SYN.", "\nSYN.");
 	def = def.replaceAll(" MOTSATS", "\nMOTSATS");	
 	arr = def.split("\n");
+	
+	let tmpDef = "";
+	let tmpMore = "";
+	let del = "";	
+	let delDef = "";
+	for (i = 0; i < arr.length; i++) {
+		// \u25cf or [1-20] is part of a definition
+		// Also "JFR", "MOTSATS", "SE" are part of definition
+		let cur = arr[i] // current
+		let char1 = cur[0];
+		let isLink = cur.slice(0,3) === "JFR" || cur.slice(0,6) === "MOTSATS" || cur.slice(0,2) === "SE" || cur.slice(0,3) === "SYN";
+		let isNum = false;
+		for (j = 1; j < 20; j++) {
+			jStr = j.toString();
+			n = jStr.length;			
+			if (cur.slice(0,n) === jStr) {				
+				isNum = true;				
+				break;
+			}
+		}
+		let isSingle = char1 === "\u25cf" || char1 === "\u2022"; // single definition		
+		let isSamman = cur.slice(0,6) === "till '"// sammansättning
+		if (isSingle || isLink || isNum || isSamman || CLASS === "fraser") {			
+			tmpDef += delDef + cur;			
+			delDef = "\n";			
+		} else {			
+			if (cur.length != 0) {
+				if (cur.slice(0,6) === "belagt") cur = "HISTORIK<br>" + cur
+				tmpMore += del + cur;				
+				del ="<br>"
+			}
+		}		
+	}	
+	arr = tmpDef.split("\n");
 	let outDef = "";
 	// Grammer information - Support for partikel parters
 	// Can be between 1 and 3 suggested partner words
@@ -2257,7 +2297,7 @@ function preProc(def) {
 	let regex2 = /skilt[a-zäöå]+, [a-zäöå]+/;
 	let regex3 = /skilt[a-zäöå]+, [a-zäöå]+, [a-zäöå]+/;
 	// Delimiter is blank on first line
-	let del = "";
+	del = "";
 	for (s of arr) {				
 		if (s.length > 1) {
 			// Remove any leading space(s)
@@ -2328,9 +2368,13 @@ function preProc(def) {
 			del = "<br>";
 		}
 	}
+	
+	// Get any "more" information that exists in the def
+	
 	var out = []
 	out[0] = outDef;
 	out[1] = meta;	
+	out[2] = tmpMore;	
 	// That's it!
 	return out;
 }
@@ -3118,8 +3162,8 @@ function togglePlural() {
 	if (DEBUG) console.log("togglePlural()");
 	// Go direct to the backend to make the change.	
 	// Only support "en" words for now.
-	if (CLASS === "substantiv_en") {
-		fetch('backend/togglePlural.php?word=' + CUR_WORD, {
+	if (CLASS === "substantiv_en" || CLASS === "substantiv_ett") {
+		fetch('backend/togglePlural.php?word=' + CUR_WORD + "&class=" + CLASS, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -3174,7 +3218,7 @@ function getDiff() {
 	let fmt = "";
 	if (TARGET_DAILY != 0) {		
 		// Express diff as a percentage of the intended rate
-		diff = Math.round((TOTAL_SCORE - TARGET_DAILY) / RATE * 100 * 10);
+		diff = Math.round((TOTAL_SCORE - TARGET_DAILY) / RATE * 100);
 		if (diff > 0) {
 			fmt = " <span class='diffPlus'>_diff_</span>";
 		} else {

@@ -1,6 +1,6 @@
 <?php
 	$path = getcwd() ."/";
-	$class = "substantiv_en";
+	$class = $_GET["class"];
 	$word = $_GET['word'];
 	// $word comes from store listing rather than user input so no cleaning required
 
