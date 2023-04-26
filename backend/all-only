@@ -16,6 +16,7 @@
 (inte) i första taget
 (jag) har den äran (att gratulera)
 (jaså,) på så sätt
+(komma) som lök på laxen
 (komma) som sänd från himlen
 (komma/hamna) ur askan i elden
 (ligga) på sitt yttersta
@@ -36,6 +37,7 @@
 (vara som) en tupp i hönsgården
 (vara) som balsam för själen
 (vara) som ler och långhalm
+(vilja både) äta kakan och ha den kvar
 (växa upp) som svampar ur jorden
 (ända) ut i fingerspetsarna
 .. .och på den vägen är det
@@ -95,6 +97,7 @@ affärsbiträde
 aga
 agera
 agglomerera
+agglutinerande språk
 aggregera
 agnosticism
 agnostisk
@@ -418,6 +421,7 @@ avlagra
 avlagra sig
 avlasta
 avleda
+avleverera
 avlida
 avliva
 avlocka
@@ -758,6 +762,7 @@ beröva
 bese
 besegra
 besiktiga
+besiktningsinstrument
 besinna
 besinna sig
 besinning
@@ -840,6 +845,7 @@ bevisvärde
 bevittna
 bevuxen
 beväpna
+bevära
 bibehålla
 bibelspråk
 bibringa
@@ -1007,6 +1013,7 @@ bondkomiker
 bondpermission
 bong
 bonga
+bordslöpare
 bordsuppsats
 borgen
 borgenär
@@ -1170,6 +1177,7 @@ byggnadsställning
 byggnadstillstånd
 byka
 byrå  2
+bysthållare
 bystämma
 byta
 byta av
@@ -1998,6 +2006,7 @@ fjällstuga
 fjällvandra
 fjärma
 fjärran
+fjärrtrafik
 fjärta
 fjäska
 fjäskig
@@ -2257,6 +2266,7 @@ fråga sig fram
 fråga sig för om något
 fråga ut
 frågetecken i marginalen
+från alla håll och kanter
 från ax till limpa
 från golv till tak
 från hjässan till fotabjället
@@ -2285,6 +2295,7 @@ fullgöra
 fullständiga
 fullt och fast
 fullt ut
+fullända
 fumla
 fundera
 fungera
@@ -3836,6 +3847,7 @@ igenbommad
 ignorera
 igångsätta
 ihågkomma
+ikonoklast
 ila
 illgärning
 illuminera
@@ -4281,6 +4293,7 @@ kassler
 kasta
 kasta av
 kasta fram
+kasta in handduken
 kasta krona och/eller klave
 kasta loss
 kasta någon under bussen
@@ -4790,6 +4803,7 @@ krås
 krås  2
 kröka
 kröna
+krönas med framgång
 kubera
 kubikrot
 kugga
@@ -4966,6 +4980,7 @@ landa
 landmina
 landsförräderi
 landssorg
+landstorm
 landsätta
 landvind
 landå
@@ -5130,12 +5145,15 @@ logga in
 logga ur
 logga ut
 loggfil
+lokalbedövning
 lokalfärg
 lokalisera
 lokalisera sig
 lokaliseringspolitik
 lokalpress
+lokaltrafik
 lokatt
+lokus
 loppa
 lossa
 lossa tungans band
@@ -5578,6 +5596,7 @@ mixtra
 mjuka upp
 mjuka upp sig
 mjukgörare
+mjälthugg
 mjölkko
 mjölkkossa
 mjölktand
@@ -5823,6 +5842,7 @@ negligera
 nejlika
 nejlikväxt
 neka
+nere
 nervcell
 nervknippe
 nervknut
@@ -6930,6 +6950,7 @@ ränna
 räta
 räta upp
 räta ut
+rätstickning
 rätt och slätt
 rätta
 rätta in sig
@@ -7631,6 +7652,7 @@ släppa sig
 släta
 släta av
 släta över
+slätstickning
 slå
 slå (någon) en pling
 slå (någon) en signal
@@ -8082,6 +8104,7 @@ stall
 stall  2
 stalla
 stallbacke
+stamlokus
 stamma
 stampa
 stampa fram
@@ -8101,6 +8124,9 @@ stationera
 stativ
 statsskick
 statuera
+status quo
+statussymbol
+statyett
 stava
 stava av
 stava sig igenom
@@ -8548,6 +8574,7 @@ säga till
 säga upp
 säga upp sig
 säga ut
+säga varken bu eller bä
 säga åt
 säkerhetständsticka
 säkerställa
@@ -8811,6 +8838,8 @@ tetanus
 tetas
 tetra
 tetraeder
+teveronika
+teärenpris
 thaisiden
 ticka
 tidigarelägga
@@ -9675,6 +9704,7 @@ vad
 vad  2
 vad fattas dig?
 vad gäller någon/något
+vad tycks?
 vad vill detta säga?
 vada
 vaddera
@@ -9751,6 +9781,7 @@ vara illa ute
 vara intecknad upp över skorstenen
 vara klar i knoppen
 vara kvar i garderoben
+vara nere i någon
 vara part i målet
 vara på god väg
 vara på gränsen att
@@ -10194,6 +10225,7 @@ zoomobjektiv
 ära
 ärans fält
 ärekränka
+ärevarv
 ärga
 ärja
 ärlighet varar längst
