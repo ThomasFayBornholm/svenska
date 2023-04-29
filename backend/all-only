@@ -599,6 +599,8 @@ banka
 banna
 bannlysa
 banta
+bar
+bar  2
 bara
 bara skrapa på ytan
 barka
@@ -946,6 +948,7 @@ blomkalk
 blomkorg
 blomma
 blomning
+blomskaft
 blomsteruppsats
 blomstra
 blomstra upp
@@ -1109,6 +1112,8 @@ brygga
 brygga över
 bryggning
 bryna
+bryne
+brynsten
 bryta
 bryta av
 bryta igenom
@@ -1370,10 +1375,12 @@ dela sig
 dela upp
 dela ut
 delad glädje är dubbel glädje
+delbar
 delegera
 delge
 delta
 demaskera
+demenssjuk
 dementera
 demilitarisera
 demografi
@@ -1635,6 +1642,7 @@ dygnsgammal
 dyka
 dyka upp
 dyka upp som gubben i/ur lådan
+dyrbar
 dyrka
 dyrka upp
 dyrkare
@@ -2242,6 +2250,7 @@ frossare
 frosseri
 frosta av
 frukta
+fruktbar
 fruktträd
 fruktämne
 fruntimmerskarl
@@ -2405,6 +2414,7 @@ följa upp
 fönsterbänk
 fönsterglas
 fönsterkuvert
+fönsterlucka
 fönsternisch
 fönsterplats
 fönstersmyg
@@ -3588,6 +3598,7 @@ hushållsassistent
 husköp
 husockupation
 huta åt
+huvudbry
 huvudentré
 huvudingång
 huvudroll
@@ -4157,6 +4168,7 @@ isolera
 isolering
 isoleringscell
 isometrisk träning
+issörja
 isterhaka
 itu
 ituta
@@ -4349,6 +4361,7 @@ kissekatt
 kittla
 kittlas
 klack
+klackbar
 klackspark
 kladda
 kladda ner
@@ -4456,6 +4469,7 @@ knacka ur
 knaka
 knalla
 knapp
+knapphål
 knappsats
 knapra
 knarka
@@ -4496,6 +4510,7 @@ knäppa med fingrarna
 knäppa på
 knäppa till
 knäppa upp
+knäppkänga
 knäreflex
 knåda
 koagulation
@@ -4855,6 +4870,7 @@ kvarndamm
 kvarnsten
 kvarstå
 kvasi
+kvastskaft
 kverulans
 kverulera
 kvicksilver
@@ -5305,6 +5321,7 @@ läsa lusen av någon
 läsa på
 läsa upp
 läsa ut
+läsbar
 läst
 lätt fånget lätt förgånget
 lätta
@@ -5327,6 +5344,7 @@ låsa
 låsa in
 låsa sig
 låsa upp
+låsbar
 låta
 låta flitens lampa lysa/brinna
 låta udda vara jämnt
@@ -5899,6 +5917,7 @@ nutidsorientering
 nyansera
 nybilda
 nybrutal
+nyckelhål
 nyckelknippa
 nydana
 nyemission
@@ -5943,6 +5962,7 @@ närvarokontroll
 närvarolista
 närvaroplikt
 näsduk
+näshåla
 nässelfjäril
 nätspel
 nätstrumpa
@@ -5985,6 +6005,7 @@ obunden form
 och hör sen!
 ockupera
 odla
+odlingsbar
 odlingskrage
 odöpt
 oemotståndlig
@@ -6267,6 +6288,7 @@ peppa
 pepparrot
 pepparrotskött
 peppning
+per skaft
 percipiera
 perenn
 pergament
@@ -6660,6 +6682,7 @@ reagera
 realindex
 realisation
 realisera
+realiserbar
 realiter
 realvärde
 reapris
@@ -6916,6 +6939,7 @@ ryggåsstuga
 ryka
 ryka ihop
 ryka på
+ryktbar
 rymdfarkost
 rymma
 rymma ut
@@ -6984,6 +7008,7 @@ rånmord
 råsegel
 råsiden
 råsilke
+råtthål
 råämne
 rö
 rödbrokig
@@ -7285,6 +7310,7 @@ skam den som ger sig
 skam till sägandes
 skamvrå
 skandalisera
+skandalomsusad
 skandera
 skapa
 skapa om
@@ -7988,6 +8014,7 @@ spela någon ett spratt
 spela upp
 spela ut
 spela över
+spelhåla
 spelmansstämma
 spelöppning
 spendera
@@ -8652,6 +8679,7 @@ såga
 såga av
 såll
 sålla
+sångbar
 sångspel
 såpopera
 såra
@@ -9325,6 +9353,7 @@ törnbuske
 törne
 uggla
 ugnsgrädda
+ugnslucka
 ugnssteka
 ulltistel
 ultrarapid
