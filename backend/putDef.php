@@ -12,16 +12,8 @@
 	if (isset($_GET['more'])) {
 		$more = $_GET['more'];
 	}
-		
-	// Delimet with either "||" or "<<" to give easy support for UK or SV keyboard
-	if (strlen($more) > 0) {	
-		$name = $class . "-more";
-		$contents = file_get_contents($path . $name, 'UTF-8');
-		$arr = json_decode($contents,true);
-		$key = str_replace(" ","-", $word) . "_0";
-		$arr[$key] = $more;
-		file_put_contents($path. $name, json_encode($arr));
-	}
+			
+	
 	
 	$trail = "-def";
 	if (strlen($def) > 0) {
@@ -33,12 +25,21 @@
 	}
 	
 	if ($class != "fraser") {
+		// Fraser class does not benefit from "more" or "meta" fields so exclude
 		if (strlen($meta) > 0) {
 			$name = $class . "-meta";
 			$contents = file_get_contents($path . $name, 'UTF-8');
 			$arr = json_decode($contents,true);
 			$arr[$word] = $meta;
 			file_put_contents($path . $name, json_encode($arr));
+		}
+		if (strlen($more) > 0) {	
+			$name = $class . "-more";
+			$contents = file_get_contents($path . $name, 'UTF-8');
+			$arr = json_decode($contents,true);
+			$key = str_replace(" ","-", $word) . "_0";
+			$arr[$key] = $more;
+			file_put_contents($path. $name, json_encode($arr));
 		}
 	}
 	if (strlen($score) > 0) {
