@@ -228,7 +228,26 @@ function fmtDef(def) {
 	}
 	return def;
 }
-
+function addDef(meta, def, more) {
+	console.log("addDef(meta,def,more)");
+	
+	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		updateDef();
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
 function putDef(def, score) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
@@ -578,6 +597,7 @@ function scrollUp() {
 	}
 	if (DEBUG) console.log("scrollUp(); SCROLL_INC = " + SCROLL_INC);
 }
+
 function updateDef() {
 	if (DEBUG) console.log("updateDef()");
 	if (SCROLL_INC != -1) {		
@@ -2870,9 +2890,11 @@ function processKeyDown(ev) {
 	} else if (ev.key === "ArrowDown" && CLASS === "all") {
 		drillDown()
 	} else if (ev.key === "Insert") {
-		addWord();
+		addWord();	
 	} else if (ev.key === "Delete") {
 		removeWord();
+	} else if (ev.key === "F10") {
+		fetchDef();
 	} else if (ev.key === "#") {
 		addWordWithEnum();
 	} else if (ev.key === '"') {
@@ -3233,6 +3255,26 @@ function getDiff() {
 function round(dec, places) {
 	let mult = 10 ** places;	
 	return Math.round(dec * mult) / mult;
+}
+
+function fetchDef() {
+	console.log("fetchDef()");
+	fetch('backend/scrapeDef.php?word=' + CUR_WORD, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})	
+	.then(json => {
+		addDef(json['meta'],json['def'],json['more']);		
+	})
+	.catch(error => {
+		console.log(error);
+	})
 }
 
 </script>
