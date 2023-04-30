@@ -229,9 +229,9 @@ function fmtDef(def) {
 	return def;
 }
 function addDef(meta, def, more) {
-	console.log("addDef(meta,def,more)");
+	if (DEBUG) console.log("addDef(meta,def,more)");
 	
-	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS, {
+	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + "\u25cf " + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -793,10 +793,11 @@ function displayDef(meta, def,word) {
 	let defLines = [];
 	let iWrite = 0;
 	for (i = 0; i < defRaw.length; i++) {
-		if (defRaw[i].match(/^[1-9\u25CF]+[0-9]?.*/)) {
+		// Formatted 
+		if (defRaw[i].match(/^[1-9\u25CF]+[0-9]?.*/)) {			
 			defLines[iWrite] = defRaw[i];
 			iWrite++;			
-		} else {
+		} else {			
 			for (k = 1; k < 24; k++) {
 				defRaw[i] = defRaw[i].replaceAll(k,"")				
 			}
@@ -808,7 +809,7 @@ function displayDef(meta, def,word) {
 				defLines[iWrite-1] += "<br>" + defRaw[i];
 			}
 		}
-	}
+	}	
 	let outDef = "";
 	let delim = "";	
 	setN_DEF(defLines.length);
@@ -1037,7 +1038,7 @@ function onlineLookup(elHTML, ev) {
 	if (word.length > 0) {
 		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
 		// Rebust escaping of special characters		
-		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");		
+		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");				
 		TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
 		TAB_DUMMY.focus();
 		
@@ -2893,8 +2894,10 @@ function processKeyDown(ev) {
 		addWord();	
 	} else if (ev.key === "Delete") {
 		removeWord();
-	} else if (ev.key === "F10") {
+	} else if (ev.key === "F1") {
 		fetchDef();
+	} else if (ev.key === "F2") {
+		getRaw();
 	} else if (ev.key === "#") {
 		addWordWithEnum();
 	} else if (ev.key === '"') {
@@ -3258,7 +3261,7 @@ function round(dec, places) {
 }
 
 function fetchDef() {
-	console.log("fetchDef()");
+	if (DEBUG) console.log("fetchDef()");
 	fetch('backend/scrapeDef.php?word=' + CUR_WORD, {
 		method: 'get',
 		mode: 'cors',
@@ -3276,6 +3279,9 @@ function fetchDef() {
 		console.log(error);
 	})
 }
-
+function getRaw() {
+	if (DEBUG) console.log("getRaw()")
+	window.open("https://www.svenska.se/tri/f_so.php?sok=" + CUR_WORD)
+}
 </script>
 </html>

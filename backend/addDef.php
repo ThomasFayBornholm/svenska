@@ -104,18 +104,18 @@
 	if ($class != "faser") {
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
 		if (strlen($more) > 0) {
+			$key_suffix = "_0";
 			$name = $class . "-more";
 			$contents = file_get_contents($path . $name, 'UTF-8');
 			$arr = json_decode($contents,true);
-			$arr[$word] = $meta;
+			$arr[$word . $key_suffix] = $more;
 			file_put_contents($path. $name, json_encode($arr));
 		}
-		if (strlen($more) > 0) {
-			$name = $class . "-more";
+		if (strlen($meta) > 0) {
+			$name = $class . "-meta";
 			$contents = file_get_contents($path . $name, 'UTF-8');
-			$arr = json_decode($contents,true);
-			$key = str_replace(" ","-",$word) . "_0";
-			$arr[$key] = $more;
+			$arr = json_decode($contents,true);			
+			$arr[$word] = $meta;			
 			file_put_contents($path . $name, json_encode($arr));
 		}
 	}
