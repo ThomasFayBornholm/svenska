@@ -231,7 +231,7 @@ function fmtDef(def) {
 function addDef(meta, def, more) {
 	if (DEBUG) console.log("addDef(meta,def,more)");
 	
-	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + "\u25cf " + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
+	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -2761,7 +2761,7 @@ function putMore() {
 		if (more.indexOf("<h>") != -1) {
 			more = more.replace("<h>","HISTORIK:");
 		} else {
-			more = more.replace("belagt","HISTORIK:<br>belagt");
+			more = more.replace("belagt","HISTORIK: belagt");
 		}
 	}
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF;	
@@ -2833,13 +2833,22 @@ function toggleMore(key, show = false) {
 			if (json.length === 0) {
 				$(id).html(" --<br>***No more information to show");				
 			} else {												
+				// Add links
+				moreArr = json.split("<br>");
+				let del = "";
+				let tmpMore = "";
+				for (i = 0; i < moreArr.length; i++) {
+					moreArr[i];
+					tmpMore += del + simpleLink(moreArr[i]);
+					del = "<br>";
+				}
 				let tmp = "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";
 				tmp += " onclick='showCachedDef(this)'";
 				if (SHOW_HELP) {
 					tmp += " title = 'Left click = back to definition(s) "
 					tmp += "\nRight click = edit information'";
 				}
-				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_","<b>" + keyForUser(key) +  "</b><br>" + json);
+				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_","<b>" + keyForUser(key) +  "</b><br>" + tmpMore);
 								
 				$('#iParDef').html(tmp);						
 			}		
@@ -2862,6 +2871,7 @@ function toggleMore(key, show = false) {
 function hideAllMore() {
 	$('#iMore').css("diplay","none");
 }
+
 
 function editMore(ev,key) {
 	if (DEBUG) console.log(ev,key)	

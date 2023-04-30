@@ -4,8 +4,7 @@
 	$out['meta'] = "";
 	$out['def'] = "";
 	$out['more'] = "";
-	
-	
+		
 	$def =  file_get_contents('https://www.svenska.se/tri/f_so.php?sok=' . $word);
 	// Check this resolves to the correct word
 	$find = 'class="slank" href="';
@@ -18,54 +17,29 @@
 			$pos1 = $pos1 + strlen($find);
 			$lenFound = $pos2 - $pos1;
 			$ext = substr($def,$pos1, $lenFound);
-			$def =  file_get_contents('https://svenska.se/' . $ext);
-			
+			$def =  file_get_contents('https://svenska.se/' . $ext);		
 		}
 	}
-	$context = getSubStr($def, "hkom", true);
-	if ($context) {
-		$out['def'] = $out['def'] . "[" . $context[0] . "] ";
-	}
-	$grammar = getSubStr($def, "fkomblock", true);
-	if ($grammar) {
-		$out['def'] = $out['def'] . "(" . $grammar[0] . ") ";
-	}
-	$out['def'] = $out['def'] . strip_tags(getSubStr($def,"def", true)[0]);	
-	// Secondary definition information
-	$deft = getSubStr($def,"deft", true);		
-	if ($deft) $out['def'] = $out['def'] . " {" . $deft[0] . "}";
-	// Link type (only check the first span)
-	$hv = getSubStr($def,"hv",true);	
-	$type = "";
-	$comp = ["SYN.","JFR", "MOTSATS", "SE"];
-	if ($hv) {		
-		foreach($hv as $match) {			
-			$match = strip_tags($match);			
-			$type = $match;
-			$hvWord = getSubStr($def,"hv");
-			if ($hvWord) {
-				foreach($hvWord as $match) {				
-					$res = strip_tags($match);	
-					foreach($comp as $c) {
-						$res = str_replace($c, " " . $c . " ", $res);
-						$res = str_replace("\n","", $res);
-					}
-					if ($res) $out['def'] = $out['def'] . "<br>" . $res;
-				}
-			}
-		}
-	}
-	// Link word (check the whole div
 	
+	// filter away uninteresting stuff
+	$find = 'class="orto">';
+	$start = strpos($def,$find) + strlen($find);
+	$find = 'alfabeta';
 	
+	$end = strpos($def,$find);
+	$len = $end - $start;
+	$def = substr($def, $start,$len);
 	
-	// Get conjugation
+	if (!$def) return;
+	
+	$out['def'] = getDef($def);		
+	
 	// Get word class
 	$find = "ordklass";	
-	$wordClass = getSubStr($def,$find)[0];
+	$wordClass = getClass($def,$find)[0];
 	// Find all the conjugations
 	$find = "bojning";	
-	$conjugations = getSubStr($def,$find, true);
+	$conjugations = getClass($def,$find, true);
 	
 	$out['meta'] = conjugate($word, $conjugations);
 	$out['meta'] = $out['meta'] . "<br>" . $wordClass;
@@ -74,17 +48,16 @@
 	$out['more'] = getMore($def);
 	echo json_encode($out);
 	
-	function getSubStr($def,$find,$isSpan=false) {
+	function getClass($def,$find,$isSpan=false) {
 		
 		$found = array();
 		if ($isSpan) {			
 			$end = "</span>";
 		} else {
 			$end = "</div>";
-		}
-		$find = '="' . $find . '">';
+		}				
+		$find = 'class="' . $find . '">';
 		$len = strlen($find);
-		
 		$pos1 = strpos($def, $find);
 		if (!$pos1) return;
 		$pos2 = strpos($def, $end, $pos1);
@@ -122,87 +95,23 @@
 		}
 		
 		return $found;
-	}
-	
-	function getMore($def) {
-		$more = "";
-		$konst = getSubStr($def,"vt");
-		if ($konst) {
-			$konst = strip_tags($konst[0]);
-			$more = $more . "KONSTRUKTION: " . $konst . "<br>";
-		}
-		$samman = getSubStr($def,"hvord");		
-		if ($samman) {
-			$samman = strip_tags($samman[0]);
-			$more = $more . "SAMMANSÄTTN./AVLEDN.: " . $samman . "<br>";
-		}
-		$find = "</summary>";
-		$len = strlen($find);
-		$pos1 = strpos($def,"</summary>");
-		if ($pos1) {
-			$pos2 = strpos($def,"</details>");
-			if ($pos2) {
-				$lenFound = $pos2 - $pos1;
-				$more = substr($def,$pos1 + $len + 1, $lenFound);
-				$more = strip_tags($more);				
-			}
-		}
-		// Primary example
-		$syntExAll = getSubStr($def, "sxblocklx");				
-		if ($syntExAll) {			
-			$more = $more . "EXEMPEL: " . strip_tags($syntExAll[0] . "<br>");		
-		}
-		$samman = getSubStr($def, "mxblocklx");
-		if ($samman) {
-			$hvtag = getSubStr($samman[0],"mx",true);			
-			if ($hvtag) {				
-				foreach($hvtag as $match) {					
-					$more = $more . strip_tags($match) . "; ";
-				}
-				$more = substr($more, 0, strlen($more) - 2);
-			}
-		}
-		
-		// Other examples
-		// End is the first </div> after "syntex"
-		$find = "cykel";
-		$start = 0;
-		$firstLoop = true;
-		while ($start || $firstLoop) {			
-			$firstLoop=false;			
-			$res = getCykel($def,$find,$start);			
-			$start = $res['pos'];
-			$more = $more . "<br>" . $res['found'];			
-		}
-		$history = strip_tags(getSubStr($def,"etymologiblock")[0]);
-		$linkText = getLinkText($history,"hvtag");
-		//echo "<br>" . $linkText;
-		$history = str_replace(";<br>", "; ", $history);
-		$history = str_replace(";\n", "; ", $history);
-		$more = $more . "HISTORIK: " . $history;		
-		$more = str_replace("\n","<br>",$more);
-		$more = str_replace("<br><br>","<br>",$more);				
-		$more = str_replace("○<br>","○ ",$more);
-		// Hack
-		if (substr($more,0,4) === "<br>") $more = substr($more,4);
-		return $more;
-	}
+	}	
 	
 	function getCykel($def,$find,$start) {		
 		$out['found'] = "";
 		$out['pos'] = null;
 		$find = '"' . $find . '">';
-		$cykel = getSubStr($def, "cykel");
+		$cykel = getClass($def, "cykel");
 		if ($cykel) {
 			foreach($cykel as $el) {
 				
-				$utv = getSubStr($el, "utv",true);
+				$utv = getClass($el, "utv",true);
 				if ($utv) {
 					foreach ($utv as $match) {
 						$out['found'] = $out['found'] . "○ " . strip_tags($match) . "<br>";
 					}
 				}
-				$syntex = getSubStr($el, "syntex",true);
+				$syntex = getClass($el, "syntex",true);
 				if ($syntex) {
 					foreach ($syntex as $match) {
 						$out['found'] = $out['found'] . strip_tags($match) . "<br>";
@@ -225,15 +134,221 @@
 		return $tmp;
 	}
 	
-	function getLinkText($link,$start) {
-		$pos1 = strpos($link,$start);
-		if (!$pos1) return;
-		
-		$pos2 = strpos($link, "</a>");
+	function getLinkTexts($link,$start) {		
+		$found = array();
+		$pos1 = strpos($link,$start);		
+		$len = strlen($start);
+		if (!$pos1) return;		
+		$pos2 = strpos($link, "</a>");		
 		if ($pos2) {
-			$text = substr($link,$pos1, $pos2-$pos1+4);
-			$text = strip_tags($text);
+			$text = substr($link,$pos1, $pos2-$pos1+4);			
+			array_push($found,strip_tags($text));
 		}
-		return $text;
+		
+		$pos1 = strpos($link,$start,$pos1 + $len + 1);		
+		while ($pos1) {			
+			if ($pos1) {				
+				$pos2 = strpos($link, "</a>",$pos1);
+				if ($pos2) {
+					$text = substr($link,$pos1, $pos2-$pos1+4);
+					array_push($found,strip_tags($text));
+				}
+			}
+			$pos1 = strpos($link,$start,$pos1 + $len + 1);
+		}
+		$out = "";
+		$del = "";
+		
+		foreach($found as $m) {
+			$out .= $del . "<l>" . $m. "</l>";
+			$del = ", ";
+		}
+		return $out;
+	}
+	
+	function getDef($raw) {		
+		$def = "";
+		$start = '"kernel"';
+		$len = strlen($start);
+		
+		$pos1 = strpos ($raw, $start);
+		
+		if ($pos1) {
+			// Always expect one definition
+			$def = $def . getDefFields($raw, $pos1);
+			
+			// Loop for additional definitions
+			$pos1 = strpos($raw, $start, $pos1 + $len + 1);
+			while ($pos1) {
+				$def = $def . "<br>" . getDefFields($raw, $pos1);
+				$pos1 = strpos($raw, $start, $pos1 + $len + 1);
+			}
+		}
+		
+		return $def;
+	}
+	
+	function getMore($raw) {		
+		$out = "";
+		$start = '"detaljer">';
+		$len = strlen($start);
+		
+		$pos1 = strpos ($raw, $start) + $len;
+		
+		if ($pos1) {
+			// Always expect one definition
+			$out = $out . getMoreFields($raw, $pos1);
+			
+			// Loop for additional definitions
+			$pos1 = strpos($raw, $start, $pos1 + $len + 1);
+			while ($pos1) {
+				// Delimit with '||' to allow spliting of 'more' info according to associated definition
+				$out = $out . "||" . getMoreFields($raw, $pos1);
+				$pos1 = strpos($raw, $start, $pos1 + $len + 1);
+			}
+		}
+		// Back
+		if (substr($out,0,1) === "\n") $out = substr($out,1);
+		$out = str_replace("HISTORIK: <br>","HISTORIK: ",$out);
+		$out = str_replace("\n", "<br>",$out);
+		$out = str_replace("<br><br>", "<br>",$out);
+		return $out;
+	}
+	
+	
+	
+	function getDefFields($raw, $pos1) {
+		$out = "";
+		$end = "expansion collapsed";
+		$pos2 = strpos($raw, $end, $pos1);		
+		// Work on single "lexem" block
+		$tmp = substr($raw,$pos1,$pos2-$pos1);
+		
+		$firstChar = getClass($tmp, "punkt", true);			
+		$out .= $out . strip($firstChar);
+		$context = getClass($tmp,"hkom", true);
+		$out .= strip($context, "[","] ");
+		$grammar = getClass($tmp,"fkomblock", true);
+		$out .= strip($grammar,"(",") ");
+		
+		
+		$defTxt = getClass($tmp, "def", true);
+		$out .= strip($defTxt);
+		// Secondary definition
+		$deftTxt = getClass($tmp, "deft", true);
+		$out .= strip($deftTxt,"{","} ");	
+		$hasLinks = getClass($tmp, "hv");		
+		if ($hasLinks) {			
+			$hasLinks = $hasLinks[0];			
+			
+			$arr = explode("\n",$hasLinks);			
+			
+			$tmp = "";
+			$firstLoop = true;
+			foreach($arr as $el) {				
+				
+				$lastWasWord = false;				
+				if (str_contains($el, "hvtyp")) {					
+					if (!$firstLoop) $tmp .= "<br>";
+					$tmp .= strip_tags($el);
+					$lastWasWord = false;
+				} else if (str_contains($el, "hvtag")) {													
+					if ($lastWasWord) {
+						$tmp .= ", ";
+					} else {
+						$tmp .= " ";
+					}
+					$tmp .= strip_tags($el);					
+					$lastWasWord = true;
+				}		
+				$firstLoop = false;
+			}
+			$out .= "<br>" . $tmp;
+		}
+		return $out;
+	}
+	
+	function getMoreFields($raw, $pos1) {
+		$out = "";
+		// End is the div close of "etymologiblock"		
+		$end = "etymologiblock";
+		$pos2 = strpos($raw, $end, $pos1);
+		$end = "</div>";
+		$pos2 = strpos($raw, $end ,$pos2) + strlen($end);
+		// Work on single "lexem" block
+		$tmp = substr($raw,$pos1,$pos2-$pos1);				
+		// First set of compound words.
+		$compound = getClass($tmp, "mxblocklx");
+		if ($compound) {
+			$links = getLinkTexts($compound[0], '<a class="hvtag"');
+			$out .= "SAMMANSÄTTN./AVLEDN.: " . $links . "<br>";
+		}
+		
+		$cyclic = getCyclicFields($tmp);
+		if ($cyclic) $out .= $cyclic;
+		
+		// Konstruction
+		$konst = getClass($tmp,"valens");		
+		$out = $out . listEl($konst, "KONSTRUKTION");
+		$syntEx = getClass($tmp, "syntex", true);
+		$out = $out . listEl($syntEx, "EXEMPEL");
+		$history = getClass($tmp, "etymologiblock");
+		if ($history) {			
+			$fb = getClass($history[0],"fb", true);
+			$out = $out . listEl($fb, "HISTORIK");
+		}		
+		return $out;
+	}
+	
+	
+	function getCyclicFields($raw) {
+		// This pattern can be repeated many times.
+		// Want to consume all repititions systematically
+		$out = "";
+		$start = '<div class="cykel">';
+		$end = '<div class="etymologiblock">';		
+		$pos1 = strpos($raw,$start);
+		if ($pos1) {
+			$pos2 = strpos($raw,$end);
+			if ($pos2) {
+				$tmp = substr($raw,$pos1, $pos2 -1);				
+				$point = getClass($tmp, "punkt", true);
+				
+				if ($point) {						
+					$out .= strip_tags($point[0]) . " ";
+				}
+				$utv = getClass($tmp,"utv", true);
+				if ($utv) {
+					foreach($utv as $m) {
+						$out .= strip_tags($m) . "<br>";
+					}
+				}
+				$links = getClass($tmp,"mxblocklx");
+				foreach($links as $m) {
+					$out .= "SAMMANSÄTTN./AVLEDN.: " . getLinkTexts($m,'<a class="hvtag"') . "<br>";
+				}
+				return $out;
+				
+			}
+		}		
+	}
+	
+	function strip($raw,$before="", $after=" ") {
+		$out = "";
+		if ($raw) {
+			$out = $before . strip_tags($raw[0]) . $after;
+		}
+		return $out;
+	}
+	
+	function listEl($arr,$preface) {
+		$out = "";
+		if ($arr) {
+			$out = $preface . ": ";
+			foreach($arr as $m) {
+				$out = $out . strip_tags($m) . "<br>";
+			}
+		}
+		return $out;
 	}
 ?>

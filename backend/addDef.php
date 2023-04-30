@@ -84,7 +84,7 @@
 	fclose($outfileAll);
 				
 	
-	// Populate meta, def and more listings, overwrite performed if entry already exists
+	// Populate 'meta', 'def' and 'more' listings, overwrite performed if entry already exists
 	$trail = "-def";
 	if (strlen($def) > 0) {
 		$name = $class . $trail;
@@ -105,12 +105,20 @@
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
 		if (strlen($more) > 0) {
 			$key_suffix = "_0";
+			
+			$moreSplit = explode("||",$more);	
 			$name = $class . "-more";
 			$contents = file_get_contents($path . $name, 'UTF-8');
 			$arr = json_decode($contents,true);
-			$arr[$word . $key_suffix] = $more;
+			$i = 0;
+			foreach($moreSplit as $m) {				
+				$key_suffix = "_" . $i;
+				$arr[$word . $key_suffix] = $moreSplit[$i];
+				$i++;
+			}
 			file_put_contents($path. $name, json_encode($arr));
 		}
+		
 		if (strlen($meta) > 0) {
 			$name = $class . "-meta";
 			$contents = file_get_contents($path . $name, 'UTF-8');
