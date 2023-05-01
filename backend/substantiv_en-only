@@ -898,6 +898,7 @@ backslash
 backspegel
 backspänning
 backstugusittare
+backtrav
 baddare
 baddräkt
 badhandduk
@@ -977,6 +978,7 @@ bardval
 bark
 barkis
 barlast
+barlastköl
 barm
 barmark
 barmhärtighet
@@ -2501,6 +2503,7 @@ drivfjäder
 drivhusgas
 drivkedja
 drivkraft
+drivning
 drivrutin
 drivved
 drog
@@ -2596,6 +2599,7 @@ dödsskugga
 dödssynd
 dödvikt
 dörr
+dörrkarm
 dörrklocka
 dörrknackning
 dörrspegel
@@ -2961,6 +2965,7 @@ fanken
 fantasi
 fantast
 fantom
+fantomsmärta
 far
 fara
 farbror
@@ -3578,6 +3583,7 @@ följetong
 fönsterbräda
 fönsterbänk
 fönsterbåge
+fönsterkarm
 fönsterlucka
 fönsternisch
 fönsterruta
@@ -4019,6 +4025,7 @@ gen
 genealogi
 general
 generaldirektör
+generalförsamling
 generalisering
 generalist
 generallöjtnant
@@ -5979,6 +5986,7 @@ knyppling
 knytnäve
 knäckare
 knäled
+knäpp
 knäppkänga
 knäppning
 knäreflex
@@ -6082,6 +6090,8 @@ kompanjon
 kompass
 kompensation
 kompetens
+kompetensutveckling
+kompilation
 kompilator
 kompis
 komplettering
@@ -6598,6 +6608,8 @@ kärnenergi
 kärnfamilj
 kärnfrukt
 kärnfråga
+kärnfysik
+kärnkemi
 kärnklyvning
 kärnkraft
 kärnkraftskramare
@@ -6629,8 +6641,10 @@ köksö
 köl
 köld
 köldgrad
+köldknäpp
 kölfena
 kölhalning
+kölsträckning
 könsakt
 könscell
 könsdiskriminering
@@ -7440,8 +7454,10 @@ midsommar
 migration
 migrän
 mikro
+mikrob
 mikroekonomi
 mikrofon
+mikroorganism
 mikrougn
 mikrovågsugn
 mil
@@ -9598,6 +9614,7 @@ sandrevel
 sandskädda
 sandsten
 sandstorm
+sandtrav
 sandwich
 sandöken
 sanitet
@@ -10104,6 +10121,7 @@ skrattmås
 skrattsalva
 skribent
 skrift
+skritt
 skrivare
 skrivbok
 skrivbordslåda
@@ -11164,6 +11182,7 @@ säkerhetspolitik
 säkerhetsrisk
 säkerhetssynpunkt
 säkerhetständsticka
+säkerhetsventil
 säkring
 säkringslåda
 säl
@@ -11554,6 +11573,7 @@ tjänsteande
 tjänstebil
 tjänsteman
 tjänstepension
+tjänsteperson
 tjänstesektor
 tjänsteställning
 tjänstgöring
@@ -11691,6 +11711,7 @@ trasmatta
 trast
 tratta
 trav
+travare
 travbana
 trave
 travhäst
