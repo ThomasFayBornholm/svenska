@@ -2836,11 +2836,11 @@ function toggleMore(key, show = false) {
 				// Add links
 				moreArr = json.split("<br>");
 				let del = "";
-				let tmpMore = "";
+				let tmpMore = "<br>";
 				for (i = 0; i < moreArr.length; i++) {
-					moreArr[i];
+					moreArr[i];					
 					tmpMore += del + simpleLink(moreArr[i]);
-					del = "<br>";
+					del = "<br>";					
 				}
 				let tmp = "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";
 				tmp += " onclick='showCachedDef(this)'";
@@ -2848,9 +2848,14 @@ function toggleMore(key, show = false) {
 					tmp += " title = 'Left click = back to definition(s) "
 					tmp += "\nRight click = edit information'";
 				}
-				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_","<b>" + keyForUser(key) +  "</b><br>" + tmpMore);
-								
+				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_", "<i>" + keyForUser(key) + "</i><br>" + tmpMore);
+				
+				tmp = tmp.replaceAll("KONSTRUKTION: ", "<b>KONSTRUKTION:</b>");
+				tmp = tmp.replace("SAMMANSÄTTN./AVLEDN.:","<b>SAMMANSÄTTN./AVLEDN.:</b>");
+				tmp = tmp.replace("EXEMPEL:","<b>EXEMPEL:</b>");
+				tmp = tmp.replace("HISTORIK:","<b>HISTORIK:</b>");
 				$('#iParDef').html(tmp);						
+				
 			}		
 			//$('#iParDef').text("");
 		})
@@ -3055,7 +3060,7 @@ function simpleLink(defLine) {
 	// Support mulitple links per line. 
 	while (defLine.indexOf("<l>") != -1) {
 		pos1 = defLine.indexOf("<l>")
-		pos2 = defLine.indexOf("</l>")
+		pos2 = defLine.indexOf("</l>")		
 		if (pos1 != 1 && pos2 > pos1) {
 			let old = defLine.substr(pos1, pos2-pos1+4)
 			let word = defLine.substr(pos1 + 3,pos2-pos1-3)
@@ -3066,7 +3071,7 @@ function simpleLink(defLine) {
 			}	
 			link += "><b>" + word;
 			link += "</b></span>";
-			defLine = defLine.replace(old,link)
+			defLine = defLine.replace(old,link)			
 		// Bail out if ill-formed element detected
 		} else {
 			return defLine;
@@ -3272,7 +3277,7 @@ function round(dec, places) {
 
 function fetchDef() {
 	if (DEBUG) console.log("fetchDef()");
-	fetch('backend/scrapeDef.php?word=' + CUR_WORD, {
+	fetch('backend/scrapeDef.php?word=' + CUR_WORD + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {

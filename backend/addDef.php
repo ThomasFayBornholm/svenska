@@ -94,12 +94,15 @@
 		file_put_contents($path . $name, json_encode($arr));
 	}
 	
-	// Put with default score of "0". User can easily update this from interface
+	// Do not replace any existing score by default	
+	// If not existing score then default to "0". User can easily update this from interface	
 	$name = $class . "-score";
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$arr = json_decode($contents, true);
-	$arr[$word] = "0";
-	file_put_contents($path . $name, json_encode($arr));
+	if (!array_key_exists($word,$arr)) {
+		$arr[$word] = "0";
+		file_put_contents($path . $name, json_encode($arr));
+	}
 	
 	if ($class != "faser") {
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
