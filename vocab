@@ -228,10 +228,37 @@ function fmtDef(def) {
 	}
 	return def;
 }
+
+function putMoreMany(moreArr, cur) {
+	if (DEBUG) console.log("putMoreMany()");
+	let moreLen = moreArr.length;
+	// Don't forget no spaces in storage keys, use "-" instead
+	fetch('backend/putMore.php?key=' + CUR_WORD.replaceAll(" ","-") + "_" + cur + '&more=' + moreArr[cur] + '&class=' + CLASS, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		cur++;
+		if (cur < moreLen) putMoreMany(moreArr, cur);
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
 function addDef(meta, def, more) {
 	if (DEBUG) console.log("addDef(meta,def,more)");
-	
-	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
+	let moreArr = more.split("||");	
+	moreLen = moreArr.length;
+	if (moreLen > 4) {
+		more = "";
+		putMoreMany(moreArr, 0);
+	}
+	//fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
+	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -242,12 +269,14 @@ function addDef(meta, def, more) {
 		return response.json();
 	})
 	.then(json => {
-		updateDef();
+		setTimeout(2000,updateDef());
 	})
 	.catch(error => {
 		console.log(error);
 	})
 }
+
+
 function putDef(def, score) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
@@ -828,6 +857,9 @@ function displayDef(meta, def,word) {
 		delim = "<br>";
 	}
 	outDef = outDef.replaceAll(" </b>","</b>")
+	// Dynamise links
+	outDef = outDef.replaceAll("<l>","<span onclick=followLink(this) onmouseover=highlight(this,event)><b>");
+	outDef = outDef.replaceAll("</l>","</b></span>");
 	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event) onmouseover=editCursor(event,this)"
 	if (SHOW_HELP) {		
 		tmpSpan += " title='Right click to edit definition'" 
@@ -841,6 +873,7 @@ function displayDef(meta, def,word) {
 		$('#iWordRoot').attr("title","asdfa\u000dasdfasdf");
 	}	
 }
+
 // Make links to referenced words
 function makeLinks(def) {
 	if (DEBUG) console.log("makeLinks()")
@@ -962,6 +995,9 @@ function followLink(el) {
 		word = word.replaceAll(rep[0], " ");
 	}
 	word = word.replace("!","");
+	for (i = 0; i < 24; i++) {
+		word = word.replace(i,"");
+	}
 	setCUR_WORD(word);
 	if (DEBUG) console.log("followLink(" + word + ")");	
 	let oldINC = INC;
@@ -2851,9 +2887,9 @@ function toggleMore(key, show = false) {
 				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_", "<i>" + keyForUser(key) + "</i><br>" + tmpMore);
 				
 				tmp = tmp.replaceAll("KONSTRUKTION: ", "<b>KONSTRUKTION:</b>");
-				tmp = tmp.replace("SAMMANSÄTTN./AVLEDN.:","<b>SAMMANSÄTTN./AVLEDN.:</b>");
-				tmp = tmp.replace("EXEMPEL:","<b>EXEMPEL:</b>");
-				tmp = tmp.replace("HISTORIK:","<b>HISTORIK:</b>");
+				tmp = tmp.replaceAll("SAMMANSÄTTN./AVLEDN.:","<b>SAMMANSÄTTN./AVLEDN.:</b>");
+				tmp = tmp.replaceAll("EXEMPEL:","<b>EXEMPEL:</b>");
+				tmp = tmp.replaceAll("HISTORIK:","<b>HISTORIK:</b>");
 				$('#iParDef').html(tmp);						
 				
 			}		
@@ -3287,7 +3323,7 @@ function fetchDef() {
 	.then(response => {
 		return response.json();
 	})	
-	.then(json => {
+	.then(json => {		
 		addDef(json['meta'],json['def'],json['more']);		
 	})
 	.catch(error => {

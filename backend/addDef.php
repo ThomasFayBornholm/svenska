@@ -115,8 +115,10 @@
 			$arr = json_decode($contents,true);
 			$i = 0;
 			foreach($moreSplit as $m) {				
-				$key_suffix = "_" . $i;
-				$arr[$word . $key_suffix] = $moreSplit[$i];
+				// Don't forget to replace space(s) in key with dash
+				$key = str_replace(" ","-", $word) . "_" . $i;
+				
+				$arr[$key] = $moreSplit[$i];
 				$i++;
 			}
 			file_put_contents($path. $name, json_encode($arr));
