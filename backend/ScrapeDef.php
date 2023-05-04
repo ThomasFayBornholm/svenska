@@ -5,9 +5,18 @@
 	$out['meta'] = "";
 	$out['def'] = "";
 	$out['more'] = "";
-	$url = 'https://www.svenska.se/tri/f_so.php?sok=' . $word;
+	https://svenska.se/tri/f_so.php?sok=testa
+	$url = 'https://svenska.se/tri/f_so.php?sok=' . $word;	
 	$url = str_replace(" ", "%20", $url);
-	$def =  file_get_contents($url);
+		
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch,CURLOPT_URL,$url);
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");
+	$def = curl_exec($ch);
+	curl_close($ch);
+	
 	// Check this resolves to the correct word
 	$find = 'class="slank" href="';
 	if (strpos($def,$find)) {
@@ -142,7 +151,7 @@
 	$out['meta'] = str_replace("</div>","",$out['meta']);
 		
 	$out['meta'] .= getPronunciation($def);
-	$out['def'] = getDef($def);		
+	$out['def'] = getDef($def, $defLines);		
 	$out['more'] = getMore($def);
 	echo json_encode($out);
 	
@@ -250,7 +259,7 @@
 		return $out;
 	}
 	
-	function conjugateToString($line) {
+	function conjugateToString($line) {		
 		// Strip out all conjugation text from line and concatenate to a string
 		$out = "";
 		$tmpArr = array();
@@ -313,7 +322,7 @@
 		return $out;		
 	}
 	
-	function getDef($raw) {		
+	function getDef($raw,$defLines) {		
 		$out = "";
 		$start = '"kernel"';
 		$len = strlen($start);
@@ -322,12 +331,12 @@
 		
 		if ($pos1) {
 			// Always expect one definition
-			$out .= getDefFields($raw, $pos1);
+			$out .= getDefFields($raw, $pos1,$defLines);
 			
 			// Loop for additional definitions
 			$pos1 = strpos($raw, $start, $pos1 + $len + 1);
 			while ($pos1) {
-				$out .= "<br>" . getDefFields($raw, $pos1);
+				$out .= "<br>" . getDefFields($raw, $pos1,$defLines);
 				$pos1 = strpos($raw, $start, $pos1 + $len + 1);
 			}
 		}
@@ -371,7 +380,7 @@
 		}
 	}
 	
-	function getDefFields($raw, $pos1) {		
+	function getDefFields($raw, $pos1,$defLines) {				
 		$out = "";
 		$end = "expansion collapsed";
 		$pos2 = strpos($raw, $end, $pos1);		
@@ -381,9 +390,14 @@
 		$firstChar = getClass($tmp, "punkt", true);			
 		$out .= strip($firstChar);
 		$context = getClass($tmp,"hkom", true);
-		$out .= strip($context, "[","] ");
-		$grammar = getClass($tmp,"fkomblock", true);
-		$out .= getGrammar($grammar);		
+		$out .= strip($context, "[","] ");		
+		foreach($defLines as $l) {
+			if (str_contains($l, "fkomblock")) {
+				$grammar = $l;
+				$out .= getGrammar($grammar);		
+				break;
+			}
+		}		
 		
 		$defTxt = getClass($tmp, "def", true);		
 		$pattern = '/href="\/so\/\?id=[\d]+">([a-zöäåA-ZÖÄÅ]+)<\/a>/';		
@@ -435,39 +449,40 @@
 	}
 	
 	function getGrammar($block) {
+
 		$out = "";
-		if ($block) {
-			$block = $block[0];
-			// Assuming only a single single present in grammar block
-			$pos1 = strpos($block, "hvtag");
-			$link = "";
-			if ($pos1) {
 				
-				$find = '">';
-				$pos1 = strpos($block,'">',$pos1);
-				if ($pos1) {					
-					$pos1 += strlen($find);
-					$pos2 = strpos($block,"</a>", $pos1);
-					if ($pos2 && $pos2 > $pos1) $link = substr($block,$pos1,$pos2 - $pos1);
-				}				
-
-				
-			}
-			// Placeholder to later crowbar in bold syntax tags, exclude blocks that already contain links
-			if (!str_contains($block,"fast sammansättn.") && (!str_contains($block,"lös förbindelse"))) {
-				$block = str_replace('<span class="fkom2">', " __b", $block);
-				$block = str_replace("</b></span>","b__>",$block);
-			}
-			$out = "";
-			$out = strip_tags($block);			
-			// Crowbar in bold syntax
-			
-			$out = str_replace("__b", "<b>",$out);
-			$out = str_replace("b__>", "</b>",$out);
-
-			$out = str_replace("\n" ,"", $out);
-			$out = str_replace($link, " <l>" . $link . "</l>",$out);
+		// Assuming only a single single present in grammar block
+		$pos1 = strpos($block, "hvtag");
+		$link = "";
+		if ($pos1) {			
+			$find = '">';
+			$pos1 = strpos($block,'">',$pos1);
+			if ($pos1) {					
+				$pos1 += strlen($find);
+				$pos2 = strpos($block,"</a>", $pos1);
+				if ($pos2 && $pos2 > $pos1) $link = substr($block,$pos1,$pos2 - $pos1);
+			}							
 		}
+		
+		// Placeholder to later crowbar in bold syntax tags, exclude blocks that already contain links
+		if (!str_contains($block,"fast sammansättn.") && (!str_contains($block,"lös förbindelse"))) {
+			$block = str_replace('<span class="fkom2"><b>', " __b", $block);
+			$block = str_replace("</b></span>","b__>",$block);
+		}				
+		$block = str_replace('<span class="fkom3">',"",$block);		
+		$block = str_replace("skillnad</span>","", $block);
+		
+		$out = "";
+		$out = strip_tags($block);			
+		// Crowbar in bold syntax
+		
+		$out = str_replace("__b", "<b>",$out);
+		$out = str_replace("b__>", "</b>",$out);
+
+		$out = str_replace("\n" ,"", $out);
+		$out = str_replace($link, " <l>" . $link . "</l>",$out);
+	
 		// Assume only one occurance of link textdomain
 		if (strlen($out) > 0) {
 			$out = " (" . $out . ") ";
@@ -603,7 +618,7 @@
 	}
 	
 	function debug($in) {
-		echo "*** " . $in . " ***<br>";
+		echo "*** " . $in . " ***\n";
 	}
 	
 	function getCyclicFields($raw) {
