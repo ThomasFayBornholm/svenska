@@ -5,7 +5,6 @@
 	$out['meta'] = "";
 	$out['def'] = "";
 	$out['more'] = "";
-	https://svenska.se/tri/f_so.php?sok=testa
 	$url = 'https://svenska.se/tri/f_so.php?sok=' . $word;	
 	$url = str_replace(" ", "%20", $url);
 		
