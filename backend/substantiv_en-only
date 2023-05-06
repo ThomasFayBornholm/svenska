@@ -10,6 +10,7 @@ NN
 Orienten
 REM-sömn
 Schweiz
+T-sprit
 abandon
 abborre
 abborrfisk
@@ -1312,6 +1313,7 @@ beslutscirkel
 beslutsfattare
 besparing
 bespisning
+bessemerblåsning
 besserwisser
 best
 bestraffning
@@ -1597,6 +1599,7 @@ blåmanet
 blåmes
 blåpenna
 blåsa
+blåsare
 blåsbälg
 blåsinstrument
 blåslampa
@@ -1792,6 +1795,7 @@ brevröst
 brevvän
 brevväxling
 brevvåg
+brevöppnare
 bricka
 bridge
 brigad
@@ -1919,6 +1923,7 @@ bunt
 bur
 burk
 burka
+burköppnare
 buse
 business
 businessklass
@@ -2315,6 +2320,7 @@ demo
 demografi
 demokrat
 demokrati
+demonregissör
 demonstrant
 demonstration
 demonstratris
@@ -2634,6 +2640,7 @@ edamerost
 edition
 editor
 effekt
+effektförstärkare
 effektivitet
 effektökning
 efterarvinge
@@ -3099,6 +3106,7 @@ filibuster
 film
 filmare
 filmpremiär
+filmprojektor
 filmrulle
 filmstjärna
 filosof
@@ -3130,6 +3138,8 @@ fintvätt
 fiol
 fiolsträng
 firma
+firmateckning
+fis
 fisk
 fiskal
 fiskare
@@ -3214,6 +3224,7 @@ flod
 flodhäst
 flodmynning
 flopp
+florett
 florist
 floskel
 flotta
@@ -3269,6 +3280,7 @@ fläcktyfus
 fläder
 fläkt
 flärpa
+fläskfilé
 fläskfärs
 fläskkorv
 fläskschnitzel
@@ -3349,6 +3361,7 @@ fosterdiagnostik
 fosterfördrivning
 fot
 fotbeklädnad
+fotboja
 fotboll
 fotbollsplan
 fotbollsspelare
@@ -3567,13 +3580,16 @@ färdriktning
 färg
 färg-tv
 färgfilm
+färghållning
 färgpenna
 färgprakt
+färgsättning
 färja
 färjelinje
 färjeterminal
 färla
 färs
+färskning
 färskvara
 fästman
 fästmö
@@ -4182,6 +4198,7 @@ glädjetår
 glänta
 glöd
 glödlampa
+glödstrumpa
 glömska
 gnagare
 gnejs
@@ -4335,6 +4352,7 @@ grusgång
 grustäkt
 gruva
 gruvarbetare
+gruvgas
 gruvgång
 grymhet
 gryning
@@ -5280,7 +5298,6 @@ inlärning
 inlåning
 inlåningsränta
 inmatning
-inmuta
 innebandy
 innebörd
 innehavare
@@ -5581,6 +5598,7 @@ julstjärna
 jumper
 jungfru
 jungfrukammare
+jungfruslända
 jungman
 juni
 junior
@@ -5881,6 +5899,7 @@ kind
 kindknota
 kindtand
 kinematik
+kinematograf
 kines
 kinesiska
 kinetik
@@ -6038,6 +6057,7 @@ knäppkänga
 knäppning
 knäreflex
 knäskål
+knästrumpa
 knöl
 ko
 koagulation
@@ -6059,6 +6079,7 @@ kohage
 koj
 koja
 koka
+kokard
 kokbok
 kokett
 koketteri
@@ -6079,6 +6100,7 @@ kolera
 kolgruva
 kolhydrat
 kolibri
+kolik
 kolja
 koll
 kollaboration
@@ -6101,6 +6123,7 @@ kolonisatör
 kolonistuga
 kolonn
 kolorist
+kolorit
 koloxid
 kolsyra
 kolsyresnö
@@ -6234,6 +6257,7 @@ konsult
 konsultation
 konsument
 konsumentförening
+konsumentombudsman
 konsumtion
 kontakt
 kontaktlins
@@ -6320,6 +6344,7 @@ korsgång
 korshänvisning
 korsning
 korsrygg
+korsspindel
 korsväg
 kortavledning
 kortbana
@@ -6893,6 +6918,7 @@ lillasyster
 lillaxel
 lillebror
 lime
+limning
 limousine
 limpa
 lina
@@ -7012,6 +7038,7 @@ luftförorening
 luftgitarr
 luftkuddefarkost
 luftled
+luftpastej
 luftpump
 luftrörskatarr
 luftström
@@ -7031,6 +7058,7 @@ lungsot
 lungtuberkulos
 lunk
 lupp
+lur
 lurk
 lus
 lust
@@ -7100,6 +7128,7 @@ länsrätt
 länsstyrelse
 länstol
 länsväg
+läntagare
 läpp
 lära
 lärare
@@ -7495,6 +7524,7 @@ metall
 metalloid
 metalltråd
 metamorfos
+metanol
 meteor
 meteorologi
 meter
@@ -7609,6 +7639,7 @@ mjälte
 mjölk
 mjölkko
 mjölkkossa
+mjölkkörtel
 mjölkprodukt
 mjölksyra
 mjölktand
@@ -7624,6 +7655,7 @@ modellbyggnad
 modellera
 modenyck
 moderat
+moderation
 moderator
 modernisering
 modernism
@@ -7720,6 +7752,7 @@ motström
 motståndare
 motståndskraft
 motståndsman
+motståndsrörelse
 motsvarighet
 motsägelse
 motsättning
@@ -7931,11 +7964,13 @@ naturgödsel
 naturlag
 naturreligion
 naturresurs
+naturrikedom
 naturrätt
 natursten
 naturtillgång
 naturvetenskap
 naturvård
+navare
 navel
 navelsträng
 naverlönn
@@ -7965,6 +8000,7 @@ nedräkning
 nedskärning
 nedslagning
 nedslaktning
+nedsmittning
 nedstrykning
 nedstämdhet
 nedsättning
@@ -8138,6 +8174,7 @@ näthinna
 nätmaska
 nätstrumpa
 nättelduk
+nättidning
 nätverkare
 nätvinge
 näva
@@ -8187,6 +8224,8 @@ ockupation
 odalbonde
 odling
 odlingskrage
+odontolog
+odontologi
 odygd
 odyssé
 odör
@@ -8398,6 +8437,7 @@ ovilja
 ovisshet
 ovän
 oxe
+oxfilé
 oxid
 oxidation
 oxymoron
@@ -8445,6 +8485,7 @@ pappenheimare
 papper
 pappersexercis
 pappersklämma
+papperskniv
 papperskorg
 pappersmassa
 pappersnäsduk
@@ -8634,6 +8675,7 @@ petit mal
 petitess
 petmoj
 petroleum
+phishing
 pianist
 piazza
 pickup
@@ -9140,6 +9182,7 @@ redigerare
 redning
 redogörelse
 redovisning
+reducering
 reduktion
 redundans
 referens
@@ -9552,6 +9595,7 @@ rödlista
 rödpenna
 rödräv
 rödsot
+rödsprit
 röja
 röjning
 rök
@@ -10064,6 +10108,7 @@ sjötunga
 skada
 skadegörare
 skadegörelse
+skadeverkan
 skaft
 skakning
 skala
@@ -10231,6 +10276,7 @@ skräckfilm
 skräcksyn
 skräcködla
 skräddare
+skräll
 skrämsel
 skråma
 skugga
@@ -10354,6 +10400,8 @@ sliper
 slipover
 slipprighet
 slips
+slipsklämma
+slipsknut
 slipsten
 slira
 slirighet
@@ -10387,6 +10435,7 @@ slägga
 släkt
 släktforskning
 släkting
+slända
 släng
 slänggunga
 slängkappa
@@ -10416,6 +10465,7 @@ smilgrop
 smitta
 smitthärd
 smittkälla
+smittspårning
 smocka
 smoking
 smuggling
@@ -10526,6 +10576,7 @@ snölykta
 snöplog
 snörning
 snörpvad
+snörsko
 snöslunga
 snöstorm
 snösträng
@@ -10626,6 +10677,8 @@ sparbössa
 spark
 sparkstötting
 sparre
+sparring
+sparringpartner
 sparris
 sparv
 sparvfink
@@ -10670,6 +10723,8 @@ spillra
 spilta
 spinalanestesi
 spindel
+spindelväv
+spinnrock
 spion
 spiral
 spiralfjäder
@@ -10744,6 +10799,7 @@ spärrning
 spärrvakt
 spätlese
 spådom
+spånad
 spårhund
 spårning
 spårstämpel
@@ -10994,6 +11050,7 @@ struktur
 struma
 strumpa
 strumpfot
+strumpsticka
 struntsak
 strut
 struts
@@ -11125,6 +11182,7 @@ sugning
 sula
 summa
 sump
+sumpgas
 sumpmark
 sundhet
 sup
@@ -11443,6 +11501,7 @@ taxichaufför
 taxistation
 teamwork
 teater
+teaterdekoration
 teaterpjäs
 teaterstycke
 teckning
@@ -11661,6 +11720,7 @@ tjugondel
 tjur
 tjurnacke
 tjurved
+tjusare
 tjusning
 tjuv
 tjuvgömma
@@ -11834,6 +11894,7 @@ treklang
 trend
 trendskapare
 trendsport
+trestegsraket
 tretakt
 trettondag
 tretår
@@ -11861,6 +11922,7 @@ trolldom
 trolleri
 trollformel
 trollkarl
+trollslända
 trollstav
 trolovning
 trolöshet
@@ -11877,6 +11939,7 @@ tropp
 trosa
 trosartikel
 trosbekännelse
+trosglöd
 tross
 trossats
 trotjänare
@@ -11974,6 +12037,7 @@ tunnplåt
 tunntarm
 tupp
 tuppfäktning
+tupplur
 tupé
 tur
 tur  2
@@ -12019,6 +12083,7 @@ tvål
 tvålopera
 tvåpol
 tvåsamhet
+tvåstegsraket
 tvåtaktsmotor
 twill
 tyda
@@ -12076,6 +12141,7 @@ tång  2
 tångkaviar
 tår
 tårkanal
+tårkörtel
 tårta
 tårtgaffel
 tåspets
@@ -12400,6 +12466,7 @@ utfart
 utflykt
 utflyttning
 utformning
+utforskare
 utfrysning
 utfrågning
 utfällning
@@ -12678,6 +12745,7 @@ varseblivning
 vart
 varulv
 vas
+vasall
 vasografi
 vass
 vattenbruk
@@ -12697,6 +12765,7 @@ vattenskida
 vattenskopa
 vattensork
 vattenspegel
+vattenspindel
 vattenså
 vattentillförsel
 vattentäkt
@@ -12735,6 +12804,7 @@ verkan
 verkanseld
 verklighet
 verklighetsflykt
+verkning
 verkningseld
 verksamhet
 verksamhetsberättelse
@@ -12908,6 +12978,7 @@ vred
 vrede
 vret
 vridning
+vrist
 vrå
 vråk
 vrångbild
@@ -13094,6 +13165,7 @@ vårdcentral
 vårdenhet
 vårdgivare
 vårdkase
+vårdslöshet
 vårdtagare
 vårflod
 vårfrudag

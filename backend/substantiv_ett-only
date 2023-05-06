@@ -116,6 +116,7 @@ antimon
 antiseptikum
 antistatmedel
 antitoxin
+antivirusprogram
 antivåld
 anus
 användargränssnitt
@@ -464,6 +465,7 @@ bondestånd
 boningshus
 bonusbarn
 bord
+bordsben
 bordskniv
 bordssilver
 bordsvatten
@@ -625,7 +627,10 @@ damm
 damspel
 dass
 dataintrång
+datanät
+datavirus
 datorspel
+datorvirus
 datum
 decennium
 decimaltal
@@ -937,6 +942,7 @@ foto
 fotografi
 fotomontage
 fotspår
+fotsteg
 fotvalv
 fragment
 fraktfartyg
@@ -1276,6 +1282,7 @@ gummi
 gummiband
 gummiharts
 gummiträd
+gungbräde
 gupp
 guvernement
 gyckel
@@ -1372,6 +1379,7 @@ hinder
 histogram
 hittegods
 hjul
+hjulnav
 hjulspår
 hjälpmedel
 hjältemod
@@ -1477,6 +1485,7 @@ höjdroder
 höjningstecken
 hölje
 höns
+hönsnät
 hörn
 hörnhus
 hörnskåp
@@ -1916,6 +1925,7 @@ känselspröt
 känsloliv
 kärl
 kärleksgnabb
+kärleksnäste
 kärnhus
 kärnkraftverk
 kärnminne
@@ -2141,6 +2151,7 @@ mankemang
 mankön
 manschettyrke
 manskap
+manssamhälle
 manteldjur
 manus
 manuskript
@@ -2163,6 +2174,7 @@ maskinrum
 maskrosbarn
 maskulinum
 massmedium
+matbord
 material
 matfett
 matos
@@ -2219,6 +2231,7 @@ mervärde
 messmör
 metallspån
 metallstycke
+metan
 metspö
 migrationsverk
 mikroklimat
@@ -2294,6 +2307,7 @@ morgondopp
 morrhår
 morsarv
 mos
+moskitnät
 mot
 motanfall
 motdrag
@@ -2321,6 +2335,7 @@ musiköra
 muskelknippe
 mutbrott
 mygel
+myggnät
 mynt
 myrlejon
 mys
@@ -2434,6 +2449,7 @@ näs
 näsblod
 näste
 nät
+nätfiske
 nätspel
 nättroll
 nätverk
@@ -2603,6 +2619,7 @@ plus
 pluskonto
 pluskvamperfekt
 plåster
+pm
 podium
 poem
 pojkstreck
@@ -2673,6 +2690,7 @@ pulsåderbråck
 pund
 pundhuvud
 pungdjur
+puppstadium
 pussel
 pusskalas
 pynt
@@ -2706,6 +2724,7 @@ radhus
 radiokåseri
 raffinemang
 rakdon
+raketsteg
 raketvapen
 raklödder
 rakvatten
@@ -2912,6 +2931,7 @@ sanningskrav
 sanningsserum
 sanningsvittne
 sanningsvärde
+satsbord
 scenario
 sceneri
 schablonavdrag
@@ -2974,6 +2994,7 @@ sim
 simborgarmärke
 simhopp
 simsätt
+simtag
 sinne
 sinnelag
 sinnesintryck
@@ -3087,6 +3108,7 @@ skrov
 skrubbsår
 skrymteri
 skryt
+skrädderi
 skrälle
 skrän
 skräp
@@ -3112,6 +3134,7 @@ skäl
 skäll
 skällsord
 skämt
+skärbräde
 skärp
 skådespel
 skålpund
@@ -3121,6 +3144,7 @@ skört
 sladder
 slag
 slaganfall
+slagbord
 slagfält
 slaginstrument
 slagord
@@ -3136,6 +3160,7 @@ slask
 slaveri
 slem
 slidhornsdjur
+slipstvång
 slit
 slott
 slukhål
@@ -3147,6 +3172,7 @@ slutljud
 slutrim
 slutskede
 slutspel
+slutsteg
 slutstycke
 slädparti
 släkte
@@ -3230,6 +3256,7 @@ snödjup
 snöfall
 snöre
 snöregn
+snörliv
 snöskred
 snötäcke
 socialbidrag
@@ -3270,8 +3297,10 @@ spektakel
 spekulum
 spel
 spelarbyte
+spelbord
 spelrum
 spex
+spindelnät
 spinnspö
 spionage
 spioneri
@@ -3286,11 +3315,13 @@ spott
 spratt
 sprattel
 spring
+spritkök
 sprängstoff
 sprängämne
 språk
 språkbruk
 språkkrav
+språklaboratorium
 språköra
 språng
 spröt
@@ -3551,6 +3582,7 @@ telefax
 telefonnummer
 telefonsamtal
 telefoto
+telenät
 teleobjektiv
 teleskop
 teleskopöga
@@ -3640,6 +3672,7 @@ tomrum
 tonem
 tonläge
 tonnage
+tonsteg
 toppmöte
 torg
 torgstånd
