@@ -25,29 +25,53 @@
 	if (strpos($def,$find)) {
 		// Need to do some more work to resolve to word matches
 		// Use id instead of word as key
-		$find = "/?id=";
-		$pos1 = strpos($def,$find);
-		$find2="&pz=3";
-		$pos2 = strpos($def,$find2);
-		if ($pos1 && $pos2 && $pos2 > $pos1) {
-			$pos1 = $pos1 + strlen($find);
-			$lenFound = $pos2 - $pos1;
-			$id = substr($def,$pos1, $lenFound);			
-			$url = $urlBaseId . $id;
-			$ch = curl_init();		
-			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-			curl_setopt($ch,CURLOPT_URL,$url);
-			curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-			curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");			
-			$def = curl_exec($ch);			
-			curl_close($ch);			
+		$tmpLines = explode("\n", $def);
+		$tmpClass = "";
+		$isMatch = false;
+		foreach($tmpLines as $l ) {			
+			if (str_contains($l, "wordclass")) {					
+				$tmpClass = getClass($l,"wordclass", true); // Discard trai
+				if ($tmpClass) {					
+					$tmpClass = str_replace("</span>","",$tmpClass);
+					$tmpClass = substr($tmpClass[0],1);
+					// Remove leading space from word class entry
+					$tmpClass = getLongClassName($tmpClass);				
+					if (matchClass($tmpClass, $class)) {
+						$def = $l;
+						$isMatch = true;						
+						break;
+					}
+				}
+			}
+		}		
+		
+		if ($isMatch) {			
+			$find = "/?id=";
+			$pos1 = strpos($def,$find);
+			$find2="&pz=3";
+			$pos2 = strpos($def,$find2);
+			if ($pos1 && $pos2 && $pos2 > $pos1) {
+				$pos1 = $pos1 + strlen($find);
+				$lenFound = $pos2 - $pos1;
+				$id = substr($def,$pos1, $lenFound);			
+				$url = $urlBaseId . $id;
+				$ch = curl_init();		
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+				curl_setopt($ch,CURLOPT_URL,$url);
+				curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+				curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");			
+				$def = curl_exec($ch);			
+				curl_close($ch);			
+			}
 		}
-	}
+	}	
 	
 	if (strlen($def) === 0) {
 		debug("Failed to retrieve content from Svenska Ordlista server #2.");
 		exit();
 	}
+	
+	$originalLength = strlen($def);
 	// filter away uninteresting stuff
 	$find = 'class="orto">';
 	$start = strpos($def,$find) - 2;
@@ -57,19 +81,21 @@
 	
 	if ($end) {
 		$end += strlen($END);
+		
+	} else {
+		debug("Failed to find end of lemma contents");
+		exit;
 	}
 	
-	$len = $end - $start;	
-	$def = substr($def, $start,$len);
-
+	$filteredLength = $end - $start;		
+	$def = substr($def, $start, $filteredLength);
+		
 	if (!$def) {
 		debug("Failed to remove unneeded content");
 		return;
 	}
-	
-	
-	
-	// Multiple lemma can exist - for now only scrape lemma that match current class.				
+		
+	// Multiple lemma can exist - for now only scrape  a signle lemma that matches the current class.				
 	$find = 'class="ordklass">';	
 	$foundMatch = false;
 	$pos1 = strpos($def, $find);
@@ -82,23 +108,22 @@
 				$find = 'class="orto">';
 				$pos1 = strpos($def, $find);				
 				if ($pos1) {
-					$foundMatch = true;				;
+					$foundMatch = true;
 					$def = getSingleLemma($def, $pos1, $END);
 				}
 			}
 		}
-	}
-	
+	}		
+		
 	$find = 'class="ordklass">';	
-	while ($pos1 && $foundMatch === false) {			
-		$pos1 = strpos($def, $find, $pos1 + strlen($find) + 1);		
+	while ($pos1 && $foundMatch === false) {					
+		$pos1 = strpos($def, $find, $pos1 + 1);		
 		if ($pos1 || $pos1 === 0) {
 			$pos2 = strpos($def, "</div>",$pos1);
 			if ($pos2) {
 				$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));						
 				if (matchClass($tmpClass, $class)) {
-					$find = 'class="orto">';
-					$pos1 = strpos($def, $find);				
+					$find = 'class="orto">';					
 					if ($pos1) {
 						$foundMatch = true;
 						$def = getSingleLemma($def, $pos1,$END);
@@ -112,9 +137,12 @@
 		echo json_encode("Failed to retrieve word class: " . $class);
 		return;	
 	}
-	// Line-by-line analysis often easier way to extract relevant information.
-	$defLines = explode("\n",$def);	
 	
+	$lemmaLength = strlen($def);
+	
+	// Line-by-line analysis often easier way to extract relevant information.	
+	$defLines = explode("\n",$def);		
+		
 	if (count($defLines) < 6) {
 		debug("Failed to get lemma");
 		return;
@@ -161,7 +189,7 @@
 	$out['meta'] = str_replace("</span>","",$out['meta']);
 	$out['meta'] = str_replace("</div>","",$out['meta']);
 		
-	$out['meta'] .= getPronunciation($def);
+	$out['meta'] .= getPronunciation($def);	
 	$out['def'] = getDef($def, $defLines);		
 	$out['more'] = getMore($def);
 	echo json_encode($out);
@@ -184,17 +212,14 @@
 	}
 		
 	function getSingleLemma($def, $start, $END) {		
-		// END is required as end marker varies between words (php returned html versus pure html). 
-		$end = strpos($def, "ordklass");
+		// END is the global end of Lemma content after all "n" lemmas.
 		// First lemvar after ordklass is the next lemma
-		if ($end) {
-			$end = strpos($def,"lemvar",$end);		
-		}
+		$end = strpos($def,"lemvar",$start);				
 		// Case where this is the last lemma		
 		if (!$end) {			
-			$end = strpos($def,$END,$start);			
+			$end = strpos($def,$END,$start) + strlen($END);			
 		}
-		$out = substr($def,$start, $end - $start);
+		$out = substr($def,$start, $end - $start);				
 		return $out;
 	}
 	
@@ -207,27 +232,31 @@
 		}				
 		$find = 'class="' . $find . '">';
 		$len = strlen($find);
+		$lenEnd = strlen($end);		
 		$pos1 = strpos($def, $find);				
 		if ($pos1 || $pos1 === 0) {
-			$pos2 = strpos($def, $end, $pos1) + strlen($end);
+			$pos2 = strpos($def, $end, $pos1);
+			if ($pos2) {
+				$pos2 += $lenEnd;
 					
-			$start = $pos1 + $len;
-			$lenFound = $pos2 - $start;			
-			if ($len > 3) {						
-				array_push($found, substr($def, $start, $lenFound));
-			}
-			
-			while ($pos1 >= 0) {									
-				// Advance to find any remaining matches
-				$pos1 = strpos($def, $find, $pos1 + 1);
-				if (!$pos1) break;
-				$pos2 = strpos($def, $end, $pos2 + 1);						
 				$start = $pos1 + $len;
 				$lenFound = $pos2 - $start;			
-				if ($lenFound > 3) {						
-					array_push($found, substr($def, $start, $lenFound));				
-				}					
-			}		
+				if ($len > 3) {						
+					array_push($found, substr($def, $start, $lenFound));
+				}
+				
+				while ($pos1 >= 0) {									
+					// Advance to find any remaining matches
+					$pos1 = strpos($def, $find, $pos1 + 1);
+					if (!$pos1) break;
+					$pos2 = strpos($def, $end, $pos2 + 1);						
+					$start = $pos1 + $len;
+					$lenFound = $pos2 - $start;
+					if ($lenFound > 3) {						
+						array_push($found, substr($def, $start, $lenFound));				
+					}					
+				}
+			}
 					
 			return $found;
 		}
@@ -342,12 +371,12 @@
 		
 		if ($pos1) {
 			// Always expect one definition
-			$out .= getDefFields($raw, $pos1,$defLines);
+			$out .= getDefFields($raw, $pos1);
 			
 			// Loop for additional definitions
 			$pos1 = strpos($raw, $start, $pos1 + $len + 1);
 			while ($pos1) {
-				$out .= "<br>" . getDefFields($raw, $pos1,$defLines);
+				$out .= "<br>" . getDefFields($raw, $pos1);
 				$pos1 = strpos($raw, $start, $pos1 + $len + 1);
 			}
 		}
@@ -391,7 +420,7 @@
 		}
 	}
 	
-	function getDefFields($raw, $pos1,$defLines) {				
+	function getDefFields($raw, $pos1) {				
 		$out = "";
 		$end = "expansion collapsed";
 		$pos2 = strpos($raw, $end, $pos1);		
@@ -402,59 +431,82 @@
 		$out .= strip($firstChar);
 		$context = getClass($tmp,"hkom", true);
 		$out .= strip($context, "[","] ");		
+		$defLines = explode("\n", $tmp);
+		
+		$consume = false;
+		$grammar = "";
 		foreach($defLines as $l) {
-			if (str_contains($l, "fkomblock")) {
-				$grammar = $l;
-				$out .= getGrammar($grammar);		
-				break;
+			if (str_contains($l, "fkomblock")) $consume = true;												
+			if ($consume) {				
+				$grammar .= $l;				
 			}
+			// Stop consuming grammar information after first close span after fkomlbock
+			if (str_contains($l, "</span>")) $consume = false;;
+			
 		}		
 		
-		$defTxt = getClass($tmp, "def", true);		
-		$pattern = '/href="\/so\/\?id=[\d]+">([a-zöäåA-ZÖÄÅ]+)<\/a>/';		
-		if ($defTxt) {			
-			$defTxt = $defTxt[0];			
-			$link = preg_match($pattern,$defTxt,$matches);
-			if ($link) {
-				$link = $matches[1];				
-			}	
-			
-		}
-		$defTxt = strip_tags($defTxt);
-		if ($link) {			
-			$defTxt = str_replace($link, "<l>" . $link . "</l>",$defTxt);			
-		}
+		$out .= getGrammar($grammar);						
 		
-		$out .= $defTxt;
-		// Secondary definition
-		$deftTxt = getClass($tmp, "deft", true);
-		$out .= strip($deftTxt,"{","} ");	
-		$hasLinks = getClass($tmp, "hv");		
-		if ($hasLinks) {			
-			$hasLinks = $hasLinks[0];			
+		// Nain definition content						
+		$defTxt = getClass($tmp, "def", true);												
+		if ($defTxt) {
+			$defTxt = $defTxt[0];
+			$pattern = '/(_\d+&(?:amp;ref=lnr\d+)+)/';
+			// Some stray information is sometimes present that can be removed e.g. "/so/?id=161228_1&amp;ref=lnr279219" instead of clean "/so/?id=161228"		
+			$defTxt = preg_replace($pattern,"",$defTxt);				
+			preg_match($pattern, $defTxt, $matches);		
 			
-			$arr = explode("\n",$hasLinks);			
+			// 'hvhomo' class is some kind of link, treat accordingly	
+			$pattern = '/<span class="hvhomo"><\/span>([a-zöäå]+)/';			
+			preg_match($pattern, $defTxt, $matchesHomo);
 			
-			$tmp = "";
-			$firstLoop = true;
-			foreach($arr as $el) {								
-				$lastWasWord = false;				
-				if (str_contains($el, "hvtyp")) {					
-					if (!$firstLoop) $tmp .= "<br>";
-					$tmp .= strip_tags($el);
-					$lastWasWord = false;
-				} else if (str_contains($el, "hvtag")) {													
-					if ($lastWasWord) {
-						$tmp .= ", ";
-					} else {
-						$tmp .= " ";
-					}
-					$tmp .= strip_tags($el);					
-					$lastWasWord = true;
-				}		
-				$firstLoop = false;
+									
+			$pattern = '/<a class="hvtag" target="_parent" href="\/so\/\?id=\d+">([a-zöäå]+)+/';
+			preg_match($pattern, $defTxt, $matches);
+			
+			
+			$defTxt = strip_tags($defTxt);
+			if ($matchesHomo) {
+				$defTxt = preg_replace($pattern,"<l>" . $matches[1] . "</l>",$defTxt);
 			}
-			if (strlen($tmp) > 0) $out .= "<br>" . $tmp;
+			
+			if ($matches) {						
+				$defTxt = str_replace($matches[1], "<l>" . $matches[1] . "</l>",$defTxt);			
+			}
+						
+			$out .= $defTxt;
+			// Secondary definition
+			$deftTxt = getClass($tmp, "deft", true);
+			$out .= strip($deftTxt,"{","} ");	
+			
+			// Handle linked words
+			$hasLinks = getClass($tmp, "hv");		
+			if ($hasLinks) {			
+				$hasLinks = $hasLinks[0];			
+				
+				$arr = explode("\n",$hasLinks);			
+				
+				$tmp = "";
+				$firstLoop = true;
+				foreach($arr as $el) {								
+					$lastWasWord = false;				
+					if (str_contains($el, "hvtyp")) {					
+						if (!$firstLoop) $tmp .= "<br>";
+						$tmp .= strip_tags($el);
+						$lastWasWord = false;
+					} else if (str_contains($el, "hvtag")) {													
+						if ($lastWasWord) {
+							$tmp .= ", ";
+						} else {
+							$tmp .= " ";
+						}
+						$tmp .= strip_tags($el);					
+						$lastWasWord = true;
+					}		
+					$firstLoop = false;
+				}
+				if (strlen($tmp) > 0) $out .= "<br>" . $tmp;
+			}
 		}
 		return $out;
 	}
@@ -716,10 +768,29 @@
 	}
 	
 	function matchClass($read, $given) {
+		$res = false;
 		if ($read === "substantiv") {
-			return ($given === "substantiv_en" || $given === "substantiv_ett");
+			$res =  ($given === "substantiv_en" || $given === "substantiv_ett");
 		} else {
-			return $read === $given;
+			$res = $read === $given;
+		}		
+		return $res;
+	}
+	
+	function getLongClassName($short) {
+		// Default is no change
+		$long = $short;
+		switch ($short) {
+			case "adj.":
+				$long = "adjektiv";
+				break;			
+			case "subst.":
+				$long = "substantiv";
+				break;
+			case "adv.":
+				$long = "adverb";
+				break;
 		}
+		return $long;
 	}
 ?>
