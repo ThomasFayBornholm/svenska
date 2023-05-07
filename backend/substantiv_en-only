@@ -126,6 +126,7 @@ aktivitetsersättning
 aktning
 aktris
 aktör
+akvarell
 akvedukt
 alant
 alexi
@@ -919,6 +920,7 @@ bagis
 baguette
 bak
 bakdel
+bakdörr
 bakelse
 bakform
 bakfot
@@ -1843,6 +1845,7 @@ brudtärna
 brugd
 brukare
 bruksanvisning
+bruksdisponent
 bruksort
 brukspatron
 brunbjörn
@@ -2038,6 +2041,7 @@ början
 börs
 börsmäklare
 bössa
+bössinsamling
 cafeteria
 caffe latte
 café au lait
@@ -2562,6 +2566,7 @@ dubb
 dubbdäck
 dubbelagent
 dubbeldäckare
+dubbeldörr
 dubbelhaka
 dubbelhet
 dubbelmoral
@@ -2572,6 +2577,7 @@ dubblett
 duell
 duglighet
 duk
+dukning
 duma
 dumhet
 dumper
@@ -2615,6 +2621,7 @@ dån
 dåre
 dårskap
 dåsighet
+döbattang
 död
 dödlighet
 dödsattest
@@ -2636,6 +2643,7 @@ dörr
 dörrkarm
 dörrklocka
 dörrknackning
+dörrmatta
 dörrspegel
 dörrvakt
 döskalle
@@ -3455,6 +3463,7 @@ frihjulsdiod
 friidrott
 friidrottare
 frikadell
+frikast
 friktion
 friktionsvärme
 frikyrka
@@ -3587,6 +3596,7 @@ färd
 färdighet
 färdplan
 färdriktning
+färdväg
 färg
 färg-tv
 färgfilm
@@ -4004,6 +4014,8 @@ gaffelrigg
 gaffeltruck
 gala
 galax
+galder
+galenpanna
 galenskap
 galge
 gallblåsa
@@ -4027,6 +4039,7 @@ gammelmormor
 ganache
 ganasch
 garageuppfart
+garant
 garanti
 gard
 gardering
@@ -4263,6 +4276,7 @@ gosse
 gotländska
 gottegris
 gottgörelse
+gouache
 grabb
 grace
 grad
@@ -4975,6 +4989,7 @@ häst
 hästansikte
 hästgård
 hästkraft
+hästkrake
 hästskjuts
 hästsko
 hätskhet
@@ -6031,6 +6046,7 @@ klöver
 knack
 knackning
 knall
+knallsensation
 knap
 knape
 knapp
@@ -6694,6 +6710,8 @@ kännedom
 känsel
 känsla
 känslighet
+känslomänniska
+känslopjunk
 käpp
 käpphäst
 kärande
@@ -7664,6 +7682,7 @@ mjölkko
 mjölkkossa
 mjölkkörtel
 mjölkprodukt
+mjölkskorv
 mjölksyra
 mjölktand
 moatjé
@@ -7717,6 +7736,7 @@ moppe
 mor
 mor  2
 moral
+moralfilosofi
 moralpredikant
 morbror
 mordbrand
@@ -7836,6 +7856,7 @@ must
 mustang
 mustasch
 muta
+mutation
 myalgi
 mygga
 myglare
@@ -7982,6 +8003,7 @@ nattvard
 nattväktare
 natur
 naturfiber
+naturfilosofi
 naturfärg
 naturgödsel
 naturlag
@@ -8202,6 +8224,7 @@ nätverkare
 nätvinge
 näva
 näve
+nävrätt
 nåd
 nål
 nåt
@@ -9105,6 +9128,7 @@ påfart
 påfrestning
 påfyllning
 påföljd
+påhälsning
 påk
 påkörning
 pålaga
@@ -9461,6 +9485,7 @@ rosengård
 rosenkål
 rosenolja
 rosmarin
+rossling
 rost
 rostsvamp
 rot
@@ -9683,6 +9708,7 @@ saliv
 sallad
 sallat
 salmiak
+saloondörr
 salpingit
 saltbildare
 saltöken
@@ -9713,6 +9739,7 @@ samhörighet
 samklang
 samkänsla
 samlare
+samlarinstinkt
 samlevnad
 samling
 samlingspunkt
@@ -10237,7 +10264,9 @@ skiva
 skivspelare
 skivtallrik
 skjorta
+skjutdörr
 skjutfält
+skjutning
 skjuts
 sko
 skoaffär
@@ -10247,6 +10276,7 @@ skogsindustri
 skogsnäva
 skogssnuva
 skogstrakt
+skogsväg
 skojare
 skola
 skolavslutning
@@ -10265,7 +10295,9 @@ skoning
 skopa
 skopning
 skorpa
+skorpion
 skorsten
+skorv
 skottavla
 skottdag
 skottglugg
@@ -10436,7 +10468,9 @@ slipsten
 slira
 slirighet
 slirkoppling
+slitning
 slits
+slityta
 slot
 slowmotion
 sluka
@@ -11300,6 +11334,7 @@ svävning
 svåger
 svål
 svångrem
+svångremspolitik
 svårighet
 swing
 sydkant
@@ -11594,6 +11629,7 @@ tes
 tesaurus
 tesla
 test
+testamentsexekutor
 testator
 testballong
 testikel
@@ -12321,6 +12357,7 @@ upphöjning
 uppkomling
 uppkomst
 uppkoppling
+uppkörning
 upplaga
 upplevelse
 upplivning
@@ -12802,6 +12839,7 @@ vattenspindel
 vattenså
 vattentillförsel
 vattentäkt
+vattenväg
 vattenväxt
 vattenyta
 vaudeville
