@@ -163,6 +163,7 @@ allé
 almanacka
 alp
 alpacka
+alpacka  2
 alpinism
 alstring
 alt
@@ -1301,6 +1302,7 @@ berömmelse
 beröring
 beröringspunkt
 besatthet
+besegrare
 besiktning
 besiktningsinstrument
 besinning
@@ -1614,6 +1616,7 @@ blåstång
 blåval
 blödning
 blöja
+blötröta
 blötsnö
 boaorm
 boboll
@@ -1678,6 +1681,7 @@ bombkrater
 bombmatta
 bombning
 bombplan
+bombräd
 bomull
 bomullsbal
 bonad
@@ -1854,6 +1858,7 @@ brunn
 brunnsort
 brunst
 brutalitet
+bruttodräktighet
 bruttoinkomst
 bruttovikt
 brygga
@@ -2289,6 +2294,7 @@ debatt
 debattartikel
 debattör
 debet
+debetsida
 debilitet
 debitor
 december
@@ -2565,6 +2571,7 @@ drös
 dubb
 dubbdäck
 dubbelagent
+dubbelbeckasin
 dubbeldäckare
 dubbeldörr
 dubbelhaka
@@ -2605,6 +2612,7 @@ dykand
 dykarklocka
 dyna
 dynamik
+dynamitgubbe
 dynamo
 dynasti
 dynga
@@ -2975,7 +2983,6 @@ fabrikant
 fabrikation
 fabriksskorsten
 fabrikör
-facett
 facilitet
 facit
 fackförening
@@ -3039,6 +3046,7 @@ fascism
 fascist
 fasett
 faskikel
+faskin
 fason
 fasta
 faster
@@ -3467,6 +3475,7 @@ frikast
 friktion
 friktionsvärme
 frikyrka
+frilans
 friluftsteater
 fripassagerare
 friplåt
@@ -4307,6 +4316,7 @@ granulation
 grapefrukt
 gratie
 gratulation
+gratäng
 grav
 grav  2
 gravation
@@ -4543,6 +4553,7 @@ gåta
 gåva
 gödning
 gödsel
+gödselspridare
 gök
 göl
 görare
@@ -5094,6 +5105,7 @@ höginkomst
 höginkomsttagare
 högkinesiska
 högkonjunktur
+högkultur
 högplatå
 högprosa
 högrelief
@@ -5292,6 +5304,7 @@ inflationstakt
 influencer
 influensa
 inflygning
+inflyttning
 info
 information
 informator
@@ -5307,6 +5320,7 @@ inhamn
 inkallelse
 inkapsling
 inkarnation
+inkasso
 inklination
 inkompetens
 inkomst
@@ -5330,6 +5344,7 @@ inläggning
 inlärning
 inlåning
 inlåningsränta
+inmarsch
 inmatning
 innebandy
 innebörd
@@ -5461,6 +5476,7 @@ intolerans
 intonation
 intoxikation
 intressegemenskap
+intressekonflikt
 intresseorganisation
 intressesfär
 intrig
@@ -5641,6 +5657,8 @@ junta
 juridik
 jurist
 jury
+justerare
+justeringsman
 justerskruv
 justitieminister
 justitieombudsman
@@ -5733,6 +5751,7 @@ kaktus
 kalabalik
 kalaskula
 kalasmat
+kalaspingla
 kalender
 kaliber
 kalk
@@ -6070,6 +6089,8 @@ knivlåda
 knivrygg
 knivsudd
 knix
+knockdown
+knockout
 knoge
 knop
 knopp
@@ -6309,6 +6330,7 @@ kontorsstol
 kontraalt
 kontradiktion
 kontraktsvård
+kontrarevolution
 kontrast
 kontring
 kontroll
@@ -6398,6 +6420,7 @@ kortvåg
 korund
 korv
 korvett
+korvgubbe
 korvkiosk
 korvsjö
 koryfé
@@ -6450,6 +6473,7 @@ kreativitet
 kreatör
 kredit
 kreditor
+kreditsida
 kreditupplysning
 kremering
 kreolspråk
@@ -6492,6 +6516,7 @@ krog
 krogkund
 krogsväng
 krok
+krokan
 krokant
 kromosom
 krona
@@ -6647,6 +6672,7 @@ kvarskatt
 kvarstad
 kvart
 kvartil
+kvarto
 kvartsfart
 kvartsfinal
 kvast
@@ -6844,6 +6870,7 @@ landtunga
 landvind
 landå
 lanka
+lans
 lansering
 lantbrukare
 lanterna
@@ -6940,6 +6967,7 @@ liggare
 liggstol
 liggvagn
 ligist
+likare
 likbegängelse
 like
 likhet
@@ -7528,6 +7556,7 @@ mellanhand
 mellanskillnad
 mellanstadielärare
 mellantid
+mellanting
 mellanvåg
 melodi
 melodifestival
@@ -7567,6 +7596,8 @@ metamorfos
 metanol
 metastas
 meteor
+meteorit
+meteorkrater
 meteorologi
 meter
 metkrok
@@ -7650,6 +7681,7 @@ misogyni
 miss
 missanpassning
 missbildning
+missfirmelse
 misshandel
 misshällighet
 missil
@@ -7716,6 +7748,7 @@ molekylmassa
 molekylvikt
 moll
 mollusk
+molngubbe
 molntapp
 momentarm
 moms
@@ -8080,6 +8113,7 @@ neutron
 nevö
 newtonmeter
 nia
+nickel
 nidbild
 niece
 nihilism
@@ -8119,6 +8153,7 @@ nordkant
 nordpol
 norm
 norrman
+nos
 noshörning
 nostalgi
 nostalgitripp
@@ -8158,6 +8193,7 @@ nyckelknippa
 nyckelpiga
 nyemission
 nyetablering
+nyfascism
 nyfikenhet
 nygrad
 nyhet
@@ -8192,6 +8228,7 @@ näckros
 nämnare
 nämnd
 nämndeman
+närbutik
 närgångenhet
 närhet
 näring
@@ -8293,6 +8330,7 @@ ogärningsman
 ohyra
 okapi
 okränkbarhet
+oktav
 oktober
 olaglighet
 olat
@@ -8361,8 +8399,10 @@ omtagning
 omtanke
 omvandling
 omväg
+omvälvning
 omvändelse
 omvändning
+omvärdering
 omvärld
 omväxling
 omvårdnad
@@ -8492,6 +8532,7 @@ ozon
 oändlighet
 pacifist
 packbox
+packe
 packlår
 packning
 padda
@@ -8642,6 +8683,7 @@ penultima
 peperoni
 peppar
 pepparkaka
+pepparkaksgubbe
 pepparrot
 peppning
 perception
@@ -8745,6 +8787,7 @@ pilotundersökning
 pilsner
 pilsnerfilm
 pilspets
+pimpinell
 pimpinella
 pincené
 pincett
@@ -8789,6 +8832,7 @@ planhalva
 planimetri
 plank
 planka
+planläggning
 planlösning
 planritning
 plantering
@@ -8808,6 +8852,7 @@ platta
 plattfisk
 plattform
 plattfot
+plattityd
 plattyska
 plattång
 platå
@@ -8817,6 +8862,7 @@ pleonasm
 plikt
 plita
 plog
+plogbill
 plomb
 plombering
 plugg
@@ -9059,6 +9105,7 @@ prövotid
 psalm
 psalmbok
 pseudohändelse
+pseudonym
 psykiater
 psykiatri
 psykolog
@@ -9166,6 +9213,7 @@ radio
 radioaktivitet
 radioröst
 ragata
+ragg
 raggarbil
 raggare
 ragnarök
@@ -9311,6 +9359,7 @@ repa
 reparation
 repertoar
 repetition
+repgubbe
 replik
 repmånad
 repning
@@ -10289,6 +10338,7 @@ skolgård
 skolpeng
 skolpojke
 skolskjutning
+skolungdom
 skomakare
 skongång
 skoning
@@ -10318,6 +10368,7 @@ skrivbok
 skrivbordslåda
 skrivelse
 skrivkramp
+skrivmaskin
 skrivning
 skrivsal
 skrivstil
@@ -10440,6 +10491,7 @@ slamkrypare
 slamning
 slamsa
 slang
+slang  2
 slant
 slantsingling
 slarva
@@ -10475,6 +10527,7 @@ slot
 slowmotion
 sluka
 slukare
+slummer
 slump
 slunga
 slunk
@@ -10636,6 +10689,7 @@ snö
 snöboll
 snödriva
 snödroppe
+snögubbe
 snölykta
 snöplog
 snörning
@@ -10648,6 +10702,7 @@ socialdemokrat
 socialhjälp
 socialism
 socialist
+socialliberal
 socialliberalism
 socialtjänst
 socialtjänstlag
@@ -10819,9 +10874,11 @@ sportbil
 sportgren
 sportsida
 sportvagn
+sprattelgubbe
 spray
 spretighet
 spricka
+spridare
 spridning
 springa
 springare
@@ -10849,6 +10906,7 @@ språklära
 språkpolis
 språkrör
 språkstrid
+språkvård
 språkvårdare
 spydighet
 spyfluga
@@ -11080,6 +11138,7 @@ strandskata
 strapats
 strategi
 streber
+streckgubbe
 strejk
 stress
 strid
@@ -12705,6 +12764,7 @@ vagina
 vagn
 vaja
 vajer
+vak
 vaka
 vakare
 vakt
@@ -12770,6 +12830,8 @@ vanheder
 vanhävd
 vanilj
 vaniljarom
+vankelmod
+vanlighet
 vanskötsel
 vante
 vantrivsel
@@ -12796,6 +12858,7 @@ varaktighet
 vardag
 vardagslag
 varelse
+varfågel
 varg
 vargavinter
 vargtimme
@@ -12836,6 +12899,7 @@ vattenskopa
 vattensork
 vattenspegel
 vattenspindel
+vattenspridare
 vattenså
 vattentillförsel
 vattentäkt
@@ -12928,6 +12992,7 @@ vikare
 vikarie
 viking
 vikt
+viktförlust
 viktigpetter
 vila
 vildand

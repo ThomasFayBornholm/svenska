@@ -5,6 +5,7 @@ C-vitamin
 D-vitamin
 E-vitamin
 U-rör
+abc-stridsmedel
 abonnemang
 absolutbelopp
 accenttecken
@@ -772,6 +773,7 @@ energisystem
 energivärde
 enfamiljshus
 engagemang
+engifte
 enhetsflygplan
 enskifte
 entreprenörskap
@@ -816,6 +818,7 @@ faktum
 fall
 fallskärmsavtal
 fallskärmshopp
+falsifikat
 falskspel
 familjehotell
 familjejordbruk
@@ -1173,6 +1176,7 @@ garnnystan
 garv
 gasolkök
 gathörn
+gatlopp
 gatt
 gatubarn
 gatukontor
@@ -1407,6 +1411,7 @@ hot
 hotell
 hov
 hovbeslag
+hudutslag
 hugg
 huggkniv
 humör
@@ -1675,6 +1680,7 @@ kardborreband
 karlatag
 karosseri
 kartogram
+kartotek
 kasino
 kassettak
 kassettdäck
@@ -1871,6 +1877,7 @@ kryp
 kryphål
 krypskytte
 krypto
+kryptogram
 kryss
 kryssförband
 krysshult
@@ -2134,6 +2141,7 @@ löneavtal
 lönepåslag
 lönnfack
 lönnmord
+löp
 löpband
 lösenord
 lösöre
@@ -2314,6 +2322,7 @@ morfem
 morfin
 morgonandakt
 morgondopp
+morgonhumör
 morrhår
 morsarv
 mos
@@ -2376,6 +2385,7 @@ mörker
 mörkertal
 mösspartiet
 möte
+n-genus
 naboland
 nachspiel
 nackskinn
@@ -2387,6 +2397,7 @@ nagelört
 nakterhus
 namn
 namnbyte
+namnskylt
 narkotikum
 narrspel
 nationalepos
@@ -2439,6 +2450,7 @@ nyckelhål
 nyförvärv
 nyhetsbrev
 nyhetsflöde
+nyhetsvärde
 nylon
 nyp
 nypon
@@ -2454,6 +2466,7 @@ näringsfång
 näringsliv
 näringsställe
 näringsvärde
+närköp
 närområde
 närsamtal
 näs
@@ -2630,6 +2643,7 @@ plugg
 plus
 pluskonto
 pluskvamperfekt
+pläter
 plåster
 pm
 podium
@@ -2676,7 +2690,6 @@ pristak
 privatliv
 privilegium
 problem
-procession
 proffs
 program
 programmeringsspråk
@@ -2736,6 +2749,7 @@ radergummi
 radhus
 radiokåseri
 raffinemang
+ragg
 rakdon
 raketsteg
 raketvapen
@@ -2841,6 +2855,7 @@ rovdjur
 rufs
 rullager
 rum
+rumsadverbial
 rus
 rusmedel
 russ
@@ -2944,6 +2959,7 @@ sanningskrav
 sanningsserum
 sanningsvittne
 sanningsvärde
+satsadverbial
 satsbord
 scenario
 sceneri
@@ -3539,6 +3555,7 @@ särkullbarn
 säte
 sätt
 sätteri
+sättsadverbial
 sågspån
 såll
 sångspel
@@ -3554,6 +3571,7 @@ sömnmedel
 sönderfall
 sönderfalla
 sötvatten
+t-genus
 tack
 tackkort
 tacktal
@@ -3689,6 +3707,7 @@ tonem
 tonläge
 tonnage
 tonsteg
+tonsystem
 toppmöte
 torg
 torgstånd
@@ -3950,6 +3969,7 @@ vaccin
 vad
 vadben
 vagnsätt
+vak
 vakuum
 vakuumrör
 val
