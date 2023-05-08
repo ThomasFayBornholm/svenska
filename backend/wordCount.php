@@ -8,7 +8,7 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion"];
+	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion","infinitiv"];
 
 	$nTot = 0;
 	$nAll = 0;

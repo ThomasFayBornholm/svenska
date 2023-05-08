@@ -47,6 +47,7 @@
 </div>
 <div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()">
 	<p id="iWords" class="fmtWords">Test<br>Words</p>
+	<p id="iAux" class="fmtAuxClass"></p>
 </div>
 <div id="iInfo" class="secondColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)">
 
@@ -102,6 +103,7 @@ let N_PREFIX = 0;
 let N_SLUTLED = 0;
 let N_NUMMER = 0;
 let N_SUBJUNKTION = 0;
+let N_INFINITIV = 0;
 let N_CUR=0;
 let N_DEFS = 0;
 
@@ -122,7 +124,7 @@ var CACHED_DEF_HTML = "";
 var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
 let REGEX_MODE = false;
 var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk"]
-var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord"]
+var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord","infinitiv"]
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
 var TAB_DUMMY;
@@ -1162,7 +1164,11 @@ function newInputWrapper(e) {
 			var tmpOut = [];
 			let done = 0;
 			let score_all = 0;
-			for (let i = 0; i < CLASS_LIST.length; i++) {
+			// for (let i = 0; i < CLASS_LIST.length; i++) {
+			// Only list the major class groups for brevity
+			let N = 6;
+			let N_DONE = CLASS_LIST.length;
+			for (let i = 0; i < N_DONE; i++) {
 				let c = CLASS_LIST[i];
 				// ID used to get deterministic ordering of classes
 				fetch('backend/getScore.php?class=' + c + '&id=' + i, {
@@ -1178,25 +1184,38 @@ function newInputWrapper(e) {
 				.then(json => {
 					done++;
 					let id = json['id'];				
-					tmpOut[id] = " {" + json["count"] + "; " + round(json["percent"],2) + "%}";
+					tmpOut[id] = " {" + json["count"] + "; ";
+					if (id < N) {
+						tmpOut[id] +=  round(json["percent"],2) + "%}";
+					} else {
+						tmpOut[id] +=  round(json["percent"],0) + "%}";
+					}
 					score_all += parseInt(json["total"]);
 					let out = "<b>all {" + N_TOT + "; " + "score_all" + "%}</b>";
-					if (done == CLASS_LIST.length) {
-						for (i = 0; i < CLASSES.length; i++) {
+					// All serial requests are done
+					if (done == N_DONE) {
+						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>100% date: " + END_DATE_STR + fmtUnit(END_DATE,"days") + "<br>***<br>";
+						for (i = 0; i < N; i++) {
 							out += "<br>" + CLASSES[i] + tmpOut[i];
 						}
 						score_all = Math.round(score_all / N_TOT / 2 * 100 * 100) / 100;
 						out = out.replace("score_all",score_all);
-					}		
-					let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>100% date: " + END_DATE_STR + fmtUnit(END_DATE,"days") + "<br>***<br>";
-					out = header + out;
-					$('#iWords').html(out);									
+						out = header + out;
+						$('#iWords').html(out);									
+						// Append auxiliary classes in smaller text
+						out = "";
+						del = "";
+						for (i = N; i < N_ALL; i++) {
+							out += del + CLASSES[i] + tmpOut[i];								
+							del = "<br>";
+						}															
+						$('#iAux').html(out);
+					}												
 				})
 				.catch(error => {
 					console.log(error);
-				})			
-			}
-			$('#iParDef').html("");
+				})	
+			}			
 		}
 		$('#iInput').val("");
 		return;
@@ -1289,7 +1308,9 @@ function seekWordSingleClass(word = CUR_WORD) {
  */
 // Link is set if this seek is called from a clickable link
 function seekWord(word, link = false) {	
-	if (DEBUG) console.log("seekWord(word, link), word = " + word + ", link = " + link)
+	if (DEBUG) console.log("seekWord(word, link), word = " + word + ", link = " + link)	
+	// Cleanup
+	$('#iAux').html("");
 	// Any user supplied break breaks are discarded.
 	word = word.replaceAll("­","");	
 	REGEX_WORDS = [];
@@ -1603,9 +1624,11 @@ function drillDown() {
 		console.log(error);
 	})
 }
+
 function setClass(c, seek = "") {
 	if (c === "all") clearRegexMode();	
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
+	$('#iAux').html("");
 	LAST_CLASS = CLASS;
 	wordCount();
 	if (c != CLASS) {		
@@ -1771,6 +1794,7 @@ function fullClassName(name) {
 	if (name === "räk") return "räkneord"
 	if (name === "kon") return "konjunktion"
 	if (name === "int") return "interjektion"
+	if (name === "inf") return "infinitiv"
 	return name
 }
 

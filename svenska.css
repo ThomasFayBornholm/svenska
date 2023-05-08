@@ -1,5 +1,5 @@
 body {
-	background-color: lightgoldenrodyellow;
+	background-color: lightgoldenrodyellow;	
 	overflow: hidden;
 }
 
@@ -264,9 +264,18 @@ label {
 .fmtWords {
 	margin-left: 5%;
 	margin-top: 2%;
+	margin-bottom: 0%;
 	font-size: 36px;
 	color: royalblue;
 }
+.fmtAuxClass {	
+	font-size: 24px;
+	color: royalblue;
+	display: block;
+	margin-left: 5%;
+	margin-top: 1%;	
+}
+
 .inputSearch {
 	font-size: 48pt;
 	width: 32%;

@@ -27,7 +27,7 @@
 			$contents = fread($infile, filesize($f));
 			$score["count"] += count(preg_split("/\r\n|\r|\n/", $contents));
 		}
-		if (file_exists($scoreName)) {
+		if (file_exists($scoreName) && filesize($scoreName) != 0) {
 			$scoreContents = file_get_contents($path . $scoreName);
 			$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);		
 			
@@ -44,6 +44,8 @@
 			}
 		}
 	}
-	$score["percent"] = ($score["total"] / $score["count"] / 2 * 100);
+	if ($score["count"] != 0) {
+		$score["percent"] = ($score["total"] / $score["count"] / 2 * 100);
+	}
 	echo json_encode($score);
 ?>

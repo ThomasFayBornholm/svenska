@@ -95,12 +95,12 @@
 	}
 	
 	// Do not replace any existing score by default	
-	// If not existing score then default to "0". User can easily update this from interface	
+	// If not existing score then default to "2". User can easily update this from interface	
 	$name = $class . "-score";
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$arr = json_decode($contents, true);
 	if (!array_key_exists($word,$arr)) {
-		$arr[$word] = "0";
+		$arr[$word] = "2";
 		file_put_contents($path . $name, json_encode($arr));
 	}
 	

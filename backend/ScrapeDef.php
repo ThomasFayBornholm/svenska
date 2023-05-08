@@ -139,18 +139,22 @@
 	}
 	
 	$lemmaLength = strlen($def);
+	if ($lemmaLength === 0) {
+		debug("Failed to get lemma #1");
+		return;
+	}
 	
 	// Line-by-line analysis often easier way to extract relevant information.	
 	$defLines = explode("\n",$def);		
 		
 	if (count($defLines) < 6) {
-		debug("Failed to get lemma");
+		debug("Failed to get lemma #2");
 		return;
 	}
+	
 	$wordClass = $tmpClass;			
 	if ($class === "slutled") $word = "-" . $word;
-	if ($class === "förled") $word = $word . "-";
-	
+	if ($class === "förled") $word = $word . "-";	
 	
 	/* Find all the word roots, e.g. 'ge','giva'
 	* Find all the conjugation groups	
@@ -457,11 +461,11 @@
 			preg_match($pattern, $defTxt, $matches);		
 			
 			// 'hvhomo' class is some kind of link, treat accordingly	
-			$pattern = '/<span class="hvhomo"><\/span>([a-zöäå]+)/';			
+			$pattern = '/<span class="hvhomo"><\/span>([a-zöäå\s]+)/';			
 			preg_match($pattern, $defTxt, $matchesHomo);
 			
 									
-			$pattern = '/<a class="hvtag" target="_parent" href="\/so\/\?id=\d+">([a-zöäå]+)+/';
+			$pattern = '/<a class="hvtag" target="_parent" href="\/so\/\?id=\d+">([a-zöäå\s]+)+/';
 			preg_match($pattern, $defTxt, $matches);
 			
 			
@@ -774,6 +778,9 @@
 		} else {
 			$res = $read === $given;
 		}		
+		if ($given === "plural" && $read === "substantiv") {
+			$res = true;
+		}
 		return $res;
 	}
 	
