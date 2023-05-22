@@ -830,7 +830,7 @@ function lookupWord(el,onlyLocal,inline) {
 
 function displayDef(meta, def,word) {
 	if (DEBUG) console.log("displayDef(meta,def,word)");	
-	let defRaw = def.split("<br>");
+	let defRaw = def.split("<br>");	
 	let defLines = [];
 	let iWrite = 0;
 	for (i = 0; i < defRaw.length; i++) {
@@ -858,7 +858,8 @@ function displayDef(meta, def,word) {
 		let key = word.replaceAll(" ","-") + "_" + j;
 		let id = "iMore_" + key;	
 		if (defLines[j].indexOf("<i>") === -1) {
-			outDef += delim + defLines[j] + " <span id='" + id + "' onmouseover='highlight(this,event)'"
+			outDef += delim + defLines[j]
+			outDef += " <span id='" + id + "' onmouseover='highlight(this,event)'"
 			if (SHOW_HELP) {
 				outDef += "title='Show more information'"
 			}
@@ -2921,8 +2922,9 @@ function toggleMore(key, show = false) {
 					tmp += " title = 'Left click = back to definition(s) "
 					tmp += "\nRight click = edit information'";
 				}
-				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_", "<i>" + keyForUser(key) + "</i><br>" + tmpMore);
 				
+				tmp += " onmouseover='highlight(this,event)'>_more_</span>".replace("_more_", "<i>" + keyForUser(key) + "</i><br>" + tmpMore);
+
 				tmp = tmp.replaceAll("KONSTRUKTION: ", "<b>KONSTRUKTION:</b>");
 				tmp = tmp.replaceAll("SAMMANSÄTTN./AVLEDN.:","<b>SAMMANSÄTTN./AVLEDN.:</b>");
 				tmp = tmp.replaceAll("EXEMPEL:","<b>EXEMPEL:</b>");
