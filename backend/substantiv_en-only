@@ -533,6 +533,7 @@ apostat
 apostel
 apotekare
 apparat
+apparatur
 appell
 appellant
 apperception
@@ -2062,6 +2063,7 @@ byxkjol
 byäldste
 bäck
 bädd
+bäddutrustning
 bägare
 bägarkorall
 bälg
@@ -2721,6 +2723,7 @@ dy
 dyckert
 dykand
 dykarklocka
+dykarutrustning
 dyna
 dynamik
 dynamitgubbe
@@ -6325,6 +6328,7 @@ knutpunkt
 knutte
 knyck
 knylhavre
+knyppeldyna
 knyppling
 knytnäve
 knäckare
@@ -7322,6 +7326,7 @@ lockelse
 lockfågel
 locktång
 lodlinje
+loft
 loftgång
 logg
 loggfil
@@ -7363,6 +7368,7 @@ lp
 luciakrona
 lucka
 luffare
+luft
 luftaffär
 luftfarkost
 luftfart
@@ -7490,6 +7496,7 @@ läst
 lättbetong
 lätthet
 lättmatros
+lättmetall
 lättmjölk
 läxa
 låda
@@ -8574,6 +8581,7 @@ näve
 nävrätt
 nåd
 nål
+nåldyna
 nåt
 nöd
 nödhjälp
@@ -11685,6 +11693,7 @@ stämläpp
 stämma
 stämning
 stämpel
+stämpeldyna
 stängel
 stängning
 stängsel
@@ -12437,6 +12446,7 @@ trall  2
 tralla
 tramp
 trampcykel
+trampdyna
 trampfart
 trampmina
 trampolin
@@ -13264,6 +13274,7 @@ vaktel
 vakthund
 vaktmästare
 vaktparad
+vakuumförpackning
 vakuumpump
 val
 valack
@@ -13710,6 +13721,7 @@ världsvana
 värme
 värmeanläggning
 värmebölja
+värmedyna
 värmeenergi
 värmegrad
 värmekälla

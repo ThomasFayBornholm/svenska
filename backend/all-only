@@ -553,6 +553,7 @@ apollinisk
 apostat
 apostrofera
 apparat
+apparatur
 appell
 appellant
 appellera
@@ -1056,6 +1057,7 @@ baksmälla
 bakspår
 bakstreck
 bakstycke
+bakstöt
 baktala
 bakterie
 bakväg
@@ -2135,6 +2137,7 @@ byta/växla ringar
 bäck
 bädda
 bädda in
+bäddutrustning
 bägare
 bägarkorall
 bälg
@@ -2252,6 +2255,8 @@ chiffong
 chiffonjé
 chiffrera
 chikanera
+chili
+chock
 chocka
 chockbehandla
 chockera
@@ -2835,6 +2840,7 @@ dumdristig
 dumdryg
 dummare än tåget
 dumpa
+dun
 dunder
 dunderfiasko
 dundra
@@ -2857,6 +2863,8 @@ dygnsgammal
 dyka
 dyka upp
 dyka upp som gubben i/ur lådan
+dykarutrustning
+dyna
 dynamik
 dynamisk
 dynamitgubbe
@@ -3025,6 +3033,7 @@ elektricitet
 elektrifiera
 elektro
 elektrochock
+elektrolys
 elektronblixt
 elektronik
 elektrostatik
@@ -3136,6 +3145,7 @@ enskifte
 enskilt åtal
 enstavig
 enstöring
+entitet
 entlediga
 entrecote
 entré
@@ -3224,6 +3234,7 @@ exekvering
 exempel
 exempellös
 exempelvis
+exemplarisk
 exercera
 exhalation
 exhibitionism
@@ -4248,6 +4259,7 @@ förebåda
 föredra
 föredrag
 föredragsbeteckning
+föredömlig
 förefalla
 förefinnas
 förege
@@ -5928,6 +5940,7 @@ hänföra sig
 hänförd
 hänförelse
 hänga
+hänga i luften
 hänga ihop
 hänga läpp
 hänga med
@@ -7217,6 +7230,7 @@ knutte
 knycka
 knyckig
 knylhavre
+knyppeldyna
 knyppla
 knyta
 knyta an
@@ -8329,6 +8343,7 @@ lockelse
 locktång
 lodlinje
 lodplan
+loft
 loftgång
 loftgångshus
 logaritmera
@@ -8376,13 +8391,18 @@ lovsång
 lp
 luciakrona
 luffare
+luft
+luftaffär
 luftfarkost
 luftfart
 luftgitarr
 luftled
+luftombyte
 luftpastej
+luftslott
 luftstrupe
 luftström
+lufttom
 lufttät
 luftv  -1
 luftväg
@@ -8394,6 +8414,7 @@ lugna ner
 lugna puckar
 lugna sig
 lugnet före stormen
+lukt
 lukta
 luminiscens
 lumpen
@@ -8575,6 +8596,7 @@ lättfotad
 lätthanterlig
 lätthet
 lättmatros
+lättmetall
 lättrogen
 lättrökt
 lättrörlig
@@ -9034,10 +9056,12 @@ misstanke
 misstolka
 misstro
 misstroendevotum
+misstrogen
 misströsta
 misstycka
 misstyda
 misstänka
+misstänkt
 missunna
 missuppfatta
 missuppfattning
@@ -9321,8 +9345,10 @@ målkalas
 målsägande
 målsägare
 måltid
+måltips
 målvakt
 månadskort
+månadsskifte
 måndagsmorgon
 många bäckar små
 mångbesjungen
@@ -9339,6 +9365,7 @@ månsten
 mårddjur
 mått och steg
 måtta
+måttband
 måttet är rågat
 måttfull
 måttlös
@@ -9354,6 +9381,7 @@ möjlig
 möjliggöra
 möjlighet
 mönster
+mönstergill
 mönstra av
 mönstra in
 mönstra på
@@ -9695,6 +9723,7 @@ någons/någots svarta får
 något skäms inte för sig
 något som katten släpat in
 något växer inte på träd/trän
+nåldyna
 nålsöga
 nåta
 nödd
@@ -13350,6 +13379,7 @@ strykande åtgång
 strykfågel
 strykjärn
 strykkappa
+stryktips
 strypa
 sträcka
 sträcka sig
@@ -13451,6 +13481,7 @@ stämma in
 stämma ned
 stämma upp
 stämma överens
+stämpeldyna
 stämpla
 stänga
 stänga av
@@ -14263,8 +14294,10 @@ ting
 tinga
 tingshus
 tingsrätt
+tiotal
 tippa
 tipptopp
+tips
 tipsa
 tistel
 tistelborre
@@ -14452,6 +14485,7 @@ trampa
 trampa upp
 trampa ur
 trampa över
+trampdyna
 trampfartyg
 trampmina
 trampsax
@@ -15290,6 +15324,7 @@ utminutera
 utmynna
 utmärka
 utmärka sig
+utmärkelse
 utmärkning
 utmäta
 utmåla
@@ -15321,6 +15356,7 @@ utropa
 utrota
 utrum
 utrusta
+utrustning
 utrymma
 uträtta
 utröna
@@ -15334,24 +15370,29 @@ utskriva
 utskänka
 utslocknad
 utslunga
+utslutning
 utsläcka
 utsläpp
 utsläta
 utslätad
 utsmycka
 utsocknes
+utspark
 utspela sig
 utspelas
 utspinna sig
 utspisa
 utspridd
+utspring
 utspringande
 utspy
 utstaka
 utstoffera
 utsträcka
 utstråla
+utström
 utstyrd
+utstyrsel
 utställa
 utstå
 utstående
@@ -15433,7 +15474,9 @@ vakta
 vaktavlösning
 vakthund
 vaktparad
+vakuum
 vakuumförpacka
+vakuumförpackning
 val
 valapparat
 valbyrå
@@ -16030,6 +16073,7 @@ världsvana
 värma
 värma upp
 värme
+värmedyna
 värmeplatta
 värmeverk
 värna
