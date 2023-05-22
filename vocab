@@ -114,6 +114,7 @@ let N_DEF = 0;
 let CLASS = "all";
 var LAST_OBJ;
 let DEBUG=false;
+let SOUNDS=true;
 let LAST_DEF = "";
 let LAST_CLASS = "all";
 let CONTROLS_VISIBLE=true;
@@ -123,8 +124,8 @@ var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
 var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
 let REGEX_MODE = false;
-var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk"]
-var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord","infinitiv"]
+var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk","inf","art"]
+var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord","infinitiv","artikel"]
 // Crude toggle on site load to show tool tips
 let SHOW_HELP = false;
 var TAB_DUMMY;
@@ -209,9 +210,16 @@ function setN_CUR() {
 		N_CUR = N_KONJUNKTION;
 	} else if (CLASS === "subjunktion") {
 		N_CUR = N_SUBJUNKTION;
+	} else if (CLASS === "infinitiv") {
+		N_CUR = N_INFINITIV;
+	} else if (CLASS === "artikel") {
+		N_CUR = N_ARTIKEL;
 	} else if (CLASS === "all") {
 		N_CUR = N_ALL;
+	} else {
+		N_CUR = N_ALL;
 	}
+	
 	if (CLASS === "all") {
 		$('#iCnt').text("");		
 	} else {
@@ -1120,6 +1128,8 @@ function wordCount() {
 		N_NUMMER = json["nummer"];
 		N_KONJUNKTION = json["konjunktion"];
 		N_SUBJUNKTION = json["subjunktion"];
+		N_INFINITIV = json["infinitiv"];
+		N_ARTIKEL = json["artikel"];
 		setN_CUR();		
 		$('#iCntTotal').html(N_TOT.toLocaleString('sv'));
 	})
@@ -1168,7 +1178,7 @@ function newInputWrapper(e) {
 			// Only list the major class groups for brevity
 			let N = 6;
 			let N_DONE = CLASS_LIST.length;
-			for (let i = 0; i < N_DONE; i++) {
+			for (let i = 0; i < N; i++) {
 				let c = CLASS_LIST[i];
 				// ID used to get deterministic ordering of classes
 				fetch('backend/getScore.php?class=' + c + '&id=' + i, {
@@ -1193,8 +1203,8 @@ function newInputWrapper(e) {
 					score_all += parseInt(json["total"]);
 					let out = "<b>all {" + N_TOT + "; " + "score_all" + "%}</b>";
 					// All serial requests are done
-					if (done == N_DONE) {
-						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>100% date: " + END_DATE_STR + fmtUnit(END_DATE,"days") + "<br>***<br>";
+					if (done == N) {
+						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>100% date: " + END_DATE_STR + fmtUnit(END_DATE,"days") + "<br>";
 						for (i = 0; i < N; i++) {
 							out += "<br>" + CLASSES[i] + tmpOut[i];
 						}
@@ -1203,11 +1213,15 @@ function newInputWrapper(e) {
 						out = header + out;
 						$('#iWords').html(out);									
 						// Append auxiliary classes in smaller text
-						out = "";
-						del = "";
-						for (i = N; i < N_ALL; i++) {
-							out += del + CLASSES[i] + tmpOut[i];								
-							del = "<br>";
+						out = "Aux classes:";
+						del = "";						
+						for (i = N; i < N_DONE; i++) {
+							if ((i - N) % 6 === 0) {
+								del = "<br>";
+							} else {
+								del = ", ";
+							}
+							out += del + CLASSES[i]							
 						}															
 						$('#iAux').html(out);
 					}												
@@ -1263,6 +1277,8 @@ function handleNumericInput() {
 function seekWordSingleClass(word = CUR_WORD) {	
 	CUR_DEF = 0; // CUR_DEF only valid for current word.
 	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)		
+	// Immediately play pronunciation if available
+	pronounce(word);
 	if (word.length > 0) {
 		// Any user supplied break breaks are discarded.
 		word = word.replaceAll("­","");
@@ -1310,7 +1326,10 @@ function seekWordSingleClass(word = CUR_WORD) {
 function seekWord(word, link = false) {	
 	if (DEBUG) console.log("seekWord(word, link), word = " + word + ", link = " + link)	
 	// Cleanup
-	$('#iAux').html("");
+	$('#iAux').html("");	
+	
+	
+	
 	// Any user supplied break breaks are discarded.
 	word = word.replaceAll("­","");	
 	REGEX_WORDS = [];
@@ -1322,8 +1341,9 @@ function seekWord(word, link = false) {
 	while (word.substr(word.length-1) === " ") {
 		word = word.substr(0,word.length-1)
 	}
-	// (Nearlt) Always regex for phrases
-	
+	// Immediately play pronunciation if available
+	pronounce(word);
+	// (Nearly) Always regex for phrases
 	if (CLASS === "fraser") {
 		if (REGEX_MODE) {		
 			word = word.replaceAll("/","\\/");
@@ -1795,6 +1815,7 @@ function fullClassName(name) {
 	if (name === "kon") return "konjunktion"
 	if (name === "int") return "interjektion"
 	if (name === "inf") return "infinitiv"
+	if (name === "art") return "artikel"
 	return name
 }
 
@@ -2448,6 +2469,7 @@ function preProc(def) {
 			del = "<br>";
 		}
 	}
+	outDef = outDef.replace(",,","")
 	
 	// Get any "more" information that exists in the def
 	
@@ -3328,5 +3350,63 @@ function getRaw() {
 	if (DEBUG) console.log("getRaw()")
 	window.open("https://www.svenska.se/tri/f_so.php?sok=" + CUR_WORD)
 }
+
+function shortenClass() {
+	// easier to handle short file names
+	let res = CLASS;
+	if (CLASS === "substantiv_en") {
+		res = "en";
+	} else if (CLASS === "substantiv_ett") {
+		res = "ett";
+	} else if (CLASS === "adjektiv") {
+		res = "adj";
+	} else if (CLASS === "interjektion") {
+		res = "int";
+	} else if (CLASS === "räkneord") {
+		res = "räk";
+	} else if (CLASS === "slutled") {
+		res = "slut";
+	} else if (CLASS === "förled") {
+		res = "för";
+	} else if (CLASS === "adverb") {
+		res = "adv";
+	} else if (CLASS === "preposition") {
+		res = "prep";
+	} else if (CLASS === "pronom") {
+		res = "pro";
+	}
+	return res;
+}
+
+function pronounce(word) {
+	if (DEBUG) console.log("pronounce()");
+	if (SOUNDS && CLASS != "all") {		
+		let shortClass = shortenClass(CLASS);
+		let path = "sounds/" + shortClass + "/";
+		//word = word.replaceAll(" ", "_");
+		fetch('backend/existsAudio.php?class=' + shortClass + '&word=' + word, {			
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+			
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {			
+			if (json === "exists") {
+				//var audio = new Audio(path + word + ".mp3");
+				var audio = new Audio(path + word);
+				audio.play();
+			}
+		})
+		.catch(error => {
+			console.log(error);
+		})		
+	}
+}
+
 </script>
 </html>

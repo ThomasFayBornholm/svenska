@@ -8,7 +8,7 @@
 	}
 
 	$path = getcwd() ."/";
-	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion","infinitiv"];
+	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion","infinitiv","artikel"];
 
 	$nTot = 0;
 	$nAll = 0;
@@ -27,6 +27,8 @@
 	$nNummer = 0;
 	$nKonjunktion = 0;	
 	$nSubjunktion = 0;	
+	$nInfinitiv = 0;
+	$nArtikel = 0;
 
 	foreach($files as $f) {
 		$f_base = $f;
@@ -67,12 +69,16 @@
 				$nSubjunktion = count($words);
 			} else if ($f_base === "slutled") {
 				$nSlutled = count($words);			
+			} else if ($f_base === "infinitiv") {
+				$nInfinitiv = count($words);
+			} else if ($f_base === "artikel") {
+				$nArtikel = count($words);
 			}
 		}
 		fclose($infile);
 	}
 	
-	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nFraser + $nPlural + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled;
+	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nFraser + $nPlural + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled + $nArtikel;
 	$count["total"] = $nTot;
 	$count["all"] = $nAll;
 	$count["adj"] = $nAdj;
@@ -90,5 +96,7 @@
 	$count["konjunktion"] = $nKonjunktion;
 	$count["slutled"] = $nSlutled;
 	$count["subjunktion"] = $nSubjunktion;
+	$count["infinitiv"] = $nInfinitiv;
+	$count["artikel"] = $nArtikel;
 	echo json_encode($count);
 ?>

@@ -88,6 +88,9 @@
 	$trail = "-def";
 	if (strlen($def) > 0) {
 		$name = $class . $trail;
+		if (!file_exists($name)) {
+			fopen($name, "w");
+		}
 		$contents = file_get_contents($path . $name, 'UTF-8');
 		$arr = json_decode($contents, true);
 		$arr[$word] = $def;
@@ -97,12 +100,11 @@
 	// Do not replace any existing score by default	
 	// If not existing score then default to "2". User can easily update this from interface	
 	$name = $class . "-score";
+	if (!file_exists($name)) fopen($name, "w");			
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$arr = json_decode($contents, true);
-	if (!array_key_exists($word,$arr)) {
-		$arr[$word] = "2";
-		file_put_contents($path . $name, json_encode($arr));
-	}
+	$arr[$word] = "2";
+	file_put_contents($path . $name, json_encode($arr));	
 	
 	if ($class != "faser") {
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
@@ -111,6 +113,7 @@
 			
 			$moreSplit = explode("||",$more);	
 			$name = $class . "-more";
+			if (!file_exists($name)) fopen($name, "w");			
 			$contents = file_get_contents($path . $name, 'UTF-8');
 			$arr = json_decode($contents,true);
 			$i = 0;

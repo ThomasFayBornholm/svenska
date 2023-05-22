@@ -8,12 +8,15 @@
 	
 	$rate = 0;
 	$f = "rate";
+	if (!file_exists($f)) fopen($f, "w");
 	$infile = fopen($path . "/" . $f , "r") or die("Could not open file: " . $f);
 	if (filesize($f) != 0) {
 		$rate = (float)fread($infile, filesize($f));				
 	}
 
 	$f = "current-rating";
+	if (!file_exists($f)) fopen($f, "w");
+
 	$mDate = date("l",filemtime($f));
 	$rating = 0;
 	// Only update 'rating' once per day	
