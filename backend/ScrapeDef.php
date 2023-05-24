@@ -95,7 +95,7 @@
 		return;
 	}
 		
-	// Multiple lemma can exist - for now only scrape  a signle lemma that matches the current class.				
+	// Multiple lemma can exist - for now only scrape a single lemma that matches the current class.				
 	$find = 'class="ordklass">';	
 	$foundMatch = false;
 	$pos1 = strpos($def, $find);
@@ -133,6 +133,7 @@
 		}
 	}
 	
+	
 	if (!$foundMatch) {
 		echo json_encode("Failed to retrieve word class: " . $class);
 		return;	
@@ -146,7 +147,7 @@
 	
 	// Line-by-line analysis often easier way to extract relevant information.	
 	$defLines = explode("\n",$def);		
-		
+
 	if (count($defLines) < 6) {
 		debug("Failed to get lemma #2");
 		return;
@@ -218,7 +219,10 @@
 	function getSingleLemma($def, $start, $END) {		
 		// END is the global end of Lemma content after all "n" lemmas.
 		// First lemvar after ordklass is the next lemma
-		$end = strpos($def,"lemvar",$start);				
+		// Always parse past "ordklass" as before seeking end of lemma
+		$pastStart = strpos($def, "ordklass",$start);
+		if (!$start) return "";
+		$end = strpos($def,"lemvar",$pastStart);				
 		// Case where this is the last lemma		
 		if (!$end) {			
 			$end = strpos($def,$END,$start) + strlen($END);			
@@ -461,13 +465,12 @@
 			preg_match($pattern, $defTxt, $matches);		
 			
 			// 'hvhomo' class is some kind of link, treat accordingly	
-			$pattern = '/<span class="hvhomo"><\/span>([a-zöäå\s]+)/';			
-			preg_match($pattern, $defTxt, $matchesHomo);
+			$pattern = '/<span class="hvhomo"><\/span>([a-zöäå\s]+)/';						
 			
+			preg_match($pattern, $defTxt, $matchesHomo);			
 									
-			$pattern = '/<a class="hvtag" target="_parent" href="\/so\/\?id=\d+">([a-zöäå\s]+)+/';
-			preg_match($pattern, $defTxt, $matches);
-			
+			$pattern = '/<a class="hvtag" target="_parent" href="\/so\/\?id=\d+">([a-zöäå\s]+)+/';						
+			preg_match($pattern, $defTxt, $matches);			
 			
 			$defTxt = strip_tags($defTxt);
 			if ($matchesHomo) {
@@ -681,6 +684,7 @@
 		$out = str_replace("någon", "NÅGON", $out);
 		$out = str_replace("något", "NÅGOT", $out);
 		$out = str_replace("några", "NÅGRA", $out);
+		$out = str_replace(" adj ", " ADJ ", $out);
 		return $out;
 	}
 	
