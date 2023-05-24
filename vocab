@@ -544,6 +544,7 @@ function displayWords(list,ind) {
 			out += del + popSpan(i, words[i],hasMeta) 
 			del = "<br>";
 		}
+		out = out.replaceAll("-2</span>","<sup>2</sup></span>");
 		$('#iWords').html(out);
 		// Formatting to show score indicators
 		if (CLASS != "all") {
@@ -558,6 +559,7 @@ function displayWords(list,ind) {
 				}
 			}
 		}
+		
 		showWords();				
 		countDefs();
 		
@@ -669,6 +671,7 @@ function showWordMatches(follow) {
 	let id = "w" + SCROLL_INC;
 	let el = document.getElementById(id);
 	let word = el.innerText;
+	word = word.replace("2","-2");
 	
 	if (LAST_OBJ) {
 		LAST_OBJ.style.fontWeight="";
@@ -731,6 +734,7 @@ function lookupWord(el,onlyLocal,inline) {
 		}
 		el.style.fontWeight="bold";
 		let word = el.innerText;
+		word = word.replace("2", "-2");
 		CUR_WORD=word;
 
 		LAST_OBJ = el;
@@ -1328,9 +1332,8 @@ function seekWord(word, link = false) {
 	if (DEBUG) console.log("seekWord(word, link), word = " + word + ", link = " + link)	
 	// Cleanup
 	$('#iAux').html("");	
-	
-	
-	
+	word = word.replace("2","-2");
+		
 	// Any user supplied break breaks are discarded.
 	word = word.replaceAll("­","");	
 	REGEX_WORDS = [];
@@ -1484,7 +1487,7 @@ function seekWord(word, link = false) {
 								word = word.replaceAll("\\","");
 								word = word.replaceAll("<","");
 								follow = true;
-							}
+							}													
 							// If no match in specific class useful to show matches in other classes.
 							fetch('backend/getDefAll.php?word=' + word, {
 								method: 'get',
@@ -1607,7 +1610,9 @@ function drillDown() {
 	if (DEBUG) console.log("drillDown()");
 	// Take word from iWords to allow for special characters such as 'é'
 	let id = "#w" + SCROLL_INC;
-	let word = $(id).text()
+	let word = $(id).text()	
+	if (word.indexOf("-2") === -1) word = word.replace("2","-2");
+	console.log(word)
 	
 	fetch('backend/getDefAll.php?word=' + word, {
 		method: 'get',
@@ -1649,7 +1654,7 @@ function drillDown() {
 function setClass(c, seek = "") {
 	if (c === "all") clearRegexMode();	
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
-	$('#iAux').html("");
+	$('#iAux').html("");	
 	LAST_CLASS = CLASS;
 	wordCount();
 	if (c != CLASS) {		
@@ -2622,6 +2627,7 @@ function showWords() {
 		$('#iWords').css("visibility", "visible");
 	}
 }
+
 function highlight(el,event) {
 	if (event.type === "mouseover") {
 		el.style.cursor = "pointer";
@@ -2629,6 +2635,7 @@ function highlight(el,event) {
 		el.style.cursor = "";
 	}
 }
+
 function editCursor(event,el) {
 	if (event.type === "mouseover") {
 		el.style.cursor = "text";
@@ -2636,10 +2643,12 @@ function editCursor(event,el) {
 		el.style.cursor = "";
 	}
 }
+
 function toggleDebugEv(e) {
 	e.preventDefault();
 	toggleDebug();
 }
+
 function toggleDebug() {
 	DEBUG = !DEBUG;
 	if (DEBUG) {
@@ -2728,6 +2737,8 @@ function fmtMeta(meta) {
 		tmpMeta += delMeta + metaArr[i];
 	}
 	tmpMeta = "<i>" + tmpMeta + "</i><br>"
+	// Multi-line meta information get visual divider from the following definition text.
+	if (tmpMeta.indexOf("<br>") != tmpMeta.length - 4) tmpMeta += "---------------------<br>";
 	return tmpMeta;
 }
 function ScrollViewDownWrapper() {
@@ -3192,7 +3203,7 @@ function toggleRegexMode(force = false) {
 	if (REGEX_MODE || force) {
 		$('#iInput').css("background", "navajowhite")
 	} else {
-		$('#iInput').css("background", "")
+		$('#iInput').css("background", "beige")
 	}
 }
 
