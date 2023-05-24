@@ -464,7 +464,7 @@ bedöva
 beediga
 befalla
 befara
-befara  2
+befara -2
 befatta sig
 befinna sig
 befinnas
@@ -1825,7 +1825,7 @@ förminska
 förmoda
 förmultna
 förmäla
-förmäla  2
+förmäla -2
 förmäla sig
 förmänskliga
 förmärka
@@ -2875,7 +2875,7 @@ koka in
 koka ner
 koka över
 kola
-kola  2
+kola -2
 kolla
 kollaborera
 kollapsa
@@ -3037,7 +3037,7 @@ krångla
 krångla sig
 krångla till
 kröka
-kröka  2
+kröka -2
 kröna
 kubera
 kugga
@@ -3110,7 +3110,7 @@ köpa upp
 köpa ut
 köpslå
 köra
-köra  2
+köra -2
 köra fast
 köra ihop sig
 köra in
@@ -4083,7 +4083,7 @@ risa ihop
 riskera
 rispa
 rista
-rista  2
+rista -2
 rita
 riva
 rivalisera
@@ -4389,7 +4389,7 @@ skjutsa
 skoja
 skoja till sig
 skola
-skola  2
+skola -2
 skola in
 skola om
 skona
@@ -4764,7 +4764,7 @@ spruta
 spränga
 sprängvärka
 sprätta
-sprätta  2
+sprätta -2
 spurta
 spy
 spy ur sig
@@ -4813,7 +4813,7 @@ steka
 steka sig
 stelna
 sticka
-sticka  2
+sticka -2
 sticka av
 sticka emellan
 sticka ner
@@ -5788,7 +5788,7 @@ vanvårda
 vanvörda
 vanära
 vara
-vara  2
+vara-2
 vara sig
 variera
 varna
@@ -5861,7 +5861,7 @@ vilja åt
 vilseleda
 vimla
 vina
-vina  2
+vina -2
 vinda
 vindla
 vindla sig
@@ -5925,7 +5925,7 @@ välkomna
 välla
 välsigna
 välta
-välta  2
+välta -2
 välta över
 vältra
 välva
