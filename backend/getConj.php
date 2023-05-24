@@ -127,9 +127,7 @@
 		// "i morse": 'i morse eller imorse'
 		// "imorse": 'i morse eller imorse'
 		} else if ($el === "adverb" && strlen($rest) > 0) {
-			$restList = explode(" ", $rest);			
-			var_dump($restList);
-			return;
+			$restList = explode(" ", $rest);						
 			foreach($wordList as $key) {				
 				$conjugations = getConjugations($key, $dict);					
 				
