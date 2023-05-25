@@ -62,6 +62,7 @@ D-mark
 D-nivå
 D-vitamin
 E-vitamin
+G
 Gud nåde någon
 Hans Majestät (konungen)
 Hennes Majestät (drottningen)
@@ -69,11 +70,13 @@ Högsta domstolen
 Högsta sovjet
 Kristi blodsdroppe
 Kunglig majestät (Kungl. Maj:t)
+MVG
 Marie bebådelsedag
 Nobel
 REM-sömn
 Schweiz
 T-sprit
+U
 U-rör
 a cappella
 a posteriori
@@ -932,6 +935,7 @@ avräkna
 avrätta
 avråda
 avsalta
+avsats
 avse
 avsegla
 avsides
@@ -1364,6 +1368,7 @@ beriktiga
 bero
 beroende
 berusa
+berusad
 beryktad
 beräkna
 berätta
@@ -1555,6 +1560,7 @@ bildskrift
 bildsvit
 bildtelefon
 bildtext
+bildåre
 bilfärja
 bilförare
 bilförlossning
@@ -3223,6 +3229,7 @@ elektrifiera
 elektro
 elektrochock
 elektrolys
+elektron
 elektronblixt
 elektronik
 elektrostatik
@@ -4295,6 +4302,7 @@ färgsätta
 färgsättning
 färgämne
 färja
+färjkarl
 färska
 färskning
 fästa
@@ -5227,14 +5235,21 @@ genomlysande
 genompyrd
 genomskinlig
 genomskåda
+genomsläpplig
+genomsnittlig
 genomströmma
 genomsyra
 genomsöka
 gensträvig
 gentil
+genuin
 genus
 genväg
+geo
+geocentrisk
+geometri
 geometrisera
+geometrisk
 georgskors
 geotagga
 gepäck
@@ -5934,6 +5949,7 @@ helhetssyn
 helig
 heliga tre konungar
 helinackordering
+heliocentrisk
 heliotrop
 heller
 hellre
@@ -7850,6 +7866,7 @@ konvertera
 kooperera
 koordinat
 koordinera
+kopernikansk
 kopiera
 koppa
 kopparbrun
@@ -8376,6 +8393,7 @@ köra upp
 köra ur
 köra ut
 köra över
+körare
 körfält
 körkort
 körlektion
@@ -8655,8 +8673,12 @@ liten
 liten tuva stjälper
 liv
 livboj
+livdrabant
+livesända
+livgarde
 livlig
 livlös
+livregemente
 livrem
 livräddning
 livsbejakande
@@ -8672,7 +8694,6 @@ livslögn
 livssyn
 livsuppehälle
 livsuppgift
-livsända
 livtag
 livvakt
 ljud
@@ -9002,9 +9023,11 @@ långfinger
 långfristig
 långgrund
 långivare
+långkörare
 långledas
 långlivad
 långlopp
+långmjölk
 långpromenad
 långrev
 långsint
@@ -11020,7 +11043,9 @@ portmonnä
 porträttera
 porös
 positiv
+positiv  2
 positiv bild
+positron
 posta
 postanvisning
 postdatera
@@ -11162,12 +11187,14 @@ prost
 protegera
 protektion
 protestera
+proton
 protozo
 prov
 prov-2
 prova
 prova på
 prova ut
+provare
 proviant
 provins
 provinsiell
@@ -11176,6 +11203,7 @@ provkök
 provocera
 provocera fram
 provokation
+provrum
 provrörsbefruktning
 provtagning
 provtjänstgöra
@@ -11203,6 +11231,7 @@ pseudonym
 psyk
 psyke
 psykförsvar
+ptolemaisk
 publicera
 publicera sig
 publicist
@@ -11245,6 +11274,7 @@ pynta
 pyra
 pyssla
 pyssla om
+pytteliten
 pälsdjur
 pälsverk
 pärla
@@ -11294,6 +11324,7 @@ påannonsera
 påbjuda
 påbud
 påbörja
+påfallande
 påflugen
 påfrestande
 påfrestning
@@ -14672,6 +14703,7 @@ tegel
 tegelsten
 tegelstensroman
 tekula
+telefax
 telefonera
 telefonrecept
 telefonstolpe
@@ -14694,6 +14726,7 @@ tequila
 termin
 terminologi
 termometer
+terrass
 terrorism
 terrorist
 terrängvinst
@@ -15080,6 +15113,7 @@ trap
 trappa av
 trappa ner
 trappa upp
+trappavsats
 trappgavel
 trapphus
 trappuppgång
@@ -15972,6 +16006,7 @@ utspisa
 utspridd
 utspring
 utspringande
+utsprång
 utspy
 utstaka
 utstoffera
@@ -15985,6 +16020,7 @@ utstå
 utstående
 utstöta
 utsuga
+utsäde
 utsäga
 utsända
 utsätta
@@ -15994,6 +16030,7 @@ utsöndra
 utsöndring
 utsöndringsorgan
 utsövd
+uttag
 uttagning
 uttala
 uttala sig
