@@ -685,6 +685,7 @@
 		$out = str_replace("något", "NÅGOT", $out);
 		$out = str_replace("några", "NÅGRA", $out);
 		$out = str_replace(" adj ", " ADJ ", $out);
+		$out = str_replace(" sats", " SATS", $out);
 		return $out;
 	}
 	
