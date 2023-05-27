@@ -236,6 +236,7 @@ amperemeter
 amplitud
 ampull
 amputation
+amsaga
 amylas
 anabaptism
 anabaptist
@@ -3320,6 +3321,7 @@ fientlighet
 figur
 figuråkning
 fika
+fikabröd
 fiktion
 fiktionalism
 fiktionalist
@@ -4447,6 +4449,7 @@ gladiator
 glans
 glansroll
 glasbur
+glasfiber
 glasnost
 glass
 glasvar
@@ -5153,6 +5156,7 @@ hummertina
 humor
 hund
 hundblick
+hundkapplöpning
 hundkoja
 hundradel
 hundrakronorssedel
@@ -5258,6 +5262,7 @@ händelse
 hänförelse
 hängare
 hängbro
+hängdal
 hängivelse
 hängivenhet
 hängning
@@ -6390,6 +6395,7 @@ knap
 knape
 knapp
 knappsats
+knapptelefon
 knark
 knarkare
 knarkarkvart
@@ -6632,6 +6638,7 @@ konspiration
 konspirationsteori
 konst
 konstellation
+konstfiber
 konstförening
 konstgödsel
 konstighet
@@ -7180,6 +7187,7 @@ körtel
 köttbulle
 köttfärs
 köttkvarn
+köttsaft
 labb
 laborant
 laboration
@@ -7325,6 +7333,7 @@ leverpastej
 levnad
 levnadskostnad
 levnadsregel
+levnadssaga
 levnadsstandard
 lian
 libell
@@ -8143,6 +8152,7 @@ mjölkko
 mjölkkossa
 mjölkkörtel
 mjölkprodukt
+mjölksaft
 mjölkskorv
 mjölksyra
 mjölktand
@@ -9652,6 +9662,7 @@ pumpa
 pundare
 pung
 pungbjörn
+pungdjävul
 punkt
 punktering
 puns
@@ -9970,6 +9981,7 @@ ridhäst
 ridlärare
 ridsport
 ridå
+riesenschnauzer
 riesling
 rigg
 rikedom
@@ -10271,11 +10283,17 @@ sackaros
 sadel
 sadelformad
 sadelgjord
+sadelknapp
 sadelstolpe
 safari
 safir
 saft
+saftpress
 saga
+sagoberättare
+sagobok
+sagoprins
+sagostund
 sajt
 sak
 sakframställning
@@ -10321,6 +10339,7 @@ samhällskritiker
 samhällskunskap
 samhällsomstörtare
 samhällsordning
+samhällsservice
 samhällsskildring
 samhällsstege
 samhällsställning
@@ -10455,6 +10474,7 @@ schism
 schismatiker
 schizofreni
 schlager
+schnauzer
 schnitzel
 schvung
 schwarzwaldtårta
@@ -10875,6 +10895,7 @@ skissning
 skit
 skiva
 skivspelare
+skivstång
 skivtallrik
 skjorta
 skjutdörr
@@ -11126,6 +11147,7 @@ slägga
 släkt
 släktforskning
 släkting
+släktsaga
 slända
 släng
 slänggunga
@@ -12068,6 +12090,7 @@ synoptiker
 synpunkt
 syntax
 syntes
+syntetfiber
 synvilla
 synvinkel
 syokonsulent
@@ -12249,6 +12272,7 @@ tappning
 tappt
 tarm
 tarmkanal
+tarmsaft
 task
 tass
 tatuering
@@ -12269,6 +12293,7 @@ teaterdekoration
 teaterkritik
 teaterpjäs
 teaterstycke
+teaterviskning
 teckengivning
 teckentydare
 teckning
@@ -12885,6 +12910,7 @@ tvättkorg
 tvättlina
 tvättsvamp
 tvåa
+tvåarmslyft
 tvål
 tvålopera
 tvångsintagning
@@ -13736,8 +13762,11 @@ vindskupa
 vindsnurra
 vindstilla
 vindsurfare
+ving
 vingbredd
 vinge
+vingfrukt
+vingmutter
 vingpenna
 vingård
 vink
