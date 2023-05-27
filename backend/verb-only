@@ -464,7 +464,7 @@ bedöva
 beediga
 befalla
 befara
-befara -2
+befara-2
 befatta sig
 befinna sig
 befinnas
@@ -1825,7 +1825,7 @@ förminska
 förmoda
 förmultna
 förmäla
-förmäla -2
+förmäla-2
 förmäla sig
 förmänskliga
 förmärka
@@ -2113,6 +2113,7 @@ gifta sig
 gilla
 gina
 gippa
+gira
 gissa
 gissa sig till
 gissla
@@ -2122,6 +2123,7 @@ gjuta av
 gjuta in
 gjuta över
 glamma
+glansa
 glappa
 glasa in
 glasera
@@ -2746,6 +2748,7 @@ kasta upp
 kasta ur sig
 kasta ut
 katalysera
+kategorisera
 kava sig
 kavla
 kavla ner
@@ -2878,7 +2881,7 @@ koka in
 koka ner
 koka över
 kola
-kola -2
+kola-2
 kolla
 kollaborera
 kollapsa
@@ -2970,6 +2973,7 @@ koppla upp
 koppla ur
 kopulera
 korna
+korrekturläsa
 korrespondera
 korrigera
 korrodera
@@ -3040,7 +3044,7 @@ krångla
 krångla sig
 krångla till
 kröka
-kröka -2
+kröka-2
 kröna
 kubera
 kugga
@@ -3113,7 +3117,7 @@ köpa upp
 köpa ut
 köpslå
 köra
-köra -2
+köra-2
 köra fast
 köra ihop sig
 köra in
@@ -3531,6 +3535,7 @@ mötas
 nacka
 nafsa
 nagelfara
+nagga
 nalkas
 nalla
 namnge
@@ -4088,7 +4093,7 @@ risa ihop
 riskera
 rispa
 rista
-rista -2
+rista-2
 rita
 riva
 rivalisera
@@ -4392,10 +4397,11 @@ skjuta till
 skjuta upp
 skjuta över
 skjutsa
+skjuva
 skoja
 skoja till sig
 skola
-skola -2
+skola-2
 skola in
 skola om
 skona
@@ -4503,6 +4509,7 @@ skåra
 skölja
 skönja
 skönmåla
+skönstaxera
 skörda
 sköta
 sköta sig
@@ -4770,7 +4777,7 @@ spruta
 spränga
 sprängvärka
 sprätta
-sprätta -2
+sprätta-2
 spurta
 spy
 spy ur sig
@@ -4820,7 +4827,8 @@ steka
 steka sig
 stelna
 sticka
-sticka -2
+sticka upp
+sticka-2
 sticka av
 sticka emellan
 sticka ner
@@ -4875,6 +4883,7 @@ strukturera
 strukturera om
 strula
 strunta
+strutta
 stryka
 stryka för
 stryka med
@@ -5010,6 +5019,7 @@ sveda
 svedja
 svepa
 svetsa
+svettas
 svida
 svida sig
 svika
@@ -5033,6 +5043,7 @@ svänga sig
 svänga till
 svära
 svärma
+svärta
 sväva
 sy
 sy ihop
@@ -5321,6 +5332,7 @@ transitera
 transkribera
 transpirera
 transplantera
+transponera
 transportera
 trappa av
 trappa ner
@@ -5868,7 +5880,7 @@ vilja åt
 vilseleda
 vimla
 vina
-vina -2
+vina-2
 vinda
 vindla
 vindla sig
@@ -5924,6 +5936,7 @@ väga ned
 väga upp
 vägleda
 vägra
+väja
 välja
 välja bort
 välja in
@@ -5932,7 +5945,7 @@ välkomna
 välla
 välsigna
 välta
-välta -2
+välta-2
 välta över
 vältra
 välva
