@@ -114,7 +114,7 @@ let N_DEFS = 0; // Number of definitions for current word lemma
 let LAST_WORD="";
 let CUR_WORD="";
 let CUR_DEF = "";
-let CUR_DEF_ENUM="0";
+let CUR_DEF_ENUM = 1;
 let N_DEF = 0;
 let CLASS = "all";
 var LAST_OBJ;
@@ -285,7 +285,7 @@ function addDef(meta, def, more) {
 	})
 	.then(json => {
 		setTimeout(updateDef(),2000);
-		setTimeout(getMore(0),2000);
+		setTimeout(getMore(1),2000);
 	})
 	.catch(error => {
 		console.log(error);
@@ -818,7 +818,7 @@ function lookupWord(el,onlyLocal,inline) {
 						$('#iWords').css("visibility", "hidden");
 					}
 					
-					getMore(CUR_DEF_ENUM);
+					getMore(1);
 				} else {					
 					$('#iParDef').html("");
 					$('#iDefDiv').css("display", "block");
@@ -884,10 +884,10 @@ function displayDef(meta, def,word) {
 		tmpSpan += " title='Right click to edit definition'" 
 	}
 	
-	if (N_DEFS > 1) {		
-		outDef = outDef.replace(CUR_DEF_ENUM + " ", CUR_DEF_ENUM + "/" + N_DEFS + " ");
-	}		
-	CACHED_DEF_HTML = outDef;
+			
+	outDef = outDef.replace(CUR_DEF_ENUM + " ", CUR_DEF_ENUM + "/" + N_DEFS + " ");
+	
+	
 	if (meta.length > 0) $('#iMeta').html(fmtMeta(meta));
 	$('#iParDef').html(outDef)
 	if (SHOW_HELP) {
@@ -1280,11 +1280,10 @@ function handleNumericInput() {
 	if (CUR_DEF_ENUM < 1 || CUR_DEF_ENUM > N_DEFS) {
 		$('#iInput').val("");
 		return ;
-	}
-	let storedInd = CUR_DEF_ENUM - 1;	
+	}	
 	$('#iInput').val("");
-	getDefInd(CUR_DEF_ENUM)
-	getMore(storedInd);		
+	getDefInd(CUR_DEF_ENUM);
+	getMore(CUR_DEF_ENUM);		
 }
 
 function seekWordSingleClass(word = CUR_WORD) {		
@@ -2900,7 +2899,8 @@ function keyForUser(key) {
 }
 
 function getMore(ind) {		
-	if (DEBUG) console.log("toggleMore(key), key = " + key);			
+	if (DEBUG) console.log("getMore(ind), ind = " + ind);			
+	ind--;
 	if (ind > N_DEFS) return;
 	let key = CUR_WORD.replace(" ","-") + "_" + ind;	
 	fetch('backend/showMore.php?class=' + CLASS + '&word=' + key, {
