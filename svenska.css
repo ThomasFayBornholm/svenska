@@ -235,29 +235,6 @@ label {
 	font-size: 36px;
 }
 
-.progressContainer {
-	display: inline-block;
-	overflow: hidden;
-	width: 600px;
-	height: 24px;
-	border: 4px solid #333333;
-	border-radius: 99px;
-	margin-right: 16px;
-}
-
-.progressBar {
-	display: block;
-	height: 100%;
-	background-color: blue;
-	border-radius: 99x;
-}
-.progress {
-	-o-transition: .1s;
-	-moz-transition: .1s;
-	-webkit-transition: .1s;
-	transition: .1s;
-}
-
 .iDef {
 	width: 100%;
 	font-size: 24px;

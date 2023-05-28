@@ -111,7 +111,8 @@ let N_CUR=0;
 let N_LEMMAS = 0;
 let N_DEFS = 0; // Number of definitions for current word lemma
 
-let LAST_WORD="";
+let LAST_WORD=""; // Allow user to go back to previous word
+let LAST_DEF=1; // The viewed definition is also remembered when recalling the previous word
 let CUR_WORD="";
 let CUR_DEF = "";
 let CUR_DEF_ENUM = 1;
@@ -586,6 +587,7 @@ function scrollViewDown() {
 	if (DEBUG) console.log("scrollViewDown() begin");
 	changeInc(N_INC);
 	$('iDefDiv').css("display", "none");
+	
 	if (N_REGEX > 1) {
 		getWords();
 	} else {
@@ -836,7 +838,7 @@ function lookupWord(el,onlyLocal,inline) {
 	}
 }
 
-function displayDef(meta, def,word) {	
+function displayDef(meta, def,word) {		
 	if (DEBUG) console.log("displayDef(meta,def,word)");	
 	def = makeLinks(def);
 	let defRaw = def.split("<br>");	
@@ -889,6 +891,7 @@ function displayDef(meta, def,word) {
 	
 	
 	if (meta.length > 0) $('#iMeta').html(fmtMeta(meta));
+	if (CLASS === "fraser") $('#iMeta').html(fmtMeta(CUR_WORD));
 	$('#iParDef').html(outDef)
 	if (SHOW_HELP) {
 		// ToDo remove temp test
@@ -984,8 +987,7 @@ function addLinks(refClass,def) {
 	if (SHOW_HELP) beginSpan += " title='Navigate to \"_w_\"'";
 	beginSpan += ">"
 	spanTmp = beginSpan + "<b>_w_</b></span>";
-	for (line of defArr) {
-		
+	for (line of defArr) {		
 		if (line.indexOf(m) != -1) {
 			elArr = line.split(", ");
 			for (el of elArr) {
@@ -1694,7 +1696,7 @@ function setClass(c, seek = "") {
 
 function getLastWord() {
 	if (DEBUG) console.log("getLastWord()")	
-	setClass(LAST_CLASS);
+	setClass(LAST_CLASS);	
 	$('#iInput').val(LAST_WORD);
 	seekWordSingleClass(LAST_WORD);	
 }
@@ -2899,10 +2901,16 @@ function keyForUser(key) {
 }
 
 function getMore(ind) {		
+	if (CLASS === "fraser") return;
+	if (!isNumeric(ind)) {
+		console.log("getMore(ind), ind is NaN");
+		return;
+	}
+	
 	if (DEBUG) console.log("getMore(ind), ind = " + ind);			
 	ind--;
 	if (ind > N_DEFS) return;
-	let key = CUR_WORD.replace(" ","-") + "_" + ind;	
+	let key = CUR_WORD.replaceAll(" ","-") + "_" + ind;	
 	fetch('backend/showMore.php?class=' + CLASS + '&word=' + key, {
 		method: 'get',
 		mode: 'cors',
@@ -2943,7 +2951,15 @@ function getMore(ind) {
 			// Dynamise links
 			tmp = tmp.replaceAll("<l>","<span onclick=followLink(this) onmouseover=highlight(this,event)><b>");
 			tmp = tmp.replaceAll("</l>","</b></span>");
-			$('#iMoreTxt').html(tmp);									
+			$('#iMoreTxt').html(tmp);
+			let moreHeight = parseInt($('#iMoreTxt').css("height").replace("px",""));
+			MORE_LIM = 350; // If bigger than this then scrolling is required
+			if (moreHeight > MORE_LIM) {			
+				$('body').css("overflow-y", "scroll");										
+			} else {			
+				$('body').css("overflow-y", "hidden");
+			}
+												
 		}				
 	})
 	.catch(error => {
@@ -3370,7 +3386,7 @@ function shortenClass() {
 		res = "adv";
 	} else if (CLASS === "preposition") {
 		res = "prep";
-	} else if (CLASS === "pronom") {
+	} else if (CLASS === "pronomen") {
 		res = "pro";
 	}
 	return res;
@@ -3438,6 +3454,10 @@ function getDefInd(ind) {
 	displayDef("",out,CUR_WORD)
 	getMore(CUR_DEF);
 	return out;
+}
+
+function isNumeric(value) {
+    return /^-?\d+$/.test(value);
 }
 
 </script>
