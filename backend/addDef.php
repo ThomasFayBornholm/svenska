@@ -103,7 +103,9 @@
 	if (!file_exists($name)) fopen($name, "w");			
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$arr = json_decode($contents, true);
-	$arr[$word] = "2";
+	if (!array_key_exists($word, $arr)) {
+		$arr[$word] = "2";
+	}
 	file_put_contents($path . $name, json_encode($arr));	
 	
 	if ($class != "faser") {
