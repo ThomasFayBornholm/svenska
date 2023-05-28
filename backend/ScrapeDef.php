@@ -456,7 +456,7 @@
 		$out .= getGrammar($grammar);						
 		
 		// Nain definition content						
-		$defTxt = getClass($tmp, "def", true);												
+		$defTxt = getClass($tmp, "def", true);														
 		if ($defTxt) {
 			$defTxt = $defTxt[0];
 			$pattern = '/(_\d+&(?:amp;ref=lnr\d+)+)/';
@@ -559,6 +559,7 @@
 		}
 		return $out;
 	}
+	
 	function getMoreFields($raw, $pos1) {				
 		$out = "";
 		// End is the div close of "etymologiblock"		
@@ -569,7 +570,7 @@
 		$pos2 = strpos($raw, $end ,$pos2) + strlen($end);
 		// Work on single "lexem" block
 		$tmp = substr($raw,$pos1,$pos2-$pos1);						
-		
+		$idioms = getIdioms($tmp);
 		// First set of compound words.
 		$compound = getClass($tmp, "mxblocklx");		
 		
@@ -598,7 +599,11 @@
 		
 		$cyclic = getCyclicFields($tmp);
 		if ($cyclic) $out .= $cyclic;
-				
+		// Place idiom listing found earlier for the history meta data
+		foreach($idioms as $el) {
+			$out .= "<br> - <l>" . $el . "</l>";
+		}
+		if (count($idioms) > 0) $out .= "<br>";
 		$history = getClass($tmp, "etymologiblock");
 		
 		if ($history) {						
@@ -642,6 +647,18 @@
 		}
 		
 		return $out;
+	}
+	
+	function getIdioms($raw) {
+		$idioms = array();
+		$tmpArr = explode("\n",$raw);
+		foreach($tmpArr as $l) {
+			if (str_contains($l, "fras")) {			
+				$tmp = getClass($l, "fras",true);
+				array_push($idioms, str_replace("<\/span>","",$tmp[0]));
+			}
+		}		
+		return $idioms;
 	}
 	
 	function simpleConstruction($tmp) {
@@ -724,7 +741,7 @@
 				$grammar = getClass($tmp,"fkomblock", true);
 				$out .= strip($grammar,"(",") ");	
 				
-				$def = getClass($tmp,"def", true);
+				$def = getClass($tmp,"def", true);				
 				if ($def) {					
 					$out .= strip($def) . "<br>";
 				} else {
