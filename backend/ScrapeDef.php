@@ -135,7 +135,7 @@
 	
 	
 	if (!$foundMatch) {
-		echo json_encode("Failed to retrieve word class: " . $class);
+		echo json_encode("Failed to retrieve word:" . $word . "; class: " . $class);
 		return;	
 	}
 	
@@ -197,6 +197,7 @@
 	$out['meta'] .= getPronunciation($def);	
 	$out['def'] = getDef($def, $defLines);		
 	$out['more'] = getMore($def);
+	$out['key'] = $word;
 	echo json_encode($out);
 	
 	// Helper function to ease substring extraction
@@ -655,7 +656,7 @@
 		foreach($tmpArr as $l) {
 			if (str_contains($l, "fras")) {			
 				$tmp = getClass($l, "fras",true);
-				array_push($idioms, str_replace("<\/span>","",$tmp[0]));
+				if ($tmp) array_push($idioms, str_replace("<\/span>","",$tmp[0]));
 			}
 		}		
 		return $idioms;

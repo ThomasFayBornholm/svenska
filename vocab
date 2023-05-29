@@ -112,7 +112,7 @@ let N_LEMMAS = 0;
 let N_DEFS = 0; // Number of definitions for current word lemma
 
 let LAST_WORD=""; // Allow user to go back to previous word
-let LAST_DEF=1; // The viewed definition is also remembered when recalling the previous word
+let LAST_DEF_ENUM =1; // The viewed definition is also remembered when recalling the previous word
 let CUR_WORD="";
 let CUR_DEF = "";
 let CUR_DEF_ENUM = 1;
@@ -265,7 +265,7 @@ function putMoreMany(moreArr, cur) {
 	})
 }
 
-function addDef(meta, def, more) {
+function addDef(key, meta, def, more) {
 	if (DEBUG) console.log("addDef(meta,def,more)");
 	let moreArr = more.split("||");	
 	moreLen = moreArr.length;
@@ -274,7 +274,7 @@ function addDef(meta, def, more) {
 		putMoreMany(moreArr, 0);
 	}
 	//fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
-	fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS, {
+	fetch('backend/addDef.php?word=' + key + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -285,6 +285,7 @@ function addDef(meta, def, more) {
 		return response.json();
 	})
 	.then(json => {
+		if (CLASS === "fraser") $('#iInput').val(key);
 		setTimeout(updateDef(),2000);
 		setTimeout(getMore(1),2000);
 	})
@@ -885,10 +886,8 @@ function displayDef(meta, def,word) {
 	if (SHOW_HELP) {		
 		tmpSpan += " title='Right click to edit definition'" 
 	}
-	
-			
-	outDef = outDef.replace(CUR_DEF_ENUM + " ", CUR_DEF_ENUM + "/" + N_DEFS + " ");
-	
+		
+	if (CLASS != "all" && CLASS != "fraser") outDef = outDef.replace(CUR_DEF_ENUM + " ", CUR_DEF_ENUM + "/" + N_DEFS + " ");	
 	
 	if (meta.length > 0) $('#iMeta').html(fmtMeta(meta));
 	if (CLASS === "fraser") $('#iMeta').html(fmtMeta(CUR_WORD));
@@ -1288,9 +1287,9 @@ function handleNumericInput() {
 	getMore(CUR_DEF_ENUM);		
 }
 
-function seekWordSingleClass(word = CUR_WORD) {		
-	CUR_DEF_ENUM = 0; // CUR_DEF_ENUM only valid for current word.
-	if (DEBUG) console.log("seekWordSingleClass(word), word = " + word)		
+function seekWordSingleClass(word = CUR_WORD, last_enum = 0) {		
+	CUR_DEF_ENUM = last_enum; 
+	if (DEBUG) console.log("seekWordSingleClass(word, last_enum), word = " + word, + ", last_enum = " + last_enum)		
 	// Immediately play pronunciation if available
 	pronounce(word);
 	if (word.length > 0) {
@@ -1338,6 +1337,7 @@ function seekWordSingleClass(word = CUR_WORD) {
  */
 // Link is set if this seek is called from a clickable link
 function seekWord(word, link = false) {	
+	CUR_DEF_ENUM = 1;
 	/*if (word === CUR_WORD) {
 		$('#iInput').val("");
 		return;
@@ -1696,9 +1696,9 @@ function setClass(c, seek = "") {
 
 function getLastWord() {
 	if (DEBUG) console.log("getLastWord()")	
-	setClass(LAST_CLASS);	
+	setClass(LAST_CLASS);		
 	$('#iInput').val(LAST_WORD);
-	seekWordSingleClass(LAST_WORD);	
+	seekWordSingleClass(LAST_WORD, LAST_DEF_ENUM);	
 }
 
 function countDefs() {
@@ -2984,6 +2984,7 @@ function editMore(ev,key) {
 }
 
 function processKeyDown(ev) {
+		
 	if (DEBUG) console.log("processKeyDown(ev), ev.key = " + ev.key)	
 	
 	if (ev.key === "Escape") {
@@ -3034,6 +3035,7 @@ function processKeyDown(ev) {
 		ev.preventDefault();
 		getLastWord();	
 	}	
+	
 }
 
 function clearMore() {
@@ -3343,7 +3345,13 @@ function round(dec, places) {
 
 function fetchDef() {
 	if (DEBUG) console.log("fetchDef()");
-	fetch('backend/scrapeDef.php?word=' + CUR_WORD + '&class=' + CLASS, {
+	let backend = 'backend/scrapeDef.php?word=' + CUR_WORD + '&class=' + CLASS
+	if (CLASS === "fraser") {	
+		let query = $('#iInput').val();
+		query = query.replaceAll("­",""); // No invisible chars to user present in keys
+		backend = 'backend/scrapeIdiom.php?query=' + query
+	}
+	fetch(backend, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3354,7 +3362,7 @@ function fetchDef() {
 		return response.json();
 	})	
 	.then(json => {		
-		addDef(json['meta'],json['def'],json['more']);		
+		addDef(json['key'],json['meta'],json['def'],json['more']);		
 	})
 	.catch(error => {
 		console.log(error);
