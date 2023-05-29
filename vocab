@@ -41,9 +41,7 @@
 	<form class="centred" onsubmit="newInputWrapper(event)">		
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-	</form>
-	<p id="iCurWord" class="centred">CURRENT_WORD</p>
-	
+	</form>		
 </div>
 <div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()">
 	<p id="iWords" class="fmtWords">Test<br>Words</p>
@@ -112,7 +110,7 @@ let N_LEMMAS = 0;
 let N_DEFS = 0; // Number of definitions for current word lemma
 
 let LAST_WORD=""; // Allow user to go back to previous word
-let LAST_DEF_ENUM =1; // The viewed definition is also remembered when recalling the previous word
+let LAST_DEF_ENUM = 1; // The viewed definition is also remembered when recalling the previous word
 let CUR_WORD="";
 let CUR_DEF = "";
 let CUR_DEF_ENUM = 1;
@@ -173,10 +171,10 @@ function getInput() {
 }
 
 function setCUR_WORD(word) {
-	CUR_WORD = word;
-	// Don't think this feedback is useful
-	//$('#iCurWord').html("CURRENT_WORD: " + word);
-	$('#iCurWord').html("");
+	if (word != CUR_WORD) {
+		LAST_WORD = CUR_WORD;
+		CUR_WORD = word;			
+	}	
 	$('#iInput').val("");
 }
 
@@ -343,7 +341,6 @@ function putDef(def, score) {
 		*/
 		focusInput()
 	})
-	updateScore();
 	getDiff();
 }
 
@@ -423,8 +420,7 @@ function updateScore() {
 		})
 		.then(json => {			
 			TOTAL_SCORE = json["percent"];								
-			getDiff();
-			
+			getDiff();			
 		})
 		.catch(error => {
 			console.log(error);
@@ -488,11 +484,11 @@ function getWords(ind = INC) {
 		list = REGEX_WORDS[ind];	
 		N_FOUND = N_REGEX - ind;		
 		if (N_FOUND > N_INC) N_FOUND = N_INC;	
-		for (i = ind+1; i < N_FOUND + ind; i++) {
+		for (i = ind + 1; i < N_FOUND + ind; i++) {
 			list += "|" + REGEX_WORDS[i];
 		}
 		if (N_REGEX === 1) {
-				displayWords(list,0)
+			displayWords(list,0)
 		} else {
 			displayWords(list,-1)
 		}
@@ -526,11 +522,12 @@ function getWords(ind = INC) {
 	if (DEBUG) console.log("END getWords(ind); ind = " + ind + ", N_FOUND = " + N_FOUND);
 }
 
+// Create listing of words for display on left side of screen
 function displayWords(list,ind) {
 	if (DEBUG) console.log("displayWords(), list = " + list + ", ind = " + ind)
 	let out = ""
 	list = list.replaceAll("  "," ");
-	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list, {
+	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list + "&caller=displayWords", {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -569,12 +566,11 @@ function displayWords(list,ind) {
 		}
 		
 		showWords();				
-		countDefs();
 		
 		if (ind > -1) {
 			let el = document.getElementById("w" + ind);
 			if (el)  {
-				setCUR_WORD(el.innerText);
+				//setCUR_WORD(el.innerText);
 				lookupWord(el,false,true);
 			}
 		}				
@@ -770,8 +766,7 @@ function lookupWord(el,onlyLocal,inline) {
 				let keys = Object.keys(json);						
 				if (keys.length === 1 && keys[0] != CLASS) {			
 					// Go direct to class if no ambiguity in found word(s)
-					setClass(keys[0]);
-					seekWord(word);
+					setClass(keys[0],word);					
 				}
 				let def = "";
 				let delim ="";			
@@ -806,7 +801,7 @@ function lookupWord(el,onlyLocal,inline) {
 				let meta = json["meta"];
 				CUR_DEF = json["def"];
 				N_DEFS = nDefs();				
-				def = getDefInd(1);
+				def = getDefInd(CUR_DEF_ENUM);
 				LAST_DEF = CUR_DEF; // Is this cached for some reason, check
 				// Prefer local definition over 3rd party dictionary
 				if (def != "No definition found" && def != "Could not read json") {
@@ -1007,8 +1002,7 @@ function addLinks(refClass,def) {
 }
 function followLink(el) {
 	if (DEBUG) console.log("followLink");
-	LAST_CLASS = CLASS;
-	LAST_WORD = CUR_WORD;	
+	LAST_CLASS = CLASS;	
 	N_REGEX = 0;
 	REGEX_WORDS = [];
 	let word = el.innerText;
@@ -1287,15 +1281,16 @@ function handleNumericInput() {
 	getMore(CUR_DEF_ENUM);		
 }
 
-function seekWordSingleClass(word = CUR_WORD, last_enum = 0) {		
-	CUR_DEF_ENUM = last_enum; 
+// Called internally when word class is known in advance
+function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {		
+	LAST_DEF_ENUM = CUR_DEF_ENUM;
+	CUR_DEF_ENUM = last_enum; 	
 	if (DEBUG) console.log("seekWordSingleClass(word, last_enum), word = " + word, + ", last_enum = " + last_enum)		
 	// Immediately play pronunciation if available
 	pronounce(word);
 	if (word.length > 0) {
 		// Any user supplied break breaks are discarded.
-		word = word.replaceAll("­","");
-		LAST_WORD = CUR_WORD;
+		word = word.replaceAll("­","");		
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
 			mode: 'cors',
@@ -1317,9 +1312,10 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 0) {
 					INC = 0;
 					ind = json;
 				}
-				getWords(ind);
+				getWords(ind);		
+				getDefInd(last_enum);
 			} else {
-				noMatchSingleClass();
+				noMatchSingleClass(word);
 			}
 		})
 		.catch(error => {
@@ -1336,13 +1332,18 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 0) {
  4) Matches conjugation within any class (first found).
  */
 // Link is set if this seek is called from a clickable link
-function seekWord(word, link = false) {	
-	CUR_DEF_ENUM = 1;
+
+// Called by user, prefer current class but allow for secondary matching in other word classes
+// There is a recursion here somewhere, find it
+function seekWord(word, link = false) {		
+	if (DEBUG) console.log("seekWord(word, link = false), word = " + word + ", link = " + link);
+	LAST_DEF_ENUM = CUR_DEF_ENUM; // Don't think it is a problem to set this immediately. If no matches found then no harm done. It will be overwritten on next search			
+	LAST_CLASS = CLASS;
+	// Consider avoid search when we already have a match in the current word class
 	/*if (word === CUR_WORD) {
 		$('#iInput').val("");
 		return;
-	}*/
-	if (DEBUG) console.log("seekWord(word, link), word = " + word + ", link = " + link)	
+	}*/	
 	// Cleanup
 	$('#iAux').html("");	
 	$('#iMoreTxt').html("");
@@ -1444,7 +1445,6 @@ function seekWord(word, link = false) {
 			//LAST_WORD = CUR_WORD;
 		}
 		setCUR_WORD(word);
-		if (DEBUG) console.log("seekWord(): LAST_WORD = " + LAST_WORD + ", CUR_WORD = " + CUR_WORD);
 		// Special case of prefixes and suffices
 		if (word.substr(word.length-1) === "-") {
 			word = word.substr(0,word.length-1);
@@ -1518,8 +1518,7 @@ function seekWord(word, link = false) {
 									let keys = Object.keys(json);	
 									if (keys.length === 1 && keys[0] != CLASS) {			
 										// Go direct to class if no ambiguity in found word(s)
-										setClass(keys[0]);
-										seekWord(word);
+										setClass(keys[0],word);
 									}
 									let def = "";
 									let delim ="";									
@@ -1580,8 +1579,9 @@ function noMatch(word) {
 	$('#iParDef').html("No match in any word class: <b>" + word + "</b>");	
 	$('#iInput').val(word);
 }
+
 function noMatchSingleClass(word) {
-	$('#iParDef').html("No match: " + CLASS);	
+	$('#iParDef').html("No match: " + word + " in class: " + CLASS);	
 	$('#iInput').val(word);
 }
 
@@ -1668,8 +1668,9 @@ function setClass(c, seek = "") {
 	if (c === "all") clearRegexMode();	
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	$('#iAux').html("");	
-	LAST_CLASS = CLASS;
-	wordCount();
+	$('#iMeta').html("");	
+	
+	//wordCount(); // Think it is better to do word count only when there is an addition to the listing. This line was a previous hack.
 	if (c != CLASS) {		
 		REGEX_WORDS = [];
 		N_REGEX = 0;
@@ -1685,20 +1686,28 @@ function setClass(c, seek = "") {
 		INC = 0;
 		SCROLL_INC=-1;
 		setN_CUR();	
-		getWords(-1);
 		updateScore();
+		
 	} else {
 		getWords();
 	}
-	if (seek.length > 0) seekWordSingleClass(seek);
+	if (seek.length > 0) {
+		seekWordSingleClass(seek, LAST_DEF_ENUM);
+	}
 	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);	
 }
 
 function getLastWord() {
 	if (DEBUG) console.log("getLastWord()")	
-	setClass(LAST_CLASS);		
-	$('#iInput').val(LAST_WORD);
-	seekWordSingleClass(LAST_WORD, LAST_DEF_ENUM);	
+		
+	//console.log(LAST_DEF_ENUM)
+		
+	if (LAST_WORD.length > 0 && LAST_CLASS != "all") {		
+		let tmp = CLASS;
+		setClass(LAST_CLASS,LAST_WORD);		
+		LAST_CLASS = tmp;
+		$('#iInput').val(LAST_WORD);		
+	}
 }
 
 function countDefs() {
@@ -2634,6 +2643,7 @@ function withParticle(s) {
 	return s;
 }
 
+// Toggle visibility of word list on right hand side of screen
 function showWords() {
 	if (DEBUG) console.log("showWords");
 	if ($('#iWords').css("visibility") == "hidden") {
@@ -3134,13 +3144,6 @@ function defEntry(ev) {
 		$('#iDefDiv').css("display","none");
 	}
 }
-function showLast(caller) {
-	console.log("*** Caller = " + caller + "***")
-	console.log("LAST_CLASS = " + LAST_CLASS)
-	console.log("LAST_WORD = " + LAST_WORD)
-	console.log("CLASS = " + CLASS)
-	console.log("CUR_WORD = " + CUR_WORD)
-}
 
 function showCachedDef(el) {
 	if (DEBUG) console.log("showCachedDef(el), el = " + el);
@@ -3187,7 +3190,7 @@ function randomWord() {
 	.then(json => {
 		INC = json["ind"]-4;
 		setCUR_WORD(json["word"]);		
-		getWords(3);
+		getWords(3);		
 	})
 	.catch(error => {
 		console.log(error);
@@ -3444,8 +3447,8 @@ function nDefs() {
 }
 
 // Pick out a single definition based on index
-function getDefInd(ind) {
-	if (DEBUG) console.log("getDefInd(ind)")	
+function getDefInd(ind) {		
+	if (DEBUG) console.log("getDefInd(ind), ind = " + ind)	
 	let out = "";
 	regex = /^\d+/;
 	let tmpArr = CUR_DEF.split("<br>");
@@ -3459,8 +3462,9 @@ function getDefInd(ind) {
 			del = "<br>";
 		}
 	}		
+	
 	displayDef("",out,CUR_WORD)
-	getMore(CUR_DEF);
+	getMore(ind);
 	return out;
 }
 
