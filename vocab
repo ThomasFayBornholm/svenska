@@ -632,12 +632,14 @@ function scrollWords(e) {
 }
 
 function scrollDown() {
+	CUR_DEF_ENUM = 1;
 	if (SCROLL_INC < N_FOUND-1) {
 		SCROLL_INC++;
 	}
 	if (DEBUG) console.log("scrollDown(); SCROLL_INC = " + SCROLL_INC);
 }
 function scrollUp() {
+	CUR_DEF_ENUM = 1;
 	if (SCROLL_INC > 0) {
 		SCROLL_INC--;
 	} else if (SCROLL_INC == -1) {
