@@ -1061,7 +1061,9 @@ function getCompDef(meta, def) {
 					if (i != 0) del = "<br>"
 					txt = txt + del + out[i];
 				}
-				$('#iParDef').html(fmtMeta(meta) + txt);
+				$('#iMeta').html(fmtMeta(meta));
+				$('#iParDef').html(txt);
+				
 			}
 		})
 		.catch(error => {
@@ -1335,9 +1337,10 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 
 // Called by user, prefer current class but allow for secondary matching in other word classes
 // There is a recursion here somewhere, find it
-function seekWord(word, link = false) {		
+function seekWord(word, link = false) {			
 	if (DEBUG) console.log("seekWord(word, link = false), word = " + word + ", link = " + link);
 	LAST_DEF_ENUM = CUR_DEF_ENUM; // Don't think it is a problem to set this immediately. If no matches found then no harm done. It will be overwritten on next search			
+	CUR_DEF_ENUM = 1; // Always show definition #1 for a newly found word
 	LAST_CLASS = CLASS;
 	// Consider avoid search when we already have a match in the current word class
 	/*if (word === CUR_WORD) {
@@ -1577,10 +1580,12 @@ function seekWord(word, link = false) {
 
 function noMatch(word) {
 	$('#iParDef').html("No match in any word class: <b>" + word + "</b>");	
+	$('#iMeta').html("");	
 	$('#iInput').val(word);
 }
 
 function noMatchSingleClass(word) {
+	$('#iMeta').html("");	
 	$('#iParDef').html("No match: " + word + " in class: " + CLASS);	
 	$('#iInput').val(word);
 }
@@ -1706,7 +1711,6 @@ function getLastWord() {
 		let tmp = CLASS;
 		setClass(LAST_CLASS,LAST_WORD);		
 		LAST_CLASS = tmp;
-		$('#iInput').val(LAST_WORD);		
 	}
 }
 
@@ -2412,7 +2416,7 @@ function preProc(def) {
 			delDef = "\n";			
 		} else {			
 			if (cur.length != 0) {
-				if (cur.slice(0,6) === "belagt") cur = "HISTORIK<br>" + cur
+				if (cur.slice(0,6) === "belagt") cur = "HISTORIK:<br>" + cur
 				tmpMore += del + cur;				
 				del ="<br>"
 			}
