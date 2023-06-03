@@ -237,6 +237,7 @@ amma
 ammoniak
 ammoniumklorid
 ammunition
+amnesi
 amnesti
 amning
 amorbåge
@@ -735,6 +736,7 @@ augur
 augusti
 auktion
 auktionist
+auktionsförrättare
 auktionsutropare
 auktor
 auktorisation
@@ -1365,7 +1367,6 @@ bergsman
 bergspredikan
 bergsprängare
 bergsrygg
-bergstopp
 bergsyra
 bergtall
 bergtroll
@@ -1629,6 +1630,7 @@ björnram
 björnskinnsmössa
 björntjänst
 björntråd
+black
 blackjack
 bladselleri
 bladstekel
@@ -3395,6 +3397,7 @@ ficklampa
 fickpengar
 fickräknare
 fiction
+fideikommiss
 fiende
 fientlighet
 figur
@@ -3436,6 +3439,7 @@ fingerspets
 fingerspetskänsla
 fingertopp
 fingertoppskänsla
+fingervante
 fingervisning
 fink
 finlandssvensk
@@ -3460,6 +3464,7 @@ fiskegräns
 fiskehamn
 fiskerättighet
 fiskezon
+fiskfärs
 fiskhamn
 fiskhåv
 fiskleverolja
@@ -3921,6 +3926,7 @@ färg
 färg-tv
 färgfilm
 färghållning
+färgklick
 färgpenna
 färgprakt
 färgsättning
@@ -4135,6 +4141,7 @@ förromantik
 förruttnelse
 förrädare
 förrätt
+förrättare
 förrättning
 förrättningsman
 försakelse
@@ -4351,6 +4358,7 @@ galeas
 galenpanna
 galenskap
 galge
+galjon
 gallblåsa
 gallerist
 gallfeber
@@ -4443,6 +4451,7 @@ general
 generalbas
 generaldirektör
 generalförsamling
+generalguvernör
 generalisering
 generalist
 generalkonsul
@@ -4677,6 +4686,7 @@ gravlykta
 gravskrift
 gravsten
 gravsänka
+gravurna
 gravvård
 gravyr
 gravöppning
@@ -5083,6 +5093,7 @@ havsabborre
 havsgräns
 havshorisont
 havskatt
+havskräfta
 havslax
 havstrut
 havstulpan
@@ -5266,11 +5277,13 @@ hov
 hovdam
 hovleverantör
 hovmästare
+hovnarr
 hovrätt
 hud
 huggorm
 huldra
 huligan
+huliganism
 hum
 humanekologi
 humanist
@@ -5341,6 +5354,7 @@ hygien
 hylla
 hyllning
 hylsa
+hymen
 hymn
 hynda
 hyperbol
@@ -5752,6 +5766,7 @@ ingefära
 ingenjör
 ingenjörskonst
 ingrediens
+ingress
 ingång
 inhalation
 inhamn
@@ -5930,6 +5945,7 @@ introspektion
 inträdesbiljett
 inträngling
 inträning
+intuition
 intäkt
 inuit
 invandrare
@@ -6190,6 +6206,7 @@ kaffesump
 kaffetant
 kaffetår
 kaffeved
+kaftan
 kagge
 kaj
 kajak
@@ -6402,6 +6419,7 @@ kedja
 kedjekrans
 kedjereaktion
 kejsare
+kejsarhummer
 kejsarkrona
 kejsarpingvin
 kejsarörn
@@ -6435,6 +6453,7 @@ kines
 kinesiska
 kinetik
 kiosk
+kirskål
 kirurg
 kirurgi
 kis
@@ -6780,6 +6799,7 @@ konkursbevakning
 konkursbo
 konkursförvaltare
 konnotation
+konnässans
 konnässör
 konsekvens
 konselj
@@ -7080,6 +7100,7 @@ kryddnejlika
 kryddsalt
 kryddträdgård
 kryddväxt
+krympmån
 kryptogam
 kryptonit
 kryss
@@ -7356,10 +7377,12 @@ körskola
 körtel
 köttbulle
 köttfärs
+köttfärssås
 köttgryta
 köttkvarn
 köttsaft
 labb
+labb  2
 laborant
 laboration
 lack
@@ -7505,6 +7528,7 @@ leveranstid
 leverantör
 levercirros
 leverpastej
+levitation
 levnad
 levnadskonst
 levnadskostnad
@@ -7697,6 +7721,7 @@ luftvägsinfektion
 lukt
 luktsalt
 lumbago
+lumbalpunktion
 luminans
 luminiscens
 lunch
@@ -7885,6 +7910,7 @@ lödkolv
 lödning
 lögn
 lögnare
+lögndetektor
 löjlighet
 löjtnant
 lök
@@ -7982,6 +8008,7 @@ mandarin
 mandarin-2
 mandatperiod
 mandel
+mandelpotatis
 mandolin
 manege
 manet
@@ -8104,6 +8131,7 @@ matlagning
 matlust
 matmor
 matolja
+matpotatis
 matris
 matros
 maträtt
@@ -8334,6 +8362,7 @@ mitos
 mitt
 mittbena
 mittenväljare
+mittfältare
 mittlinje
 mittpunkt
 mix
@@ -8574,6 +8603,7 @@ mängdlära
 människa
 människoande
 människoapa
+människohamn
 människospillra
 människosyn
 människoätare
@@ -8956,6 +8986,7 @@ nål
 nåldyna
 nåt
 nöd
+nödhamn
 nödhjälp
 nödlösning
 nödsignal
@@ -9294,6 +9325,7 @@ pappenheimare
 papper
 pappersbok
 pappersexercis
+pappershandduk
 pappersklämma
 papperskniv
 papperskorg
@@ -9355,6 +9387,8 @@ partisan
 partner
 partsinlaga
 parveny
+passad
+passadvind
 passage
 passagerare
 passare
@@ -9650,6 +9684,7 @@ polisbil
 polisbricka
 polisdistrikt
 polish
+poliskommissarie
 polismakt
 polisman
 polisstat
@@ -9721,6 +9756,7 @@ postkontor
 posör
 potatis
 potatissallad
+potatisskalare
 potens
 potentat
 potential
@@ -9822,6 +9858,7 @@ profilbild
 profoss
 prognos
 programförklaring
+programkod
 programledare
 programmering
 programvara
@@ -9914,6 +9951,7 @@ pungbjörn
 pungdjävul
 punkt
 punktering
+punktion
 puns
 punschrulle
 pupill
@@ -9999,6 +10037,7 @@ ragata
 ragg
 raggarbil
 raggare
+raggsocka
 ragnarök
 raka
 rakapparat
@@ -10172,6 +10211,7 @@ resenär
 reserv
 reservation
 reservdel
+reservfond
 reservgenerator
 reservoar
 reservoarpenna
@@ -10324,6 +10364,7 @@ rom
 roman
 romansallad
 romantik
+romare
 rond
 rondell
 ros
@@ -10503,6 +10544,7 @@ rödbeta
 rödbok
 rödförskjutning
 rödgran
+rödkål
 rödlista
 rödmyra
 rödpenna
@@ -10580,6 +10622,7 @@ saligprisning
 saliv
 salivsug
 sallad
+salladskål
 sallat
 salmiak
 saloondörr
@@ -11587,6 +11630,7 @@ snåljåp
 snålvarg
 snö
 snöboll
+snöbollseffekt
 snödriva
 snödroppe
 snögubbe
@@ -13160,6 +13204,7 @@ tråd
 trådbuss
 trådrulle
 tråkmåns
+tråkning
 trål
 trålare
 trångsyn
@@ -13191,6 +13236,7 @@ tulpan
 tum
 tumlare
 tumme
+tumvante
 tumör
 tunga
 tungkyss
@@ -13885,6 +13931,7 @@ valrörelse
 vals
 valsituation
 valsverk
+valurna
 valuta
 valutakurs
 valvaka
@@ -14015,6 +14062,7 @@ vendetta
 veneration
 ventil
 veranda
+verbalinspiration
 verifikation
 verkan
 verkanseld
@@ -14181,6 +14229,7 @@ vitalkapacitet
 vitbeta
 vitbok
 vitbok-2
+vitkål
 vitling
 vitlök
 vitnos
@@ -14295,6 +14344,7 @@ värld
 världsalltet
 världsatlas
 världsbild
+världsbrand
 världsdel
 världsetta
 världsmakt
@@ -14744,6 +14794,7 @@ zygot
 ångbildning
 ångbildningsvärme
 ångbåt
+ångbåtsbrygga
 ångcentral
 ångdrift
 ånger
