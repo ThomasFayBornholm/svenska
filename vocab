@@ -111,6 +111,7 @@ let N_DEFS = 0; // Number of definitions for current word lemma
 
 let LAST_WORD=""; // Allow user to go back to previous word
 let LAST_DEF_ENUM = 1; // The viewed definition is also remembered when recalling the previous word
+let LAST_SCROLL_Y = 0;
 let CUR_WORD="";
 let CUR_DEF = "";
 let CUR_DEF_ENUM = 1;
@@ -375,7 +376,8 @@ function putFrasDef(score) {
 	})
 	$('#iDefText').val("");
 	setTimeout(seekWordSingleClass,500);		
-	
+	wordCount();
+	updateScore();
 }
 
 
@@ -397,7 +399,7 @@ function updateScore() {
 		if (N_TOT > 0) {
 			score = Math.round(json["total"]/(N_CUR*2) * 1000)/10;
 		}
-		// Score for all classes is already available
+		// Score for all classes is already available for "all" class
 		if (CLASS != "all") {			
 			$('#iScore').html("{" + score + "%");
 			$('#iScore').html($('#iScore').html() + " <span class='redWord' onclick=seekWord('redwords') oncontextmenu='nextWord(this,event)'>" + json["redCount"] + "</span>")
@@ -1004,7 +1006,10 @@ function addLinks(refClass,def) {
 }
 function followLink(el) {
 	if (DEBUG) console.log("followLink");
+	LAST_SCROLL_Y = window.pageYOffset;	
 	LAST_CLASS = CLASS;	
+	LAST_DEF_ENUM = CUR_DEF_ENUM;
+	console.log(LAST_DEF_ENUM);
 	N_REGEX = 0;
 	REGEX_WORDS = [];
 	let word = el.innerText;
@@ -1020,6 +1025,7 @@ function followLink(el) {
 	if (DEBUG) console.log("followLink(" + word + ")");	
 	let oldINC = INC;
 	seekWord(word, true);
+	updateScore();
 }
 
 function getCompDef(meta, def) {
@@ -1339,7 +1345,7 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 
 // Called by user, prefer current class but allow for secondary matching in other word classes
 // There is a recursion here somewhere, find it
-function seekWord(word, link = false) {			
+function seekWord(word, link = false, lastEnum = false) {			
 	if (DEBUG) console.log("seekWord(word, link = false), word = " + word + ", link = " + link);
 	LAST_DEF_ENUM = CUR_DEF_ENUM; // Don't think it is a problem to set this immediately. If no matches found then no harm done. It will be overwritten on next search			
 	CUR_DEF_ENUM = 1; // Always show definition #1 for a newly found word
@@ -1524,6 +1530,7 @@ function seekWord(word, link = false) {
 									if (keys.length === 1 && keys[0] != CLASS) {			
 										// Go direct to class if no ambiguity in found word(s)
 										setClass(keys[0],word);
+										console.log("test")
 									}
 									let def = "";
 									let delim ="";									
@@ -1706,9 +1713,7 @@ function setClass(c, seek = "") {
 
 function getLastWord() {
 	if (DEBUG) console.log("getLastWord()")	
-		
-	//console.log(LAST_DEF_ENUM)
-		
+	console.log(LAST_DEF_ENUM)
 	if (LAST_WORD.length > 0 && LAST_CLASS != "all") {		
 		let tmp = CLASS;
 		setClass(LAST_CLASS,LAST_WORD);		
@@ -2971,7 +2976,8 @@ function getMore(ind) {
 			let moreHeight = parseInt($('#iMoreTxt').css("height").replace("px",""));
 			MORE_LIM = 350; // If bigger than this then scrolling is required
 			if (moreHeight > MORE_LIM) {			
-				$('body').css("overflow-y", "scroll");										
+				$('body').css("overflow-y", "scroll");														
+				window.scrollTo(0,LAST_SCROLL_Y);
 			} else {			
 				$('body').css("overflow-y", "hidden");
 			}
@@ -3371,12 +3377,29 @@ function fetchDef() {
 		return response.json();
 	})	
 	.then(json => {		
-		addDef(json['key'],json['meta'],json['def'],json['more']);		
+		if (CLASS === "fraser") {
+			let tmp ="";
+			let keys = Object.keys(json);
+			del = "";
+			for(let i = 0; i < keys.length; i++) {
+				tmp += del + keys[i] + "%% " + json[keys[i]];
+				del = "\n";
+			}			
+			$('#iDefDiv').css("display", "block");
+			$('#iPutDef').css("display", "block");
+			$('#iDivMore').css("display", "none");
+			focusDef();
+			$('#iDefText').val(tmp);					
+			
+		} else {
+			addDef(json['key'],json['meta'],json['def'],json['more']);		
+		}
 	})
 	.catch(error => {
 		console.log(error);
 	})
 }
+
 function getRaw() {
 	if (DEBUG) console.log("getRaw()")
 	window.open("https://www.svenska.se/tri/f_so.php?sok=" + CUR_WORD)

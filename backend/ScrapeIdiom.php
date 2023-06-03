@@ -1,6 +1,6 @@
 <?php
 	function fullClassName($short) {
-		$full = "";
+		$full = $short;
 		switch ($short) {
 			case "en":
 				$full = "substantiv_en";
@@ -10,6 +10,9 @@
 				break;
 			case "adj":
 				$full = "adjekttiv";
+				break;
+			case "pro":
+				$full = "pronomen";
 				break;
 		}
 		return $full;
@@ -24,14 +27,19 @@
 	$class = fullClassName($shortClass);		
 	
 	$fras = $tmp[0] . $rest;
-	$regex = '/' . $fras .'/';
+	$regex = $fras;
+	$regex = str_replace("(","\(",$regex);
+	$regex = str_replace(")","\)",$regex);
+	$regex = str_replace("/","\/", $fras);
+	$regex = '/' . $fras . '/';
+	$regex = '/vara \(stadd\) vid kassa/';
 	
-
 	if ($fras[strlen($fras)-1] === " ") $fras = substr($fras,0,strlen($fras)-1);
 		
 	$root = explode(" ",$tmp[0]);
-	$root = $root[count($root)-1];		
-		
+	$root = $root[count($root)-1];
+	$root = str_replace("-"," ",$root);
+	
 	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';		
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';
 	$url = str_replace(" ", "%20", $urlBase . $root);	
@@ -86,58 +94,73 @@
 				curl_close($ch);			
 			}
 		}
-	}
-	
-	
+	}		
 	
 	if (strlen($def) === 0) {
 		debug("Failed to retrieve content from Svenska Ordlista server #2.");
 		exit();
 	}
 	
-	$tmp = getClass($def,"fras");	
+	$tmp = getClass($def,"fras");				
+	
 	$fullDef = "";
 	if (!$tmp) {
 		debug("Failed to find any idioms in root word: " . $root);
 		exit();
 	}
 	
-	$def = "";
-	$deft = "";
-	$ex = "";
-	$foundIdiom = false;
-	foreach($tmp as $el) {		
-		// User should not have to deal with non-breaking spaces in word keys	
-		if (preg_match($regex,str_replace("­","",$el))) {			
-			// Found the relevant phrase, extract info
-			$m = getClass($el,"idiomdef",true);
-			if ($m) $def = str_replace("</span>","",$m[0]);
-			$m = getClass($el,"idiomdeft",true);
-			if ($m) $deft = str_replace("</span>","",$m[0]);
-			$m = getClass($el, "idiomex", true);
-			if ($m) $ex = str_replace("</span>","",$m[0]);
-			
-			if (strlen($def) > 0) $fullDef = "● " . $def;
-			if (strlen($deft) > 0) $fullDef .= "{" . $deft . "}";
-			if (strlen($ex) > 0) $fullDef .= ": " . $ex;
-			$foundIdiom = true;
-			break;
+	// Check existing idioms and mark any that are not already listed
+	$name = "fraser-only";	
+	$contents = file_get_contents($name, 'UTF-8');	
+	$elements= preg_split("/\r\n|\r|\n/", $contents);
+	
+	foreach($tmp as $el) {	
+		$ref = "";
+		$def = "";
+		$deft = "";
+		$ex = "";
+		$fullDef = "";
+		// User should not have to deal with non-breaking spaces in word keys			
+		
+		$el = str_replace("­","",$el);
+		
+		// Found the relevant phrase, extract info
+		$arr = explode("\n",$el);
+		foreach($arr as $l) {
+			if (str_contains($l,"hvtag")) {
+				$pos1 = strpos($l,">") + 1;				
+				$pos2 = strpos($l,"</a>",$pos1);				
+				$ref = substr($l, $pos1, $pos2-$pos1);
+			}
 		}
+		
+		$m = getClass($el,"idiomdef",true);
+		if ($m) $def = str_replace("</span>","",$m[0]);
+		$m = getClass($el,"idiomdeft",true);
+		if ($m) $deft = str_replace("</span>","",$m[0]);
+		$m = getClass($el, "idiomex", true);
+		if ($m) $ex = str_replace("</span>","",$m[0]);
+		
+		if (strlen($ref) > 0) $fullDef .= "SE " . $ref;
+		if (strlen($def) > 0) $fullDef .= "● " . $def;
+		if (strlen($deft) > 0) $fullDef .= "{" . $deft . "}";
+		if (strlen($ex) > 0) $fullDef .= ": " . $ex;
+		$end = strpos($el,"</span>");
+		$key = substr($el,0,$end);
+		$key = str_replace("\u00a","", $key); // No invisible characters to user in keys
+		foreach($elements as $f) {							
+			if ($f === $key) {				
+				$key = "***" . $key;
+				break;
+			}
+		}					
+		$list[$key] = $fullDef;
 	}
+		
+	echo json_encode($list);
 	
-	if (!$foundIdiom) {
-		debug("Could not find idiom: '" . $fras . "' for root " . $root);		
-		exit();
-	}
-	
-	$out["def"] = $fullDef;
-	$out["more"] = ""; // Always empty for idioms
-	$out["meta"] = ""; // Always empty for idioms
-	$fras = str_replace("\u00a","", $fras); // No invisible characters to user in keys
-	$out["key"] = $fras;
-	echo json_encode($out);
-	
-	function getClass($def,$find,$isSpan=false) {		
+	function getClass($def,$find,$isSpan=false) {	
+				
 		$found = array();
 		if ($isSpan) {
 			$end = "</span>";
@@ -148,6 +171,7 @@
 		$len = strlen($find);
 		$lenEnd = strlen($end);		
 		$pos1 = strpos($def, $find);				
+		
 		if ($pos1 || $pos1 === 0) {
 			$pos2 = strpos($def, $end, $pos1);
 			if ($pos2) {
@@ -157,15 +181,16 @@
 				$lenFound = $pos2 - $start;			
 				if ($len > 3) {						
 					array_push($found, substr($def, $start, $lenFound));
-				}
-				
+				}				
 				while ($pos1 >= 0) {									
+					
 					// Advance to find any remaining matches
-					$pos1 = strpos($def, $find, $pos1 + 1);
+					$pos1 = strpos($def, $find, $pos1 + 1);										
 					if (!$pos1) break;
-					$pos2 = strpos($def, $end, $pos2 + 1);						
+					$pos2 = strpos($def, $end, $pos1 + 1);						
 					$start = $pos1 + $len;
 					$lenFound = $pos2 - $start;
+				
 					if ($lenFound > 3) {						
 						array_push($found, substr($def, $start, $lenFound));				
 					}					
@@ -188,7 +213,7 @@
 				break;
 			case "adv.":
 				$long = "adverb";
-				break;
+				break;					
 		}
 		return $long;
 	}
