@@ -1529,8 +1529,7 @@ function seekWord(word, link = false, lastEnum = false) {
 									let keys = Object.keys(json);	
 									if (keys.length === 1 && keys[0] != CLASS) {			
 										// Go direct to class if no ambiguity in found word(s)
-										setClass(keys[0],word);
-										console.log("test")
+										setClass(keys[0],word);										
 									}
 									let def = "";
 									let delim ="";									
@@ -3477,6 +3476,7 @@ function nDefs() {
 
 // Pick out a single definition based on index
 function getDefInd(ind) {		
+	if (CLASS === "fraser") return CUR_DEF;
 	if (DEBUG) console.log("getDefInd(ind), ind = " + ind)	
 	let out = "";
 	regex = /^\d+/;
