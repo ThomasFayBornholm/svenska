@@ -57,6 +57,8 @@ A-språk
 A-vitamin
 AP-fond
 B-aktie
+B-film
+B-lag
 B-nivå
 C-nivå
 C-språk
@@ -86,7 +88,9 @@ T-sprit
 U
 U-rör
 Waldorfpedagogik
+a
 a cappella
+a och o
 a posteriori
 a priori
 a vista
@@ -1238,7 +1242,9 @@ avvikelse
 avvinna
 avvisa
 avvisande
+avväg
 avväga
+avvägning
 avvända
 avvänja
 avväpna
@@ -1250,10 +1256,12 @@ ax-2
 axelbred
 axeln Rom–Berlin
 axelrem
+axill
 axiomatisera
 axla
 axla/ta upp någons (fallna) mantel
 azurblå
+b
 babbla
 babe
 babord
@@ -2871,7 +2879,9 @@ bösta
 böta
 bötesstraff
 bötfälla
+c
 caesarsallad
+café
 camber
 campa
 canasta
@@ -3045,6 +3055,7 @@ cymbal
 cypress
 cysta
 cystisk
+d
 dadaism
 dadaist
 dadaistisk
@@ -3903,6 +3914,7 @@ dödsfara
 dödsförakt
 dödshjälp
 dödskul
+dödskyss
 dödsolycka
 dödssjuk
 dödsstraff
@@ -3927,6 +3939,7 @@ dörrspegel
 döskalle
 döv
 döva
+e
 e-brev
 e-recept
 ebb
@@ -4416,6 +4429,7 @@ extrakt
 extrapolera
 extravagans
 extrem
+f
 f-klav
 fabricera
 fabrik
@@ -6022,6 +6036,8 @@ förskräckelse
 förskräcklig
 förskräckt
 förskylla
+förskärargaffel
+förskärarkniv
 försköna
 förskönande omskrivning
 förslag
@@ -6048,6 +6064,7 @@ försona
 försona sig
 försonas
 försova sig
+förspel
 förspilla
 förspänd betong
 förspänning
@@ -6256,6 +6273,7 @@ förutsätta
 förvald
 förvalta
 förvalta sitt pund
+förvaltare
 förvaltning
 förvaltningsdomstol
 förvaltningsutskott
@@ -6329,6 +6347,7 @@ föröka sig som kaniner
 föröva
 förövning
 fösa
+g
 g-klav
 gadd
 gadda ihop sig
@@ -7215,6 +7234,7 @@ gördel
 göromål
 göt
 göt-2
+h
 ha
 ha (det goda) med sig att
 ha både hängslen och livrem
@@ -7419,6 +7439,7 @@ hantera
 hantering
 hantlangare
 haploid
+har man sagt a får man också säga b
 hardjur
 hardtop
 hare
@@ -7471,6 +7492,7 @@ havslax
 havstrut
 havsutsikt
 havsörn
+he-man
 hed
 heder
 hederlig
@@ -8214,6 +8236,7 @@ höstvete
 hötapp
 hötta
 hövas
+i
 i (rödaste) rappet
 i akt och mening
 i allt väsentligt
@@ -8932,6 +8955,7 @@ itu
 ituta
 ivra
 iväg
+j
 jacka
 jackett
 jackpot
@@ -9012,6 +9036,7 @@ jovialisk
 ju fler kockar desto sämre soppa
 jubelidiot
 jubla
+judaskyss
 jude
 judendom
 judo
@@ -9090,6 +9115,7 @@ jättelik
 jäva
 jävig
 jönsig
+k
 kabaré
 kabelbrunn
 kabeljo
@@ -9245,6 +9271,7 @@ karikatyr
 karisma
 karismatisk
 karl
+karlakarl
 karlatag
 karlslok
 karltokig
@@ -10228,7 +10255,9 @@ kris-2
 krispaket
 kristallisera
 kristallisera sig
+kristen
 kristendom
+kristlig
 kristna
 krita
 kriterium
@@ -10701,6 +10730,7 @@ köttgryta
 köttkvarn
 köttsaft
 köttsår
+l
 labb
 labb  2
 labil
@@ -11603,6 +11633,7 @@ lövskog
 lövträd
 lövtäkt
 lövverk
+m
 machete
 mack
 macka
@@ -12584,6 +12615,7 @@ möta sitt Waterloo
 mötas
 möte
 mötesordförande
+n
 n-genus
 nachspiel
 nacka
@@ -13041,6 +13073,7 @@ nötknäckare
 nötkreatur
 nötkärna
 nötkött
+o
 oaktsam
 oangenäm
 oansenlig
@@ -13714,6 +13747,7 @@ oöverträffad
 oöverträfflig
 oövertänkt
 oövervinnelig
+p
 p-piller
 pacificera
 pacifism
@@ -14312,6 +14346,7 @@ preferensaktie
 preferera
 prefix
 preliminär
+preludium
 premie
 premiss
 premium
@@ -14670,8 +14705,10 @@ pöl
 pösa
 pösig
 pösmunk
+q
 quiz
 quizza
+r
 rabatt
 rabattkort
 rabattkupong
@@ -15430,6 +15467,7 @@ rösträtt
 röta
 rötslam
 röva
+s
 sabba
 sabel
 sabotage
@@ -18490,6 +18528,7 @@ söndring
 sörja
 sörlänning
 sötsak
+t
 t-genus
 ta
 ta Gud i hågen
@@ -19778,6 +19817,7 @@ törne
 törstig
 tös
 töväder
+u
 udd
 udda
 uddaplagg
@@ -20625,6 +20665,7 @@ utöka
 utöva
 utövare
 uv
+v
 vabba
 vacker
 vackla
@@ -21587,6 +21628,7 @@ våtvärmande/våtvarmt omslag
 vörda
 vördnad
 vördnadsvärd
+w
 wakeboard
 walkie-talkie
 watt
@@ -21597,8 +21639,10 @@ wienerschnitzel
 wienklassicism
 workshop
 wrestling
+x
 x antal
 x-krok
+y
 yawl
 yla
 yla med vargarna
@@ -21658,6 +21702,7 @@ yttre
 ytvatten
 ytvidd
 yxa
+z
 zink
 zon
 zoomobjektiv
