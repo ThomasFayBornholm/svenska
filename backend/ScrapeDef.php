@@ -100,7 +100,7 @@
 	$foundMatch = false;
 	$pos1 = strpos($def, $find);
 	
-	if ($pos1 || $pos1 === 0) {
+	if ($pos1 || $pos1 === 0) {		
 		$pos2 = strpos($def, "</div>",$pos1);	
 		if ($pos2) {			
 			$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));								
@@ -126,6 +126,7 @@
 					$find = 'class="orto">';					
 					if ($pos1) {
 						$foundMatch = true;
+						$pos1 -= 550; // Ugly hack to include conjugations also
 						$def = getSingleLemma($def, $pos1,$END);
 					}
 				}				
@@ -165,8 +166,9 @@
 	$conjLines = array();
 	$wordRootLines = array();
 	$splitLines = array();	
+	
 	foreach($defLines as $line) {
-		$conjugations = "";	
+		$conjugations = "";			
 		if (str_contains($line, 'class="bojning_inline"')) {					
 			array_push($conjLines, conjugateToString($line));
 		} else if (str_contains($line, 'class="subtype">')) {
@@ -177,7 +179,7 @@
 	}
 
 	$i=0;
-	$tmpConj = "";
+	$tmpConj = "";	
 	foreach($conjLines as $c) {
 		$tmpConj .= $wordRootLines[$i] . " " . $c;
 		if ($i < count($splitLines)) {
@@ -197,6 +199,8 @@
 	$out['meta'] .= getPronunciation($def);	
 	$out['def'] = getDef($def, $defLines);		
 	$out['more'] = getMore($def);
+	// No dashes in word keys
+	$word = str_replace("-","", $word);
 	$out['key'] = $word;
 	echo json_encode($out);
 	
@@ -221,6 +225,7 @@
 		// END is the global end of Lemma content after all "n" lemmas.
 		// First lemvar after ordklass is the next lemma
 		// Always parse past "ordklass" as before seeking end of lemma
+		
 		$pastStart = strpos($def, "ordklass",$start);
 		if (!$start) return "";
 		$end = strpos($def,"lemvar",$pastStart);				
@@ -295,7 +300,8 @@
 				$utv = getClass($el, "utv",true);
 				if ($utv) {
 					foreach ($utv as $match) {
-						$out['found'] = $out['found'] . "○ " . strip_tags($match) . "<br>";
+						$tmp = strip_tags($match);								
+						if (strlen($tmp) > 3) $out['found'] = $out['found'] . "○ " . $tmp . "<br>";
 					}
 				}
 				$syntExBlock = getClass($tmp, "sxblocklx");
@@ -421,7 +427,10 @@
 		if (substr($out,0,1) === "\n") $out = substr($out,1);
 		$out = str_replace("HISTORIK: <br>","HISTORIK: ",$out);
 		$out = str_replace("\n", "<br>",$out);
+		// Ugly hack to fix empty lines
 		$out = str_replace("<br><br>", "<br>",$out);			
+		$out = str_replace("<br><br>", "<br>",$out);
+		$out = str_replace("EXEMPEL: ; ","EXEMPEL: ",$out); 
 		if (strlen($out) === 0) {
 			debug("Failed to get 'more' information");
 		} else {
@@ -683,15 +692,15 @@
 				$tmpArr = explode("\n", $tmp);
 				$del = "";
 				$out = "KONSTRUKTION: \n";
-				foreach($tmpArr as $el) {					
-					if (str_contains($el,'class="vt"') && !str_contains($el, "<summary>")) {
+				foreach($tmpArr as $el) {										
+					if (str_contains($el,'class="vt"') && !str_contains($el, "<summary>") && strlen($el) > 0) {
 						$out .= $del . strip_tags($el);						
 						$del = "\n";
 					}					
 				}
 				$out .= "\n";
 			}
-		}
+		}		
 		// Hack
 		$out = hackCapitals($out);		
 		return $out;
@@ -787,8 +796,9 @@
 		$out = "";
 		if ($arr) {
 			$out = $preface . ": ";
-			foreach($arr as $m) {
-				$out = $out . strip_tags($m) . $delim;
+			foreach($arr as $m) {		
+				$tmp = strip_tags($m);		
+				if (strlen($tmp) > 3) $out = $out . $delim . $tmp;
 			}
 		}
 		return $out;
