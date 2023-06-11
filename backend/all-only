@@ -10,6 +10,7 @@
 (falla) med flaggan i topp
 (gå) i strumplästen
 (gå) ton i ton
+(göra något) med förlängda märgen
 (göra något) som en kratta
 (ha) gråten i halsen
 (hamna) på överblivna kartan(hamna) på överblivna kartan(hamna) på överblivna kartan(i) enskild ställning
@@ -46,6 +47,7 @@
 (vilja både) äta kakan och ha den kvar
 (växa upp) som svampar ur jorden
 (ända) ut i fingerspetsarna
+***en händelse som ser ut som en tanke
 ... och på den vägen är det
 ... och på den vägen är det
 ... och fan och hans mormor/moster
@@ -119,10 +121,12 @@ ablation
 ablativ
 abnorm
 abnormitet
+abolition
 abonnemang
 abonnent
 abonnera
 aborigin
+abort
 abortera
 abortiv
 abortör
@@ -305,6 +309,7 @@ aktsam
 aktualisera
 aktuell
 akut
+akutintag
 akvarell
 alarmera
 alba
@@ -567,6 +572,7 @@ ankra
 anlag
 anlagsbärare
 anlagstest
+anledning
 anletsdrag
 anligga
 anlita
@@ -630,6 +636,7 @@ ansikte
 ansiktsdrag
 ansiktsigenkänning
 ansiktsmask
+ansiktsnerv
 ansiktsuttryck
 anskaffa
 anskri
@@ -802,6 +809,7 @@ armera
 armering
 armfoting
 armled
+armod
 armstöd
 armé
 arméchef
@@ -933,6 +941,7 @@ autograf
 autokrat
 automation
 automatisera
+automatkarbin
 automobil
 autonom
 autonoma nervsystemet
@@ -950,9 +959,11 @@ av ondo
 av sig
 av ålder
 ava
+avancemang
 avancera
 avannons
 avannonsera
+avantgarde
 avantgardistisk
 avbalka
 avbalkning
@@ -1003,6 +1014,7 @@ avfall
 avfalla
 avfallen
 avfatta
+avfattning
 avfetta
 avfira
 avflytta
@@ -1373,6 +1385,7 @@ bandit
 bandtraktor
 bandtång
 baner
+bangolf
 banka
 bankbok
 bankett
@@ -1512,6 +1525,7 @@ befrukta
 befrämja
 befrämjare
 befullmäktiga
+befälhavare
 befängd
 befästa
 befästning
@@ -1544,8 +1558,10 @@ begär
 begära
 begå
 begåva
+begåvningsreserv
 behag
 behaga
+behagfull
 behaglig
 behagsjuk
 behagsjuka
@@ -1617,6 +1633,7 @@ bekännelseroman
 bel canto
 belacka
 belackare
+belag
 belamra
 belanga
 belasta
@@ -1637,6 +1654,7 @@ belägga
 beläggning
 belägra
 beläsenhet
+beläte
 belåna
 belåten
 belåtenhet
@@ -1644,6 +1662,7 @@ belöna
 belöning
 belöpa sig
 bemanna
+bemanningsföretag
 bemyndiga
 bemyndigande
 bemäktiga sig
@@ -1654,7 +1673,9 @@ bemärkelse
 bemärkt
 bemästra
 bemöda sig
+bemödande
 bemöta
+bemötande
 ben
 bena
 bena upp
@@ -2077,6 +2098,7 @@ blaja
 blamera
 blamera sig
 blanchera
+bland annat/andra
 blanda
 blanda bort korten för någon
 blanda ihop
@@ -2212,6 +2234,7 @@ blyertspenna
 blyg
 blygas
 blyglans
+blygsam
 bläck
 bläckfisk
 bläckhorn
@@ -2295,6 +2318,7 @@ boka
 boka av
 bokband
 bokbindare
+bokbuss
 boken
 bokflod
 bokföra
@@ -2313,6 +2337,7 @@ bokmål
 bokna
 bokningsnummer
 bokomslag
+bokslukare
 bokslut
 bokstav
 bokstavera
@@ -2344,6 +2369,7 @@ bomsegel
 bomullsbal
 bomullskrut
 bomärke
+bondböna
 bonde
 bondehemman
 bondehär
@@ -2393,6 +2419,7 @@ borra sig
 borrmaskin
 borrning
 borsta
+borste
 borstnejlika
 bort
 bort i tok
@@ -2464,6 +2491,7 @@ boxas
 boxershorts
 boxertrosa
 boxning
+boxningsring
 bra
 bragd
 brak
@@ -2570,11 +2598,13 @@ brud
 brudbukett
 brudgum
 brudklänning
+brudkrona
 brudmystik
 brudpar
 brudtärna
 bruk
 bruka
+brukare
 brukbar
 bruklig
 bruksdisponent
@@ -2624,6 +2654,7 @@ bryta upp
 bryta ut
 bryta/dra en lans för någon/något
 bryta/ta udden av något
+brytböna
 brytning
 bräcka
 bräda
@@ -2690,6 +2721,7 @@ bugg
 bugg-2
 bukgjord
 bukhinna
+bukhåla
 bukspott
 bukspottkörtel
 bukt
@@ -2887,6 +2919,7 @@ campa
 canasta
 case study
 cash
+casino
 casta
 cava
 cayennepeppar
@@ -2922,6 +2955,7 @@ champagne
 changera
 chans
 chansa
+chansning
 chanson
 charma
 charmera
@@ -2929,6 +2963,7 @@ charmknutte
 charmtroll
 charmör
 chartra
+chassi
 chaufför
 check
 checka
@@ -3173,6 +3208,7 @@ datorspel
 datortomografi
 datorvirus
 datum
+datumgräns
 datummärka
 de
 de breda lagren
@@ -3348,6 +3384,7 @@ dessertkniv
 dessertost
 dessertsked
 dessförinnan
+dessutom
 dessvärre
 destabilisera
 destillera
@@ -3390,6 +3427,7 @@ det vete tusan
 det vill säga
 det vänder sig i magen på någon
 det är fara värt att ...
+det är fråga om ...
 det är här/där skon klämmer
 det är högt i tak
 det är illa vulet
@@ -3534,7 +3572,9 @@ distinkt
 distrahera
 distribuera
 distribution
+dit
 ditintills
+ditresa
 dittills
 ditåt
 divalater
@@ -3581,6 +3621,7 @@ doktorera
 doktorsavhandling
 doktorsdisputation
 doktorsexamen
+doktorsgrad
 doktrin
 dokumentera
 dokumentportfölj
@@ -3744,6 +3785,7 @@ drulle
 drullig
 drumla
 drumlig
+drummel
 drunkna
 drunkning
 druva
@@ -3883,6 +3925,7 @@ dänga
 dänka
 därav
 därefter
+däremellan
 däremot
 därmed
 därpå
@@ -3892,12 +3935,15 @@ då så
 dålig förlorare
 dåna
 dåra
+dåraktig
 dåre
 dåsa
 dåsig
 dåvarande
 dö
+dö för mördarhand
 dö knall och fall
+dö som flugor
 dö ut
 döbattang
 död
@@ -3916,6 +3962,7 @@ dödshjälp
 dödskul
 dödskyss
 dödsolycka
+dödsorsak
 dödssjuk
 dödsstraff
 dödssynd
@@ -4074,6 +4121,7 @@ eldkommando
 eldorado
 eldriven
 eldsjäl
+eldslukare
 eldsläckare
 eldstad
 eldsvåda
@@ -4158,6 +4206,7 @@ emulsion
 en
 en black om foten
 en droppe i havet
+en eller annan
 en face
 en flytande likkista
 en fnurra (på tråden)
@@ -4171,6 +4220,7 @@ en hård/svår nöt att knäcka
 en katt bland hermelinerna
 en lycklig tilldragelse
 en läpparnas bekännelse
+en masse
 en offentlig hemlighet
 en ohelig allians
 en omvändelse under galgen
@@ -4179,6 +4229,7 @@ en passant
 en sak i taget
 en sanning med modifikation
 en skopa ovett
+en slät kopp (kaffe/te)
 en spik i någons/någots likkista
 en sten faller från någons bröst/hjärta
 en storm i ett vattenglas
@@ -4302,6 +4353,7 @@ erotik
 erotika
 erotisk
 ersätta
+ersättare
 ertappa
 eruption
 erövra
@@ -4343,6 +4395,7 @@ ett gott samvete är den bästa huvudkudden
 ett kok stryk
 ett land som flyter av mjölk och honung
 ett nödvändigt ont
+ett och annat
 ett oskrivet kort
 ett rö för vinden
 ett streck i räkningen
@@ -4388,6 +4441,7 @@ existera
 exkludera
 exklusiv
 exkommunicera
+exkurs
 exoplanet
 expandera
 expediera
@@ -4419,6 +4473,7 @@ extas
 extatisk
 extendera
 extension
+externat
 extra
 extrahera
 extrainkalla
@@ -4681,6 +4736,7 @@ finkalibrig
 finklädd
 finlandssvensk
 finlandssvenska
+finlemmad
 finländare
 finländska
 finmaskig
@@ -4694,6 +4750,8 @@ finnas till
 finnas/vara med i bilden
 finne
 finnmark
+finsk
+finska pinnar
 finslipa
 finsnickare
 fint
@@ -4733,8 +4791,11 @@ fitta
 fix och färdig
 fixa
 fixa sig
+fixare
+fixering
 fixpunkt
 fixstjärna
+fjant
 fjanta
 fjanta sig
 fjantig
@@ -4742,13 +4803,16 @@ fjollig
 fjompig
 fjord
 fjordhäst
+fjortis
 fjun
 fjunig
 fjuttig
+fjäder
 fjäderdräkt
 fjäderlätt
 fjädervåg
 fjädra
+fjädring
 fjäll
 fjälla
 fjällig
@@ -4828,6 +4892,7 @@ flickjägare
 flika in
 flimmerhår
 flimra
+flin
 flina
 flink
 flint
@@ -4841,6 +4906,7 @@ flitig
 flitig som en myra
 flitig som ett bi
 flitiga Lisa
+flock
 flod
 flodvåg
 florera
@@ -5088,6 +5154,7 @@ framfusig
 framföda
 framför
 framföra
+framförande
 framgaffel
 framgent
 framgå
@@ -5132,6 +5199,7 @@ fredlig
 fredlös
 fredsmäklare
 fredsplikt
+frejd
 frejdig
 frekvens
 frenesi
@@ -5194,6 +5262,7 @@ frisk som en nötkärna
 friska
 friska upp
 friskintyg
+friskluftsintag
 friskna till
 friskulptur
 frislag
@@ -5262,7 +5331,10 @@ fråga sig
 fråga sig fram
 fråga sig för om något
 fråga ut
+frågan är om ...
+frågeformulär
 frågesport
+frågestund
 frågetecken i marginalen
 från alla håll och kanter
 från ax till limpa
@@ -5280,6 +5352,7 @@ frånta
 frånträda
 fråntvinga
 frånvaro
+fröjd
 fröjda
 fröjda sig
 fröjdas
@@ -5413,6 +5486,7 @@ färgad
 färgfilm
 färgfoto
 färgglad
+färgglädje
 färggrann
 färghållning
 färgklick
@@ -5802,6 +5876,7 @@ förhindra
 förhoppning
 förhoppningsfull
 förhoppningsvis
+förhuggning
 förhyda
 förhyra
 förhärda
@@ -5836,6 +5911,7 @@ förkastlig
 förklara
 förklara bort
 förklara sig
+förklaring
 förklinga
 förklistra
 förklä
@@ -5896,6 +5972,7 @@ förläggare
 förläggning
 förläna
 förlänga
+förlängda märgen
 förlängning
 förlängningssladd
 förläning
@@ -6076,6 +6153,7 @@ första maj
 förstad
 förstadium
 förstafiol
+förstagångsväljare
 förstahands
 förstaklass
 förstasida
@@ -6400,6 +6478,7 @@ gammelmorfar
 gammelmormor
 ganache
 ganasch
+ganglion
 ganska
 gap
 gapa
@@ -6411,11 +6490,13 @@ garant
 garantera
 garanti
 gard
+garde
 gardera
 gardering
 garderob
 gardinkappa
 gardinstång
+gardist
 garnera
 garnison
 garnityr
@@ -6520,6 +6601,7 @@ genera sig
 generad
 general
 generalbas
+generaldirektör
 generalförsamling
 generalguvernör
 generalisera
@@ -6614,6 +6696,7 @@ gestaltpsykologi
 getingstick
 getost
 getöga
+gevär
 gevärsstock
 gifta bort
 gifta sig
@@ -6637,11 +6720,14 @@ girig
 girigbuk
 gissa
 gissa sig till
+gissel
 gissla
 gisslare
+gissning
 gitarr
 gitta
 giv akt!
+givakt
 givande
 givare
 given
@@ -6701,6 +6787,7 @@ glo
 global
 globalisera
 globetrotter
+glop
 glorifiera
 glugg
 glupsk
@@ -6708,6 +6795,7 @@ glutenintolerans
 glädja
 glädja sig
 glädjande
+glädje
 glädjefattig
 glädjen står högt i tak
 glädjetår
@@ -6777,7 +6865,10 @@ godtycke
 godtycklig
 goja
 gola
+golf
 golfa
+golfare
+golfbana
 golfrunda
 golv
 golva
@@ -6828,6 +6919,7 @@ grannlåt
 grannskap
 granris
 granska
+granskare
 grassera
 gratie
 gratinera
@@ -6886,6 +6978,7 @@ grogg
 groggvirke
 groll
 groning
+gropig
 grosshandel
 grosshandlare
 grossist
@@ -6900,6 +6993,7 @@ grumlig
 grumling
 grums
 grumsa
+grumsig
 grund
 grunda
 grundackord
@@ -6953,6 +7047,7 @@ gräma sig
 gräns
 gränsa
 gränsbevakning
+gränsfall
 gränskontroll
 gränslös
 gränstrakt
@@ -7083,6 +7178,7 @@ gymnasist
 gymnasium
 gymnast
 gymnastik
+gymnastikdirektör
 gymnastisera
 gympa
 gynna
@@ -7176,6 +7272,7 @@ gå över lik
 gå över styr
 gå över ån efter vatten
 gå/barka åt skogen
+gå/skära genom märg och ben
 gå/sväva (som) på moln
 gåbort
 gående bord
@@ -7613,6 +7710,7 @@ himlavalv
 himmel
 himmel och pannkaka!
 himmelsblå
+himmelssfär
 hin
 hin håle
 hin/den onde
@@ -7621,19 +7719,24 @@ hinderlöpning
 hindersprövning
 hindi
 hindra
+hingst
+hink
 hinna
 hinna med
 hinna upp
+hiss
 hissa
 hissa flaggan på halv stång
 historik
 hit
 hitintills
+hitresa
 hitta
 hitta på
 hittills
 hitåt
 hiva
+hjord
 hjul
 hjula
 hjulnav
@@ -7754,6 +7857,7 @@ hugga för sig
 hugga i
 hugga i sten
 hugga till
+huggare
 huggorm
 huka
 huka sig
@@ -7816,6 +7920,7 @@ hushållsost
 husköp
 husmanskost
 husockupation
+hustru
 husvagn
 huta åt
 huvtröja
@@ -7841,11 +7946,15 @@ hycklare
 hydrodynamik
 hydrokultur
 hygglig
+hygien
 hygienisk
 hylla
+hyllning
 hylsa
 hymen
 hymla
+hymn
+hynda
 hyperaktivitetssyndrom
 hyperbol
 hypersexualitet
@@ -8045,6 +8154,7 @@ hånleende
 hånskratta
 hår
 håra
+hårborste
 hård
 hårddata
 hårddisk
@@ -8154,6 +8264,7 @@ högspänning
 högsta hönset
 högstadielärare
 högstadium
+högsäsong
 högsäte
 högtalare
 högtid
@@ -8286,6 +8397,7 @@ i rättvisans namn
 i samlad trupp
 i samma nu
 i sanning
+i sin gröna ungdom
 i sista sekunken
 i själva verket
 i slott och koja
@@ -8306,6 +8418,7 @@ i/på trots av något
 iaktta
 iakttagare
 iakttagelse
+ibland
 icke-angreppspakt
 icke-metall
 id
@@ -8448,6 +8561,7 @@ inblick
 inbringa
 inbrott
 inbrottstjuv
+inbyte
 inbäddad
 inbäddad journalist
 inbäddad reporter
@@ -8526,6 +8640,7 @@ inge
 ingen fara på taket
 ingen mans land
 ingen nämnd och ingen glömd
+ingen orsak
 ingen ros utan törnen
 ingendera
 ingenjör
@@ -8568,6 +8683,7 @@ inkompetens
 inkomst
 inkomstkälla
 inkomstskatt
+inkontinens
 inkoppla
 inkorg
 inkorporera
@@ -8746,6 +8862,7 @@ insätta
 insöndra
 insöndring
 inta
+intag
 intala
 intarsia
 inte (vara värd) ett ruttet lingon
@@ -8809,21 +8926,37 @@ intendentur
 intensifiera
 intensitet
 intensiv
+intentionsdjup
 interagera
+intercitytåg
+interface
 interferens-2
 interferera
+interferon
 interfoliera
 interimistisk
+interludium
+intermezzo
 internalisera
+internat
+internatskola
 internera
 internet
+internetbank
+internetsida
+internist
 internminne
+internutbildning
 interpellant
 interpellation
 interpellera
+interpolation
 interpolera
+interpret
+interpretation
 interpretera
 interpunktera
+interpunktion
 intervall
 intervallträning
 intervenera
@@ -9125,6 +9258,8 @@ kabinettsfråga
 kabyss
 kacka i eget bo
 kackerlacka
+kackla
+kadaver
 kadaverdisciplin
 kadens
 kaffe
@@ -9133,6 +9268,7 @@ kaffeblask
 kaffebricka
 kaffebryggare
 kaffebröd
+kaffeböna
 kaffekopp
 kaffesked
 kaftan
@@ -9216,6 +9352,7 @@ kandidatexamen
 kandidatur
 kandidera
 kanel
+kanelbrun
 kanelbulle
 kanelstång
 kanin
@@ -9261,11 +9398,16 @@ karakteristisk
 karaktär
 karaktärsfast
 karbamid
+karbin
+karbunkel
 karburator
 karda
 kardan
 kardborre
 kardel
+kardinal
+kardinaldygd
+kardinalfel
 karg
 karikatyr
 karisma
@@ -9277,6 +9419,8 @@ karlslok
 karltokig
 karm
 karnivor
+kaross
+karosseri
 karriär
 karriärcoach
 karriärist
@@ -9287,6 +9431,9 @@ kartell
 kartera
 kartlägga
 kartläsare
+kartmätare
+kartnagel
+kartogram
 kartotek
 karva
 kasa
@@ -9383,6 +9530,7 @@ kex
 kidnappa
 kidnappare
 kika
+kikare
 kikarsikte
 kikhosta
 kikkran
@@ -9471,6 +9619,7 @@ klassicism
 klassificera
 klassiker
 klassisk
+klassisk gitarr
 klasskamrat
 klasskillnad
 klasskonferens
@@ -9596,6 +9745,7 @@ klämma till med något
 klämmas mellan sköldarna
 klämmig
 klämta
+klänning
 kläpp
 klärvoajant
 klätterställning
@@ -9620,6 +9770,7 @@ knapp
 knappast
 knapphål
 knappsats
+knappt
 knapptelefon
 knapra
 knarka
@@ -9827,6 +9978,7 @@ komma mellan barken och trädet
 komma ner på jorden
 komma på
 komma på grön kvist
+komma på kant med någon
 komma på pränt
 komma på rät/rätt köl
 komma på skam
@@ -9885,6 +10037,7 @@ kompensation
 kompensera
 kompetens
 kompetensutveckling
+kompilat
 kompilation
 kompilator
 kompilera
@@ -9927,6 +10080,7 @@ konferencier
 konferera
 konfigurera
 konfirmand
+konfirmation
 konfirmera
 konfiskation
 konfiskera
@@ -9943,6 +10097,8 @@ konka
 konkrement
 konkret
 konkret musik
+konkurrens
+konkurrent
 konkurrera
 konkurs
 konkursa
@@ -10003,8 +10159,10 @@ kontaktbehov
 kontaktlins
 kontaktperson
 kontamination
+kontenans
 kontenta
 kontext
+kontinent
 kontokort
 kontorslandskap
 kontra
@@ -10045,7 +10203,9 @@ koordinera
 kopernikansk
 kopiera
 kopieringsskydd
+kopp
 koppa
+koppar
 kopparbrun
 kopparförluster
 kopparglans
@@ -10165,8 +10325,11 @@ kos
 kost
 kost och logi
 kosta
+kosta fläsk
+kosta mer än det smakar
 kosta på
 kosta på sig
+kosta schaber
 kotlettfisk
 kotpelare
 kotte
@@ -10211,6 +10374,7 @@ krats
 kratsa
 kratta
 kratta manegen för någon/något
+kravallturist
 kravspecifikation
 kraxa
 kreativ bokföring
@@ -10327,9 +10491,11 @@ krypa
 krypa bakom någon/något
 krypa ihop
 krypa/kräla i stoftet
+kryphål
 kryptera
 krypto
 kryptogram
+kryss
 kryssa
 kryssa för
 kryssa i
@@ -10492,6 +10658,7 @@ kvarn
 kvarndamm
 kvarnhjul
 kvarnsten
+kvarsittning
 kvarskatt
 kvarstå
 kvartal
@@ -10554,6 +10721,8 @@ käbbla
 käck
 käft
 käfta
+kägel
+kägelsnitt
 käka
 käka upp
 käke
@@ -10573,6 +10742,7 @@ kämpa till sig
 kämpa till sista droppen
 kämpatag
 kämpatakter
+känd
 känga
 kängurupung
 känna
@@ -10591,6 +10761,7 @@ känna/se vart/hur vinden blåser
 kännarblick
 kännas
 kännas vid
+kännetecken
 känneteckna
 känsel
 känselhår
@@ -10615,6 +10786,7 @@ kärande
 kärlek
 kärleksfull
 kärleksförhållande
+kärleksgnabb
 kärlekskrank
 kärleksnäste
 kärlig
@@ -10626,6 +10798,7 @@ kärnfrisk
 kärnfrukt
 kärnfull
 kärnfysik
+kärnhus
 kärnkemi
 kärnkraft
 kärnkraftsavfall
@@ -10800,6 +10973,7 @@ landå
 langett
 lans
 lansera
+lantbruk
 lantbrukare
 lantgreve
 lanthandel
@@ -10812,6 +10986,8 @@ lappa
 lappa på
 lappa till
 lappa över
+lappkast
+lappri
 lapptäcke
 lapsus
 laptop
@@ -10828,6 +11004,8 @@ larynx
 lasagne
 laser
 laserskrivare
+lask
+lass
 last
 lasta
 lasta av
@@ -11012,11 +11190,13 @@ lik i lasten
 lika
 lika fullt
 lika med noll
+likadan
 likare
 likartad
 likaså
 likbegängelse
 like
+likformig
 likfynd
 likgiltig
 likhet
@@ -11216,6 +11396,7 @@ luftaffär
 luftfarkost
 luftfart
 luftgitarr
+luftig
 luftled
 luftmadrass
 luftombyte
@@ -11268,6 +11449,7 @@ luskam
 luspank
 lussekatt
 lust
+lustig
 lustighet
 lustigkurre
 lustlögnare
@@ -11300,8 +11482,10 @@ lyft
 lyfta
 lyfta fram
 lyfta sig
+lyfta skrot
 lyfta ut
 lyftblock
+lyftsax
 lykta
 lymfa
 lymfkärl
@@ -11428,6 +11612,7 @@ lärjunge
 lärk
 lärkträd
 lärobok
+lärosats
 lärosäte
 läroverk
 läroämne
@@ -11584,6 +11769,7 @@ löneavtal
 löneförhöjning
 lönegaranti
 löneglidning
+lönegrad
 lönekaka
 löneklass
 lönelyft
@@ -11693,6 +11879,7 @@ maktlös
 maktmissbruk
 maktmänniska
 maktordning
+maktskifte
 maktspel
 maktspråk
 maktövertagande
@@ -11711,6 +11898,7 @@ malplacerad
 malpåse
 malteserkors
 malträtera
+malört
 mammas gosse
 man
 man saknar inte kon förrän båset är tomt
@@ -11776,6 +11964,7 @@ marginal
 marginalisera
 marginalränta
 marginalskatt
+marginalväljare
 marig
 marijuana
 marin
@@ -11872,6 +12061,7 @@ mausoleum
 maximera
 maximi
 mc
+med
 med (vett och) vilja
 med all respekt
 med buller och bång
@@ -11896,6 +12086,7 @@ medarbeta
 medarbetare
 medbedömare
 medborgargarde
+medbringa
 meddela
 meddela sig
 medel
@@ -11932,6 +12123,7 @@ medsols
 medström
 medta
 medtagen
+medtävlare
 medurs
 medverka
 medverkan
@@ -11943,8 +12135,10 @@ megaton
 mejeri
 meka
 mekanik
+mekanisk
 mekanism
 melankoli
+melass
 mellan hammaren och städet
 mellan tummen och pekfingret
 mellan varven
@@ -12061,6 +12255,7 @@ minering
 minfält
 miniatyrisera
 minidator
+minigolf
 minimera
 minimi
 minior
@@ -12201,6 +12396,7 @@ modernistisk
 modernitet
 modersmjölk
 modersmjölksersättning
+modest
 modifiera
 modifikation
 modig
@@ -12430,6 +12626,7 @@ museiföremål
 museum
 musicera
 musik
+musikdirektör
 musikhögskola
 musikkår
 musikstycke
@@ -12534,13 +12731,20 @@ måla ut
 målarduk
 målarfärg
 målchans
+målgrupp
 målgård
 målgörare
 målinriktad
 målkalas
+mållinje
+målning
 målskillnad
+målskytt
+målstolpe
 målsägande
 målsägare
+målsättning
+måltavla
 måltid
 måltips
 målvakt
@@ -12629,6 +12833,7 @@ nagelpetare
 nagelrot
 nagelsax
 nagga
+nagga något i kanten
 naggande
 naivitet
 nakenmodell
@@ -12771,8 +12976,10 @@ neka
 neoklassicism
 nepotism
 nere
+nerv
 nervcell
 nervcentrum
+nervgift
 nervkittlande
 nervknippe
 nervknut
@@ -12782,6 +12989,7 @@ nervpirrande
 nervpress
 nervsystem
 nervtråd
+nervvrak
 nervös
 neslig
 nettoinkomst
@@ -12848,6 +13056,8 @@ noppa sig
 noppra
 noppra sig
 nordisk kombination
+nordostpassagen
+nordpol
 nordvart
 normalisera
 normera
@@ -12871,6 +13081,7 @@ nu gäller det!
 nu går skam på torra land!
 nu kan vi det här!
 nu och då
+nu är det kokta fläsket stekt
 nubba
 nudda
 nukleon
@@ -12898,6 +13109,7 @@ nyckelperson
 nyckelpiga
 nyckfull
 nydana
+nydanare
 nyemission
 nyfascism
 nyfödd
@@ -12913,6 +13125,7 @@ nyliberalism
 nylon
 nylonstrumpa
 nymf
+nymfomani
 nymodig
 nymodighet
 nymornad
@@ -12930,8 +13143,10 @@ nyrik
 nysa
 nysilver
 nyskapa
+nyskapare
 nysning
 nysnö
+nyspulver
 nysta
 nysta av
 nysta upp
@@ -12947,6 +13162,7 @@ nyttodjur
 nyttoföremål
 nytändning
 nyutkommen
+nyår
 nyårslöfte
 nyårsvaka
 näbbmus
@@ -12972,6 +13188,7 @@ närig
 näring
 näringsidkare
 näringskälla
+näringsliv
 näringsrik
 näringsvärde
 närkamp
@@ -12986,6 +13203,7 @@ närmast
 närområde
 närradio
 närsalt
+närsamtal
 närstrid
 närstående
 närsynt
@@ -13020,6 +13238,8 @@ nättidning
 nätverka
 nätvinge
 näva
+näve
+nävkamp
 nävrätt
 nå
 nå ända fram
@@ -13033,15 +13253,18 @@ någons smala lycka
 någons/någots svarta får
 någonstans
 någonvart
+något att bita i
 något skäms inte för sig
 något som katten släpat in
 något så när
 något växer inte på träd/trän
+något är inte någons kopp te
 några och
 nåldyna
 nålsöga
 nåt
 nåta
+nöd
 nödd
 nödga
 nödgas
@@ -13140,6 +13363,7 @@ oceanografi
 och hör sen!
 ocklusion
 ockra
+också
 ockupant
 ockupation
 ockupera
@@ -13498,6 +13722,7 @@ ordbok
 ordentlig
 order
 orderstock
+ordervägran
 ordfogning
 ordföljd
 ordförande
@@ -13584,6 +13809,7 @@ orrhöna
 orrspel
 orsak
 orsaka
+orsakssamband
 orsakssammanhang
 ort
 ort-2
@@ -13622,6 +13848,7 @@ oskadliggöra
 oskarp
 oskattbar
 oskick
+oskicklig
 oskolad
 oskriven
 oskyldig
@@ -13806,6 +14033,7 @@ panta
 pantbank
 pantförskriva
 pantlånerörelse
+pantograf
 pantomim
 pantsätta
 papegoja
@@ -13948,6 +14176,7 @@ penning
 penningpåse
 penningtvätt
 pennkniv
+pennteckning
 pensel
 penselföring
 pensionera
@@ -14149,6 +14378,7 @@ platta
 plattfisk
 plattityd
 plattysk
+plattyska
 plattång
 platå
 plausibel
@@ -14320,6 +14550,7 @@ potatissallad
 potatisskalare
 potens
 poängtera
+pr  -1
 practical joke
 praktexempel
 praktisera
@@ -14875,6 +15106,7 @@ regenerera
 regera
 regering
 regim
+regimskifte
 regionalpolitik
 regissera
 regissör
@@ -14935,6 +15167,7 @@ ren
 rena
 rendera
 rendezvous
+renegat
 rengöra
 renhjärtad
 renhårig
@@ -14951,6 +15184,7 @@ rensa ut
 rensare
 rent av
 rent spel
+rep
 repa
 repa in
 repa mod
@@ -14966,6 +15200,8 @@ repgubbe
 replik
 replikera
 repmånad
+reporter
+reporänta
 representera
 repressalie
 reproducera
@@ -14975,6 +15211,8 @@ resa
 resa sig
 rese
 resebyrå
+reserv
+reservare
 reservera
 reservera sig
 reservfond
@@ -15138,9 +15376,11 @@ ritblock
 ritual
 rituell
 riva
+rival
 rivalisera
 rivig
 rivjärn
+rivning
 rivningshus
 rivningskåk
 rivstart
@@ -15152,6 +15392,7 @@ ro i land (med) något
 roa
 roa sig
 roa sig kungligt
+robe
 robot
 robust
 rock
@@ -15181,6 +15422,7 @@ rosafärgad
 rosenfink
 rosengård
 rosenkindad
+rosenkvitten
 rosenkål
 rosenmun
 rosig
@@ -15255,6 +15497,7 @@ rusa
 ruska
 ruska av sig
 ruskig
+russin
 rusta
 rusta ner
 rusta sig
@@ -15290,6 +15533,7 @@ rymd
 rymdfarare
 rymdfarkost
 rymdfärd
+rymdkapsel
 rymdraket
 rymma
 rymma ut
@@ -15319,6 +15563,7 @@ rädd
 rädda
 räddhåga
 räddning
+räddningsplanka
 räddningsväst
 räffla
 räfsa
@@ -15336,6 +15581,7 @@ räkna upp
 räkna ut
 räknare
 räkneord
+räkning
 rälsbuss
 rämna
 ränna
@@ -15367,14 +15613,21 @@ rättrogen
 rättrådig
 rättsfall
 rättskrivning
+rättskänsla
 rättsläkare
+rättsordning
 rättssak
+rättssal
+rättsstat
+rättssäkerhet
 rättstavning
 rättsuppfattning
+rättsvetenskap
 rättvis
 rättvisa
 rätvinklig
 räv
+rävsax
 rå
 råbarkad
 råda
@@ -15402,12 +15655,17 @@ råkas
 råma
 råna
 rånare
+rånarluva
 rånmord
+råolja
 råplugga
 råsegel
 råsiden
 råsilke
 råsocker
+råsop
+råstyrka
+råtta
 råttfälla
 råtthål
 råämne
@@ -15625,6 +15883,7 @@ samregera
 samråd
 samsa
 samspela
+samstämd
 samstämma
 samtal
 samtala
@@ -15639,6 +15898,7 @@ samtycke
 samvaro
 samverka
 samvetsfrihet
+samvetsfråga
 samvetskval
 samvetsskäl
 samvälde
@@ -15694,8 +15954,10 @@ satsning
 satyriasis
 sav
 sava
+savann
 sax
 saxkrok
+saxofon
 scanna
 scanner
 scen
@@ -15810,6 +16072,8 @@ sekretion
 sekretär
 sektion
 sekularisera
+sekund
+sekunda
 sekundärminne
 seldon
 selektiv
@@ -15999,6 +16263,7 @@ sjuklig
 sjukläger
 sjukpenning
 sjukstuga
+sjukvikarie
 sjukvård
 sjukvårdare
 sjukvårdsbiträde
@@ -16208,6 +16473,7 @@ skiffer
 skiffle
 skift
 skifta
+skifte
 skiftning
 skifttangent
 skikt
@@ -16226,6 +16492,7 @@ skilja åt
 skiljedomare
 skiljeförfarande
 skiljetecken
+skiljevägg
 skillnad
 skilsmässa
 skimmer
@@ -16267,10 +16534,12 @@ skjuts
 skjutsa
 skjuva
 skoblock
+skock
 skodon
 skog
 skog på rot
 skogens konung
+skogsbrand
 skogshare
 skogsmus
 skogsnäva
@@ -16385,6 +16654,7 @@ skrock
 skrocka
 skrodera
 skrolla
+skrot
 skrota
 skrov
 skrovlig
@@ -16430,6 +16700,7 @@ skråväsen
 skröplig
 skudda stoftet av sina fötter
 skugga
+skuggboxning
 skuggspel
 skuld
 skuldbelägga
@@ -16680,6 +16951,8 @@ slowmotion
 sluddra
 slug
 sluka
+slukare
+slukaråldern
 slukhål
 slum
 slummer
@@ -16711,6 +16984,7 @@ slutspel
 slutsteg
 slutstycke
 slutta
+slyngel
 släcka
 släckare
 slägga
@@ -16811,6 +17085,8 @@ smaka av
 smakfull
 smaksinne
 smakämne
+smal som en sticka/pinne
+smal som en vidja
 smalben
 smalna
 smaragdgrön
@@ -17008,6 +17284,7 @@ snaska
 snatta
 snattare
 snatteri
+snattra
 sned
 snedfördelning
 snedsegel
@@ -17201,6 +17478,7 @@ sopa banan med någon
 sopa golvet med någon
 sopa till
 sopbil
+sopborste
 sorgespel
 sorglig
 sorgmantel
@@ -17399,6 +17677,7 @@ springare
 springbrunn
 springflod
 springkälla
+springvikarie
 sprit
 sprita
 spritkök
@@ -17605,6 +17884,7 @@ stekos
 stekpanna
 stekspade
 stel
+stel som en pinne
 stelfrusen
 stelhet
 stelkramp
@@ -18219,6 +18499,7 @@ svida sig
 svika
 svikare
 sviklig
+svikt
 svikta
 svimfärdig
 svimma
@@ -18243,6 +18524,7 @@ svälla
 svälta
 svälta ihjäl
 svälta räv
+svältgräns
 svältlön
 svämma över
 sväng
@@ -18258,6 +18540,7 @@ svängtapp
 svära
 svärd
 svärdotter
+svärdslukare
 svärfar
 svärm
 svärma
@@ -18292,8 +18575,10 @@ sy in
 sybehör
 syd
 sydlig
+sydpol
 sydsluttning
 sydvart
+sydväst
 syfta
 syl
 sylf
@@ -18425,6 +18710,7 @@ särredovisa
 särskild
 särskilja
 särskilt
+säsong
 säte
 sätta
 sätta (lite) rotation
@@ -18484,6 +18770,7 @@ så till den (milda) grad
 så till vida
 så vind och skörda storm
 så vitt (jag vet)
+sådan
 sådant händer i de bästa familjer
 såga
 såga av
@@ -18611,6 +18898,7 @@ tabba
 tabba sig
 tabbe
 tabellera
+tabloid
 tabubelägga
 tabulera
 tack vare
@@ -18622,6 +18910,7 @@ tackkort
 tackla
 tackla av
 tackoffer
+tacksam
 tacktal
 tadel
 tadla
@@ -18693,6 +18982,7 @@ tampas
 tamponera
 tampong
 tand
+tandborste
 tandem
 tandemcykel
 tandfyllning
@@ -18790,15 +19080,19 @@ telegram
 telegrambyrå
 telenät
 teleobjektiv
+teleskop
 teleskopöga
 television
 tempel
 temperatur
+temperaturskala
 temperera
 temporär
 tendens
 tendera
+tenn
 tennis
+tenorsaxofon
 tenta
 tenta upp
 tentamen
@@ -18809,6 +19103,7 @@ teocentrisk
 teogoni
 teolog
 teologi
+teorem
 teoretisk filosofi
 tequila
 termin
@@ -19060,6 +19355,7 @@ timlig
 timme
 timmer
 timmerkoja
+timmersax
 timmersläp
 timmerstock
 timmersvans
@@ -19184,6 +19480,7 @@ tobaksaffär
 tobakshandlare
 tok
 tok-2
+tokig
 tokrolig
 tolerabel
 tolerans
@@ -19207,6 +19504,7 @@ tona
 tona av
 tona bort
 tona ner
+tonart
 tonem
 tonföljd
 tonhöjd
@@ -19327,8 +19625,10 @@ transparang
 transpirera
 transplantera
 transponera
+transportabel
 transportband
 transportera
+transportör
 transvestism
 transvestit
 trap
@@ -19384,6 +19684,7 @@ tribun
 triceps
 trigga
 trilla
+trilla av pinn(en)
 trilsk
 trilskas
 trim
@@ -19419,6 +19720,7 @@ trombos
 tronen, altaret och penningpåsen
 tronföljd
 tronpretendent
+tronskifte
 trontillträde
 trop
 tropik
@@ -19482,6 +19784,7 @@ träda emellan
 träda fram
 träddiagram
 träde
+trädgräns
 trädgårdssax
 trädtopp
 träff
@@ -19703,6 +20006,7 @@ tycka
 tycka om
 tycka sig
 tycka till
+tyckare
 tyckas
 tycke
 tyda
@@ -19774,6 +20078,8 @@ tät
 tätplacering
 tätting
 tävla
+tävlan
+tävling
 tävlingsjury
 tå
 tåfjutt
@@ -19858,6 +20164,7 @@ underblåsa
 underbyxor
 underbädd
 underdrift
+underdånig
 underförstå
 undergiven
 undergräva
@@ -19970,10 +20277,15 @@ ungdomsvän
 ungdomsvård
 unge
 ungefär
+ungersven
 unghäst
+ungkarl
 ungkarlshotell
 ungkarlsliv
+ungmö
 ungnöt
+ungrare
+uniform
 uniformera
 uniformering
 uniformsplikt
@@ -19995,15 +20307,20 @@ upp
 upp med hakan!
 upp som en sol och ner som en pannkaka
 upparbeta
+uppbackare
+uppbindning
 uppbjuda
 uppbringa
 uppbrott
+uppbyggnad
 uppbära
 uppbåda
+uppbörd
 uppdaga
 uppdatera
 uppdela
 uppdra
+uppdragsgivare
 uppdriva
 uppe
 uppehåll
@@ -20128,6 +20445,7 @@ uppslitande
 uppsluka
 uppsluppen
 uppsnappa
+uppspelning
 uppspåra
 uppstiga
 uppstigning
@@ -20553,6 +20871,7 @@ uträtta
 utröna
 utsaga
 utsago
+utsatt
 utsatthet
 utse
 utseende
@@ -20565,6 +20884,7 @@ utskilja
 utskott
 utskriva
 utskänka
+utsliten
 utslocknad
 utslunga
 utslutning
@@ -20651,9 +20971,11 @@ utvecklingsstörd
 utverka
 utvidga
 utvidga sig
+utvikning
 utvilad
 utvinna
 utvisa
+utväg
 utvändig
 utvärdera
 utvärtes
@@ -20706,6 +21028,7 @@ vakuumförpacka
 vakuumförpackning
 vakuumpump
 val
+valack
 valaffisch
 valapparat
 valbyrå
@@ -20740,6 +21063,7 @@ vandalisera
 vandel
 vandra
 vandrande jude
+vandrande pinne
 vandringsled
 vandringspris
 vanebildande
@@ -20780,17 +21104,22 @@ vapenfri
 vapenfri tjänst
 vapenmakt
 vapenslag
+vapenvägran
 var
 var och en
 var och varannan
 var ska sleven vara om inte i grytan
 vara
 vara (stadd) vid kassa
+vara av samma skrot och korn
 vara du och bror med någon
 vara en nagel i ögat (på någon)
+vara fin i kanten
+vara hugget som stucket
 vara i gasen
 vara klippt
 vara kört
+vara med på en kant
 vara på samma våglängd
 vara-2
 vara (inne) på rätt spår
@@ -20888,6 +21217,7 @@ vartill
 vartsomhelst
 vartåt det lutar
 varuhus
+varuintag
 varumärkesskydd
 varva
 varva ner
@@ -20933,6 +21263,7 @@ vattna ur
 vattnig
 vaudeville
 vax
+vaxböna
 vaxdocka
 vaxduk
 vaxkaka
@@ -20950,6 +21281,7 @@ veckohandla
 veckoslut
 veckotidning
 ved
+vedbrand
 vederböra
 vederbörande
 vederfaras
@@ -21006,6 +21338,8 @@ verksynd
 verktyg
 verktygssats
 veronika
+versal
+version
 versmått
 vertikal
 vertikalplan
@@ -21021,6 +21355,7 @@ vete
 vetegrodd
 vetekli
 vetemjöl
+vetenskap
 vetenskapa
 vetenskapare
 vetenskapsman
@@ -21066,6 +21401,7 @@ vidhålla
 vidimera
 vidkomma
 vidkännas
+vidlyftig
 vidlåda
 vidmakthålla
 vidröra
@@ -21089,6 +21425,7 @@ vika sig dubbel av skratt
 vika upp
 vika ut
 vika ut sig
+vikare
 vikarie
 vikariera
 viking
@@ -21154,6 +21491,7 @@ vindkantring
 vindkraftverk
 vindla
 vindla sig
+vindruva
 vindskontor
 vindskupa
 vindskydd
@@ -21195,6 +21533,7 @@ vinst
 vinstandel
 vinstock
 vinstuga
+vinter
 vinter-OS
 vinterbadare
 vinterbona
@@ -21226,6 +21565,7 @@ virtuosmässig
 virus
 virvel
 virvla
+vis
 visa
 visa lejonklon
 visa sig
@@ -21300,6 +21640,8 @@ von oben
 votera
 votering
 votum
+vrak
+vrakgods
 vrede
 vredesutbrott
 vresig
@@ -21321,6 +21663,7 @@ vråla
 vrålhungrig
 vrångbild
 vulen
+vulgär
 vulgärlatin
 vulkanutbrott
 vurpa
@@ -21329,6 +21672,7 @@ vykort
 väck
 väcka
 väcka upp
+väckare
 väckelse
 väder
 väderlek
@@ -21337,6 +21681,7 @@ väderprognos
 vädersatellit
 vädertjänst
 vädja
+vädjan
 vädra
 vädra morgonluft
 väg
@@ -21345,9 +21690,16 @@ väga jämnt
 väga ned
 väga upp
 vägbeläggning
+vägbro
 vägen till mannens hjärta går genom magen
+vägg
 vägleda
+vägledande
+vägledning
 vägra
+vägran
+vägrare
+vägren
 vägtistel
 vägvisare
 väja
@@ -21361,17 +21713,23 @@ välfägnad
 välfärd
 välfärdssamhälle
 välfödd
+välgärning
 välgång
+välgörare
+välgörenhet
 välinformerad
 välja
 välja bort
 välja in
 välja och vraka
 välja om
+väljarbarometer
+väljare
 välklädd
 välkomma
 välkommen
 välkomna
+välkänd
 välla
 vällingklocka
 välljud
@@ -21466,6 +21824,8 @@ värld
 världsatlas
 världsbild
 världsbrand
+världsdel
+världsförklaring
 världshav
 världskrig
 världslig
@@ -21694,6 +22054,7 @@ ytterrock
 yttersta
 yttersta domen
 yttertak
+yttervägg
 yttervärld
 ytteröra
 yttra
@@ -22186,6 +22547,7 @@ zygot
 överbevisa
 överbjuda
 överblicka
+överbliven
 överboka
 överbringa
 överbrygga
@@ -22266,6 +22628,7 @@ zygot
 överlämna sig
 överlåta
 överlåtelse
+överlöpare
 övermaga
 övermanna
 övermorgon
