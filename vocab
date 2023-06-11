@@ -3401,7 +3401,25 @@ function fetchDef() {
 
 function getRaw() {
 	if (DEBUG) console.log("getRaw()")
-	window.open("https://www.svenska.se/tri/f_so.php?sok=" + CUR_WORD)
+	fetch('backend/scrapeRaw.php?word=' + CUR_WORD + "&class=" + CLASS, {
+		nethod: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}		
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		let url = json;
+		window.open(url)
+	})
+	.catch(error => {
+		console.log(error);
+	})
+	
+	// Make this more intelligent so that it resolves the work class if multiple matches
 }
 
 function shortenClass() {
