@@ -961,6 +961,7 @@ avvisare
 avväg
 avvägning
 axel
+axelkoppling
 axelrem
 axill
 azalea
@@ -1632,6 +1633,7 @@ bjällra
 björk
 björktrast
 björn
+björnfrossa
 björnkram
 björnram
 björnskinnsmössa
@@ -2009,6 +2011,7 @@ brudgum
 brudklänning
 brudkrona
 brudmystik
+brudslöja
 brudtärna
 brugd
 brukare
@@ -2076,6 +2079,7 @@ budbärare
 buddism
 budget
 budgetproposition
+budgetunderskott
 budgivning
 budo
 buffel
@@ -2277,6 +2281,7 @@ chanson
 charlatan
 charm
 charmknutte
+charmoffensiv
 charmtroll
 charmör
 chaufför
@@ -3178,6 +3183,7 @@ erotika
 ersättare
 ersättning
 eruption
+erövrare
 erövring
 eskader
 eskalation
@@ -3268,6 +3274,7 @@ exspiration
 extas
 extension
 extrakt
+extraktion
 extravagans
 extremhöger
 extremism
@@ -3370,6 +3377,7 @@ fatalist
 fatalitet
 fattigdom
 fattigvård
+fatwa
 favela
 favorit
 favör
@@ -3819,6 +3827,7 @@ friktion
 friktionsvärme
 frikyrka
 frilans
+friluftsgudstjänst
 friluftsteater
 fripassagerare
 friplåt
@@ -3843,6 +3852,7 @@ friåkning
 fromma
 front
 frontlinje
+frontsoldat
 frontzon
 frosch
 frossa
@@ -3851,6 +3861,7 @@ frossbrytning
 frost
 frostfjäril
 frosting
+frostknäpp
 frotté
 fru
 frukost
@@ -3990,9 +4001,11 @@ fålla
 fåne
 fång
 fånga
+fångdräkt
 fånge
 fångenskap
 fångst
+fångvaktare
 fåntratt
 fåra
 fårhage
@@ -4511,6 +4524,8 @@ gengångare
 genie
 genitiv
 genklang
+genmajs
+genmat
 genocid
 genomfart
 genomfärd
@@ -4846,6 +4861,7 @@ grönkål
 grönlandsval
 grönländare
 grönsak
+grönsakstallrik
 gubbe
 gubbstrutt
 gud
@@ -5261,6 +5277,7 @@ hink
 hinna
 hint
 hiss
+hisskorg
 historia
 historicism
 historik
@@ -6046,6 +6063,7 @@ irritation
 irrlära
 is
 isbergssallad
+isbit
 isbjörn
 iscensättning
 isgata
@@ -6305,6 +6323,7 @@ kalasmat
 kalaspingla
 kalender
 kalenderdygn
+kalfaktor
 kaliber
 kalilut
 kalk
@@ -6672,6 +6691,7 @@ knegare
 knekt
 knipa
 knippa
+kniptång
 kniptångsmanöver
 knipövning
 kniv
@@ -6870,6 +6890,7 @@ konfrontation
 konfusion
 kongress
 kongruens
+kongruensböjning
 konjak
 konjugat
 konjugation
@@ -6992,6 +7013,8 @@ kopula
 korall
 korallö
 korda
+korderoj
+kordong
 korg
 korgboll
 korint
@@ -7108,7 +7131,9 @@ kricka
 krigare
 krigföring
 krigsdekoration
+krigsfånge
 krigsförbrytare
+krigsgud
 krigsherre
 krigslycka
 krigsmakt
@@ -8426,6 +8451,7 @@ miniräknare
 minister
 ministerpresident
 minnesbild
+minnesgudstjänst
 minneslucka
 minneslund
 minnesregel
@@ -8435,6 +8461,7 @@ minnesvård
 minnesång
 minoritet
 minoritetsledare
+minoritetsregering
 minskning
 minsvepare
 minsvepning
@@ -8451,6 +8478,7 @@ misogyni
 miss
 missanpassning
 missbildning
+missbrukare
 missfirmelse
 misshandel
 misshällighet
@@ -8637,6 +8665,7 @@ muezzin
 muffins
 mugg
 mula
+mulatt
 mule
 mull
 mullsork
@@ -8653,6 +8682,7 @@ munkavle
 munkjacka
 munkkåpa
 munkorden
+munkorg
 munskydd
 munskänk
 muntergök
@@ -8670,6 +8700,7 @@ musikalitet
 musikant
 musikdirektör
 musiker
+musikgudstjänst
 musikhögskola
 musikinstrument
 musikkår
@@ -8715,6 +8746,7 @@ mängdlära
 människa
 människoande
 människoapa
+människoföda
 människohamn
 människospillra
 människosyn
@@ -8739,6 +8771,7 @@ målarduk
 målare
 målarfärg
 målchans
+målfrossa
 målgrupp
 målgård
 målgörare
@@ -9344,6 +9377,7 @@ orm
 ormbunke
 ormgrop
 ormslå
+ormtjusare
 oro
 oroshärd
 orosmoment
@@ -9774,6 +9808,7 @@ plikt
 plita
 plog
 plogbill
+plogfåra
 plomb
 plombering
 plugg
@@ -9903,6 +9938,7 @@ practical joke
 praktik
 praktikant
 pralin
+pratbubbla
 pratkvarn
 pratshow
 pratstund
@@ -9962,6 +9998,7 @@ prior
 prioritering
 prioritet
 pris
+prischock
 priskontroll
 prislapp
 prispall
@@ -10096,6 +10133,7 @@ pupill
 puppa
 purjolök
 pushup-bh
+pusselbit
 pust
 pusta
 puta
@@ -10186,6 +10224,7 @@ rakning
 raksträcka
 rall
 ram
+rambudget
 ramsa
 rand
 rang
@@ -10266,6 +10305,7 @@ regi
 regim
 region
 regionalpolitik
+regionplan
 regissör
 registrator
 registrering
@@ -10625,6 +10665,7 @@ räffla
 räfsa
 räfst
 räka
+räkfrossa
 räkmacka
 räknare
 räknedosa
@@ -11844,6 +11885,7 @@ soldat
 solenergi
 solfjäder
 solgata
+solgud
 solhjälm
 solidaritet
 solist
@@ -12061,6 +12103,7 @@ spärrvakt
 spätlese
 spådom
 spånad
+spånkorg
 spårhund
 spårning
 spårstämpel
@@ -12357,6 +12400,7 @@ stråtrövare
 ström
 strömbegränsning
 strömbrytare
+strömfåra
 strömkantring
 strömming
 strömmätare
@@ -12688,6 +12732,7 @@ sång
 sångare
 sångerska
 sångfågel
+såpbubbla
 såpopera
 sårmarkör
 sårskorpa
@@ -12803,6 +12848,7 @@ tankefrihet
 tankegång
 tankeläsare
 tankemöda
+tankereda
 tankesmedja
 tankevilla
 tanks
@@ -12958,7 +13004,6 @@ tidsgräns
 tidshorisont
 tidskrift
 tidskriftssamlare
-tidsmedveten
 tidsnöd
 tidsomställning
 tidsoptimist
@@ -13145,6 +13190,7 @@ tonföljd
 tonhöjd
 tonika
 toning
+tonomfång
 tonsill
 tonstyrka
 tonsättare
@@ -14225,6 +14271,7 @@ vattentäkt
 vattenväg
 vattenväxt
 vattenyta
+vattkoppor
 vaudeville
 vaxböna
 vaxdocka
@@ -14490,6 +14537,7 @@ vägrare
 vägren
 vägsalt
 vägtistel
+vägtull
 vägvisare
 väktare
 väl
