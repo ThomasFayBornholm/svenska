@@ -1000,7 +1000,6 @@ bak
 bakdel
 bakdörr
 bakelse
-bakform
 bakfot
 bakfylla
 bakgata
@@ -4419,6 +4418,7 @@ gambit
 gamet
 gamling
 gammaldans
+gammalstavning
 gammelfarfar
 gammelfarmor
 gammelmorfar
@@ -4448,6 +4448,7 @@ gasgenerator
 gasol
 gasoltub
 gastillförsel
+gasurladdning
 gasutveckling
 gata
 gatflicka
@@ -4721,6 +4722,7 @@ gratäng
 grav
 grav-2
 gravation
+gravering
 graviditet
 graviditetstest
 gravitation
@@ -4803,6 +4805,7 @@ grymhet
 gryning
 gryta
 grytstek
+gräddbakelse
 grädde
 gräddfil
 gräddsnipa
@@ -5235,6 +5238,7 @@ herrgård
 herrgårdsvagn
 herrsingel
 hertig
+heshet
 heterozygot
 hetluft
 hets
@@ -5258,6 +5262,7 @@ hinna
 hint
 hiss
 historia
+historicism
 historik
 historiker
 hit
@@ -6082,6 +6087,7 @@ jargong
 jazz
 jazzklubb
 jazzmusik
+jeansshorts
 jetdrift
 jetong
 jetström
@@ -6160,6 +6166,7 @@ journalfilm
 journalist
 journalistik
 jubelidiot
+jubelåsna
 judaskyss
 jude
 judendom
@@ -6774,6 +6781,7 @@ kolonn
 kolorist
 kolorit
 koloxid
+kolportör
 kolsyra
 kolsyresnö
 kolumn
@@ -7232,6 +7240,7 @@ kulting
 kultur
 kulturartikel
 kulturgärning
+kulturhistoria
 kulturknutte
 kulturkrock
 kulturpolitik
@@ -8804,6 +8813,7 @@ namnforskning
 namnteckning
 nanosekund
 nanoteknik
+napoleonbakelse
 narkoman
 narkotika
 narkotikahaj
@@ -9829,6 +9839,7 @@ polyeder
 polygami
 polygon
 polygrip
+polyhistor
 polysem
 polysemi
 pomp
@@ -11084,6 +11095,7 @@ sievert
 sifferuppgift
 siffra
 sightseeing
+sigillring
 sigillstamp
 signal
 signaleld
@@ -11424,6 +11436,7 @@ skovel
 skrattare
 skrattgrop
 skrattmås
+skrattrynka
 skrattsalva
 skribent
 skridskoåkning
@@ -11625,6 +11638,7 @@ slutlön
 slutpunkt
 slutresultat
 slutsats
+slutsiffra
 slutspurt
 slutsten
 sluttning
@@ -12125,6 +12139,7 @@ station
 stationsvagn
 statist
 statistik
+statschef
 statskassa
 statskunskap
 statskupp
@@ -13016,6 +13031,7 @@ tillverkare
 tillverkning
 tillväxt
 tillväxthormon
+tilläggning
 tilläggspension
 tillämpning
 tillåtelse
@@ -13334,6 +13350,7 @@ tryckaccent
 tryckare
 tryckform
 tryckfrihet
+tryckfrihetsförordning
 tryckkabin
 tryckkokare
 tryckning
@@ -13500,6 +13517,7 @@ tyrann
 tyrannisering
 tysk
 tyska
+tyskhare
 tysthet
 tystnad
 tystnadsplikt
@@ -14531,6 +14549,7 @@ världsbrand
 världsdel
 världsetta
 världsförklaring
+världshistoria
 världsmakt
 världsmästare
 världsrymd
@@ -14859,6 +14878,7 @@ zygot
 äppelsyra
 äppelvecklare
 ära
+ärbarhet
 ärebetygelse
 ärekränkning
 ärelystnad
@@ -14987,6 +15007,8 @@ zygot
 ångdrift
 ånger
 ångerfrist
+ångermanländska
+ångermanlänning
 ångervecka
 ångest
 ångestneuros
