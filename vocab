@@ -1347,7 +1347,7 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 // There is a recursion here somewhere, find it
 function seekWord(word, link = false, lastEnum = false) {			
 	if (DEBUG) console.log("seekWord(word, link = false), word = " + word + ", link = " + link);
-	LAST_DEF_ENUM = CUR_DEF_ENUM; // Don't think it is a problem to set this immediately. If no matches found then no harm done. It will be overwritten on next search			
+	//LAST_DEF_ENUM = CUR_DEF_ENUM; // Don't think it is a problem to set this immediately. If no matches found then no harm done. It will be overwritten on next search			
 	CUR_DEF_ENUM = 1; // Always show definition #1 for a newly found word
 	LAST_CLASS = CLASS;
 	// Consider avoid search when we already have a match in the current word class
@@ -3035,7 +3035,12 @@ function processKeyDown(ev) {
 		ev.preventDefault();
 	} else if (ev.key === '!') {
 		defaultMeta(false);
+	} else if (ev.key = "ArrowLeft") {
+		navDef(ev);
+	} else if (ev.key = "ArrowRight") {
+		navDef(ev);
 	}
+	
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
 			if (CLASS != "all") {				
@@ -3057,6 +3062,23 @@ function processKeyDown(ev) {
 		getLastWord();	
 	}	
 	
+}
+
+function navDef(ev) {
+	if (DEBUG) console.log("navDef(ev)");
+	let tmp = $('#iInput').val();
+	
+	if (tmp.length === 0) {
+		if (ev.key === "ArrowLeft") {			
+			CUR_DEF_ENUM--;
+			if (CUR_DEF_ENUM < 1) CUR_DEF_ENUM = 1;
+		} else if (ev.key === "ArrowRight") {
+			CUR_DEF_ENUM++;
+			if (CUR_DEF_ENUM > N_DEFS) CUR_DEF_ENUM = N_DEFS;
+		}
+	}
+	getDefInd(CUR_DEF_ENUM);
+	getMore(CUR_DEF_ENUM);
 }
 
 function clearMore() {
