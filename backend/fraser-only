@@ -16,6 +16,7 @@
 (falla) som en klubbad oxe
 (fara i väg) som skjuten ur en kanon
 (fara) all världens väg
+(flyga) som en vante
 (följa) minsta motståndets lag
 (gälla) någots vara eller icke vara
 (gå omkring) som en äggsjuk höna
@@ -61,7 +62,6 @@
 (man ska inte) skåda given häst i munnen
 (man ska) inte kasta sten i glashus
 (med) ty åtföljande
-(med) ty åtföljande (med)
 (men) vad säger du?
 (någon) av kött och blod
 (någons) magnum opus
@@ -799,6 +799,7 @@ få på nöten
 få på tafsen
 få på truten
 få påökt
+få rätsida på något/någon
 få rött kort
 få se på andra bullar
 få se på annat
@@ -1072,6 +1073,7 @@ gå över ån efter vatten
 gå/barka åt skogen
 gå/fara värdshus förbi
 gå/komma/träda i dagen
+gå/ligga/stå och skräpa
 gå/skriva till kungs
 gå/skära genom märg och ben
 gå/sväva (som) på moln
@@ -1092,6 +1094,7 @@ göra i byxorna
 göra livet surt för någon
 göra natt till dag
 göra någon det nöjet
+göra någon rangen stridig
 göra någon sin kur
 göra något i någons namn
 göra något med vänster hand
@@ -1148,7 +1151,7 @@ ha för avsikt
 ha god hand med någon/något
 ha gröna fingrar
 ha guld i strupen
-ha hjärtat i hals­gropen
+ha hjärtat i halsgropen
 ha hjärtat på rätta stället
 ha huvudet på skaft
 ha häcken full
@@ -1295,7 +1298,7 @@ hur som haver
 hur som helst
 hur så?
 hur/vad/varför i hela friden
-hur/vad/vem/var­för i fridens/herrans/jösse namn
+hur/vad/vem/varför i fridens/herrans/jösse namn
 husbondens röst
 hut går hem
 hyra i andra hand
@@ -1455,7 +1458,7 @@ i rum sjö
 i runda slängar
 i runt/runda tal
 i rättvisans namn
-i rätt­visans namn
+i rättvisans namn
 i samlad trupp
 i samma nu
 i sanning
@@ -1949,6 +1952,7 @@ lägga sig vinn om något
 lägga sista handen vid något
 lägga sten på börda
 lägga ut texten
+lägga vantarna på något
 lägga/fästa vikt vid något
 lägga/skjuta (över) skulden på någon
 lägga/sätta kraft bakom orden
@@ -2596,6 +2600,7 @@ slå som en stångjärnshammare
 slå två flugor i en smäll
 slå undan benen på/för någon/något
 slå vakt om något
+slå vantarna i bordet
 slå väl ut
 slå åder
 slå/träffa huvudet på spiken
@@ -2636,7 +2641,7 @@ som man ropar (i skogen) får man svar
 som natt och dag
 som packade sardiner
 som packade sillar
-som sig veder­bör
+som sig vederbör
 som träffad av blixten
 som uppslukad av jorden
 sondera terrängen
@@ -2698,7 +2703,7 @@ spänna ögonen i någon
 spärrad utbildning
 spåren förskräcker
 stark som en björn/häst/oxe
-starka glas­ögon
+starka glasögon
 starka glasögon
 starkt verb
 starta/öppna
@@ -3179,6 +3184,7 @@ undandra sig någons bedömning
 undantaget som bekräftar regeln
 under alla omständigheter
 under bar himmel
+under bältet
 under falsk flagg
 under hand
 under knapphetens kalla stjärna
@@ -3191,6 +3197,7 @@ upp med hakan!
 upp som en sol och ner som en pannkaka
 upp över/uppöver öronen
 uppfinna hjulet
+upplyst despot
 uppochnedvända världen
 uppåt väggarna
 ur egen fatabur
@@ -3429,6 +3436,8 @@ vit dvärg
 vit käpp
 vit lögn
 vit magi
+vit slavhandel
+vit som ett lakan
 vita fingrar
 vita gäss
 vittflygande planer

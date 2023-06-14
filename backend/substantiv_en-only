@@ -473,6 +473,7 @@ antagning
 antagonism
 antagonist
 antavla
+antecipation
 anteckning
 anteckningsbok
 anteckningstavla
@@ -963,6 +964,7 @@ avvägning
 axel
 axelkoppling
 axelrem
+axelvadd
 axill
 azalea
 babe
@@ -2174,6 +2176,7 @@ bärgning
 bärkasse
 bärkraft
 bärpåse
+bärraket
 bärstol
 bärsärk
 bärsärkagång
@@ -2189,6 +2192,7 @@ bågminut
 bågsekund
 bågskytt
 bål
+bårbärare
 båt
 båtfolket
 båtmössa
@@ -2772,6 +2776,7 @@ driftstörning
 drill
 drillborr
 drilling
+drillsnäppa
 drink
 drinkare
 driv
@@ -4596,6 +4601,7 @@ gigg
 gillestuga
 ginbalk
 gipp
+gipsavgjutning
 gir
 giraff
 girering
@@ -4643,6 +4649,7 @@ glop
 glosa
 glugg
 glutenintolerans
+gluttsnäppa
 glädje
 glädjeflicka
 glädjetår
@@ -4686,7 +4693,6 @@ golfbana
 golfboll
 golfplats
 golfrunda
-golfspelare
 golftävling
 golvbeläggning
 golvlampa
@@ -4901,6 +4907,7 @@ guldtand
 guldålder
 gulhämpling
 gulkropp
+gullgosse
 gullhöna
 gullunge
 gulmetall
@@ -6078,6 +6085,7 @@ isolation
 isolator
 isolering
 isoleringscell
+ispik
 israel
 issörja
 istapp
@@ -6256,6 +6264,7 @@ järtecken
 jäsning
 jäst
 jätte
+jättebaby
 jättegryta
 jättepanda
 jätteödla
@@ -7017,6 +7026,7 @@ korderoj
 kordong
 korg
 korgboll
+korgosse
 korint
 kork
 korkskruv
@@ -7256,6 +7266,7 @@ kullersten
 kulmage
 kulmen
 kulpenna
+kulram
 kulspetspenna
 kulspruta
 kulstötning
@@ -7440,6 +7451,7 @@ kärnved
 kärra
 kärrhök
 kärring
+kärrsnäppa
 kättare
 kätting
 kättja
@@ -7605,6 +7617,7 @@ led
 leda
 ledamot
 ledare
+ledgångsreumatism
 ledighet
 ledkapsel
 ledning
@@ -8677,6 +8690,7 @@ multiplikationstabell
 multiplikator
 mulåsna
 mun
+mundiarré
 munk
 munkavle
 munkjacka
@@ -8710,6 +8724,7 @@ muskelatrofi
 muskelbristning
 muskelförtvining
 muskelkraft
+muskelreumatism
 muskeltråd
 muskelvärk
 muskelvävnad
@@ -9147,6 +9162,7 @@ nöd
 nödhamn
 nödhjälp
 nödlösning
+nödraket
 nödsignal
 nödsituation
 nödtorft
@@ -9317,6 +9333,7 @@ opinionsmätning
 opponent
 opportunism
 opposition
+oppositionsledare
 optiker
 optimism
 optimist
@@ -9718,7 +9735,10 @@ pigg
 pigghaj
 piggvar
 pigment
+pigroman
 pik
+pikhacka
+pikstav
 pil
 pillerburk
 pilot
@@ -10682,6 +10702,7 @@ ränta
 räntabilitet
 räntesats
 räta
+rätblock
 rätsida
 rätstickning
 rätt
@@ -11493,6 +11514,7 @@ skrivning
 skrivsal
 skrivstil
 skrivtavla
+skrodör
 skrot
 skrotning
 skrott
@@ -11511,6 +11533,8 @@ skräcködla
 skräddare
 skräll
 skrämsel
+skräpkultur
+skrävlare
 skråma
 skugga
 skuggbild
@@ -11725,6 +11749,7 @@ sminkrot
 smitta
 smitthärd
 smittkälla
+smittobärare
 smittspårning
 smocka
 smoking
@@ -11825,6 +11850,7 @@ snyltare
 snyltgäst
 snytbagge
 snäcka
+snäckväxel
 snäppa
 snärpa
 snärt
@@ -12781,6 +12807,7 @@ tagning
 taikonaut
 tajming
 takbjälke
+takhimmel
 takhöjd
 takkam
 taknock
@@ -13196,6 +13223,7 @@ tonstyrka
 tonsättare
 tonvikt
 tonåring
+tonårsidol
 topograf
 topografi
 topp
@@ -13243,6 +13271,7 @@ touche
 tova
 toxikologi
 tradition
+traditionsbärare
 tradjazz
 trafik
 trafikkorsning
@@ -13365,6 +13394,7 @@ trombon
 trombos
 tron
 tronföljd
+tronhimmel
 tronpretendent
 trop
 tropik
@@ -13422,6 +13452,7 @@ träng
 trängning
 trängtrupp
 träning
+träningsdräkt
 träningsoverall
 träskalle
 träsked
@@ -14258,6 +14289,7 @@ vattenkrasse
 vattenlinje
 vattenloppa
 vattenmelon
+vattenrall
 vattenrutschbana
 vattenskida
 vattenskopa
@@ -15301,6 +15333,7 @@ zygot
 överbyggnad
 överbädd
 överdel
+överdirektör
 överdos
 överdrift
 överdängare
