@@ -528,7 +528,7 @@ function getWords(ind = INC) {
 function displayWords(list,ind) {
 	if (DEBUG) console.log("displayWords(), list = " + list + ", ind = " + ind)
 	let out = ""
-	list = list.replaceAll("  "," ");
+	list = list.replaceAll("  "," ");	
 	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list + "&caller=displayWords", {
 		method: 'get',
 		mode: 'cors',
@@ -540,6 +540,7 @@ function displayWords(list,ind) {
 		return response.json();
 	})
 	.then(json => {
+		list = list.replaceAll("-2","<sup>2</sup>");
 		res = json["stat"];
 		let score = json["score"];
 		let del = "";
@@ -679,8 +680,7 @@ function showWordMatches(follow) {
 	}
 	let id = "w" + SCROLL_INC;
 	let el = document.getElementById(id);
-	let word = el.innerText;
-	word = word.replace("2","-2");
+	let word = el.innerText;	
 	
 	if (LAST_OBJ) {
 		LAST_OBJ.style.fontWeight="";
@@ -745,7 +745,9 @@ function lookupWord(el,onlyLocal,inline) {
 		}
 		el.style.fontWeight="bold";
 		let word = el.innerText;
-		word = word.replace("2", "-2");
+		if (el.innerHTML.indexOf("<sup>") != -1) {
+			word = word.replace("2","-2");
+		}
 		CUR_WORD=word;
 
 		LAST_OBJ = el;
@@ -838,7 +840,7 @@ function lookupWord(el,onlyLocal,inline) {
 	}
 }
 
-function displayDef(meta, def,word) {		
+function displayDef(meta,def,word) {		
 	if (DEBUG) console.log("displayDef(meta,def,word)");	
 	def = makeLinks(def);
 	let defRaw = def.split("<br>");	
@@ -1257,10 +1259,10 @@ function newInputWrapper(e) {
 		let newClass = tmp2[0];
 		word = tmp[0]
 		if (tmp[1].indexOf(",") != -1) word += ",";
-		
-		setClass(fullClassName(newClass));
-		$('#iInput').val(word);
-		newInputWrapper(e);		
+		//setClass(fullClassName(newClass));
+		setClass(fullClassName(newClass),word);
+		//$('#iInput').val(word);
+		//newInputWrapper(e);		
 		return;
 	} else if (word.indexOf(",") === word.length-1) {	
 		// Trim query identifier
@@ -1357,8 +1359,7 @@ function seekWord(word, link = false, lastEnum = false) {
 	}*/	
 	// Cleanup
 	$('#iAux').html("");	
-	$('#iMoreTxt').html("");
-	word = word.replace("2","-2");
+	$('#iMoreTxt').html("");	
 		
 	// Any user supplied break breaks are discarded.
 	word = word.replaceAll("­","");	
@@ -1638,8 +1639,7 @@ function drillDown() {
 	// Take word from iWords to allow for special characters such as 'é'
 	let id = "#w" + SCROLL_INC;
 	let word = $(id).text()	
-	if (word.indexOf("-2") === -1) word = word.replace("2","-2");
-	
+		
 	fetch('backend/getDefAll.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -1706,6 +1706,8 @@ function setClass(c, seek = "") {
 	}
 	if (seek.length > 0) {
 		seekWordSingleClass(seek, LAST_DEF_ENUM);
+	} else {
+		getWords();
 	}
 	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);	
 }
@@ -2737,8 +2739,7 @@ function lookupManyWords() {
 	})
 }
 
-function fmtMeta(meta) {
-	
+function fmtMeta(meta) {	
 	let rep = "<span id='iWordRoot'"
 	rep += " onmouseover=highlight(this,event)";
 	rep += " oncontextmenu='changeScore(event,-1)'";	
@@ -2746,7 +2747,7 @@ function fmtMeta(meta) {
 	// Remove any disambiguation suffix when more than one entry exists for root key
 	tmpCUR_WORD = CUR_WORD
 	for (i = 2; i < 9; i++) {
-		tmpCUR_WORD = tmpCUR_WORD.replace(" " + i, "");		
+		tmpCUR_WORD = tmpCUR_WORD.replace("-" + i, "");		
 	}
 	rep += "><b>" + tmpCUR_WORD + "</b></span>"
 	if (CLASS === "fraser") {
@@ -3035,9 +3036,9 @@ function processKeyDown(ev) {
 		ev.preventDefault();
 	} else if (ev.key === '!') {
 		defaultMeta(false);
-	} else if (ev.key = "ArrowLeft") {
+	} else if (ev.key === "ArrowLeft") {		
 		navDef(ev);
-	} else if (ev.key = "ArrowRight") {
+	} else if (ev.key === "ArrowRight") {
 		navDef(ev);
 	}
 	
