@@ -7,6 +7,7 @@ def usage():
 try:
     dictSource = sys.argv[1]
     key = sys.argv[2]
+    print(key)
 except:
     usage()
 
@@ -18,14 +19,14 @@ with open(dictSource, 'r', encoding = "utf=8") as infile:
 
 try:
     val = jsonDict[key]
-    print(key + " -> " + val)
+    print(key + " -> " + str(val))
 except KeyError:
     if key == "0":
         with open("listing", 'w', encoding = "utf-8") as outfile:            
             d = ""
             for key in jsonDict:                
                 val = jsonDict[key]                
-                outfile.write(d + key + " -> " + val)                
+                outfile.write(d + key + " -> " + str(val))                
                 d = "\n"
     else:
         print("Key : " + key + " is not found in source")

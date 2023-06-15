@@ -20,7 +20,7 @@ with open(dictSource, 'r', encoding = "utf=8") as infile:
 
 try:
     val = jsonDict[key]
-    print("(Current key) " + key + " -> " + val)
+    print("(Current key) " + key + " -> " + str(val))
     if not exists(dictSource):
         print("Source file: " + dictSource + " does not exist")
         exit()
