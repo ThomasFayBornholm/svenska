@@ -1117,6 +1117,7 @@ dofta
 dogmatisera
 doktorera
 dokumentera
+domdera
 domesticera
 dominera
 dona
@@ -1192,6 +1193,7 @@ drösa
 dua
 dubbelbeskatta
 dubbelexponera
+dubbelklicka
 dubbla
 ducka
 duga
@@ -1383,6 +1385,8 @@ finansiera
 finfördela
 fingera
 fingra
+fininställa
+finjustera
 finna
 finna sig
 finnas
@@ -1510,6 +1514,7 @@ framstå
 framträda
 framtvinga
 framväxa
+freda
 fresta
 fria
 fridlysa
@@ -2176,6 +2181,7 @@ godta
 gola
 golfa
 golva
+gorma
 gosa
 gottgöra
 gradera
@@ -2557,6 +2563,7 @@ införa
 införliva
 införskaffa
 inge
+ingjuta
 inglasa
 ingripa
 ingå
@@ -2722,8 +2729,13 @@ jämra sig
 jämställa
 jäsa
 jäva
+kabla
 kackla
 kajka
+kalasa
+kalfatra
+kalibrera
+kalkera
 kalkylera
 kalla
 kalla ihop
@@ -2734,7 +2746,16 @@ kallbearbeta
 kalldra
 kallhamra
 kallna
+kallprata
+kallpressa
+kallröka
+kallröra
+kallsmida
+kallsvettas
 kallvalsa
+kalmera
+kalva
+kaläta
 kamma
 kamma hem
 kamma igenom
@@ -2743,6 +2764,7 @@ kamouflera
 kampera
 kana
 kanalisera
+kandera
 kandidera
 kanonisera
 kanota
@@ -2752,11 +2774,13 @@ kapa till sig
 kapa åt sig
 kappas
 kapprusta
+kappsegla
 kapsejsa
 kapsla in
 karakterisera
 kartera
 kartlägga
+kartonnera
 karva
 kasa
 kassera
@@ -2770,8 +2794,10 @@ kasta sig
 kasta upp
 kasta ur sig
 kasta ut
+kastrera
 katalysera
 kategorisera
+katta
 kava sig
 kavla
 kavla ner
@@ -2779,22 +2805,29 @@ kavla upp
 kedja
 kedjeröka
 kela
+kesa
+kicka
 kidnappa
 kika
 kikna
 kila
+killa
 kinesa
+kinka
 kirra
 kisa
 kissa
 kissa ner sig
 kissa på sig
+kitta
 kittla
 kittlas
 kladda
 kladda ner
+klaffa
 klaga
 klampa
+klamra
 klandra
 klanka
 klanta sig
@@ -2803,6 +2836,7 @@ klappa igen
 klappa igenom
 klappa ihop
 klappa till
+klappra
 klara
 klara av
 klara sig
@@ -2811,8 +2845,10 @@ klara ut
 klarera
 klargöra
 klarlägga
+klarna
 klassa
 klassificera
+klavbinda
 klema
 klema bort
 kleta
@@ -2820,6 +2856,7 @@ kleta ner
 klia
 klibba
 klicka
+klimpa sig
 klinga
 klinga av
 klinga ut
@@ -2837,6 +2874,7 @@ kludda
 kludda ner
 klumpa ihop
 klumpa sig
+klumpa till
 klunka
 klura
 klura ut
@@ -2853,6 +2891,7 @@ kläcka ur sig
 klämma
 klämma sig
 klämta
+klänga
 klättra
 klå
 klösa
@@ -2861,6 +2900,7 @@ knacka
 knacka ner
 knacka på
 knacka ur
+knaggla
 knaka
 knalla
 knappa
@@ -2872,14 +2912,18 @@ knata
 knattra
 knega
 knipa
+knipsa
+knittra
 knixa
 knocka
 knoppa av
 knorra
 knota
+knottra
 knuffa
 knulla
 knussla
+knuttimra
 knycka
 knyppla
 knysta
@@ -2887,13 +2931,17 @@ knyta
 knyta an
 knyta sig
 knyta upp
+knäa
+knäböja
 knäcka
+knäfalla
 knäppa
 knäppa av
 knäppa på
 knäppa till
 knäppa upp
 knåda
+knöla till
 koagulera
 koda
 koda av
@@ -2912,6 +2960,7 @@ kollaborera
 kollapsa
 kollationera
 kollidera
+kollra bort
 kolonisera
 kolportera
 kombinera
@@ -2923,6 +2972,7 @@ komma fram
 komma ifråga
 komma ifrån
 komma igen
+komma ihop sig
 komma ihåg
 komma in
 komma på
@@ -2940,16 +2990,19 @@ kommentera
 kommunicera
 komparera
 kompensera
+kompetensförklara
 kompilera
 komplettera
 komplicera
 komponera
+kompostera
 komprimera
 kompromettera
 kompromissa
 koncentrera
 koncentrera sig
 kondensera
+konditionera
 konfektionera
 konferera
 konfigurera
@@ -2957,13 +3010,16 @@ konfirmera
 konfiskera
 konfrontera
 konfundera
+kongressa
 kongruera
 konjugera
 konka
+konkludera
 konkurrera
 konkursa
 konnotera
 konservera
+konsignera
 konsolidera
 konspirera
 konstatera
@@ -2974,6 +3030,9 @@ konstruera
 konsultera
 konsumera
 kontakta
+kontaminera
+kontera
+kontorisera
 kontra
 kontrastera
 kontrollera
@@ -3014,6 +3073,7 @@ kosta
 kosta på
 kosta på sig
 kovända
+koxa
 krackelera
 krama
 krascha
@@ -3442,6 +3502,7 @@ mildra
 minera
 miniatyrisera
 minimera
+minna
 minnas
 minska
 minutera
@@ -3823,7 +3884,6 @@ pinka
 pipa
 pipa ner
 pippa
-piprensare
 pirra
 piska
 piska upp
@@ -3898,6 +3958,7 @@ pressa
 pressa av
 pressa samman
 prestera
+presumera
 pretendera
 pricka
 prioritera
@@ -4069,7 +4130,6 @@ rensa
 rensa bort
 rensa upp
 rensa ut
-rensare
 repa
 repa in
 repa sig
@@ -4078,6 +4138,7 @@ reparera
 repatriera
 repellera
 repetera
+repliera
 replikera
 representera
 reproducera
@@ -4179,6 +4240,7 @@ rutscha
 ruttna
 ruttna bort
 ruva
+rya
 rycka
 rycka fram
 rycka till
@@ -4666,6 +4728,7 @@ smussla
 smutsa
 smutsa ner
 smutskasta
+smutta
 smycka
 smyga
 smyga in
@@ -4871,6 +4934,7 @@ stegra sig
 steka
 steka sig
 stelna
+sterilisera
 sticka
 sticka av
 sticka ner
@@ -5231,6 +5295,7 @@ teckna
 teckna ner
 teckna sig
 telefonera
+telegrafera
 temperera
 tendera
 tenta
@@ -5376,6 +5441,7 @@ trampa
 trampa upp
 trampa ur
 trampa över
+tramsa
 tranchera
 transferera
 transformera
