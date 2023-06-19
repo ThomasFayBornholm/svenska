@@ -728,6 +728,7 @@ function lookupWord(el,onlyLocal,inline) {
 	$('#iPutMore').css("display","none");
 	// Cleanup
 	$('#iMoreTxt').html("");
+	$('#iMeta').html("");
 
 	if (el) {
 		if (CLASS === "all") {
@@ -3036,9 +3037,7 @@ function processKeyDown(ev) {
 		ev.preventDefault();
 	} else if (ev.key === '!') {
 		defaultMeta(false);
-	} else if (ev.key === "ArrowLeft") {		
-		navDef(ev);
-	} else if (ev.key === "ArrowRight") {
+	} else if (ev.key === "ArrowLeft" || ev.key === "ArrowRight") {		
 		navDef(ev);
 	}
 	
@@ -3077,9 +3076,9 @@ function navDef(ev) {
 			CUR_DEF_ENUM++;
 			if (CUR_DEF_ENUM > N_DEFS) CUR_DEF_ENUM = N_DEFS;
 		}
-	}
-	getDefInd(CUR_DEF_ENUM);
-	getMore(CUR_DEF_ENUM);
+		getDefInd(CUR_DEF_ENUM);
+		getMore(CUR_DEF_ENUM);
+	}	
 }
 
 function clearMore() {
