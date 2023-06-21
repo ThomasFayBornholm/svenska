@@ -93,6 +93,7 @@ adjutant
 adjö
 administration
 adoption
+adoptivförälder
 adrenalinkick
 adress
 adsorption
@@ -250,6 +251,8 @@ amnesti
 amning
 amorbåge
 amortering
+amorteringskrav
+amorteringsplan
 amperemeter
 amplitud
 ampull
@@ -642,6 +645,7 @@ armgång
 armhåla
 armled
 armlängd
+armstöd
 armé
 arméchef
 armékår
@@ -736,6 +740,7 @@ attentat
 attentatsman
 attest
 attestant
+attiralj
 attityd
 attitydundersökning
 attraktion
@@ -758,6 +763,7 @@ auktorrätt
 aula
 aura
 aurikel
+auskultant
 autism
 autist
 autodidakt
@@ -1432,6 +1438,7 @@ besserwisser
 best
 bestraffning
 bestrålning
+bestseller
 bestyrelse
 beställare
 beställning
@@ -2201,6 +2208,7 @@ bärstol
 bärsärk
 bärsärkagång
 bärvåg
+bästsäljare
 bättring
 bävan
 bäver
@@ -2408,6 +2416,7 @@ cykel
 cykel-2
 cykelbana
 cykelhjälm
+cykelkedja
 cykelspark
 cykelväg
 cyklist
@@ -2738,6 +2747,7 @@ doktorsdisputation
 doktorsexamen
 doktorsgrad
 doktrin
+dokumentalist
 dokumentation
 dokumentportfölj
 dokumentär
@@ -3263,6 +3273,7 @@ evolutionism
 evolutionist
 evolutionsbiologi
 evolutionsteori
+exaltation
 examen
 examination
 excitation
@@ -3323,6 +3334,8 @@ fackförening
 fackidiot
 facklitteratur
 fackman
+fackordbok
+fackpress
 fader
 fadäs
 fajt
@@ -3423,6 +3436,7 @@ federation
 feedback
 fegis
 fejd
+fekalier
 fela
 felaktighet
 felbedömning
@@ -3713,6 +3727,7 @@ folkmun
 folkmängd
 folkomröstning
 folkpension
+folkresning
 folkrätt
 folkrörelse
 folksaga
@@ -3870,6 +3885,7 @@ frisedel
 frisersalong
 friskola
 friskulptur
+frislag
 frispark
 frist
 fristad
@@ -4051,6 +4067,7 @@ föda
 födelse
 födelseattest
 födelsedag
+födelsekontroll
 födsel
 föga
 följare
@@ -5191,6 +5208,8 @@ harts
 harv
 hasard
 hashtag
+hasp
+haspel
 hasselmus
 hasselnöt
 hastighet
@@ -5221,6 +5240,7 @@ heder
 hedersbetygelse
 hedersdoktor
 hedersgäst
+hedersledamot
 hederslegion
 hedersman
 hedersmedlem
@@ -5348,6 +5368,7 @@ hjärnatrofi
 hjärnblödning
 hjärndöd
 hjärngymnastik
+hjärninfarkt
 hjärnskakning
 hjärntumör
 hjärtdöd
@@ -5477,6 +5498,7 @@ hygien
 hylla
 hyllning
 hylsa
+hylsnyckel
 hymen
 hymn
 hynda
@@ -5491,6 +5513,7 @@ hyresgäst
 hyreshaj
 hyreskontrakt
 hyreslägenhet
+hyresreglering
 hyresrätt
 hyresvärd
 hyska
@@ -5553,6 +5576,7 @@ härskare
 härstamning
 härtappning
 härva
+härvel
 häst
 hästansikte
 hästgård
@@ -6690,6 +6714,7 @@ kloak
 klocka
 klockarkärlek
 klockgroda
+klockkedja
 klockstapel
 klokskap
 klosett
@@ -7145,6 +7170,7 @@ kos
 kosmetik
 kosmetika
 kosmonaut
+kosmopolit
 kosmos
 kost
 kostnad
@@ -7337,6 +7363,7 @@ kulthandling
 kulting
 kultur
 kulturartikel
+kulturbygd
 kulturgärning
 kulturhistoria
 kulturimperialism
@@ -7460,6 +7487,7 @@ kyrkobibel
 kyrkogård
 kyrkoherde
 kyrkomusiker
+kyrktorn
 kyrkvärd
 kyss
 käft
@@ -7623,6 +7651,7 @@ landskamp
 landskapslag
 landslag
 landsman
+landsmaninna
 landsort
 landssorg
 landsting
@@ -7657,7 +7686,9 @@ last
 lastbil
 lastbilschaufför
 lastbrygga
+lastkran
 lastlucka
+lastning
 lastpall
 lasur
 lasyr
@@ -7700,6 +7731,7 @@ legering
 legitimation
 legitimitet
 legoknekt
+legosoldat
 leguan
 lejdare
 lejonkula
@@ -7857,6 +7889,7 @@ lock
 lockelse
 lockfågel
 locktång
+lodare
 lodlinje
 loft
 loftgång
@@ -7968,6 +8001,7 @@ lyckönskning
 lydelse
 lydkonung
 lydnad
+lyftkran
 lyftsax
 lykta
 lyktstolpe
@@ -8374,6 +8408,7 @@ medarbetare
 medbedömare
 medborgaranda
 medborgare
+medbroder
 medeldistans
 medelhöjd
 medelklass
@@ -8406,6 +8441,7 @@ medlöpare
 medmänniska
 medpatient
 medström
+medsyster
 medtävlare
 medverkan
 medvetenhet
@@ -8837,8 +8873,9 @@ människoande
 människoapa
 människoföda
 människohamn
+människosläkte
 människospillra
-människosyn
+människovänlig
 människoätare
 mänsklighet
 märkning
@@ -9907,6 +9944,7 @@ platå
 plebs
 plenisal
 pleonasm
+pli
 plikt
 plita
 plog
@@ -10307,6 +10345,7 @@ rackare
 racket
 rad
 radar
+radarkontroll
 radian
 radie
 radikal
@@ -10373,6 +10412,7 @@ reaktor
 realisation
 realitet
 reality-tv
+realitytv
 realpolitik
 realtid
 reassurans
@@ -11002,6 +11042,7 @@ samstämmighet
 samtalston
 samtid
 samtidighet
+samvariation
 samvaro
 samverkan
 samvetsfrid
@@ -12018,8 +12059,10 @@ soffkudde
 sofism
 sol
 solarkonstant
+solbränna
 solcell
 soldat
+soldyrkare
 solenergi
 solfjäder
 solgata
@@ -12074,6 +12117,7 @@ sorg
 sorgmantel
 sorgmarsch
 sork
+sorl
 sort
 sosse
 souvenir
@@ -12177,6 +12221,7 @@ splendid isolation
 split
 splittring
 spoiler
+spolare
 spole
 spoling
 sponsor
@@ -12298,6 +12343,7 @@ stamcell
 stamfader
 stamgäst
 stamknöl
+stamkund
 stammare
 stamp
 stamtavla
@@ -12424,6 +12470,7 @@ stolpe
 stolthet
 stomatit
 stomme
+stomp
 stoppare
 stor
 storasyrra
@@ -12586,6 +12633,7 @@ styrekonom
 styrelse
 styresman
 styrka
+styrkeprov
 styrketräning
 styrning
 styrränta
@@ -12593,6 +12641,7 @@ styrsel
 styrstång
 styvdotter
 styvfar
+styvförälder
 styvmor
 styvson
 städare
@@ -12818,6 +12867,7 @@ synvilla
 synvinkel
 syokonsulent
 syra-bas-indikator
+syrabasindikator
 syren
 syrgasmask
 syrinx
@@ -12918,6 +12968,7 @@ taburett
 tacka
 tackjärn
 tacksamhet
+tacksamhetsskuld
 tacksägelse
 tafatt
 tafs
@@ -12953,6 +13004,7 @@ talesperson
 talg
 taliban
 talja
+talkshow
 talkör
 tall
 tallinje
@@ -13024,6 +13076,7 @@ taxi
 taxichaufför
 taxistation
 taxonomi
+tbana
 teamwork
 teater
 teaterdekoration
@@ -13251,6 +13304,7 @@ tiondel
 tippare
 tipptopp
 tipskupong
+tirad
 tisdag
 tistel
 tistelborre
@@ -13560,6 +13614,7 @@ tryckpress
 tryffel
 tryffelsvamp
 trygghet
+trygghetslarm
 träblåsinstrument
 träbock
 trädgräns
@@ -13699,6 +13754,7 @@ tvåbyggare
 tvål
 tvålopera
 tvångsintagning
+tvångsneuros
 tvångsåtgärd
 tvåpol
 tvåsamhet
@@ -14420,6 +14476,7 @@ vattenklosett
 vattenkokare
 vattenkran
 vattenkrasse
+vattenledning
 vattenlinje
 vattenloppa
 vattenmelon
@@ -14764,7 +14821,9 @@ värk
 värld
 världsalltet
 världsatlas
+världsberömdhet
 världsbild
+världsborgare
 världsbrand
 världsdel
 världsetta
@@ -14772,6 +14831,7 @@ världsförklaring
 världshistoria
 världskarta
 världsmakt
+världsmedborgare
 världsmästare
 världsrymd
 världsstad
