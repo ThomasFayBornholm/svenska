@@ -823,7 +823,7 @@ function lookupWord(el,onlyLocal,inline) {
 						$('#iWords').css("visibility", "hidden");
 					}
 					
-					getMore(1);
+					getMore(CUR_DEF_ENUM);
 				} else {					
 					$('#iParDef').html("");
 					$('#iDefDiv').css("display", "block");
@@ -1028,7 +1028,7 @@ function followLink(el) {
 	if (DEBUG) console.log("followLink(" + word + ")");	
 	let oldINC = INC;
 	seekWord(word, true);
-	updateScore();
+	updateScore();	
 }
 
 function getCompDef(meta, def) {
@@ -1296,9 +1296,10 @@ function handleNumericInput() {
 
 // Called internally when word class is known in advance
 function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {		
-	LAST_DEF_ENUM = CUR_DEF_ENUM;
+	//LAST_DEF_ENUM = CUR_DEF_ENUM;
 	CUR_DEF_ENUM = last_enum; 	
-	if (DEBUG) console.log("seekWordSingleClass(word, last_enum), word = " + word, + ", last_enum = " + last_enum)		
+	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
+	if (DEBUG) console.log("seekWordSingleClass(word, last_enum), word = " + word + ", last_enum = " + last_enum)		
 	// Immediately play pronunciation if available
 	pronounce(word);
 	if (word.length > 0) {
