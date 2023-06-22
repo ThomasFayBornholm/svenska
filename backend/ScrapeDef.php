@@ -362,18 +362,18 @@
 		$out = "";		
 		$startLink = "hvtag";
 		$startWord = "hvord";
-		
+		$regex='/&amp;ref=kcnr\d*/'; // Some entries have extra info, drop this info.
+		$link = preg_replace($regex,"", $link);
 		$arr = explode(";", $link);
 		$del = "";
 		foreach($arr as $el) {			
-			if (str_contains($el, "hvtag")) {
+			if (str_contains($el, "hvtag")) {				
 				$out .= $del . "<l>" . strip_tags($el) . "</l>";
 			} else if (str_contains($el, "hvord")) {
 				$out .= $del . strip_tags($el);
 			}
 			$del = "; ";
 		}
-		
 		return $out;		
 	}
 	
@@ -630,7 +630,7 @@
 						if ($pos1) {
 							$pos2 = strpos($m, "</a>",$pos1);
 							if ($pos2 && $pos2 > $pos1) {								
-								$tmpM = $del . "<l>" . substr($m,$pos1 + 1, $pos2 - $pos1 + 1) . "</l>";
+								$tmpM = $del . "<l>" . substr($m,$pos1 + 1, $pos2 - $pos1 -1) . "</l>";								
 							}
 						}
 						$del = ", ";
