@@ -266,6 +266,9 @@ function putMoreMany(moreArr, cur) {
 
 function addDef(key, meta, def, more) {
 	if (DEBUG) console.log("addDef(meta,def,more)");
+	$('#iMeta').html("adding... '<b>" + key + "</b>'");
+	$('#iParDef').html("");
+	$('#iMore').html("");
 	let moreArr = more.split("||");	
 	moreLen = moreArr.length;
 	if (moreLen > 4) {
@@ -286,7 +289,6 @@ function addDef(key, meta, def, more) {
 	.then(json => {
 		if (CLASS === "fraser") $('#iInput').val(key);
 		setTimeout(updateDef(),2000);
-		setTimeout(getMore(1),2000);
 	})
 	.catch(error => {
 		console.log(error);
@@ -3399,7 +3401,7 @@ function fetchDef() {
 		return response.json();
 	})	
 	.then(json => {		
-		if (CLASS === "fraser") {
+		if (CLASS === "fraser") {			
 			let tmp ="";
 			let keys = Object.keys(json);
 			del = "";
