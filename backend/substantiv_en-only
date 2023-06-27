@@ -82,6 +82,7 @@ ackusativ
 ackvisition
 actionfilm
 ad hoc-lösning
+ad hoclösning
 adapter
 addition
 adel
@@ -772,6 +773,7 @@ autokrat
 automation
 automobil
 autonomi
+autopilot
 autopsi
 autostrada
 ava
@@ -2090,6 +2092,7 @@ brödkaka
 brödkant
 brödrost
 brödskiva
+brödsmula
 bröllopsdag
 bröllopsgäst
 bröllopsresa
@@ -3883,6 +3886,7 @@ friplåt
 fris
 frisedel
 frisersalong
+friskhet
 friskola
 friskulptur
 frislag
@@ -4159,6 +4163,8 @@ förgasare
 förgiftning
 förgrening
 förgrund
+förgrundsfigur
+förgrundsgestalt
 förgängelse
 förgätmigej
 förhand
@@ -4849,6 +4855,7 @@ grundbult
 grundforskning
 grundfärg
 grundförbättring
+grundhyra
 grundinställning
 grundkurs
 grundkänning
@@ -4866,8 +4873,10 @@ grundutbildning
 grundval
 grunka
 grupp
+gruppchef
 gruppering
 gruppledare
+gruppsamtal
 grusgrop
 grusgång
 grustäkt
@@ -5204,6 +5213,7 @@ harmoni
 harpest
 harpun
 harr
+hartass
 harts
 harv
 hasard
@@ -5478,6 +5488,7 @@ huvudingång
 huvudkudde
 huvudman
 huvudperson
+huvudregel
 huvudroll
 huvudrollsinnehavare
 huvudrätt
@@ -5488,6 +5499,7 @@ huvudvärk
 huvudvärkstablett
 hy
 hybrid
+hybridbil
 hybris
 hycklare
 hydda
@@ -5506,6 +5518,7 @@ hyperbol
 hypersexualitet
 hypnos
 hypnotisör
+hypokondri
 hypotenusa
 hypotes
 hyra
@@ -6683,6 +6696,7 @@ klasspappa
 klassresa
 klatsch
 klausul
+klave
 klavecin
 klaviatur
 klematis
@@ -7382,6 +7396,7 @@ kund
 kundtjänst
 kundvagn
 kung
+kungaförsäkran
 kungakrona
 kungstanke
 kungstiger
@@ -7539,6 +7554,7 @@ kärnkraftskramare
 kärnpunkt
 kärnreaktor
 kärnskugga
+kärntrupp
 kärnved
 kärra
 kärrhök
@@ -7612,6 +7628,7 @@ laborant
 laboration
 lack
 ladda
+laddhybrid
 laddning
 laddningsbärare
 laddstolpe
@@ -9140,6 +9157,8 @@ nordkant
 nordostpassagen
 nordpol
 norm
+normalfördelning
+normalitet
 norrgök
 norrman
 nos
@@ -9486,6 +9505,7 @@ oreda
 oredlighet
 oregano
 orenlighet
+organdonator
 organisation
 organisatör
 organism
@@ -9590,6 +9610,7 @@ paktum
 palatsrevolution
 palestinier
 palett
+palissad
 pall
 pallkrage
 palm
@@ -10004,6 +10025,7 @@ politik
 politiker
 polityr
 pollenallergi
+pollenanalys
 pollett
 polotröja
 polska
@@ -10391,6 +10413,7 @@ rapportör
 raptus
 raring
 ras
+rasbiologi
 rashets
 rashygien
 rasism
@@ -10436,6 +10459,7 @@ reducering
 reduktion
 redundans
 referens
+referensgrupp
 referensram
 referensränta
 referent
@@ -10443,6 +10467,7 @@ reflektion
 reflex
 reflexion
 reform
+reformator
 reformist
 refraktion
 refraktor
@@ -10473,6 +10498,7 @@ regnskur
 regnskvätt
 regress
 regression
+regulator
 rehabilitering
 reinkarnation
 rekapitulation
@@ -10587,13 +10613,13 @@ reträtt
 reträttplats
 retur
 returbiljett
+returmatch
 reumatism
 rev
 reva
 revansch
 revel
 revers
-revetera
 revision
 revisionism
 revisionist
@@ -10931,6 +10957,7 @@ rösträtt
 röta
 röv
 sabel
+sabotör
 sackaros
 sadel
 sadelfilt
@@ -11785,6 +11812,7 @@ sladd
 slagbjörn
 slagdänga
 slagkraft
+slaglängd
 slagruta
 slagskugga
 slaktare
@@ -11818,6 +11846,7 @@ slingerväxt
 slinka
 slip
 sliper
+slipmassa
 slipover
 slipprighet
 slips
@@ -11906,6 +11935,7 @@ smittspårning
 smocka
 smoking
 smokingklänning
+smugglare
 smuggling
 smula
 smuts
@@ -11962,6 +11992,7 @@ smörja
 smörjkanna
 smörjolja
 smörkräm
+smörtenor
 snabbcement
 snabbmat
 snaps
@@ -12055,6 +12086,7 @@ sockersjuka
 sockerskål
 sockertopp
 soffa
+soffgrupp
 soffkudde
 sofism
 sol
@@ -12183,6 +12215,7 @@ spelöppning
 spenat
 spene
 sperma
+spermadonator
 speta
 spets
 spetsforskning
@@ -12694,6 +12727,7 @@ subjunktion
 subskribent
 substans
 substitution
+subtilitet
 subtraktion
 succession
 successionsordning
@@ -12814,6 +12848,7 @@ svål
 svångrem
 svångremspolitik
 svårighet
+swimmingpool
 swing
 swinger
 syd
@@ -12826,6 +12861,7 @@ sylf
 syll
 sylt
 symaskin
+symaskinsolja
 symbios
 symbol
 symbolik
@@ -13540,6 +13576,7 @@ triangel
 triathlon
 tribun
 triceps
+trift
 trigonometri
 trilla
 trilska
@@ -13658,6 +13695,7 @@ tröja
 tröska
 tröskel
 tröst
+tröstare
 trötthet
 tsunami
 tub
@@ -13680,6 +13718,7 @@ tulpan
 tum
 tumlare
 tumme
+tumregel
 tumvante
 tumör
 tunga
@@ -14456,6 +14495,7 @@ varieté
 varmgång
 varmluft
 varmluftballong
+varmrätt
 varmvattenberedare
 varning
 varningsklocka
@@ -15043,6 +15083,7 @@ zygot
 ägardemokrati
 ägare
 äggcell
+äggdonator
 äggfärg
 ägghinna
 ägghöna
@@ -15268,6 +15309,7 @@ zygot
 ålderskrämpa
 ålderspension
 ålderspresident
+åldersrasism
 åldersskillnad
 åldersstruktur
 ålderssynthet
