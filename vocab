@@ -1013,8 +1013,7 @@ function followLink(el) {
 	if (DEBUG) console.log("followLink");
 	LAST_SCROLL_Y = window.pageYOffset;	
 	LAST_CLASS = CLASS;	
-	LAST_DEF_ENUM = CUR_DEF_ENUM;
-	console.log(LAST_DEF_ENUM);
+	LAST_DEF_ENUM = CUR_DEF_ENUM;	
 	N_REGEX = 0;
 	REGEX_WORDS = [];
 	let word = el.innerText;
@@ -3384,6 +3383,9 @@ function round(dec, places) {
 
 function fetchDef() {
 	if (DEBUG) console.log("fetchDef()");
+	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
+	$('#iParDef').html("");
+	$('#iMore').html("");
 	let backend = 'backend/scrapeDef.php?word=' + CUR_WORD + '&class=' + CLASS
 	if (CLASS === "fraser") {	
 		let query = $('#iInput').val();
@@ -3416,7 +3418,11 @@ function fetchDef() {
 			$('#iDefText').val(tmp);					
 			
 		} else {
-			addDef(json['key'],json['meta'],json['def'],json['more']);		
+			if (! json.hasOwnProperty("error")) {
+				addDef(json['key'],json['meta'],json['def'],json['more']);		
+			} else {
+				$('#iMeta').html("Failed to find match");
+			}
 		}
 	})
 	.catch(error => {

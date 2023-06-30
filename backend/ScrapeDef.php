@@ -17,8 +17,7 @@
 	curl_close($ch);
 			
 	if (strlen($def) === 0) {
-		debug("Failed to retrieve content from Svenska Ordlista server #1.");
-		exit();
+		error("Failed to retrieve content from Svenska Ordlista server #1.");
 	}
 	// Check this resolves to the correct word
 	$find = 'class="slank" href="';
@@ -67,8 +66,7 @@
 	}	
 	
 	if (strlen($def) === 0) {
-		debug("Failed to retrieve content from Svenska Ordlista server #2.");
-		exit();
+		error("Failed to retrieve content from Svenska Ordlista server #2.");		
 	}
 	
 	$originalLength = strlen($def);
@@ -83,15 +81,14 @@
 		$end += strlen($END);
 		
 	} else {
-		debug("Failed to find end of lemma contents");
-		exit;
+		error("Failed to find end of lemma contents");
 	}
 	
 	$filteredLength = $end - $start;		
 	$def = substr($def, $start, $filteredLength);
 		
 	if (!$def) {
-		debug("Failed to remove unneeded content");
+		error("Failed to remove unneeded content");
 		return;
 	}
 		
@@ -136,13 +133,12 @@
 	
 	
 	if (!$foundMatch) {
-		echo json_encode("Failed to retrieve word:" . $word . "; class: " . $class);
-		return;	
+		error(("Failed to retrieve word:" . $word . "; class: " . $class));
 	}
 	
 	$lemmaLength = strlen($def);
 	if ($lemmaLength === 0) {
-		debug("Failed to get lemma #1");
+		error("Failed to get lemma #1");
 		return;
 	}
 	
@@ -150,7 +146,7 @@
 	$defLines = explode("\n",$def);		
 
 	if (count($defLines) < 6) {
-		debug("Failed to get lemma #2");
+		error("Failed to get lemma #2");
 		return;
 	}
 	
@@ -396,7 +392,7 @@
 			}
 		}
 		if (strlen($out) === 0) {
-			debug("Failed to get 'def' information");
+			error("Failed to get 'def' information");
 		} else {
 			return $out;
 		};
@@ -432,7 +428,7 @@
 		$out = str_replace("<br><br>", "<br>",$out);
 		$out = str_replace("EXEMPEL: ; ","EXEMPEL: ",$out); 
 		if (strlen($out) === 0) {
-			debug("Failed to get 'more' information");
+			error("Failed to get 'more' information");
 		} else {
 			return $out;
 		}
@@ -718,6 +714,12 @@
 	
 	function debug($in) {
 		echo "*** " . $in . " ***\n";
+	}
+	
+	function error($in) {
+		$out["error"] = $in;
+		echo json_encode($out);
+		exit();
 	}
 	
 	function getCyclicFields($raw) {
