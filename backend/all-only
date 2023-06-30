@@ -569,6 +569,7 @@ andratenor
 androfobi
 androgen
 androgyn
+andrum
 andtruten
 andtäppa
 anekdot
@@ -596,6 +597,7 @@ anfräta
 anfäkta
 anfäktelse
 anföra
+anförande
 anförare
 anföringsverb
 anförtro
@@ -652,6 +654,7 @@ aning
 aningslös
 anis
 anisett
+anjon
 anka
 ankarboj
 ankare
@@ -4856,6 +4859,7 @@ epitet
 epok
 er
 era
+eran
 erbjuda
 erbjuda sig
 erbjudan
@@ -5422,6 +5426,7 @@ fjällstuga
 fjällvandra
 fjärd
 fjärde
+fjärding
 fjärma
 fjärran
 fjärrtrafik
@@ -5628,11 +5633,11 @@ flåhacka
 flåsa
 flöda
 flöda över
+flöde
 flödesdiagram
 flödesschema
 flöjt
 flöjtist
-flöjtsolo
 flörta
 flörtig
 fnasig
@@ -5693,6 +5698,7 @@ fonetisk
 fonologi
 fontän
 forcera
+forcering
 fordra
 fordra in
 fordras
@@ -7973,9 +7979,11 @@ gruva
 gruva sig
 gruvgas
 gruvlig
+gruvschakt
 gry
 grym
 grymta
+gryn
 gryning
 gryt
 gryta
@@ -7983,6 +7991,7 @@ grytlapp
 grytstek
 grädda
 gräddbakelse
+grädde
 gräddfil
 gräddsnipa
 gräddsnäcka
@@ -8398,6 +8407,7 @@ halmad ål
 halmgul
 halmhatt
 halofenomen
+halogen
 halsa
 halsband
 halsbloss
@@ -8430,6 +8440,7 @@ halvflaska
 halvgräs
 halvgud
 halvhet
+halvklass
 halvkolonn
 halvkonserv
 halvledare
@@ -8438,6 +8449,8 @@ halvligga
 halvlinne
 halvljus
 halvmetall
+halvnot
+halvpension
 halvrim
 halvsitta
 halvslummer
@@ -8707,6 +8720,7 @@ hemtrevlig
 hemuppgift
 hemvist
 hemvård
+hen
 heraldik
 herbivor
 herdestund
@@ -9763,6 +9777,7 @@ infalla
 infallsrik
 infallsvinkel
 infam
+infanteri
 infantilisera
 infarkt
 infatta
@@ -10750,6 +10765,8 @@ karaktär
 karaktärsfast
 karaktärsfel
 karaktärstyp
+karamell
+karavan
 karbamid
 karbin
 karbinhake
@@ -10760,10 +10777,14 @@ kardan
 kardborre
 kardborreband
 kardel
+kardemumma
 kardinal
 kardinaldygd
 kardinalfel
+kardiolog
+karenstid
 karg
+karies
 karikatyr
 karisma
 karismatisk
@@ -10773,6 +10794,7 @@ karlatag
 karlslok
 karltokig
 karm
+karneval
 karnivor
 kaross
 karosseri
@@ -10783,6 +10805,7 @@ karriärstege
 karsk
 karta
 kartagisk
+kartbild
 kartell
 kartera
 kartlägga
@@ -10801,12 +10824,15 @@ kassabok
 kassakista
 kassation
 kassavalv
+kasse
 kassera
 kassera in
+kassett
 kassettak
 kassettdäck
 kassettradio
 kassler
+kassun
 kassör
 kast
 kasta
@@ -10838,11 +10864,15 @@ kastvind
 kasus
 kat
 katabolism
+kataklysm
 katalog
 katalognummer
+katalys
 katalysera
+katamaran
 katapult
 katapultstol
+katastrof
 katastrofal
 katederundervisning
 katedral
@@ -10850,6 +10880,7 @@ kategori
 kategorisera
 katet
 kateter
+katjon
 katod
 katolicism
 katolsk
@@ -10857,6 +10888,7 @@ katt
 katta
 kattaktig
 kattens lek med råttan
+kattguld
 kattsim
 kattunge
 kattvind
@@ -10923,6 +10955,7 @@ kirskål
 kis
 kis-2
 kisa
+kisel
 kissa
 kissa ner sig
 kissa på sig
@@ -11814,6 +11847,7 @@ korvstånd
 koryfé
 kos
 kosmopolit
+kosmos
 kost
 kost och logi
 kosta
@@ -11822,12 +11856,16 @@ kosta mer än det smakar
 kosta på
 kosta på sig
 kosta schaber
+kostnad
+kostym
+kotlett
 kotlettfisk
 kotpelare
 kotte
 kovända
 kovändning
 koxa
+krabba
 krackelera
 kraft
 kraftansträngning
@@ -11851,6 +11889,7 @@ krama
 kramdjur
 kramgo
 kramkalas
+kramp
 krampaktig
 kramsnö
 kran
@@ -12351,6 +12390,7 @@ kärleksgnabb
 kärlekskrank
 kärleksnäste
 kärlig
+kärlkramp
 kärna
 kärnavfall
 kärnbränsle
@@ -15970,6 +16010,7 @@ panel
 paneldebatt
 paneldiskussion
 panflöjt
+panik
 panikslagen
 panikunge
 panisk
@@ -16581,6 +16622,9 @@ potatismos
 potatissallad
 potatisskalare
 potens
+potential
+pott
+poäng
 poängtera
 pr  -1
 pracka
@@ -20251,6 +20295,7 @@ späda
 spädbarn
 spädgris
 spänd
+spänn
 spänna
 spänna blicken i någon
 spännande
@@ -21171,6 +21216,7 @@ sydsluttning
 sydvart
 sydväst
 syfta
+syfte
 syl
 sylf
 syll
@@ -22180,6 +22226,7 @@ tjänstebil
 tjänstebrev
 tjänsteförsändelse
 tjänsteman
+tjänstepension
 tjänsteperson
 tjänsterum
 tjänstesektor
