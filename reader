@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv"></html>
+<head>
+	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reader</title>
+	<link rel="stylesheet" href="reader.css">
+	<script src="jquery-3.6.0.js"></script>		
+</head>
+<body onload="startup()">
+<div id="iDropZone" ondragover="getFile(event)" ondrop="test(event)">
+<p class="dragText">Drag file here</p>
+</div>
+<div id="iText">
+<p class="textForReading" id="iParTxt"></p>
+</div>
+</body>
+<script>
+function startup() {
+
+}
+function getFile(ev) {
+	ev.preventDefault();
+}
+
+function test(ev) {
+	ev.preventDefault();
+	const file = ev.dataTransfer.items[0].getAsFile();
+	readFile(file,hasLoaded);
+	
+}
+
+function readFile(file, hasLoaded) {
+	var reader = new FileReader();
+    reader.onload = hasLoaded;
+    reader.readAsText(file);
+}
+
+function hasLoaded(e) {
+	let txt = e.target.result;	
+	txt = txt.replaceAll("\r\n","<br>");
+	let txtArr = txt.split("<br>");
+	let out = "";
+	let br = ""; // Line break
+	for (i = 0; i < txtArr.length; i++) {		
+		let len = txtArr[i].length;
+		if (len > 0) {
+			let wordArr = txtArr[i].split(" ");
+			let tmpWord = "";
+			let del = "";
+			for (j = 0; j < wordArr.length; j++) {
+				tmpWord += del + "<span id=" + i + "_" + j +  " onclick='logWord(this)'>" + wordArr[j] + "</span>";
+				del = " ";
+			}	
+			out += br + tmpWord;
+			br = "<br><br>";
+		} else {
+			out += "<br>";
+		}
+		
+		
+	}
+	out = out.replaceAll("<br><br><br>","<br><br>");
+	out = out.replaceAll("<br><br><br>","<br><br>");
+	$('#iParTxt').html(out);
+}
+
+function logWord(el) {
+	let word = el.innerText;
+	word = removePunc(word);
+	let id = "#" + el.id;
+	
+	$(id).css("color","blue");
+	fetch('backend/appendWord.php?word=' + word, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'applicaiton/json'
+		}
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
+function removePunc(word) {
+	let arr = [",", ".", "?",";"];
+	for (i = 0; i < arr.length; i++) {
+		word = word.replaceAll(arr[i],"");
+	}
+	return word;
+}
+</script>
+</html>
