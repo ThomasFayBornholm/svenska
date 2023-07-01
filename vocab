@@ -3030,6 +3030,8 @@ function processKeyDown(ev) {
 		fetchDef();
 	} else if (ev.key === "F2") {
 		getRaw();
+	} else if (ev.key === "F6") {
+		walkListing();
 	} else if (ev.key === "#") {
 		addWordWithEnum();
 	} else if (ev.key === '"') {
@@ -3550,5 +3552,44 @@ function isNumeric(value) {
     return /^-?\d+$/.test(value);
 }
 
+function walkListing() {
+	if (DEBUG) console.log("walkListing()");
+	fetch('backend/getListing.php', {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();	
+	})
+	.then(json => {
+		let arr = json;
+		let last_inc
+		for (let i = 0; i < arr.length - 1; i++) {
+		
+			let word = arr[i];
+			if (word.length > 0) {
+				let inc = i * 6000;			
+				setTimeout(fillInput,inc,word);						
+				//setTimeout(rand,inc);
+			}
+		}
+		setTimeout(fillInput, arr.length * 6000, "DONE");
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
+function fillInput(text) {	
+	if (DEBUG) console.log("fillInput(text), text = " + text)
+	$('#iInput').val(text);
+}
+
+function rand() {
+	$('#iInput').val(Math.random());
+}
 </script>
 </html>
