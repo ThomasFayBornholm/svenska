@@ -8264,6 +8264,7 @@ gångare
 gångart
 gångavstånd
 gångbana
+gångbar
 gånglåt
 gångstig
 gångväg
@@ -8800,6 +8801,7 @@ historia
 historicism
 historielös
 historik
+historisk
 hit
 hitintills
 hitresa
@@ -9110,6 +9112,7 @@ hälsobrunn
 hälsokost
 hälsoångest
 hämma
+hämna
 hämnas
 hämnd
 hämndaktion
@@ -10732,6 +10735,7 @@ kantor
 kantra
 kantsöm
 kaos
+kaotisk
 kapa
 kapa till sig
 kapa åt sig
@@ -12416,6 +12420,7 @@ kärnvapenparaply
 kärnved
 kärnvirke
 kärr
+kärra
 kärring
 kärringaktig
 kärrsnäppa
@@ -16435,6 +16440,7 @@ platt som en pannkaka
 platt-tv
 platta
 plattfisk
+platthet
 plattityd
 plattysk
 plattyska
@@ -16819,6 +16825,7 @@ prospekt
 prospektera
 prost
 protegera
+protegé
 protektion
 protest
 protestantisk
@@ -17001,6 +17008,7 @@ påannonsera
 påbjuda
 påbud
 påbörja
+pådrag
 pådrivare
 påfallande
 påfart
@@ -17537,6 +17545,7 @@ rigid
 rigla
 rigorös
 rik
+rike
 rikedom
 rikhaltig
 riklig
@@ -18624,7 +18633,7 @@ sjal
 sjalett
 sjaskig
 sju
-sjubb
+sjua
 sjubbpäls
 sjubbskinn
 sjudundrande
@@ -18633,14 +18642,19 @@ sjuk
 sjukamp
 sjukavdrag
 sjukbädd
+sjukdom
+sjukersättning
 sjukfrånvaro
 sjukförsäkring
+sjukgymnast
 sjukgymnastik
 sjukjournal
 sjukkassa
 sjuklig
 sjukläger
+sjuklön
 sjukpenning
+sjuksköterska
 sjukstuga
 sjukvikarie
 sjukvård
@@ -19006,6 +19020,7 @@ skotstek
 skott
 skotta
 skotthåll
+skottkärra
 skottlinje
 skottlossning
 skottläge
@@ -19179,6 +19194,7 @@ skydd
 skydda
 skyddad verkstad
 skyddshelgon
+skyddsling
 skyddsmask
 skyddsnät
 skyddspatron
@@ -20213,6 +20229,7 @@ spott
 spotta
 spotta upp sig
 spottkörtel
+spottloska
 spraka
 sprattelgubbe
 sprattla
@@ -20419,6 +20436,7 @@ starta upp
 starta/öppna
 starta/öppna eget
 startspjäll
+stat
 statik
 station
 stationera
@@ -24075,6 +24093,7 @@ vapenfri
 vapenfri tjänst
 vapenmakt
 vapenslag
+vapenstillestånd
 vapenvägran
 var
 var och en
@@ -31419,7 +31438,6 @@ sjalett
 sjaskig
 sju
 sjua
-sjubb
 sjuk
 sjuk humor
 sjuka hus
