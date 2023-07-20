@@ -12,15 +12,27 @@
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");			
+	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
 	$def = curl_exec($ch);			
-	curl_close($ch);
-			
+	curl_close($ch);	
+	// Remove all "mdr" class lines from def. These are not interesting to us
+	$defArr = explode("\n", $def);
+	//var_dump($defArr);
+	$del = "";
+	$def = "";
+	foreach($defArr as $el) {
+		if (!str_contains($el,'class="mdr"')) {						
+			$def .= $del . $el;
+		}
+		$del = "\n";
+	}
+	
 	if (strlen($def) === 0) {
 		error("Failed to retrieve content from Svenska Ordlista server #1.");
 	}
 	// Check this resolves to the correct word
 	$find = 'class="slank" href="';
+	$find = 'class="slank';
 	if (strpos($def,$find)) {
 		// Need to do some more work to resolve to word matches
 		// Use id instead of word as key
