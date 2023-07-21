@@ -195,6 +195,7 @@ artikulationssätt
 artilleri
 artistnamn
 artnamn
+artonhundratalet
 arv
 arvegods
 arvode
@@ -781,6 +782,7 @@ dråpslag
 dröjsmål
 drömmeri
 dubbelfönster
+dubbelrum
 dubbelseende
 dubbelspel
 dugg
@@ -832,6 +834,7 @@ efterstygn
 eftersättsblad
 eftersök
 eftertryck
+egennamn
 egensinne
 ego
 ekfat
@@ -846,8 +849,10 @@ eldorado
 eldupphör
 eldvapen
 eldvatten
+elektronhölje
 elektronmikroskop
 elektronrör
+elektronskal
 elektrostål
 element
 elementhus
@@ -869,6 +874,7 @@ enfamiljshus
 engagemang
 engifte
 enhetsflygplan
+enkelrum
 enskifte
 entreprenörskap
 envig
@@ -981,6 +987,7 @@ flerfamiljshus
 flerfärgstryck
 flerpartisystem
 flertal
+flicknamn
 flimmerhår
 flin
 flintskalle
@@ -1003,6 +1010,7 @@ flygplan
 flygvapen
 flyktförsök
 flytplagg
+flyttblock
 flyttlass
 fläderbär
 fläderte
@@ -1495,6 +1503,7 @@ hankön
 hantverk
 hardjur
 harmonium
+hasardspel
 hasardspelsyndrom
 hasch
 hastverk
@@ -1927,6 +1936,7 @@ knatter
 kneg
 knep
 knip
+knipa
 knippe
 knivhugg
 knog
@@ -2714,7 +2724,6 @@ nidingsverk
 nit
 nitrogen
 nittiotal
-nittonhundra-talet
 nittonhundratalet
 njurbäcken
 njurbälte
@@ -2772,6 +2781,7 @@ nödvärn
 nöje
 nöjesfiske
 nötkött
+nötskal
 o
 obehag
 objekt
@@ -2853,6 +2863,7 @@ paket
 palats
 paltbröd
 pannben
+pannrum
 panorama
 pansar
 pansarglas
@@ -2892,6 +2903,7 @@ pensionsvillkor
 pensum
 pentagram
 pentry
+pepparkakshjärta
 pepparkorn
 pepparrotskött
 perfekt
@@ -3065,6 +3077,7 @@ rackartyg
 radavstånd
 radergummi
 radhus
+radiohus
 radiokåseri
 radium
 raffinemang
@@ -3382,6 +3395,7 @@ sjukläger
 sjukvårdsbiträde
 sjutillhållarlås
 sjuttiotal
+sjuttonhundratalet
 själsliv
 själv
 självbedrägeri
@@ -3639,6 +3653,7 @@ snusk
 snuva
 snyft
 snäckdjur
+snäckskal
 snälltåg
 snäpp
 snärj
@@ -3838,6 +3853,7 @@ strävande
 stråk
 stråkdrag
 stråke
+strålknippe
 strö
 ströbröd
 strög
@@ -4449,6 +4465,7 @@ vax
 veck
 veckberg
 veckoslut
+vederlag
 vedernamn
 vedträ
 vektorfält

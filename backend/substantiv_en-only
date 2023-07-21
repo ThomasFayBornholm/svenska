@@ -2,6 +2,7 @@ A-aktie
 A-nivå
 AP-fond
 AV-central
+Aaktie
 B-aktie
 B-film
 B-nivå
@@ -82,6 +83,7 @@ ackvisition
 actionfilm
 ad hoc-lösning
 ad hoclösning
+adaptation
 adapter
 addition
 adel
@@ -614,6 +616,7 @@ arbetsmätning
 arbetsnedläggelse
 arbetsplats
 arbetsplenum
+arbetsseger
 arbetsskada
 arbetstagare
 arbetstid
@@ -1003,6 +1006,7 @@ badhandduk
 badhytt
 badmadrass
 badmatta
+badrock
 badsalt
 badstrand
 bagagelucka
@@ -1695,6 +1699,7 @@ blockchoklad
 blockflöjt
 blockskiva
 blodapelsin
+blodbank
 blodbok
 blodbrist
 blodcancer
@@ -2860,6 +2865,7 @@ dröm
 drömbok
 drömmare
 drömmil
+drömprins
 drömtydning
 drönarbild
 drönare
@@ -4000,6 +4006,7 @@ fyllerist
 fyllning
 fylltratt
 fyndighet
+fyndort
 fyr
 fyrbackslinje
 fyrhörning
@@ -4088,6 +4095,7 @@ följare
 följd
 följdsats
 följdriktighet
+följdsjukdom
 följeslagare
 följetong
 fönsterbräda
@@ -4858,6 +4866,7 @@ grotesk
 grotta
 grovlek
 grovtarm
+grubblare
 grumling
 grund
 grundare
@@ -4930,6 +4939,7 @@ gråberg
 grågås
 grålla
 gråsej
+gråsosse
 gråsten
 gråstenkyrka
 gråt
@@ -5023,6 +5033,7 @@ gymnasist
 gymnast
 gymnastik
 gymnastikdirektör
+gymnastiksko
 gympa
 gynnare
 gyttja
@@ -5223,6 +5234,7 @@ hare
 harkrank
 harm
 harmoni
+harmonik
 harpest
 harpun
 harr
@@ -5284,6 +5296,7 @@ helg
 helgd
 helgdag
 helhet
+helhetsbild
 helhetssyn
 helighet
 helikopter
@@ -5296,6 +5309,7 @@ heltid
 helton
 heltäckningsmatta
 helvetesmaskin
+heman
 hembygdsgård
 hemdator
 hemfalla
@@ -5489,6 +5503,7 @@ husmor
 husockupation
 husse
 hustru
+hustyrann
 husvagn
 hutt
 huva
@@ -5836,6 +5851,7 @@ ifyllnad
 igel
 igelkott
 igenkänning
+ignorans
 igångsättning
 ihärdighet
 ihålighet
@@ -6191,6 +6207,7 @@ istid
 isvak
 italienska
 iver
+ivrare
 jacka
 jacketkrona
 jackett
@@ -7089,6 +7106,7 @@ kontradans
 kontradiktion
 kontraktsprost
 kontraktsvård
+kontrapunkt
 kontrarevolution
 kontrast
 kontraströntgen
@@ -7119,7 +7137,6 @@ koordinator
 kopek
 kopia
 kopiator
-kopiering
 kopieringsapparat
 kopilot
 kopp
@@ -7706,6 +7723,7 @@ langett
 lanka
 lans
 lansering
+lantarbetare
 lantbrukare
 lanterna
 lantgreve
@@ -9694,6 +9712,7 @@ papyrus
 parabel
 parabolantenn
 parad
+paradigm
 paradmarsch
 paradox
 paraduniform
@@ -9732,7 +9751,6 @@ paroll
 parser
 parsing
 part
-partianhängare
 partifärg
 partihandel
 partikularism
@@ -9987,6 +10005,7 @@ platina
 platinaskiva
 plats
 platsannons
+platsbiljett
 platt-tv
 platta
 plattfisk
@@ -10132,6 +10151,7 @@ potentat
 potential
 pott
 poäng
+poängseger
 pracka
 practical joke
 praktik
@@ -10202,6 +10222,7 @@ priskontroll
 prislapp
 prispall
 prispress
+prisreglering
 pristagare
 prisutdelning
 privatisering
@@ -10403,6 +10424,7 @@ rackare
 racket
 rad
 radar
+radarfyr
 radarkontroll
 radian
 radie
@@ -10412,9 +10434,11 @@ radikalpacifism
 radikalpacifist
 radio
 radioaktivitet
+radiofyr
 radiogrammofon
 radioröst
 radiotelegrafi
+radioterapi
 radiovåg
 ragata
 ragg
@@ -10929,6 +10953,7 @@ rättvisefråga
 räv
 rävsax
 rå
+råbiff
 rådata
 rådgivare
 rådgivning
@@ -10972,6 +10997,7 @@ rökgång
 rökkupé
 rökring
 röntgen
+röntgenbehandling
 röntgenstrålning
 röra
 rördrom
@@ -11660,6 +11686,8 @@ skjorta
 skjortblus
 skjutdörr
 skjutfält
+skjutjärnsintervju
+skjutjärnsjournalist
 skjutning
 skjuts
 sko
@@ -11751,6 +11779,7 @@ skräcködla
 skräddare
 skräll
 skrämsel
+skrämselhicka
 skräpkultur
 skrävlare
 skråma
@@ -12098,6 +12127,7 @@ snörning
 snörpvad
 snörsko
 snöskata
+snösko
 snöslunga
 snösmocka
 snöstorm
@@ -12164,6 +12194,7 @@ solvind
 sommar
 sommarferie
 sommarmånad
+sommarpratare
 sommarsjuka
 sommarsport
 sommarstuga
@@ -12543,6 +12574,7 @@ stolgång
 stolla
 stolpbod
 stolpe
+stolpsko
 stolthet
 stomatit
 stomme
@@ -12657,6 +12689,7 @@ strävbåge
 stråhatt
 stråk
 stråkinstrument
+strålbehandling
 strålblomma
 stråle
 strålglans
@@ -12953,6 +12986,7 @@ syren
 syrgasmask
 syrinx
 syrra
+syskonkärlek
 sysselsättning
 syssla
 syssling
@@ -13608,6 +13642,7 @@ tredjedel
 trefjärdedelstakt
 trehörning
 trekammarbrunn
+trekant
 treklang
 trend
 trendskapare
@@ -13618,6 +13653,7 @@ trettondag
 tretår
 trevare
 triangel
+triangeldrama
 triathlon
 tribun
 triceps
@@ -13719,6 +13755,7 @@ träningsdräkt
 träningsoverall
 träskalle
 träsked
+träsko
 träskofiol
 träskruv
 träslöjd
@@ -13853,6 +13890,7 @@ tyda
 tydlighet
 tyfus
 tygel
+tygsko
 tyngd
 tyngdkraft
 tyngdlagen
@@ -14547,6 +14585,7 @@ varmrätt
 varmvattenberedare
 varning
 varningsklocka
+varningstriangel
 varseblivning
 vart
 varulv
