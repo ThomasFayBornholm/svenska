@@ -8,6 +8,7 @@
 	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';	
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';
 	$url = str_replace(" ", "%20", $urlBase . $word);	
+	$url = str_replace("ä", "%C3%A4", $url);
 	$ch = curl_init();		
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
@@ -36,11 +37,14 @@
 	if (strpos($def,$find)) {
 		// Need to do some more work to resolve to word matches
 		// Use id instead of word as key
+		
 		$tmpLines = explode("\n", $def);
 		$tmpClass = "";
 		$isMatch = false;
 		foreach($tmpLines as $l ) {			
-			if (str_contains($l, "wordclass")) {					
+			// Discard slutled is slutled is not desired
+			$keep = $class === "slutled" || !str_contains($l, "</span>-");
+			if (str_contains($l, "wordclass") && $keep) {												
 				$tmpClass = getClass($l,"wordclass", true); // Discard trai
 				if ($tmpClass) {					
 					$tmpClass = str_replace("</span>","",$tmpClass);

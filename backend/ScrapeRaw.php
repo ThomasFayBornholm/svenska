@@ -17,7 +17,7 @@
 	curl_close($ch);
 			
 	if (strlen($def) === 0) {
-		debug("Failed to retrieve content from Svenska Ordlista server #1.");
+		echo "Failed to retrieve content from Svenska Ordlista server #1.";
 		exit();
 	}
 	// Check this resolves to the correct word
