@@ -1716,8 +1716,7 @@ function setClass(c, seek = "") {
 }
 
 function getLastWord() {
-	if (DEBUG) console.log("getLastWord()")	
-	console.log(LAST_DEF_ENUM)
+	if (DEBUG) console.log("getLastWord()")		
 	if (LAST_WORD.length > 0 && LAST_CLASS != "all") {		
 		let tmp = CLASS;
 		setClass(LAST_CLASS,LAST_WORD);		
