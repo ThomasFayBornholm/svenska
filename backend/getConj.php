@@ -126,12 +126,12 @@
 		// Adverbs need to give the following behaviour:
 		// "i morse": 'i morse eller imorse'
 		// "imorse": 'i morse eller imorse'
-		} else if ($el === "adverb" && strlen($rest) > 0) {
+		} else if ($el === "adverb" && strlen($rest) > 0 && $word[0] === 'i') {			
 			$restList = explode(" ", $rest);						
 			foreach($wordList as $key) {				
-				$conjugations = getConjugations($key, $dict);					
-				
-				if (containsAllWords($restList, $conjugations)) {					
+				echo $key;
+				$conjugations = getConjugations($key, $dict);									
+				if (containsAllWords($restList, $conjugations) && $key[0] === "i") {					
 					$out["class"] = $el;
 					$out["word"] = $key;
 					echo json_encode($out);
