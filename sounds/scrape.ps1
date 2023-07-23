@@ -1,6 +1,6 @@
 $url="https://isolve-so-service.appspot.com/pronounce?id="
 
-$start=102949
+$start=228860
 $end=$start + 100000
 for ($i = $start; $i -lt $end; $i++) {
 	$id = $i.ToString();	
