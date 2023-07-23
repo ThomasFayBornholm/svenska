@@ -172,6 +172,7 @@ aktivitetsersättning
 aktning
 aktris
 aktör
+akutmottagning
 akvarell
 akvedukt
 alant
@@ -1059,6 +1060,7 @@ baluster
 balustrad
 bambu
 bambubjörn
+ban
 bana
 banan
 bananfluga
@@ -1923,6 +1925,7 @@ bostadskö
 bostadsmarknad
 bostadsrätt
 bostadsrättsförening
+bostongurka
 bosättning
 bot
 bot-2
@@ -2331,6 +2334,7 @@ charmknutte
 charmoffensiv
 charmtroll
 charmör
+chatt
 chaufför
 check
 chef
@@ -2548,6 +2552,7 @@ datortomografi
 datumgräns
 davidsstjärna
 deadline
+debacle
 debatt
 debattartikel
 debattör
@@ -2880,6 +2885,7 @@ dubbeldörr
 dubbelhaka
 dubbelhet
 dubbelmoral
+dubbelnatur
 dubbelnelson
 dubbelstjärna
 dubbelsäng
@@ -3540,6 +3546,7 @@ fingertopp
 fingertoppskänsla
 fingervante
 fingervisning
+finish
 fink
 finlandssvensk
 finlandssvenska
@@ -3593,6 +3600,7 @@ fjällkedja
 fjällräv
 fjällstuga
 fjällvandring
+fjällämmel
 fjärd
 fjärdedel
 fjärding
@@ -5005,6 +5013,7 @@ gummibåt
 gummigutta
 gummihandske
 gummikula
+gummiparagraf
 gummiplatta
 gummisnodd
 gummistövel
@@ -5482,8 +5491,10 @@ hundradel
 hundrakronorssedel
 hundralapp
 hundring
+hundäxing
 hunger
 hungersnöd
+hungerstrejk
 hunk
 hurra
 hurts
@@ -6866,6 +6877,7 @@ knäskål
 knästrumpa
 knöl
 knölpåk
+knölsvan
 ko
 koagulation
 koagulering
@@ -7288,6 +7300,7 @@ krigsrubrik
 krigsrätt
 krigstillstånd
 kriminalitet
+kriminalroman
 kriminalteknik
 kriminalvård
 kriminalvårdare
@@ -7788,7 +7801,9 @@ legation
 legend
 legering
 legitimation
+legitimist
 legitimitet
+legitimitetsprincipen
 legoknekt
 legosoldat
 leguan
@@ -7960,7 +7975,6 @@ lodlinje
 loft
 loftgång
 logg
-loggfil
 logi
 logik
 logistik
@@ -8096,6 +8110,7 @@ lägenhetshotell
 lägereld
 läggning
 läkare
+läkarmottagning
 läkarpraktik
 läkarsekreterare
 läkarundersökning
@@ -8116,6 +8131,7 @@ längtan
 länk
 länkare
 läns
+länsresidens
 länsrätt
 länsstyrelse
 länstol
@@ -8253,6 +8269,7 @@ lövruska
 lövskog
 lövsprickning
 lövtäkt
+löväng
 machete
 mack
 macka
@@ -8915,6 +8932,7 @@ mustang
 mustasch
 muta
 mutation
+mutta
 myalgi
 mygga
 myglare
@@ -9254,6 +9272,7 @@ nyckelbiotop
 nyckelknippa
 nyckelperson
 nyckelpiga
+nyckelroman
 nydanare
 nyemission
 nyetablering
@@ -9449,6 +9468,7 @@ olyckskamrat
 olyckskorp
 olydnad
 olägenhet
+olåt
 ombildning
 ombudsman
 ombyggnad
@@ -9806,6 +9826,7 @@ pelikan
 pelikanfågel
 pellejöns
 pellet
+pen
 pendang
 pendel
 pendlare
@@ -10639,6 +10660,7 @@ reservoarpenna
 reservofficer
 reservspelare
 reseskildring
+residens
 resistans
 resistor
 reskoffert
@@ -11068,6 +11090,7 @@ salpingit
 salskrake
 salstenta
 saltbildare
+saltgurka
 saltöken
 salu
 salva
@@ -11231,6 +11254,7 @@ scen
 scenvind
 schackpjäs
 schakt
+schilling
 schism
 schismatiker
 schizofreni
@@ -11578,6 +11602,7 @@ skadegörelse
 skadeverkan
 skaffning
 skaft
+skakel
 skakning
 skala
 skalbagge
@@ -11668,6 +11693,7 @@ skildrare
 skildring
 skiljedomare
 skiljevägg
+skilling
 skillnad
 skilsmässa
 skinka
@@ -11894,6 +11920,7 @@ slamning
 slamsa
 slang
 slang-2
+slanggurka
 slant
 slantsingling
 slarva
@@ -12860,6 +12887,7 @@ svalka
 svallvåg
 svamp
 svan
+svanhals
 svankrygg
 svans
 svansföring
@@ -13043,6 +13071,7 @@ sång
 sångare
 sångerska
 sångfågel
+sångsvan
 såpbubbla
 såpopera
 sårmarkör
@@ -13220,6 +13249,7 @@ telefax
 telefon
 telefonhytt
 telefoni
+telefonkatalog
 telefonkiosk
 telefonstolpe
 telefonterror
@@ -13492,6 +13522,7 @@ tolerans
 tolft
 tolk
 tolkning
+tolvskilling
 tolvtaggare
 tom
 tomat
