@@ -10,6 +10,15 @@ while ($file) {
 		if ($class.length -eq 0) {
 			$class="en";
 		}
+		if ($class -eq "t") {
+			$class = "ett";
+		} elseif ($class -eq "d") {
+			$class = "adv"
+		} elseif ($class -eq "j") {
+			$class = "adj"
+		} elseif ($class -eq "v") {
+			$class = "verb"
+		}
 		$word = Read-Host "Word"
 		if ($word.length -ne 0) {
 			Copy-Item "./tmp/$name" "./processed/$name"
