@@ -602,6 +602,7 @@ arbetsförmedlare
 arbetsförmedling
 arbetsgivare
 arbetsgrupp
+arbetsinställelse
 arbetskamrat
 arbetskraft
 arbetskraftsinvandring
@@ -2317,6 +2318,7 @@ centimeter
 centralantenn
 centralbank
 centralisering
+centralkommitté
 centralkyrka
 centralstation
 ceremoni
@@ -2750,6 +2752,7 @@ djurläkare
 djurpark
 djurpsykologi
 djurrätt
+djurrättsaktivist
 djurskötare
 djurvän
 djävul
@@ -2824,6 +2827,7 @@ dricka
 dricks
 drift
 drift-2
+driftkostnad
 driftstörning
 drill
 drillborr
@@ -3224,6 +3228,7 @@ epifania
 epifys
 epifyt
 epigon
+epik
 epilepsi
 epileptiker
 epilog
@@ -3605,6 +3610,7 @@ fjärd
 fjärdedel
 fjärding
 fjäril
+fjärilskotlett
 fjärran
 fjärrkontroll
 fjärrkyla
@@ -3720,6 +3726,7 @@ flärpa
 fläskfilé
 fläskfärs
 fläskkorv
+fläskkotlett
 fläskschnitzel
 fläta
 flåbuse
@@ -4071,6 +4078,7 @@ färskvara
 fästman
 fästmö
 fästning
+fästpunkt
 fågel
 fågelholk
 fågelsång
@@ -5107,6 +5115,7 @@ göteborgska
 göteborgsvits
 hack
 hacka
+hackkyckling
 hackspett
 hadron
 hage
@@ -5578,6 +5587,7 @@ häck
 häckla
 häcklare
 häcklöpning
+häckning
 hädanfärd
 häftstift
 hägring
@@ -5640,6 +5650,7 @@ hästkur
 hästrygg
 hästskjuts
 hästsko
+hästskojare
 hästtjej
 hästväg
 hätskhet
@@ -6071,6 +6082,9 @@ inskränkning
 inskärning
 insmuggling
 insolation
+insomni
+inspark
+inspektion
 inspektor
 inspektör
 inspelning
@@ -6520,6 +6534,7 @@ kanin
 kanjon
 kanna
 kannibal
+kannibalism
 kanon
 kanon-2
 kanonföda
@@ -6542,6 +6557,7 @@ kapillär
 kapitalförstöring
 kapitalism
 kapitalist
+kapitalkostnad
 kapitulation
 kappa
 kapplöpning
@@ -7050,6 +7066,7 @@ konjak
 konjugat
 konjugation
 konjunktion
+konjunktiv
 konjunktur
 konklusion
 konkurrens
@@ -7091,6 +7108,7 @@ konstnär
 konstnärssjäl
 konstpaus
 konstruktion
+konstskojare
 konståkning
 konsul
 konsulat
@@ -7781,6 +7799,7 @@ lavin
 lavineffekt
 lax
 laxfisk
+laxkotlett
 laxöring
 led
 leda
@@ -7954,6 +7973,7 @@ ljudstyrka
 ljudvåg
 ljumske
 ljung
+ljusbild
 ljusbrunn
 ljusbrytning
 ljusbåge
@@ -8091,6 +8111,7 @@ lyktstolpe
 lymfa
 lymfkörtel
 lymmel
+lyrik
 lyriker
 lysboj
 lysgas
@@ -8249,6 +8270,7 @@ löneglidning
 lönegrad
 lönekaka
 löneklass
+lönekostnad
 lönelyft
 lönepåslag
 lönerörelse
@@ -8291,6 +8313,7 @@ magnecyl
 magnet
 magnetism
 magnetisör
+magnetsvävare
 magnumbutelj
 magsaft
 magsäck
@@ -8570,6 +8593,7 @@ mentalism
 mentalitet
 mentor
 meny
+merinoull
 merit
 meritering
 meritlista
@@ -8817,6 +8841,7 @@ morgon
 morgondag
 morgondagg
 morgonluft
+morgonsol
 morgonstund
 morgontidning
 morisk
@@ -8908,6 +8933,7 @@ muntration
 mur
 murare
 murbräcka
+murfog
 murning
 mus
 musa
@@ -9554,6 +9580,7 @@ opponent
 opportunism
 opposition
 oppositionsledare
+optativ
 optiker
 optimism
 optimist
@@ -9647,6 +9674,7 @@ ostronkniv
 osäkerhet
 otack
 otidighet
+otjänst
 otro
 otrohet
 otukt
@@ -9965,6 +9993,7 @@ pik
 pikhacka
 pikstav
 pil
+pilkoger
 pillerburk
 pilot
 pilotstudie
@@ -10308,6 +10337,7 @@ propp
 proppsäkring
 props
 propå
+prosa
 prosodi
 prosopagnosi
 prost
@@ -10495,6 +10525,7 @@ rang
 rangordning
 rangrulla
 rankning
+rannsakan
 rannsakning
 ranson
 ransonering
@@ -10614,6 +10645,7 @@ reling
 relästation
 rem
 rem-2
+remake
 remanens
 remdrift
 remi
@@ -11619,6 +11651,7 @@ skakning
 skala
 skalbagge
 skald
+skaldekonst
 skall
 skalle
 skallerorm
@@ -12316,6 +12349,7 @@ spejare
 spekulation
 spelarbyte
 spelare
+speldjävul
 spelfilm
 spelhåla
 spelkonsol
@@ -12717,6 +12751,7 @@ strykbräda
 strykfågel
 strykkappa
 strykning
+strykpojke
 sträcka
 sträckmuskel
 sträckning
@@ -12883,6 +12918,7 @@ surhetsgrad
 surkål
 surmjölk
 surpris
+surströmming
 susen
 suspension
 sutare
@@ -12984,6 +13020,7 @@ symbios
 symbol
 symbolik
 symfoni
+symfoniorkester
 symmetri
 symmetrilinje
 sympati
@@ -12994,6 +13031,7 @@ synaps
 synare
 synd
 syndabekännelse
+syndabock
 syndaflod
 syndare
 syndikalism
@@ -13103,6 +13141,7 @@ sömmerska
 sömn
 sömnad
 sömngångare
+sömnlöshet
 söndag
 söndagsbilaga
 sönderdelning
@@ -13489,6 +13528,7 @@ tjur
 tjurnacke
 tjurved
 tjusare
+tjusarlock
 tjusning
 tjuv
 tjuvgömma
@@ -13672,6 +13712,7 @@ trasdocka
 trasmatta
 trassat
 trasselsudd
+trassent
 trast
 tratta
 trav
@@ -15254,7 +15295,6 @@ zygot
 äktenskapsskillnad
 äktenskapsålder
 äkthet
-äktsvensk
 äldreombudsman
 äldreomsorg
 äldrepeng
