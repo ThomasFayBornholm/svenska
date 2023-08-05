@@ -6,27 +6,37 @@
 	<link rel="stylesheet" href="reader.css">
 	<script src="jquery-3.6.0.js"></script>		
 </head>
-<body onload="startup()">
-<div id="iDropZone" ondragover="getFile(event)" ondrop="test(event)">
-<p class="dragText">Drag file here</p>
-</div>
+<body onload="startup()" onkeydown="handleKey(event)">
+<div id="iDropZone" class="drop" ondragover="dragOverHandler(event)" ondrop="dropped(event)">
 <div id="iText">
 <p class="textForReading" id="iParTxt"></p>
 </div>
+</div>
+<div class="firstColumn" onclick="back()">
+</div>
+<div class="secondColumn" onclick="forward()">	
+</div>
 </body>
 <script>
+
+TEXT_CACHE = "";
+IND = 0;
+LINES = 15;
 function startup() {
-
-}
-function getFile(ev) {
-	ev.preventDefault();
-}
-
-function test(ev) {
-	ev.preventDefault();
-	const file = ev.dataTransfer.items[0].getAsFile();
-	readFile(file,hasLoaded);
 	
+}
+
+function dragOverHandler(ev) {
+  // Prevent default behavior (Prevent file from being opened)
+  ev.preventDefault();
+}
+
+
+
+function dropped(ev) {
+	ev.preventDefault();
+	const file = ev.dataTransfer.items[0].getAsFile();		
+	readFile(file,hasLoaded);	
 }
 
 function readFile(file, hasLoaded) {
@@ -37,11 +47,15 @@ function readFile(file, hasLoaded) {
 
 function hasLoaded(e) {
 	let txt = e.target.result;	
+	IND = 0;
+	// Handle both Windows and Unix linefeed
 	txt = txt.replaceAll("\r\n","<br>");
+	txt = txt.replaceAll("\n","<br>");
 	let txtArr = txt.split("<br>");
 	let out = "";
 	let br = ""; // Line break
 	for (i = 0; i < txtArr.length; i++) {		
+		//console.log(txtArr[i])
 		let len = txtArr[i].length;
 		if (len > 0) {
 			let wordArr = txtArr[i].split(" ");
@@ -50,8 +64,9 @@ function hasLoaded(e) {
 			for (j = 0; j < wordArr.length; j++) {
 				tmpWord += del + "<span id=" + i + "_" + j +  " onclick='logWord(this)'>" + wordArr[j] + "</span>";
 				del = " ";
-			}	
+			}
 			out += br + tmpWord;
+			// Paragraph break
 			br = "<br><br>";
 		} else {
 			out += "<br>";
@@ -61,7 +76,9 @@ function hasLoaded(e) {
 	}
 	out = out.replaceAll("<br><br><br>","<br><br>");
 	out = out.replaceAll("<br><br><br>","<br><br>");
-	$('#iParTxt').html(out);
+	TEXT_CACHE = out.split("<br>");
+	
+	dispText();
 }
 
 function logWord(el) {
@@ -89,5 +106,47 @@ function removePunc(word) {
 	}
 	return word;
 }
+
+function handleKey(ev) {	
+	if (ev.key === "ArrowRight") {
+		//forward
+		changeIND(LINES)
+	} else if (ev.key === "ArrowLeft") {
+		//back
+		changeIND(-LINES);		
+	}
+	dispText();
+}
+
+// Consume global variables only
+function dispText() {
+	let del = "";
+	let out = "";
+	for (let i = IND; i < IND + LINES; i++) {
+		out += del + TEXT_CACHE[i];
+		del = "<br>";
+	}
+		// Check upper bound before read
+	$('#iParTxt').html(out);
+	// Reset scroll
+	window.scrollTo(0,0);
+}
+
+function changeIND(diff) {
+	IND += diff;
+	if (IND < 0) IND = 0;
+	else if (IND > TEXT_CACHE.length - LINES) IND = TEXT_CACHE.length - LINES;
+}
+
+function forward() {
+	changeIND(LINES);
+	dispText();
+}
+
+function back() {
+	changeIND(-LINES);
+	dispText();
+}
+
 </script>
 </html>

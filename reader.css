@@ -7,5 +7,20 @@ body {
 }
 
 .textForReading {
-	font-size: 24pt
+	font-size: 14pt
+}
+
+.drop {
+	height: 500pt;
+}
+
+.firstColumn {
+	height: 150pt;
+	width: 50%;
+	float: left;	
+}
+.secondColumn {
+	height: 150pt;
+	width: 50%;
+	float: left;
 }
