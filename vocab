@@ -3507,7 +3507,7 @@ function pronounce(word) {
                 // Try and fetch audio
                 fetch('backend/fetchAudio.php?word=' + word + '&class=' + CLASS, {
                     method: 'get',
-                    mode: 'cors,
+                    mode: 'cors',
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -3518,8 +3518,6 @@ function pronounce(word) {
                 .catch(error => {
                     console.log(error);
                 })
-}
-
             }
 		})
 		.catch(error => {
