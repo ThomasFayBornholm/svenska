@@ -3387,7 +3387,7 @@ function fetchDef() {
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
 	$('#iMore').html("");
-	let backend = 'backend/scrapeDef.php?word=' + CUR_WORD + '&class=' + CLASS
+	let backend = 'backend/ScrapeDef.php?word=' + CUR_WORD + '&class=' + CLASS
 	if (CLASS === "fraser") {	
 		let query = $('#iInput').val();
 		query = query.replaceAll("­",""); // No invisible chars to user present in keys
@@ -3503,7 +3503,24 @@ function pronounce(word) {
 				//var audio = new Audio(path + word + ".mp3");
 				var audio = new Audio(path + word);
 				audio.play();
-			}
+			} else {
+                // Try and fetch audio
+                fetch('backend/fetchAudio.php?word=' + word + '&class=' + CLASS, {
+                    method: 'get',
+                    mode: 'cors,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    return response.json();
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+}
+
+            }
 		})
 		.catch(error => {
 			console.log(error);
