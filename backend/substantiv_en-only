@@ -2619,6 +2619,7 @@ densitet
 dental
 departementschef
 deplacement
+deponens
 deponent
 deportation
 depreciering
@@ -3759,6 +3760,7 @@ folkmun
 folkmängd
 folkomröstning
 folkpension
+folkpensionär
 folkresning
 folkrätt
 folkrörelse
@@ -4526,6 +4528,7 @@ gammaldans
 gammalstavning
 gammelfarfar
 gammelfarmor
+gammelgädda
 gammelmorfar
 gammelmormor
 ganache
@@ -4929,6 +4932,7 @@ grytstek
 gräddbakelse
 grädde
 gräddfil
+gräddost
 gräddsnipa
 gräddsnäcka
 gräddtårta
@@ -5466,6 +5470,7 @@ horisont
 hormonspiral
 horn
 hornboskap
+horngädda
 hornist
 horsgök
 hosta
@@ -5827,6 +5832,7 @@ hörslinga
 hörsnäcka
 höskulle
 höst
+höstack
 höstmånad
 hösttermin
 hötapp
@@ -6840,6 +6846,7 @@ knallsensation
 knap
 knape
 knapp
+knappnål
 knappsats
 knapptelefon
 knark
@@ -9350,6 +9357,7 @@ nytändning
 nyårsafton
 nyårsvaka
 näbb
+näbbgädda
 näbbmus
 näckros
 näktergal
@@ -9647,6 +9655,7 @@ ormtjusare
 oro
 oroshärd
 orosmoment
+orosstiftare
 orre
 orrhöna
 orsak
@@ -9710,6 +9719,7 @@ packning
 packsadel
 padda
 paddel
+padel
 pagina
 pain riche
 pajas
@@ -10653,6 +10663,7 @@ remi
 reminiscens
 remiss
 remissinstans
+remission
 remittent
 remsa
 ren
@@ -11494,6 +11505,7 @@ silver
 silverfisk
 silvergran
 silvermedalj
+silverpenning
 silverräv
 silversked
 simand
@@ -11925,6 +11937,7 @@ skärpa
 skärpning
 skärseld
 skärskada
+skärslipare
 skärva
 skådeprocess
 skådespelare
@@ -11990,6 +12003,7 @@ slinga
 slingerväxt
 slinka
 slip
+slipare
 sliper
 slipmassa
 slipover
@@ -12656,6 +12670,7 @@ stomatit
 stomme
 stomp
 stoppare
+stoppnål
 stor
 storasyrra
 storasyster
@@ -12862,7 +12877,6 @@ stånka
 ståplats
 stödjevävnad
 stödundervisning
-stödåtgärd
 stöld
 stör
 störning
@@ -13060,6 +13074,7 @@ syntes
 syntetfiber
 synvilla
 synvinkel
+synål
 syokonsulent
 syra-bas-indikator
 syrabasindikator
@@ -13084,6 +13099,7 @@ sädesvätska
 sädesärla
 sägen
 säkerhet
+säkerhetsnål
 säkerhetspolis
 säkerhetspolitik
 säkerhetsrisk
@@ -15147,6 +15163,7 @@ vågrörelse
 våldsvåg
 våldtäkt
 våldtäktsman
+vålm
 vålnad
 vånda
 våning
