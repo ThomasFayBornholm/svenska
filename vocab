@@ -3485,8 +3485,7 @@ function shortenClass() {
 function pronounce(word) {
 	
 	if (DEBUG) console.log("pronounce()");
-	if (SOUNDS && CLASS != "all") {		
-		console.log("pronounce(" + word + ")")
+	if (SOUNDS && CLASS != "all") {				
 		let shortClass = shortenClass(CLASS);
 		let path = "sounds/" + shortClass + "/";
 		//word = word.replaceAll(" ", "_");
@@ -3519,7 +3518,9 @@ function pronounce(word) {
                     return response.json();
                 })
 				.then(json => {
-					if (json === "Found") pronounce(word)
+					if (json["status"] === "Found") {
+						pronounce(word);
+					}
 				})
                 .catch(error => {
                     console.log(error);
