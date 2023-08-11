@@ -19,6 +19,7 @@ Orienten
 REM-sömn
 Schweiz
 T-sprit
+Tbana
 U
 Waldorfpedagogik
 abakus
@@ -1386,6 +1387,7 @@ berggylta
 bergis
 bergkristall
 berglärka
+bergochdalbana
 bergolja
 bergsbestigare
 bergsbestigning
@@ -4231,6 +4233,7 @@ förkänsla
 förkärlek
 förlaga
 förlagsredaktör
+förlamning
 förlikning
 förlikningsman
 förlitan
@@ -5225,6 +5228,7 @@ handelshögskola
 handelskammare
 handelsman
 handelspolitik
+handelsträdgård
 handelsvara
 handflata
 handfull
@@ -5523,6 +5527,7 @@ husbonde
 husesyn
 husfluga
 husgrund
+hushållerska
 hushållning
 hushållsassistent
 hushållsost
@@ -5688,6 +5693,7 @@ hålldam
 hållfasthet
 hållning
 hållplats
+hålslev
 håltagning
 hålväg
 håranalys
@@ -7583,6 +7589,7 @@ kyrkogård
 kyrkoherde
 kyrkomusiker
 kyrktorn
+kyrktupp
 kyrkvärd
 kyskhet
 kyss
@@ -7874,10 +7881,12 @@ leverpastej
 levitation
 levnad
 levnadskonst
+levnadskonstnär
 levnadskostnad
 levnadsregel
 levnadssaga
 levnadsstandard
+levnadsvisdom
 lian
 libell
 liberal
@@ -8376,6 +8385,7 @@ mandarin-2
 mandatperiod
 mandel
 mandelpotatis
+mandibel
 mandolin
 manege
 manet
@@ -8516,6 +8526,7 @@ matta
 matte
 matvara
 matvrå
+maxill
 maxim
 maximering
 maximitemperatur
@@ -8945,6 +8956,7 @@ murare
 murbräcka
 murfog
 murning
+murslev
 mus
 musa
 music hall
@@ -12204,6 +12216,7 @@ snärt
 snärta
 snäsa
 snålblåst
+snålhet
 snåljåp
 snålvarg
 snö
@@ -12282,6 +12295,7 @@ solsida
 solsting
 solstrimma
 soluppgång
+solution
 solvind
 sommar
 sommarferie
@@ -12307,6 +12321,7 @@ sophämtning
 soppa
 soppatorsk
 soppsked
+soppslev
 sopran
 sopskyffel
 sorbet
@@ -12468,6 +12483,7 @@ sprängört
 sprätt
 språkbehandling
 språkfamilj
+språkkonstnär
 språkkurs
 språklära
 språkpolis
@@ -12814,6 +12830,7 @@ studentmössa
 studerande
 studerkammare
 studie
+studie och yrkesvägledare
 studiecirkel
 studiegång
 studierektor
@@ -13081,7 +13098,6 @@ synvinkel
 synål
 syokonsulent
 syra-bas-indikator
-syrabasindikator
 syren
 syrgasmask
 syrinx
@@ -13291,10 +13307,8 @@ taxameter
 taxering
 taxeringsnämnd
 taxi
-taxichaufför
 taxistation
 taxonomi
-tbana
 teamwork
 teater
 teaterdekoration
@@ -13865,6 +13879,7 @@ träsked
 träsko
 träskofiol
 träskruv
+träslev
 träslöjd
 träsmak
 träsprit
@@ -13948,6 +13963,7 @@ turs
 turtäthet
 tusan
 tusenfoting
+tusenkonstnär
 tusenkronorssedel
 tusenlapp
 tusensköna
@@ -14103,6 +14119,7 @@ underkastelse
 underkjol
 underklass
 underkropp
+underkäke
 underledare
 underleverantör
 underlivshumor
@@ -14947,6 +14964,7 @@ vitrin
 viträv
 vits
 vitterhet
+vittnespsykologi
 vittring
 vittvätt
 vivör
@@ -15003,6 +15021,7 @@ vägren
 vägsalt
 vägtistel
 vägtull
+vägtunnel
 vägvisare
 väktare
 väl
