@@ -138,4 +138,22 @@
 		}
 	}
 	echo json_encode("success");
+	function shortClassName($long) {
+		$short = $long;
+		switch ($long) {
+		case 'adjektiv':
+			$short = "adj";
+			break;		
+		case 'substantiv_en':
+			$short = "en";
+			break;
+		case 'substantiv_ett':
+			$short = "ett";
+			break;
+		case 'adverb':
+			$sjort = "adv";
+			break;
+		}
+		return $short;
+	}
 ?>

@@ -27,7 +27,7 @@
 		}
 		$del = "\n";
 	}
-	
+	$defArr = explode("\n", $def);
 	if (strlen($def) === 0) {
 		error("Failed to retrieve content from Svenska Ordlista server #1.");
 	}
@@ -37,7 +37,6 @@
 	if (strpos($def,$find)) {
 		// Need to do some more work to resolve to word matches
 		// Use id instead of word as key
-		
 		$tmpLines = explode("\n", $def);
 		$tmpClass = "";
 		$isMatch = false;
@@ -68,7 +67,8 @@
 			if ($pos1 && $pos2 && $pos2 > $pos1) {
 				$pos1 = $pos1 + strlen($find);
 				$lenFound = $pos2 - $pos1;
-				$id = substr($def,$pos1, $lenFound);			
+				$id = substr($def,$pos1,$lenFound);
+				echo $id . "<br>";
 				$url = $urlBaseId . $id;
 				$ch = curl_init();		
 				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
