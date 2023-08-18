@@ -389,6 +389,7 @@ alias
 alienation
 alienera
 alkali
+alkalimetall
 alkalisk
 alkekung
 alkohol
@@ -531,6 +532,7 @@ amsaga
 amylas
 amyotrofi
 ana
+ana argan list
 ana oråd
 anabaptism
 anabaptist
@@ -1371,6 +1373,7 @@ avdunstning
 avdöd
 avdöma
 avel
+avelsdjur
 avenbok
 aventurin
 aveny
@@ -1553,6 +1556,7 @@ avrusta
 avräkna
 avrätta
 avråda
+avsaknad
 avsalta
 avsats
 avse
@@ -1566,6 +1570,7 @@ avskaffa
 avsked
 avskeda
 avskedsfras
+avskildhet
 avskilja
 avskiljare
 avskjuta
@@ -2010,6 +2015,7 @@ befara
 befara-2
 befaren
 befatta sig
+befattning
 befinna sig
 befinnas
 befintlig
@@ -2336,6 +2342,7 @@ besittning
 besittningsrätt
 besjunga
 besjäla
+besk
 beskaffad
 beskaffenhet
 beskatta
@@ -2346,6 +2353,7 @@ beskickning
 beskjuta
 beskjutning
 beskriva
+beskrivning
 beskugga
 beskydd
 beskydda
@@ -2361,6 +2369,7 @@ beskåda
 beslagta
 besluta
 besluta sig
+beslutsamhet
 beslutsför
 beslutsmässig
 beslutsprotokoll
@@ -2581,22 +2590,39 @@ bilddyrkan
 bilderbok
 bildhuggare
 bildhuggeri
+bildkonst
 bildkryss
 bildlig
 bildläsare
 bildmaterial
 bildmässig
 bildning
+bildningsnivå
+bildningsorganisation
+bildningsroman
+bildningstörst
+bildprakt
 bildredaktör
 bildreportage
+bildrulle
+bildruta
+bildsignal
 bildskrift
+bildskärpa
 bildskön
+bildsnidare
+bildsnideri
 bildspel
+bildsten
 bildstod
+bildstormare
+bildstrid
 bildsvit
 bildtelefon
 bildtext
+bildvävnad
 bildåre
+bildöverföring
 bilfri
 bilfärja
 bilförare
@@ -2616,6 +2642,7 @@ biljetthäfte
 biljettkontroll
 biljettlucka
 biljettmaskin
+biljettsläpp
 biljettvisering
 biljon
 biljud
@@ -2774,6 +2801,7 @@ blanda samman
 blanda sig i
 blandad
 blandare
+blandekonomi
 blandfoder
 blandfärs
 blandning
@@ -3206,6 +3234,9 @@ bouquet
 boutique
 bov
 boven i dramat
+bowling
+bowlinghall
+bowlingklot
 boxare
 boxas
 boxershorts
@@ -3343,6 +3374,7 @@ brottsling
 brottsplats
 brottsrekvisit
 brottstycke
+brottställe
 browser
 brud
 brudbukett
@@ -3361,10 +3393,12 @@ brukbar
 bruklig
 bruksanvisning
 bruksdisponent
+bruksdjur
 bruksföremål
 brukspatron
 bruksprosa
 bruksvärde
+brum
 brumbas
 brumma
 brun
@@ -3471,6 +3505,7 @@ brödkant
 brödkorg
 brödrafolk
 brödrapar
+brödraskap
 brödrost
 brödskiva
 brödsmula
@@ -3782,6 +3817,7 @@ cement
 cementa
 cementera
 cendré
+censor
 censur
 censurera
 center
@@ -3873,6 +3909,7 @@ cirkulation
 cirkulera
 cirkulär
 cirkumflex
+cirkus
 cirkusartist
 ciselera
 ciselör
@@ -4014,6 +4051,7 @@ dagsbehov
 dagsbot
 dagsens sanning
 dagskassa
+dagsled
 dagsljus
 dagsläge
 dagslända
@@ -4090,6 +4128,7 @@ darra som ett asplöv
 darrgräs
 darrning
 daska
+dass
 dat
 data
 data-2
@@ -4510,6 +4549,7 @@ diskmedel
 diskontera
 diskontinuitet
 diskreditera
+diskret
 diskretion
 diskriminera
 diskriminering
@@ -5056,12 +5096,14 @@ ebonitstav
 echaufferad
 eder
 edition
+efemerid
 efemär
 effekt
 effektfull
 effektförstärkare
 effektiv
 effektivisera
+effektivitet
 effektuera
 efter sitt sinne
 efter sju sorger och åtta bedrövelser
@@ -5209,6 +5251,7 @@ ekonomisera
 ekonomisk
 ekorre
 ekotoxikologi
+ekoturism
 eksem
 ekumenisk
 ekvation
@@ -5744,6 +5787,7 @@ fackspråk
 fadd
 faderlös
 fadäs
+fager
 fakta i målet
 fakta i målet 
 fakta i målet sär­skilt
@@ -6232,6 +6276,7 @@ flexur
 flicka
 flickjägare
 flicknamn
+flickvän
 flik
 flika in
 flimmerhår
@@ -6585,6 +6630,7 @@ framstegstanke
 framstupa
 framstycke
 framställa
+framställning
 framstå
 framstöt
 framsynt
@@ -6710,6 +6756,7 @@ frita
 fritagning
 fritera
 fritid
+fritidsproblem
 frityr
 fritänkare
 frivillig
@@ -7685,6 +7732,8 @@ försegla
 försena
 försening
 försiggå
+försiktig
+försiktighet
 försiktighetsmått
 försiktighetsprincip
 försilvra
@@ -8476,6 +8525,7 @@ gigantisk
 gigg
 gilla
 gilla läget
+gille
 gillestuga
 giltig
 gina
@@ -9505,6 +9555,7 @@ handledare
 handledning
 handling
 handlingsfrihet
+handlingsförlamad
 handlingskraft
 handlingsplan
 handlingsprogram
@@ -10409,14 +10460,22 @@ hårnål
 hårnålskurva
 hårolja
 hårpensel
+hårpiska
 hårrör
 hårrörskärl
+hårsmån
+hårstreck
 hårsäck
 hårtofs
 hårtork
+hårtuss
 hårtång
 hårvatten
+hårväxt
+hårvård
 håv
+höft
+höfthållare
 hög
 höga vederbörande
 högadel
@@ -11569,6 +11628,7 @@ ivrig
 iväg
 j
 ja då
+jack
 jacka
 jacketkrona
 jackett
@@ -12514,6 +12574,7 @@ klädespersedel
 klädesplagg
 klädhängare
 klädkammare
+klädlus
 klädmal
 klädsam
 klädsel
@@ -14225,6 +14286,7 @@ lavasjö
 lavering
 lavett
 lavin
+lavskrika
 lax
 laxermedel
 laxfisk
@@ -14744,8 +14806,10 @@ lurendrejeri
 lurig
 lurk
 lurvig
+lus
 lusa av
 luskam
+luskamma
 luspank
 lussekatt
 lust
@@ -15436,7 +15500,9 @@ marketing
 markfrigång
 markgreve
 marknad
+marknadsekonomi
 marknadsföra
+marknadsföring
 marknadsgyckel
 marknadsgycklare
 marknadspris
@@ -17176,6 +17242,7 @@ nötkreatur
 nötkärna
 nötkött
 nötskal
+nötskrika
 o
 oacceptabel
 oaktat
@@ -17218,7 +17285,9 @@ obeslutsam
 obestridd
 obestridlig
 obesvarad
+obesvärad
 obetalbar
+obetald
 obetingad
 obetitlad adel
 obetvinglig
@@ -17270,6 +17339,7 @@ odjur
 odla
 odling
 odlingsbar
+odlingsbädd
 odlingskrage
 odontolog
 odontologi
@@ -17493,6 +17563,7 @@ om igen
 om inte annat
 om och om igen
 om vartannat
+omak
 omaka
 omarbeta
 ombe
@@ -18508,6 +18579,7 @@ plakat
 plan
 plan B
 plana av
+planekonomi
 planenlig
 planera
 planera in
@@ -18927,6 +18999,7 @@ processorienterad
 producent
 producera
 produkt
+produktion
 produktionsapparat
 produktiv
 profan
@@ -19251,6 +19324,7 @@ påminnelse
 påpassad
 påpeka
 påpetare
+påringning
 påsar under ögonen
 påse
 påseende
@@ -19272,12 +19346,14 @@ påta sig
 påtaglig
 påtala
 påtryckare
+påtryckning
 påträffa
 påträngande
 påtvinga
 påtänd
 påtänkt
 påtår
+påve
 påverka
 påverkad
 påverkan
@@ -19587,6 +19663,7 @@ rekommendation
 rekommendera
 rekonstruera
 rekonstruktion
+rekord
 rekrytera
 rektangel
 rektor
@@ -19625,10 +19702,12 @@ rendezvous
 renegat
 rengöra
 rengöring
+renhet
 renhjärtad
 renhårig
 rening
 reningsverk
+renlighet
 renlärig
 renodla
 renons
@@ -19639,6 +19718,7 @@ rensa bort
 rensa upp
 rensa ut
 rensare
+rensning
 rent av
 rent spel
 rentav
@@ -19830,6 +19910,7 @@ riksdagsledamot
 riksdagstryck
 riksgräns
 riksgäld
+riksha
 riksintresse
 rikslikare
 riksmål
@@ -21173,12 +21254,22 @@ självservering
 självstudium
 självstyrande
 självstyre
+självständig
 självsvåld
+självsvåldig
+självsäker
 självså sig
 självsådd
+självtagen
 självtest
+självuppfyllande
+självupplevd
 självuppoffring
 självupptagen
+självutnämnd
+självutplånande
+självvald
+självägande
 självändamål
 sjätte
 sjättedel
@@ -21205,6 +21296,7 @@ sjönöd
 sjöorm
 sjöpung
 sjörövare
+sjösjuk
 sjösjuka
 sjöskum
 sjöskumspipa
@@ -21244,6 +21336,7 @@ skam
 skam den som ger sig
 skam till sägandes
 skamfläck
+skamlös
 skamsen
 skamvrå
 skandal
@@ -22573,6 +22666,7 @@ solsken
 solskyddsmedel
 solsting
 solstrimma
+solstråle
 solstånd
 solsystem
 soluppgång
@@ -23669,6 +23763,7 @@ stånda
 ståndaktig
 ståndkrage
 ståndman
+ståndpunkt
 ståndsmässig
 ståndsperson
 stång
@@ -23676,6 +23771,7 @@ stånga
 stångas
 stångjärn
 stångkorv
+stångpiska
 stånka
 ståplats
 ståta
@@ -23717,6 +23813,7 @@ stötvis
 stövel
 sub
 subdominant
+subjekt
 subjektiv
 subjunktion
 subkutan
@@ -24090,6 +24187,7 @@ syv
 säck
 säckpipa
 säd
+säde
 sädesavgång
 sädesfält
 sädesslag
@@ -25736,6 +25834,7 @@ tvivel
 tvivelaktig
 tvivelsutan
 tvivla
+tvivlare
 tvungen
 tvär
 tvära
@@ -26057,6 +26156,7 @@ underrättelse
 underscore
 undersida
 underskatta
+underskott
 underskrida
 underskrift
 underskruv
@@ -27125,6 +27225,7 @@ vante
 vantolka
 vantrivas
 vantro
+vantrogen
 vanuatisk
 vanvårda
 vanvörda
@@ -27517,6 +27618,7 @@ vikingatåg
 vikt
 viktförlust
 viktig
+vikunja
 vila
 vila på lagrarna/sina lagrar
 vila på årorna
@@ -28511,9 +28613,14 @@ zygot
 änkenåd
 änne
 ännu
+änterhake
 äntra
 äntring
+äppelblom
+äppelkart
 äppelkindad
+äppelmust
+äppelskorv
 äpple
 äpplet faller inte långt från trädet
 äpplig
@@ -28620,6 +28727,7 @@ zygot
 åborätt
 åbrodd
 åbäka sig
+åbäke
 åbäkig
 åda
 ådagalägga
@@ -29244,11 +29352,16 @@ zygot
 överman
 övermanna
 övermod
+övermogen
 övermorgon
 övermänniska
+övermänsklig
+övermätt
 övermått
+övernationell
 övernatta
 övernattning
+övernaturlig
 överordna
 överplagg
 överpröva
@@ -29258,14 +29371,18 @@ zygot
 överreagera
 överrede
 överresa
+överriggad
 överrock
 överrumpla
 överräcka
 överrösta
 överse
+överseende
 översida
 översiggiven
 översikt
+översiktlig
+översinnlig
 översittare
 överskatta
 överskeppa
@@ -29280,9 +29397,11 @@ zygot
 överskådlig
 överskåp
 översläta
+översnöad
 överspela
 överspelad
 överspänning
+översta
 överste
 överstegra
 överstelöjtnant
@@ -29317,8 +29436,11 @@ zygot
 överträda
 överträdelse
 överträffa
+övertydlig
 övertyga
+övertygad
 övertygelse
+övertänd
 övervaka
 övervakare
 övervakning
@@ -29330,6 +29452,7 @@ zygot
 övervinna
 övervinst
 övervintra
+övervuxen
 överväga
 överväldiga
 överväldigande
@@ -37062,3 +37185,5 @@ sump
 sumpig
 sumpmark
 su
+övre
+övrig
