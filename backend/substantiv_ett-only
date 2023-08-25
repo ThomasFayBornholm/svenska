@@ -157,6 +157,7 @@ apelsinskal
 apex
 apotek
 appellativ
+aprilskämt
 aprilväder
 apropå
 arbetarparti
@@ -461,6 +462,7 @@ blockhus
 blocktyg
 blod
 blodbad
+blodfärgämne
 blodkärl
 blodmjöl
 blodomlopp
@@ -472,6 +474,7 @@ blomfjäll
 blomfoder
 blomskaft
 blomster
+blot
 bläck
 bläckhorn
 bländskydd
@@ -560,6 +563,7 @@ bravurnummer
 bredband
 brev
 brevpapper
+brevporto
 brevsvar
 broderfolk
 broderi
@@ -663,6 +667,7 @@ casino
 cellulosanitrat
 centerbord
 centerparti
+centrallasarett
 centralvärme
 centrum
 certifikat
@@ -672,6 +677,7 @@ checkhäfte
 chiffer
 chips
 cigarettpaket
+cinematek
 cirkulär
 citat
 citatord
@@ -746,6 +752,7 @@ diorama
 diplom
 direktiv
 dis
+disco
 diskmedel
 diskotek
 distansarbete
@@ -870,16 +877,19 @@ elektronskal
 elektrostål
 element
 elementhus
+elevråd
 elevunderlag
 elittänkande
 elljusspår
 elnät
 eluttag
 elände
+email
 emaljöga
 emballage
 embryo
 enande
+endogami
 energiknippe
 energiskog
 energisystem
@@ -917,6 +927,7 @@ exemplar
 existensberättigande
 exkrement
 exkret
+exogami
 experiment
 exportöl
 expressbrev
@@ -976,6 +987,7 @@ fiendskap
 fiffel
 fika
 fikon
+filmotek
 filter
 finger
 finrum
@@ -1449,6 +1461,8 @@ guldkorn
 guldläge
 guldsnitt
 guldäpple
+gull
+gullegris
 gummi
 gummiband
 gummiharts
@@ -1569,6 +1583,7 @@ himlavalv
 hinder
 histogram
 hittegods
+hjordinstinkt
 hjortdjur
 hjul
 hjulnav
@@ -1607,6 +1622,7 @@ hugg
 huggkniv
 humör
 hundliv
+hundlort
 hundratal
 hundsim
 hurrarop
@@ -1685,6 +1701,7 @@ högnivåspråk
 högrev
 högstadium
 högsäte
+högtidstal
 högtryck
 högvatten
 högvilt
@@ -1747,6 +1764,7 @@ infraljud
 infusionsdjur
 införande
 ingenium
+ingifte
 ingrepp
 ingripande
 initiativ
@@ -1823,6 +1841,7 @@ jaktgevär
 jaktplan
 jaktslott
 jaktvapen
+jidder
 jippo
 jobb
 jobberi
@@ -1928,6 +1947,7 @@ kex
 kikarsikte
 kilogram
 kilopris
+kinotek
 kisel
 kitt
 klackjärn
@@ -2093,6 +2113,7 @@ kortslutningsställe
 kortspel
 korvstånd
 kostnadsläge
+kosttillskott
 kraftfält
 kraftprov
 krafttag
@@ -2336,6 +2357,7 @@ ljushuvud
 lock
 lockbete
 lockpris
+lockrop
 lod
 lodjur
 lodplan
@@ -2392,6 +2414,7 @@ läkarintyg
 läkemedel
 läkkött
 lämmeltåg
+lämpa
 län
 längdhopp
 längdmått
@@ -2570,6 +2593,8 @@ metallstycke
 metan
 metspö
 midjebälte
+midsommarblomster
+midvinterblot
 migrationsverk
 mikroklimat
 mildväder
@@ -2598,6 +2623,7 @@ missfall
 missförhållande
 missförstånd
 missgrepp
+misshag
 missionshus
 missiv
 missljud
@@ -2708,6 +2734,7 @@ månadskort
 månadsskifte
 måndagsexemplar
 månsken
+månvarv
 mårddjur
 måste
 mått
@@ -2719,6 +2746,7 @@ mög
 mögel
 mönster
 mönstergosse
+mörja
 mörker
 mörkerseende
 mörkertal
@@ -2826,6 +2854,7 @@ näringsfång
 näringsliv
 näringsställe
 näringsvärde
+näringsämne
 närköp
 närmande
 närområde
@@ -2909,6 +2938,7 @@ ordslut
 ordspråk
 ordstäv
 ordval
+oreda
 organ
 orienteringsämne
 original
@@ -2922,6 +2952,8 @@ oskick
 ovett
 oväder
 oväsen
+oxdjur
+oxidationsmedel
 oxkött
 oxygen
 ozonskikt
@@ -2961,6 +2993,7 @@ patent
 patrask
 patriarkat
 patronbälte
+pegamoid
 pekfinger
 pekoral
 pendelur
@@ -3172,6 +3205,7 @@ realindex
 realvärde
 reapris
 recept
+recidiv
 recitativ
 rede
 rederi
@@ -3270,6 +3304,7 @@ rus
 rusmedel
 russ
 russin
+rutavdrag
 ryck
 ryggläge
 ryggradsdjur
@@ -3296,6 +3331,7 @@ rå
 råd
 rådhus
 rådjur
+råmaterial
 rån
 rånmord
 råplugg
@@ -3444,6 +3480,7 @@ sifferminne
 sigill
 signalement
 signalhorn
+signum
 siktdjup
 sikte
 siktmjöl
@@ -3493,6 +3530,7 @@ självsvåld
 självtest
 självändamål
 sjå
+sjåp
 sjöflygplan
 sjögräs
 sjökort
@@ -3535,6 +3573,8 @@ skiljetecken
 skimmer
 skinn
 skinnband
+skitprat
+skitsnack
 skivbolag
 skivminne
 skjul
@@ -3841,6 +3881,7 @@ spö
 spöke
 spöregn
 spörsmål
+spöstraff
 stackmoln
 stadium
 stadsbibliotek
@@ -3983,6 +4024,7 @@ stödområde
 stön
 stöp
 störtlopp
+stöveltramp
 subjekt
 substantiv
 sudd
@@ -4081,6 +4123,7 @@ tagel
 tak
 taklag
 takskägg
+taktegel
 taktslag
 taktstreck
 tal
@@ -4163,6 +4206,7 @@ tigersprång
 tillbehör
 tillfrisknande
 tillfälle
+tillgodokvitto
 tillgrepp
 tillhygge
 tillhåll
