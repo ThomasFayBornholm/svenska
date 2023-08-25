@@ -18,7 +18,6 @@
 	curl_close($ch);	
 	// Remove all "mdr" class lines from def. These are not interesting to us
 	$defArr = explode("\n", $def);
-	//var_dump($defArr);
 	$del = "";
 	$def = "";
 	foreach($defArr as $el) {
@@ -68,7 +67,6 @@
 				$pos1 = $pos1 + strlen($find);
 				$lenFound = $pos2 - $pos1;
 				$id = substr($def,$pos1,$lenFound);
-				echo $id . "<br>";
 				$url = $urlBaseId . $id;
 				$ch = curl_init();		
 				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

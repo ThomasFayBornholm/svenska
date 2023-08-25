@@ -103,7 +103,6 @@ if (strlen($file) > 0) {
 				$pos1 = $pos1 + strlen($find);
 				$lenFound = $pos2 - $pos1;
 				$id = substr($def,$pos1,$lenFound);
-				var_dump($id);
 				$url = $urlBaseId . $id;
 				$ch = curl_init();		
 				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -146,6 +145,8 @@ function shortenClass($long) {
             return "ett"; 
 		case "interjektion":
 			return "int";
+		case "plural":
+			return "plu";
     }
     return $long;
 }
