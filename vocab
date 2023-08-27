@@ -7,7 +7,7 @@
 	<script src="jquery-3.6.0.js"></script>
 	<script src="jquery-ui.js"></script>
 	<link rel="stylesheet" href="jquery-ui.css">
-	<link rel="icon" type="image/x-icon" href="img/Flag_of_Sweden.svg">
+	<link rel="icon" type="image/x-icon" href="img/Flag_of_Sweden.png">
 	<script>
 	$( function() {
 		$( document ).tooltip();
@@ -39,7 +39,8 @@
 </div>
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
-	<form class="centred" onsubmit="newInputWrapper(event)">		
+	<form class="centred" onsubmit="newInputWrapper(event)">	
+		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 	</form>		
@@ -120,7 +121,7 @@ let N_DEF = 0;
 let CLASS = "all";
 var LAST_OBJ;
 let DEBUG=false;
-let SOUNDS=true;
+let SOUNDS=false;
 let LAST_DEF = "";
 let LAST_CLASS = "all";
 let CONTROLS_VISIBLE=true;
@@ -290,6 +291,8 @@ function addDef(key, meta, def, more) {
 	})
 	.then(json => {
 		if (CLASS === "fraser") $('#iInput').val(key);
+		updateScore();
+		CUR_DEF_ENUM = 1;
 		setTimeout(updateDef(),2000);
 	})
 	.catch(error => {
@@ -425,7 +428,7 @@ function updateScore() {
 			return response.json();
 		})
 		.then(json => {			
-			TOTAL_SCORE = json["percent"];								
+			TOTAL_SCORE = round(json["percent"]*N_ALL/100,0);								
 			getDiff();			
 		})
 		.catch(error => {
@@ -1190,7 +1193,7 @@ function newInputWrapper(e) {
 		let newClass  = fullClassName(word.substr(1));
 		REGEX_WORDS = [];		
 		N_REGEX = 0;
-		if (newClass != "all") {
+		if (newClass != "") {
 			setClass(newClass);		
 		} else {
 			var tmpOut = [];
@@ -1226,7 +1229,7 @@ function newInputWrapper(e) {
 					let out = "<b>all {" + N_TOT + "; " + "score_all" + "%}</b>";
 					// All serial requests are done
 					if (done == N) {
-						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>100% date: " + END_DATE_STR + fmtUnit(END_DATE,"days") + "<br>";
+						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>";
 						for (i = 0; i < N; i++) {
 							out += "<br>" + CLASSES[i] + tmpOut[i];
 						}
@@ -1840,7 +1843,6 @@ function pretty(def) {
 }
 
 function fullClassName(name) {
-	if (name === "") return "all"
 	if (name === "a") return "all"
 	if (name === "en") return "substantiv_en"
 	if (name === "ett") return "substantiv_ett"
@@ -2314,6 +2316,7 @@ function grammar(def) {
 	}
 	return def;
 }
+
 function preProc(def) {
 	if (DEBUG) console.log("preProc(def(); def = '" + def + "'")
 	// takes user input and splits into "meta", "def" and "more" components
@@ -3016,6 +3019,10 @@ function processKeyDown(ev) {
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
 	}
+	if (ev.key === "!") {
+		ev.preventDefault();
+		$('#iInput').val($('#iInput').val() + "!");
+	}
 	if (ev.key === "ArrowUp") {
 		let el = document.getElementById("iInput");
 		onlineLookup(el,ev);
@@ -3027,7 +3034,7 @@ function processKeyDown(ev) {
 		addWord();	
 	} else if (ev.key === "Delete") {
 		removeWord();
-	} else if (ev.key === "F1") {
+	} else if (ev.key === "F1" || ev.key === "ArrowDown") {
 		fetchDef();
 	} else if (ev.key === "F2") {
 		getRaw();
@@ -3209,7 +3216,6 @@ function changeScore(ev,diff) {
 			let id = "#w" + parseInt(SCROLL_INC);
 			$(id).css("color",SCORE_COLOURS[newScore]);			
 			updateScore();
-			getDiff();
 		}
 	})
 }
@@ -3338,7 +3344,7 @@ function togglePlural() {
 // Gamificiation of progress, show daily and weekly goal + end date
 function setTargets() {
 	if (DEBUG) console.log("setTargets()");
-	fetch('backend/setTargets.php?cur_score=' + $('#iTotalScore').text().replace("%",""), {
+	fetch('backend/setTargets.php?cur_score=' + TOTAL_SCORE, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3350,8 +3356,7 @@ function setTargets() {
 	})
 	.then(json => {
 		RATE = json["rate"];
-		TARGET_DAILY = json["targetDaily"]
-		TARGET_MONDAY = json["targetWeekly"];
+		TARGET_DAILY = json["targetDaily"];		TARGET_MONDAY = json["targetWeekly"];
 		END_DATE = json["endDate"]
 		END_DATE_STR = json["endDateStr"];
 		getDiff();
@@ -3367,7 +3372,8 @@ function getDiff() {
 	let fmt = "";
 	if (TARGET_DAILY != 0) {		
 		// Express diff as a percentage of the intended rate
-		diff = Math.round((TOTAL_SCORE - TARGET_DAILY) / RATE * 100);
+		diff = ((TOTAL_SCORE - TARGET_DAILY) / RATE * 100);
+		diff = Math.round(diff);
 		if (diff > 0) {
 			fmt = " <span class='diffPlus'>_diff_</span>";
 		} else {
@@ -3375,13 +3381,13 @@ function getDiff() {
 		}
 		fmt = fmt.replace("_diff_",diff);
 	}
-	$('#iTotalScore').html(round(TOTAL_SCORE,2) + "%" + fmt);
-	
+	$('#iTotalScore').html(TOTAL_SCORE.toLocaleString('sv') + fmt);
 }
 
 function round(dec, places) {
 	let mult = 10 ** places;	
-	return Math.round(dec * mult) / mult;
+	let res = Math.round(dec * mult) / mult;
+	return res;
 }
 
 function fetchDef() {
@@ -3479,6 +3485,8 @@ function shortenClass() {
 		res = "prep";
 	} else if (CLASS === "pronomen") {
 		res = "pro";
+	} else if (CLASS === "plural") {
+		res = "plu";
 	}
 	return res;
 }
@@ -3612,6 +3620,15 @@ function fillInput(text) {
 
 function rand() {
 	$('#iInput').val(Math.random());
+}
+
+function toggleSounds() {
+	SOUNDS = !SOUNDS
+	if (SOUNDS) {
+		$('#iToggleSounds').attr("src", "img/volume.png")
+	} else {
+		$('#iToggleSounds').attr("src", "img/Mute.jpg")
+	}
 }
 </script>
 </html>
