@@ -532,6 +532,18 @@ function getWords(ind = INC) {
 	if (DEBUG) console.log("END getWords(ind); ind = " + ind + ", N_FOUND = " + N_FOUND);
 }
 
+// Enables to updating of the selected word without refreshing the whole screen
+function moveSelected() {
+    debug("moveSelected()");
+    // Clear all highlights
+    if (LAST_OBJ) LAST_OBJ.style.fontWeight="";
+    // Highlight new selection
+    let id = "#w" + SCROLL_INC;
+    $(id).css("font-weight", "bold");
+    LAST_OBJ = $(id)[0];
+    // Retrieve definition
+    lookupWord(LAST_OBJ,true,true); 
+}
 // Create listing of words for display on left side of screen
 function displayWords(list,ind) {
 	if (DEBUG) console.log("displayWords(), list = " + list + ", ind = " + ind)
@@ -731,7 +743,7 @@ function showWordMatches(follow) {
 }
 
 function lookupWord(el,onlyLocal,inline) {	
-	if (DEBUG) console.log("lookupWord(el,onlyLocal,linline), elid = " + el.id + ", onlyLocal = " + onlyLocal + ", inline = " + inline);
+	if (DEBUG) console.log("lookupWord(el,onlyLocal,inline), elid = " + el.id + ", onlyLocal = " + onlyLocal + ", inline = " + inline);
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
 	// Cleanup
@@ -1185,11 +1197,6 @@ function newInputWrapper(e) {
 	e.preventDefault();
 	let word = getInput();
 	// Navigation only to a given word class.
-	regexNumeric = /^\d*$/
-	if (word.match(regexNumeric)) {
-		handleNumericInput();
-		return;
-	}
 	if (word.indexOf("@") === 0) {
 		let newClass  = fullClassName(word.substr(1));
 		REGEX_WORDS = [];		
@@ -1289,16 +1296,22 @@ function fmtUnit(val, unit) {
 	return tmp;
 }
 
-function handleNumericInput() {
+function clearInput() {
+    debug("clearInput()");
+    $('#iInput').val(""); 
+}
+function handleNumericInput(key) {
 	if (DEBUG) console.log("handleNumericInput()")
-	CUR_DEF_ENUM = parseInt($('#iInput').val());
-	if (CUR_DEF_ENUM < 1 || CUR_DEF_ENUM > N_DEFS) {
-		$('#iInput').val("");
-		return ;
-	}	
-	$('#iInput').val("");
-	getDefInd(CUR_DEF_ENUM);
-	getMore(CUR_DEF_ENUM);		
+	let inc = parseInt(key);
+    setTimeout(clearInput,100);
+	if (inc < 1) {
+        SCROLL_INC = 0;
+    } else if (inc > 7) {
+        SCROLL_INC = 7;
+    } else {
+        SCROLL_INC = inc - 1;
+    }
+    moveSelected();
 }
 
 // Called internally when word class is known in advance
@@ -3074,7 +3087,11 @@ function processKeyDown(ev) {
 		ev.preventDefault();
 		getLastWord();	
 	}	
-	
+    let regexNumeric = /^\d*$/
+	if (ev.key.match(regexNumeric)) {
+        ev.preventDefault();
+        handleNumericInput(ev.key);
+    }
 }
 
 function navDef(ev) {
@@ -3635,6 +3652,10 @@ function toggleSounds() {
 function resetFilter() {
 	updateScore();
 	$('#iCntRegex').html("");
+}
+
+function debug(txt) {
+    if (DEBUG) console.log(txt);
 }
 </script>
 </html>
