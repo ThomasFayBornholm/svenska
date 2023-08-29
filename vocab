@@ -35,7 +35,7 @@
 <div id="iCountDiv" class="centred" style="visibility: hidden">
 	<span class="counts countLeft" id="iCnt">test</span>	
 	<span class="counts" "score" id="iScore">{Score}</span>
-	<span class="counts" id="iCntRegex"></span>	
+	<span class="counts" id="iCntRegex"></span>
 </div>
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
@@ -162,6 +162,7 @@ function startup() {
 	randomWord();
 	focusInput();
 	setTimeout(setTargets,2000);
+	$('#iCntRegex').on("dblclick", resetFilter);
 }
 
 function getInput() {
@@ -3372,7 +3373,7 @@ function getDiff() {
 	let fmt = "";
 	if (TARGET_DAILY != 0) {		
 		// Express diff as a percentage of the intended rate
-		diff = ((TOTAL_SCORE - TARGET_DAILY) / RATE * 100);
+		diff = ((TOTAL_SCORE - TARGET_DAILY) / RATE * 100);		
 		diff = Math.round(diff);
 		if (diff > 0) {
 			fmt = " <span class='diffPlus'>_diff_</span>";
@@ -3629,6 +3630,11 @@ function toggleSounds() {
 	} else {
 		$('#iToggleSounds').attr("src", "img/Mute.jpg")
 	}
+}
+
+function resetFilter() {
+	updateScore();
+	$('#iCntRegex').html("");
 }
 </script>
 </html>
