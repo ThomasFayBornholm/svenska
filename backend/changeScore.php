@@ -16,10 +16,12 @@
 	if ($new > 2) $new = 0;
 	if ($new < 0) $new = 2;
 	$out["old"]=$old;
-	$out["new"]=$new;
+    $out["new"]=$old;
 	$dict[$word]=$new;
-	file_put_contents($path. $fName, json_encode($dict));
-	$out["res"] = "success";		
-	
+	$res = file_put_contents($path. $fName, json_encode($dict));
+    if ($res) {
+        $out["res"] = "success";		
+        $out["new"]=$new;
+    }
 	echo json_encode($out);
 ?>

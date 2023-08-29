@@ -8,7 +8,6 @@ try:
     dictSource = sys.argv[1]
     key = sys.argv[2]
     newVal = sys.argv[3]
-    print(newVal)
 except:
     usage()
     
