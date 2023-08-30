@@ -1227,14 +1227,10 @@ function newInputWrapper(e) {
 				.then(json => {
 					done++;
 					let id = json['id'];				
-					tmpOut[id] = " {" + json["count"] + "; ";
-					if (id < N) {
-						tmpOut[id] +=  round(json["percent"],2) + "%}";
-					} else {
-						tmpOut[id] +=  round(json["percent"],0) + "%}";
-					}
+					tmpOut[id] = ": ";					
+					tmpOut[id] += round(json["percent"],2) + "%";					
 					score_all += parseInt(json["total"]);
-					let out = "<b>all {" + N_TOT + "; " + "score_all" + "%}</b>";
+					let out = "<b>all: " + "score_all" + "%</b>";
 					// All serial requests are done
 					if (done == N) {
 						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>";
@@ -1301,18 +1297,16 @@ function clearInput() {
     $('#iInput').val(""); 
 }
 function handleNumericInput(key) {
-	if (DEBUG) console.log("handleNumericInput()")
-	let inc = parseInt(key);
-    setTimeout(clearInput,100);
+	if (DEBUG) console.log("handleNumericInput(" + key + ")")
+	let inc = parseInt(key);	
+	setTimeout(clearInput,100);
 	if (inc === 0) {
-        SCROLL_INC++;
+        SCROLL_INC++;		
     } else if (inc === 9) {
         SCROLL_INC--;
-    } else if (inc > 7) {
-        SCROLL_INC = 7;
     } else {
-        SCROLL_INC = inc - 1;
-    }
+		SCROLL_INC = key - 1;
+	}
     if (SCROLL_INC < 0) SCROLL_INC = 0
     if (SCROLL_INC > 7) SCROLL_INC = 7
     moveSelected();
@@ -3092,9 +3086,12 @@ function processKeyDown(ev) {
 		getLastWord();	
 	}	
     let regexNumeric = /^\d*$/
-	if (ev.key.match(regexNumeric)) {
-        ev.preventDefault();
-        handleNumericInput(ev.key);
+	if (ev.key.match(regexNumeric)) {		
+		if (ev.key === "0" || ev.key === "9" || ev.location === 3) {			
+			ev.preventDefault();	
+			handleNumericInput(ev.key);
+		}
+        
     }
 }
 
