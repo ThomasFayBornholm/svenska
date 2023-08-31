@@ -93,6 +93,7 @@ adjunkt
 adjutant
 adjö
 administration
+administratör
 adoption
 adoptivförälder
 adrenalinkick
@@ -1103,6 +1104,7 @@ bar-2
 barack
 barberare
 bard
+bardun
 bardval
 bark
 barkis
@@ -1530,6 +1532,7 @@ bidragsgivare
 bidrottning
 bidé
 biff
+biffko
 biffstek
 bifigur
 biflod
@@ -2147,6 +2150,7 @@ bröllopsresa
 brösta
 bröstbild
 brösthåla
+bröstkaramell
 bröstkorg
 bröstton
 bröstvårta
@@ -2763,6 +2767,7 @@ discodunk
 disharmoni
 disjunktion
 disk
+diskantklav
 diskare
 diskborste
 diskho
@@ -4137,6 +4142,7 @@ färdriktning
 färdväg
 färg
 färg-tv
+färgbild
 färgfilm
 färgglädje
 färghållning
@@ -4325,6 +4331,7 @@ förläning
 förlåt
 förlåtelse
 förman
+förmast
 förmedlare
 förmedling
 förmiddag
@@ -4641,6 +4648,7 @@ gasol
 gasoltub
 gasspis
 gastillförsel
+gasturbin
 gasurladdning
 gasutveckling
 gata
@@ -4696,6 +4704,7 @@ generalkonsulat
 generallöjtnant
 generalrepetition
 generalsekreterare
+generalstrejk
 generation
 generator
 generositet
@@ -4902,6 +4911,7 @@ gradmätning
 gradskillnad
 graf
 graffiti
+grafik
 grafit
 grammatik
 grammofon
@@ -4923,6 +4933,7 @@ granulation
 granulocyt
 grapefrukt
 gratie
+gratischans
 gratulation
 gratäng
 grav
@@ -5003,6 +5014,7 @@ grundutbildning
 grundval
 grunka
 grupp
+gruppbild
 gruppchef
 gruppering
 gruppledare
@@ -5196,6 +5208,7 @@ gåta
 gåva
 gödning
 gödsel
+gödselränna
 gödselspridare
 gök
 göl
@@ -5240,6 +5253,7 @@ halsmandel
 halsring
 halt
 halva
+halvbild
 halvbjörn
 halvbror
 halvbutelj
@@ -5407,6 +5421,7 @@ hejarklack
 hejd
 hejduk
 hela
+helbild
 helfabrikat
 helfart
 helfigur
@@ -5601,6 +5616,7 @@ hummertina
 humor
 hund
 hundblick
+hundförare
 hundkapplöpning
 hundkoja
 hundradel
@@ -5762,6 +5778,7 @@ hästrygg
 hästskjuts
 hästsko
 hästskojare
+hästsvans
 hästtjej
 hästväg
 hätskhet
@@ -6114,6 +6131,7 @@ ingång
 ingångspsalm
 inhalation
 inhamn
+injektion
 inkallelse
 inkapsling
 inkarnation
@@ -6340,6 +6358,7 @@ isolering
 isoleringscell
 ispik
 israel
+isränna
 issörja
 istapp
 isterbuk
@@ -6369,7 +6388,9 @@ jazz
 jazzklubb
 jazzmusik
 jeansshorts
+jet
 jetdrift
+jetmotor
 jetong
 jetström
 jingel
@@ -6462,6 +6483,7 @@ julafton
 julbelysning
 julgran
 julgransfot
+julgranskaramell
 juli
 julkaktus
 julklapp
@@ -6492,6 +6514,7 @@ justitieombudsman
 juvel
 juvelerare
 jycke
+jägarbiff
 jägare
 jämförelse
 jämkning
@@ -6973,8 +6996,6 @@ knarr
 knasboll
 knast
 knatte
-knattematch
-knattespelare
 knegare
 kneken
 knekt
@@ -8444,6 +8465,7 @@ lösen
 lösgom
 lösning
 lösöreauktion
+lövbiff
 lövruska
 lövskog
 lövsprickning
@@ -8530,6 +8552,7 @@ mani
 manick
 manifestation
 manikyr
+manikyrist
 manipulering
 manke
 mankhöjd
@@ -8747,6 +8770,7 @@ meningsmotståndare
 meningsyttring
 mens
 menstruation
+mensur
 mentalism
 mentalitet
 mentor
@@ -9540,6 +9564,7 @@ näktergal
 nämnare
 nämnd
 nämndeman
+närbild
 närbutik
 närdemokrati
 närgångenhet
@@ -9939,6 +9964,7 @@ panflöjt
 panik
 panikunge
 panna
+pannbiff
 pannå
 pansarmal
 pansarskott
@@ -10120,6 +10146,7 @@ pers
 persedel
 persienn
 persika
+persikohy
 persilja
 person
 persona
@@ -10569,6 +10596,7 @@ protoplasma
 prototyp
 protozo
 provare
+provdocka
 proveniens
 proviant
 provins
@@ -11088,6 +11116,7 @@ ros
 rosenfink
 rosengång
 rosengård
+rosenhy
 rosenkvitten
 rosenkål
 rosenmun
@@ -11271,6 +11300,7 @@ råsop
 råstyrka
 råtta
 råttfälla
+råttsvans
 råvara
 rödbeta
 rödbok
@@ -12147,6 +12177,7 @@ skygglapp
 skyl
 skyldighet
 skylt
+skyltdocka
 skymf
 skymning
 skymt
@@ -12164,6 +12195,7 @@ skämtteckning
 skändare
 skänk
 skänkel
+skär
 skära
 skärare
 skärbräda
@@ -12172,6 +12204,7 @@ skärm
 skärning
 skärningspunkt
 skärpa
+skärpiplärka
 skärpning
 skärseld
 skärskada
@@ -12350,6 +12383,7 @@ smäll
 smälla
 smälla-2
 smällare
+smällkaramell
 smältning
 smältost
 smältsäkring
@@ -12497,6 +12531,7 @@ soffa
 soffgrupp
 soffkudde
 sofism
+sojabiff
 sol
 solarkonstant
 solbränna
@@ -12615,6 +12650,7 @@ specialpedagog
 specifikation
 speditör
 spegel
+spegelbild
 spegelbricka
 spegelskrift
 spejare
@@ -14118,6 +14154,7 @@ trädgårdssax
 trädgårdsväxt
 trädgårdsärt
 trädkramare
+trädpiplärka
 trädtopp
 träff
 träförädling
@@ -14214,6 +14251,12 @@ turistbyrå
 turistfälla
 turistinformation
 turk
+turkfolk
+turkiska
+turkmen
+turkmeniska
+turkmenska
+turkos
 turnering
 turné
 turordning
@@ -15184,7 +15227,6 @@ vinter
 vinterbadare
 vinterdräkt
 vinterek
-vinterhämpling
 vinterkväll
 vintermånad
 vintersport
