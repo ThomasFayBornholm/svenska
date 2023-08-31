@@ -2,7 +2,7 @@
 	$path = getcwd() ."/";
 	$class = $_GET['class'];
 	// Match all words with this score
-	$score = $_GET['score'];
+	$score = intval($_GET['score']);
 	$name = $class . "-only";
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$words = preg_split("/\r\n|\r|\n/", $contents);
@@ -15,7 +15,7 @@
 	$out = array();
 	foreach($words as $w) {
 		if (array_key_exists($w, $dictScore)) {
-			if ($dictScore[$w] === $score) {
+			if (intval($dictScore[$w]) === $score) {
 				array_push($out, $w);	
 			}
 		} else if ($score === 0) {
