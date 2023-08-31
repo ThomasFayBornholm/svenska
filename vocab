@@ -40,9 +40,9 @@
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
 	<form class="centred" onsubmit="newInputWrapper(event)">	
-		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>
-		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
+		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>		
 	</form>		
 </div>
 <div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()">
@@ -1211,6 +1211,7 @@ function newInputWrapper(e) {
 			// Only list the major class groups for brevity
 			let N = 6;
 			let N_DONE = CLASS_LIST.length;
+			let tmpTot = 0;
 			for (let i = 0; i < N; i++) {
 				let c = CLASS_LIST[i];
 				// ID used to get deterministic ordering of classes
@@ -1226,18 +1227,19 @@ function newInputWrapper(e) {
 				})
 				.then(json => {
 					done++;
-					let id = json['id'];				
+					let id = json['id'];						
 					tmpOut[id] = ": ";					
 					tmpOut[id] += round(json["percent"],2) + "%";					
 					score_all += parseInt(json["total"]);
+					tmpTot += parseInt(json["count"]);
 					let out = "<b>all: " + "score_all" + "%</b>";
 					// All serial requests are done
-					if (done == N) {
+					if (done === N) {
 						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>";
 						for (i = 0; i < N; i++) {
 							out += "<br>" + CLASSES[i] + tmpOut[i];
-						}
-						score_all = Math.round(score_all / N_TOT / 2 * 100 * 100) / 100;
+						}						
+						score_all = Math.round(score_all / tmpTot / 2 * 100 * 100) / 100;
 						out = out.replace("score_all",score_all);
 						out = header + out;
 						$('#iWords').html(out);									
