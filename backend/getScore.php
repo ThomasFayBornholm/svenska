@@ -18,15 +18,18 @@
 		$classes = array();
 		array_push($classes,$class);
 	}
+	
 	foreach ($classes as $class) {
 		$scoreName = $class . "-score";	
 		// "<class>-only" is the authoritative listing for total word count
 		$f = $path . $class . "-only";
 		$infile = fopen($f , "r") or die("Could not open file: " . $f);
+		
 		if (filesize($f) != 0) {
 			$contents = fread($infile, filesize($f));
 			$score["count"] += count(preg_split("/\r\n|\r|\n/", $contents));
 		}
+		
 		if (file_exists($scoreName) && filesize($scoreName) != 0) {
 			$scoreContents = file_get_contents($path . $scoreName);
 			$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);		
@@ -44,8 +47,10 @@
 			}
 		}
 	}
+	
 	if ($score["count"] != 0) {
 		$score["percent"] = ($score["total"] / $score["count"] / 2 * 100);
+		$score["percent"] = round($score["percent"],2);
 	}
 	echo json_encode($score);
 ?>
