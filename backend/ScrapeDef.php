@@ -209,8 +209,8 @@
 	$out['meta'] .= getPronunciation($def);	
 	$out['def'] = getDef($def, $defLines);		
 	$out['more'] = getMore($def);
-	// No dashes in word keys
-	$word = str_replace("-","", $word);
+	// No dashes in word keys 
+	//$word = str_replace("-","", $word);
 	$out['key'] = $word;
 	echo json_encode($out);
 	

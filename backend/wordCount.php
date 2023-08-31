@@ -77,26 +77,44 @@
 		}
 		fclose($infile);
 	}
+		
 	
-	$nTot = $nAdj + $nVerb + $nAdverb + $nSub_en + $nSub_ett + $nFraser + $nPlural + $nPreposition + $nInterjektion + $nPronomen + $nPrefix + $nSlutled + $nKonjunktion + $nSlutled + $nArtikel;
-	$count["total"] = $nTot;
 	$count["all"] = $nAll;
 	$count["adj"] = $nAdj;
+	$nTot += $nAdj;
 	$count["verb"] = $nVerb;
+	$nTot += $nVerb;
 	$count["adverb"] = $nAdverb;
+	$nTot += $nAdverb;
 	$count["fraser"] = $nFraser;
+	$nTot += $nFraser;
 	$count["substantiv_en"] = $nSub_en;
+	$nTot += $nSub_en;
 	$count["substantiv_ett"] = $nSub_ett;
+	$nTot += $nSub_ett;
 	$count["plural"] = $nPlural;
+	$nTot += $nPlural;
 	$count["preposition"] = $nPreposition;
+	$nTot += $nPreposition;
 	$count["interjektion"] = $nInterjektion;
+	$nTot += $nInterjektion;
 	$count["pronomen"] = $nPronomen;
+	$nTot += $nPronomen;
 	$count["prefix"] = $nPrefix;
+	$nTot += $nPrefix;
 	$count["nummer"] = $nNummer;
+	$nTot += $nNummer;
 	$count["konjunktion"] = $nKonjunktion;
+	$nTot += $nKonjunktion;
 	$count["slutled"] = $nSlutled;
+	$nTot += $nSlutled;
 	$count["subjunktion"] = $nSubjunktion;
+	$nTot += $nSubjunktion;
 	$count["infinitiv"] = $nInfinitiv;
+	$nTot += $nInfinitiv;
 	$count["artikel"] = $nArtikel;
+	$nTot += $nArtikel;
+	
+	$count["total"] = $nTot;
 	echo json_encode($count);
 ?>
