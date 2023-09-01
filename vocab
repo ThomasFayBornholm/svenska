@@ -837,7 +837,9 @@ function lookupWord(el,onlyLocal,inline) {
 						getCompDef(meta,def);
 						return;
 					}
-					displayDef(meta,def,word);											
+					pronounce(word);
+					displayMeta(meta);
+					displayDef(def,word);											
 					$('#iDefDiv').css("display", "none"); // ?!
 					if (!inline) {
 						$('#iWords').css("visibility", "hidden");
@@ -860,11 +862,13 @@ function lookupWord(el,onlyLocal,inline) {
 		}
 	}
 }
+function displayMeta(meta, word) {
+	if (meta.length > 0) $('#iMeta').html(fmtMeta(meta));
+	if (CLASS === "fraser") $('#iMeta').html(fmtMeta(CUR_WORD));
+}
 
-function displayDef(meta,def,word) {	
-	log("displayDef()");
-	if (DEBUG) console.log("displayDef(meta,def,word)");	
-	pronounce(word);
+function displayDef(def,word) {	
+	if (DEBUG) console.log("displayDef(def,word)");	
 	def = makeLinks(def);
 	let defRaw = def.split("<br>");	
 	let defLines = [];
@@ -907,9 +911,6 @@ function displayDef(meta,def,word) {
 
 		
 	if (CLASS != "all" && CLASS != "fraser") outDef = outDef.replace(CUR_DEF_ENUM + " ", CUR_DEF_ENUM + "/" + N_DEFS + " ");	
-	
-	if (meta.length > 0) $('#iMeta').html(fmtMeta(meta));
-	if (CLASS === "fraser") $('#iMeta').html(fmtMeta(CUR_WORD));
 	$('#iParDef').html(outDef);
 }
 
@@ -3088,7 +3089,8 @@ function navDef(ev) {
 			CUR_DEF_ENUM++;
 			if (CUR_DEF_ENUM > N_DEFS) CUR_DEF_ENUM = N_DEFS;
 		}
-		getDefInd(CUR_DEF_ENUM);
+		def = getDefInd(CUR_DEF_ENUM);
+		displayDef(def,CUR_WORD);
 		getMore(CUR_DEF_ENUM);
 	}	
 }
@@ -3484,7 +3486,6 @@ function shortenClass() {
 }
 
 function pronounce(word) {
-	log("pro")
 	if (DEBUG) console.log("pronounce()");
 	if (SOUNDS && CLASS != "all") {				
 		let shortClass = shortenClass(CLASS);
