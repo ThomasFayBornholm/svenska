@@ -44,7 +44,7 @@
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>	
 		<div id="dialog" title="Basic dialog">
-			<p id="iSummary" class="summary">Dialog</p>
+			<p id="iSummary" class="summary"></p>
 		</div>
 	</form>		
 </div>
@@ -1235,15 +1235,11 @@ for (let i = 0; i < N; i++) {
 			out = out.replace("score_all",score_all);
 			out = header + out;
 			// Append auxiliary classes in smaller text
-			out += "<br>Aux classes:";
+			out += "<br>Aux classes:<br>";
 			del = "";						
 			for (i = N; i < N_DONE; i++) {
-				if ((i - N) % 6 === 0) {
-					del = "<br>";
-				} else {
-					del = ", ";
-				}
-				out += del + CLASSES[i]							
+				out += del + CLASSES[i]		
+				del = ", ";				
 			}	
 			$('#iSummary').html(out);
 		}												
