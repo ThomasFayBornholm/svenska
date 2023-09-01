@@ -20,7 +20,7 @@
 	}
 	</style>	
 </head>
-<body onload="startup()" onkeydown="bodyListener(event)"  onkeyup="closeScores(event)">
+<body onload="startup()" onkeydown="bodyListener(event)">
 <div >
 <div class="titleLeft">
 <span class="counts" id="iCntTotal">xx xxx</span>
@@ -146,8 +146,7 @@ let TOTAL_SCORE = 0;
 let TARGET_DAILY = 0;
 let TARGET_MONDAY = 0;
 let RATE = 0;
-let END_DATE = 0;
-let END_DATE_STR = "1970-01-01"
+let SHOW_SUMMARY = true;
 
 document.addEventListener("visibilitychange", (event) => {
 	if (TABS.length > 0) {
@@ -168,6 +167,10 @@ function startup() {
 	$('#iCntRegex').on("dblclick", resetFilter);
 }
 
+function clearSummary() {
+    debug("clearSummary");
+    $('#iSummary').text("");
+}
 function getInput() {
 	if (DEBUG) console.log("getInput()");
 	let word = $('#iInput').val();
@@ -1227,7 +1230,7 @@ for (let i = 0; i < N; i++) {
 		let out = "<b>all: " + "score_all" + "%</b>";
 		// All serial requests are done
 		if (done === N) {
-			let header = "Today: " + TARGET_DAILY.toLocaleString('sv') + "<br>Monday: " + TARGET_MONDAY.toLocaleString('sv') + "<br>";
+			let header = "Monday: " + TARGET_MONDAY.toLocaleString('sv') + "<br>";
 			for (i = 0; i < N; i++) {
 				out += "<br>" + CLASSES[i] + tmpOut[i];
 			}						
@@ -1261,6 +1264,8 @@ function newInputWrapper(e) {
 		N_REGEX = 0;
 		if (newClass != "") {
 			setClass(newClass);		
+            clearInput();
+            return;
 		}
 	// Navigate to word class + query
 	} else if (word.indexOf("@") != -1) {
@@ -1452,9 +1457,9 @@ function seekWord(word, link = false, lastEnum = false) {
 		})
 		.then(json => {
 			REGEX_WORDS = json["matches"];			
-			N_REGEX = json["count"];			
+			N_REGEX = json["cnt"];			
 			$('#iScore').html("");
-			$('#iCntRegex').html("*" + N_REGEX + "*");			
+			$('#iCntRegex').html("****" + N_REGEX + "****");			
 			if (N_REGEX > 0) {
 				INC = 0;
 				SCROLL_INC = -1;
@@ -3050,13 +3055,6 @@ function processKeyDown(ev) {
 		//showHelp
 	} else if (ev.key === "ArrowDown") {
 		fetchDef();
-	} else if (ev.key === "F2") {
-		if (DEBUG) {
-			getRaw();
-			return;
-		} else {
-			showScores();
-		}
 	} else if (ev.key === "F6") {
 		walkListing();
 	} else if (ev.key === "#") {
@@ -3290,7 +3288,36 @@ function clearRegexMode() {
 }
 
 function bodyListener(ev) {
-	if (ev.key === "Home") focusInput();
+	if (ev.key === "Home") {
+        focusInput();
+    } else if (ev.key === "F2") {
+        toggleScores();
+    } else if (ev.key === "v") {
+        if (! $('#iInput').is(":focus")) {
+            ev.preventDefault();
+            setClass("verb");
+        }
+    } else if (ev.key === "d") {
+        if (! $('#iInput').is(":focus")) {
+            ev.preventDefault();
+            setClass("adjektiv");
+        }
+    } else if (ev.key === "n") {
+        if (! $('#iInput').is(":focus")) {
+            ev.preventDefault();
+            setClass("substantiv_en");
+        }
+    } else if (ev.key === "t") {
+        if (! $('#iInput').is(":focus")) {
+            ev.preventDefault();
+            setClass("substantiv_ett");
+        }
+    } else if (ev.key === "a") {
+        if (! $('#iInput').is(":focus")) {
+            ev.preventDefault();
+            setClass("adverb");
+        }
+    } 
 }
 
 function defaultMeta(hasPlural = true) {
@@ -3383,8 +3410,6 @@ function setTargets() {
 	.then(json => {
 		RATE = json["rate"];
 		TARGET_DAILY = json["targetDaily"];		TARGET_MONDAY = json["targetWeekly"];
-		END_DATE = json["endDate"]
-		END_DATE_STR = json["endDateStr"];
 		getDiff();
 	})
 	.catch(error => {
@@ -3658,27 +3683,34 @@ function toggleSounds() {
 }
 
 function resetFilter() {
+    debug("resetFilter()");
+    N_REGEX = 0;
 	updateScore();
 	$('#iCntRegex').html("");
+    IND = 0;
+    getWords();
 }
-3689
+
 function debug(txt) {
     if (DEBUG) console.log(txt);
 }
 
-function closeScores(ev) {
-	debug("closeScores(ev)");
-	if (ev.key === "F2") {
-		$( "#dialog" ).dialog('close');
-	}
+function toggleScores() {
+	debug("toggleScores()");
+    let len = $('#iSummary').text().length;
+    if (len > 0) {
+        $( "#dialog" ).dialog('close');
+    } else {
+        $( function() {
+            $( "#dialog" ).dialog({title: "Summary",width: "100%", position: 'top', maxheight: '1200pt'});
+        } );
+        $('#dialog').on("dialogclose", clearSummary);
+        getSummary();
+    }
 }
 
-function showScores() {
-	debug("showScores()");
-	$( function() {
-		$( "#dialog" ).dialog({title: "Summary",width: "100%"});
-	} );
-	getSummary();
+function log(txt) {
+    console.log(txt);
 }
 </script>
 </html>
