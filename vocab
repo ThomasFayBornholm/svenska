@@ -26,7 +26,7 @@
 <span class="counts" id="iCntTotal">xx xxx</span>
 </div>
 <div class="titleCentre">
-<h1 id="iTitle" ondblclick="toggleTooltips()" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on web-page controls">Ordbok</h1>
+<h1 id="iTitle" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on web-page controls">Ordbok</h1>
 </div>
 <div class="titleRight">
 <span class="counts" id="iTotalScore">xx.xx%</span>
@@ -137,7 +137,6 @@ let REGEX_MODE = false;
 var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk","inf","art"]
 var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord","infinitiv","artikel"]
 // Crude toggle on site load to show tool tips
-let SHOW_HELP = false;
 var TAB_DUMMY;
 var TAB_LOOKUP
 let ALL_DEFS = "";
@@ -158,12 +157,11 @@ document.addEventListener("visibilitychange", (event) => {
 
 function startup() {
 	if (DEBUG) console.log("startup()")
-	showTooltips();
 	wordCount();		
 	updateScore();
 	randomWord();
 	focusInput();
-	setTimeout(setTargets,2000);
+	setTimeout(setTargets,1000);
 	$('#iCntRegex').on("dblclick", resetFilter);
 }
 
@@ -804,9 +802,6 @@ function lookupWord(el,onlyLocal,inline) {
 				let def = "";
 				let delim ="";			
 				let tmp = "<span ";
-				if (SHOW_HELP) {
-					tmp += "title='Navigate to xxx'";
-				}
 				tmp += "onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";			
 				for (let i = 0; i < keys.length; i++) {		
 					def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
@@ -897,10 +892,7 @@ function displayDef(meta,def,word) {
 	for (j = 0; j < defLines.length; j++) {
 		let key = word.replaceAll(" ","-") + "_" + j;		
 		if (defLines[j].indexOf("<i>") === -1) {
-			outDef += delim + defLines[j]			
-			if (SHOW_HELP) {
-				outDef += "title='Show more information'"
-			}			
+			outDef += delim + defLines[j]						
 		} else {
 			outDef += delim + defLines[j];
 		}
@@ -911,20 +903,13 @@ function displayDef(meta,def,word) {
 	outDef = outDef.replaceAll("<l>","<span onclick=followLink(this) onmouseover=highlight(this,event)><b>");
 	outDef = outDef.replaceAll("</l>","</b></span>");
 	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event) onmouseover=editCursor(event,this)"
-	if (SHOW_HELP) {		
-		tmpSpan += " title='Right click to edit definition'" 
-	}
+
 		
 	if (CLASS != "all" && CLASS != "fraser") outDef = outDef.replace(CUR_DEF_ENUM + " ", CUR_DEF_ENUM + "/" + N_DEFS + " ");	
 	
 	if (meta.length > 0) $('#iMeta').html(fmtMeta(meta));
 	if (CLASS === "fraser") $('#iMeta').html(fmtMeta(CUR_WORD));
 	$('#iParDef').html(outDef)
-	if (SHOW_HELP) {
-		// ToDo remove temp test
-		$('#iWordRoot').css("white-space: pre-wrap");		
-		$('#iWordRoot').attr("title","asdfa\u000dasdfasdf");
-	}	
 }
 
 // Make links to referenced words
@@ -1011,7 +996,6 @@ function addLinks(refClass,def) {
 	delim = "";
 	beginSpan = "<span onclick=followLink(this)";
 	beginSpan += " onmouseover=highlight(this,event)";
-	if (SHOW_HELP) beginSpan += " title='Navigate to \"_w_\"'";
 	beginSpan += ">"
 	spanTmp = beginSpan + "<b>_w_</b></span>";
 	for (line of defArr) {		
@@ -1560,7 +1544,6 @@ function seekWord(word, link = false, lastEnum = false) {
 									let def = "";
 									let delim ="";									
 									let tmp = "<span onmouseover=\"highlight(this,event)\""
-									if (SHOW_HELP) tmp += "title='Navigate to class \"_k_\"'";
 									tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
 									for (let i = 0; i < keys.length; i++) {			
 										let compDef = json[keys[i]];															
@@ -1685,7 +1668,6 @@ function drillDown() {
 				let def = "";
 				let delim ="";									
 				let tmp = "<span onmouseover=\"highlight(this,event)\"";
-				if (SHOW_HELP) tmp += "title= 'Navigate to class \"_k_\"'";
 				tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
 				for (let i = 0; i < keys.length; i++) {			
 				let compDef = json[keys[i]];															
@@ -2981,11 +2963,7 @@ function getMore(ind) {
 			}
 			let tmp = "*********************<br>"
 			//let tmp = "---------------------<br>"
-			tmp += "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";			
-			if (SHOW_HELP) {				
-				tmp += "\nRight click = edit information'";
-			}
-			
+			tmp += "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";						
 			tmp += " onmouseover='highlight(this,event)'" + tmpMore;
 
 			tmp = tmp.replaceAll("KONSTRUKTION: ", "<b>KONSTRUKTION:</b>");
@@ -3145,42 +3123,7 @@ function hack(ev) {
 	ev.preventDefault();
 	$('#iDefDiv').css("display","block");
 }
-function showTooltips() {
-	if (DEBUG) console.log("showTooltips()");
-	if (!SHOW_HELP) {
-		$('#iInput').attr("title","");
-		$('#iWordBox').attr("title","");
-		$('#iInfo').attr("title","");		
-		$('#iLast').attr("title","");
-		$('#iParDef').attr("title","");		
-		$('#iDefText').attr("title","");
-		$('#iPut0').attr("title","");
-		$('#iPut1').attr("title","");
-		$('#iPut2').attr("title","");
-		$('#iPutMore').attr("title","");		
-	} else {
-		$('#iInput').attr("title","Search for word, has regex support.\nRight-click or 'down arrow' for svenska.se lookup" );
-		$('#iWordBox').attr("title","Scroll with mouse wheel to navigate individual words\nLeft click word = get definition\nRight click word = lookup@svensk.se");
-		$('#iInfo').attr("title","Mouse wheel/ or click left/right to navigate");
-		$('#iLast').attr("title","Back to last view");
-		$('#iParDef').attr("title","Double click to hide");
-		$('#iDefText').attr("title","Enter definition text");
-		$('#iPut0').attr("title","Add/edit definition with score of '0/2'");
-		$('#iPut1').attr("title","Add/edit definition with score of '1/2'");
-		$('#iPut2').attr("title","Add/edit definition with score of '2/2'");
-		$('#iPutMore').attr("title","Add/edit example text");
-	}
-}
-function toggleTooltips() {
-	if (DEBUG) console.log("toggleTooltips()");
-	SHOW_HELP = !SHOW_HELP;	
-	showTooltips();
-	if (SHOW_HELP) {
-		$('#iTitle').html($('#iTitle').html() + " - with Tooltips");		
-	} else {
-		$('#iTitle').html($('#iTitle').html().replace(" - with Tooltips",""));
-	}
-}
+
 function defEntry(ev) {
 	if (ev.location === 2) {
 		if (ev.key === "Control") {			
