@@ -747,6 +747,7 @@ function showWordMatches(follow) {
 }
 
 function lookupWord(el,onlyLocal,inline) {	
+	log("lookup")
 	if (DEBUG) console.log("lookupWord(el,onlyLocal,inline), elid = " + el.id + ", onlyLocal = " + onlyLocal + ", inline = " + inline);
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
@@ -774,7 +775,6 @@ function lookupWord(el,onlyLocal,inline) {
 			word = word.replace("2","-2");
 		}
 		CUR_WORD=word;
-
 		LAST_OBJ = el;
 		
 		if (DEBUG) console.log("lookupWord(), CUR_WORD = " + CUR_WORD);
@@ -807,7 +807,7 @@ function lookupWord(el,onlyLocal,inline) {
 					def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
 					delim="<br>";
 				}
-				LAST_DEF = def;				
+				LAST_DEF = def;	
 				displayDef("",def, word);						
 				return;
 			})
@@ -837,7 +837,6 @@ function lookupWord(el,onlyLocal,inline) {
 						getCompDef(meta,def);
 						return;
 					}
-					
 					displayDef(meta,def,word);											
 					$('#iDefDiv').css("display", "none"); // ?!
 					if (!inline) {
@@ -862,8 +861,10 @@ function lookupWord(el,onlyLocal,inline) {
 	}
 }
 
-function displayDef(meta,def,word) {		
+function displayDef(meta,def,word) {	
+	log("displayDef()");
 	if (DEBUG) console.log("displayDef(meta,def,word)");	
+	pronounce(word);
 	def = makeLinks(def);
 	let defRaw = def.split("<br>");	
 	let defLines = [];
@@ -909,7 +910,7 @@ function displayDef(meta,def,word) {
 	
 	if (meta.length > 0) $('#iMeta').html(fmtMeta(meta));
 	if (CLASS === "fraser") $('#iMeta').html(fmtMeta(CUR_WORD));
-	$('#iParDef').html(outDef)
+	$('#iParDef').html(outDef);
 }
 
 // Make links to referenced words
@@ -1308,7 +1309,6 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
 	if (DEBUG) console.log("seekWordSingleClass(word, last_enum), word = " + word + ", last_enum = " + last_enum)		
 	// Immediately play pronunciation if available
-	pronounce(word);
 	if (word.length > 0) {
 		// Any user supplied break breaks are discarded.
 		word = word.replaceAll("­","");		
@@ -1381,8 +1381,6 @@ function seekWord(word, link = false, lastEnum = false) {
 	while (word.substr(word.length-1) === " ") {
 		word = word.substr(0,word.length-1)
 	}
-	// Immediately play pronunciation if available
-	pronounce(word);
 	// (Nearly) Always regex for phrases
 	if (CLASS === "fraser") {
 		if (REGEX_MODE) {		
@@ -3486,7 +3484,7 @@ function shortenClass() {
 }
 
 function pronounce(word) {
-	
+	log("pro")
 	if (DEBUG) console.log("pronounce()");
 	if (SOUNDS && CLASS != "all") {				
 		let shortClass = shortenClass(CLASS);
@@ -3567,8 +3565,6 @@ function getDefInd(ind) {
 		}
 	}		
 	
-	displayDef("",out,CUR_WORD)
-	getMore(ind);
 	return out;
 }
 
