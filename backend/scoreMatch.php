@@ -12,16 +12,15 @@
 		$scoreContents = file_get_contents($path . $scoreName) or die("Could not open score listing");
 	}
 	$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);	
-	$out = array();
+	$matches = array();
 	foreach($words as $w) {
 		if (array_key_exists($w, $dictScore)) {
 			if (intval($dictScore[$w]) === $score) {
-				array_push($out, $w);	
+				array_push($matches, $w);	
 			}
-		} else if ($score === 0) {
-			array_push($out, $w);	
 		}
-		
 	}	
+	$out["cnt"] = count($matches);
+	$out["matches"] = $matches;
 	echo json_encode($out);
 ?>
