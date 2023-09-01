@@ -1,17 +1,8 @@
+a
 A-barn
 A-skatt
 A-språk
 A-vitamin
-AV-hjälpmedel
-B-lag
-B-vitamin
-C-språk
-C-vitamin
-D-vitamin
-E-vitamin
-Söderhavet
-U-rör
-a
 abakus
 abc
 abc-stridsmedel
@@ -219,6 +210,7 @@ auditorium
 augment
 augustipäron
 automatkarbin
+AV-hjälpmedel
 avancemang
 avantgarde
 avbeställningsskydd
@@ -271,6 +263,8 @@ ax-2
 axiom
 axplock
 b
+B-lag
+B-vitamin
 babord
 babysim
 babyskydd
@@ -352,6 +346,7 @@ belopp
 belägg
 belägringstillstånd
 beläte
+beläte2
 bemanningsföretag
 bemyndigande
 bemödande
@@ -366,6 +361,7 @@ bensinstopp
 benskydd
 bensår
 beredelseord
+beredskap
 beredskapsarbete
 beredskapslager
 beredskapsläge
@@ -666,6 +662,8 @@ bönemöte
 böneutrop
 bönkaffe
 c
+C-språk
+C-vitamin
 café
 casino
 cellulosanitrat
@@ -704,6 +702,7 @@ cykelställ
 cyklop
 cyklopöga
 d
+D-vitamin
 dagbefäl
 dagblad
 dagcenter
@@ -839,6 +838,7 @@ e
 e-brev
 e-mail
 e-recept
+E-vitamin
 edikt
 efterarbete
 efterfrågande
@@ -1011,7 +1011,6 @@ flabb
 flaggskepp
 flaggspel
 flak
-flams
 flasköl
 flatskratt
 flerbarnstillägg
@@ -1542,6 +1541,7 @@ handlingssätt
 handlingsutrymme
 handlov
 handtag
+hand­skydd
 hangarfartyg
 hankön
 hantverk
@@ -1727,6 +1727,7 @@ hörspel
 höstlov
 höstvete
 i
+i andanom
 i-land
 id-kort
 ide
@@ -2138,6 +2139,7 @@ kreatinin
 kreatur
 kreditiv
 kreditkort
+krematorium
 kretskort
 kretslopp
 krig
@@ -3151,6 +3153,7 @@ pulsslag
 pulsåderbråck
 pulver
 pulverkaffe
+pulvrisera
 pund
 pundhuvud
 pungdjur
@@ -4113,6 +4116,7 @@ sågspån
 såll
 sångspel
 sår
+Söderhavet
 sök
 sökarljus
 sökord
@@ -4305,7 +4309,7 @@ trakasseri
 traktamente
 tramp
 trampfartyg
-trams
+tramsflams
 transept
 transportband
 trapphus
@@ -4408,6 +4412,7 @@ töcken
 törne
 u
 u-land
+U-rör
 uddaplagg
 uddljud
 uddrim
@@ -4580,6 +4585,7 @@ vagnsätt
 vak
 vakuum
 vakuumrör
+vakuum­rör
 val
 valdeltagande
 valfläsk
