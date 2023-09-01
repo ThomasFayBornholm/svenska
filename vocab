@@ -20,7 +20,7 @@
 	}
 	</style>	
 </head>
-<body onload="startup()" onkeydown="bodyListener(event)">
+<body onload="startup()" onkeydown="bodyListener(event)"  onkeyup="closeScores(event)">
 <div >
 <div class="titleLeft">
 <span class="counts" id="iCntTotal">xx xxx</span>
@@ -42,7 +42,10 @@
 	<form class="centred" onsubmit="newInputWrapper(event)">	
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
-		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>		
+		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>	
+		<div id="dialog" title="Basic dialog">
+			<p id="iSummary" class="summary">Dialog</p>
+		</div>
 	</form>		
 </div>
 <div id="iWordBox" class="wordBox firstColumn" onwheel="scrollWords(event)" onclick="clearDef()">
@@ -1192,6 +1195,65 @@ function showToggle() {
 	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
 
+function getSummary() {
+var tmpOut = [];
+let done = 0;
+let score_all = 0;
+// for (let i = 0; i < CLASS_LIST.length; i++) {
+// Only list the major class groups for brevity
+let N = 6;
+let N_DONE = CLASS_LIST.length;
+let tmpTot = 0;
+for (let i = 0; i < N; i++) {
+	let c = CLASS_LIST[i];
+	// ID used to get deterministic ordering of classes
+	fetch('backend/getScore.php?class=' + c + '&id=' + i, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		done++;
+		let id = json['id'];						
+		tmpOut[id] = ": ";					
+		tmpOut[id] += round(json["percent"],2) + "%";					
+		score_all += parseInt(json["total"]);
+		tmpTot += parseInt(json["count"]);
+		let out = "<b>all: " + "score_all" + "%</b>";
+		// All serial requests are done
+		if (done === N) {
+			let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>";
+			for (i = 0; i < N; i++) {
+				out += "<br>" + CLASSES[i] + tmpOut[i];
+			}						
+			score_all = Math.round(score_all / tmpTot / 2 * 100 * 100) / 100;
+			out = out.replace("score_all",score_all);
+			out = header + out;
+			// Append auxiliary classes in smaller text
+			out += "<br>Aux classes:";
+			del = "";						
+			for (i = N; i < N_DONE; i++) {
+				if ((i - N) % 6 === 0) {
+					del = "<br>";
+				} else {
+					del = ", ";
+				}
+				out += del + CLASSES[i]							
+			}	
+			$('#iSummary').html(out);
+		}												
+	})
+	.catch(error => {
+		console.log(error);
+	})	
+}			
+}
+
 function newInputWrapper(e) {
 	if (DEBUG) console.log("newInputWrapper()");
 	e.preventDefault();
@@ -1203,67 +1265,7 @@ function newInputWrapper(e) {
 		N_REGEX = 0;
 		if (newClass != "") {
 			setClass(newClass);		
-		} else {
-			var tmpOut = [];
-			let done = 0;
-			let score_all = 0;
-			// for (let i = 0; i < CLASS_LIST.length; i++) {
-			// Only list the major class groups for brevity
-			let N = 6;
-			let N_DONE = CLASS_LIST.length;
-			let tmpTot = 0;
-			for (let i = 0; i < N; i++) {
-				let c = CLASS_LIST[i];
-				// ID used to get deterministic ordering of classes
-				fetch('backend/getScore.php?class=' + c + '&id=' + i, {
-					method: 'get',
-					mode: 'cors',
-					headers: {
-						'Content-Type': 'application/json'
-					}
-				})
-				.then(response => {
-					return response.json();
-				})
-				.then(json => {
-					done++;
-					let id = json['id'];						
-					tmpOut[id] = ": ";					
-					tmpOut[id] += round(json["percent"],2) + "%";					
-					score_all += parseInt(json["total"]);
-					tmpTot += parseInt(json["count"]);
-					let out = "<b>all: " + "score_all" + "%</b>";
-					// All serial requests are done
-					if (done === N) {
-						let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>";
-						for (i = 0; i < N; i++) {
-							out += "<br>" + CLASSES[i] + tmpOut[i];
-						}						
-						score_all = Math.round(score_all / tmpTot / 2 * 100 * 100) / 100;
-						out = out.replace("score_all",score_all);
-						out = header + out;
-						$('#iWords').html(out);									
-						// Append auxiliary classes in smaller text
-						out = "Aux classes:";
-						del = "";						
-						for (i = N; i < N_DONE; i++) {
-							if ((i - N) % 6 === 0) {
-								del = "<br>";
-							} else {
-								del = ", ";
-							}
-							out += del + CLASSES[i]							
-						}															
-						$('#iAux').html(out);
-					}												
-				})
-				.catch(error => {
-					console.log(error);
-				})	
-			}			
 		}
-		$('#iInput').val("");
-		return;
 	// Navigate to word class + query
 	} else if (word.indexOf("@") != -1) {
 		// Add word
@@ -1453,8 +1455,8 @@ function seekWord(word, link = false, lastEnum = false) {
 			return response.json();
 		})
 		.then(json => {
-			REGEX_WORDS = json;			
-			N_REGEX = json.length;			
+			REGEX_WORDS = json["matches"];			
+			N_REGEX = json["count"];			
 			$('#iScore').html("");
 			$('#iCntRegex').html("*" + N_REGEX + "*");			
 			if (N_REGEX > 0) {
@@ -3051,7 +3053,12 @@ function processKeyDown(ev) {
 	} else if (ev.key === "F1" || ev.key === "ArrowDown") {
 		fetchDef();
 	} else if (ev.key === "F2") {
-		getRaw();
+		if (DEBUG) {
+			getRaw();
+			return;
+		} else {
+			showScores();
+		}
 	} else if (ev.key === "F6") {
 		walkListing();
 	} else if (ev.key === "#") {
@@ -3656,9 +3663,24 @@ function resetFilter() {
 	updateScore();
 	$('#iCntRegex').html("");
 }
-
+3689
 function debug(txt) {
     if (DEBUG) console.log(txt);
+}
+
+function closeScores(ev) {
+	debug("closeScores(ev)");
+	if (ev.key === "F2") {
+		$( "#dialog" ).dialog('close');
+	}
+}
+
+function showScores() {
+	debug("showScores()");
+	$( function() {
+		$( "#dialog" ).dialog({title: "Summary",width: "650pt"});
+	} );
+	getSummary();
 }
 </script>
 </html>

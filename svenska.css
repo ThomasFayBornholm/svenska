@@ -283,3 +283,12 @@ label {
 #iDefDiv {
 	display: none;
 }
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+.summary {
+	font-size: 36px;
+	width: 620pt;
+}
