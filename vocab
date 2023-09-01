@@ -1227,7 +1227,7 @@ for (let i = 0; i < N; i++) {
 		let out = "<b>all: " + "score_all" + "%</b>";
 		// All serial requests are done
 		if (done === N) {
-			let header = "Today: " + TARGET_DAILY + "<br>Monday: " + TARGET_MONDAY + "<br>";
+			let header = "Today: " + TARGET_DAILY.toLocaleString('sv') + "<br>Monday: " + TARGET_MONDAY.toLocaleString('sv') + "<br>";
 			for (i = 0; i < N; i++) {
 				out += "<br>" + CLASSES[i] + tmpOut[i];
 			}						
@@ -3050,7 +3050,9 @@ function processKeyDown(ev) {
 		addWord();	
 	} else if (ev.key === "Delete") {
 		removeWord();
-	} else if (ev.key === "F1" || ev.key === "ArrowDown") {
+	} else if (ev.key === "F1") {
+		//showHelp
+	} else if (ev.key === "ArrowDown") {
 		fetchDef();
 	} else if (ev.key === "F2") {
 		if (DEBUG) {
@@ -3678,7 +3680,7 @@ function closeScores(ev) {
 function showScores() {
 	debug("showScores()");
 	$( function() {
-		$( "#dialog" ).dialog({title: "Summary",width: "650pt"});
+		$( "#dialog" ).dialog({title: "Summary",width: "100%"});
 	} );
 	getSummary();
 }
