@@ -42,7 +42,8 @@
 	<form class="centred" onsubmit="newInputWrapper(event)">	
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
-		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>	
+		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>
+		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()">
 		<div id="dialog" title="Basic dialog">
 			<p id="iSummary" class="summary"></p>
 		</div>
@@ -747,7 +748,6 @@ function showWordMatches(follow) {
 }
 
 function lookupWord(el,onlyLocal,inline) {	
-	log("lookup")
 	if (DEBUG) console.log("lookupWord(el,onlyLocal,inline), elid = " + el.id + ", onlyLocal = " + onlyLocal + ", inline = " + inline);
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
@@ -3237,28 +3237,38 @@ function bodyListener(ev) {
         toggleScores();
     } else if (ev.key === "v") {
         if (! $('#iInput').is(":focus")) {
-            ev.preventDefault();
-            setClass("verb");
+			if(! $('#iDefText').is(":focus")) {
+				ev.preventDefault();
+				setClass("verb");
+			}
         }
     } else if (ev.key === "d") {
         if (! $('#iInput').is(":focus")) {
-            ev.preventDefault();
-            setClass("adjektiv");
+			if(! $('#iDefText').is(":focus")) {
+				ev.preventDefault();
+				setClass("adjektiv");
+			}
         }
     } else if (ev.key === "n") {
         if (! $('#iInput').is(":focus")) {
-            ev.preventDefault();
-            setClass("substantiv_en");
+			if(! $('#iDefText').is(":focus")) {
+				ev.preventDefault();
+				setClass("substantiv_en");
+			}
         }
     } else if (ev.key === "t") {
         if (! $('#iInput').is(":focus")) {
-            ev.preventDefault();
-            setClass("substantiv_ett");
+			if(! $('#iDefText').is(":focus")) {
+				ev.preventDefault();
+				setClass("substantiv_ett");
+			}
         }
     } else if (ev.key === "a") {
         if (! $('#iInput').is(":focus")) {
-            ev.preventDefault();
-            setClass("adverb");
+			if(! $('#iDefText').is(":focus")) {
+				ev.preventDefault();
+				setClass("adverb");
+			}
         }
     } 
 }
@@ -3651,6 +3661,12 @@ function toggleScores() {
 
 function log(txt) {
     console.log(txt);
+}
+function fromEnglish() {
+	let src = $('#iInput').val();
+	let url = "https://translate.google.com/?sl=en&tl=sv&text=<src>%0A&op=translate"
+	url = url.replace("<src>", src);
+	window.open(url);
 }
 </script>
 </html>
