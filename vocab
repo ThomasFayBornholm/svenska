@@ -42,8 +42,8 @@
 	<form class="centred" onsubmit="newInputWrapper(event)">	
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
-		<img class="b2" src="img/Mute.jpg" id="iToggleSounds" onclick="toggleSounds()"></img>
-		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()">
+		<img class="b2" src="img/Mute.png" id="iToggleSounds" onclick="toggleSounds()" onmouseover="highlight(this,event)"></img>
+		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" onmouseover="highlight(this,event)">
 		<div id="dialog" title="Basic dialog">
 			<p id="iSummary" class="summary"></p>
 		</div>
@@ -3030,6 +3030,11 @@ function processKeyDown(ev) {
 		removeWord();
 	} else if (ev.key === "F1") {
 		//showHelp
+	} else if (ev.key === "*" || ev.key === "(") {
+		if (!REGEX_MODE) {
+			ev.preventDefault();
+			fromEnglish();
+		}
 	} else if (ev.key === "ArrowDown") {
 		fetchDef();
 	} else if (ev.key === "F6") {
@@ -3626,9 +3631,9 @@ function rand() {
 function toggleSounds() {
 	SOUNDS = !SOUNDS
 	if (SOUNDS) {
-		$('#iToggleSounds').attr("src", "img/volume.png")
+		$('#iToggleSounds').attr("src", "img/Volume.jpg")
 	} else {
-		$('#iToggleSounds').attr("src", "img/Mute.jpg")
+		$('#iToggleSounds').attr("src", "img/Mute.png")
 	}
 }
 
@@ -3664,9 +3669,11 @@ function log(txt) {
 }
 function fromEnglish() {
 	let src = $('#iInput').val();
-	let url = "https://translate.google.com/?sl=en&tl=sv&text=<src>%0A&op=translate"
-	url = url.replace("<src>", src);
-	window.open(url);
+	if (src.length > 0) {
+		let url = "https://translate.google.com/?sl=en&tl=sv&text=<src>%0A&op=translate"
+		url = url.replace("<src>", src);
+		window.open(url);
+	}
 }
 </script>
 </html>
