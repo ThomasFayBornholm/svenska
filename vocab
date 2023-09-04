@@ -1390,12 +1390,9 @@ function seekWord(word, link = false, lastEnum = false) {
 			word = word.replaceAll(")","\\)");
 		}
 	}
-	$('#iCntRegex').html("");
-	reg1 = word.indexOf("*") != -1 || word.indexOf("+") != -1 || word.indexOf('?') != -1 || word.indexOf('^') != -1;
-	// Regex support
-	reg2 = word.indexOf("$") != -1 || word.indexOf("[") != -1 || word.indexOf("]") != -1;
+	$('#iCntRegex').html("");		
 	scoreMatch = word.indexOf("redwords") != -1 || word.indexOf("bluewords") != - 1;
-	if (reg1 || reg2 || REGEX_MODE) {				
+	if (REGEX_MODE) {				
 		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
 			method: 'get',
 			mode: 'cors',
