@@ -3664,10 +3664,11 @@ function toggleScores() {
 function log(txt) {
     console.log(txt);
 }
+
 function fromEnglish() {
-	let src = $('#iInput').val();
+	let src = $('#iInput').val();	
 	if (src.length > 0) {
-		let url = "https://translate.google.com/?sl=en&tl=sv&text=<src>%0A&op=translate"
+		let url = "https://translate.google.com/?sl=en&tl=sv&text=<src>&op=translate"
 		url = url.replace("<src>", src);
 		window.open(url);
 	}
