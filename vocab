@@ -1020,7 +1020,8 @@ function addLinks(refClass,def) {
 	return def;
 }
 function followLink(el) {
-	if (DEBUG) console.log("followLink");
+	log("followLink()");
+	if (DEBUG) console.log("followLink()");
 	LAST_SCROLL_Y = window.pageYOffset;	
 	LAST_CLASS = CLASS;	
 	LAST_DEF_ENUM = CUR_DEF_ENUM;	
@@ -1036,10 +1037,50 @@ function followLink(el) {
 		word = word.replace(i,"");
 	}
 	setCUR_WORD(word);
+	wordFromAll(word);
 	if (DEBUG) console.log("followLink(" + word + ")");	
 	let oldINC = INC;
-	seekWord(word, true);
-	updateScore();	
+
+}
+
+function wordFromAll(word) {
+	log("wordFromAll");
+	let res = false;
+	fetch('backend/getDefAll.php?word=' + word, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		if (Object.keys(json).length > 0) {
+			let keys = Object.keys(json);	
+			if (keys.length === 1 && keys[0] != CLASS) {			
+				// Go direct to class if no ambiguity in found word(s)
+				setClass(keys[0],word);										
+			}
+			let def = "";
+			let delim ="";									
+			let tmp = "<span onmouseover=\"highlight(this,event)\""
+			tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
+			for (let i = 0; i < keys.length; i++) {			
+				let compDef = json[keys[i]];															
+				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
+				delim="<br>";
+			}
+			LAST_DEF = def;
+			$('#iParDef').html("<b>" + word + ":</b><br>" + def);
+			res = keys.length > 0;
+		}
+	})
+	.catch(error => {
+		console.log(error);
+	})
+	return res;
 }
 
 function getCompDef(meta, def) {
@@ -1371,13 +1412,9 @@ function seekWord(word, link = false, lastEnum = false) {
 	$('#iAux').html("");	
 	$('#iMoreTxt').html("");	
 		
-	// Any user supplied break breaks are discarded.
+	// Any user supplied breaks are discarded.
 	word = word.replaceAll("­","");	
 	REGEX_WORDS = [];
-	if (word[word.length-1] === "." || word.indexOf('+') != -1) {		
-		addWord();
-		return;
-	}
 	// Strip trailing white space	
 	while (word.substr(word.length-1) === " ") {
 		word = word.substr(0,word.length-1)
@@ -1520,35 +1557,7 @@ function seekWord(word, link = false, lastEnum = false) {
 								follow = true;
 							}													
 							// If no match in specific class useful to show matches in other classes.
-							fetch('backend/getDefAll.php?word=' + word, {
-								method: 'get',
-								mode: 'cors',
-								headers: {
-									'Content-Type': 'application/json'
-								}
-							})
-							.then(response => {
-								return response.json();
-							})
-							.then(json => {
-								if (Object.keys(json).length > 0) {
-									let keys = Object.keys(json);	
-									if (keys.length === 1 && keys[0] != CLASS) {			
-										// Go direct to class if no ambiguity in found word(s)
-										setClass(keys[0],word);										
-									}
-									let def = "";
-									let delim ="";									
-									let tmp = "<span onmouseover=\"highlight(this,event)\""
-									tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
-									for (let i = 0; i < keys.length; i++) {			
-										let compDef = json[keys[i]];															
-										def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
-										delim="<br>";
-									}
-									LAST_DEF = def;
-									$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-								} else {
+							if (!wordFromAll(word)) {
 									// If no match then try to find match in conjugations
 									fetch('backend/getConj.php?word=' + word + "&class=all", {
 										method: 'get',
@@ -1571,11 +1580,7 @@ function seekWord(word, link = false, lastEnum = false) {
 										console.log(error);
 									})					
 								}
-							})
-							.catch(error => {
-								console.log(error);
-							})
-						}
+							}						
 					})
 					.catch(error => {
 						console.log(error);
@@ -1702,8 +1707,6 @@ function setClass(c, seek = "") {
 		INC = 0;
 		SCROLL_INC=-1;
 		setN_CUR();	
-		updateScore();
-		
 	} else {
 		getWords();
 	}
