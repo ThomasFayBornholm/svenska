@@ -346,7 +346,7 @@ belopp
 belägg
 belägringstillstånd
 beläte
-beläte2
+beläte-2
 bemanningsföretag
 bemyndigande
 bemödande
@@ -950,6 +950,7 @@ fabrikspris
 fack
 fackförbund
 fackspråk
+faksimil
 faktum
 fall
 fallskärmsavtal
@@ -4006,7 +4007,6 @@ strög
 strösocker
 strössel
 studentbetyg
-studentförbund
 studenthem
 studentliv
 studiebesök
@@ -4216,8 +4216,6 @@ tidsbegrepp
 tidsdokument
 tidsfönster
 tidsfördriv
-tidsförlopp
-tidsintervall
 tidskriftsindex
 tidsplan
 tidsschema
@@ -4936,7 +4934,6 @@ zoomobjektiv
 återställningstecken
 återtåg
 återval
-åtgärdspaket
 åtlöje
 åtnjutande
 åttiotal

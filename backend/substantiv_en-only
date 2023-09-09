@@ -707,7 +707,7 @@ ateism
 ateist
 ateroskleros
 atlas
-atlas 2
+atlas-2
 atlet
 atmosfär
 atoll
@@ -1038,7 +1038,7 @@ bakväg
 bakväxel
 bakända
 bal
-bal 2
+bal-2
 balans
 balansgång
 balansräkning
@@ -1523,7 +1523,7 @@ bigarrå
 biktstol
 bikupa
 bil
-bil 2
+bil-2
 bilaga
 bilbarnstol
 bilbatteri
@@ -1591,7 +1591,7 @@ bilkår
 bilkårist
 bilkö
 bill
-bill 2
+bill-2
 billast
 billighet
 billots
@@ -2117,7 +2117,7 @@ bråkmakare
 bråkstake
 brånad
 bråte
-bråte 2
+bråte-2
 brödföda
 brödkaka
 brödkant
@@ -2148,7 +2148,7 @@ budo
 buffel
 buffé
 bugg
-bugg 2
+bugg-2
 bugning
 buk
 bukett
@@ -2212,7 +2212,7 @@ byggsats
 byk
 byracka
 byrå
-byrå 2
+byrå-2
 byråkrat
 byråkrati
 byrålåda
@@ -2494,7 +2494,7 @@ dagerrotyp
 dagerrotypi
 dagfjäril
 dagg
-dagg 2
+dagg-2
 daggdroppe
 daggkåpa
 daggmask
@@ -2568,7 +2568,6 @@ darrning
 darrocka
 dat
 data
-data -2
 data-2
 databank
 databas
@@ -2865,7 +2864,7 @@ dribbler
 dricka
 dricks
 drift
-drift 2
+drift-2
 driftkostnad
 driftstörning
 drill
@@ -3079,6 +3078,7 @@ efterräkning
 efterrätt
 efterrättelse
 eftersats
+eftersits
 efterskrift
 eftersläckning
 eftersläng
@@ -3256,6 +3256,7 @@ enstöring
 entertainer
 entitet
 entrecote
+entreprenad
 entreprenör
 entré
 entusiasm
@@ -3844,7 +3845,7 @@ fordringsägare
 forell
 forensik
 form
-form 2
+form-2
 formation
 formel
 formlära
@@ -4177,10 +4178,8 @@ födsel
 föga
 följare
 följd
-följdriktighet
 följdsats
 följdsjukdom
-följd­riktighet
 följeslagare
 följetong
 fönsterbräda
@@ -4666,8 +4665,7 @@ gelike
 gelé
 gem
 gemen
-gemen 2
-gemen--2
+gemen-2
 gemenhet
 gemensamhet
 gemensamhetsgrav
@@ -5168,7 +5166,7 @@ gästgivargård
 gästhandduk
 gågata
 gång
-gång 2
+gång-2
 gångare
 gångart
 gångbana
@@ -6254,7 +6252,7 @@ interaktion
 interdental
 interdikt
 interferens
-interferens 2
+interferens-2
 interglacial
 interimsregering
 interimsstyrelse
@@ -6664,7 +6662,6 @@ kanna
 kannibal
 kannibalism
 kanon
-kanon -2
 kanon-2
 kanonföda
 kanonisation
@@ -6848,7 +6845,6 @@ kirskål
 kirurg
 kirurgi
 kis
-kis 2
 kis-2
 kisse
 kissekatt
@@ -7424,7 +7420,7 @@ krans
 kransartär
 kranskommun
 krasch
-krasch 2
+krasch-2
 kraschan
 krasse
 krater
@@ -7845,7 +7841,7 @@ köttgryta
 köttkvarn
 köttsaft
 labb
-labb -2
+labb-2
 laborant
 laboration
 lack
@@ -7996,6 +7992,7 @@ lekskola
 lektion
 lektor
 lem
+lemonad
 leninism
 lera
 lerbotten
@@ -8446,6 +8443,7 @@ lönnkrog
 lönnsirap
 lönsamhet
 löpare
+löpknut
 löpning
 löpsedel
 löpsnara
@@ -8996,7 +8994,6 @@ moped
 mopp
 moppe
 mor
-mor 2
 mor-2
 moral
 moralfilosofi
@@ -9029,7 +9026,7 @@ mormorsstång
 morot
 morsa
 morse
-morse -2
+morse-2
 mortalitet
 morän
 moské
@@ -9042,7 +9039,7 @@ motgift
 motgång
 motighet
 motion
-motion 2
+motion-2
 motionsgymnastik
 motionsrätt
 motionsslinga
@@ -9471,7 +9468,7 @@ noshörning
 nostalgi
 nostalgitripp
 not
-not 2
+not-2
 nota
 notapparat
 notarie
@@ -10639,7 +10636,7 @@ puka
 pulka
 pulpet
 puls
-puls 2
+puls-2
 pulsåder
 pulversläckare
 pump
@@ -10739,6 +10736,7 @@ radioaktivitet
 radiofyr
 radiogrammofon
 radioröst
+radiosond
 radiotelegrafi
 radioterapi
 radiovåg
@@ -10889,7 +10887,7 @@ religionsförföljelse
 reling
 relästation
 rem
-rem 2
+rem-2
 REM-sömn
 remake
 remanens
@@ -12147,6 +12145,7 @@ skumpa
 skur
 skurhink
 skurk
+skurtrasa
 skuta
 skvadron
 skvallerpress
@@ -12250,7 +12249,7 @@ slantsingling
 slarva
 slatt
 slav
-slav -2
+slav-2
 slavhandel
 slavist
 slavistik
@@ -12458,7 +12457,7 @@ snuskighet
 snusnäsduk
 snut
 snuva
-snuva 2
+snuva-2
 snyftning
 snyltare
 snyltgäst
@@ -12612,7 +12611,7 @@ spaning
 spanjor
 spanjorska
 spann
-spann 2
+spann-2
 spanska
 sparare
 sparbössa
@@ -13001,7 +13000,7 @@ storstuga
 storväst
 story
 straff
-straff 2
+straff-2
 straffränta
 straffskatt
 straight
@@ -13154,7 +13153,7 @@ stängning
 stängsel
 stärkelse
 stäv
-stäv 2
+stäv-2
 ståndare
 ståndkrage
 ståndman
@@ -13461,6 +13460,7 @@ sönderfallshastighet
 söndring
 sörja
 sörlänning
+sötlimpa
 sötsak
 t-bana
 T-sprit
@@ -13880,7 +13880,7 @@ tobakshandlare
 toffel
 tofsmes
 tok
-tok 2
+tok-2
 toka
 tokhöger
 tokstolle
@@ -13931,6 +13931,7 @@ toppända
 topspin
 tordönsröst
 tordönsstämma
+torghandel
 tork
 torkare
 torkhandduk
@@ -13985,7 +13986,7 @@ traktor
 traktör
 traktörpanna
 trall
-trall 2
+trall-2
 tralla
 tramp
 trampcykel
@@ -14358,7 +14359,7 @@ tåhätta
 tåhävning
 tåkappa
 tång
-tång 2
+tång-2
 tångkaviar
 tår
 tårkanal
@@ -14877,7 +14878,7 @@ uvular
 vaccination
 vacklan
 vad
-vad 2
+vad-2
 vadare
 vadd
 vadeinlaga
@@ -15478,7 +15479,7 @@ vådeld
 våffeldag
 våffla
 våg
-våg 2
+våg-2
 vågkam
 våglängd
 vågmästare
