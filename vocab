@@ -905,7 +905,7 @@ function displayDef(def,word) {
 	}
 	outDef = outDef.replaceAll(" </b>","</b>")
 	// Dynamise links
-	outDef = outDef.replaceAll("<l>","<span onclick=followLink(this) onmouseover=highlight(this,event)><b>");
+	outDef = outDef.replaceAll("<l>","<span onclick=followLink(this.innerText) onmouseover=highlight(this,event)><b>");
 	outDef = outDef.replaceAll("</l>","</b></span>");
 	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event) onmouseover=editCursor(event,this)"
 
@@ -996,7 +996,7 @@ function addLinks(refClass,def) {
 	def = "";
 	m = refClass + " ";
 	delim = "";
-	beginSpan = "<span onclick=followLink(this)";
+	beginSpan = "<span onclick=followLink(this.innerText)";
 	beginSpan += " onmouseover=highlight(this,event)";
 	beginSpan += ">"
 	spanTmp = beginSpan + "<b>_w_</b></span>";
@@ -1019,32 +1019,30 @@ function addLinks(refClass,def) {
 	}
 	return def;
 }
-function followLink(el) {
-	log("followLink()");
-	if (DEBUG) console.log("followLink()");
+
+function followLink(word) {
+    debug("followLink(" + word +  ")");
 	LAST_SCROLL_Y = window.pageYOffset;	
 	LAST_CLASS = CLASS;	
 	LAST_DEF_ENUM = CUR_DEF_ENUM;	
 	N_REGEX = 0;
 	REGEX_WORDS = [];
-	let word = el.innerText;
+    // Remove any soft hyphens in word
+    word = word.replaceAll("\u00ad","");
 	let rep = word.match(/\s/);
 	if (rep != null) {
 		word = word.replaceAll(rep[0], " ");
 	}
-	word = word.replace("!","");
-	for (i = 0; i < 24; i++) {
+    for (i = 0; i < 24; i++) {
 		word = word.replace(i,"");
 	}
 	setCUR_WORD(word);
 	wordFromAll(word);
-	if (DEBUG) console.log("followLink(" + word + ")");	
 	let oldINC = INC;
-
 }
 
 function wordFromAll(word) {
-	log("wordFromAll");
+	debug("wordFromAll(" + word + ")");
 	let res = false;
 	fetch('backend/getDefAll.php?word=' + word, {
 		method: 'get',
@@ -1059,22 +1057,13 @@ function wordFromAll(word) {
 	.then(json => {
 		if (Object.keys(json).length > 0) {
 			let keys = Object.keys(json);	
-			if (keys.length === 1 && keys[0] != CLASS) {			
-				// Go direct to class if no ambiguity in found word(s)
-				setClass(keys[0],word);										
-			}
-			let def = "";
-			let delim ="";									
-			let tmp = "<span onmouseover=\"highlight(this,event)\""
-			tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
-			for (let i = 0; i < keys.length; i++) {			
-				let compDef = json[keys[i]];															
-				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
-				delim="<br>";
-			}
-			LAST_DEF = def;
-			$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-			res = keys.length > 0;
+            // Can only resolve link if a unique match is found
+			if (keys.length === 1) {			
+                if (keys[0] != CLASS) setClass(keys[0]);
+                seekWordSingleClass(word);
+			} else {
+                alert("Found " + keys.length + " match(es)");
+            }
 		}
 	})
 	.catch(error => {
@@ -1111,7 +1100,7 @@ function getCompDef(meta, def) {
 			// def - the original reference definition
 			// tmp - original ref + link to the referenced word
 			// json - the referenced definition
-			let tmp = "<span onclick=\"followLink(this)\"><b>_w_</b></span>:";
+			let tmp = "<span onclick=\"followLink(this.innerText)\"><b>_w_</b></span>:";
 			tmp = tmp.replaceAll("_w_",removeClassDesc(w));
 			tmp = tmp + "<br>";
 			out[done] = makeLinks(tmp + json["def"]);
@@ -1346,6 +1335,7 @@ function handleNumericInput(key) {
 
 // Called internally when word class is known in advance
 function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {		
+    debug("seekWordSingleClass(word = " + CUR_WORD + ", last_enum = " + last_enum + ")");
 	//LAST_DEF_ENUM = CUR_DEF_ENUM;
 	CUR_DEF_ENUM = last_enum; 	
 	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
@@ -1686,6 +1676,7 @@ function drillDown() {
 }
 
 function setClass(c, seek = "") {
+    debug("setClass(" + c + ", seek = " + seek + ")");
 	if (c === "all") clearRegexMode();	
 	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	$('#iAux').html("");	
@@ -2971,7 +2962,7 @@ function getMore(ind) {
 			tmp = tmp.replaceAll("HISTORIK:","<b>HISTORIK:</b>");
 			// Use displayDef to to dynamise word links
 			// Dynamise links
-			tmp = tmp.replaceAll("<l>","<span onclick=followLink(this) onmouseover=highlight(this,event)><b>");
+			tmp = tmp.replaceAll("<l>","<span onclick=followLink(this.innerText) onmouseover=highlight(this,event)><b>");
 			tmp = tmp.replaceAll("</l>","</b></span>");
 			$('#iMoreTxt').html(tmp);
 			let moreHeight = parseInt($('#iMoreTxt').css("height").replace("px",""));
