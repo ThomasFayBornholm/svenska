@@ -157,7 +157,7 @@ document.addEventListener("visibilitychange", (event) => {
 });
 
 function startup() {
-	if (DEBUG) console.log("startup()")
+	if (DEBUG) log("startup()")
 	wordCount();		
 	updateScore();
 	randomWord();
@@ -171,7 +171,7 @@ function clearSummary() {
     $('#iSummary').text("");
 }
 function getInput() {
-	if (DEBUG) console.log("getInput()");
+	if (DEBUG) log("getInput()");
 	let word = $('#iInput').val();
 	if (word.length === 0) word = "0";
 	if (word === "~") word = CUR_WORD;
@@ -192,7 +192,7 @@ function setN_DEF(n_def) {
 }
 
 function setN_CUR() {
-	if (DEBUG) console.log("setN_CUR()")
+	if (DEBUG) log("setN_CUR()")
 	if (CLASS === "adjektiv") {
 		N_CUR = N_ADJ;
 	} else if (CLASS === "verb") {
@@ -239,11 +239,11 @@ function setN_CUR() {
 		$('#iCnt').text(N_CUR.toLocaleString('sv'));		
 	}	
 	
-	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
+	if (DEBUG) log("setN_CUR(); N_CUR = " + N_CUR);
 }
 
 function fmtDef(def) {
-	if (DEBUG) console.log("fmtDef()")
+	if (DEBUG) log("fmtDef()")
 	for (i = 0; i < 24; i++) {
 		let old = " " + i + " ";
 		let rep = "<br>" + i + " ";
@@ -253,7 +253,7 @@ function fmtDef(def) {
 }
 
 function putMoreMany(moreArr, cur) {
-	if (DEBUG) console.log("putMoreMany()");
+	if (DEBUG) log("putMoreMany()");
 	let moreLen = moreArr.length;
 	// Don't forget no spaces in storage keys, use "-" instead
 	fetch('backend/putMore.php?key=' + CUR_WORD.replaceAll(" ","-") + "_" + cur + '&more=' + moreArr[cur] + '&class=' + CLASS, {
@@ -268,12 +268,12 @@ function putMoreMany(moreArr, cur) {
 		if (cur < moreLen) putMoreMany(moreArr, cur);
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function addDef(key, meta, def, more) {
-	if (DEBUG) console.log("addDef(meta,def,more)");
+	if (DEBUG) log("addDef(meta,def,more)");
 	$('#iMeta').html("adding... '<b>" + key + "</b>'");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -302,7 +302,7 @@ function addDef(key, meta, def, more) {
 		setTimeout(updateDef(),2000);
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
@@ -311,7 +311,7 @@ function putDef(def, score) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
 	}
-	if (DEBUG) console.log("START putDef(def, score); def = '" + def + ",score ´" + score + "; SCROLL_INC = " + SCROLL_INC);
+	if (DEBUG) log("START putDef(def, score); def = '" + def + ",score ´" + score + "; SCROLL_INC = " + SCROLL_INC);
 	if (CLASS === "fraser") {
 		putFrasDef(score);
 		return;
@@ -359,7 +359,7 @@ function putDef(def, score) {
 }
 
 function putFrasDef(score) {
-	if (DEBUG) console.log("putFrasDef()")
+	if (DEBUG) log("putFrasDef()")
 	let def = $('#iDefText').val();
 	if (def.indexOf("%%") == -1) {
 		return;
@@ -395,7 +395,7 @@ function putFrasDef(score) {
 
 
 function updateScore() {
-	if (DEBUG) console.log("updateScore()")
+	if (DEBUG) log("updateScore()")
 	// Hash to prevent cached value being used by browser
 	fetch('backend/getScore.php?id=0&class=' + CLASS + '&hash=' + makeHash(), {
 		method: 'get',
@@ -438,16 +438,16 @@ function updateScore() {
 			getDiff();			
 		})
 		.catch(error => {
-			console.log(error);
+			log(error);
 		})
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function changeInc(delta) {
-	if (DEBUG) console.log("changeInc()")
+	if (DEBUG) log("changeInc()")
 	if (INC + delta > N_CUR) {
 		INC = INC;
 	} else {
@@ -463,10 +463,10 @@ function changeInc(delta) {
 	if (INC < 0) {
 		INC = 0;
 	}
-	if (DEBUG) console.log("changeInc(" + delta + ") -> INC: " + INC);
+	if (DEBUG) log("changeInc(" + delta + ") -> INC: " + INC);
 }
 function nextID(id) {
-	if (DEBUG) console.log("nextId()")
+	if (DEBUG) log("nextId()")
 	let num = id.replace("w","");
 	if (++num < N_FOUND) {
 		return "w" + num;
@@ -476,13 +476,13 @@ function nextID(id) {
 }
 
 function advance() {	
-	if (DEBUG) console.log("advance()");
+	if (DEBUG) log("advance()");
 	changeInc(N_INC)
 	getWords(-1)
 }
 
 function retreat(e) {
-	if (DEBUG) console.log("retreat()");
+	if (DEBUG) log("retreat()");
 	e.preventDefault()
 	changeInc(-N_INC)
 	getWords(-1)
@@ -491,7 +491,7 @@ function retreat(e) {
 function getWords(ind = INC) {
 	// Ind is used to highlight and lookup a given word index from the returned list
 	// Global INC is used to get the starting index of the returned list		
-	if (DEBUG) console.log("getWords(), ind = " + ind + ", INC = ", + INC);	
+	if (DEBUG) log("getWords(), ind = " + ind + ", INC = ", + INC);	
 	SCROLL_INC= -1;
 	N_FOUND=0;
 	$('#iParDef').text("");
@@ -531,10 +531,10 @@ function getWords(ind = INC) {
 			}
 		})
 		.catch(error => {
-			console.log(error)
+			log(error)
 		})
 	}
-	if (DEBUG) console.log("END getWords(ind); ind = " + ind + ", N_FOUND = " + N_FOUND);
+	if (DEBUG) log("END getWords(ind); ind = " + ind + ", N_FOUND = " + N_FOUND);
 }
 
 // Enables to updating of the selected word without refreshing the whole screen
@@ -551,7 +551,7 @@ function moveSelected() {
 }
 // Create listing of words for display on left side of screen
 function displayWords(list,ind) {
-	if (DEBUG) console.log("displayWords(), list = " + list + ", ind = " + ind)
+	if (DEBUG) log("displayWords(), list = " + list + ", ind = " + ind)
 	let out = ""
 	list = list.replaceAll("  "," ");	
 	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list + "&caller=displayWords", {
@@ -604,12 +604,12 @@ function displayWords(list,ind) {
 		}				
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function scrollViewDown() {
-	if (DEBUG) console.log("scrollViewDown() begin");
+	if (DEBUG) log("scrollViewDown() begin");
 	changeInc(N_INC);
 	$('iDefDiv').css("display", "none");
 	
@@ -622,7 +622,7 @@ function scrollViewDown() {
 }
 function scrollViewUp(e) {
 	e.preventDefault();
-	if (DEBUG) console.log("scrollViewUp() begin");
+	if (DEBUG) log("scrollViewUp() begin");
 	changeInc(-N_INC);
 	if (N_REGEX > 1) {
 		getWords();
@@ -632,7 +632,7 @@ function scrollViewUp(e) {
 	showWords();
 }
 function scrollView(e) {
-	if (DEBUG) console.log("scrollView() begin");
+	if (DEBUG) log("scrollView() begin");
 	e.preventDefault();
 	showWords();
 	if (e.deltaY > 0) {
@@ -640,7 +640,7 @@ function scrollView(e) {
 	} else {
 		scrollViewUp(e);
 	}
-	if (DEBUG) console.log("scrollView(); INC = " + INC)
+	if (DEBUG) log("scrollView(); INC = " + INC)
 }
 
 function scrollWords(e) {
@@ -656,7 +656,7 @@ function scrollWords(e) {
 	} else {
 		updateDef();
 	}
-	if (DEBUG) console.log("scrollWords() -> SCROLL_INC = " + SCROLL_INC);
+	if (DEBUG) log("scrollWords() -> SCROLL_INC = " + SCROLL_INC);
 }
 
 function scrollDown() {
@@ -664,7 +664,7 @@ function scrollDown() {
 	if (SCROLL_INC < N_FOUND-1) {
 		SCROLL_INC++;
 	}
-	if (DEBUG) console.log("scrollDown(); SCROLL_INC = " + SCROLL_INC);
+	if (DEBUG) log("scrollDown(); SCROLL_INC = " + SCROLL_INC);
 }
 function scrollUp() {
 	CUR_DEF_ENUM = 1;
@@ -673,11 +673,11 @@ function scrollUp() {
 	} else if (SCROLL_INC == -1) {
 		SCROLL_INC = N_FOUND - 1;
 	}
-	if (DEBUG) console.log("scrollUp(); SCROLL_INC = " + SCROLL_INC);
+	if (DEBUG) log("scrollUp(); SCROLL_INC = " + SCROLL_INC);
 }
 
 function updateDef() {
-	if (DEBUG) console.log("updateDef()");
+	if (DEBUG) log("updateDef()");
 	if (SCROLL_INC != -1) {		
 		let id = "w" + SCROLL_INC;
 		let el = document.getElementById(id);
@@ -687,7 +687,7 @@ function updateDef() {
 
 function popSpan(i, w, hasMeta) {
 	tmp = "<span id='w<i>' onclick='lookupWord(this,false,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
-	if (DEBUG) console.log("popSpan(i=" + i + ",w=" + w + ",hasMeta=" + hasMeta + ")");
+	if (DEBUG) log("popSpan(i=" + i + ",w=" + w + ",hasMeta=" + hasMeta + ")");
 	tmp = tmp.replace("<i>",i)
 	if (hasMeta || CLASS === "all") {
 		tmp = tmp.replaceAll("<w>",w);
@@ -699,7 +699,7 @@ function popSpan(i, w, hasMeta) {
 
 // Only call when word class is "all"
 function showWordMatches(follow) {
-	if (DEBUG) console.log("showWordMatches()");
+	if (DEBUG) log("showWordMatches()");
 	if (CLASS != "all") {
 		return;
 	}
@@ -742,13 +742,13 @@ function showWordMatches(follow) {
 		return;
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 	LAST_OBJ = el;
 }
 
 function lookupWord(el,onlyLocal,inline) {	
-	if (DEBUG) console.log("lookupWord(el,onlyLocal,inline), elid = " + el.id + ", onlyLocal = " + onlyLocal + ", inline = " + inline);
+	if (DEBUG) log("lookupWord(el,onlyLocal,inline), elid = " + el.id + ", onlyLocal = " + onlyLocal + ", inline = " + inline);
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
 	// Cleanup
@@ -777,43 +777,13 @@ function lookupWord(el,onlyLocal,inline) {
 		CUR_WORD=word;
 		LAST_OBJ = el;
 		
-		if (DEBUG) console.log("lookupWord(), CUR_WORD = " + CUR_WORD);
+		if (DEBUG) log("lookupWord(), CUR_WORD = " + CUR_WORD);
 		scroll_inc = el.id.replace("w","");
 		if (scroll_inc > -1 && scroll_inc < N_INC) {
 			SCROLL_INC = scroll_inc; 
 		}
 		if (CLASS === "all") {
-			fetch('backend/getDefAll.php?word=' + word, {
-				method: 'get',
-				mode: 'cors',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {
-				return response.json();
-			})
-			.then(json => {
-				let keys = Object.keys(json);						
-				if (keys.length === 1 && keys[0] != CLASS) {			
-					// Go direct to class if no ambiguity in found word(s)
-					setClass(keys[0],word);					
-				}
-				let def = "";
-				let delim ="";			
-				let tmp = "<span ";
-				tmp += "onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i><br></span>";			
-				for (let i = 0; i < keys.length; i++) {		
-					def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
-					delim="<br>";
-				}
-				LAST_DEF = def;	
-				displayDef("",def, word);						
-				return;
-			})
-			.catch(error => {
-				console.log(error);
-			})
+			wordFromAll(word);
 		} else {
 			fetch('backend/getDef.php?class=' + CLASS + '&word='+ word, {
 				method: 'get',
@@ -852,13 +822,13 @@ function lookupWord(el,onlyLocal,inline) {
 				}
 			})
 			.catch(error => {
-				console.log(error)
+				log(error)
 			})
 		}
 		
 		if (DEBUG) {
 			if (word.length === 0) word = "__empty__";
-			console.log("lookupWord(" +  word + ")");
+			log("lookupWord(" +  word + ")");
 		}
 	}
 }
@@ -868,7 +838,7 @@ function displayMeta(meta, word) {
 }
 
 function displayDef(def,word) {	
-	if (DEBUG) console.log("displayDef(def,word)");	
+	if (DEBUG) log("displayDef(def,word)");	
 	def = makeLinks(def);
 	let defRaw = def.split("<br>");	
 	let defLines = [];
@@ -916,7 +886,7 @@ function displayDef(def,word) {
 
 // Make links to referenced words
 function makeLinks(def) {
-	if (DEBUG) console.log("makeLinks()")
+	if (DEBUG) log("makeLinks()")
 	def = linkSingleWord(def);	
 	if (def.split("<br>").length == 1) {
 		return def;
@@ -930,7 +900,7 @@ function makeLinks(def) {
 }
 
 function linkSingleWord(def) {	
-	if (DEBUG) console.log("linkSingleWord(def), def = " + def);
+	if (DEBUG) log("linkSingleWord(def), def = " + def);
 	if (def.substr(0,6) === "till '") return def;
 	defArr = def.split("<br>");
 	outDef = "";
@@ -988,7 +958,7 @@ function linkSingleWord(def) {
 }
 
 function addLinks(refClass,def) {	
-	if (DEBUG) console.log("addLinks(), refClass = " + refClass + ", def = " + def);
+	if (DEBUG) log("addLinks(), refClass = " + refClass + ", def = " + def);
 	if (def.indexOf(refClass) === -1) return def;
 	// Easiest to handle line by line and skip the lines without links
 	// Expectation is each link class (JFR, SE etc.) has its own new line.
@@ -1037,13 +1007,12 @@ function followLink(word) {
 		word = word.replace(i,"");
 	}
 	setCUR_WORD(word);
-	wordFromAll(word);
+	wordFromAll(word);		
 	let oldINC = INC;
 }
 
 function wordFromAll(word) {
-	debug("wordFromAll(" + word + ")");
-	let res = false;
+	debug("wordFromAll(" + word + ")");	
 	fetch('backend/getDefAll.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -1061,19 +1030,18 @@ function wordFromAll(word) {
 			if (keys.length === 1) {			
                 if (keys[0] != CLASS) setClass(keys[0]);
                 seekWordSingleClass(word);
-			} else {
-                alert("Found " + keys.length + " match(es)");
-            }
-		}
+			}
+		} else {
+			frasMatchFuzzy(word);
+        }
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
-	return res;
 }
 
 function getCompDef(meta, def) {
-	if (DEBUG) console.log("getCompDef(def); def = " + def);
+	if (DEBUG) log("getCompDef(def); def = " + def);
 	// Compose and output string that combines definition of multiple (usually two)
 	// component words
 	words = getRefs(def);
@@ -1119,7 +1087,7 @@ function getCompDef(meta, def) {
 			}
 		})
 		.catch(error => {
-			console.log(error);
+			log(error);
 		})
 	}
 }
@@ -1131,12 +1099,12 @@ function getRefs(def) {
 	def = def.replaceAll("till ", "");
 	def = def.replaceAll("'","");
 	arr = def.split(",");
-	if (DEBUG) console.log("getRef(), arr = " + arr);
+	if (DEBUG) log("getRef(), arr = " + arr);
 	return arr;
 }
 
 function onlineLookup(elHTML, ev) {	
-	if (DEBUG) console.log("onlineLookup(elHTML, ev)");
+	if (DEBUG) log("onlineLookup(elHTML, ev)");
 	ev.preventDefault()
 	word = elHTML.innerText;
 	if (word.length === 0) word = elHTML.value;
@@ -1194,7 +1162,7 @@ function wordCount() {
 		$('#iCntTotal').html(N_TOT.toLocaleString('sv'));
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
@@ -1211,7 +1179,7 @@ function showToggle() {
 		focusInput()
 		CONTROLS_VISIBLE=true;
 	}
-	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
+	if (DEBUG) log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
 
 function getSummary() {
@@ -1264,13 +1232,13 @@ for (let i = 0; i < N; i++) {
 		}												
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})	
 }			
 }
 
 function newInputWrapper(e) {
-	if (DEBUG) console.log("newInputWrapper()");
+	if (DEBUG) log("newInputWrapper()");
 	e.preventDefault();
 	let word = getInput();
 	// Navigation only to a given word class.
@@ -1308,7 +1276,7 @@ function newInputWrapper(e) {
 }
 
 function fmtUnit(val, unit) {
-	if (DEBUG) console.log("fmtUnit()");
+	if (DEBUG) log("fmtUnit()");
 	let tmp = " (" + val + " " + unit + ")";
 	return tmp;
 }
@@ -1318,7 +1286,7 @@ function clearInput() {
     $('#iInput').val(""); 
 }
 function handleNumericInput(key) {
-	if (DEBUG) console.log("handleNumericInput(" + key + ")")
+	if (DEBUG) log("handleNumericInput(" + key + ")")
 	let inc = parseInt(key);	
 	setTimeout(clearInput,100);
 	if (inc === 0) {
@@ -1339,7 +1307,7 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 	//LAST_DEF_ENUM = CUR_DEF_ENUM;
 	CUR_DEF_ENUM = last_enum; 	
 	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
-	if (DEBUG) console.log("seekWordSingleClass(word, last_enum), word = " + word + ", last_enum = " + last_enum)		
+	if (DEBUG) log("seekWordSingleClass(word, last_enum), word = " + word + ", last_enum = " + last_enum)		
 	// Immediately play pronunciation if available
 	if (word.length > 0) {
 		// Any user supplied break breaks are discarded.
@@ -1367,15 +1335,19 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 				}
 				getWords(ind);		
 				getDefInd(last_enum);
+			} else if (CLASS === "fraser") {
+				frasMatchFuzzy(word);
 			} else {
-				noMatchSingleClass(word);
+				noMatchSingleClass(word);			
 			}
 		})
 		.catch(error => {
-			console.log(error);
+			log(error);
 		})
 	}
-	focusInput()
+	focusInput();
+	log(LAST_WORD);
+	log(LAST_CLASS);
 }
 
 /* Priorities for search
@@ -1389,7 +1361,7 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 // Called by user, prefer current class but allow for secondary matching in other word classes
 // There is a recursion here somewhere, find it
 function seekWord(word, link = false, lastEnum = false) {			
-	if (DEBUG) console.log("seekWord(word, link = false), word = " + word + ", link = " + link);
+	if (DEBUG) log("seekWord(word, link = false), word = " + word + ", link = " + link);
 	//LAST_DEF_ENUM = CUR_DEF_ENUM; // Don't think it is a problem to set this immediately. If no matches found then no harm done. It will be overwritten on next search			
 	CUR_DEF_ENUM = 1; // Always show definition #1 for a newly found word
 	LAST_CLASS = CLASS;
@@ -1447,7 +1419,7 @@ function seekWord(word, link = false, lastEnum = false) {
 			}
 		})
 		.catch(error => {
-			console.log(error);
+			log(error);
 		})
 	} else if (scoreMatch) {
 		let score = 0;
@@ -1474,7 +1446,7 @@ function seekWord(word, link = false, lastEnum = false) {
 			}
 		})
 		.catch(error => {
-			console.log(error);
+			log(error);
 		})
 	} else {
 		REGEX_WORDS = [];
@@ -1567,22 +1539,22 @@ function seekWord(word, link = false, lastEnum = false) {
 										}
 									})
 									.catch(error => {
-										console.log(error);
+										log(error);
 									})					
 								}
-							}						
+							}
 					})
 					.catch(error => {
-						console.log(error);
+						log(error);
 					})										
 				}
 			})
 			.catch(error => {
-				console.log(error);
+				log(error);
 			})
 		}
 	}
-	if (DEBUG) console.log("END seekWord(); word = " + word + " -> INC = " + INC);			
+	if (DEBUG) log("END seekWord(); word = " + word + " -> INC = " + INC);			
 	focusInput()
 }
 
@@ -1599,7 +1571,7 @@ function noMatchSingleClass(word) {
 }
 
 function regexSearch(word) {
-	if (DEBUG) console.log("regexSearch()");
+	if (DEBUG) log("regexSearch()");
 	toggleRegexMode(true);
 	fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
 		method: 'get',
@@ -1629,12 +1601,12 @@ function regexSearch(word) {
 		}
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function drillDown() {
-	if (DEBUG) console.log("drillDown()");
+	if (DEBUG) log("drillDown()");
 	// Take word from iWords to allow for special characters such as 'é'
 	let id = "#w" + SCROLL_INC;
 	let word = $(id).text()	
@@ -1671,14 +1643,14 @@ function drillDown() {
 		}
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function setClass(c, seek = "") {
     debug("setClass(" + c + ", seek = " + seek + ")");
 	if (c === "all") clearRegexMode();	
-	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
+	if (DEBUG) log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	$('#iAux').html("");	
 	$('#iMeta').html("");	
 	
@@ -1706,11 +1678,11 @@ function setClass(c, seek = "") {
 	} else {
 		getWords();
 	}
-	if (DEBUG) console.log("setClass(c, seek); CLASS = " + CLASS + ", seek = " + seek + ", INC = " + INC + ", SCROLL_INC = " + SCROLL_INC + ", N_CUR = " + N_CUR);	
+	updateScore();
 }
 
 function getLastWord() {
-	if (DEBUG) console.log("getLastWord()")		
+	debug("getLastWord()");
 	if (LAST_WORD.length > 0 && LAST_CLASS != "all") {		
 		let tmp = CLASS;
 		setClass(LAST_CLASS,LAST_WORD);		
@@ -1735,17 +1707,17 @@ function countDefs() {
 		.then(json => {
 			if (json != "Failed to read definition file.") {	
 				N_LEMMAS=json["cnt"];
-				if (DEBUG) console.log("countDefs(); N_LEMMAS = " + N_LEMMAS);
+				if (DEBUG) log("countDefs(); N_LEMMAS = " + N_LEMMAS);
 				$('#iDefProg').css("width", N_LEMMAS/N_CUR * 100 + "%");
 			} else {
-				if (DEBUG) console.log("countDefs(); N_LEMMAS = " + N_LEMMAS);
+				if (DEBUG) log("countDefs(); N_LEMMAS = " + N_LEMMAS);
 			}
 		})
 	}
 }
 
 function editDef() {	
-	if (DEBUG) console.log("editDef()")	
+	debug("editDef()")	
 	if ($('#iParDef').text() != "" || CLASS === "fraser") {
 		showWords();
 		$('#iDefDiv').css("display", "block");
@@ -1761,7 +1733,7 @@ function editDefWrapper(e) {
 }
 
 function clearDef() {
-	if (DEBUG) console.log("clearDef()");
+	if (DEBUG) log("clearDef()");
 	if ($('#iWords').css("visibility") === "hidden") {
 		$('#iParDef').html("");
 		$('#iWords').css("visibility", "visible");
@@ -1774,7 +1746,7 @@ function clearDef() {
 }
 
 function pretty(def) {
-	if (DEBUG) console.log("pretty(def); def = " + def);
+	if (DEBUG) log("pretty(def); def = " + def);
 	let out = "";
 	subdefs = def.split("<br>");
 	for (let i = 0; i < subdefs.length; i++) {
@@ -1820,7 +1792,7 @@ function pretty(def) {
 	const regex1 = /[a-z][1-9]/;
 	match = out.match(regex1);
 	if (match != null) {
-		console.log(match);
+		log(match);
 		strMatch = match[0];
 		rep = strMatch[0] + "<br> " + strMatch[1];
 		out = out.replace(strMatch, rep);
@@ -1891,12 +1863,12 @@ function removeClassDesc(word) {
 }
 
 function removeWord() {
-	if (DEBUG) console.log("removeWord()");
+	if (DEBUG) log("removeWord()");
 	addWord(true);
 }
 
 function addWord(remove = false) {	
-	if (DEBUG) console.log("addWord()");	
+	if (DEBUG) log("addWord()");	
 	
 	let word = $('#iInput').val();		
 	let del = (word[word.length-1] === "." && word.indexOf("..") === -1) || remove;
@@ -1944,7 +1916,7 @@ function addWord(remove = false) {
 							}
 						})
 						.catch(error => {
-							console.log(error);
+							log(error);
 						})
 						getWords();
 						wordCount();
@@ -1952,7 +1924,7 @@ function addWord(remove = false) {
 					}
 				})
 				.catch(error => {
-					console.log(error);
+					log(error);
 				})
 			// Navigate to newly added word for convenience.
 			} else if (op === "add") {
@@ -1962,13 +1934,13 @@ function addWord(remove = false) {
 			}
 		})
 		.catch(error => {
-			console.log(error);	
+			log(error);	
 		})
 	}	
 }
 
 function addWordWithEnum() {
-	if (DEBUG) console.log("addWordWithEnum()");
+	if (DEBUG) log("addWordWithEnum()");
 	// Get enum index
 	let word = $('#iInput').val();		
 	if (word.length === 1) return;
@@ -1996,13 +1968,13 @@ function addWordWithEnum() {
 		setTimeout(seekWordSingleClass, 500);
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})	
 }
 
 function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
-	if (DEBUG) console.log("addMeta()");	
+	if (DEBUG) log("addMeta()");	
 	regexArr = [
 		/var­dagligt, skämtsamt/,
 		/ålderdomligt el. ironiskt/,
@@ -2177,7 +2149,7 @@ function addMeta(def) {
 }
 
 function grammar(def) {	
-	if (DEBUG) console.log("grammar()");
+	if (DEBUG) log("grammar()");
 	// Only one grammer expression is permitted.
 	gArr = [
 	 "nästan en­bart presens particip",
@@ -2307,7 +2279,7 @@ function grammar(def) {
 }
 
 function preProc(def) {
-	if (DEBUG) console.log("preProc(def(); def = '" + def + "'")
+	if (DEBUG) log("preProc(def(); def = '" + def + "'")
 	// takes user input and splits into "meta", "def" and "more" components
 	let meta = "";	
 	
@@ -2518,7 +2490,7 @@ function preProc(def) {
 }
 
 function fmtParticles(s) {
-	if (DEBUG) console.log("fmtParticles(s)");
+	if (DEBUG) log("fmtParticles(s)");
 	// Particles appear comma delimited with space delimiter before the last particle.
 
 	//const regex1 = /.*med partikel(?: eller dylikt),(sär­skilt)(([a-zöäå]+, )*[a-zöäå]+).*/;		
@@ -2587,7 +2559,7 @@ function fmtPrep(s) {
 }
 
 function fmtVerbTogether(s,regx) {
-	if (DEBUG) console.log("fmtVerbTogether(s,regx), s = " + s + ", regx = " + regx);	
+	if (DEBUG) log("fmtVerbTogether(s,regx), s = " + s + ", regx = " + regx);	
 	m = s.match(regx);
 	
 	if (m != null) {
@@ -2602,10 +2574,10 @@ function fmtVerbTogether(s,regx) {
 }
 
 function  fmtVerbApart(s,regx) {
-	if (DEBUG) console.log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
+	if (DEBUG) log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
 	m = s.match(regx);
 	if (m != null) {
-		if (DEBUG) console.log("fmtVerbApart: Match!");
+		if (DEBUG) log("fmtVerbApart: Match!");
 		if (m.length === 4) {		
 			let repWord = m[2] + " " + m[3].substring(1);			
 			// remove leading space from second word and replace with regular space.
@@ -2653,7 +2625,7 @@ function withParticle(s) {
 
 // Toggle visibility of word list on right hand side of screen
 function showWords() {
-	if (DEBUG) console.log("showWords");
+	if (DEBUG) log("showWords");
 	if ($('#iWords').css("visibility") == "hidden") {
 		$('#iWords').css("visibility", "visible");
 	}
@@ -2683,13 +2655,13 @@ function toggleDebugEv(e) {
 function toggleDebug() {
 	DEBUG = !DEBUG;
 	if (DEBUG) {
-		console.log("Entering debug mode...");
+		log("Entering debug mode...");
 		$('#iDebugTxt').text("DEBUG");
 		$('#iDebug').css("color","gray");
 	}  else {
 		$('#iDebug').css("color","");
 		$('#iDebugTxt').text("");
-		console.log("Leaving debug mode...");
+		log("Leaving debug mode...");
 	}
 }
 function setClassGuessWrapper(ev) {
@@ -2701,7 +2673,7 @@ function setClassGuessWrapper(ev) {
 function setClassGuess() {
 	let word = $('#iInput').val();
 	let c = guessClass(word);
-	if (DEBUG) console.log("setClassGuess, Class guessed as " + c)
+	if (DEBUG) log("setClassGuess, Class guessed as " + c)
 	setClass(c);
 	seekWord(CUR_WORD);
 }
@@ -2731,7 +2703,7 @@ function lookupManyWords() {
 		}	
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
@@ -2798,11 +2770,11 @@ function closeDefs() {
 }
 function keyNav(ev) {
 	ev.preventDefault();
-	console.log("nav");
+	log("nav");
 }
 
 function editNext() {
-	if (DEBUG) console.log("editNext()")
+	if (DEBUG) log("editNext()")
 	if (SCROLL_INC < N_FOUND-1) {
 		SCROLL_INC++;
 	}
@@ -2820,7 +2792,7 @@ function displaySelection() {
 	$(cur).css("font-weight", "bold");
 }
 function clickMiddle(ev) {
-	if (DEBUG) console.log("clickMiddle()");
+	if (DEBUG) log("clickMiddle()");
 	ev.preventDefault();			
 	if (ev.target.style.cursor != "pointer" && ev.target.className != "redWord" && ev.target.className != "blueWord") {
 		if ($('#iDefDiv').css("display") === "none" && $('#iParDef').text() === "") { 
@@ -2842,7 +2814,7 @@ function getCurr() {
 }
 function nextWord(el,ev) {
 	ev.preventDefault();
-	if (DEBUG) console.log("nextWord()")
+	if (DEBUG) log("nextWord()")
 	// Find the next word with the relevant score
 	updateScore();
 	let score = 0;
@@ -2862,11 +2834,11 @@ function nextWord(el,ev) {
 		seekWord(json);
 	})
 	.catch(error => {
-		console.log(error)
+		log(error)
 	})		
 }
 function putMore() {
-	if (DEBUG) console.log("putMore()")	
+	if (DEBUG) log("putMore()")	
 	let more = $('#iDefText').val();
 	more = more.replaceAll("\n","<br>");	
 	if (more.substring(0,4) === "<br>") {
@@ -2899,7 +2871,7 @@ function putMore() {
 		$('#iInput').focus();
 	})
 	.catch(error => {
-		console.log(error)
+		log(error)
 	})
 }
 // 1-based indices instead of 0-based for storage
@@ -2920,11 +2892,11 @@ function keyForUser(key) {
 function getMore(ind) {		
 	if (CLASS === "fraser") return;
 	if (!isNumeric(ind)) {
-		console.log("getMore(ind), ind is NaN");
+		log("getMore(ind), ind is NaN");
 		return;
 	}
 	
-	if (DEBUG) console.log("getMore(ind), ind = " + ind);			
+	if (DEBUG) log("getMore(ind), ind = " + ind);			
 	ind--;
 	if (ind > N_DEFS) return;
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + ind;	
@@ -2977,14 +2949,14 @@ function getMore(ind) {
 		}				
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 
 
 function editMore(ev,key) {
-	if (DEBUG) console.log(ev,key)	
+	if (DEBUG) log(ev,key)	
 	ev.preventDefault();
 	let tmp = $('#iParDef').html();
 	if (tmp.indexOf(" --") === -1 && tmp.indexOf(" ++") != -1) {
@@ -2999,7 +2971,7 @@ function editMore(ev,key) {
 
 function processKeyDown(ev) {
 		
-	if (DEBUG) console.log("processKeyDown(ev), ev.key = " + ev.key)	
+	if (DEBUG) log("processKeyDown(ev), ev.key = " + ev.key)	
 	
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
@@ -3074,7 +3046,7 @@ function processKeyDown(ev) {
 }
 
 function navDef(ev) {
-	if (DEBUG) console.log("navDef(ev)");
+	if (DEBUG) log("navDef(ev)");
 	let tmp = $('#iInput').val();
 	
 	if (tmp.length === 0) {
@@ -3093,7 +3065,7 @@ function navDef(ev) {
 
 function clearMore() {
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF_ENUM;
-	if (DEBUG) console.log("clearMore(key), key = " + key)
+	if (DEBUG) log("clearMore(key), key = " + key)
 	fetch('backend/clearMore.php?key=' + key + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
@@ -3108,14 +3080,14 @@ function clearMore() {
 		
 	})
 	.catch(error => {
-		console.log(error)
+		log(error)
 	})
 	toggleMore(key,true);
 	$('#iDefDiv').css("display", "none");
 	$('#iDivMore').css("display", "none");
 }
 function hack(ev) {
-	if (DEBUG) console.log("hack()");
+	if (DEBUG) log("hack()");
 	ev.preventDefault();
 	$('#iDefDiv').css("display","block");
 }
@@ -3154,7 +3126,7 @@ function defEntry(ev) {
 }
 
 function showCachedDef(el) {
-	if (DEBUG) console.log("showCachedDef(el), el = " + el);
+	if (DEBUG) log("showCachedDef(el), el = " + el);
 	$('#iParDef').html(CACHED_DEF_HTML);	
 	$('#iParDef').css("display","block");
 }
@@ -3200,7 +3172,7 @@ function randomWord() {
 		getWords(3);		
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})	
 }
 
@@ -3211,7 +3183,7 @@ function makeHash() {
 }
 
 function toggleRegexMode(force = false) {
-	if (DEBUG) console.log("toggleRegexMode()")
+	if (DEBUG) log("toggleRegexMode()")
 	REGEX_MODE = !REGEX_MODE
 	if (REGEX_MODE || force) {
 		$('#iInput').css("background", "navajowhite")
@@ -3221,7 +3193,7 @@ function toggleRegexMode(force = false) {
 }
 
 function clearRegexMode() {
-	if (DEBUG) console.log("clearRegexMode()");
+	if (DEBUG) log("clearRegexMode()");
 	REGEX_MODE = false;
 	$('#iInput').css("background", "")
 }
@@ -3311,12 +3283,12 @@ function defaultMeta(hasPlural = true) {
 		seekWordSingleClass();
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function togglePlural() {
-	if (DEBUG) console.log("togglePlural()");
+	if (DEBUG) log("togglePlural()");
 	// Go direct to the backend to make the change.	
 	// Only support "en" words for now.
 	if (CLASS === "substantiv_en" || CLASS === "substantiv_ett") {
@@ -3336,7 +3308,7 @@ function togglePlural() {
 			}
 		})
 		.catch(error => {
-			console.log(error);
+			log(error);
 		})
 	}
 	
@@ -3345,7 +3317,7 @@ function togglePlural() {
 
 // Gamificiation of progress, show daily and weekly goal + end date
 function setTargets() {
-	if (DEBUG) console.log("setTargets()");
+	if (DEBUG) log("setTargets()");
 	fetch('backend/setTargets.php?cur_score=' + TOTAL_SCORE, {
 		method: 'get',
 		mode: 'cors',
@@ -3362,12 +3334,12 @@ function setTargets() {
 		getDiff();
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function getDiff() {
-	if (DEBUG) console.log("getDiff()");
+	if (DEBUG) log("getDiff()");
 	let diff = "";
 	let fmt = "";
 	if (TARGET_DAILY != 0) {		
@@ -3391,7 +3363,7 @@ function round(dec, places) {
 }
 
 function fetchDef() {
-	if (DEBUG) console.log("fetchDef()");
+	if (DEBUG) log("fetchDef()");
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -3435,12 +3407,12 @@ function fetchDef() {
 		}
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function getRaw() {
-	if (DEBUG) console.log("getRaw()")
+	if (DEBUG) log("getRaw()")
 	fetch('backend/scrapeRaw.php?word=' + CUR_WORD + "&class=" + CLASS, {
 		nethod: 'get',
 		mode: 'cors',
@@ -3456,7 +3428,7 @@ function getRaw() {
 		window.open(url)
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 	
 	// Make this more intelligent so that it resolves the work class if multiple matches
@@ -3492,7 +3464,7 @@ function shortenClass() {
 }
 
 function pronounce(word) {
-	if (DEBUG) console.log("pronounce()");
+	if (DEBUG) log("pronounce()");
 	if (SOUNDS && CLASS != "all") {				
 		let shortClass = shortenClass(CLASS);
 		let path = "sounds/" + shortClass + "/";
@@ -3515,34 +3487,36 @@ function pronounce(word) {
 				audio.play();
 			} else {
                 // Try and fetch audio
-                fetch('backend/fetchAudio.php?word=' + word + '&class=' + CLASS, {
-                    method: 'get',
-                    mode: 'cors',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(response => {
-                    return response.json();
-                })
-				.then(json => {
-					if (json["status"] === "Found") {
-						pronounce(word);
-					}
-				})
-                .catch(error => {
-                    console.log(error);
-                })
+				if (CLASS != "fraser") {
+					fetch('backend/fetchAudio.php?word=' + word + '&class=' + CLASS, {
+						method: 'get',
+						mode: 'cors',
+						headers: {
+							'Content-Type': 'application/json'
+						}
+					})
+					.then(response => {
+						return response.json();
+					})
+					.then(json => {
+						if (json["status"] === "Found") {
+							pronounce(word);
+						}
+					})
+					.catch(error => {
+						log(error);
+					})
+				}
             }
 		})
 		.catch(error => {
-			console.log(error);
+			log(error);
 		})		
 	}
 }
 
 function nDefs() {
-	if (DEBUG) console.log("nDefs(def)")
+	if (DEBUG) log("nDefs(def)")
 	let n = 0;	
 	let regex = /^\d+/;
 	let tmpArr = CUR_DEF.split("<br>");
@@ -3557,7 +3531,7 @@ function nDefs() {
 // Pick out a single definition based on index
 function getDefInd(ind) {		
 	if (CLASS === "fraser") return CUR_DEF;
-	if (DEBUG) console.log("getDefInd(ind), ind = " + ind)	
+	if (DEBUG) log("getDefInd(ind), ind = " + ind)	
 	let out = "";
 	regex = /^\d+/;
 	let tmpArr = CUR_DEF.split("<br>");
@@ -3580,7 +3554,7 @@ function isNumeric(value) {
 }
 
 function walkListing() {
-	if (DEBUG) console.log("walkListing()");
+	if (DEBUG) log("walkListing()");
 	fetch('backend/getListing.php', {
 		method: 'get',
 		mode: 'cors',
@@ -3606,12 +3580,12 @@ function walkListing() {
 		setTimeout(fillInput, arr.length * 6000, "DONE");
 	})
 	.catch(error => {
-		console.log(error);
+		log(error);
 	})
 }
 
 function fillInput(text) {	
-	if (DEBUG) console.log("fillInput(text), text = " + text)
+	if (DEBUG) log("fillInput(text), text = " + text)
 	$('#iInput').val(text);
 }
 
@@ -3666,6 +3640,33 @@ function fromEnglish() {
 		url = url.replace("<src>", src);
 		window.open(url);
 	}
+}
+
+function frasMatchFuzzy(key) {
+	debug("frasMatchFuzzy(" + key + ")");	
+	let res = false;
+	fetch('backend/fuzzyFrasMatch.php?key=' + key, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		if (json["match"].length > 0) {
+			setClass("fraser");
+			seekWordSingleClass(json["match"]);
+		
+		} else {
+			
+		}
+	})
+	.catch(error => {
+		log(error);
+	})	
 }
 </script>
 </html>
