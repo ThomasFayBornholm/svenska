@@ -250,6 +250,7 @@ avisera
 avjaga
 avjämna
 avkasta
+avkasta
 avklarna
 avklinga
 avkläda
@@ -396,7 +397,6 @@ avvänja
 avväpna
 avvärja
 avyttra
-avkasta
 aväta
 axiomatisera
 axla
@@ -1848,8 +1848,8 @@ förmoda
 förmultna
 förmäla
 förmäla sig
-förmäla-2
 förmäla sig
+förmäla-2
 förmänskliga
 förmärka
 förmå
@@ -3243,19 +3243,19 @@ köpa ut
 köpslå
 köra
 köra fast
-köra in
-köra om
-köra på
-köra-2
 köra fast
 köra ihop sig
 köra in
+köra in
 köra om
+köra om
+köra på
 köra på
 köra upp
 köra ur
 köra ut
 köra över
+köra-2
 laborera
 lacka
 ladda
@@ -3869,6 +3869,7 @@ oroa
 oroa sig
 orsaka
 osa
+oscillera
 oskadliggöra
 oxidera
 pacificera
@@ -4586,10 +4587,10 @@ skoja
 skoja till sig
 skola
 skola in
-skola om
-skola-2
 skola in
 skola om
+skola om
+skola-2
 skolka
 skona
 skopa
@@ -5030,20 +5031,20 @@ stelna
 sterilisera
 sticka
 sticka av
-sticka emellan
-sticka ner
-sticka sig
-sticka till
-sticka upp
-sticka ut
-sticka-2
 sticka av
 sticka emellan
+sticka emellan
+sticka ner
 sticka ner
 sticka sig
+sticka sig
+sticka till
 sticka till
 sticka upp
+sticka upp
 sticka ut
+sticka ut
+sticka-2
 stickas
 stifta
 stiga
@@ -6031,8 +6032,8 @@ vanvörda
 vanära
 vara
 vara sig
-vara-2
 vara sig
+vara-2
 varda
 variera
 varna
@@ -6175,8 +6176,8 @@ välla
 välsigna
 välta
 välta över
-välta-2
 välta över
+välta-2
 vältra
 välva
 välva sig
@@ -6354,6 +6355,7 @@ yttra sig
 återinföra
 återkalla
 återkasta
+återkasta
 återklinga
 återknyta
 återkomma
@@ -6379,7 +6381,6 @@ yttra sig
 återvinna
 återvälja
 återvända
-återkasta
 åtfölja
 åtgärda
 åtlyda
@@ -6438,6 +6439,7 @@ yttra sig
 överenskomma
 överensstämma
 överexponera
+överfalla
 överfalla
 överflygla
 överflöda
@@ -6502,7 +6504,6 @@ yttra sig
 överväldiga
 övervältra
 övervärdera
-överfalla
 överäta
 överösa
 övningsköra
