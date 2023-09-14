@@ -41,7 +41,7 @@
 					$score["greenCount"]++;
 				} else if ($tmp === 1) {
 					$score["blueCount"]++;
-				} else {
+				} else if ($tmp === 0) {
 					$score["redCount"]++;
 				}
 			}

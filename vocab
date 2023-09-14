@@ -434,7 +434,7 @@ function updateScore() {
 			return response.json();
 		})
 		.then(json => {			
-			TOTAL_SCORE = round(json["percent"]*N_ALL/100,0);								
+			TOTAL_SCORE = round(json["percent"]*N_TOT/100,0);								
 			getDiff();			
 		})
 		.catch(error => {
@@ -1346,8 +1346,6 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 		})
 	}
 	focusInput();
-	log(LAST_WORD);
-	log(LAST_CLASS);
 }
 
 /* Priorities for search
@@ -1792,7 +1790,6 @@ function pretty(def) {
 	const regex1 = /[a-z][1-9]/;
 	match = out.match(regex1);
 	if (match != null) {
-		log(match);
 		strMatch = match[0];
 		rep = strMatch[0] + "<br> " + strMatch[1];
 		out = out.replace(strMatch, rep);
