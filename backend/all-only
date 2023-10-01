@@ -1,5 +1,6 @@
 (40) lika!
 (bara) halva sanningen
+(både) framlänges och baklänges
 (både) länge och väl
 (det får) bära eller brista
 (det är bara) toppen av ett isberg/isberget
@@ -2106,6 +2107,7 @@ bakhuvud
 bakhåll
 bakis
 bakkappa
+baklänges
 bakläxa
 bakom
 bakom lås och bom
@@ -7761,6 +7763,7 @@ framkomma
 framkomst
 framliden
 framlägga
+framlänges
 frammana
 frammarsch
 framme
@@ -8355,6 +8358,7 @@ fåntratt
 fåordig
 får
 fåra
+fårhage
 fårskalle
 fårticka
 fåtal
@@ -10990,6 +10994,8 @@ halvklass
 halvklot
 halvkolonn
 halvkonserv
+halvkväden
+halvkvädna visor
 halvledare
 halvlek
 halvligga
@@ -12083,25 +12089,37 @@ hårdnackad
 hårdost
 hårdporr
 hårdra
+hårdrock
+hårdrockare
 hårdsmält
 hårdträna
+hårdträning
+hårdvaluta
 hårdvara
 hårfager
 hårfin
+hårfrissa
+hårfrisör
+hårfrisörska
+hårfällning
 hårfärg
 hårfäste
 hårfön
+hårgelé
 hårig
 hårklyveri
 hårknut
 hårkors
 hårlock
+hårläggning
 hårman
+hårmousse
 hårnål
 hårnålskurva
 hårolja
 hårpensel
 hårpiska
+hårrem
 hårrör
 hårrörskärl
 hårsmån
@@ -12120,6 +12138,7 @@ hårvård
 håv
 höft
 höfthållare
+höftled
 hög
 höga vederbörande
 högadel
@@ -12170,6 +12189,7 @@ höggradig
 höggravid
 höghus
 höginkomstland
+höginkomsttagare
 högintensiv
 högklackad
 högkonjunktur
@@ -12220,12 +12240,14 @@ högtidstal
 högtrafik
 högtravande
 högtryck
+högtrycksrygg
 högtryckstvätt
 högtstående
 högtysk
 högtyska
 högutbildad
 högvakt
+högvarv
 högvatten
 högvilt
 högvuxen
@@ -13450,6 +13472,7 @@ jolmig
 jon
 jonförening
 jonglera
+jonglör
 jord
 jorda
 jordabalk
@@ -14401,6 +14424,7 @@ klor
 klosett
 kloss
 klossig
+kloster
 klosterbroder
 klostercell
 klot
@@ -14466,6 +14490,7 @@ klädlus
 klädmal
 klädsam
 klädsel
+klädskåp
 klädstreck
 kläm
 klämma
@@ -14505,6 +14530,7 @@ knall
 knalla
 knallhård
 knallsensation
+knallskott
 knap
 knape
 knaper
@@ -14529,6 +14555,7 @@ knast
 knastra
 knata
 knatte
+knatter
 knattra
 kneg
 knega
@@ -17024,6 +17051,7 @@ lystnad
 lystra till namnet
 lyteskomik
 lyxig
+läck
 läcka
 läcka som ett såll
 läcker
@@ -17512,6 +17540,7 @@ madonna
 madrass
 maffia
 maffig
+magasin
 magasinera
 mage
 mager
@@ -17524,6 +17553,7 @@ magiker
 magisk
 magister
 magknip
+magnat
 magnecyl
 magnet
 magnetband
@@ -17540,6 +17570,7 @@ magnumbutelj
 magra
 magsaft
 magsäck
+magsår
 mahogny
 maj
 majonnäs
@@ -17564,6 +17595,8 @@ makroekonomisk
 makrokosmos
 makt
 maktbalans
+maktblock
+maktbolag
 maktdelning
 maktfaktor
 maktfullkomlig
@@ -17575,6 +17608,7 @@ maktkamp
 maktkoncentration
 maktlysten
 maktlös
+maktmedel
 maktmissbruk
 maktmänniska
 maktordning
@@ -17643,6 +17677,7 @@ manikyrera
 manikyrist
 manipulera
 manke
+mankemang
 mankera
 mankhöjd
 mankön
@@ -17902,8 +17937,10 @@ meddela
 meddela sig
 meddelande
 meddelare
+meddelarskydd
 medel
 medeldistans
+medelinkomstland
 medelklass
 medellivslängd
 medelmåtta
@@ -17945,6 +17982,7 @@ medkänsla
 medla
 medlare
 medlemskap
+medlemskort
 medlidande
 medlidsam
 medling
@@ -18059,6 +18097,7 @@ merkaptan
 merkostnad
 merlot
 merpart
+mervärde
 mervärdesskatt
 mes
 mesallians
@@ -19836,6 +19875,7 @@ offer
 offerdöd
 offerera
 officer
+officerare
 officiell
 offra
 ofin
@@ -19981,6 +20021,7 @@ olaglig
 olaglighet
 olat
 oldboy
+oldtimer
 oleander
 olidlig
 olik
@@ -20003,9 +20044,11 @@ oljekälla
 oljemålning
 oljepalm
 oljesump
+oljetanker
 oljetråg
 oljud
 ollon
+olm
 ologisk
 olovlig
 olustig
@@ -20985,6 +21028,7 @@ personbästa
 persondator
 personell
 personfråga
+personförsäkring
 persongalleri
 personhistoria
 personhistorisk
@@ -21089,6 +21133,7 @@ pillerburk
 pilot
 pilotstudie
 pilotundersökning
+pilsnabb
 pilsner
 pilsnerfilm
 pilsnerflaska
@@ -23348,6 +23393,7 @@ samfund
 samfälld
 samfärdsel
 samfärdsled
+samförstånd
 samhälle
 samhällelig
 samhällsarbete
@@ -23639,8 +23685,10 @@ schackmatt
 schackpjäs
 schackproblem
 schakt
+schampo
 schangtil
 schasa
+schema
 schemalagd
 schematisk
 schilling
@@ -23659,6 +23707,7 @@ schweizerost
 schweizisk
 schweiziska
 schysst
+scoop
 scoutlöfte
 scrolla
 se
@@ -23696,6 +23745,7 @@ sedermera
 sedesam
 sedeslös
 sedig
+sediment
 sedlig
 sedlighet
 sedvana
@@ -28414,6 +28464,7 @@ tillträdesdag
 tilltufsad
 tilltugg
 tilltvinga sig
+tillvand
 tillvarata
 tillvaro
 tillverka
@@ -29501,6 +29552,7 @@ tärning
 tärningsbägare
 tärningsspel
 tät
+täte
 täthet
 tätort
 tätplacering
@@ -29513,6 +29565,7 @@ tå
 tåfjutt
 tåg
 tågvirke
+tågvärd
 tågända
 tågångare
 tåhätta
@@ -29548,20 +29601,26 @@ tönt
 töntig
 töntstämpel
 töras
+törn
 törnbuske
 törne
 törnekrona
+törst
 törstig
 tös
 töväder
 u
 u-land
+ubåt
 udd
 udda
 uddaplagg
+uddatalsmetod
+udde
 uddljud
 uddrim
 uggla
+ugn
 ugnsgrädda
 ugnslucka
 ugnssteka
@@ -29580,6 +29639,7 @@ umbära
 umbärande
 umgälla
 umgänge
+umgängeston
 umgås
 uncial
 undanbe
@@ -29603,7 +29663,9 @@ under bältet
 under falsk flagg
 under strecket
 under tiden
+underarm
 underart
+underavdelning
 underbar
 underbemannad
 underbett
@@ -29672,6 +29734,7 @@ underrätt
 underrätta
 underrätta sig
 underrättelse
+underrättelsetjänst
 underscore
 undersida
 underskatta
@@ -30589,12 +30652,20 @@ utskott
 utskrattad
 utskrift
 utskriva
+utskyld
 utskälld
+utskällning
 utskämd
 utskänka
+utskänkning
+utskärgård
+utskåpning
 utslag
 utslagen
+utslagning
+utslagsfråga
 utslagsgivande
+utslagsröst
 utslagsturnering
 utslagstävling
 utsliten
@@ -31378,6 +31449,7 @@ villfarelse
 villig
 villkor
 villkorlig dom
+villkorlig frigivning
 villkorsbisats
 villkorslös
 villolära
@@ -32628,16 +32700,22 @@ zygot
 åkalla
 åkare
 åker
+åkerbrukare
+åkerbär
+åkerhöna
 åkeri
 åkerjord
 åkerlapp
 åkerren
+åkersenap
+åkersork
 åkerspöke
 åkerteg
 åkervall
 åkervinda
 åklaga
 åklagare
+åklagarmyndighet
 åkning
 åkomma
 åkpåse
@@ -32647,9 +32725,11 @@ zygot
 ål
 åla
 åla sig
+ålandsrot
 ålder
 ålderdom
 ålderdomlig
+ålderdomskrämpa
 ålderdomssvag
 ålderism
 ålderman
@@ -32659,8 +32739,12 @@ zygot
 åldersdemens
 åldersforskning
 åldersfördelning
+åldersförändring
+åldersgrupp
 åldersgräns
 åldersklass
+ålderskrämpa
+ålderspension
 ålderspresident
 åldersrasism
 åldersskillnad
@@ -32729,6 +32813,7 @@ zygot
 årblad
 årder
 årfot
+åring
 årklyka
 årlig
 årligen
