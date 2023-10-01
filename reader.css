@@ -1,5 +1,9 @@
+html {
+	height: 100%;
+}
 body {
 	background-color: lightgoldenrodyellow;	
+	height: 100%;
 }
 
 .dragText {
@@ -9,18 +13,32 @@ body {
 .textForReading {
 	font-size: 14pt
 }
+.txt {
+	font-size: 14pt;
+}
 
+.header {
+	font-size: 24pt;
+}
 .drop {
 	height: 500pt;
 }
 
+
 .firstColumn {
-	height: 150pt;
-	width: 50%;
+	height: 100%;
+	width: 15%;
 	float: left;	
 }
 .secondColumn {
-	height: 150pt;
-	width: 50%;
+	height: 100%;
+	width: 35%;
 	float: left;
+	
+}
+.thirdColumn {
+	height: 100%;
+	width: 45%;
+	float: left;
+	margin-left: 5%;
 }

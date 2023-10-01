@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="sv"></html>
 <head>
-	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<title>Reader</title>
 	<link rel="stylesheet" href="reader.css">
 	<script src="jquery-3.6.0.js"></script>		
 </head>
 <body onload="startup()" onkeydown="handleKey(event)">
 <div id="iDropZone" class="drop" ondragover="dragOverHandler(event)" ondrop="dropped(event)">
-<div id="iText">
-<p class="textForReading" id="iParTxt"></p>
-</div>
-</div>
 <div class="firstColumn" onclick="back()">
 </div>
-<div class="secondColumn" onclick="forward()">	
+<div class="secondColumn">
+<p class="textForReading" id="iParTxt"></p>
+</div>
+<div class="thirdColumn" onclick="forward()">
+<p class="header" id="iWordCnt"></p>
+<p class="txt" id="iWordList"></p>
 </div>
 </body>
 <script>
 
 TEXT_CACHE = "";
+TEXT_LEN = 0;
 IND = 0;
 LINES = 15;
+WORD_LIST = [];
 function startup() {
-	
 }
 
 function dragOverHandler(ev) {
@@ -55,7 +57,6 @@ function hasLoaded(e) {
 	let out = "";
 	let br = ""; // Line break
 	for (i = 0; i < txtArr.length; i++) {		
-		//console.log(txtArr[i])
 		let len = txtArr[i].length;
 		if (len > 0) {
 			let wordArr = txtArr[i].split(" ");
@@ -71,12 +72,12 @@ function hasLoaded(e) {
 		} else {
 			out += "<br>";
 		}
-		
-		
+				
 	}
 	out = out.replaceAll("<br><br><br>","<br><br>");
 	out = out.replaceAll("<br><br><br>","<br><br>");
 	TEXT_CACHE = out.split("<br>");
+	TEXT_LEN = TEXT_CACHE.length;
 	
 	dispText();
 }
@@ -84,9 +85,13 @@ function hasLoaded(e) {
 function logWord(el) {
 	let word = el.innerText;
 	word = removePunc(word);
-	let id = "#" + el.id;
+	WORD_LIST.push(word);
 	
-	$(id).css("color","blue");
+	let id = "#" + el.id;
+	let tmp = $('#iWordList').html();
+	$('#iWordCnt').html("Nya ord: " + WORD_LIST.length)
+	$('#iWordList').html(tmp + "<br>" + word)
+	$(id).css("font-weight","bold");
 	fetch('backend/appendWord.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -100,10 +105,12 @@ function logWord(el) {
 }
 
 function removePunc(word) {
-	let arr = [",", ".", "?",";"];
+	let arr = [",", ".", "?",";","!",'"',"'","”"];
 	for (i = 0; i < arr.length; i++) {
 		word = word.replaceAll(arr[i],"");
 	}
+	word = word.replaceAll("”","")
+	word = word.toLowerCase();
 	return word;
 }
 
@@ -123,10 +130,15 @@ function dispText() {
 	let del = "";
 	let out = "";
 	for (let i = IND; i < IND + LINES; i++) {
+		// Bounds checking
+		if (i < TEXT_LEN - 1) {
 		out += del + TEXT_CACHE[i];
 		del = "<br>";
+		} else {
+			out += "<br>END";
+		}
 	}
-		// Check upper bound before read
+	
 	$('#iParTxt').html(out);
 	// Reset scroll
 	window.scrollTo(0,0);
