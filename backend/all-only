@@ -3425,6 +3425,7 @@ blinda fläcken
 blindgata
 blindgångare
 blindpatron
+blindtarm
 blinka
 blinkfyr
 blivande
@@ -4168,6 +4169,7 @@ bränna vid
 brännande
 brännare
 brännboll
+bränning
 brännjärn
 brännmärka
 brännoffer
@@ -5368,6 +5370,7 @@ diploid
 diplom
 diplomat
 diplomati
+diplomatisk
 diplomera
 diplomingenjör
 dippa
@@ -5392,7 +5395,9 @@ dis
 discipel
 disciplin
 disciplinera
+disciplinerad
 disciplinstraff
+disciplinär
 disco
 discodunk
 disharmoni
@@ -5453,6 +5458,7 @@ distrahera
 distraherad
 distribuera
 distribution
+distributiv
 distributör
 distrikt
 disträ
@@ -5655,6 +5661,7 @@ dramatisk
 drapera
 draperi
 dras
+drastisk
 dratta
 dregel
 dreja
@@ -5752,6 +5759,7 @@ drälla
 drämma
 dränera
 dränering
+dräng
 dränka
 dräpa
 drätselkammare
@@ -5885,6 +5893,7 @@ dygdig
 dygn
 dygna
 dygnsgammal
+dygnsvila
 dyka
 dyka upp
 dyka upp som gubben i/ur lådan
@@ -5982,6 +5991,7 @@ dödsbodelägare
 dödsbricka
 dödsbädd
 dödsdom
+dödsdömd
 dödsfall
 dödsfara
 dödsförakt
@@ -7127,10 +7137,12 @@ fetisch
 fetknopp
 fetma
 fetna
+fetstil
 fett
 fetthalt
 fetthjärta
 fettisdag
+fettisdagsbulle
 fettlever
 fettlöslig
 fettsugning
@@ -7163,7 +7175,9 @@ fikabröd
 fiken
 fikon
 fiktion
+fiktionalism
 fiktiv
+fil
 fildelare
 fildelning
 filea
@@ -8186,6 +8200,7 @@ funktionsvärde
 funktionär
 funtad
 fura
+furnera
 furste
 furstendöme
 furstlig
@@ -8923,6 +8938,7 @@ förlåtelse
 förlåtlig
 förlöjliga
 förlöpa
+förlöpare
 förlösa
 förman
 förmana
@@ -10429,6 +10445,7 @@ grundavdrag
 grundavgift
 grundbetydelse
 grundbok
+grundbrott
 grundbult
 grundera
 grundforskning
@@ -11133,7 +11150,9 @@ handelshus
 handelshögskola
 handelskammare
 handelskompani
+handelsman
 handelsträdgård
+handelsvara
 handfallen
 handfast
 handfat
@@ -12000,7 +12019,11 @@ härlighet
 härma
 härmed
 härnad
+härnäst
+härom
 häromdagen
+häromveckan
+härpå
 härröra
 härröra sig
 härs och tvärs
@@ -12409,8 +12432,10 @@ i (rödaste) rappet
 i akt och mening
 i allt väsentligt
 i andanom
+i dag
 i den högre skolan
 i det längsta
+i det närmaste
 i det tysta
 i detsamma
 i detta nu
@@ -12423,6 +12448,8 @@ i ett kör
 i ett nu
 i fjol
 i framstupa sidoläge
+i fred
+i fråga
 i fyllan och villan
 i fängsligt förvar
 i grova drag
@@ -12654,6 +12681,7 @@ improvisatör
 improvisera
 impuls
 impulsiv
+impulsivitet
 impulskontroll
 impulsköp
 in
@@ -12685,6 +12713,7 @@ inbjuda
 inbjudan
 inbjudningskort
 inblandad
+inblandning
 inblick
 inbringa
 inbringande
@@ -12733,21 +12762,27 @@ individualisera
 individualism
 individualist
 individualitet
+individualprevention
+individualpsykologi
 individuell
 indoktrinera
+indoktrinering
 indolent
 indolog
 indra
 indragen
 indragning
 indriva
+indrivare
 indrivning
 inducera
 induktans
 induktion
+induktionsapparat
 induktiv
 induktor
 indunsta
+indunstning
 industri
 industrialisera
 industrialism
@@ -14030,6 +14065,8 @@ kanota
 kanotist
 kanske
 kansli
+kanslispråk
+kanslistil
 kant
 kantat
 kantband
@@ -15884,6 +15921,7 @@ kurd
 kurdisk
 kurdiska
 kurera
+kurialstil
 kuriosakabinett
 kuriositet
 kuriosum
@@ -17143,16 +17181,20 @@ lysgas
 lysmask
 lysning
 lyspatron
+lysrör
 lyssna
 lyssna av
 lyssna in
 lyssnare
 lysten
 lyster
+lystmäte
 lystnad
 lystra till namnet
+lyte
 lyteskomik
 lyxig
+lyxliv
 läck
 läcka
 läcka som ett såll
@@ -17166,6 +17208,7 @@ lägel
 lägenhet
 lägenhetshotell
 läger
+lägerbål
 lägereld
 lägerliv
 lägga
@@ -17332,6 +17375,7 @@ läst
 läsuttal
 läsvärd
 läsår
+läte
 lätt
 lätt fånget lätt förgånget
 lätta
@@ -17378,6 +17422,7 @@ lågadel
 lågavlönad
 lågblad
 lågenergilampa
+lågenergisamhälle
 lågfjäll
 lågfrekvens
 lågfrekvent
@@ -17385,6 +17430,7 @@ lågfärg
 låghalt
 låghet
 låghus
+låginkomstland
 låginkomsttagare
 lågintensiv
 lågklackad
@@ -17394,8 +17440,10 @@ lågland
 låglandsboskap
 låglandsras
 låglänt
+låglöneland
 låglöneprofil
 lågmäld
+lågnivåspråk
 lågoddsare
 lågpresterande
 lågpris
@@ -17422,6 +17470,7 @@ lågtyska
 lågutbildad
 lågvarv
 lågvatten
+lågvattenmärke
 lågvuxen
 lågvärdig
 lågväxt
@@ -17478,6 +17527,7 @@ långlopp
 långlördag
 långmjölk
 långmod
+långnäbb
 långnäst
 långpanna
 långpromenad
@@ -18077,19 +18127,24 @@ medicinsk
 medikament
 medikus
 medinflytande
+medisterkorv
+meditation
 meditativ
 medium
 medkännande
 medkänsla
 medla
 medlare
+medlem
 medlemskap
 medlemskort
+medley
 medlidande
 medlidsam
 medling
 medljud
 medlut
+medlöpare
 medmänniska
 medmänsklig
 medsols
@@ -18107,6 +18162,7 @@ medveten
 medvetenhet
 medvetslös
 medvind
+medvurst
 megaloman
 megalomani
 megaton
@@ -18119,6 +18175,7 @@ mekanik
 mekaniker
 mekanisk
 mekanism
+melanin
 melankoli
 melass
 mellan hammaren och städet
@@ -18454,6 +18511,7 @@ mjukporr
 mjukryggad
 mjukvara
 mjäkig
+mjältbrand
 mjälte
 mjälthugg
 mjöl
@@ -19365,6 +19423,8 @@ nek
 neka
 nekrolog
 nektardrag
+nektarin
+nelson
 nematod
 nemesis
 neoklassicism
@@ -19393,6 +19453,7 @@ nervsystem
 nervtråd
 nervvrak
 nervös
+nesa
 neslig
 netto
 nettoinkomst
@@ -22710,6 +22771,7 @@ resorbera
 resorption
 respekt
 respektera
+respektfull
 respektingivande
 respektive
 respektlös
@@ -23307,6 +23369,7 @@ rådata
 rådbråka
 rådfråga
 rådgivande
+rådgivare
 rådgivning
 rådgöra
 rådhus
@@ -23325,6 +23388,8 @@ rådvillhet
 råg
 råga
 råge
+rågsikt
+råk
 råka
 råka i olycka
 råka sig
@@ -23409,14 +23474,20 @@ rörelsehindrad
 rörelsekapital
 rörelsemängd
 rörelsesjuka
+rörhöna
 rörig
+röring
+rörledning
 rörlig
 rörliga bilder
 rörliga kostnader
+rörläggare
 rörmokare
+rörmontör
 rörpost
 rörsocker
 rörtång
+röst
 rösta
 röstkort
 röstläge
@@ -25347,6 +25418,7 @@ slutlig
 slutligen
 slutljud
 slutlön
+slutord
 slutresultat
 slutrim
 slutsats
@@ -25463,6 +25535,8 @@ slå över
 slå/träffa huvudet på spiken
 slående
 slåss
+slåtter
+slåttermaskin
 slö
 slöa
 slöa till
@@ -25490,6 +25564,7 @@ smal som en sticka/pinne
 smal som en vidja
 smalben
 smalna
+smaragd
 smaragdgrön
 smart
 smaskig
@@ -25557,6 +25632,7 @@ smutta
 smycka
 smycke
 smyg
+smyg-
 smyga
 smyga in
 smyga sig
@@ -25591,6 +25667,7 @@ smältdegel
 smälteri
 smältning
 smältost
+smältsäkring
 smältvatten
 smältverk
 smärre
@@ -25693,6 +25770,7 @@ smörj
 smörja
 smörja kråset
 smörjelse
+smörjkanna
 smörjolja
 smörkniv
 smörkräm
@@ -25749,6 +25827,7 @@ snickeri
 snickra
 sniff
 sniffa
+snigel
 snigelpost
 sniken
 snille
@@ -26692,6 +26771,7 @@ stigma
 stigning
 stil
 stilblomma
+stildrag
 stilettklack
 stilfigur
 stilfull
@@ -26754,6 +26834,7 @@ stol
 stola
 stolgång
 stolla
+stolle
 stollig
 stolpbod
 stolpe
@@ -28624,6 +28705,7 @@ tillträdesdag
 tilltufsad
 tilltugg
 tilltvinga sig
+tillval
 tillvand
 tillvarata
 tillvaro
@@ -28848,6 +28930,7 @@ tolka om
 tolkning
 tolkningsföreträde
 tolv
+tolvfingertarm
 tolvskilling
 tolvtaggare
 tom
@@ -31766,6 +31849,7 @@ vinterek
 vintergrön
 vinterhalvår
 vinterhärdig
+vinterlig
 vinterlov
 vintermånad
 vintersolstånd
@@ -31777,16 +31861,19 @@ vintra in
 vintrig
 vinäger
 vinättika
+violett
 violin
 violoncell
 vippa
 vira
 viral
+viril
 virka
 virke
 virkning
 virra
 virrvarr
+virtuell
 virtuell verklighet
 virtuos
 virtuositet
