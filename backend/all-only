@@ -1437,6 +1437,7 @@ astronomisk
 asyl
 asymmetrisk chock
 asynkron
+at-tecken
 atavism
 atavistisk
 ateism
@@ -1998,6 +1999,7 @@ avtärd
 avtåga
 avund
 avundas
+avundsjuk
 avundsjuka
 avundsman
 avundsvärd
@@ -2392,21 +2394,39 @@ befara-2
 befaren
 befatta sig
 befattning
+befattningshavare
 befinna sig
 befinnas
 befintlig
+befintlighet
 befjädrad
+befjädring
 befläcka
 befogad
 befogenhet
 befolka
 befolkning
+befolkningsexplosion
+befolkningspyramid
+befolkningsstatistik
+befolkningstillväxt
 befordra
+befordran
+befordring
+befordringsgrund
 befrakta
+befraktare
 befria
 befriande
+befriare
+befrielse
+befrielsefront
+befrielsekamp
 befrielsekrig
+befrielserörelse
+befrielseteologi
 befrukta
+befruktning
 befryndad
 befrämja
 befrämjare
@@ -2415,11 +2435,14 @@ befäl
 befälhavande
 befälhavare
 befälselev
+befälsföring
 befälsgrad
+befälsställning
 befälstecken
 befängd
 befästa
 befästning
+befästningslinje
 befästningsverk
 begabba
 begagna
@@ -2451,16 +2474,22 @@ begravningståg
 begrepp
 begreppsanalys
 begreppsanalytisk
+begreppsbestämning
 begreppsförvirring
 begreppslig
 begripa
 begripa sig på
 begriplig
 begrunda
+begrundan
 begränsa
 begränsa sig
 begränsad
+begränsning
+begränsningslinje
+begränsningsyta
 begråta
+beguine
 begum
 begynna
 begynnelse
@@ -2542,10 +2571,12 @@ bekläda
 beklädnad
 beklämd
 beklämmande
+beklämning
 beknip
 beknipa sig
 bekomma
 bekosta
+bekostnad
 bekransa
 bekriga
 bekräfta
@@ -2574,6 +2605,7 @@ bekänna sig
 bekännare
 bekännelse
 bekännelseroman
+bekännelseskrift
 bekännelsetrogen
 bel canto
 belacka
@@ -3447,6 +3479,7 @@ blockera
 blockflöjt
 blockhus
 blockskiva
+blocktrissa
 blocktyg
 blod
 bloda
@@ -5347,6 +5380,7 @@ diktera
 diktion
 diktkonst
 diktning
+dilatation
 dilemma
 dilettantisk
 dill
@@ -5841,6 +5875,7 @@ duka av
 duka under
 duka upp
 dukning
+dukt
 duktig
 dum
 duma
@@ -6063,6 +6098,7 @@ effektiv
 effektivisera
 effektivitet
 effektuera
+efter
 efter sitt sinne
 efter sju sorger och åtta bedrövelser
 efter vartannat
@@ -6302,6 +6338,7 @@ eldsläckare
 eldstad
 eldsvåda
 eldsvådeunge
+eldupphör
 eldvapen
 eldvatten
 elefant
@@ -6794,6 +6831,7 @@ exorcist
 exotisk
 expandera
 expansion
+expansionskärl
 expansiv
 expediera
 expedit
@@ -7457,6 +7495,7 @@ flitig som en myra
 flitig som ett bi
 flitiga Lisa
 flock
+flockblommig
 flockimmunitet
 flockinstinkt
 flod
@@ -7551,6 +7590,7 @@ flyta
 flyta in
 flyta ovanpå
 flytande
+flytdocka
 flytplagg
 flytt
 flytta
@@ -7572,6 +7612,7 @@ fläckvis
 fläder
 fläderbär
 fläderte
+fläkt
 fläkta
 flämt
 flämta
@@ -7580,15 +7621,19 @@ flänga
 flängd
 flängig
 flärdfull
+flärpa
 fläsk
 fläskben
 fläskfilé
+fläskfärs
 fläskkorv
 fläskkotlett
 fläskschnitzel
+fläta
 fläta in
 fläta samman
 flå
+flåbuse
 flåhacka
 flåsa
 flöda
@@ -7598,6 +7643,7 @@ flödesdiagram
 flödesschema
 flöjt
 flöjtist
+flört
 flörta
 flörtig
 fnasig
@@ -7660,6 +7706,7 @@ folktro
 folkuniversitet
 folkvett
 follikel
+fon
 fond
 fondemission
 fondkommissionär
@@ -7736,6 +7783,7 @@ fortplantning
 fortskrida
 fortsätta
 fortsättning
+fortsättningsvis
 forum
 forward
 fosfat
@@ -8169,6 +8217,7 @@ fullsatt
 fullskalig
 fullständig
 fullständiga
+fullständiga rättigheter
 fullt och fast
 fullt ut
 fullträff
@@ -10646,6 +10695,7 @@ guldkrog
 guldkrona
 guldläge
 guldmedalj
+guldmyntfot
 guldskiva
 guldsmed
 guldsnitt
@@ -10720,8 +10770,10 @@ gynna
 gynnare
 gynnsam
 gyrokompass
+gytter
 gyttja
 gyttjig
+gyttring
 gäcka
 gädda
 gäddsax
@@ -12376,6 +12428,7 @@ höns
 hönsa
 hönsarv
 hönsgård
+hönshjärna
 hönsnät
 höra
 höra av
@@ -14281,6 +14334,7 @@ katrinplommon
 katt
 katta
 kattaktig
+kattdjur
 kattens lek med råttan
 kattguld
 kattpest
@@ -16019,6 +16073,7 @@ kvasi
 kvast
 kvastskaft
 kvav
+kved
 kverulans
 kverulera
 kvick
@@ -18477,6 +18532,7 @@ missnöjd
 missnöje
 misspryda
 missriktad
+missräkna sig
 missräkning
 missta
 missta sig
@@ -18641,6 +18697,7 @@ monokromatisk
 monokulär
 monolit
 monolog
+monopol
 monopolisera
 monoton
 monster
@@ -18650,6 +18707,7 @@ monter
 montera
 montera ner
 montör
+monument
 monumental
 moped
 mopp
@@ -18703,6 +18761,7 @@ mormor
 mormorsstång
 morot
 morra
+morrhår
 morsa
 morsarv
 morse
@@ -18710,6 +18769,7 @@ morse  2
 morsk
 mortalitet
 morän
+mos
 mosa
 mosig
 moskitnät
@@ -18974,6 +19034,7 @@ människovänlig
 människovärde
 mänsklig
 mänsklig sköld
+mänskliga rättigheter
 mänsklighet
 märgfull
 märglös
@@ -20269,6 +20330,7 @@ oljepalm
 oljesump
 oljetanker
 oljetråg
+oljeutsläpp
 oljud
 ollon
 olm
@@ -20949,6 +21011,7 @@ pantsätta
 papegoja
 papegojtulpan
 papier-maché
+papism
 papp
 pappa
 pappaledig
@@ -21242,9 +21305,16 @@ persisk
 persistent
 person
 personal
+personalavdelning
+personalchef
 personalia
 personalier
+personalism
+personalorganisation
 personalrum
+personaltidning
+personalunion
+personalutbildning
 personangrepp
 personbevis
 personbil
@@ -23108,9 +23178,11 @@ rotation
 roten till det onda
 rotera
 rotfyllning
+rotmos
 rotogravyr
 rotselleri
 rotting
+rotvälta
 roulett
 roulette
 rova
@@ -23121,6 +23193,7 @@ rovlysten
 rubba
 rubba någons cirklar
 rubbad
+rubbning
 rubin
 rubricera
 rubrik
@@ -23384,6 +23457,7 @@ rättssäkerhet
 rättstavning
 rättsuppfattning
 rättsvetenskap
+rättsväsen
 rättvis
 rättvisa
 rätvinklig
@@ -23706,12 +23780,14 @@ samman
 sammanbinda
 sammanbiten
 sammanblanda
+sammanbo
 sammanbrott
 sammanbygga
 sammandra
 sammandrabba
 sammandrabbning
 sammandrag
+sammandragning
 sammanfalla
 sammanfatta
 sammanfattning
@@ -24657,6 +24733,7 @@ skara
 skarp
 skarp ammunition
 skarpblick
+skarprättare
 skarpsill
 skarpsinne
 skarpskuren
@@ -24664,6 +24741,7 @@ skarpt läge
 skarptungad
 skarv
 skarva
+skata
 skateboard
 skatnäva
 skatt
@@ -25202,6 +25280,9 @@ skämtteckning
 skända
 skändare
 skändlig
+skändligen
+skändlighet
+skändning
 skänk
 skänka
 skänka i
@@ -25824,6 +25905,8 @@ snabbmat
 snabbstål
 snabbt som ögat
 snabbtåg
+snabel
+snabel-a
 snack
 snacka
 snacksalig
@@ -25993,6 +26076,9 @@ snövit
 sober
 social
 social hemhjälp
+social ingenjörskonst
+social turism
+sociala avgifter
 socialbidrag
 socialdemokrat
 socialdemokratisk
@@ -26008,6 +26094,7 @@ socialmedicin
 socialpornografi
 socialtjänst
 socialtjänstlag
+socialvård
 sociolekt
 sociologi
 socka
@@ -26374,6 +26461,7 @@ spjärna
 splendid isolation
 splinta
 split
+splits
 splitter
 splitter ny
 splitterbomb
@@ -26757,6 +26845,8 @@ stenkast
 stenkista
 stenkoll
 stenläggning
+stenografera
+stenografi
 stenparti
 stensättning
 stensöta
@@ -27661,6 +27751,8 @@ svårighet
 svårlöslig
 svårmod
 svårslagen
+swap
+swappa
 swimmingpool
 swing
 swinger
@@ -27727,6 +27819,8 @@ syndig
 syndikalism
 syndikat
 syndrom
+synergi
+synergism
 synestesi
 synhåll
 synkop
@@ -27877,6 +27971,8 @@ särredovisa
 särskild
 särskilja
 särskilt
+särskola
+särställning
 säsong
 säte
 sätt
@@ -29612,6 +29708,7 @@ turné
 turordning
 turs
 turtäthet
+turåkning
 tusan
 tusch
 tusch-2
@@ -31369,6 +31466,7 @@ vara upp till någon
 vara uppe i varv
 vara uppe med solen
 vara uppe med tuppen
+vara ute och cykla
 vara utom sig (av något)
 vara vid (sina) sunda vätskor
 vara åt skogen
@@ -31584,6 +31682,7 @@ verbalinspiration
 verifiera
 verifikat
 verifikation
+veritabel
 verk
 verka
 verkan
@@ -31597,6 +31696,7 @@ verkning
 verkningseld
 verkningsfull
 verkningsgrad
+verkningslös
 verksam
 verksamhet
 verksamhetsbehov
@@ -32321,6 +32421,7 @@ värmebeständig
 värmebölja
 värmedyna
 värmeenergi
+värmeexpansion
 värmegrad
 värmekraftverk
 värmekälla
@@ -32918,6 +33019,7 @@ zygot
 ärkebiskop
 ärkefiende
 ärkehertig
+ärkestift
 ärkeängel
 ärlig
 ärligen
