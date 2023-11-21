@@ -1319,6 +1319,7 @@ armled
 armlängd
 armod
 armstöd
+armsvett
 armveck
 armé
 arméchef
@@ -3833,6 +3834,7 @@ borrning
 borrsväng
 borst
 borsta
+borstbindare
 borstbinderi
 borste
 borstnejlika
@@ -4284,6 +4286,8 @@ budord
 budskap
 buffa
 buffel
+buffelaktig
+bufflig
 buffra
 buffé
 buga
@@ -5724,6 +5728,7 @@ dricksglas
 drift
 drift-2
 drifta
+driftig
 driftkostnad
 driftstopp
 driftstörning
@@ -7072,6 +7077,7 @@ fastighet
 fastighetsmäklare
 fastighetsskatt
 fastighetsskötare
+fastighetstaxering
 fastklistrad
 fastlagen
 fastlagsbulle
@@ -7823,6 +7829,7 @@ fotskrapa
 fotspår
 fotsteg
 fotsvamp
+fotsvett
 fotvalv
 fotvandra
 fotvård
@@ -11767,6 +11774,7 @@ hugga i sten
 hugga till
 huggare
 huggorm
+hugnesam
 huka
 huka sig
 huld
@@ -12477,6 +12485,7 @@ höstack
 höstlig
 höstlov
 höstmånad
+höstsådd
 hösttermin
 höstvete
 hötapp
@@ -13010,6 +13019,7 @@ inkomst
 inkomstbringande
 inkomstkälla
 inkomstskatt
+inkomsttaxering
 inkonsekvent
 inkontinens
 inkoppla
@@ -14040,6 +14050,7 @@ kallröka
 kallröra
 kallsinnig
 kallsmida
+kallsvett
 kallsvettas
 kallt stål
 kallvalsa
@@ -14894,6 +14905,7 @@ kokain
 kokard
 kokbok
 kokett
+kokettera
 koketteri
 kokhet
 kokill
@@ -16127,6 +16139,7 @@ kyla
 kyla av
 kyla ner
 kylare
+kylarvatten
 kylig
 kylkonserv
 kylskåp
@@ -19366,6 +19379,7 @@ natursceneri
 naturskön
 natursten
 naturtillgång
+naturvetenskap
 naturvin
 naturvård
 nautisk
@@ -21105,6 +21119,7 @@ parsa
 parser
 parsing
 part
+parta
 partaj
 parti
 particip
@@ -21802,6 +21817,7 @@ potatisbrännvin
 potatismos
 potatissallad
 potatisskalare
+potatisstöt
 potens
 potentat
 potential
@@ -22777,6 +22793,7 @@ rensning
 rent av
 rent spel
 rentav
+rentvå
 renässans
 rep
 repa
@@ -23815,6 +23832,7 @@ sammansmälta
 sammanstråla
 sammanställa
 sammanställning
+sammanstötning
 sammansvetsad
 sammansvuren
 sammansvärja sig
@@ -25513,6 +25531,7 @@ slumra
 slunga
 slunk
 sluring
+slussa
 slut
 sluta
 sluta leden
@@ -25808,14 +25827,12 @@ småborgerskap
 småbruk
 småbröd
 småbåtshamn
-smådugga
 småfolk
 småfranska
 småfågel
 småföretag
 småföretagare
 smågli
-smågräla
 småhandlare
 småhus
 småjordbruk
@@ -27262,6 +27279,7 @@ stupfull
 stupid
 stupränna
 stuprör
+stursk
 stuss
 stut
 stuva
@@ -27531,6 +27549,7 @@ sumpmark
 sund
 sup
 supa
+supa som en borstbindare
 supa/dricka någon under bordet
 super-G
 supera
@@ -27595,6 +27614,7 @@ svankrygg
 svans
 svansa
 svansföring
+svanskota
 svar
 svara
 svara/ge igen med samma mynt
@@ -28020,6 +28040,7 @@ sätta värde på någon/något
 sätta åt
 sätta/satsa allt på ett kort
 sätteri
+sättning
 sättpotatis
 sättsadverbial
 sävlig
@@ -28037,10 +28058,12 @@ så vitt (jag vet)
 sådan
 sådant händer i de bästa familjer
 sådant läder ska sådan smörja ha
+sådd
 såframt
 såga
 såga av
 såga av den gren man (själv) sitter på
+sågbock
 sågning
 sågspån
 såklart
@@ -28252,6 +28275,7 @@ tagg
 tagga
 tagga ner
 taggad
+taggtråd
 tagning
 taikonaut
 tajming
@@ -29465,6 +29489,7 @@ trumma ihop
 trumma in
 trumpen
 trumpet
+trumpetstöt
 trumpinne
 trumvirvel
 trupp
@@ -29654,6 +29679,7 @@ tungsinne
 tungsint
 tungspene
 tungspets
+tungsten
 tungt väte
 tungvikt
 tungviktsklass
@@ -32113,6 +32139,7 @@ vokalism
 vokalist
 vokalmusik
 volatil
+volfram
 volley
 volleyboll
 volontär
