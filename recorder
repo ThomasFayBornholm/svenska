@@ -1,0 +1,219 @@
+ <!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Recorder</title>
+    <link href="recorder.css" rel="stylesheet" type="text/css">
+	<script src="jquery-3.6.0.js"></script>
+  </head>
+  <body onload="init()" onkeyup="handleKey(event)">
+
+    <div class="wrapper">
+
+      <header>
+        <h1>Recorder</h1>
+      </header>
+
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+      </section>
+	  <button onclick="playAll()">Play All</button>
+	  <p id="iStat">Status</p>
+      <section class="sound-clips">
+      </section>
+
+    </div>
+  </body>
+</html>
+<script>
+var INC = 1;
+var RUNNING = false;
+const soundClips = document.querySelector('.sound-clips');
+const canvas = document.querySelector('.visualizer');
+const mainSection = document.querySelector('.main-controls');
+var audioCtx;
+const canvasCtx = canvas.getContext("2d");
+var mediaRecorder
+function init() {
+	// visualiser setup - create web audio api context and canvas
+
+	//main block for doing the audio recording
+
+	if (navigator.mediaDevices.getUserMedia) {
+
+	  const constraints = { audio: true };
+	  let chunks = [];
+
+	  let onSuccess = function(stream) {
+		mediaRecorder = new MediaRecorder(stream);
+		
+		visualize(stream);
+
+
+		mediaRecorder.onstop = function(e) {
+		  
+		  const clipName = INC;
+		  INC++
+		  const clipContainer = document.createElement('article');
+		  const clipLabel = document.createElement('p');
+		  const audio = document.createElement('audio');
+		  const deleteButton = document.createElement('button');
+
+		  clipContainer.classList.add('clip');
+		  audio.setAttribute('controls', '');
+		  deleteButton.textContent = 'Delete';
+		  deleteButton.className = 'delete';
+
+		  if(clipName === null) {
+			clipLabel.textContent = 'My unnamed clip';
+		  } else {
+			clipLabel.textContent = clipName;
+		  }
+
+		  clipContainer.appendChild(audio);
+		  clipContainer.appendChild(clipLabel);
+		  clipContainer.appendChild(deleteButton);
+		  soundClips.appendChild(clipContainer);
+
+		  audio.controls = true;
+		  const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+		  chunks = [];
+		  const audioURL = window.URL.createObjectURL(blob);
+		  audio.src = audioURL;
+
+		  deleteButton.onclick = function(e) {
+			e.target.closest(".clip").remove();
+		  }
+
+		  clipLabel.onclick = function() {
+			const existingName = clipLabel.textContent;
+			const newClipName = prompt('Enter a new name for your sound clip?');
+			if(newClipName === null) {
+			  clipLabel.textContent = existingName;
+			} else {
+			  clipLabel.textContent = newClipName;
+			}
+		  }
+		}
+
+		mediaRecorder.ondataavailable = function(e) {
+		  chunks.push(e.data);
+		}
+	  }
+
+	  let onError = function(err) {
+		console.error('The following error occured: ' + err);
+	  }
+
+	  navigator.mediaDevices.getUserMedia(constraints).then(onSuccess, onError);
+
+	} else {
+	   console.log('getUserMedia not supported on your browser!');
+	}
+}
+
+function visualize(stream) {
+  if(!audioCtx) {
+    audioCtx = new AudioContext();
+  }
+
+  const source = audioCtx.createMediaStreamSource(stream);
+
+  const analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 2048;
+  const bufferLength = analyser.frequencyBinCount;
+  const dataArray = new Uint8Array(bufferLength);
+
+  source.connect(analyser);
+  //analyser.connect(audioCtx.destination);
+
+  draw()
+  function draw() {
+    const WIDTH = canvas.width
+    const HEIGHT = canvas.height;
+
+    requestAnimationFrame(draw);
+
+    analyser.getByteTimeDomainData(dataArray);
+
+    canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+    canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+
+    canvasCtx.lineWidth = 2;
+    canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+
+    canvasCtx.beginPath();
+
+    let sliceWidth = WIDTH * 1.0 / bufferLength;
+    let x = 0;
+
+
+    for(let i = 0; i < bufferLength; i++) {
+
+      let v = dataArray[i] / 128.0;
+      let y = v * HEIGHT/2;
+
+      if(i === 0) {
+        canvasCtx.moveTo(x, y);
+      } else {
+        canvasCtx.lineTo(x, y);
+      }
+
+      x += sliceWidth;
+    }
+
+    canvasCtx.lineTo(canvas.width, canvas.height/2);
+    canvasCtx.stroke();
+
+  }
+}
+
+window.onresize = function() {
+  canvas.width = mainSection.offsetWidth;
+}
+
+window.onresize();
+
+function handleKey(ev) {
+  if (ev.key === " ") {
+	  toggleRecord()
+  }
+}
+
+function toggleRecord() {
+	if (! RUNNING) {
+		mediaRecorder.start();
+		$('#iStat').html("Recording...");
+	} else {
+		mediaRecorder.stop();
+		$('#iStat').html("STOPPED");
+	}
+	RUNNING = !RUNNING;
+}
+function playAll() {
+	 let collection = document.getElementsByTagName("audio");
+ 
+        // regular for loop
+		var i = 0;
+        for (let el of collection) {
+			el.id = "audio_" + i;
+			el.addEventListener("ended", function() {
+				let curInc = el.id;
+				let collection = document.getElementsByTagName("audio");
+				curInc = parseInt(curInc.replace("audio_",""));
+				let newID = (curInc + 1);
+				if (newID < collection.length) {
+					setTimeout(playN, 1000, newID);
+				}
+			})
+			i++
+        }
+	collection[0].play();
+}
+
+function playN(n) {
+	let collection = document.getElementsByTagName("audio");
+	collection[n].play();
+}
+</script>
