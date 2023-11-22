@@ -5,8 +5,8 @@
 			if ($word != $r) {
 				$tmp = str_replace($r,"",$tmp);
 			}
-		}
-		return $tmp;
+		}		
+		return $tmp;		
 	}
 	
 	function wordMatch($word, $comp) {
@@ -49,10 +49,11 @@
 		return $res;
 	}
 	
-	function getConjugations($key, $dict) {		
+	function getConjugations($key, $dict) {				
 		if (array_key_exists($key, $dict)) {
 			$lines = explode("<br>", $dict[$key]);					
-			$lineOne = $lines[0];					
+			$lineOne = $lines[0];
+			$lineOne = repText($lineOne,$GLOBALS['replacements'],$key);
 			// First explosion just to get root word
 			$conjugations = explode(" ", $lineOne);				
 			$root = $conjugations[0];			
@@ -66,7 +67,7 @@
 		}
 		if (count($conjugations) > 10) {
 			$conjugations = array();
-		}
+		}		
 		return $conjugations;
 	}
 	
@@ -97,8 +98,7 @@
 	$out = array();
 	$out["class"]="";
 	$out["word"]="";
-	$replacements = array("eller ","komparitiv ","bestämd form ","superlativ ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>","genitiv ","dativ ");
-	$test = "ge gav, gett, given givna, presens ger även åld. giva gav, givit, given givna, presens giver";
+	$GLOBALS["replacements"] = array("eller ",", komparativ","bestämd form ",", superlativ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>","genitiv ","dativ ");	
 
 	foreach ($classArr as $el) {
 		$name = $el . $trail;
@@ -129,7 +129,6 @@
 		} else if ($el === "adverb" && strlen($rest) > 0 && $word[0] === 'i') {			
 			$restList = explode(" ", $rest);						
 			foreach($wordList as $key) {				
-				echo $key;
 				$conjugations = getConjugations($key, $dict);									
 				if (containsAllWords($restList, $conjugations) && $key[0] === "i") {					
 					$out["class"] = $el;
