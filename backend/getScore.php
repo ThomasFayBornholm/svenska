@@ -50,7 +50,7 @@
 	
 	if ($score["count"] != 0) {
 		$score["percent"] = ($score["total"] / $score["count"] / 2 * 100);
-		$score["percent"] = round($score["percent"],2);
+		$score["percent"] = round($score["percent"],5);
 	}
 	echo json_encode($score);
 ?>
