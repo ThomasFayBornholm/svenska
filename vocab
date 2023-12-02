@@ -160,6 +160,7 @@ function startup() {
 	if (DEBUG) log("startup()")
 	wordCount();		
 	updateScore();
+	setClass("verb");
 	randomWord();
 	focusInput();
 	setTimeout(setTargets,1000);
@@ -172,8 +173,7 @@ function clearSummary() {
 }
 function getInput() {
 	if (DEBUG) log("getInput()");
-	let word = $('#iInput').val();
-	if (word.length === 0) word = "0";
+	let word = $('#iInput').val();		
 	if (word === "~") word = CUR_WORD;
 	$('#iInput').val(word);
 	return word;
@@ -1207,20 +1207,18 @@ for (let i = 0; i < N; i++) {
 	.then(json => {
 		done++;
 		let id = json['id'];						
-		tmpOut[id] = ": ";					
+		tmpOut[id] = ": ";				
 		tmpOut[id] += round(json["percent"],2) + "%";					
 		score_all += parseInt(json["total"]);
 		tmpTot += parseInt(json["count"]);
 		let out = "<b>all: " + "score_all" + "%</b>";
 		// All serial requests are done
-		if (done === N) {
-			let header = "Monday: " + TARGET_MONDAY.toLocaleString('sv') + "<br>";
+		if (done === N) {			
 			for (i = 0; i < N; i++) {
 				out += "<br>" + CLASSES[i] + tmpOut[i];
 			}						
 			score_all = Math.round(score_all / tmpTot / 2 * 100 * 100) / 100;
-			out = out.replace("score_all",score_all);
-			out = header + out;
+			out = out.replace("score_all",score_all);			
 			// Append auxiliary classes in smaller text
 			out += "<br>Aux classes:<br>";
 			del = "";						
@@ -1241,6 +1239,10 @@ function newInputWrapper(e) {
 	if (DEBUG) log("newInputWrapper()");
 	e.preventDefault();
 	let word = getInput();
+	if (word.length === 0) {
+		randomWord();
+		return;
+	}
 	// Navigation only to a given word class.
 	if (word.indexOf("@") === 0) {
 		let newClass  = fullClassName(word.substr(1));
@@ -3153,7 +3155,8 @@ function changeScore(ev,diff) {
 }
 function randomWord() {
 	// Hash is to prevent caching of the url by the browser. Server ignores the hash	
-	fetch('backend/randomWord.php?class=verb&hash=' + makeHash(), {
+	if (CLASS === "all") return;
+	fetch('backend/randomWord.php?class=' + CLASS + '&hash=' + makeHash(), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3164,9 +3167,7 @@ function randomWord() {
 		return response.json();
 	})
 	.then(json => {
-		INC = json["ind"]-4;
-		setCUR_WORD(json["word"]);		
-		getWords(3);		
+		seekWordSingleClass(json["word"]);
 	})
 	.catch(error => {
 		log(error);
