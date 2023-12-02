@@ -65,6 +65,7 @@ actionfilm
 ad hoc-lösning
 adaptation
 adapter
+adaption
 addition
 adel
 adelsman
@@ -157,6 +158,7 @@ aktör
 akutmottagning
 akvarell
 akvedukt
+alagreck
 alant
 alba
 albatross
@@ -636,6 +638,7 @@ armböjning
 armering
 armfoting
 armgång
+armhävning
 armhåla
 armled
 armlängd
@@ -752,7 +755,6 @@ auktionsförrättare
 auktionsutropare
 auktor
 auktorisation
-auktorisering
 auktoritet
 auktoritetstro
 auktorrätt
@@ -1115,6 +1117,7 @@ barnmorska
 barnmorskegroda
 barnmorskemottagning
 barnomsorg
+barnpassning
 barnsbörd
 barnsits
 barnskötare
@@ -1404,7 +1407,6 @@ bergtall
 bergtroll
 bergtunga
 berguv
-bergvandring
 bergvind
 bergvägg
 bergvärme
@@ -1456,6 +1458,7 @@ beställning
 bestämdhet
 bestämmanderätt
 bestämmelse
+bestämmelseort
 beständighet
 beståndsdel
 bestörtning
@@ -1525,7 +1528,6 @@ bigarrå
 biktstol
 bikupa
 bil
-bil-2
 bilaga
 bilbarnstol
 bilbatteri
@@ -1692,6 +1694,7 @@ blandras
 blankett
 blankis
 blanklax
+blasfemi
 blazer
 bleckblåsinstrument
 blekselleri
@@ -1855,6 +1858,8 @@ boll
 bollbehandling
 bollkalle
 bollpojke
+bolsjevik
+bolsjevism
 bolstervar
 bolåneinstitut
 bom
@@ -2156,6 +2161,8 @@ budgetunderskott
 budgivning
 budo
 buffel
+buffert
+buffertlösning
 buffé
 bugg
 bugg-2
@@ -2314,6 +2321,7 @@ bössa
 bössinsamling
 bötesstraff
 C-nivå
+cabriolet
 caesarsallad
 cafeteria
 caffe latte
@@ -2682,6 +2690,8 @@ despotism
 dessert
 dessertost
 dessertsked
+destination
+destinationsort
 destruent
 destruktion
 destruktivitet
@@ -2909,6 +2919,7 @@ drottning
 drul
 drulle
 drummel
+drunkning
 druva
 druvfläder
 dryck
@@ -2981,6 +2992,7 @@ dvärg
 dvärgbjörk
 dy
 dyckert
+dygd
 dygnsvila
 dykand
 dykarklocka
@@ -3160,6 +3172,7 @@ el
 elakhet
 elasticitet
 elbil
+elboja
 elchock
 eld
 eldare
@@ -3258,6 +3271,7 @@ enhet
 enhetscirkel
 enhetsskola
 enhjuling
+enhörning
 enighet
 enkammarriksdag
 enkelbeckasin
@@ -3834,6 +3848,8 @@ folkdräkt
 folkförflyttning
 folkgrupp
 folkhjälte
+folkhälsa
+folkhälsovetenskap
 folkhögskola
 folklek
 folklighet
@@ -3986,6 +4002,7 @@ frigörelse
 frihamn
 frihandel
 frihandelszon
+friherre
 frihet
 frihetshjälte
 frihetstiden
@@ -4724,6 +4741,7 @@ genesis
 gengas
 gengäld
 gengångare
+genialitet
 genie
 genitiv
 genklang
@@ -4932,7 +4950,6 @@ granat
 grand
 grand mal
 granit
-grankvist
 grann
 granne
 grannfejd
@@ -5067,7 +5084,6 @@ gräsätare
 grävare
 grävling
 grävmaskin
-grävning
 gråal
 gråberg
 grågås
@@ -5075,7 +5091,6 @@ grålla
 gråsej
 gråsosse
 gråsten
-gråstenkyrka
 gråt
 gråtrut
 gröda
@@ -5607,6 +5622,7 @@ hotbild
 hotelse
 hov
 hovdam
+hovdessert
 hovleverantör
 hovmästare
 hovnarr
@@ -5730,6 +5746,7 @@ häcklöpning
 häckning
 hädanfärd
 hädare
+hädelse
 häftstift
 hägring
 häktning
@@ -5919,7 +5936,6 @@ högskoleprov
 högslätt
 högsommar
 högspänning
-högspänningsanläggning
 högstadielärare
 högstadieålder
 högsäsong
@@ -6507,7 +6523,6 @@ jul
 julafton
 julbelysning
 julgran
-julgransfot
 julgranskaramell
 juli
 julkaktus
@@ -6698,6 +6713,7 @@ kanel
 kanelbulle
 kanelstång
 kanin
+kanister
 kanjon
 kanna
 kannibal
@@ -7024,6 +7040,7 @@ knarkkurir
 knarr
 knasboll
 knast
+knaster
 knatte
 knegare
 kneken
@@ -7159,6 +7176,7 @@ komfortzon
 komik
 komiker
 kommandobrygga
+kommandoekonomi
 kommandoton
 kommendant
 kommendör
@@ -7309,6 +7327,7 @@ kontinent
 kontingent
 kontinuitet
 kontinuum
+kontokurant
 kontorsstol
 kontraalt
 kontrabas
@@ -7440,6 +7459,7 @@ kotlett
 kotlettfisk
 kotpelare
 kotte
+kova
 kovändning
 krabba
 kraft
@@ -7748,6 +7768,7 @@ kyckling
 kyla
 kylare
 kylkonserv
+kyndelsmässa
 kypare
 kypert
 kyrka
@@ -8001,6 +8022,7 @@ ledamot
 ledare
 ledgångsreumatism
 ledighet
+ledighetskommitté
 ledkapsel
 ledning
 ledningsförmåga
@@ -8140,6 +8162,7 @@ livränta
 livscykel
 livsfara
 livsform
+livsfråga
 livsföring
 livsgärning
 livshållning
@@ -8265,7 +8288,6 @@ lumbalpunktion
 luminans
 luminiscens
 lunch
-lunchpaus
 lund
 lunga
 lunginflammation
@@ -8355,7 +8377,6 @@ längdskidåkning
 längdåkning
 längtan
 länk
-länkare
 läns
 länsresidens
 länsrätt
@@ -8497,7 +8518,6 @@ lördagsbilaga
 lösen
 lösgom
 lösning
-lösöreauktion
 lövbiff
 lövruska
 lövskog
@@ -8561,7 +8581,7 @@ malis
 malja
 mall
 malm
-malm 2
+malm-2
 malmslig
 malmöit
 malpåse
@@ -8657,6 +8677,7 @@ martyr
 marxism
 marxist
 maräng
+marängsviss
 maser
 mask
 maska
@@ -8723,6 +8744,7 @@ maxim
 maximering
 maximitemperatur
 mc
+meander
 med
 medalj
 medaljong
@@ -8833,6 +8855,7 @@ metastas
 meteor
 meteorit
 meteorkrater
+meteorolog
 meteorologi
 meteorsten
 meter
@@ -8859,6 +8882,7 @@ mikrob
 mikroekonomi
 mikrofilm
 mikrofon
+mikrokosmos
 mikroorganism
 mikrougn
 mikrovågsugn
@@ -8874,6 +8898,7 @@ miljon
 miljonrullning
 miljonär
 miljö
+miljöaktivist
 miljöfråga
 miljöförstöring
 miljögift
@@ -9214,6 +9239,7 @@ människoande
 människoapa
 människoföda
 människohamn
+människohandel
 människokännare
 människosläkte
 människospillra
@@ -9307,6 +9333,7 @@ nagellack
 nagelpetare
 nagelrot
 naivitet
+nakendans
 nakenmodell
 nakenscen
 nalle
@@ -9832,6 +9859,7 @@ opinion
 opinionsmätning
 opponent
 opportunism
+opportunist
 opposition
 oppositionsledare
 optativ
@@ -9870,6 +9898,7 @@ ordvändning
 oreda
 oredlighet
 oregano
+orenhet
 orenlighet
 organdonator
 organisation
@@ -10315,6 +10344,7 @@ pizza
 pjäs
 pjäxa
 placering
+plage
 plan
 planekonomi
 planering
@@ -10476,6 +10506,7 @@ portion
 portiär
 portmonnä
 porträttör
+porttelefon
 portör
 pose
 position
@@ -11015,6 +11046,7 @@ residens
 resistans
 resistor
 reskoffert
+reskontra
 resning
 resolution
 resonans
@@ -11042,6 +11074,8 @@ retardation
 retina
 retning
 retorik
+retoriker
+retort
 reträtt
 reträttplats
 retur
@@ -11306,6 +11340,8 @@ rämna
 ränna
 rännil
 rännsnara
+rännsten
+rännstensunge
 ränta
 räntabilitet
 räntesats
@@ -11410,7 +11446,6 @@ sabotör
 sackaros
 sadel
 sadelfilt
-sadelformad
 sadelgjord
 sadelknapp
 sadelmakare
@@ -11448,6 +11483,7 @@ sallad
 salladskål
 sallat
 salmiak
+salongsbolsjevik
 saloondörr
 salpeter
 salpingit
@@ -11602,6 +11638,7 @@ satkärring
 satmara
 sats
 satsaccent
+satsanalys
 satsdel
 satsförkortning
 satslära
@@ -11787,6 +11824,7 @@ sidlinje
 sidoeffekt
 sidoinkomst
 sidokuliss
+sidolinje
 sidorätt
 sievert
 sifferuppgift
@@ -11867,6 +11905,7 @@ sittbrunn
 sittbräda
 sittbänk
 sittlift
+sittmöbel
 sittning
 sittplats
 sittvagn
@@ -11922,7 +11961,6 @@ självhjälp
 självhushållning
 självhärskare
 självhävdelse
-själviakttagelse
 självinsikt
 självironi
 självklarhet
@@ -11930,7 +11968,6 @@ självkritik
 självkännedom
 självkänsla
 självläns
-självmedicinering
 självmordsbombare
 självmordskandidat
 självmordsklinik
@@ -12070,6 +12107,7 @@ skift
 skiftning
 skiftnyckel
 skifttangent
+skiktröntgen
 skildrare
 skildring
 skiljedomare
@@ -12372,7 +12410,6 @@ slup
 sluring
 sluss
 slut
-slutdestination
 slutenvård
 slutkläm
 slutledning
@@ -12490,6 +12527,7 @@ smörgås
 smörgåskrasse
 smörgåstårta
 smörja
+smörjelse
 smörjkanna
 smörjolja
 smörkräm
@@ -12524,6 +12562,7 @@ snok
 snooker
 snopp
 snorunge
+snottra
 snowboard
 snubbe
 snubbeltråd
@@ -13038,6 +13077,7 @@ stolpe
 stolpsko
 stolthet
 stomatit
+stomi
 stomme
 stomp
 stoppare
@@ -13126,6 +13166,7 @@ stringens
 stringent
 stringtrosa
 stripa
+striptease
 strof
 stroke
 struktur
@@ -13910,6 +13951,7 @@ tirad
 tisdag
 tistel
 tistelborre
+titan
 titel
 titelbortläggning
 titelförsvarare
@@ -14059,6 +14101,7 @@ toxikologi
 tradition
 traditionsbärare
 tradjazz
+trafficking
 trafik
 trafikkorsning
 trafikled
@@ -14391,7 +14434,6 @@ tvångsneuros
 tvångsåtgärd
 tvåpol
 tvåsamhet
-tvåstegsraket
 tvåtaktsmotor
 tvåäggstvilling
 tweed
@@ -15322,6 +15364,7 @@ violin
 violoncell
 vippa
 vira
+virilitet
 virkning
 virtuositet
 virvel
@@ -15607,6 +15650,7 @@ vårta
 vårtbjörk
 vårtermin
 vårtkaktus
+vårtrötthet
 vårvinter
 våtarv
 våtmark

@@ -1185,9 +1185,9 @@ dropptorka
 drulla
 drumla
 drunkna
-drunkning
 dryfta
 dryga ut
+drypa
 drälla
 drämma
 dränera
@@ -1349,7 +1349,6 @@ extraknäcka
 extrapolera
 fabricera
 fabulera
-faktagranska
 falla
 falla igenom
 falla in
@@ -1481,6 +1480,7 @@ forma
 forma om
 formalisera
 formatera
+formera
 formge
 formulera
 forsa
@@ -2719,6 +2719,7 @@ involvera
 invälja
 invända
 invänta
+inöva
 iordningställa
 irra
 irra bort sig
@@ -4131,6 +4132,7 @@ rama in
 ramla
 ramla på
 ramsa
+randomisera
 rangera ut
 rangla
 rangordna
@@ -4147,6 +4149,7 @@ rapportera
 rapportera in
 rasa
 rasera
+raspa
 rassla
 rasta
 rata
@@ -4425,6 +4428,7 @@ sammanfatta
 sammanfoga
 sammanföra
 sammangadda sig
+sammangå
 sammanhänga
 sammanjämka
 sammankalla
@@ -4879,6 +4883,7 @@ snoka
 snoppa
 snoppa av
 snorta
+snottra
 snubbla
 snudda
 snurra
@@ -5094,6 +5099,7 @@ stridulera
 strila
 strimla
 stripa
+strippa
 strosa
 strukturera
 strukturera om
@@ -5689,11 +5695,13 @@ tänka till
 tänka ut
 tänka över
 täppa
+tära
 tärna
 tävla
 tåla
 tåla sig
 tårta
+töa
 töja
 tömma
 töras
@@ -6264,6 +6272,8 @@ ysta sig
 ytbehandla
 yttra
 yttra sig
+zooma
+zooma ut
 äckla
 äga
 ägna

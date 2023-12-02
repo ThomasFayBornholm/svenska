@@ -508,7 +508,6 @@ blasé
 blek
 blind
 blivande
-blixtkär
 blixtsnabb
 blodfattig
 blodfull
@@ -659,6 +658,7 @@ dejlig
 delaktig
 delbar
 delikat
+deltidsanställd
 delvis
 demenssjuk
 demi-sec
@@ -1570,6 +1570,7 @@ hackig
 hafsig
 haj
 hal
+halal
 halkig
 halmgul
 halsbrytande
@@ -2168,6 +2169,7 @@ kokt
 kolerisk
 kollektiv
 kolloidal
+kolonial
 kolossal
 kolsvart
 kolsyrad
@@ -2632,6 +2634,7 @@ malmförande
 malmöitisk
 malplacerad
 mammaledig
+manhaftig
 manierad
 manifest
 manlig
@@ -2826,6 +2829,7 @@ möjlig
 mönstergill
 mör
 mörk
+mörkblond
 mörkblå
 mörklagd
 mörkrädd
@@ -2959,6 +2963,7 @@ nästa
 näsvis
 nätt
 nåbar
+nödbedd
 nödd
 nödtorftig
 nödvändig
@@ -3209,8 +3214,8 @@ omodern
 omoralisk
 omornad
 omotiverad
+omskakad
 omsorgsfull
-omsprungen
 omstridd
 omständlig
 omsusad
@@ -3242,6 +3247,7 @@ oomstridd
 oomtvistlig
 oordentlig
 oordnad
+opak
 opartisk
 opassande
 operationell
@@ -3389,8 +3395,10 @@ overksam
 ovetande
 ovidkommande
 ovig
+ovillig
 ovillkorlig
 oviss
+ovänlig
 oväntad
 ovärderlig
 oväsentlig
@@ -3421,6 +3429,7 @@ pappaledig
 parabolisk
 paradoxal
 parallell
+paranoid
 parbladig
 parflikig
 pariserblått
@@ -3542,6 +3551,7 @@ prisbelönt
 prisbillig
 prisvärd
 privat
+privatanställd
 problematisk
 problemorienterad
 processorienterad
@@ -3680,6 +3690,7 @@ restriktiv
 retfull
 retlig
 retorisk
+retroaktiv
 retsam
 reumatisk
 revolutionerande
@@ -3784,6 +3795,7 @@ rörelsehindrad
 rörig
 rörlig
 röststark
+sadelformad
 saftig
 saker
 sakkunnig
@@ -3900,6 +3912,7 @@ sexuell
 sidoordnad
 silkeslen
 silveraktig
+simultan
 singular
 sinnad
 sinnessvag
@@ -4084,6 +4097,7 @@ slutlig
 släkt
 slängd
 slängig
+släpphänt
 slät
 slående
 slö
@@ -4399,6 +4413,7 @@ säregen
 särpräglad
 särskild
 sävlig
+sågtandad
 sångbar
 sårbar
 såt
@@ -4431,6 +4446,7 @@ talangfull
 talför
 talrik
 tam
+tandad
 tanig
 tankemässig
 tankfull
@@ -4495,6 +4511,7 @@ tilltufsad
 tillvand
 tillämplig
 tillåten
+timanställd
 timid
 timlig
 timslång
@@ -4584,7 +4601,6 @@ tung
 tungrodd
 tungsint
 tunn
-turboladdad
 turbulent
 turistig
 turkisk
@@ -4672,6 +4688,7 @@ uniform
 unik
 unilateral
 universell
+unken
 up-to-date
 uppblåst
 uppbragt
@@ -4682,15 +4699,18 @@ uppdykande
 uppdämd
 uppenbar
 uppfinningsrik
+uppfriskande
 uppgiven
 upphängd
 upphöjd
 uppiffad
+uppiggande
 uppklippt
 uppkopplad
 uppkäftig
 uppladdad
 uppluckrad
+upplyst
 uppmärksam
 uppmärksammad
 uppnosig
@@ -4705,6 +4725,7 @@ upprymd
 upprätt
 upprörd
 uppsatt
+uppskakad
 uppslitande
 uppsluppen
 uppspärrad
@@ -4979,6 +5000,7 @@ vig
 viktig
 vild
 viljelös
+viljestark
 villig
 villkorslös
 villrådig
