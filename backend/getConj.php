@@ -100,7 +100,7 @@
 	$out["word"]="";
 	$GLOBALS["replacements"] = array("eller ",", komparativ","bestämd form ",", superlativ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>","genitiv ","dativ ");	
 
-	foreach ($classArr as $el) {
+	foreach ($classArr as $el) {		
 		$name = $el . $trail;
 		// Get word list from "-only" listing
 		$inList = $path . $el . "-only";
@@ -137,6 +137,15 @@
 					return;
 				}
 			}
+			/*
+		} else if ($el === "substantiv_en") {
+			foreach($wordList as $key) {
+				echo $key . "<br>";
+				$conjugations = getConjugations($key, $dict);
+				var_dump($conjugations);
+				echo "<br>";
+			}
+			*/
 		} else {			
 			foreach($wordList as $key) {
 				$conjugations = getConjugations($key, $dict);					
