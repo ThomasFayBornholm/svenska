@@ -172,7 +172,6 @@ alkalimetall
 alkan
 alkekung
 alkohol
-alkoholfri
 alkoholism
 alkoholist
 alkoholistanstalt
@@ -240,7 +239,6 @@ ammoniumklorid
 ammunition
 amnesi
 amnesti
-amning
 amorbåge
 amortering
 amorteringskrav
@@ -990,6 +988,7 @@ baccarat
 back
 backe
 backhoppare
+backhoppning
 backslash
 backspegel
 backspänning
@@ -1002,6 +1001,7 @@ baddräkt
 badgäst
 badhandduk
 badhytt
+badkruka
 badmadrass
 badmatta
 badrock
@@ -1521,6 +1521,7 @@ bidrottning
 bidé
 biff
 biffko
+biffrad
 biffstek
 bifigur
 bigami
@@ -1541,7 +1542,6 @@ bilderbok
 bildgåta
 bildhuggare
 bildhuggarkonst
-bildhuggeri
 bildkonst
 bildläsare
 bildning
@@ -2608,6 +2608,7 @@ debet
 debetsida
 debilitet
 debitor
+debut
 debutant
 december
 deciliter
@@ -2726,6 +2727,7 @@ diaspora
 diatrib
 diesel
 differens
+differential
 differentialkalkyl
 diffusion
 difteri
@@ -2799,6 +2801,7 @@ distans
 distansundervisning
 distribution
 distributör
+distriktsmästare
 ditresa
 divergens
 diversehandel
@@ -4194,7 +4197,6 @@ fästning
 fästpunkt
 fågel
 fågelholk
-fågelsång
 fåglalåt
 fåle
 fåll
@@ -4493,7 +4495,6 @@ försvarare
 försvarsadvokat
 försvarsgren
 försvarshemlighet
-försvarskraft
 försvarslinje
 försvarsmakt
 försvarsminister
@@ -5590,6 +5591,7 @@ holme
 holmgång
 holocaust
 hominid
+hommage
 homoadoption
 homofon
 homograf
@@ -8117,6 +8119,7 @@ likställighet
 likvid
 likvidation
 likör
+lillasyrra
 lillasyster
 lillaxel
 lillebror
@@ -8551,6 +8554,7 @@ magsäck
 magåkomma
 mahogny
 maj
+majbrasa
 majonnäs
 major
 majoritet
@@ -9840,7 +9844,6 @@ omväxling
 omvårdnad
 omöjlighet
 onani
-ondhet
 ondska
 onkel
 onomastik
@@ -9952,6 +9955,7 @@ oscillation
 oscillator
 oscillograf
 osed
+osman
 ost
 ostbågar
 osteoporos
@@ -10858,6 +10862,7 @@ rannsakan
 rannsakning
 ranson
 ransonering
+ranunkelväxt
 rapp
 rappning
 rapport
@@ -10953,6 +10958,7 @@ regnperiod
 regnskog
 regnskur
 regnskvätt
+regntid
 regress
 regression
 regulator
@@ -11896,6 +11902,7 @@ sinus
 sinuskurva
 sionism
 sionist
+sippa
 sirap
 siren
 sisalhampa
@@ -13494,7 +13501,9 @@ synvilla
 synvinkel
 synål
 syokonsulent
+syra
 syra-bas-indikator
+syre
 syren
 syrgasmask
 syrinx
@@ -13667,6 +13676,7 @@ tandläkare
 tandprotes
 tandrot
 tandröta
+tandsköterska
 tandställning
 tandtekniker
 tandval
@@ -14286,6 +14296,7 @@ träff
 träförädling
 trägravyr
 träkarl
+träl
 tränare
 träng
 trängning
@@ -15375,6 +15386,7 @@ visafton
 visare
 visdom
 vise
+visent
 vishet
 vision
 visitation
@@ -15504,7 +15516,6 @@ väpnare
 värd
 värdeförsändelse
 värdegemenskap
-värdemängd
 värdenihilism
 värdering
 värdesak
@@ -15547,6 +15558,7 @@ värmemängd
 värmepanna
 värmeplatta
 värmeslinga
+värmestrålning
 värmeutveckling
 värnkraft
 värnplikt
@@ -15668,6 +15680,7 @@ webbplats
 webbportal
 webbserver
 webbsida
+weber
 weekend
 wellpapp
 weltervikt
@@ -15894,6 +15907,7 @@ zygot
 ärtväxt
 ärvdabalk
 äska
+äsping
 ässja
 ätpinne
 ätstörning
@@ -16170,7 +16184,6 @@ zygot
 ölöppnare
 ömhet
 ömkan
-ömtålig
 önskan
 önskedröm
 önskelista

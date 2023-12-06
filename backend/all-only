@@ -424,6 +424,7 @@ alkalisk
 alkan
 alkekung
 alkohol
+alkoholfri
 alkoholhaltig
 alkoholiserad
 alkoholism
@@ -485,6 +486,7 @@ allsvenska
 allt
 allt mellan himmel och jord
 alltemellanåt
+alltför
 alltid samma visa
 alltifrån
 alltigenom
@@ -732,6 +734,7 @@ ange
 ange takten
 ange tonen
 angel
+angeldon
 angelfiske
 angelägen
 angelägenhet
@@ -1765,6 +1768,7 @@ avlasta
 avlastare
 avlastning
 avlat
+avlatsbrev
 avleda
 avledare
 avledning
@@ -2061,6 +2065,7 @@ backa bandet
 backa upp
 backe
 backhoppare
+backhoppning
 backig
 backslash
 backspegel
@@ -2079,6 +2084,7 @@ badgäst
 badhus
 badhytt
 badkar
+badkruka
 badrock
 badrum
 badsalt
@@ -3146,6 +3152,7 @@ biff Stroganoff
 biff à la Lindström
 biffig
 biffko
+biffrad
 biffstek
 bifigur
 biflod
@@ -3179,6 +3186,7 @@ bildbyline
 bildbyrå
 bilddyrkan
 bilderbok
+bildgåta
 bildhuggare
 bildhuggarkonst
 bildhuggeri
@@ -3250,7 +3258,6 @@ bilkarta
 bilkår
 bilkårist
 bilkö
-bilköp
 bill
 bill-2
 billast
@@ -5064,6 +5071,7 @@ debil
 debilitet
 debitera
 debitor
+debut
 debutant
 debutera
 december
@@ -5298,6 +5306,7 @@ det ena ger det andra
 det ena med det andra
 det går fler tåg
 det går tretton på dussinet av något
+det går upp en talgdank för någon
 det gör någon ont om någon
 det gör varken till eller från
 det har någon inte med att göra
@@ -5314,6 +5323,7 @@ det må vara hänt
 det naturliga urvalet
 det ska gudarna veta
 det skulle bara fattas
+det slår lock för örat/öronen
 det slår någon att ...
 det som göms i snö kommer upp i tö
 det suger i magen (på någon)
@@ -5392,7 +5402,9 @@ diatrib
 didaktisk
 diesel
 differens
+differential
 differentialkalkyl
+differentiell
 differentiera
 diffundera
 diffus
@@ -5540,6 +5552,7 @@ distribution
 distributiv
 distributör
 distrikt
+distriktsmästare
 disträ
 dit
 ditintills
@@ -6749,6 +6762,7 @@ eskimå
 eskort
 eskortera
 esplanad
+espresso
 ess
 essä
 estet
@@ -9376,6 +9390,7 @@ förstärkningsord
 förstäv
 förstå
 förstå sig på
+förstå vad klockan är slagen
 förståelig
 förståelse
 förstående
@@ -10893,6 +10908,7 @@ gå från klarhet till klarhet
 gå från ord till handling
 gå för sig
 gå förbi
+gå i barndom
 gå i bet
 gå i författning om något
 gå i giftastankar
@@ -11085,6 +11101,7 @@ ha något i bakfickan
 ha något i bakhuvudet
 ha något i kikaren
 ha något innanför pannbenet
+ha något på hjärtat
 ha något på sitt samvete
 ha något som i en liten ask
 ha något visst
@@ -11737,6 +11754,7 @@ holme
 holmgång
 holocaust
 hominid
+hommage
 homo
 homoadoption
 homofon
@@ -16930,6 +16948,7 @@ likör
 lila
 liljevit
 lilla julafton
+lillasyrra
 lillasyster
 lillaxel
 lillebror
@@ -17239,6 +17258,7 @@ lugnande
 lugnet före stormen
 lukt
 lukta
+lukta/smaka apa
 luktsalt
 lumbago
 lumbalpunktion
@@ -17900,6 +17920,7 @@ magsäck
 magsår
 mahogny
 maj
+majbrasa
 majonnäs
 major
 majoritet
@@ -18236,6 +18257,7 @@ med förlov sagt
 med förtvivlans mod
 med glimten i ögat
 med jämna mellanrum
+med lock och pock
 med namns nämnande
 med näbbar och klor
 med någons goda minne
@@ -18584,6 +18606,7 @@ minuthandel
 minutpris
 minutvisare
 minör
+mirabell
 mirakel
 misandri
 miserabel
@@ -19029,6 +19052,7 @@ munterhet
 muntlig
 muntra upp
 muntration
+munvig
 munväder
 mur
 mura
@@ -19156,6 +19180,7 @@ märkeskläder
 märklig
 märkning
 märkvärdig
+märr
 mässa
 mässdräkt
 mässing
@@ -19770,6 +19795,7 @@ norrbottning
 norrbottniska
 norrgök
 norrman
+norrsken
 norrut
 norröver
 norsk
@@ -20050,6 +20076,7 @@ någons/någots saga är all
 någons/någots svarta får
 någonsin
 någonstans
+någonting
 någonvart
 någorlunda
 något att bita i
@@ -20064,6 +20091,7 @@ några och
 nål
 nåldyna
 nålsöga
+nån
 nåt
 nåta
 nåväl
@@ -20823,6 +20851,7 @@ orka med
 orkan
 orkeslös
 orkester
+orkesterdike
 orkidé
 orm
 orma
@@ -20901,6 +20930,8 @@ oskriven
 oskyldig
 oskärad
 oskön
+osman
+osmansk
 osmidig
 osnygg
 osolidarisk
@@ -21889,6 +21920,7 @@ porträttera
 porträttlik
 porträttör
 porttelefon
+portugisisk örlogsman
 portvin
 portvinstå
 portör
@@ -22630,6 +22662,7 @@ rannsakning
 ranson
 ransonering
 ranta
+ranunkelväxt
 rapa
 rapa upp
 rapa ur sig
@@ -22821,6 +22854,7 @@ regnområde
 regnperiod
 regnskog
 regnskur
+regntid
 regn­blandad snö
 regress
 regression
@@ -23277,6 +23311,7 @@ romare
 romersk-katolsk
 romerska ringar
 romerska siffror
+romerskt bad
 rond
 rondell
 rop
@@ -23542,7 +23577,9 @@ räknedosa
 räkneord
 räkning
 räksmörgås
+räl
 rälig
+räls
 rälsbuss
 rämna
 ränker
@@ -23570,6 +23607,7 @@ rätta in sig
 rätta och packa sig efter något
 rätta sig
 rätta till
+rättegång
 rättegångsbiträde
 rättegångsfullmakt
 rätteligen
@@ -23579,6 +23617,7 @@ rättfram
 rättfärdig
 rättfärdiga
 rättfärdiga sig
+rättighet
 rättika
 rättmätig
 rättrogen
@@ -24602,6 +24641,7 @@ sinus
 sinuskurva
 sionism
 sionist
+sippa
 sippra
 sira
 sirap
@@ -25848,6 +25888,7 @@ smacka
 smak
 smaka
 smaka av
+smaka fågel
 smakbit
 smakfull
 smaklig
@@ -27812,6 +27853,7 @@ svartpeppar
 svartrost
 svartsjuk
 svartsjuka
+svartvit
 svassa
 svastika
 svavel
@@ -28548,6 +28590,7 @@ tandläkare
 tandprotes
 tandrot
 tandröta
+tandsköterska
 tandställning
 tandtekniker
 tandval
@@ -28735,6 +28778,7 @@ terminologi
 termisk
 termistor
 termometer
+terrarium
 terrass
 territoriell
 territorium
@@ -29001,6 +29045,7 @@ tillskapa
 tillskjuta
 tillskott
 tillskriva
+tillskynda
 tillskära
 tillskärare
 tillslag
@@ -29734,6 +29779,7 @@ träfri
 träförädling
 trägravyr
 träkarl
+träl
 träna
 träna sig
 tränare
@@ -29763,6 +29809,7 @@ träsnitt
 träsprit
 träta
 trätjära
+trävirke
 trävit
 tråd
 tråda dansen
@@ -29903,6 +29950,7 @@ turk
 turkfolk
 turkisk
 turkiska
+turkiskt bad
 turkmen
 turkmenisk
 turkmeniska
@@ -29996,6 +30044,7 @@ tvättbjörn
 tvättbräda
 tvättbräde
 tvättfat
+tvättkorg
 tvättlina
 tvättmaskin
 tvättmedel
@@ -32248,6 +32297,7 @@ visare
 visdom
 visdomsord
 vise
+visent
 vishet
 vision
 visit
@@ -32653,6 +32703,7 @@ värmepanna
 värmeplatta
 värmeskåp
 värmeslinga
+värmestrålning
 värmeutveckling
 värmeverk
 värn
@@ -32869,6 +32920,7 @@ webbplats
 webbportal
 webbserver
 webbsida
+weber
 weekend
 wellpapp
 weltervikt
@@ -32971,6 +33023,7 @@ yttre
 yttring
 ytvatten
 ytvidd
+yvas
 yxa
 yxskaft
 z
@@ -33281,6 +33334,7 @@ zygot
 ärvdabalk
 äsch
 äska
+äsping
 ässja
 äta
 äta upp
@@ -34270,4 +34324,4 @@ zygot
 övlig
 övning
 övningsbok
-övningsköra
+�
