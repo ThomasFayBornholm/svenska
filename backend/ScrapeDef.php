@@ -1,4 +1,5 @@
 <?php
+	$GLOBALS["debug"]=$_GET['debug'];
 	$word = $_GET['word'];	
 	$class = $_GET['class'];
 	// return an array to support casees where multiple entries exist
@@ -208,7 +209,9 @@
 		
 	$out['meta'] .= getPronunciation($def);	
 	$out['def'] = getDef($def, $defLines);		
-	$out['more'] = getMore($def);
+	$out['more'] = getMore($def);	
+		
+	
 	// No dashes in word keys 
 	//$word = str_replace("-","", $word);
 	$out['key'] = $word;
@@ -308,7 +311,7 @@
 			foreach($cykel as $el) {
 				
 				$utv = getClass($el, "utv",true);
-				if ($utv) {
+				if ($utv) {					
 					foreach ($utv as $match) {
 						$tmp = strip_tags($match);								
 						if (strlen($tmp) > 3) $out['found'] = $out['found'] . "○ " . $tmp . "<br>";
@@ -422,7 +425,6 @@
 		if ($pos1) {
 			// Always expect one definition
 			$out = $out . getMoreFields($raw, $pos1);
-			
 			// Loop for additional definitions
 			
 			$pos1 = strpos($raw, $start, $pos1 + $len + 1);
@@ -584,136 +586,120 @@
 		$out = "";
 		// End is the div close of "etymologiblock"		
 		$end = "etymologiblock";
-		
 		$pos2 = strpos($raw, $end, $pos1);
 		$end = "</div>";
 		$pos2 = strpos($raw, $end ,$pos2) + strlen($end);
 		// Work on single "lexem" block
-		$tmp = substr($raw,$pos1,$pos2-$pos1);						
-		$idioms = getIdioms($tmp);
-		// First set of compound words.
-		$compound = getClass($tmp, "mxblocklx");		
+		$tmp = substr($raw,$pos1,$pos2-$pos1);
+		$tmpArr = explode("\n",$tmp);		
+		$divs = array();
+		$tmp = array();		
 		
-		if ($compound) {		
-			$links = getLinkTexts($compound[0], '<a class="hvtag"');						
-			$out = "SSAMMANSÄTTN./AVLEDN.: ";
-			
-			$out = "SAMMANSÄTTN./AVLEDN.: " . $links . "<br>";
-		}
-
-		// Konstruction			
-		
-		$konst = getClass($tmp,"valens");				
-		if ($konst) {
-			$compound = strpos($konst[0],"expandvalens");
-			if ($compound) {
-				$out .= compoundConstruction($tmp);
-			} else {
-				$out .= simpleConstruction($tmp);
+		foreach($tmpArr as $l) {			
+			if (strlen($l) > 0) {
+				array_push($tmp,$l);
+			}
+			if (str_contains($l,"</div>")) {				
+				array_push($divs, $tmp);
+				$tmp = array();			
 			}
 		}
 		
-		$syntEx = getClass($tmp, "syntex", true);
-		$out .= listEl($syntEx, "EXEMPEL","; ");
-		if (strlen($out) > 0) $out .= "<br>";
 		
-		$cyclic = getCyclicFields($tmp);
-		if ($cyclic) $out .= $cyclic;
-		// Place idiom listing found earlier for the history meta data
-		foreach($idioms as $el) {
-			$out .= "<br> - <l>" . $el . "</l>";
-		}
-		if (count($idioms) > 0) $out .= "<br>";
-		$history = getClass($tmp, "etymologiblock");
-		
-		if ($history) {						
-			$fb = getClass($history[0],"fb", true);
-			$tmpHist = listEl($fb, "HISTORIK");
-			
-			$et = getClass($history[0],"et");			
-			if ($et) {			
-				$et = explode("\n", $et[0]);
-				$del = " ";
-				foreach ($et as $m) {	
-					if (str_contains($m, "hvtag")) {
-						$pos1 = strpos($m,">");
-						if ($pos1) {
-							$pos2 = strpos($m, "</a>",$pos1);
-							if ($pos2 && $pos2 > $pos1) {								
-								$tmpM = $del . "<l>" . substr($m,$pos1 + 1, $pos2 - $pos1 -1) . "</l>";								
-							}
-						}
-						$del = ", ";
-					} else if (str_contains($m, "hvord")) {						
-						$pos1 = strpos($m,">");
-						if ($pos1) {
-							$pos2 = strpos($m, "</span>",$pos1);
-							if ($pos2 && $pos2 > $pos1) {								
-								$tmpM = $del . substr($m,$pos1 + 1, $pos2 - $pos1 + 1);
-							}
-						}
-						$del = ", ";
+		$delim = "";
+		$out = "";
+		foreach($divs as $el) {
+			$line = "";			
+			foreach($el as $l) {				
+				$tmp = processLine($l);
+				if (strlen($tmp) > 0) {
+					if (strlen($line != 0) && (str_contains($tmp, "EXEMPEL:") || str_contains($tmp, "SAMMANSÄTTN."))) {
+						$line .= "\n" . $tmp;
 					} else {
-						$lastWasWord = false;
-						$tmpM = strip_tags($m);
-						$del = " ";
+						$line .= " " .$tmp;
 					}
-					$tmpHist .= $tmpM;
-				}
+				}								
+			}			
+			if (strlen($line) > 0) {
+				$out .= $delim . $line;
 			}
-			
-			$tmpHist = str_replace(";<br>", "; ",$tmpHist);
-			$out .= $tmpHist;
+			$delim = "\n";
 		}
 		
+		$out = str_replace("\n \n","\n", $out);
+				
 		return $out;
 	}
 	
-	function getIdioms($raw) {
-		$idioms = array();
-		$tmpArr = explode("\n",$raw);
-		foreach($tmpArr as $l) {
-			if (str_contains($l, "fras")) {			
-				$tmp = getClass($l, "fras",true);
-				if ($tmp) array_push($idioms, str_replace("<\/span>","",$tmp[0]));
+	function processLine($line) {		
+		$ret = "";
+		if (str_contains($line,'class="syntex">')) {
+			$ret = "EXEMPEL: " . strip_tags($line);
+		} else if (str_contains($line,'class="cbetydelse"')) {
+			$ret = "○ ";
+		} else if (str_contains($line,'class="utv"')) {
+			$ret = "{" . strip_tags($line) . "}";
+		} else if (str_contains($line,'class="def"')) {			
+			$ret = strip_tags($line);
+		} else if (str_contains($line,'class="mxblocklx"')) {
+			$ret = "SAMMANSÄTTN./AVLEDN.: " . getLinkTexts($line,'<a class="hvtag"');
+		} else if (str_contains($line,'class="fkomblock"')) {
+			$ret = "(" . strip_tags($line) . ")";
+		} else if (str_contains($line, 'class="valens"')) {
+			$ret = "KONSTRUKTION:\n";		
+		} else if (str_contains($line,'class="idiom"')) {
+			$ret = "- <lf>" . strip_tags($line) . "</lf>";				
+		} else if (str_contains($line,'class="fb"')) {
+			$ret = "HISTORIK: " . strip_tags($line);
+		} else if (str_contains($line,'class="et"')) {
+			$ret = strip_tags($line);
+		} else if (str_contains($line,'class="hvtag"')) {			
+			$link = splitOutLink($line);
+			if (strlen($link) > 0) {
+				$ret = "<l>" . $link . "</l>" . str_replace($link, "",strip_tags($line));
+			} else {
+				$ret = strip_tags($line);
 			}
-		}		
-		return $idioms;
-	}
-	
-	function simpleConstruction($tmp) {
-		$out = "";
-		$konst = getClass($tmp,"valens");		
-		if ($konst) {			
-			$out = $out . listEl($konst, "KONSTRUKTION");			
+		} else if (str_contains($line,'class="hv"')) {
+			$ret = strtoUpper(strip_tags($line));
 		}
-		$out = hackCapitals($out);
-		return $out;
+		
+		if (str_contains($line,'class="vt"')) {
+			if (str_contains($line,'class="expandvalens"') || $GLOBALS['kCount'] < 6) {
+				if (str_contains($line,'class="expandvalens"')) {					
+					$ret = " > " . hackCapitals(strip_tags($line)) . "\n";
+				} else {
+					if ($GLOBALS['kCount'] > 0) {
+						$ret = "\n ○ " . hackCapitals(strip_tags($line));			
+					} else {
+						$ret = " ○ " . hackCapitals(strip_tags($line));			
+					}
+				}
+				$GLOBALS['kCount']++;
+			}
+		} else {
+			$GLOBALS['kCount'] = 0;
+		}
+		
+		if ($GLOBALS["debug"]) {
+			if (strlen($ret) > 0) {
+				echo "consume: " . $line . "\n";
+				echo $ret . "\n";
+			} else {
+				echo "discard: " . $line . "\n";
+			}
+		}
+		return $ret;
 	}
 	
-	function compoundConstruction($tmp) {
-		//
-		$out = "";
-		$pos1 = strpos($tmp, "expandvalens");
-		if ($pos1) {		
-			$pos2 = strpos($tmp, "details",$pos1);			
-			if ($pos2 && $pos2 > $pos1) {				
-				$tmp = substr($tmp, $pos1, $pos2-$pos1);
-				$tmpArr = explode("\n", $tmp);
-				$del = "";
-				$out = "KONSTRUKTION: \n";
-				foreach($tmpArr as $el) {										
-					if (str_contains($el,'class="vt"') && !str_contains($el, "<summary>") && strlen($el) > 0) {
-						$out .= $del . strip_tags($el);						
-						$del = "\n";
-					}					
-				}
-				$out .= "\n";
-			}
-		}		
-		// Hack
-		$out = hackCapitals($out);		
-		return $out;
+	function splitOutLink($line) {
+		$start = strpos($line,"<a");
+		$end = strpos($line, "</a>");
+		if (($start === 0 || $start) && $end) {			
+			return strip_tags(substr($line,$start,$end-$start));
+		} else {
+			return "";
+		}
 	}
 	
 	function hackCapitals($in) {
@@ -723,6 +709,8 @@
 		$out = str_replace("några", "NÅGRA", $out);
 		$out = str_replace(" adj ", " ADJ ", $out);
 		$out = str_replace(" sats", " SATS", $out);
+		$out = str_replace("att+verb","att VERB", $out);
+		$out = str_replace("/sats", "/SATS", $out);
 		return $out;
 	}
 	
@@ -733,72 +721,8 @@
 	function error($in) {
 		$out["error"] = $in;
 		echo json_encode($out);
-		exit();
-	}
-	
-	function getCyclicFields($raw) {
-		
-		// This pattern can be repeated many times.
-		// Want to consume all repititions systematically
-		$out = "";
-		$start = '<div class="cykel">';
-		$end = '<div class="etymologiblock">';		
-		$pos1 = strpos($raw,$start);
-		while ($pos1) {
-			$pos2 = strpos($raw,$start,$pos1 + 1); // Range goes to next "cykel" div
-			if (!$pos2) $pos2 = strpos($raw,$end,$pos1 + 1); // Last "cykel" def extends to end of lemma
- 			if ($pos2) {
-				$tmp = substr($raw,$pos1, $pos2 - $pos1);				
-				
-				$point = getClass($tmp, "punkt", true);
-				
-				if ($point) {						
-					$out .= strip_tags($point[0]) . " ";
-				}
-				
-				$utv = getClass($tmp,"utv", true);
-				if ($utv) {
-					$out .= strip($utv);
-				}
-				
-				$context = getClass($tmp,"hkom", true);
-				$out .= strip($context, "[","] ");
-				
-				$grammar = getClass($tmp,"fkomblock", true);
-				$out .= strip($grammar,"(",") ");	
-				
-				$def = getClass($tmp,"def", true);				
-				if ($def) {					
-					$out .= strip($def) . "<br>";
-				} else {
-					$out .= "<br>";
-				}					
-				
-				$konst = getClass($tmp,"valens");				
-				if ($konst) {
-					$compound = strpos($konst[0],"expandvalens");
-					if ($compound) {
-						$out .= compoundConstruction($tmp);
-					} else {
-						$out .= simpleConstruction($tmp);
-					}
-				}
-				
-				$syntEx = getClass($tmp, "syntex", true);
-				$out .= listEl($syntEx, "EXEMPEL","; ") . "<br>";
-				
-				$links = getClass($tmp,"mxblocklx");
-				if ($links) {
-					foreach($links as $m) {
-						$out .= "SAMMANSÄTTN./AVLEDN.: " . getLinkTexts($m,'<a class="hvtag"') . "<br>";
-					}
-				}
-				
-			}
-			$pos1 = strpos($raw,$start,$pos1 + 1);
-		}		
-		return $out;				
-	}
+		exit(-1);
+	}	
 	
 	function strip($raw,$before="", $after=" ") {
 		$out = "";

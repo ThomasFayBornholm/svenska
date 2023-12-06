@@ -18,24 +18,11 @@
 	
 	$isCon = false;
 	$del = "";	
-	foreach($tmpArr as $l) {		
-		if (str_contains($l,"KONSTRUKTION:")) {						
-			$isCon = true;
-		} else if (str_contains($l,"EXEMPEL:")) {
-			$isCon = false;
-		} else if (str_contains($l,"HISTORIK:")) {
-			$isCon = false;
-		}
-		
-		if ($isCon) {
-			$out .= $del . "○ " . $l;
-		} else {
-			$out .= $del . $l;
-		}
+	foreach($tmpArr as $l) {	
+		$out .= $del . $l;
 		$del = "<br>";
 	}	
-	// Hack 
-	$out = str_replace("○ KONSTRUKTION:" ,"KONSTRUKTION: ",$out);
+	// Hack 	
 	$out = str_replace("○","&nbsp;&nbsp;○", $out);
 	echo json_encode($out);
 ?>
