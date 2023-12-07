@@ -1009,33 +1009,107 @@ function followLink(word) {
 	let oldINC = INC;
 }
 
+function defFromAll(word) {
+	trace("defFromAll(" + word + ")");
+	return new Promise((resolve) => {		
+		fetch('backend/getDefAll.php?word=' + word, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {		
+			var out = [];
+			out["class"] = "all";
+			out["match"] = json;
+			resolve(out);
+		});
+	});
+}
+
 function wordFromAll(word) {
-	trace("wordFromAll(" + word + ")");	
-	fetch('backend/getDefAll.php?word=' + word, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
+	defFromAll(word)
+	.then((result) => wordFromAll_getConj(result,word))
+	.then((result) => wordFromAll_FrasFuzzy(result, word))
+	.then((result) => {
+		if (result["match"].length > 0) {
+			setClass(result['class'], result['match']);
+		} else {
+			noMatch(word);
 		}
 	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		if (Object.keys(json).length > 0) {
-			let keys = Object.keys(json);	
-            // Can only resolve link if a unique match is found
-			if (keys.length === 1) {			
-                if (keys[0] != CLASS) setClass(keys[0]);
-                seekWordSingleClass(word);
-			}
-		} else {
-			frasMatchFuzzy(word);
-        }
-	})
 	.catch(error => {
-		log(error);
-	})
+		console.log(error);
+	})	
+}
+
+function wordFromAll_getConj(inp, word) {
+	trace("wordFromAll_getConj");
+	return new Promise((resolve) => {	
+		var out = [];
+		out['class'] = "all";
+		if (inp["match"].length > 0) {
+			// No further work required
+			// Simply pass through input results
+			out['match'] = inp['match'];
+			out['class'] = inp['class'];
+			resolve(out);
+		} else {	
+			fetch('backend/getConj.php?word=' + word + '&class=all', {
+				method: 'get',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(response => {
+				return response.json();
+			})
+			.then(json => {
+				out['match'] = json["word"];				
+				resolve(out)
+			})
+		}
+	});
+}
+
+function wordFromAll_FrasFuzzy(inp,word) {
+	trace("wordFromAll_FrasFuzzy");
+	return new Promise((resolve) => {	
+		var out = [];
+		out['class'] = "all";
+		if (inp['match'].length > 0) {
+			// No further work required
+			// Simply pass through input results
+			out['match'] = inp['match'];
+			out['class'] = inp['class'];			
+			resolve(out);
+		} else {
+			fetch('backend/fuzzyFrasMatch.php?key=' + word, {
+				method: 'get',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(response => {
+				return response.json();
+			})
+			.then(json => {				
+				if (json['match'].length > 0) { 					
+					out['match'] = json["match"];
+					out['class'] = "fraser";
+				} else {
+					out['match'] = "";
+				}
+				resolve(out)
+			})			
+		}
+	});
 }
 
 function getCompDef(meta, def) {
@@ -1515,30 +1589,8 @@ function seekWord(word, link = false, lastEnum = false) {
 								follow = true;
 							}													
 							// If no match in specific class useful to show matches in other classes.
-							if (!wordFromAll(word)) {
-									// If no match then try to find match in conjugations
-									fetch('backend/getConj.php?word=' + word + "&class=all", {
-										method: 'get',
-										mode: 'cors',
-										headers: {
-											'Content-Type': 'application/json'							
-										}
-									})
-									.then(response => {
-										return response.json()
-									})
-									.then(json => {
-										if (json["word"] != "") {									
-											setClass(json["class"],json["word"]);
-										} else {								
-											noMatch(word);
-										}
-									})
-									.catch(error => {
-										log(error);
-									})					
-								}
-							}
+							wordFromAll(word)									
+						}
 					})
 					.catch(error => {
 						log(error);
@@ -3640,31 +3692,6 @@ function fromEnglish() {
 		url = url.replace("<src>", src);
 		window.open(url);
 	}
-}
-
-function frasMatchFuzzy(key) {
-	trace("frasMatchFuzzy(" + key + ")");	
-	let res = false;
-	fetch('backend/fuzzyFrasMatch.php?key=' + key, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		if (json["match"].length > 0) {
-			setClass("fraser", json["match"]);
-		} else {
-			
-		}
-	})
-	.catch(error => {
-		log(error);
-	})	
 }
 </script>
 </html>

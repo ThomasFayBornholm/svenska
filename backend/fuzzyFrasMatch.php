@@ -2,6 +2,13 @@
     $key = $_GET["key"];
     $allWords = explode(" ", $key);
     $cnt = count($allWords);
+	$noPunc = str_replace("/"," ",$allWords);
+	$noPunc = str_replace(")","",$noPunc);
+	$noPunc = str_replace("(","",$noPunc);
+	$noPunc = str_replace(",","",$noPunc);
+	$noPunc = str_replace("?","",$noPunc);
+	$noPunc = str_replace("!","",$noPunc);
+	$allWords = $noPunc;
     $out["match"] = "";
     $out["status"] = "init";
 	$name = "fraser-only";
@@ -9,8 +16,13 @@
 	$words = preg_split("/\r\n|\r|\n/", $contents);
     foreach($words as $w) {
         $tmpCnt = 0;
-        $noSlashes = str_replace("/"," ",$w);
-        $matchArr = explode(" ", $noSlashes);
+        $noPunc = str_replace("/"," ",$w);
+		$noPunc = str_replace(")","",$noPunc);
+		$noPunc = str_replace("(","",$noPunc);
+		$noPunc = str_replace(",","",$noPunc);
+		$noPunc = str_replace("?","",$noPunc);
+		$noPunc = str_replace("!","",$noPunc);
+        $matchArr = explode(" ", $noPunc);
         foreach($allWords as $el) {
             if (in_array($el, $matchArr)) {
                 $tmpCnt++;
