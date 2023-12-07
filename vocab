@@ -157,11 +157,10 @@ document.addEventListener("visibilitychange", (event) => {
 });
 
 function startup() {
-	if (DEBUG) log("startup()")
+	if (DEBUG) log("startup()")	
+	randomWord();
 	wordCount();		
 	updateScore();
-	setClass("fraser");
-	randomWord();
 	focusInput();
 	setTimeout(setTargets,1000);
 	$('#iCntRegex').on("dblclick", resetFilter);
@@ -1697,10 +1696,11 @@ function drillDown() {
 
 function setClass(c, seek = "") {
     trace("setClass(" + c + ", seek = " + seek + ")");
+	LAST_CLASS = CLASS;
 	if (c === "all") clearRegexMode();	
 	if (DEBUG) log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	$('#iAux').html("");	
-	$('#iMeta').html("");	
+	$('#iMeta').html("");
 	//wordCount(); // Think it is better to do word count only when there is an addition to the listing. This line was a previous hack.
 	if (c != CLASS) {		
 		REGEX_WORDS = [];
@@ -1708,6 +1708,7 @@ function setClass(c, seek = "") {
 		$('#iCntRegex').html("");
 		$('#iDefDiv').css("display", "none");
 		$('#iWords').css("visibility", "visible");
+		$('#iMore').empty();
 		if (c != "all") {
 			$('#iDefProgContainer').css("visibility","visible");
 		} else {
@@ -1717,12 +1718,11 @@ function setClass(c, seek = "") {
 		INC = 0;
 		SCROLL_INC=-1;
 		setN_CUR();	
-	} else {
-		getWords();
 	}
 	if (seek.length > 0) {
 		seekWordSingleClass(seek, LAST_DEF_ENUM);
 	} else {
+		INC = 0;
 		getWords();
 	}
 	updateScore();
@@ -1730,6 +1730,7 @@ function setClass(c, seek = "") {
 
 function getLastWord() {
 	trace("getLastWord()");		
+	console.log(LAST_CLASS);
 	if (LAST_WORD.length > 0) {		
 		let tmp = CLASS;
 		setClass(LAST_CLASS,LAST_WORD);		
@@ -2958,7 +2959,7 @@ function getMore(ind) {
 	})
 	.then(json => {
 		if (json.length === 0) {
-			$('iMoreTxt').html("");
+			$('#iMoreTxt').html("");
 		} else {												
 			// Add links
 			moreArr = json.split("<br>");
@@ -2982,7 +2983,7 @@ function getMore(ind) {
 			// Dynamise links
 			tmp = tmp.replaceAll("<l>","<span onclick=followLink(this.innerText) onmouseover=highlight(this,event)><b>");
 			tmp = tmp.replaceAll("</l>","</b></span>");
-			tmp = tmp.replaceAll("<lf>","<span class='fraser' onclick=followLink(this.innerText,'fraser') onmouseover=highlight(this,event)><b>");
+			tmp = tmp.replaceAll("<lf>","<span class='fraser' onclick=setClass('fraser',this.innerText) onmouseover=highlight(this,event)><b>");
 			tmp = tmp.replaceAll("</lf>","</b></span>");
 			$('#iMoreTxt').html(tmp);
 			let moreHeight = parseInt($('#iMoreTxt').css("height").replace("px",""));
@@ -3205,7 +3206,7 @@ function changeScore(ev,diff) {
 function randomWord() {
 	// Hash is to prevent caching of the url by the browser. Server ignores the hash		
 	
-	fetch('backend/randomWord.php?class=' + CLASS + '&hash=' + makeHash(), {
+	fetch('backend/randomWord.php?class=fraser&hash=' + makeHash(), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3216,11 +3217,7 @@ function randomWord() {
 		return response.json();
 	})
 	.then(json => {
-		if (CLASS === "all") { 
-			seekWord(json["word"]);
-		} else {
-			seekWordSingleClass(json["word"]);
-		}
+		setClass("all", json["word"]);		
 	})
 	.catch(error => {
 		log(error);
