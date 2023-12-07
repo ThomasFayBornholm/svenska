@@ -704,6 +704,7 @@
 	
 	function hackCapitals($in) {
 		$out = str_replace("någonstans", "NÅGONSTANS", $in);
+		$out = str_replace("någons", "NÅGONS", $out);
 		$out = str_replace("någon", "NÅGON", $out);
 		$out = str_replace("något", "NÅGOT", $out);
 		$out = str_replace("några", "NÅGRA", $out);
