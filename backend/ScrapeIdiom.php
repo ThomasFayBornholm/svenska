@@ -143,7 +143,7 @@
 		
 		if (strlen($ref) > 0) $fullDef .= "SE " . $ref;
 		if (strlen($def) > 0) $fullDef .= "● " . $def;
-		if (strlen($deft) > 0) $fullDef .= "{" . $deft . "}";
+		if (strlen($deft) > 0) $fullDef .= " {" . $deft . "}";
 		if (strlen($ex) > 0) $fullDef .= ": " . $ex;
 		$end = strpos($el,"</span>");
 		$key = substr($el,0,$end);
