@@ -100,7 +100,7 @@
 	$out["word"]="";
 	$GLOBALS["replacements"] = array("eller ",", komparativ","bestämd form ",", superlativ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>","genitiv ","dativ ");	
 
-	foreach ($classArr as $el) {		
+	foreach ($classArr as $el) {	
 		$name = $el . $trail;
 		// Get word list from "-only" listing
 		$inList = $path . $el . "-only";
@@ -112,7 +112,7 @@
 		$dict = json_decode($contentsMeta, JSON_UNESCAPED_UNICODE);
 		if ($el === "verb" && $nFind > 1) {
 			$restList = explode(" ", $rest);			
-			foreach($wordList as $key) {				
+			foreach($wordList as $key) {							
 				$conjugations = getConjugations($key, $dict);					
 				if (containsWord($wordRoot, $conjugations)) {												
 					if (containsAllWords($restList, $conjugations)) {
@@ -136,16 +136,7 @@
 					echo json_encode($out);
 					return;
 				}
-			}
-			/*
-		} else if ($el === "substantiv_en") {
-			foreach($wordList as $key) {
-				echo $key . "<br>";
-				$conjugations = getConjugations($key, $dict);
-				var_dump($conjugations);
-				echo "<br>";
-			}
-			*/
+			}				
 		} else {			
 			foreach($wordList as $key) {
 				$conjugations = getConjugations($key, $dict);					

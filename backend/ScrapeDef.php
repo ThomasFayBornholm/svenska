@@ -443,6 +443,7 @@
 		$out = str_replace("<br><br>", "<br>",$out);			
 		$out = str_replace("<br><br>", "<br>",$out);
 		$out = str_replace("EXEMPEL: ; ","EXEMPEL: ",$out); 
+		$out = str_replace("} KONSTRUKTION", "}<br>KONSTRUKTION",$out);
 		if (strlen($out) === 0) {
 			error("Failed to get 'more' information");
 		} else {
