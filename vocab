@@ -43,14 +43,14 @@
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/Mute.png" id="iToggleSounds" onclick="toggleSounds()" onmouseover="highlight(this,event)"></img>
-		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" onmouseover="highlight(this,event)">
+		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()">
 		<div id="dialog" title="Basic dialog">
 			<p id="iSummary" class="summary"></p>
 		</div>
 	</form>		
 </div>
 
-<div id="iInfo" class="firstColumn" onwheel="scrollView(event)" onclick="clickMiddle(event)" oncontextmenu="clickMiddle(event)">
+<div id="iInfo" class="firstColumn" onwheel="scrollView(event)" oncontextmenu="clickMiddle(event)">
 
 	<div id="iDefDiv">
 		 <textarea  class="defBox" id="iDefText" onkeydown="defEntry(event)"></textarea>			 
@@ -159,6 +159,7 @@ document.addEventListener("visibilitychange", (event) => {
 
 function startup() {
 	if (DEBUG) log("startup()")	
+	// loop all of word class	
 	randomWord();
 	wordCount();		
 	updateScore();
@@ -274,8 +275,8 @@ function putMoreMany(moreArr, cur) {
 	})
 }
 
-function addDef(key, meta, def, more) {
-	if (DEBUG) log("addDef(meta,def,more)");
+function addDef(key, meta, def, more, fast = false) {
+	trace("addDef(meta,def,more)");
 	$('#iMeta').html("adding... '<b>" + key + "</b>'");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -299,9 +300,9 @@ function addDef(key, meta, def, more) {
 	})
 	.then(json => {
 		if (CLASS === "fraser") $('#iInput').val(key);
-		updateScore();
+		 if (!fast) updateScore();
 		CUR_DEF_ENUM = 1;
-		setTimeout(updateDef(),2000);
+		if (!fast) setTimeout(updateDef(),2000);
 	})
 	.catch(error => {
 		log(error);
@@ -814,7 +815,6 @@ function lookupWord(el,onlyLocal,inline) {
 						$('#iWords').css("visibility", "hidden");
 					}
 					
-					setTimeout(getMore,1500,CUR_DEF_ENUM);
 				} else {					
 					$('#iParDef').html("");
 					$('#iDefDiv').css("display", "block");
@@ -1317,7 +1317,7 @@ function newInputWrapper(e) {
 	e.preventDefault();
 	let word = getInput();
 	if (word.length === 0) {
-		randomWord();
+		getMore(CUR_DEF_ENUM);
 		return;
 	}
 	// Navigation only to a given word class.
@@ -1616,181 +1616,6 @@ function getWordConj(word) {
 		})
 	})
 }
-
-/*
-function seekWord(word, link = false, lastEnum = false) {			
-	if (DEBUG) log("seekWord(word, link = false), word = " + word + ", link = " + link);
-	//LAST_DEF_ENUM = CUR_DEF_ENUM; // Don't think it is a problem to set this immediately. If no matches found then no harm done. It will be overwritten on next search			
-	CUR_DEF_ENUM = 1; // Always show definition #1 for a newly found word
-	LAST_CLASS = CLASS;
-	// Cleanup
-	$('#iAux').html("");	
-	$('#iMoreTxt').html("");	
-		
-	// Any user supplied breaks are discarded.
-	word = word.replaceAll("­","");	
-	REGEX_WORDS = [];
-	// Strip trailing white space	
-	while (word.substr(word.length-1) === " ") {
-		word = word.substr(0,word.length-1)
-	}
-	// (Nearly) Always regex for phrases
-	if (CLASS === "fraser") {
-		if (REGEX_MODE) {		
-			word = word.replaceAll("/","\\/");
-			word = word.replaceAll("(","\\(");
-			word = word.replaceAll(")","\\)");
-		}
-	}
-	$('#iCntRegex').html("");		
-	scoreMatch = word.indexOf("redwords") != -1 || word.indexOf("bluewords") != - 1;
-	if (REGEX_MODE) {				
-		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json()
-		})
-		.then(json => {
-			REGEX_WORDS = json["matches"];			
-			N_REGEX = json["count"];			
-			$('#iScore').html("");
-			$('#iCntRegex').html("*" + N_REGEX + "*");			
-			if (N_REGEX > 0) {
-				INC = 0;
-				SCROLL_INC = -1;				
-				getWords(INC)
-			} else {
-				for (i = 0; i < 8; i++) {
-					id = "#w" + i;
-					$(id).html("")					
-				}				
-			}
-		})
-		.catch(error => {
-			log(error);
-		})
-	} else if (scoreMatch) {
-		let score = 0;
-		if (word === "bluewords") score = 1;		
-		fetch('backend/scoreMatch.php?class=' + CLASS + '&score=' + score, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {
-			REGEX_WORDS = json["matches"];			
-			N_REGEX = json["cnt"];			
-			$('#iScore').html("");
-			$('#iCntRegex').html("****" + N_REGEX + "****");			
-			if (N_REGEX > 0) {
-				INC = 0;
-				SCROLL_INC = -1;
-				getWords(INC)
-			}
-		})
-		.catch(error => {
-			log(error);
-		})
-	} else {
-		REGEX_WORDS = [];
-		N_REGEX = 0;
-				
-		if (word === '') {
-			word = LAST_WORD;
-			$('#iInput').val(word);
-			setClass(LAST_CLASS);
-		}
-		if (!link) {
-			//LAST_WORD = CUR_WORD;
-		}
-		setCUR_WORD(word);
-		// Special case of prefixes and suffices
-		if (word.substr(word.length-1) === "-") {
-			word = word.substr(0,word.length-1);
-			setClass("förled");
-		} else if (word.slice(0,1) === "-") {
-			word = word.substr(1);
-			setClass("slutled");
-		}
-		if (word.length > 0) {
-			fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
-				method: 'get',
-				mode: 'cors',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {
-				return response.json();
-			})
-			.then(json => {
-				if (json > -1) {
-					// Put selected word in the middle of the word collection				
-					INC = json - 3;
-					let ind = 3;
-					let mid = N_INC/2;
-					if (json < mid - 1) {					
-						INC = 0;
-						ind = json;
-					}
-					getWords(ind);
-				} else {
-					if (CLASS === "fraser") {
-						regexSearch(word);
-						return;
-					}					
-					// If no exact match then check for matching conjugations within class
-					fetch('backend/getConj.php?word=' + word + '&class=' + CLASS, {
-						method: 'get',
-						mode: 'cors',
-						headers: {
-							'Content-Type': 'application/json'
-						}
-					})
-					.then(response => {
-						return response.json()
-					})
-					.then(json => {
-						let res = json["word"];							
-						if (res != "") {								
-							setClass(json["class"],res);
-						} else {
-							let follow = false;
-							if (word.indexOf("\\") != -1 || word.indexOf("<") != -1) {
-								word = word.replaceAll("\\","");
-								word = word.replaceAll("<","");
-								follow = true;
-							}													
-							// If no match in specific class useful to show matches in other classes.
-							wordFromAll(word)									
-						}
-					})
-					.catch(error => {
-						log(error);
-					})										
-				}
-			})
-			.catch(error => {
-				log(error);
-			})
-		}
-	}
-	if (DEBUG) log("END seekWord(); word = " + word + " -> INC = " + INC);			
-	focusInput()
-}
-*/
-
-
 
 function noMatch(word) {
 	$('#iParDef').html("No match in any word class: <b>" + word + "</b>");	
@@ -3120,6 +2945,7 @@ function keyForUser(key) {
 }
 
 function getMore(ind) {		
+	trace("getMore()");
 	if (CLASS === "fraser") return;
 	if (!isNumeric(ind)) {
 		log("getMore(ind), ind is NaN");
@@ -3291,7 +3117,7 @@ function navDef(ev) {
 		}
 		def = getDefInd(CUR_DEF_ENUM);
 		displayDef(def,CUR_WORD);
-		setTimeout(getMore,1500,CUR_DEF_ENUM);
+		if ($('#iMoreText').html().length > 0) getMore(CUR_DEF_ENUM);
 	}	
 }
 
@@ -3595,7 +3421,7 @@ function round(dec, places) {
 }
 
 function fetchDef() {
-	if (DEBUG) log("fetchDef()");
+	trace("fetchDef()");
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -3876,6 +3702,69 @@ function fromEnglish() {
 
 function hideTitle() {
 	$('#iDivTitle').css("display", "none");
+}
+
+function scrapeWholeClass() {
+	let allWords = [];
+	fetch('backend/getWords.php?start=0&num=20000&class=' + CLASS, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		allWords = json;
+		fetchDefWords(allWords, 0)
+	})		
+}
+
+function fetchDefWords(allWords,ind) {
+	trace("fetchDefWord()");		
+	let word = allWords[ind];
+	let backend = 'backend/ScrapeDef.php?word=' + word + '&class=' + CLASS + '&debug=0';
+	fetch(backend, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {		
+		if (! json.hasOwnProperty("error")) {
+			let url = 'backend/addDef.php?word=' + word + '&meta=&def=&more=' + json["more"] + '&class=' + CLASS; 
+			fetch(url, {
+				method: 'get',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(response => {
+				let upper = allWords.length - 1
+				if (ind > upper) {
+					return;
+				} else {
+					return fetchDefWords(allWords,ind+1);
+				}
+			})
+		} else {
+			$('#iMeta').html("Failed to find match");
+			let upper = allWords.length - 1
+			if (ind >= upper) {
+				return;
+			} else {
+				return fetchDefWords(allWords,ind+1);
+			}
+		}		
+		
+	})
 }
 
 </script>

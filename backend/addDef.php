@@ -1,6 +1,6 @@
 <?php
 	$class = $_GET['class'];
-	$word = $_GET['word'];
+	$word = $_GET['word'];	
 	// No characters that are not visible to user to be present in storage key
 	$word = str_replace("­","",$word);
 	$meta = $_GET['meta'];
@@ -19,28 +19,31 @@
 	fclose($infile);
 	
 	$outfile = fopen($fileName, 'w') or die("Could not open file: " . $fileName);
-	$word = $_GET['word'];
 	
 	
 	$elements = preg_split("/\r\n|\r|\n/", $contents);
-	$out = "";
+	$out = "";	
 	$placed = false;
-	$del = "";	
-	foreach($elements as $w) {
+	$del = "";
+	// First in list case	
+	
+	
+	$del = "";
+	foreach($elements as $w) {				
 		// Insertion point
-		if ($w === $word) {
-			$out = $out . $del . $word;
+		if ($w === $word) {			
+			$out .= $del . $word;			
 			$placed = true;
 		} else if ($w > $word && !$placed) {
-			$out = $out . $del . $word;
-			$del = "\n";
-			$out = $out . $del . $w;
+			$out .= $del . $word;				
+			$out .= $del . $w;
 			$placed = true;
-		} else {
-			$out = $out . $del . $w;
-			$del = "\n";
+		} else {				
+			$out .= $del . $w;				
 		}
+		$del = "\n";
 	}
+	
 	// For case where word is last in alphabetical sorting
 	if ($placed === false) {
 		$out = $out . $del . $word;

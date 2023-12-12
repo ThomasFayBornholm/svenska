@@ -7,7 +7,6 @@ def usage():
 try:
     dictSource = sys.argv[1]
     key = sys.argv[2]
-    print(key)
 except:
     usage()
 
@@ -26,7 +25,8 @@ except KeyError:
             d = ""
             for key in jsonDict:                
                 val = jsonDict[key]                
-                outfile.write(d + key + " -> " + str(val))                
+                outfile.write(d + key + " -> " + str(val))              
                 d = "\n"
+            print(len(jsonDict))
     else:
         print("Key : " + key + " is not found in source")
