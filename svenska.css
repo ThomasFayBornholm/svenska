@@ -84,8 +84,8 @@ h2 {
 .b2 {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	height: 100px;
-	width: 100px;
+	height: 64px;
+	width: 64px;
 	font-size: 32px;
 	vertical-align: bottom;
 }
@@ -127,15 +127,13 @@ h2 {
 	height: 800px;
 }
 .firstColumn {
-	width: 34%;
+	width: 60%;
 	float: left;
-	margin-left: 1%;
+	margin-left: 25%;
 }
 .secondColumn {
-	width: 50%;
-	float: left;
-	margin-right: 5%;
-	margin-top: 1%;
+	width: 10%;
+	float: right;	
 }
 .titleLeft {
 	width: 12%;
@@ -155,11 +153,11 @@ h2 {
 	margin-top: 1%;
 }
 .counts {
-	font-size: 36pt;
-	margin-left: 10pt;
+	font-size: 12pt;
+	margin-left: -5%;
 }
 .countLeft {
-	margin-right: 18%;
+	margin-right: 30%;
 }
 .countTotal {
 	margin-right: 21%;
@@ -168,15 +166,15 @@ h2 {
 	display: inline
 }
 .pDef {
-	font-size: 24px;
-	margin-top: 1%;
+	font-size: 20px;
+	margin-top: 0%;
 	margin-left: 2%;
 	width: 100%;	
 }
 
 .pMore {
-	font-size: 24px;
-	margin-top: 1%;
+	font-size: 20px;
+	margin-top: 0%;
 	margin-left: 2%;
 	width: 100%;
 }
@@ -247,9 +245,9 @@ label {
 }
 .fmtWords {
 	margin-left: 5%;
-	margin-top: 2%;
+	margin-top: 20%;
 	margin-bottom: 0%;
-	font-size: 36px;
+	font-size: 14pt;
 	/* color: royalblue; */
 }
 .fmtAuxClass {	
@@ -262,9 +260,9 @@ label {
 
 .inputSearch {
 	background: beige;
-	font-size: 48pt;
+	font-size: 32pt;
 	width: 32%;
-	height: 80pt;
+	height: 50pt;
 	margin-right: 1%;	
 	border-width: thick;
 }
