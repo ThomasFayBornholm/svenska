@@ -318,7 +318,6 @@ avrusta
 avräkna
 avrätta
 avråda
-avsaknad
 avsalta
 avse
 avsegla
@@ -1355,6 +1354,7 @@ falla igenom
 falla in
 falla undan
 falla ut
+falna
 falsa
 fantisera
 fara
@@ -3351,7 +3351,6 @@ lista sig
 lista sig till
 lista ut
 lita
-livesända
 ljuda
 ljuga
 ljusna
@@ -3702,6 +3701,7 @@ narra av
 narra i
 narras
 nationalisera
+nationalskald
 navigera
 navla av
 nedbringa
@@ -3745,6 +3745,7 @@ normalisera
 normera
 nosa
 nosa sig
+nota
 notera
 nubba
 nudda
@@ -3763,6 +3764,7 @@ nyskapa
 nysta
 nysta av
 nysta upp
+nytta
 nyttja
 nämna
 näpsa
@@ -3783,6 +3785,7 @@ obducera
 obs
 observera
 obstruera
+ockra
 ockupera
 odla
 offentliggöra
@@ -3984,6 +3987,7 @@ plissera
 plita
 plocka
 ploga
+ploja
 plombera
 plugga
 plundra
@@ -4105,6 +4109,7 @@ påbjuda
 påbörja
 pågå
 påkalla
+påkörning
 påla
 påminna
 påpeka
@@ -4285,6 +4290,7 @@ rivalisera
 ro
 roa
 roa sig
+rocka
 roffa
 rollsätta
 ropa
@@ -4414,6 +4420,7 @@ salta
 saluföra
 samarbeta
 sambeskatta
+sambo
 samköra
 samla
 samla ihop
@@ -4517,6 +4524,7 @@ simulera
 simultantolka
 sina
 singla
+sippa
 sippra
 sira
 sitta
@@ -4598,6 +4606,7 @@ skjuta upp
 skjuta över
 skjutsa
 skjuva
+sko
 skoja
 skoja till sig
 skola
@@ -4635,6 +4644,7 @@ skrocka
 skrodera
 skrolla
 skrota
+skrotning
 skrumpna
 skruva
 skruva sig
@@ -4704,6 +4714,7 @@ skärpa in
 skärpa sig
 skärra
 skärskåda
+skärva
 skåda
 skåla
 skåra
@@ -4722,6 +4733,7 @@ slaka
 slakna
 slakta
 slamma
+slamning
 slamra
 slantsingla
 slappa
@@ -4803,6 +4815,7 @@ slå över
 slåss
 slöa
 slöa till
+slöja
 slösa
 smacka
 smaka
@@ -4826,6 +4839,7 @@ smitta av sig
 smocka
 sms:a
 smuggla
+smula
 smussla
 smutsa
 smutsa ner
@@ -4866,6 +4880,7 @@ snagga
 snagga sig
 snappa
 snappa upp
+snara
 snarka
 snaska
 snatta
@@ -4921,6 +4936,7 @@ sona
 sondera
 sopa
 sopa till
+sophämtning
 sorla
 sortera
 sota
@@ -4951,6 +4967,7 @@ spela upp
 spela ut
 spela över
 spendera
+speta
 spetsa till
 spetsa till sig
 spexa
@@ -5100,6 +5117,7 @@ strida
 stridulera
 strila
 strimla
+strimma
 stripa
 strippa
 strosa
@@ -5115,6 +5133,7 @@ stryka sig
 stryka under
 stryka ut
 stryka över
+strykning
 strypa
 sträcka
 sträcka sig
@@ -5130,6 +5149,7 @@ stubba
 studera
 studsa
 stuka
+stukning
 stunda
 stupa
 stuva
@@ -5219,6 +5239,7 @@ suga av
 suga i
 suga upp
 suga ut
+sugning
 sukta
 sula
 summa
@@ -5242,6 +5263,7 @@ svassa
 svavla
 sveda
 svedja
+svedjemark
 svepa
 svetsa
 svettas
@@ -5474,6 +5496,7 @@ tillstyrka
 tillstå
 tillsätta
 tilltala
+tilltro
 tillträda
 tilltvinga sig
 tillvarata
@@ -5542,6 +5565,7 @@ torka
 torka in
 torka inne
 torka ut
+torktrasa
 torktumla
 tornera
 torska
@@ -5925,6 +5949,7 @@ utjämna
 utklassa
 utkomma
 utkommendera
+utkora
 utkristallisera
 utkräva
 utkvittera
@@ -6065,6 +6090,8 @@ varva ner
 varva upp
 vaska
 vattenfylla
+vattenskopa
+vattenså
 vattna
 vattna sig
 vattna ur
@@ -6175,7 +6202,9 @@ vräka
 vräka i sig
 vräka sig
 vräka ur sig
+vräkning
 vråla
+vurma
 vurpa
 väcka
 väcka upp
@@ -6376,6 +6405,7 @@ zooma ut
 återhålla
 återinföra
 återkalla
+återkallelse
 återkasta
 återkasta
 återklinga
@@ -6405,6 +6435,7 @@ zooma ut
 återvända
 åtfölja
 åtgärda
+åtgå
 åtlyda
 åtnjuta
 åtnöja sig
@@ -6476,6 +6507,7 @@ zooma ut
 överhöra
 överila sig
 överklaga
+överkompensera
 överlagra
 överlappa
 överleva

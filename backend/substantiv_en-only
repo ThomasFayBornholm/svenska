@@ -1,5 +1,10 @@
 A-aktie
 A-nivå
+AP-fond
+AV-central
+B-aktie
+B-film
+B-nivå
 IQ
 U
 abakus
@@ -432,7 +437,6 @@ ans
 ansamling
 ansats
 ansiktsbjudning
-ansiktsblind
 ansiktsblindhet
 ansiktsigenkänning
 ansiktslyftning
@@ -696,6 +700,7 @@ assignation
 assistent
 association
 assonans
+assurans
 asteni
 asterisk
 asteroid
@@ -1945,6 +1950,7 @@ bosnier
 bosniska
 boss
 bostad
+bostadsbrist
 bostadskö
 bostadslägenhet
 bostadsmarknad
@@ -2036,6 +2042,7 @@ bridge
 brigad
 brigadgeneral
 brikett
+brink
 brisad
 brissling
 brist
@@ -2193,6 +2200,7 @@ bunke
 bunsenbrännare
 bunt
 bur
+burfågel
 burk
 burka
 burköppnare
@@ -3238,6 +3246,7 @@ elorgel
 elsparkcykel
 elspis
 elström
+elvärme
 embryolog
 embryologi
 emeritus
@@ -3815,6 +3824,7 @@ fläckfeber
 fläcktyfus
 fläder
 fläkt
+fläns
 flärpa
 fläskfilé
 fläskfärs
@@ -7792,6 +7802,7 @@ källarfirma
 källhänvisning
 källkod
 källkritik
+källskatt
 kämpe
 kändis
 känga
@@ -8729,6 +8740,7 @@ matservis
 matsked
 matskribent
 matsmältning
+matstrejk
 matstrupe
 matsäck
 matt
@@ -9230,6 +9242,7 @@ mysticism
 myt
 mytologi
 mäklare
+mäld
 mängd
 mängdlära
 människa
@@ -10453,6 +10466,7 @@ polityr
 pollenallergi
 pollenallergiker
 pollenanalys
+pollenslang
 pollett
 polotröja
 polska
@@ -10736,6 +10750,7 @@ pundare
 pung
 pungbjörn
 pungdjävul
+punkfrisyr
 punkt
 punktering
 punktion
@@ -10893,7 +10908,6 @@ reaktor
 realisation
 realitet
 reality-tv
-realitytv
 realpolitik
 realtid
 reassurans
@@ -10903,6 +10917,7 @@ recension
 reception
 receptionist
 recession
+reciprocitet
 reda
 redaktion
 redaktionssekreterare
@@ -10985,7 +11000,6 @@ rem-2
 REM-sömn
 remake
 remanens
-remdrift
 remi
 reminiscens
 remiss
@@ -13123,6 +13137,7 @@ storskog
 storslalom
 storslägga
 storstad
+storstrejk
 storstuga
 storväst
 story
@@ -13202,7 +13217,6 @@ stråkinstrument
 strålbehandling
 strålblomma
 stråle
-strålglans
 strålkastare
 strålning
 strålsjuka
@@ -13453,6 +13467,7 @@ syl
 sylf
 syll
 sylt
+syltburk
 symaskin
 symaskinsolja
 symbios
@@ -14512,6 +14527,7 @@ tår
 tårkanal
 tårkörtel
 tårta
+tårtbotten
 tårtspade
 tåspets
 tête-à-tête
@@ -14548,6 +14564,7 @@ under
 underarm
 underart
 underavdelning
+underbemanning
 underbädd
 underdrift
 undergång
