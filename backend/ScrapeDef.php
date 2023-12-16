@@ -442,8 +442,11 @@
 		// Ugly hack to fix empty lines
 		$out = str_replace("<br><br>", "<br>",$out);			
 		$out = str_replace("<br><br>", "<br>",$out);
-		$out = str_replace("EXEMPEL: ; ","EXEMPEL: ",$out); 
-		$out = str_replace("} KONSTRUKTION", "}<br>KONSTRUKTION",$out);
+		$out = str_replace("EXEMPEL: ; ","EXEMPEL: ",$out); 		
+		$out = str_replace(" KONSTRUKTION", "<br>KONSTRUKTION",$out);
+		$out = str_replace(" >", "<br>>",$out);
+		$out = str_replace("<br><br>", "<br>",$out);		
+		$out = str_replace("<br> <br>", "<br>",$out);
 		if (strlen($out) === 0) {
 			error("Failed to get 'more' information");
 		} else {

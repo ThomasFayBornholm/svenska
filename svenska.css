@@ -293,4 +293,10 @@ label {
 
 .fraser {
 	color: darkblue;
+	cursor: pointer;
+}
+
+.link {
+	font-weight: bold;
+	cursor: pointer;
 }

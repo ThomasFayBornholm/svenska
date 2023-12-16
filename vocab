@@ -58,14 +58,11 @@
 		 <button class="putDefThree" id="iPut0" onclick="putDef('', 0)">0</button>			 			 
 		 <button class="putDefThree" id="iPut1" onclick="putDef('', 1)">Put (1)</button>			 			 
 		 <button class="putDefThree" id="iPut2" onclick="putDef('', 2)">2</button>			 			 
-		 </div>
-		 <div id="iDivMore">		
-		 <button class="putDef" onclick="putMore()" id="iPutMore">Put More Information</button>		 
-		 </div>
-	</div>			
+		 </div>		
+	</div>				
 	<p class="pDef" id="iMeta"</p>					
 	<p class="pDef" id="iParDef" ondblclick="clearDef()"></p>					
-	<p class="pMore" id="iMoreTxt"</p>					
+	<p class="pMore" id="iMoreText"</p>					
 	<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 </div>	
 <div id="iWordBox" class="secondColumn" onwheel="scrollWords(event)" onclick="clearDef()">
@@ -491,7 +488,7 @@ function retreat(e) {
 	getWords(INC, -1)
 }
 
-function getWords(ind = INC, pos = 3) {	
+function getWords(ind = INC, pos = 3, showMore = false) {	
 	// Ind is used to highlight and lookup a given word index from the returned list
 	// Global INC is used to get the starting index of the returned list		
 	trace("getWords");		
@@ -532,7 +529,7 @@ function getWords(ind = INC, pos = 3) {
 					list += "|" + json[i];
 				}
 				var tmpOff;
-				displayWords(list,pos)
+				displayWords(list,pos, showMore)
 			}
 		})
 		.catch(error => {
@@ -555,7 +552,7 @@ function moveSelected() {
 }
 
 // Create listing of words for display on left side of screen
-function displayWords(list,ind) {
+function displayWords(list,ind,showMore = false) {
 	if (DEBUG) log("displayWords(), list = " + list + ", ind = " + ind)
 	let out = ""
 	list = list.replaceAll("  "," ");	
@@ -604,7 +601,7 @@ function displayWords(list,ind) {
 			let el = document.getElementById("w" + ind);
 			if (el)  {
 				//setCUR_WORD(el.innerText);
-				lookupWord(el,false,true);
+				lookupWord(el,false,true,showMore);
 			}
 		}				
 	})
@@ -747,12 +744,13 @@ function showWordMatches(follow) {
 	LAST_OBJ = el;
 }
 
-function lookupWord(el,onlyLocal,inline) {	
+function lookupWord(el,onlyLocal,inline, showMore=false) {	
+	console.log(INC);
 	trace("lookupWord()");
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
 	// Cleanup
-	$('#iMoreTxt').html("");
+	$('#iMoreText').html("");
 	$('#iMeta').html("");
 
 	if (el) {
@@ -776,8 +774,7 @@ function lookupWord(el,onlyLocal,inline) {
 		}
 		CUR_WORD=word;
 		LAST_OBJ = el;
-		
-		if (DEBUG) log("lookupWord(), CUR_WORD = " + CUR_WORD);
+				
 		scroll_inc = el.id.replace("w","");
 		if (scroll_inc > -1 && scroll_inc < N_INC) {
 			SCROLL_INC = scroll_inc; 
@@ -819,6 +816,7 @@ function lookupWord(el,onlyLocal,inline) {
 					$('#iParDef').html("");
 					$('#iDefDiv').css("display", "block");
 				}
+				if (showMore) getMore(CUR_DEF_ENUM);
 			})
 			.catch(error => {
 				log(error)
@@ -1317,7 +1315,11 @@ function newInputWrapper(e) {
 	e.preventDefault();
 	let word = getInput();
 	if (word.length === 0) {
-		getMore(CUR_DEF_ENUM);
+		if (typeof($('#iMore').html()) === "undefined" || ! $('#iMore').html()) {
+			getMore(CUR_DEF_ENUM);
+		} else {
+			$('#iMore').empty();
+		}
 		return;
 	}
 	// Navigation only to a given word class.
@@ -1382,13 +1384,13 @@ function handleNumericInput(key) {
 }
 
 // Called internally when word class is known in advance
-function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {				
+function seekWordSingleClass(word = CUR_WORD, last_enum = 1, showMore = false) {				
     trace("seekWordSingleClass(word = " + CUR_WORD + ", last_enum = " + last_enum + ")");
 	//LAST_DEF_ENUM = CUR_DEF_ENUM;
-	CUR_DEF_ENUM = last_enum; 	
-	if (CLASS === "fraser") CUR_DEF_ENUM = 1;		
-	if (word.length > 0) {		
-		word = word.replaceAll("­","");		
+	CUR_DEF_ENUM = last_enum;
+	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
+	if (word.length > 0) {
+		word = word.replaceAll("­","");
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
 			mode: 'cors',
@@ -1410,8 +1412,8 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1) {
 					INC = 0;
 					pos = json;
 				}
-				getWords(INC, pos);		
-				getDefInd(last_enum);			
+				getWords(INC, pos,showMore);		
+				getDefInd(last_enum);		
 			} else {
 				noMatchSingleClass(word);			
 			}
@@ -1462,10 +1464,12 @@ function seekWord(word, link = false, lastEnum = false) {
 	}
 	$('#iCntRegex').empty();		
 	scoreMatch = word.indexOf("redwords") != -1 || word.indexOf("bluewords") != - 1;
+	
 	if (REGEX_MODE) {				
 		regexSeek(word)
 		.then(result => {
 			REGEX_WORDS = result["match"];
+
 			N_REGEX = REGEX_WORDS.length;
 			dispRegexWords();
 		})
@@ -1515,7 +1519,8 @@ function seekWord(word, link = false, lastEnum = false) {
 }
 
 function dispRegexWords() {
-	alert("tbd dispRegexWords()");
+	INC = 0;
+	getWords();
 }
 
 function regexSeek(word) {
@@ -1707,7 +1712,7 @@ function drillDown() {
 	})
 }
 
-function setClass(c, seek = "") {
+function setClass(c, seek = "", showMore = false) {
     trace("setClass(" + c + ", seek = " + seek + ")");
 	LAST_CLASS = CLASS;	
 	if (CLASS != "fraser") LAST_SCROLL_Y = window.pageYOffset;	
@@ -1735,11 +1740,11 @@ function setClass(c, seek = "") {
 		setN_CUR();	
 	}
 	if (seek.length > 0) {
-		seekWordSingleClass(seek, LAST_DEF_ENUM);
+		seekWordSingleClass(seek, LAST_DEF_ENUM, showMore);
 	} else {
 		INC = 0;
 		getWords();
-	}
+	}	
 	updateScore();
 }
 
@@ -1747,7 +1752,8 @@ function getLastWord() {
 	trace("getLastWord()");			
 	if (LAST_WORD.length > 0) {		
 		let tmp = CLASS;
-		setClass(LAST_CLASS,LAST_WORD);		
+		let showMore = true
+		setClass(LAST_CLASS,LAST_WORD, showMore);		
 		LAST_CLASS = tmp;
 	}
 	setTimeout(setScroll, 500);
@@ -1788,8 +1794,7 @@ function editDef() {
 	if ($('#iParDef').text() != "" || CLASS === "fraser") {
 		showWords();
 		$('#iDefDiv').css("display", "block");
-		$('#iPutDef').css("display", "block");
-		$('#iDivMore').css("display", "none");
+		$('#iPutDef').css("display", "block");		
 		focusDef();
 	}	
 }
@@ -2892,43 +2897,7 @@ function nextWord(el,ev) {
 		log(error)
 	})		
 }
-function putMore() {
-	if (DEBUG) log("putMore()")	
-	let more = $('#iDefText').val();
-	more = more.replaceAll("\n","<br>");	
-	if (more.substring(0,4) === "<br>") {
-		more = more.substring(4);
-	}
-	if (more.indexOf("HISTORIK") == -1) {
-		if (more.indexOf("<h>") != -1) {
-			more = more.replace("<h>","HISTORIK:");
-		} else {
-			more = more.replace("belagt","HISTORIK: belagt");
-		}
-	}
-	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF_ENUM;	
-	fetch('backend/putMore.php?key=' + key.replace("-1","0") + '&class=' + CLASS + '&more=' + more, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		//Done
-		$('#iDefText').val("");
-		$('#iDefDiv').css("display", "none");
-		$('#iDivMore').css("display", "none");
-		toggleMore(key,true)
-		$('#iInput').focus();
-	})
-	.catch(error => {
-		log(error)
-	})
-}
+
 // 1-based indices instead of 0-based for storage
 function keyForUser(key) {
 	start = key.indexOf("_");
@@ -2945,7 +2914,7 @@ function keyForUser(key) {
 }
 
 function getMore(ind) {		
-	trace("getMore()");
+	trace("getMore()");	
 	if (CLASS === "fraser") return;
 	if (!isNumeric(ind)) {
 		log("getMore(ind), ind is NaN");
@@ -2954,7 +2923,7 @@ function getMore(ind) {
 	
 	if (DEBUG) log("getMore(ind), ind = " + ind);			
 	ind--;
-	if (ind > N_DEFS) return;
+	if (ind > N_DEFS) return;	
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + ind;	
 	fetch('backend/showMore.php?class=' + CLASS + '&word=' + key, {
 		method: 'get',
@@ -2968,7 +2937,7 @@ function getMore(ind) {
 	})
 	.then(json => {
 		if (json.length === 0) {
-			$('#iMoreTxt').html("");
+			$('#iMoreText').html("");
 		} else {												
 			// Add links
 			moreArr = json.split("<br>");
@@ -2979,23 +2948,22 @@ function getMore(ind) {
 				moreArr[i];					
 				del = "<br>";					
 			}
-			let tmp = "*********************<br>"
-			//let tmp = "---------------------<br>"
+			let tmp = "*********************<br>"		
 			tmp += "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";						
-			tmp += " onmouseover='highlight(this,event)'" + tmpMore;
-
+			tmp += " onmouseover='highlight(this,event)'";
+			tmp += tmpMore;
 			tmp = tmp.replaceAll("KONSTRUKTION:", "<b>KONSTRUKTION:</b>");
 			tmp = tmp.replaceAll("SAMMANSÄTTN./AVLEDN.:","<b>SAMMANSÄTTN./AVLEDN.:</b>");
 			tmp = tmp.replaceAll("EXEMPEL:","<b>EXEMPEL:</b>");
 			tmp = tmp.replaceAll("HISTORIK:","<b>HISTORIK:</b>");
 			// Use displayDef to to dynamise word links
 			// Dynamise links
-			tmp = tmp.replaceAll("<l>","<span onclick=followLink(this.innerText) onmouseover=highlight(this,event)><b>");
-			tmp = tmp.replaceAll("</l>","</b></span>");
-			tmp = tmp.replaceAll("<lf>","<span class='fraser' onclick=setClass('fraser',this.innerText) onmouseover=highlight(this,event)><b>");
+			tmp = tmp.replaceAll("<l>","<span class='link' onclick=followLink(this.innerText)>");
+			tmp = tmp.replaceAll("</l>","</span>");
+			tmp = tmp.replaceAll("<lf>","<span class='fraser' onclick=setClass('fraser',this.innerText)><b>");
 			tmp = tmp.replaceAll("</lf>","</b></span>");
-			$('#iMoreTxt').html(tmp);
-			let moreHeight = parseInt($('#iMoreTxt').css("height").replace("px",""));
+			$('#iMoreText').html(tmp);		
+			let moreHeight = parseInt($('#iMoreText').css("height").replace("px",""));
 			MORE_LIM = 350; // If bigger than this then scrolling is required
 			if (moreHeight > MORE_LIM) {			
 				$('body').css("overflow-y", "scroll");														
@@ -3021,8 +2989,7 @@ function editMore(ev,key) {
 		CACHED_DEF_HTML = $('#iParDef').html();		
 	}
 	$("#iPutDef").css("display", "none");
-	$('#iDefDiv').css("display", "block");
-	$("#iDivMore").css("display", "block");	
+	$('#iDefDiv').css("display", "block");	
 	$("#iPutMore").css("display", "block");	
 	focusDef();
 }
@@ -3106,7 +3073,7 @@ function processKeyDown(ev) {
 function navDef(ev) {
 	if (DEBUG) log("navDef(ev)");
 	let tmp = $('#iInput').val();
-	$('#iMoreTxt').empty();
+	$('#iMoreText').empty();
 	if (tmp.length === 0) {
 		if (ev.key === "ArrowLeft") {			
 			CUR_DEF_ENUM--;
@@ -3117,7 +3084,6 @@ function navDef(ev) {
 		}
 		def = getDefInd(CUR_DEF_ENUM);
 		displayDef(def,CUR_WORD);
-		if ($('#iMoreText').html().length > 0) getMore(CUR_DEF_ENUM);
 	}	
 }
 
@@ -3158,10 +3124,7 @@ function defEntry(ev) {
 				$('#iInput').val("");
 				focusInput()
 				seekWord(CUR_WORD);
-			}
-			if ($('#iPutMore').css("display") === "block") { 
-				putMore()
-			}
+			}			
 		}
 	} else if (ev.location === 3) {
 		if (ev.key === "0") {
@@ -3602,8 +3565,7 @@ function getDefInd(ind) {
 			out += del + tmpArr[i];
 			del = "<br>";
 		}
-	}		
-	
+	}			
 	return out;
 }
 
@@ -3717,14 +3679,18 @@ function scrapeWholeClass() {
 		return response.json();
 	})
 	.then(json => {
-		allWords = json;
-		fetchDefWords(allWords, 0)
+		allWords = json;		
+		fetchDefWords(allWords, INC)
 	})		
 }
 
 function fetchDefWords(allWords,ind) {
 	trace("fetchDefWord()");		
 	let word = allWords[ind];
+	if (word === "anno dazumal") {
+		alert(1);
+		return fetchDefWords(allWords,ind+1);
+	}
 	let backend = 'backend/ScrapeDef.php?word=' + word + '&class=' + CLASS + '&debug=0';
 	fetch(backend, {
 		method: 'get',
@@ -3750,9 +3716,12 @@ function fetchDefWords(allWords,ind) {
 				let upper = allWords.length - 1
 				if (ind > upper) {
 					return;
-				} else {
+				} else {					
 					return fetchDefWords(allWords,ind+1);
 				}
+			})
+			.catch(error => {
+				console.log(error);
 			})
 		} else {
 			$('#iMeta').html("Failed to find match");
@@ -3766,6 +3735,5 @@ function fetchDefWords(allWords,ind) {
 		
 	})
 }
-
 </script>
 </html>
