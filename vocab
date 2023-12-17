@@ -745,7 +745,6 @@ function showWordMatches(follow) {
 }
 
 function lookupWord(el,onlyLocal,inline, showMore=false) {	
-	console.log(INC);
 	trace("lookupWord()");
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
@@ -874,6 +873,7 @@ function displayDef(def,word) {
 
 		
 	if (CLASS != "all" && CLASS != "fraser") outDef = outDef.replace(CUR_DEF_ENUM + " ", CUR_DEF_ENUM + "/" + N_DEFS + " ");	
+	if (CLASS === "all") outDef = "<b>" + word + "</b><br><br>" + outDef;
 	$('#iParDef').html(outDef);
 }
 
@@ -1492,6 +1492,7 @@ function seekWord(word, link = false, lastEnum = false) {
 		N_REGEX = 0;
 		getWordInc(word)
 		.then(result => {			
+			INC = result;
 			LAST_WORD = CUR_WORD;
 			CUR_WORD = word;
 			var pos = 3;
@@ -1515,7 +1516,7 @@ function seekWord(word, link = false, lastEnum = false) {
 				})
 			}
 		})
-	}
+	}	
 }
 
 function dispRegexWords() {
@@ -1587,8 +1588,8 @@ function getWordInc(word) {
 					'Content-Type': 'application/json'
 				}
 			})
-			.then(response => {
-				return response.json();
+			.then(response => {				
+				return response.json();				
 			})
 			.then(json => {
 				resolve(json);
