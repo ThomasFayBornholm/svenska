@@ -392,22 +392,16 @@
 	
 	function getDef($raw,$defLines) {		
 		$out = "";
-		$start = '"kernel"';
-		$len = strlen($start);
-		
+		$start = 'class="kernel"';
+		$len = strlen($start);		
 		$pos1 = strpos ($raw, $start);
 		
 		if ($pos1) {
 			// Always expect one definition
-			$out .= getDefFields($raw, $pos1);
-			
-			// Loop for additional definitions
-			$pos1 = strpos($raw, $start, $pos1 + $len + 1);
-			while ($pos1) {
-				$out .= "<br>" . getDefFields($raw, $pos1);
-				$pos1 = strpos($raw, $start, $pos1 + $len + 1);
-			}
+			$def = substr($raw, $pos1-6);
+			$out .= getDefFields($def, $pos1);			
 		}
+		
 		if (strlen($out) === 0) {
 			error("Failed to get 'def' information");
 		} else {
@@ -447,6 +441,8 @@
 		$out = str_replace(" >", "<br>>",$out);
 		$out = str_replace("<br><br>", "<br>",$out);		
 		$out = str_replace("<br> <br>", "<br>",$out);
+		if (substr($out,0,4) 
+			=== "<br>") $out = substr($out,4);
 		if (strlen($out) === 0) {
 			error("Failed to get 'more' information");
 		} else {
@@ -454,94 +450,30 @@
 		}
 	}
 	
-	function getDefFields($raw, $pos1) {				
-		$out = "";
-		$end = "expansion collapsed";
-		$pos2 = strpos($raw, $end, $pos1);		
-		// Work on single "lexem" block
-		$tmp = substr($raw,$pos1,$pos2-$pos1);
-		
-		$firstChar = getClass($tmp, "punkt", true);			
-		$out .= strip($firstChar);
-		$context = getClass($tmp,"hkom", true);
-		$out .= strip($context, "[","] ");		
-		$defLines = explode("\n", $tmp);
-		
-		$consume = false;
-		$grammar = "";
-		foreach($defLines as $l) {
-			if (str_contains($l, "fkomblock")) $consume = true;												
-			if ($consume) {				
-				$grammar .= $l;				
-			}
-			// Stop consuming grammar information after first close span after fkomlbock
-			if (str_contains($l, "</span>")) $consume = false;;
-			
-		}		
-		
-		$out .= getGrammar($grammar);						
-		
-		// Nain definition content						
-		$defTxt = getClass($tmp, "def", true);														
-		if ($defTxt) {
-			$defTxt = $defTxt[0];
-			$pattern = '/(_\d+&(?:amp;ref=lnr\d+)+)/';
-			// Some stray information is sometimes present that can be removed e.g. "/so/?id=161228_1&amp;ref=lnr279219" instead of clean "/so/?id=161228"		
-			$defTxt = preg_replace($pattern,"",$defTxt);				
-			preg_match($pattern, $defTxt, $matches);		
-			
-			// 'hvhomo' class is some kind of link, treat accordingly	
-			$pattern = '/<span class="hvhomo"><\/span>([a-zöäå\s]+)/';						
-			
-			preg_match($pattern, $defTxt, $matchesHomo);			
-									
-			$pattern = '/<a class="hvtag" target="_parent" href="\/so\/\?id=\d+">([a-zöäå\s]+)+/';						
-			preg_match($pattern, $defTxt, $matches);			
-			
-			$defTxt = strip_tags($defTxt);
-			if ($matchesHomo) {
-				$defTxt = preg_replace($pattern,"<l>" . $matches[1] . "</l>",$defTxt);
-			}
-			
-			if ($matches) {						
-				$defTxt = str_replace($matches[1], "<l>" . $matches[1] . "</l>",$defTxt);			
-			}
-						
-			$out .= $defTxt;
-			// Secondary definition
-			$deftTxt = getClass($tmp, "deft", true);
-			$out .= strip($deftTxt,"{","} ");	
-			
-			// Handle linked words
-			$hasLinks = getClass($tmp, "hv");		
-			if ($hasLinks) {			
-				$hasLinks = $hasLinks[0];			
-				
-				$arr = explode("\n",$hasLinks);			
-				
-				$tmp = "";
-				$firstLoop = true;
-				foreach($arr as $el) {								
-					$lastWasWord = false;				
-					if (str_contains($el, "hvtyp")) {					
-						if (!$firstLoop) $tmp .= "<br>";
-						$tmp .= strip_tags($el);
-						$lastWasWord = false;
-					} else if (str_contains($el, "hvtag")) {													
-						if ($lastWasWord) {
-							$tmp .= ", ";
-						} else {
-							$tmp .= " ";
-						}
-						$tmp .= strip_tags($el);					
-						$lastWasWord = true;
-					}		
-					$firstLoop = false;
+	function getDefFields($raw, $pos1) {						
+		$out = "";			
+		$raw = str_replace(' <span class="deft">', "\n" . '<span class="deft">',$raw);
+		//echo $raw . "\n***\n";
+		$tmpArr = explode("\n", $raw);				
+		$delim = "";
+		$skip = false;
+		foreach($tmpArr as $l) {			
+			if (str_contains($l,'</div>')) $skip = true;
+			if (str_contains($l,'class="kbetydelse"')) $skip = false;
+			if (!$skip) {
+				$tmp = processDefLine($l);			
+				if (strlen($tmp) > 0) {		
+					$out .= $delim . $tmp;
+					$delim = "\n";
 				}
-				if (strlen($tmp) > 0) $out .= "<br>" . $tmp;
 			}
 		}
-		return $out;
+		$out = str_replace("__\n","",$out);
+		$out = str_replace("\n__ "," ",$out);			
+		
+		$out = str_replace("\n","<br>",$out);
+		$out = str_replace("det att <br>", "det att ",$out);		
+		return $out;		
 	}
 	
 	function getGrammar($block) {
@@ -615,7 +547,7 @@
 		foreach($divs as $el) {
 			$line = "";			
 			foreach($el as $l) {				
-				$tmp = processLine($l);
+				$tmp = processMoreLine($l);
 				if (strlen($tmp) > 0) {
 					if (strlen($line != 0) && (str_contains($tmp, "EXEMPEL:") || str_contains($tmp, "SAMMANSÄTTN."))) {
 						$line .= "\n" . $tmp;
@@ -635,7 +567,7 @@
 		return $out;
 	}
 	
-	function processLine($line) {		
+	function processMoreLine($line) {		
 		$ret = "";
 		if (str_contains($line,'class="syntex">')) {
 			$ret = "EXEMPEL: " . strip_tags($line);
@@ -693,7 +625,31 @@
 				echo "discard: " . $line . "\n";
 			}
 		}
+		
+		$ret = str_replace("!!","",$ret); // hack as unsure what '!!' is representing for now.
 		return $ret;
+	}
+	
+	function processDefLine($line) {
+		$res = "";
+		if (str_contains($line, 'class="kbetydelse"')) {
+			$res = strip_tags($line) . " __";
+		} else if (str_contains($line, 'class="def"')) {
+				if (str_contains($line, 'class="hvtag"')) {
+					$res = "<l>" . strip_tags($line) . "</l>";
+				} else {
+					$res = strip_tags($line);
+				}				
+		} else if (str_contains($line, 'class="hv"') || str_contains($line, 'class="hvtyp"')) {
+			$res = strip_tags($line) . " __";
+		} else if (str_contains($line, 'class="hvtag"')) {
+			$res = "<l>" . strip_tags($line) . "</l>";
+		} else if (str_contains($line, 'class="deft"')) {
+			$res = "__ " . strip_tags($line);
+		}
+		
+		$res = str_replace("!!","",$res); // hack, not sure what the '!!' represents so remove it for now.
+		return $res;
 	}
 	
 	function splitOutLink($line) {
