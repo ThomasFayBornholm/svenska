@@ -51,7 +51,7 @@
 	$def = curl_exec($ch);			
 	curl_close($ch);
 	
-	$find = 'class="slank" href="';
+	$find = 'class="slank';
 	if (strpos($def,$find)) {		
 		// Need to do some more work to resolve to word matches
 		// Use id instead of word as key
@@ -95,7 +95,7 @@
 			}
 		}
 	}		
-	
+
 	if (strlen($def) === 0) {
 		debug("Failed to retrieve content from Svenska Ordlista server #2.");
 		exit();
