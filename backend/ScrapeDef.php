@@ -1,15 +1,15 @@
 <?php
 	$GLOBALS["debug"]=$_GET['debug'];
-	$word = $_GET['word'];	
+	$word = $_GET["word"];
+	$id = $_GET['id'];	
+	$snr = $_GET["snr"];
 	$class = $_GET['class'];
 	// return an array to support casees where multiple entries exist
 	$out['meta'] = "";
 	$out['def'] = "";
 	$out['more'] = "";
-	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';	
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';
-	$url = str_replace(" ", "%20", $urlBase . $word);	
-	$url = str_replace("ä", "%C3%A4", $url);
+	$url = $urlBaseId . $id;
 	$ch = curl_init();		
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
@@ -17,77 +17,20 @@
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
 	$def = curl_exec($ch);			
 	curl_close($ch);	
-	// Remove all "mdr" class lines from def. These are not interesting to us
-	$defArr = explode("\n", $def);
-	$del = "";
-	$def = "";
-	foreach($defArr as $el) {
-		if (!str_contains($el,'class="mdr"')) {						
-			$def .= $del . $el;
-		}
-		$del = "\n";
-	}
-	$defArr = explode("\n", $def);
-	if (strlen($def) === 0) {
-		error("Failed to retrieve content from Svenska Ordlista server #1.");
-	}
-	// Check this resolves to the correct word
-	$find = 'class="slank" href="';
-	$find = 'class="slank';
-	if (strpos($def,$find)) {
-		// Need to do some more work to resolve to word matches
-		// Use id instead of word as key
-		$tmpLines = explode("\n", $def);
-		$tmpClass = "";
-		$isMatch = false;
-		foreach($tmpLines as $l ) {			
-			// Discard slutled is slutled is not desired
-			$keep = $class === "slutled" || !str_contains($l, "</span>-");
-			if (str_contains($l, "wordclass") && $keep) {												
-				$tmpClass = getClass($l,"wordclass", true); // Discard trai
-				if ($tmpClass) {					
-					$tmpClass = str_replace("</span>","",$tmpClass);
-					$tmpClass = substr($tmpClass[0],1);
-					// Remove leading space from word class entry
-					$tmpClass = getLongClassName($tmpClass);				
-					if (matchClass($tmpClass, $class)) {
-						$def = $l;
-						$isMatch = true;						
-						break;
-					}
-				}
-			}
-		}		
 		
-		if ($isMatch) {			
-			$find = "/?id=";
-			$pos1 = strpos($def,$find);
-			$find2="&pz=3";
-			$pos2 = strpos($def,$find2);
-			if ($pos1 && $pos2 && $pos2 > $pos1) {
-				$pos1 = $pos1 + strlen($find);
-				$lenFound = $pos2 - $pos1;
-				$id = substr($def,$pos1,$lenFound);
-				$url = $urlBaseId . $id;
-				$ch = curl_init();		
-				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-				curl_setopt($ch,CURLOPT_URL,$url);
-				curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-				curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");			
-				$def = curl_exec($ch);			
-				curl_close($ch);			
-			}
-		}
-	}	
-	
 	if (strlen($def) === 0) {
 		error("Failed to retrieve content from Svenska Ordlista server #2.");		
 	}
 	
 	$originalLength = strlen($def);
-	// filter away uninteresting stuff
-	$find = 'class="orto">';
-	$start = strpos($def,$find) - 2;
+	
+	// use "snr" id to go to the relevent lemma information
+	
+	$start = strpos($def,$snr);
+	if (!$start) {
+		echo "Could not find lemma information";
+		return;
+	}	
 	// Global end of content marker
 	$END = ">Till SO<";	
 	$end = strpos($def,$END);	
@@ -148,7 +91,7 @@
 	
 	
 	if (!$foundMatch) {
-		error(("Failed to retrieve word:" . $word . "; class: " . $class));
+		error(("Failed to retrieve word with id:" . $id . "; class: " . $class));
 	}
 	
 	$lemmaLength = strlen($def);
@@ -166,9 +109,9 @@
 	}
 	
 	$wordClass = $tmpClass;			
+
 	if ($class === "slutled") $word = "-" . $word;
 	if ($class === "förled") $word = $word . "-";	
-	
 	/* Find all the word roots, e.g. 'ge','giva'
 	* Find all the conjugation groups	
 	* And need the text seperator between conjugation groups
@@ -440,9 +383,11 @@
 		$out = str_replace(" KONSTRUKTION", "<br>KONSTRUKTION",$out);
 		$out = str_replace(" >", "<br>>",$out);
 		$out = str_replace("<br><br>", "<br>",$out);		
-		$out = str_replace("<br> <br>", "<br>",$out);
-		if (substr($out,0,4) 
-			=== "<br>") $out = substr($out,4);
+		$out = str_replace("<br> <br>", "<br>",$out);		
+		// Remove any leading new line from first "more" entry.
+		if (substr($out,0,4) === "<br>") $out = substr($out,4);
+		// Remove leading new line from all other "more" entries.
+		$out = str_replace("||<br>","||", $out);
 		if (strlen($out) === 0) {
 			error("Failed to get 'more' information");
 		} else {
@@ -639,11 +584,17 @@
 					$res = "<l>" . strip_tags($line) . "</l>";
 				} else {
 					$res = strip_tags($line);
-				}				
+				}	
+
+		} else if (str_contains($line, 'class="hkom"')) {
+			$res = "[" . strip_tags($line) . "] __";
+		} else if (str_contains($line, 'class="fkomblock"')) {
+			$res = "(" . strip_tags($line) . ") __";
 		} else if (str_contains($line, 'class="hv"') || str_contains($line, 'class="hvtyp"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="hvtag"')) {
 			$res = "<l>" . strip_tags($line) . "</l>";
+			$res = str_replace(" , ", "</l>, <l>",$res);
 		} else if (str_contains($line, 'class="deft"')) {
 			$res = "__ " . strip_tags($line);
 		}
@@ -733,5 +684,9 @@
 				break;
 		}
 		return $long;
+	}
+	function breaker($txt) {
+		echo $txt;
+		exit();
 	}
 ?>

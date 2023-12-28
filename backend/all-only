@@ -252,6 +252,7 @@ accentförskjutning
 accenttecken
 accentuera
 accept
+accept-2
 acceptabel
 acceptans
 acceptera
@@ -587,6 +588,7 @@ allé
 almanacka
 alp
 alpacka
+alpacka-2
 alpin
 alpin kombination
 alpinism
@@ -1537,6 +1539,7 @@ ateism
 ateist
 ateroskleros
 atlas
+atlas-2
 atlet
 atletisk
 atmosfär
@@ -2261,6 +2264,7 @@ bakvänd
 bakända
 bakåt
 bal
+bal-2
 bala sig
 balans
 balansera
@@ -2336,6 +2340,7 @@ banta
 baptism
 baptist
 bar
+bar-2
 bara
 bara skrapa på ytan
 bara till namnet
@@ -2409,6 +2414,7 @@ barservering
 barstol
 baryton
 bas
+bas-2
 basa
 basal
 basar
@@ -3370,6 +3376,7 @@ bilkår
 bilkårist
 bilkö
 bill
+bill-2
 billast
 billig
 billighet
@@ -3427,6 +3434,7 @@ biologisk
 biotisk
 bipolär
 bisarr
+bisats
 bisexuell
 biskopsdöme
 biskviporslin
@@ -3788,6 +3796,7 @@ boja
 bojkott
 bojkotta
 bok
+bok-2
 boka
 boka av
 bokband
@@ -4025,6 +4034,7 @@ bostongurka
 bosätta sig
 bosättning
 bot
+bot-2
 bota
 botanisera
 botemedel
@@ -4962,6 +4972,7 @@ cyan
 cyankalium
 cyanvätesyra
 cykel
+cykel-2
 cykelbana
 cykelkedja
 cykelspark
@@ -5127,6 +5138,7 @@ dansant
 dansare
 dansen kring guldkalven
 dansk
+dansk skalle
 danstillställning
 dansör
 dansös
@@ -5603,6 +5615,7 @@ diktare
 diktator
 diktatorisk
 diktatur
+diktcykel
 diktera
 diktion
 diktkonst
@@ -6711,6 +6724,7 @@ emission
 emittera
 emmentaler
 emotion
+emotionell intelligens
 emotiv
 emotse
 emotta
@@ -8188,6 +8202,7 @@ frakta
 fraktal
 fraktion
 fraktur
+fraktur-2
 fralla
 fram
 fram till småtimmarna
@@ -8818,6 +8833,7 @@ få på moppe
 få på nosen
 få på nöten
 få på pälsen
+få på skallen
 få på tafsen
 få på truten
 få påökt
@@ -12540,6 +12556,7 @@ häcklopp
 häda
 hädan
 hädanefter
+hädanfärd
 hädangången
 hädisk
 häfta
@@ -13624,6 +13641,8 @@ integritetsintrång
 intellekt
 intellektualisera
 intellektuell
+intelligens
+intelligenstest
 intelligent
 intelligent design
 intensifiera
@@ -16712,6 +16731,7 @@ lopp
 lort
 lotteri
 lov
+lova någon guld och gröna skogar
 lovord
 ludd
 luder
@@ -16839,11 +16859,17 @@ maktskifte
 maktspel
 maktspråk
 maktövertagande
+malis
+malm
+malm-2
 malteserkors
+mandarin
+mandarin-2
 mandat
 mandelspån
 manhål
 manifest
+maning
 mankemang
 mankön
 mannagryn
@@ -16878,7 +16904,10 @@ matriarkat
 matsilver
 matställe
 matsvinn
+matt
+matt-2
 matvrak
+mauretanier
 mausoleum
 maximum
 medbestämmande
@@ -16890,6 +16919,7 @@ medel
 medelinkomstland
 medeltal
 medeltidslatin
+medelvattenstånd
 medelvärde
 medgivande
 medhåll
@@ -16980,6 +17010,8 @@ moderliv
 modersmål
 mods
 modus
+moll
+moll-2
 moln
 molntäcke
 moment
@@ -16989,6 +17021,7 @@ monokord
 monopol
 monster
 monument
+mor-2
 morakniv
 moralbegrepp
 moras
@@ -17002,6 +17035,8 @@ morgondopp
 morgonhumör
 morrhår
 morsarv
+morse
+morse-2
 mos
 moskitnät
 mossros
@@ -17011,6 +17046,8 @@ motdrag
 motell
 motett
 mothugg
+motion
+motion-2
 motiv
 motljus
 motlut
@@ -17121,21 +17158,184 @@ nedskärning
 omkring
 omsider
 onekligen
+original
 ovan
 ovanpå
+passa på
+passage
 per
 per capita
 politiskt korrekt
 polokrage
+prov
+prov-2
+prova
+pröva
+rysare
+sagocykel
 sammankomst
 sedan/från barnsben
+segerrik
 semester
 sent omsider
+skrivning
+skräckfilm
 skära
+slå
 smeta
+solcykel
+sommarlov
 svirra
 sätt
+test
 till följd av något
+tok
+tok-2
+trall
+trall-2
+tång
+tång-2
+undandra sig någons bedömning
+vad
+vad-2
+vad-3
 valla
 vallmofrö
 vallning
+vinterlov
+våg
+våg-2
+zinkfeber
+åtrå
+ört
+örtagård
+örtkrydda
+örtsalt
+örtsäng
+örtug
+öst
+östanvind
+österbottning
+östergök
+österled
+österlänning
+östgot
+östgöte
+östkant
+östkust
+östsida
+öststat
+östtimorian
+östtimorianska
+östtysk
+östtyska
+östutvidgning
+överanvändning
+överarm
+överbefolkning
+överbefälhavare
+överbelastningsattack
+överblick
+överbyggnad
+överbädd
+överdel
+överdirektör
+överdos
+överdrift
+överdängare
+överdödlighet
+överenskommelse
+överensstämmelse
+överfart
+överflygning
+överfurir
+överföring
+överförmyndare
+övergång
+övergångsbestämmelse
+övergångsperiod
+övergångsålder
+överhalning
+överhand
+överhandsknop
+överhet
+överhettning
+överhud
+överhöghet
+överinlärning
+överintendent
+överjäsning
+överkant
+överklivning
+överkompensation
+överkragning
+överkropp
+överkucku
+överkurs
+överkäke
+överkänslighet
+överlapp
+överlappning
+överlevare
+överlevnad
+överlevnadskurs
+överliggare
+överlopps
+överloppsgärning
+överläggning
+överläkare
+överläpp
+överlärare
+överlåtelse
+överlöpare
+övermakt
+överman
+övermorgon
+övermänniska
+övernattning
+överordnad sats
+överraskning
+överresa
+överrock
+överrätt
+översida
+översikt
+översittare
+överskjutning
+överskrift
+överskruv
+överspänning
+överste
+överstelöjtnant
+överstepräst
+överstrykning
+överstyrelse
+överståndare
+överståthållare
+översvämning
+översyn
+översättare
+översättning
+översåte
+övertag
+övertalning
+övertalningsdefinition
+övertid
+överton
+övertramp
+övertro
+övertryck
+överträdelse
+övertygelse
+övervakare
+övervakning
+övervallning
+övervattensfartyg
+övervattensläge
+övervikt
+övervinst
+övervägande
+övervärme
+överväxel
+övervåld
+överv�

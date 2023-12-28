@@ -568,6 +568,7 @@ function displayWords(list,ind,showMore = false) {
 	})
 	.then(json => {
 		list = list.replaceAll("-2","<sup>2</sup>");
+		list = list.replaceAll("-3","<sup>3</sup>");
 		res = json["stat"];
 		let score = json["score"];
 		let del = "";
@@ -770,6 +771,7 @@ function lookupWord(el,onlyLocal,inline, showMore=false) {
 		let word = el.innerText;
 		if (el.innerHTML.indexOf("<sup>") != -1) {
 			word = word.replace("2","-2");
+			word = word.replace("3","-3");
 		}
 		CUR_WORD=word;
 		LAST_OBJ = el;
@@ -1180,18 +1182,44 @@ function getRefs(def) {
 
 function onlineLookup(elHTML, ev) {	
 	if (DEBUG) log("onlineLookup(elHTML, ev)");
-	ev.preventDefault()
+	ev.preventDefault();
 	word = elHTML.innerText;
 	if (word.length === 0) word = elHTML.value;
 	if (word.length === 0) word = CUR_WORD;
 	if (word.length > 0) {
-		let url = "https://svenska.se/tre?sok=" + word + "&pz=1";		
-		// Rebust escaping of special characters		
-		TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");				
-		TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
-		TAB_DUMMY.focus();
+		fetch("backend/ScrapeID.php?word=" + word + "&class=" + CLASS, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			// Expectation is a numerical id of more than 3 characters
+			// Take the first ID only
+			if (json["id"][0].length > 3) {
+				let url = "https://svenska.se/so?id=" + json["id"][0] + "&pz=3";
+				// Rebust escaping of special characters		
+				TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");				
+				TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
+				TAB_DUMMY.focus();
+				
+				setTimeout(switchTab, 1000);
+			}
+		})
+		.catch(error => {
+				// If there was a problem retrieving IDs then just go to svenska.se to se if any close matches exist
+				let url = "https://svenska.se/so?sok=" + CUR_WORD;
+				// Rebust escaping of special characters		
+				TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");				
+				TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
+				TAB_DUMMY.focus();				
+				setTimeout(switchTab, 1000);
+		})
 		
-		setTimeout(switchTab, 1000);
 
 	}
 }
@@ -2492,15 +2520,15 @@ function preProc(def) {
 			}
 			// Leading Meta tags
 			// Beware the silent hyphens (\u00AD)			
-			// ToDo Move the (many) regx definitions to the function body
+			// ToDo Move the (many) regex definitions to the function body
 			s = addMeta(s)
 			
-			// Remove any reference numbers other than that at line start
+			// Remove any reference numbers other than that at line start			 
 			let trail = s.slice(2,s.length);
 			for (let i = 1; i < 24; i++) {				
-				trail = trail.replaceAll(" " + i + " "," ");
+				//trail = trail.replace(" " + i + " "," "); Temp remove as quick-fix, investigate further
 				if (trail.indexOf(i) === 0) {
-					trail = trail.replaceAll(i,"");
+					//trail = trail.replace(i,""); Temp remove as quick-fix, investigate further
 				}
 			}
 			trail = fmtParticles(trail);
@@ -2757,7 +2785,7 @@ function lookupManyWords() {
 		if (json.length < n) n = json.length
 		for (let i = 0; i < n; i++) {			
 			let word = json[i]
-			let url = "https://svenska.se/tre?sok=" + word + "&pz=1";
+			let url = "https://svenska.se/so?sok=" + word + "&pz=1";
 			// Manual unicode percentage escaping as some browsers misbehave here	
 			TABS.push(window.open(bulletProofUrl(url), '_blank'));		
 		}	
@@ -3389,13 +3417,11 @@ function fetchDef() {
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
 	$('#iMore').html("");
-	let backend = 'backend/ScrapeDef.php?word=' + CUR_WORD + '&class=' + CLASS + '&debug=0';
-	if (CLASS === "fraser") {	
-		let query = $('#iInput').val();
-		query = query.replaceAll("­",""); // No invisible chars to user present in keys
-		backend = 'backend/scrapeIdiom.php?query=' + query
+	let rootWord = CUR_WORD;
+	if (rootWord.indexOf("-") != -1) {
+		rootWord = rootWord.slice(0,rootWord.indexOf("-"));
 	}
-	fetch(backend, {
+	fetch('backend/ScrapeID.php?word=' + CUR_WORD + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3403,34 +3429,58 @@ function fetchDef() {
 		}
 	})
 	.then(response => {
-		return response.json();
-	})	
-	.then(json => {		
-		if (CLASS === "fraser") {			
-			let tmp ="";
-			let keys = Object.keys(json);
-			del = "";
-			for(let i = 0; i < keys.length; i++) {
-				tmp += del + keys[i] + "%% " + json[keys[i]];
-				del = "\n";
-			}			
-			$('#iDefDiv').css("display", "block");
-			$('#iPutDef').css("display", "block");
-			$('#iDivMore').css("display", "none");
-			focusDef();
-			$('#iDefText').val(tmp);					
-			
-		} else {
-			if (! json.hasOwnProperty("error")) {
-				addDef(json['key'],json['meta'],json['def'],json['more']);		
-			} else {
-				$('#iMeta').html("Failed to find match");
-			}
+		return response.json()
+	})
+	.then(json => {	
+		let id = json["id"];
+		let snr = json["snr"]		
+		let backend = 'backend/ScrapeDef.php?word=' + CUR_WORD + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
+		if (CLASS === "fraser") {	
+			let query = $('#iInput').val();
+			query = query.replaceAll("­",""); // No invisible chars to user present in keys
+			backend = 'backend/scrapeIdiom.php?query=' + query
 		}
+		fetch(backend, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})	
+		.then(json => {		
+			if (CLASS === "fraser") {			
+				let tmp ="";
+				let keys = Object.keys(json);
+				del = "";
+				for(let i = 0; i < keys.length; i++) {
+					tmp += del + keys[i] + "%% " + json[keys[i]];
+					del = "\n";
+				}			
+				$('#iDefDiv').css("display", "block");
+				$('#iPutDef').css("display", "block");
+				$('#iDivMore').css("display", "none");
+				focusDef();
+				$('#iDefText').val(tmp);					
+				
+			} else {
+				if (! json.hasOwnProperty("error")) {
+					addDef(json['key'],json['meta'],json['def'],json['more']);		
+				} else {
+					$('#iMeta').html("Failed to find match");
+				}
+			}
+		})
+		.catch(error => {
+			console.log(error);
+		})
 	})
 	.catch(error => {
-		log(error);
+		console.log(error);
 	})
+	
 }
 
 function getRaw() {
