@@ -8863,6 +8863,7 @@ få tummen ur (arslet/ändan)
 få ut
 få vatten på sin kvarn
 få veta att man lever
+få villkorligt
 få ändan ur vagnen
 få/gripas av stora skälvan
 få/ha eld i baken
@@ -10613,6 +10614,7 @@ glassig
 glasspinne
 glasstårta
 glasvar
+glasveranda
 glasyr
 glasöga
 glasögonorm
@@ -10987,6 +10989,7 @@ grundbok
 grundbrott
 grundbult
 grundera
+grundform
 grundforskning
 grundfärg
 grundförbättring
@@ -12217,6 +12220,7 @@ historielös
 historik
 historiker
 historisk
+historiskt presens
 hit
 hit eller dit
 hit och dit
@@ -13242,6 +13246,7 @@ indicium
 indifferent
 indignation
 indignerad
+indikation
 indikativ
 indikera
 indirekt
@@ -13259,6 +13264,7 @@ indra
 indragen
 indriva
 inducera
+induktion
 induktiv
 indunsta
 industrialisera
@@ -13510,6 +13516,7 @@ installera
 installera sig
 instick
 instifta
+instiftare
 instinktiv
 institut
 institutionell
@@ -13782,12 +13789,15 @@ israelisk
 iste
 ister
 isterband
+istid
 istäcke
 isär
 italiensk
 itu
 ituta
+iver
 ivra
+ivrare
 ivrig
 iväg
 iögonfallande
@@ -13991,6 +14001,7 @@ kalvinistisk
 kalvkött
 kalvstek
 kaläta
+kamel
 kameral
 kamma
 kamma hem
@@ -14041,7 +14052,9 @@ kapitalkonto
 kapitel
 kapp
 kapp-2
+kappa
 kappas
+kapplöpning
 kapprum
 kapprusta
 kappsegla
@@ -16558,6 +16571,7 @@ lektion
 lektor
 lem
 lemlästa
+lemma
 lemonad
 len
 leninism
@@ -16695,6 +16709,7 @@ lim
 lingon
 lingonpäron
 lingonris
+linje
 linjearbete
 linjeflyg
 linjeskepp
@@ -16705,6 +16720,7 @@ livdjur
 livgarde
 livmoderinlägg
 livregemente
+livsledsagare
 livsmedel
 livstecken
 livsuppehälle
@@ -16754,6 +16770,7 @@ lusläsa
 lussekatt
 lustspel
 lut
+lycka-2
 lyckohjul
 lyckopiller
 lyft
@@ -17008,6 +17025,7 @@ modeord
 moderbolag
 moderliv
 modersmål
+modifikation
 mods
 modus
 moll
@@ -17073,6 +17091,7 @@ muskelknippe
 musteri
 mutbrott
 mygel
+mygg
 myggnät
 myller
 mynt
@@ -17155,6 +17174,12 @@ naturvin
 nav
 nederbördsområde
 nedskärning
+negro spiritual
+neoimpressionism
+nervositet
+närhelst
+nå ända fram
+ominös
 omkring
 omsider
 onekligen
@@ -17165,8 +17190,10 @@ passa på
 passage
 per
 per capita
+pointillism
 politiskt korrekt
 polokrage
+pressare
 prov
 prov-2
 prova
@@ -17174,35 +17201,59 @@ pröva
 rysare
 sagocykel
 sammankomst
+schackmönster
 sedan/från barnsben
 segerrik
 semester
 sent omsider
+skada
 skrivning
 skräckfilm
 skära
+slitage
+slut
 slå
+smaskig
 smeta
 solcykel
+som man är klädd blir man hädd
 sommarlov
+spydighet
+stadga
+stenografi
+stickas
 svirra
 sätt
+ta parti för någon/något eller ta någons/någots parti
+talträngd
 test
 till följd av något
+tillverka
 tok
 tok-2
 trall
 trall-2
+turkiska
+tvångstanke
 tång
 tång-2
 undandra sig någons bedömning
+upp som en sol och ner som en pannkaka
+uppslagsform
 vad
 vad-2
 vad-3
 valla
 vallmofrö
 vallning
+vara rena öknen
+varken hackat eller malet
+varsel
+veklagan
+villkorlig
 vinterlov
+välsmord
+växellåda
 våg
 våg-2
 zinkfeber
@@ -17262,12 +17313,14 @@ zinkfeber
 överhettning
 överhud
 överhöghet
+överhölja
 överinlärning
 överintendent
 överjäsning
 överkant
 överklivning
 överkompensation
+överkompensera
 överkragning
 överkropp
 överkucku
@@ -17326,16 +17379,4 @@ zinkfeber
 övertro
 övertryck
 överträdelse
-övertygelse
-övervakare
-övervakning
-övervallning
-övervattensfartyg
-övervattensläge
-övervikt
-övervinst
-övervägande
-övervärme
-överväxel
-övervåld
-överv�
+övertygel
