@@ -596,7 +596,7 @@
 			$res = "<l>" . strip_tags($line) . "</l>";
 			$res = str_replace(" , ", "</l>, <l>",$res);
 		} else if (str_contains($line, 'class="deft"')) {
-			$res = "__ " . strip_tags($line);
+			$res = "__ {" . strip_tags($line) . "}";
 		}
 		
 		$res = str_replace("!!","",$res); // hack, not sure what the '!!' represents so remove it for now.

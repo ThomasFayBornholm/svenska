@@ -1187,7 +1187,7 @@ function onlineLookup(elHTML, ev) {
 	if (word.length === 0) word = elHTML.value;
 	if (word.length === 0) word = CUR_WORD;
 	if (word.length > 0) {
-		fetch("backend/ScrapeID.php?word=" + word + "&class=" + CLASS, {
+		fetch("backend/ScrapeID.php?word=" + forScrapeID(word) + "&class=" + CLASS, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -1346,7 +1346,7 @@ function newInputWrapper(e) {
 		if (typeof($('#iMore').html()) === "undefined" || ! $('#iMore').html()) {
 			getMore(CUR_DEF_ENUM);
 		} else {
-			$('#iMore').empty();
+			$('#iMoreText').empty();
 		}
 		return;
 	}
@@ -3421,7 +3421,7 @@ function fetchDef() {
 	if (rootWord.indexOf("-") != -1) {
 		rootWord = rootWord.slice(0,rootWord.indexOf("-"));
 	}
-	fetch('backend/ScrapeID.php?word=' + CUR_WORD + '&class=' + CLASS, {
+	fetch('backend/ScrapeID.php?word=' + forScrapeID(CUR_WORD) + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3785,6 +3785,11 @@ function fetchDefWords(allWords,ind) {
 		}		
 		
 	})
+}
+
+function forScrapeID(word) {
+	// Use * to delimit instead 
+	return word.replace("_","*");
 }
 </script>
 </html>

@@ -1,7 +1,13 @@
 <?php	
 	$word = $_GET['word'];	
 	$class = $_GET['class'];
-	
+	if ($class === "fraser") {	
+		if (str_contains($word,"*")) {
+			$tmpArr = explode("*",$word);
+			$word = $tmpArr[0];
+			$class= fullClassName($tmpArr[1]);
+		}
+	}	
 	$out["id"] = array();
 	$out["snr"] = array();
 	
@@ -12,6 +18,7 @@
 		$enum = substr($word,$tmpLen+1);
 		$word = substr($word,0,$tmpLen);		
 	}
+	
 	// return an array to support casees where multiple entries exist	
 	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';		
 	$url = str_replace(" ", "%20", $urlBase . $word);	
@@ -23,8 +30,7 @@
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
 	$response = curl_exec($ch);			
 			
-	$responseArr = explode("\n", $response);
-	
+	$responseArr = explode("\n", $response);	
 	$find = "/so/?id=";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';	
 	$tmpArrID = array();
@@ -71,6 +77,7 @@
 			}
 		}
 	}	
+	
 	// Return only the requested ID.
 	if (count($tmpArrID) >= $enum) {
 		array_push($out["id"],$tmpArrID[$enum-1]);		
@@ -101,13 +108,11 @@
 						$match = $match || substr($firstConj,-1,1) === "n" && $class === "substantiv_en";						
 						if (!in_array($tmpSNR,$tmpArrSNR)) array_push($tmpArrSNR,$tmpSNR);
 					} else if (str_contains($defLine,"ingen")) {
-						echo "2";
 						if (!in_array($tmpSNR,$tmpArrSNR)) array_push($tmpArrSNR,$tmpSNR);
 					}
 				} 
 			} else {							
 				if (str_contains($defLine,'class="ordklass"')) {	
-					
 					$tmpClass = strip_tags($defLine);
 					$match = matchClass($tmpClass, $class);
 					if ($match) {																
@@ -115,21 +120,24 @@
 					}
 				}
 			}
-			if (str_contains($defLine, 'superlemma') && strlen($defLine) > 0) {		
+			if (str_contains($defLine, 'superlemma') && strlen($defLine) > 0) {						
 				$tmpSNR = $defLine;
 				$snrStart = strpos($tmpSNR, 'id="snr');
 				if ($snrStart) {									
 					$snrStart += 4;
 					$snrEnd = strpos($tmpSNR,'">',$snrStart);
-					if ($snrEnd) {						
+					if ($snrEnd) {	
 						$tmpSNR = substr($tmpSNR,$snrStart,$snrEnd-$snrStart);						
+					} else {
+						echo "Could not find SNR_End";
+						exit();
 					}
 				}
 			}
-		}				
+		}
 	}
 	
-	curl_close($ch);		
+	curl_close($ch);
 	if (count($tmpArrSNR) >= $enum) {
 		$out["snr"] = $tmpArrSNR[$enum-1];
 	} else {
@@ -156,5 +164,19 @@
 	function breaker($txt) {
 		echo $txt;
 		exit();
+	}
+	
+	function fullClassName($inClass) {		
+		switch($inClass) {
+			case "adj":
+				return "adjektiv";
+			case "en":
+				return "substantiv_en";
+			case "ett":
+				return "substantiv_ett";
+			case "adv":
+				return "adverb";
+		}
+		return $inClass;
 	}
 ?>
