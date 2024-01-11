@@ -1,3 +1,4 @@
+  -1
 (40) lika!
 (alla) vinklar och vrår
 (bara) halva sanningen
@@ -644,6 +645,7 @@ ammoniumklorid
 ammunition
 amnesi
 amnesti
+amok
 amoralisk
 amorbåge
 amortera
@@ -3926,6 +3928,7 @@ bonuspappa
 boplats
 bord
 borda
+borddans
 bordell
 bordellmamma
 bordlägga
@@ -4372,6 +4375,7 @@ bråd
 bråddjup
 brådmogen
 brådska
+brådstörtad
 bråk
 bråka
 bråkdel
@@ -4791,8 +4795,11 @@ centrallasarett
 centralstation
 centralvärme
 centrera
+centrifug
+centrifugal
 centrifugera
 centrum
+cerebral
 cerebral pares
 ceremoni
 ceremonimästare
@@ -5179,15 +5186,18 @@ datummärka
 davidsstjärna
 de breda lagren
 de djupa leden
+de facto
 de grå tinningarnas charm
 de heligas samfund
 de jordiska kvarlevorna
+de jure
 de musiska konsterna
 de röda khmererna
 de skulle just till att göra något
 de sköna konsterna
 de små grå
 de små stegens tyranni
+de unga tu
 de vises sten
 de våra
 deadline
@@ -5249,6 +5259,8 @@ dejt
 dejta
 deka ner sig
 dekad
+dekadans
+dekadent
 dekal
 dekantera
 dekapitera
@@ -6671,6 +6683,7 @@ elevation
 elevator
 elevråd
 elevunderlag
+elfenben
 elgitarr
 eliminera
 elit
@@ -6899,6 +6912,7 @@ ensartad
 ense
 ensemble
 ensidig
+ensilage
 enskifte
 enskild
 enskilt åtal
@@ -6912,6 +6926,7 @@ entertainer
 entitet
 entlediga
 entonig
+entourage
 entrecote
 entreprenad
 entreprenör
@@ -7458,6 +7473,7 @@ federation
 feedback
 feg
 fegis
+feja
 fejd
 fejk
 fejka
@@ -10664,6 +10680,7 @@ glädjande
 glädje
 glädjefattig
 glädjeflicka
+glädjehus
 glädjen står högt i tak
 glädjetår
 gläfsa
@@ -12120,6 +12137,7 @@ hemskillnad
 hemslöjd
 hemställan
 hemsöka
+hemsökelse
 hemtam
 hemtenta
 hemtjänst
@@ -12366,6 +12384,7 @@ hoptrasslad
 hor
 hora
 horbock
+horhus
 horisont
 horisontal
 horisontalplan
@@ -12633,6 +12652,7 @@ här blir inga barn gjorda
 här och där
 här och var
 här vilar inga ledsamheter
+härbärge
 härda
 härda ut
 härdig
@@ -12766,6 +12786,7 @@ hårda bud
 hårdfrusen
 hårdför
 hårdgummi
+hårdhet
 hårdhjärtad
 hårdhudad
 hårdhänt
@@ -12919,6 +12940,7 @@ i allt väsentligt
 i andanom
 i andra hand
 i annat fall
+i bara mässingen
 i bästa fall
 i dag
 i dag röd, i morgon död
@@ -13007,8 +13029,9 @@ i sin glans dagar
 i sin gröna ungdom
 i sinom tid
 i sista hand
+i sista instans
 i sista minuten
-i sista sekunken
+i sista sekunden
 i sista stund
 i sitt stilla sinne
 i själ och hjärta
@@ -13328,6 +13351,7 @@ infånga
 infödd
 införa
 införliva
+införsel
 införskaffa
 införstådd
 ingalunda
@@ -13348,6 +13372,7 @@ inget att göra (något) åt
 inget/ingenting ha att hämta
 inget/intet nytt under solen
 ingifte
+ingivelse
 ingjuta
 inglasa
 ingrepp
@@ -13455,6 +13480,7 @@ inordna
 inpass
 inpassa
 inpiskad
+inprägla
 inpränta
 inrama
 inrapportera
@@ -13509,6 +13535,8 @@ insolvent
 insomna
 inspektera
 inspela
+inspiration
+inspiratör
 inspirera
 inspärra
 instabil
@@ -13740,6 +13768,8 @@ inveckla
 invecklad
 invektiv
 inventarium
+inventera
+inventering
 inverka
 invers
 inversion
@@ -13756,6 +13786,7 @@ invändning
 invändningsfri
 invänta
 invärtes
+invånare
 inåt
 inåtvänd
 inöva
@@ -15089,6 +15120,7 @@ konsonant
 konsortium
 konspiration
 konspirationsteori
+konspiratör
 konspirera
 konst
 konstakademi
@@ -15149,6 +15181,7 @@ konsumentförening
 konsumentombudsman
 konsumentpris
 konsumentprisindex
+konsumentupplysning
 konsumera
 konsumtion
 konsumtionssamhälle
@@ -15972,6 +16005,7 @@ kvinnopräst
 kvinnoroll
 kvinnosak
 kvinnotjusare
+kvintessens
 kvissla
 kvist
 kvistfri
@@ -16395,6 +16429,7 @@ landsmaninna
 landsmål
 landsort
 landssorg
+landstigning
 landsting
 landstorm
 landsväg
@@ -16702,6 +16737,7 @@ ligga någon varmt om hjärtat
 ligga på
 ligga på latsidan
 ligga på sofflocke
+ligga/vara i startgroparna
 lik
 lik förbannat
 likhetstecken
@@ -16731,8 +16767,10 @@ livsverk
 livtag
 livvakt
 ljud
+ljudmatta
 ljus
 ljushuvud
+ljuta döden
 lock
 lockbete
 lockpris
@@ -16786,12 +16824,15 @@ lysrör
 lystmäte
 lyte
 lyxliv
+läckergom
 läder
 läge
 läger
 lägerbål
 lägerliv
 lägga orden i munnen på någon
+lägga sig vinn om något
+lägga vantarna på något
 läggspel
 läkarhus
 läkarintyg
@@ -16816,6 +16857,7 @@ läslov
 läsuttal
 läsår
 läte
+lätta på trycket
 lättsinne
 lättvin
 lättvindig
@@ -16846,10 +16888,15 @@ långmod
 långnäbb
 långskepp
 långskott
+långt om länge
 lånord
 lår
 lås
 låsvred
+låt gå för det!
+låt vara att
+låta kvasten gå
+låta pengarna rulla
 lödder
 löfte
 löftesbrott
@@ -16862,6 +16909,8 @@ lönnfack
 lönnlöv
 lönnmord
 löp
+löpa linan ut
+löpande rigg
 lördagsgodis
 lösenord
 lösöre
@@ -16887,6 +16936,7 @@ malis
 malm
 malm-2
 malteserkors
+man skrev år
 mandarin
 mandarin-2
 mandat
@@ -16935,9 +16985,14 @@ mauretanier
 mausoleum
 maximum
 med (ett antal) år på nacken
+med (vett och) vilja
+med blotta ögat
 med ens
 med lock och pock
+med något i högsta hugg
 med tiden
+med upphöjt lugn
+medaljens/myntets baksida
 medbestämmande
 medborgargarde
 medborgarskap
@@ -16951,6 +17006,7 @@ medelvattenstånd
 medelvärde
 medgivande
 medhåll
+median
 medinflytande
 medium
 medlemskap
@@ -16963,6 +17019,7 @@ megaton
 mejeri
 mejl
 mejsel
+melankoli
 mellangärde
 mellanheat
 mellanmål
@@ -16971,11 +17028,14 @@ mellanskikt
 mellanslag
 mellanstadium
 mellanöra
+melodi
 membran
 memorandum
 memorial
 men
+meningsmotståndare
 meningsutbyte
+menlösa barns dag
 mentalsjukhus
 merinofår
 mervärde
@@ -17000,6 +17060,7 @@ minoritetsförtryck
 minoritetsspråk
 minspel
 minus
+minut
 minutpris
 mirakel
 missale
@@ -17060,9 +17121,11 @@ mordförsök
 mordvapen
 morfem
 morfin
+morgon
 morgonandakt
 morgondopp
 morgonhumör
+morgonstund har guld i mun(d)
 morrhår
 morsarv
 morse
@@ -17084,6 +17147,7 @@ motlut
 motsatsförhållande
 motstycke
 motstånd
+motståndare
 mottagande
 mottagningsbevis
 motto
@@ -17118,12 +17182,16 @@ människosläkte
 människovärde
 märkbläck
 märke
+mässing
 mästerskap
 mästerverk
 mätglas
+må som en prins (i en bagarbod)
+måg
 mål
 mål i baken
 måleri
+målforskning
 målkalas
 måltips
 mån
@@ -17137,6 +17205,7 @@ mårddjur
 måste
 mått
 måttband
+måttet är rågat
 måttsystem
 möbelsnickeri
 möbeltyg
@@ -17192,157 +17261,191 @@ nedskärning
 negro spiritual
 neoimpressionism
 nervositet
+nytillskott
+när det regnar på prästen så skvätter det på klockaren
 nära en orm vid sin barm
 närhelst
 nätt opp/upp
 nå ända fram
+någons stjärna är i dalande
+någons ömma låga
+något går någons näsa förbi
+något har varit i säck innan det kom i påse
+något i hästväg
+olycka
 ominös
 omkring
 omsider
 omslag
 omval
+omvänd ordföljd
 onekligen
 ont krut förgås inte så lätt
+opinionsyttring
+opponent
 original
+ostyrig
+osänkbar
 ovan
 ovanpå
 passa på
 passage
+peang
 per
 per capita
+perception
 perniciös anemi
+pilla
+planka
 platon(i)sk kärlek
+plock
+plocka
 plocka russinen ur kakan
 pointillism
 politiskt korrekt
 polokrage
+presentatör
 pressare
+proletariatets diktatur
+prominens
+proper
 prov
 prov-2
 prova
+prygla
 pröva
 på (sin) mammas gata
+på Guds försyn
 på det hela taget
+på ett hår när
+på förekommen anledning
+på smällen
+på torra vägen
 på våta vägen
+raka rör
 repa mod
+retro
+retur
+retuschera
+rida spärr mot något
+riksspråk
+ringa-2
+roa sig kungligt
 romantikens blå blomma
+ropa
 rubba någons cirklar
 rysare
+rå och rör
+röja
 sagocykel
+saluvärde
 samla något/ngra under en/samma hatt
 sammankomst
+schabrak
 schackmönster
+se de stora elefanterna dansa
 se långt efter någon
+se syner
 sedan/från barnsben
+sega råttor
 segerrik
 semester
 sent omsider
+sideriskt år
+sill i kapprock
+sitta som ett tänt/tända ljus
 sitta som på nålar
+sjunga på sista versen
 skada
+skilja agnarna från vetet
 skingras som agnar för vinden
+skipa rättvisa
+skolavslutning
 skrapa med foten
 skrivning
 skräckfilm
+skrämma slag på någon
+skudda stoftet av sina fötter
+skuggornas värld
 skära
 skära breda remmar ur någons hud/läder
+skörda lagrar
 slita sitt hår
 slitage
 slut
+sluta leden
+släppa väder
 slå
 slå (någon) en pling
+slå igen butiken
+slå klackarna i taket
+slå sina påsar ihop
 smaskig
 smeta
+snabba pengar
 solcykel
 som man är klädd blir man hädd
 sommarlov
+sondera terrängen
+spansk ryttare
+specifik vikt
+spela allan
+spilla krut på döda kråkor
+spirant
+spott och spe
+springa rakt i armarna på någon
 sprucken röst
 spydighet
+spänna blicken i någon
 spänna ögonen i någon
 stadga
 stenografi
 stickas
 stigande rytm
+stillasittande
 stor ters
+stora rummet
 stryka eld
+strykande åtgång
 stup i ett
 stup i kvarten
 styvförälder
 stå (där) med sin tvättade hals
+stå för fiolerna
 stå i ljusan låga
+stå i lågor
 stå på jämlik/jämställd fot
 stå sig slätt
+stå som en kvast
+stå ställas på bar backe
 stå/komma på god fot med någon
+stå/ställas på bar backe
+stå/vara i valet och kvalet
+substrat
+successionsordning
+summa summarum
 svida i skinnet
+svinga
 svirra
+svänga
+svänga sina lurviga
+sväva i tvivelsmål om något
+synlig
 sätt
+sätta guldkant på tillvaron
+sätta myror i huvudet på någon
+sätta någon på det hala
 sätta någon på pottkanten
 sätta något på spel
+sätta sitt ljus under skäppan
+sätta till alla klutar
+så (ända) in i vassen
+så länge
 så till den (milda) grad
-ta Gud i hågen
-ta intryck av något
-ta kropp
-ta parti för någon/något eller ta någons/någots parti
-ta vara på någon/något
-tackar som frågar!
-talträngd
-tappa hakan
-test
-tidens tand
-till följd av något
-tillverka
-tok
-tok-2
-trall
-trall-2
-turkiska
-tvångstanke
-tång
-tång-2
-undandra sig någons bedömning
-undra på det!
-upp som en sol och ner som en pannkaka
-upplysning
-uppslagsform
-utgångspunkt
-vad
-vad-2
-vad-3
-valla
-vallmofrö
-vallning
-vara (helt) under isen
-vara av godo
-vara född under en lycklig stjärna
-vara hugget som stucket
-vara inne på samma linje
-vara lätt på foten
-vara lätt till sinnes
-vara nära att
-vara på språng
-vara på utgång
-vara rena öknen
-vara sig själv närmast
-vara/hamna/komma på obestånd
-varken fågel eller fisk
-varken hackat eller malet
-varsel
-vattentäta skott
-veka livet
-veklagan
-villkorlig
-vinterlov
-visst fan!
-välsmord
-växellåda
-våg
-våg-2
-vårdslöshet
-zinkfeber
-återval
-åtnjutande
-åtrå
-ört
-örtagård
-örtkrydda
-örtsalt
-ö
+så v
+söder om landsvägen
+söm
+ta igen på gung
+ta igen på gungorna vad man förlorar på karusellen
+ta någon/något till sitt hjärta
+tu

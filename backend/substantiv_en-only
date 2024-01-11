@@ -256,6 +256,7 @@ ammoniumklorid
 ammunition
 amnesi
 amnesti
+amok
 amorbåge
 amortering
 amorteringskrav
@@ -1910,6 +1911,7 @@ bonusförälder
 bonusmamma
 bonuspappa
 boplats
+borddans
 bordell
 bordellmamma
 bordläggning
@@ -2386,6 +2388,7 @@ centralisering
 centralkommitté
 centralkyrka
 centralstation
+centrifug
 ceremoni
 ceremonimästare
 cession
@@ -2654,6 +2657,7 @@ degskrapa
 degspade
 dejt
 dekad
+dekadans
 dekal
 deklamatör
 deklaration
@@ -4917,6 +4921,7 @@ hemsida
 hemskillnad
 hemslöjd
 hemställan
+hemsökelse
 hemtenta
 hemtjänst
 hemuppgift
@@ -5108,6 +5113,7 @@ huvudbonad
 huvuddel
 huvudentré
 hädanfärd
+hårdhet
 höjd
 indikation
 induktion
@@ -5115,8 +5121,12 @@ inflyttning
 information
 informationsbehandling
 infravärme
+införsel
+ingivelse
 inledare
 inledning
+inspiration
+inspiratör
 instiftare
 instinkt
 intelligens
@@ -7530,6 +7540,7 @@ invandring
 invariant
 invasion
 inventarier
+inventering
 inverkan
 inversion
 invertebrat
@@ -8467,6 +8478,7 @@ konsonans
 konsonant
 konspiration
 konspirationsteori
+konspiratör
 konst
 konstakademi
 konstart
@@ -8495,6 +8507,7 @@ konsultation
 konsument
 konsumentförening
 konsumentombudsman
+konsumentupplysning
 konsumtion
 kontakt
 kontaktlins
@@ -8931,6 +8944,7 @@ kvinnopräst
 kvinnoroll
 kvinnosak
 kvinnotjusare
+kvintessens
 kvissla
 kvist
 kvitten
@@ -9139,6 +9153,7 @@ landsman
 landsmaninna
 landsort
 landssorg
+landstigning
 landsting
 landstorm
 landsväg
@@ -9372,6 +9387,7 @@ ljudkuliss
 ljudkälla
 ljudlag
 ljudlära
+ljudmatta
 ljudnivå
 ljudskrift
 ljudstyrka
@@ -9532,6 +9548,7 @@ lyteskomik
 lyx
 lyxkryssning
 läcka
+läckergom
 läderhud
 läderkula
 läderlapp
@@ -10205,10 +10222,8 @@ mobil
 mobilisering
 mobilitet
 mobiltelefon
-mod
 modalitet
 modd
-mode
 modedocka
 modehus
 modelejon
@@ -10217,12 +10232,10 @@ modellbyggnad
 modellera
 modelljärnväg
 modenyck
-modeord
 moderat
 moderation
 moderator
 moderbolag
-moderliv
 modernisering
 modernism
 modernist
@@ -10231,12 +10244,10 @@ modernäring
 modersfamn
 modersmjölk
 modersmjölksersättning
-modersmål
 modfälldhet
 modifikation
 mods
 modul
-modus
 mogenhetsexamen
 mognad
 moj
@@ -10249,8 +10260,6 @@ moll-2
 mollusk
 molngubbe
 molntapp
-molntäcke
-moment
 momentarm
 moms
 monark
@@ -10291,10 +10300,8 @@ morfar
 morfinist
 morfologi
 morgon
-morgonandakt
 morgondag
 morgondagg
-morgondopp
 morgonsol
 morgonstund
 morgontidning
@@ -10314,7 +10321,6 @@ mosse
 moster
 motattack
 motbok
-motett
 motgift
 motgång
 motighet
@@ -10324,7 +10330,6 @@ motionsgymnastik
 motionsrätt
 motionsslinga
 motionär
-motiv
 motivation
 motivering
 motoffensiv
@@ -10476,7 +10481,6 @@ mätinstrument
 mätning
 måfå
 måg
-mål
 målarduk
 målare
 målarfärg
@@ -10486,7 +10490,6 @@ målfrossa
 målgrupp
 målgård
 målgörare
-målkalas
 mållinje
 målning
 målskillnad
@@ -11073,6 +11076,7 @@ operatör
 operett
 opinion
 opinionsmätning
+opinionsyttring
 opponent
 opportunism
 opportunist
@@ -11370,6 +11374,7 @@ patt
 patt-2
 paus
 paviljong
+peang
 pedagog
 pedagogik
 pedal
@@ -11873,6 +11878,7 @@ prolog
 promemoria
 promenad
 promenix
+prominens
 promotion
 propaganda
 propeller
@@ -12303,6 +12309,7 @@ retning
 retorik
 retoriker
 retort
+retro
 reträtt
 reträttplats
 retur
@@ -14039,6 +14046,7 @@ spiralfjäder
 spiralgalax
 spiralrörelse
 spiraltrappa
+spirant
 spis
 spis-2
 spisel
@@ -14898,6 +14906,7 @@ talroll
 talskrivare
 talteori
 tambur
+tamburmajor
 tamp
 tampong
 tand
@@ -15123,6 +15132,7 @@ tigerorm
 tiggare
 tik
 tillbakablick
+tillbakagång
 tillbedjare
 tillblivelse
 tilldelning
