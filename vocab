@@ -1022,31 +1022,51 @@ function defFromAll(word) {
 		.then(response => {
 			return response.json();
 		})
-		.then(json => {							
-			if (Object.keys(json).length === 1)	out["class"] = Object.keys(json)[0];			
-			if (json.length > 1) {
+		.then(json => {
+			if (Object.keys(json).length > 0) {
+				if (Object.keys(json).length === 1)	out["class"] = Object.keys(json)[0];
 				out["match"] = word;
-			}
+			}			
 			resolve(out);
 		});
 	});
 }
 
+/* Return as soon as first match is Found
+ Order is
+ 1: 'All'
+ 2: 'Conjugate (any class)'
+ 3: 'Fuzzy Fras' match
+*/
 function wordFromAll(word) {
 	defFromAll(word)
-	.then((result) => wordFromAll_getConj(result,word))
-	.then((result2) => wordFromAll_FrasFuzzy(result2, word))
-	.then((result3) => {		
-		if (result3["match"].length > 0) {
-			setClass(result3['class'], result3['match']);
+	.then((result) => {
+		if (result["match"].length > 0) {		
+			setClass(result['class'], result['match']);
+			return;
 		} else {
-			noMatch(word);
+			wordFromAll_getConj(result,word)
+			.then((result2) => {
+				if (result2["match"].length > 0) {
+					setClass(result2['class'], result2['match']);
+					return;
+				} else {
+					wordFromAll_FrasFuzzy(result2, word)
+					.then((result3) => {
+						if (result3["match"].length > 0) {
+							setClass(result3['class'], result3['match']);
+						} else {
+							noMatch(word);
+						}
+					})
+					.catch(error => {
+						console.log(error);
+					})
+				}
+			})
 		}
 	})
-	.catch(error => {
-		console.log(error);
-	})	
-}
+}					
 
 function wordFromAll_getConj(inp, word) {
 	trace("wordFromAll_getConj");
@@ -1183,8 +1203,7 @@ function getRefs(def) {
 function onlineLookup(elHTML, ev) {	
 	if (DEBUG) log("onlineLookup(elHTML, ev)");
 	ev.preventDefault();
-	word = elHTML.innerText;
-	if (word.length === 0) word = elHTML.value;
+	word = elHTML.value;
 	if (word.length === 0) word = CUR_WORD;
 	if (word.length > 0) {
 		fetch("backend/ScrapeID.php?word=" + forScrapeID(word) + "&class=" + CLASS, {
@@ -1212,15 +1231,13 @@ function onlineLookup(elHTML, ev) {
 		})
 		.catch(error => {
 				// If there was a problem retrieving IDs then just go to svenska.se to se if any close matches exist
-				let url = "https://svenska.se/so?sok=" + CUR_WORD;
+				let url = "https://svenska.se/so?sok=" + word;
 				// Rebust escaping of special characters		
 				TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");				
 				TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
 				TAB_DUMMY.focus();				
 				setTimeout(switchTab, 1000);
-		})
-		
-
+		})		
 	}
 }
 
@@ -1497,7 +1514,6 @@ function seekWord(word, link = false, lastEnum = false) {
 		regexSeek(word)
 		.then(result => {
 			REGEX_WORDS = result["match"];
-
 			N_REGEX = REGEX_WORDS.length;
 			dispRegexWords();
 		})
@@ -3047,7 +3063,7 @@ function processKeyDown(ev) {
 		removeWord();
 	} else if (ev.key === "F1") {
 		//showHelp
-	} else if (ev.key === "*" || ev.key === "(") {
+	} else if (ev.key === "*") {
 		if (!REGEX_MODE) {
 			ev.preventDefault();
 			fromEnglish();
@@ -3417,11 +3433,13 @@ function fetchDef() {
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
 	$('#iMore').html("");
+	let word = $('#iInput').val();
+	if (word.length === 0) word = CUR_WORD;
 	let rootWord = CUR_WORD;
 	if (rootWord.indexOf("-") != -1) {
 		rootWord = rootWord.slice(0,rootWord.indexOf("-"));
 	}
-	fetch('backend/ScrapeID.php?word=' + forScrapeID(CUR_WORD) + '&class=' + CLASS, {
+	fetch('backend/ScrapeID.php?word=' + forScrapeID(word) + '&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {

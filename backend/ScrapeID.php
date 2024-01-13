@@ -176,6 +176,8 @@
 				return "substantiv_ett";
 			case "adv":
 				return "adverb";
+			case "räk":
+				return "räkneord";
 		}
 		return $inClass;
 	}

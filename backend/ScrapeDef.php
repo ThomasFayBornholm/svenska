@@ -344,7 +344,7 @@
 			$def = substr($raw, $pos1-6);
 			$out .= getDefFields($def, $pos1);			
 		}
-		
+		$out = str_replace("<br><l>","<l>",$out);
 		if (strlen($out) === 0) {
 			error("Failed to get 'def' information");
 		} else {
