@@ -1,11 +1,9 @@
 A-barn
 A-skatt
 A-språk
-A-vitamin
 A-barn
 A-skatt
 A-språk
-A-vitamin
 B-språk
 U-rör
 a
@@ -205,7 +203,9 @@ arvord
 arvsanlag
 arvskifte
 as
+asgarv
 askfat
+aspartam
 aspirin
 asplöv
 at-tecken
@@ -219,6 +219,7 @@ attribut
 auditorium
 augment
 augustipäron
+automatgevär
 automatkarbin
 AV-hjälpmedel
 avancemang
@@ -261,6 +262,7 @@ avslöjande
 avsnitt
 avsprång
 avstamp
+avsteg
 avstånd
 avståndstagande
 avtagande
@@ -739,6 +741,7 @@ damm
 dammkorn
 dammode
 damspel
+dansgolv
 darrgräs
 dass
 dataintrång
@@ -817,6 +820,7 @@ drivhusklimat
 drivmedel
 dropp
 dryckeskärl
+dränage
 dråp
 dråpslag
 dröjsmål
@@ -847,6 +851,7 @@ dödläge
 dödsbevis
 dödsfall
 dödsförakt
+dödsoffer
 dödsstraff
 dödutrymme
 e
@@ -855,6 +860,7 @@ e-mail
 e-recept
 E-vitamin
 edikt
+effektgarn
 efterarbete
 efterfrågande
 efterfrågetryck
@@ -1196,7 +1202,6 @@ fängelse
 fängelsestraff
 färdbevis
 färdighetsämne
-färdled
 färgband
 färgfoto
 färgämne
@@ -1363,6 +1368,7 @@ garnnystan
 garv
 garvämne
 gasolkök
+gastronomi
 gathörn
 gatlopp
 gatt
@@ -1443,6 +1449,7 @@ grannskap
 granris
 gravkapell
 gravkor
+gravröse
 gravöl
 grenljus
 grepp
@@ -1492,6 +1499,7 @@ guldkorn
 guldläge
 guldsnitt
 guldäpple
+gulfilter
 gull
 gullegris
 gummi
@@ -1523,6 +1531,7 @@ göt
 h
 habegär
 hack
+hafs
 hagel
 hagelgevär
 hakkors
@@ -1619,6 +1628,7 @@ hittegods
 hjordinstinkt
 hjortdjur
 hjul
+hjulkors
 hjulnav
 hjulspår
 hjälpmedel
@@ -1700,6 +1710,7 @@ hästskomagnet
 häxeri
 hål
 hålfotsinlägg
+hålkort
 håll
 hålligång
 hålrum
@@ -2243,6 +2254,7 @@ kungsljus
 kungsvatten
 kunnande
 kunskapsstoff
+kurage
 kuriosakabinett
 kuriosum
 kustland
@@ -2392,6 +2404,7 @@ linjearbete
 linjeflyg
 linjeskepp
 linjespel
+linne
 linoleumsnitt
 liv
 livdjur
@@ -2429,6 +2442,7 @@ lovord
 ludd
 luder
 luftdrag
+luftfilter
 luftförsvar
 luftgevär
 luftherravälde
@@ -2928,6 +2942,7 @@ nätverk
 nätverksnav
 nådemedel
 nålbrev
+nålkort
 nålsöga
 nödanrop
 nödfall
@@ -3298,6 +3313,7 @@ rendezvous
 rengöringsmedel
 reningsverk
 rep
+repetergevär
 replikskifte
 reportage
 representantskap
@@ -3410,6 +3426,7 @@ råsocker
 råtthål
 råämne
 rö
+rödfilter
 rödljus
 röj
 rön
@@ -3417,6 +3434,7 @@ rönnbär
 rör
 rörelsekapital
 rörsocker
+röse
 röstkort
 röstläge
 rötslam
@@ -3748,6 +3766,7 @@ slaktdjur
 slakteri
 slam
 slammer
+slarv
 slask
 slaveri
 slem
@@ -3880,6 +3899,8 @@ software
 solbad
 soldattorp
 soldis
+solhatt
+solhjul
 solljus
 solo
 solsken
@@ -4000,6 +4021,7 @@ stekos
 stenansikte
 stenkast
 stenparti
+stenröse
 stick
 stickord
 stickprov
@@ -4121,6 +4143,8 @@ sugrör
 suicid
 sulfat
 supinum
+surrogat
+sutare
 svaj
 svalg
 svammel
@@ -4174,6 +4198,7 @@ sällskap
 sällskapsdjur
 sällskapsspel
 sändebud
+sänglinne
 sänkningstecken
 särkullbarn
 säte
@@ -5091,6 +5116,7 @@ zoomobjektiv
 överskott
 överskåp
 överslag
+överspel
 överströmsskydd
 överstycke
 övertag
