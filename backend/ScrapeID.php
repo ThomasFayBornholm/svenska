@@ -15,8 +15,10 @@
 	// Remove any enumeration values from the word
 	if (str_contains($word, "-")) {
 		$tmpLen = strpos($word,"-");
-		$enum = substr($word,$tmpLen+1);
-		$word = substr($word,0,$tmpLen);		
+		if (is_numeric(substr($word,$tmpLen+1,1))) {
+			$enum = substr($word,$tmpLen+1);
+			$word = substr($word,0,$tmpLen);		
+		}
 	}
 	
 	// return an array to support casees where multiple entries exist	
