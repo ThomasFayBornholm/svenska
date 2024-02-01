@@ -242,6 +242,7 @@ autentisk
 autogen
 automatisk
 autonom
+autotrof
 avancerad
 avantgardistisk
 avbruten
@@ -271,7 +272,6 @@ avmagrad
 avmätt
 avog
 avokadogrön
-avsedd
 avsevärd
 avsides
 avsigkommen
@@ -817,6 +817,7 @@ egeisk
 egen
 egenartad
 egendomlig
+egendomslös
 egenhändig
 egenkär
 egenmäktig
@@ -934,6 +935,7 @@ evolutionär
 evärdlig
 exakt
 excentrisk
+exceptionell
 exekutiv
 exempellös
 exemplarisk
@@ -1116,6 +1118,7 @@ framhjulsdriven
 framkomlig
 framliden
 framskjuten
+framstegsvänlig
 framstående
 framsynt
 framtida
@@ -1158,6 +1161,7 @@ frostfri
 frostig
 fruktansvärd
 fruktbar
+fruktbärande
 fruktlös
 fruktsam
 frusen
@@ -1621,7 +1625,6 @@ handlingskraftig
 handnervig
 handskriven
 hanlig
-hanterbar
 hanterlig
 hantverksmässig
 haploid
@@ -1673,6 +1676,7 @@ hetero
 heterodox
 heterogen
 heterosexuell
+heterotrof
 hetlevrad
 hetsig
 heuristisk
@@ -2017,6 +2021,7 @@ intrigant
 intrikat
 introvert
 intuitiv
+invand
 invariant
 invecklad
 invers
@@ -2638,6 +2643,7 @@ mager
 magerlagd
 magisk
 magnetisk
+magnificus
 magnifik
 magnum
 maka
@@ -2656,6 +2662,7 @@ malmförande
 malmöitisk
 malplacerad
 mammaledig
+mandelögd
 manhaftig
 manierad
 manifest
@@ -2685,6 +2692,7 @@ matfrisk
 matig
 matt
 matt-2
+maxad
 maximal
 medansvarig
 medborgerlig
@@ -3125,6 +3133,7 @@ oförmedlad
 oförmodad
 oförmärkt
 oförmögen
+oförnuftig
 oförsiktig
 oförskräckt
 oförskylld
@@ -3132,6 +3141,7 @@ oförskämd
 oförsonlig
 oförståelig
 oförstående
+oförståndig
 oförsynt
 oförtjänt
 oförtruten
@@ -3272,6 +3282,7 @@ ondskefull
 oneklig
 onomastisk
 onomatopoetisk
+onykter
 onyttig
 onåbar
 onödig
@@ -3311,6 +3322,7 @@ ordrik
 orealistisk
 oredig
 oredlig
+oregerlig
 oreglerad
 oren
 orenlig
@@ -3400,6 +3412,7 @@ otvetydig
 otvivelaktig
 otvungen
 otydlig
+otyglad
 otymplig
 otäck
 otänkbar
@@ -3594,6 +3607,7 @@ privat
 privatanställd
 problematisk
 problemorienterad
+procentuell
 processorienterad
 produktiv
 profan
@@ -3608,7 +3622,6 @@ proletär
 prominent
 proper
 proportionell
-proppfull
 proppmätt
 proprietär
 prostituerad
@@ -3686,6 +3699,7 @@ redlös
 redo
 redundant
 reell
+reflexiv
 reflexmässig
 reformert
 reformistisk
@@ -4687,6 +4701,7 @@ tvåsam
 tvåspråkig
 tvåstavig
 tydlig
+tygellös
 tyngdlös
 typisk
 tyrannisk
@@ -5057,6 +5072,7 @@ vidstående
 vig
 viktig
 vild
+vildsint
 viljelös
 viljestark
 villig
@@ -5087,6 +5103,7 @@ virtuell
 virtuos
 virtuosmässig
 vis
+visibel
 viss
 visuell
 vit

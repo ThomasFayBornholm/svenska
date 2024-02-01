@@ -20,6 +20,7 @@ accept
 acetat
 aceton
 ackord
+ackordeon
 ackusativobjekt
 adagio
 adamsäpple
@@ -653,6 +654,7 @@ bygge
 byggenskap
 byggnadstillstånd
 byggnadsverk
+bylte
 bymoln
 byte
 bytesobjekt
@@ -698,6 +700,7 @@ chips
 cigarettpaket
 cinematek
 cirkulär
+ciss
 citat
 citatord
 civilflyg
@@ -778,6 +781,7 @@ disco
 diskmedel
 diskotek
 diskussionsprotokoll
+diss
 distansarbete
 distrikt
 djup
@@ -802,6 +806,7 @@ dotterföretag
 drag
 dragdjur
 dragskåp
+dragspel
 drakskepp
 drama
 draperi
@@ -883,6 +888,7 @@ eftertryck
 egennamn
 egensinne
 ego
+eiss
 ekfat
 ekipage
 eko
@@ -1029,6 +1035,7 @@ firmamärke
 fiske
 fiskekort
 fiskevatten
+fiss
 fjant
 fjun
 fjäderfä
@@ -1039,6 +1046,7 @@ flabb
 flaggskepp
 flaggspel
 flak
+flasklock
 flatskratt
 flax
 flerbarnstillägg
@@ -1136,6 +1144,7 @@ framdäck
 framförande
 framhjul
 framsteg
+framstegsparti
 framstycke
 framsäte
 framtidslöfte
@@ -1403,6 +1412,7 @@ gig
 gille
 gillestuga
 gips
+giss
 givande
 glansnummer
 glanspapper
@@ -1529,6 +1539,7 @@ görande
 göromål
 göt
 h
+ha ett varmt hjärta
 habegär
 hack
 hafs
@@ -1570,6 +1581,7 @@ handfat
 handgemäng
 handgången
 handikapp
+handklaver
 handlande
 handlingsprogram
 handlingssätt
@@ -1998,6 +2010,7 @@ kausalförhållande
 kavalleri
 kedjehjul
 kedjehus
+kedjestygn
 kejsarsnitt
 kex
 kikarsikte
@@ -2021,6 +2034,7 @@ klartecken
 klassamhälle
 klassrum
 klaver
+klavikord
 klensmide
 kli
 klick
@@ -2040,6 +2054,7 @@ klor
 kloster
 klot
 klotter
+kludd
 klunk
 klädesplagg
 klädskåp
@@ -2061,6 +2076,7 @@ knog
 knogjärn
 knott
 knull
+knyte
 knä
 knäckebröd
 knäveck
@@ -2143,6 +2159,8 @@ konvent
 konversationslexikon
 konvolut
 koordinatsystem
+kopiepapper
+kopieringspapper
 kopieringsskydd
 kopparmynt
 kopparstick
@@ -2207,6 +2225,7 @@ kronvrak
 kroppsarbete
 kroppsbyggande
 kroppsspråk
+krossa någons hjärta
 krucifix
 krull
 krumsprång
@@ -2330,6 +2349,7 @@ körfält
 körkort
 körsbär
 kött
+köttben
 köttsår
 l
 labb
@@ -2623,6 +2643,7 @@ medelvattenstånd
 medelvärde
 medgivande
 medhåll
+mediedrev
 medinflytande
 medium
 medlemskap
@@ -2774,6 +2795,7 @@ murliv
 murverk
 museiföremål
 museum
+musikförlag
 musikstycke
 musiköra
 muskelknippe
@@ -2884,6 +2906,7 @@ netto
 nettolön
 neutrum
 ng-ljud
+nidingsdåd
 nidingsverk
 nit
 nitrogen
@@ -3330,6 +3353,7 @@ rev
 revben
 revbensspjäll
 riddarhus
+ridspö
 rike
 riks
 riksarkiv
@@ -3415,6 +3439,7 @@ rå
 råd
 rådhus
 rådjur
+rådslag
 råmaterial
 rån
 rånmord
@@ -3444,6 +3469,7 @@ sabotage
 sadelskydd
 sadeltak
 saffransbröd
+sago
 sagodjur
 sagogryn
 sagoskimmer
@@ -4035,6 +4061,7 @@ stillestånd
 stim
 sting
 stipendium
+stjälkstygn
 stjärndygn
 stjärnskott
 stjärnsystem
@@ -4063,6 +4090,7 @@ straff
 straffområde
 strandhugg
 streck
+stresspåslag
 stridsfartyg
 stridshumör
 stridsmedel
@@ -4070,6 +4098,7 @@ stridsrop
 stridsäpple
 strul
 strumpeband
+strunt
 struntprat
 strupgrepp
 struphuvud
@@ -4098,6 +4127,7 @@ studiemedel
 studium
 stup
 stuprör
+stuteri
 stuveri
 stycke
 styckebruk
@@ -4421,6 +4451,7 @@ trick
 tripp
 trix
 troll
+trollspö
 tronskifte
 trontillträde
 trossamfund
@@ -4449,12 +4480,14 @@ trävirke
 tråg
 tråk
 trångmål
+trögdjur
 tröskelvärde
 tröskverk
 tröstköp
 tröstpris
 tugg
 tuggummi
+tulium
 tumgrepp
 tummel
 tumult
