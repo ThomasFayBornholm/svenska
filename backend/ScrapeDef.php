@@ -396,18 +396,19 @@
 	}
 	
 	function getDefFields($raw, $pos1) {						
-		$out = "";			
+		$out = "";	
 		$raw = str_replace(' <span class="deft">', "\n" . '<span class="deft">',$raw);
 		//echo $raw . "\n***\n";
 		$tmpArr = explode("\n", $raw);				
 		$delim = "";
 		$skip = false;
-		foreach($tmpArr as $l) {			
+		foreach($tmpArr as $l) {
+			if (str_contains($l, "expansion collapsed")) break;
 			if (str_contains($l,'</div>')) $skip = true;
 			if (str_contains($l,'class="kbetydelse"')) $skip = false;
 			if (!$skip) {
-				$tmp = processDefLine($l);			
-				if (strlen($tmp) > 0) {		
+				$tmp = processDefLine($l);
+				if (strlen($tmp) > 0) {
 					$out .= $delim . $tmp;
 					$delim = "\n";
 				}
@@ -491,7 +492,7 @@
 		$out = "";
 		foreach($divs as $el) {
 			$line = "";			
-			foreach($el as $l) {				
+			foreach($el as $l) {					
 				$tmp = processMoreLine($l);
 				if (strlen($tmp) > 0) {
 					if (strlen($line != 0) && (str_contains($tmp, "EXEMPEL:") || str_contains($tmp, "SAMMANSÄTTN."))) {
@@ -512,7 +513,7 @@
 		return $out;
 	}
 	
-	function processMoreLine($line) {		
+	function processMoreLine($line) {			
 		$ret = "";
 		if (str_contains($line,'class="syntex">')) {
 			$ret = "EXEMPEL: " . strip_tags($line);
@@ -520,8 +521,13 @@
 			$ret = "○ ";
 		} else if (str_contains($line,'class="utv"')) {
 			$ret = "{" . strip_tags($line) . "}";
-		} else if (str_contains($line,'class="def"')) {			
-			$ret = strip_tags($line);
+		} else if (str_contains($line,'class="def"')) {
+			if (str_contains($line,'class="hvtag')) {
+				$link = splitOutLink($line);
+				$ret = "<l>" . $link . "</l>" . str_replace($link, "",strip_tags($line));
+			} else {
+				$ret = strip_tags($line);
+			}
 		} else if (str_contains($line,'class="mxblocklx"')) {
 			$ret = "SAMMANSÄTTN./AVLEDN.: " . getLinkTexts($line,'<a class="hvtag"');
 		} else if (str_contains($line,'class="fkomblock"')) {
@@ -534,9 +540,9 @@
 			$ret = "HISTORIK: " . strip_tags($line);
 		} else if (str_contains($line,'class="et"')) {
 			$ret = strip_tags($line);
-		} else if (str_contains($line,'class="hvtag"')) {			
+		} else if (str_contains($line,'class="hvtag')) {	
 			$link = splitOutLink($line);
-			if (strlen($link) > 0) {
+			if (strlen($link) > 0) {				
 				$ret = "<l>" . $link . "</l>" . str_replace($link, "",strip_tags($line));
 			} else {
 				$ret = strip_tags($line);

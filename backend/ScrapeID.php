@@ -25,7 +25,7 @@
 	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';		
 	$url = str_replace(" ", "%20", $urlBase . $word);	
 	$url = str_replace("ä", "%C3%A4", $url);		
-	$ch = curl_init();	
+	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
@@ -154,6 +154,8 @@
 			$res =  ($given === "substantiv_en" || $given === "substantiv_ett");
 		} else if ($read === "adj.") {
 			$res = "adjektiv" === $given;
+		} else if ($read === "adv.") {
+			$res = "adverb" === $given;
 		} else {
 			$res = $read === $given;
 		}

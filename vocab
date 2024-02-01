@@ -51,7 +51,6 @@
 </div>
 
 <div id="iInfo" class="firstColumn" onwheel="scrollView(event)" oncontextmenu="clickMiddle(event)">
-
 	<div id="iDefDiv">
 		 <textarea  class="defBox" id="iDefText" onkeydown="defEntry(event)"></textarea>			 
 		 <div id="iPutDef">
@@ -3041,14 +3040,19 @@ function editMore(ev,key) {
 
 function processKeyDown(ev) {
 		
-	if (DEBUG) log("processKeyDown(ev), ev.key = " + ev.key)	
+	if (DEBUG) console.log("processKeyDown(ev), ev.key = " + ev.key)	
 	
 	if (ev.key === "Escape") {
 		$('#iInput').val("");
 	}
-	if (ev.key === "!") {
-		ev.preventDefault();
-		$('#iInput').val($('#iInput').val() + "!");
+	if (ev.key === "!") {			
+		if (!REGEX_MODE) {
+			ev.preventDefault();	
+			let tmp = $('#iInput').val() + "!"		
+			seekWord(tmp);
+		} else {
+		
+		}
 	}
 	if (ev.key === "ArrowUp") {
 		let el = document.getElementById("iInput");
