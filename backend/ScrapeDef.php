@@ -402,12 +402,16 @@
 		$tmpArr = explode("\n", $raw);				
 		$delim = "";
 		$skip = false;
+		$particle = false;
 		foreach($tmpArr as $l) {
+			if (str_contains($l, "lös förbindelse")) $particle = true;
+			if (str_contains($l, "fast sammansättn.")) $particle = true;
+			if (str_contains($l, 'class="hv"')) $particle = false;
 			if (str_contains($l, "expansion collapsed")) break;
 			if (str_contains($l,'</div>')) $skip = true;
 			if (str_contains($l,'class="kbetydelse"')) $skip = false;
 			if (!$skip) {
-				$tmp = processDefLine($l);
+				$tmp = processDefLine($l,$particle);
 				if (strlen($tmp) > 0) {
 					$out .= $delim . $tmp;
 					$delim = "\n";
@@ -581,7 +585,7 @@
 		return $ret;
 	}
 	
-	function processDefLine($line) {
+	function processDefLine($line,$particle) {
 		$res = "";
 		if (str_contains($line, 'class="kbetydelse"')) {
 			$res = strip_tags($line) . " __";
@@ -595,12 +599,24 @@
 		} else if (str_contains($line, 'class="hkom"')) {
 			$res = "[" . strip_tags($line) . "] __";
 		} else if (str_contains($line, 'class="fkomblock"')) {
-			$res = "(" . strip_tags($line) . ") __";
+			$line = str_replace("<b>"," _b",$line);
+			$line = str_replace("</b>","b__",$line);
+			$res = "(" . strip_tags($line);
+			if (substr($res,-2) === "se") {
+				$res .= " __";
+			} else {
+				$res .= ") __";
+			}
+			$res = str_replace(" _b", " <b>",$res);
+			$res = str_replace("b__", "</b>",$res);
 		} else if (str_contains($line, 'class="hv"') || str_contains($line, 'class="hvtyp"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="hvtag"')) {
 			$res = "<l>" . strip_tags($line) . "</l>";
-			$res = str_replace(" , ", "</l>, <l>",$res);
+			$res = str_replace(" , ", "</l>, <l>",$res);			
+			if ($particle) {
+				$res .= ") __";
+			}
 		} else if (str_contains($line, 'class="deft"')) {
 			$res = "__ {" . strip_tags($line) . "}";
 		}
