@@ -97,11 +97,21 @@
 		$contents = file_get_contents($path . $name, 'UTF-8');
 		$arr = json_decode($contents, true);
 		$arr[$word] = $def;
-		file_put_contents($path . $name, json_encode($arr));
+		ksort($arr);
+		$outDef = "{" . PHP_EOL;
+		$delimDef = "";
+		foreach ($arr as $key => $value) {
+			$val = str_replace('"',"'",$value);
+ 			$outDef .= $delimDef . '"' . $key . '": "' . $val . '"';
+			$delimDef = ',' . PHP_EOL;
+		}	
+		$outDef .= PHP_EOL . "}";
+		// Write as string rather than JSON to allow new line as delimiter
+		file_put_contents($path . $name, $outDef);
 	}
 	
 	// Do not replace any existing score by default	
-	// If not existing score then default to "2". User can easily update this from interface	
+	// If not existing score then default to "2". User can easily update this from web-interface	
 	$name = $class . "-score";
 	if (!file_exists($name)) fopen($name, "w");			
 	$contents = file_get_contents($path . $name, 'UTF-8');
@@ -109,7 +119,15 @@
 	if (!array_key_exists($word, $arr)) {
 		$arr[$word] = "2";
 	}
-	file_put_contents($path . $name, json_encode($arr));	
+	ksort($arr);
+	$outScore = "{" . PHP_EOL;
+	$delimScore = "";
+	foreach ($arr as $key => $value)   {
+		$outScore .= $delimScore . '"' . $key . '": "' . $value . '"';
+		$delimScore = "," . PHP_EOL;
+	}
+	$outScore .= PHP_EOL . "}";
+	file_put_contents($path . $name, $outScore);
 	
 	if ($class != "faser") {
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
@@ -129,7 +147,16 @@
 				$arr[$key] = $moreSplit[$i];
 				$i++;
 			}
-			file_put_contents($path. $name, json_encode($arr));
+			ksort($arr);
+			$outMore = "{" . PHP_EOL;
+			$delimMore = "";
+			foreach($arr as $key => $value) {
+				$value = str_replace('"',"'",$value);
+				$outMore .= $delimMore . '"' . $key . '": "' . $value . '"';
+				$delimMore = "," . PHP_EOL;
+			}
+			$outMore .= PHP_EOL . "}";
+			file_put_contents($path. $name, $outMore);
 		}
 		
 		if (strlen($meta) > 0) {
@@ -137,7 +164,16 @@
 			$contents = file_get_contents($path . $name, 'UTF-8');
 			$arr = json_decode($contents,true);			
 			$arr[$word] = $meta;			
-			file_put_contents($path . $name, json_encode($arr));
+			ksort($arr);
+			$outMeta = "{" . PHP_EOL;
+			$delimMeta = "";
+			foreach($arr as $key => $value) {
+				$value = str_replace('"',"'",$value);
+				$outMeta .= $delimMeta . '"' . $key . '": "' . $value . '"';
+				$delimMeta = "," . PHP_EOL;
+			}
+			$outMeta .= PHP_EOL . "}";
+			file_put_contents($path . $name, $outMeta);
 		}
 	}
 	echo json_encode("success");
@@ -159,4 +195,13 @@
 		}
 		return $short;
 	}
+	function cmp($a, $b)
+	{
+		var_dump($a);
+		echo "<br>";
+		var_dump($b);
+    	return key($a) > key($b);
+	}
+
+
 ?>

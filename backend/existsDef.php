@@ -49,7 +49,7 @@
 					}
 				}
 			} else {
-				echo json_encode("Could not read json");
+				echo json_encode("Could not read json from '" . $name . "'");
 				return;
 			}
 		}
