@@ -152,6 +152,7 @@
 			$delimMore = "";
 			foreach($arr as $key => $value) {
 				$value = str_replace('"',"'",$value);
+				$value = str_replace('\\','\\\\',$value);
 				$outMore .= $delimMore . '"' . $key . '": "' . $value . '"';
 				$delimMore = "," . PHP_EOL;
 			}
