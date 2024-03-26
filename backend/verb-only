@@ -1,4 +1,3 @@
-MBL-förhandla
 abbreviera
 abdikera
 abonnera
@@ -251,7 +250,6 @@ avisera
 avjaga
 avjämna
 avkasta
-avkasta
 avklarna
 avklinga
 avkläda
@@ -397,6 +395,7 @@ avvänja
 avväpna
 avvärja
 avyttra
+av­kasta
 aväta
 axiomatisera
 axla
@@ -1303,6 +1302,7 @@ energieffektivisera
 enervera
 engagera
 enkelrikta
+enrollera
 entlediga
 envisas
 erbjuda
@@ -1859,7 +1859,6 @@ förmultna
 förmäla
 förmäla sig
 förmäla-2
-förmäla sig
 förmänskliga
 förmärka
 förmå
@@ -2277,6 +2276,7 @@ gänga
 gänga sig
 gärda
 gäspa
+gästa
 gå
 gå an
 gå bort
@@ -2527,6 +2527,7 @@ hörsamma
 hösta in
 hötta
 hövas
+i tid och otid
 iaktta
 idas
 idealisera
@@ -2611,6 +2612,7 @@ inhämta
 inhösta
 initiera
 injaga
+injektera
 injicera
 inkalla
 inkapsla
@@ -2758,6 +2760,7 @@ jiddra
 jobba
 joddla
 jogga
+jollra
 jonglera
 jorda
 jordfästa
@@ -3264,13 +3267,9 @@ köpa ut
 köpslå
 köra
 köra fast
-köra fast
 köra ihop sig
 köra in
-köra in
 köra om
-köra om
-köra på
 köra på
 köra upp
 köra ur
@@ -3549,6 +3548,7 @@ matta
 mattas av
 maxa
 maximera
+mbl-förhandla
 medaljera
 medarbeta
 medbringa
@@ -3572,6 +3572,7 @@ meritera
 meritera sig
 messa
 meta
+migrera
 mikra
 mildra
 minera
@@ -3722,7 +3723,6 @@ narra av
 narra i
 narras
 nationalisera
-nationalskald
 navigera
 navla av
 nedbringa
@@ -3743,6 +3743,7 @@ nedteckna
 nedtona
 nedtrappa
 nedvärdera
+ned­värdera
 negera
 negligera
 neka
@@ -3768,7 +3769,6 @@ normalisera
 normera
 nosa
 nosa sig
-nota
 notera
 nubba
 nudda
@@ -3787,7 +3787,6 @@ nyskapa
 nysta
 nysta av
 nysta upp
-nytta
 nyttja
 nämna
 näpsa
@@ -3808,7 +3807,6 @@ obducera
 obs
 observera
 obstruera
-ockra
 ockupera
 odla
 offentliggöra
@@ -4050,6 +4048,7 @@ predika
 predisponera
 preferera
 prenumerera
+preparera
 presentera
 preservera
 presidera
@@ -4132,7 +4131,6 @@ påbjuda
 påbörja
 pågå
 påkalla
-påkörning
 påla
 påminna
 påpeka
@@ -4315,7 +4313,6 @@ rivalisera
 ro
 roa
 roa sig
-rocka
 roffa
 rollsätta
 ropa
@@ -4634,7 +4631,6 @@ skjuta upp
 skjuta över
 skjutsa
 skjuva
-sko
 skoja
 skoja till sig
 skola
@@ -4741,7 +4737,6 @@ skärpa in
 skärpa sig
 skärra
 skärskåda
-skärva
 skåda
 skåla
 skåra
@@ -4760,7 +4755,6 @@ slaka
 slakna
 slakta
 slamma
-slamning
 slamra
 slantsingla
 slappa
@@ -4842,7 +4836,6 @@ slå över
 slåss
 slöa
 slöa till
-slöja
 slösa
 smacka
 smaka
@@ -4868,7 +4861,6 @@ smitta av sig
 smocka
 sms:a
 smuggla
-smula
 smussla
 smutsa
 smutsa ner
@@ -4909,7 +4901,6 @@ snagga
 snagga sig
 snappa
 snappa upp
-snara
 snarka
 snaska
 snatta
@@ -4966,7 +4957,6 @@ sona
 sondera
 sopa
 sopa till
-sophämtning
 sorla
 sortera
 sota
@@ -4997,7 +4987,6 @@ spela upp
 spela ut
 spela över
 spendera
-speta
 spetsa till
 spetsa till sig
 spexa
@@ -5094,18 +5083,11 @@ stenografera
 sterilisera
 sticka
 sticka av
-sticka av
-sticka emellan
 sticka emellan
 sticka ner
-sticka ner
-sticka sig
 sticka sig
 sticka till
-sticka till
 sticka upp
-sticka upp
-sticka ut
 sticka ut
 sticka-2
 stickas
@@ -5149,7 +5131,6 @@ strida
 stridulera
 strila
 strimla
-strimma
 stripa
 strippa
 strosa
@@ -5269,7 +5250,6 @@ suga av
 suga i
 suga upp
 suga ut
-sugning
 sukta
 sula
 summa
@@ -5294,7 +5274,6 @@ svassa
 svavla
 sveda
 svedja
-svedjemark
 svepa
 svetsa
 svettas
@@ -5324,7 +5303,6 @@ svära
 svärma
 svärta
 sväva
-sväva på målet
 swappa
 sy
 sy ihop
@@ -5529,7 +5507,6 @@ tillstyrka
 tillstå
 tillsätta
 tilltala
-tilltro
 tillträda
 tilltvinga sig
 tillvarata
@@ -5598,7 +5575,6 @@ torka
 torka in
 torka inne
 torka ut
-torktrasa
 torktumla
 tornera
 torska
@@ -5987,7 +5963,6 @@ utjämna
 utklassa
 utkomma
 utkommendera
-utkora
 utkristallisera
 utkräva
 utkvittera
@@ -6096,6 +6071,7 @@ vakna upp
 vakta
 vakuumförpacka
 valla
+valla in
 valsa
 vanartas
 vandalisera
@@ -6115,7 +6091,6 @@ vanvörda
 vanära
 vara
 vara sig
-vara sig
 vara-2
 varda
 variera
@@ -6128,8 +6103,6 @@ varva ner
 varva upp
 vaska
 vattenfylla
-vattenskopa
-vattenså
 vattna
 vattna sig
 vattna ur
@@ -6242,7 +6215,6 @@ vräka
 vräka i sig
 vräka sig
 vräka ur sig
-vräkning
 vråla
 vurma
 vurpa
@@ -6264,7 +6236,6 @@ välkomna
 välla
 välsigna
 välta
-välta över
 välta över
 välta-2
 vältra
@@ -6349,6 +6320,11 @@ yva sig
 yvas
 zooma
 zooma ut
+­blåsa an
+­blåsa av
+­blåsa undan
+­blåsa upp
+­blåsa ut
 äckla
 äga
 ägna
@@ -6446,8 +6422,6 @@ zooma ut
 återhålla
 återinföra
 återkalla
-återkallelse
-återkasta
 återkasta
 återklinga
 återknyta
@@ -6474,9 +6448,9 @@ zooma ut
 återvinna
 återvälja
 återvända
+åter­kasta
 åtfölja
 åtgärda
-åtgå
 åtlyda
 åtnjuta
 åtnöja sig
@@ -6533,7 +6507,6 @@ zooma ut
 överenskomma
 överensstämma
 överexponera
-överfalla
 överfalla
 överflygla
 överflöda
@@ -6598,6 +6571,7 @@ zooma ut
 överväldiga
 övervältra
 övervärdera
+över­falla
 överäta
 överösa
 övningsköra

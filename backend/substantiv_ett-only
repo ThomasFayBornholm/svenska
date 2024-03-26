@@ -1,9 +1,6 @@
 A-barn
 A-skatt
 A-språk
-A-barn
-A-skatt
-A-språk
 AV-hjälpmedel
 B-lag
 B-språk
@@ -12,6 +9,7 @@ C-språk
 C-vitamin
 D-vitamin
 E-vitamin
+Söderhavet
 U-rör
 a
 abakus
@@ -229,7 +227,6 @@ augment
 augustipäron
 automatgevär
 automatkarbin
-AV-hjälpmedel
 avancemang
 avantgarde
 avbeställningsskydd
@@ -283,8 +280,6 @@ ax-2
 axiom
 axplock
 b
-B-lag
-B-vitamin
 babord
 babysim
 babyskydd
@@ -310,7 +305,6 @@ bakpulver
 bakrus
 bakslag
 bakspår
-bakstreck
 bakstycke
 baksäte
 bakverk
@@ -367,7 +361,6 @@ belopp
 belägg
 belägringstillstånd
 beläte
-beläte-2
 bemanningsföretag
 bemyndigande
 bemödande
@@ -688,8 +681,6 @@ bönemöte
 böneutrop
 bönkaffe
 c
-C-språk
-C-vitamin
 café
 casino
 cellulosanitrat
@@ -729,7 +720,6 @@ cykelställ
 cyklop
 cyklopöga
 d
-D-vitamin
 dagbefäl
 dagblad
 dagcenter
@@ -870,7 +860,6 @@ e
 e-brev
 e-mail
 e-recept
-E-vitamin
 edikt
 effektgarn
 efterarbete
@@ -964,7 +953,6 @@ evangelium
 evenemang
 event
 ex
-ex-2
 examensarbete
 exempel
 exemplar
@@ -1053,6 +1041,7 @@ flabb
 flaggskepp
 flaggspel
 flak
+flams
 flasklock
 flatskratt
 flax
@@ -1546,7 +1535,6 @@ görande
 göromål
 göt
 h
-ha ett varmt hjärta
 habegär
 hack
 hafs
@@ -2232,7 +2220,6 @@ kronvrak
 kroppsarbete
 kroppsbyggande
 kroppsspråk
-krossa någons hjärta
 krucifix
 krull
 krumsprång
@@ -3487,6 +3474,7 @@ sakobjekt
 sakrament
 sakramentsskåp
 sakregister
+sak­förhållande
 salighetsrus
 salongslejon
 salt
@@ -4248,7 +4236,6 @@ sågspån
 såll
 sångspel
 sår
-Söderhavet
 sök
 sökarljus
 sökord
@@ -4443,7 +4430,6 @@ trakasseri
 traktamente
 tramp
 trampfartyg
-tramsflams
 transept
 transportband
 trapphus
@@ -4550,7 +4536,6 @@ töcken
 törne
 u
 u-land
-U-rör
 uddaplagg
 uddljud
 uddrim
@@ -4952,6 +4937,8 @@ yxskaft
 z
 zoo
 zoomobjektiv
+­könsorgan
+­rör
 ä
 äckel
 ädelmod
