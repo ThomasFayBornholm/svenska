@@ -91,7 +91,7 @@
 		curl_setopt($ch,CURLOPT_URL,$url);					
 		$def = curl_exec($ch);
 	} else {
-		echo "No Lemma ID found";
+		echo json_encode("No Lemma ID found");
 		return;
 	}
 
@@ -143,7 +143,7 @@
 	if (count($tmpArrSNR) >= $enum) {
 		$out["snr"] = $tmpArrSNR[$enum-1];
 	} else {
-		echo "Too Few SNR IDs found";
+		echo json_encode("Too few SNR IDs found");
 		exit();
 	}
 	echo json_encode($out);
@@ -182,6 +182,8 @@
 				return "adverb";
 			case "räk":
 				return "räkneord";
+			case "plu":
+				return "plural";
 		}
 		return $inClass;
 	}

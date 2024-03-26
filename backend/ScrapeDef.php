@@ -399,7 +399,7 @@
 		$out = "";	
 		$raw = str_replace(' <span class="deft">', "\n" . '<span class="deft">',$raw);
 		//echo $raw . "\n***\n";
-		$tmpArr = explode("\n", $raw);				
+		$tmpArr = explode("\n", $raw);		
 		$delim = "";
 		$skip = false;
 		$particle = false;
@@ -407,7 +407,7 @@
 			if (str_contains($l, "lös förbindelse")) $particle = true;
 			if (str_contains($l, "fast sammansättn.")) $particle = true;
 			if (str_contains($l, 'class="hv"')) $particle = false;
-			if (str_contains($l, "expansion collapsed")) break;
+			//if (str_contains($l, "expansion collapsed")) break;
 			if (str_contains($l,'</div>')) $skip = true;
 			if (str_contains($l,'class="kbetydelse"')) $skip = false;
 			if (!$skip) {
@@ -422,8 +422,9 @@
 		$out = str_replace("\n__ "," ",$out);			
 		
 		$out = str_replace("\n","<br>",$out);
-		$out = str_replace("det att <br>", "det att ",$out);		
-		return $out;		
+		$out = str_replace("det att <br>", "det att ",$out);				
+		return $out;
+		
 	}
 	
 	function getGrammar($block) {

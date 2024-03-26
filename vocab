@@ -3764,7 +3764,7 @@ function fetchDefWords(allWords,ind) {
 		alert(1);
 		return fetchDefWords(allWords,ind+1);
 	}
-	let backend = 'backend/ScrapeDef.php?word=' + word + '&class=' + CLASS + '&debug=0';
+	let backend = 'backend/ScrapeID.php?word=' + word + '&class=' + CLASS + '&debug=0';
 	fetch(backend, {
 		method: 'get',
 		mode: 'cors',
@@ -3775,10 +3775,12 @@ function fetchDefWords(allWords,ind) {
 	.then(response => {
 		return response.json();
 	})
-	.then(json => {		
-		if (! json.hasOwnProperty("error")) {
-			let url = 'backend/addDef.php?word=' + word + '&meta=&def=&more=' + json["more"] + '&class=' + CLASS; 
-			fetch(url, {
+	.then(json => {
+		if (json["snr"] && json["id"]) {			
+			let id = json["id"];
+			let snr = json["snr"]		
+			let backend = 'backend/ScrapeDef.php?word=' + CUR_WORD + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
+			fetch(backend, {
 				method: 'get',
 				mode: 'cors',
 				headers: {
@@ -3786,27 +3788,45 @@ function fetchDefWords(allWords,ind) {
 				}
 			})
 			.then(response => {
-				let upper = allWords.length - 1
-				if (ind > upper) {
-					return;
-				} else {					
-					return fetchDefWords(allWords,ind+1);
+				return response.json();
+			})
+			.then(json => {
+				if (! json.hasOwnProperty("error")) {
+					let url = 'backend/addDef.php?word=' + word + '&meta=&def=&more=' + json["more"] + '&class=' + CLASS; 
+					fetch(url, {
+						method: 'get',
+						mode: 'cors',
+						headers: {
+							'Content-Type': 'application/json'
+						}
+					})
+					.then(response => {
+						let upper = allWords.length - 1
+						if (ind > upper) {
+							return;
+						} else {					
+							return fetchDefWords(allWords,ind+1);
+						}
+					})
+					.catch(error => {
+						console.log(error);
+					})
+				} else {
+					$('#iMeta').html("Failed to find match");
+					let upper = allWords.length - 1
+					if (ind >= upper) {
+						return;
+					} else {
+						return fetchDefWords(allWords,ind+1);
+					}
 				}
 			})
-			.catch(error => {
-				console.log(error);
-			})
 		} else {
-			$('#iMeta').html("Failed to find match");
-			let upper = allWords.length - 1
-			if (ind >= upper) {
-				return;
-			} else {
-				return fetchDefWords(allWords,ind+1);
-			}
-		}		
-		
+			// Continue to next word if no definition found for current
+			return fetchDefWords(allWords,ind+1);
+		}
 	})
+	
 }
 
 function forScrapeID(word) {
