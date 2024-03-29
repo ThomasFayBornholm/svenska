@@ -13,12 +13,17 @@
 	$name = $class . $trail;
 	$metaName = $class . "-meta";
 	if (file_exists($name)) {
-		if (filesize($name) != 0 && filesize($metaName) != 0) {
+		if (filesize($name) != 0) {
 			$contents = file_get_contents($path . $name, 'UTF-8');
-			$metaContents = file_get_contents($path . $metaName);
-			
+			$dictMeta = null;
+			if ($class != "fraser") {
+				if (filesize($metaName) != 0) {
+					$metaContents = file_get_contents($path . $metaName);
+					$dictMeta = json_decode($metaContents, JSON_UNESCAPED_UNICODE);
+				}
+			}
 			$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
-			$dictMeta = json_decode($metaContents, JSON_UNESCAPED_UNICODE);
+			
 			$scoreName = $class . "-score";
 			$scoreContents = file_get_contents($path . $scoreName);
 			$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);		
