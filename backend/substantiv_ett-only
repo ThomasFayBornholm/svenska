@@ -451,6 +451,7 @@ bindeord
 bindestreck
 binom
 biobesök
+bisamhälle
 biskopsdöme
 biskviporslin
 bistånd
@@ -841,6 +842,8 @@ dunk
 duntäcke
 duplikat
 dussin
+dussintal
+duvhök
 dygdemönster
 dygn
 dyk
@@ -1101,7 +1104,6 @@ folkkynne
 folklustspel
 folkmord
 folkmål
-folkparti
 folkslag
 folkstyre
 folkuniversitet
@@ -1208,6 +1210,7 @@ fängelse
 fängelsestraff
 färdbevis
 färdighetsämne
+färdmedel
 färgband
 färgfoto
 färgämne
@@ -1253,6 +1256,7 @@ förehavande
 föremål
 föreningsliv
 företag
+företal
 företräde
 företrädesrätt
 förfall
@@ -1279,6 +1283,7 @@ förled
 förlopp
 förlöjligande
 förmodande
+förmyndarskap
 förmånserbjudande
 förnamn
 förnuft
@@ -1575,6 +1580,7 @@ handelshus
 handelskompani
 handfat
 handgemäng
+handgrepp
 handgången
 handikapp
 handklaver
@@ -1607,6 +1613,7 @@ hedersord
 hederspris
 hekto
 hektogram
+helgerån
 helgon
 helhetsintryck
 helljus
@@ -1957,6 +1964,7 @@ kalendarium
 kalenderår
 kalfjäll
 kalhygge
+kalifat
 kalk
 kalkbrott
 kalkerpapper
@@ -2012,6 +2020,7 @@ kex
 kikarsikte
 kilogram
 kilopris
+kink
 kinotek
 kisel
 kitt
@@ -2167,6 +2176,7 @@ korallrev
 korn
 korngryn
 korollarium
+korrelat
 kors
 korsben
 korsförhör
@@ -2334,6 +2344,7 @@ kölvatten
 kön
 könshormon
 könsliv
+könsobjekt
 könsorgan
 könsumgänge
 köp
@@ -2343,6 +2354,7 @@ köptvång
 körfält
 körkort
 körsbär
+kösamhälle
 kött
 köttben
 köttsår
@@ -3340,7 +3352,6 @@ resande
 reservdäck
 resgods
 residuum
-resmål
 resonemang
 resultat
 returglas
@@ -3476,6 +3487,7 @@ sakobjekt
 sakrament
 sakramentsskåp
 sakregister
+sakrilegium
 sak­förhållande
 salighetsrus
 salongslejon
@@ -3508,6 +3520,7 @@ sammelsurium
 sammet
 sampel
 samråd
+samröre
 samspel
 samsyn
 samtal
@@ -3576,6 +3589,7 @@ set
 sex
 sexliv
 sexmord
+sexobjekt
 sexualbrott
 sexualliv
 sexualmord
@@ -4229,6 +4243,7 @@ sällskapsspel
 sändebud
 sänglinne
 sänkningstecken
+särdrag
 särkullbarn
 säte
 sätt
@@ -4298,6 +4313,7 @@ tegel
 tegskifte
 tekniksprång
 telefax
+telefonjack
 telefonnummer
 telefonrecept
 telefonsamtal
@@ -4307,6 +4323,7 @@ telenät
 teleobjektiv
 teleskop
 teleskopöga
+tellur
 tema
 tempel
 temperament
@@ -4926,7 +4943,6 @@ yrkesfiske
 yrkesförbud
 yrkesprogram
 yrkesregister
-yrkesval
 yrväder
 ytläge
 ytmått
