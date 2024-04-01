@@ -323,7 +323,7 @@
 		$arr = explode(";", $link);
 		$del = "";
 		foreach($arr as $el) {			
-			if (str_contains($el, "hvtag")) {				
+			if (str_contains($el, "hvtag")) {	
 				$out .= $del . "<l>" . strip_tags($el) . "</l>";
 			} else if (str_contains($el, "hvord")) {
 				$out .= $del . strip_tags($el);
@@ -528,7 +528,7 @@
 			$ret = "{" . strip_tags($line) . "}";
 		} else if (str_contains($line,'class="def"')) {
 			if (str_contains($line,'class="hvtag')) {
-				$link = splitOutLink($line);
+				$link = splitOutLink($line);				
 				$ret = "<l>" . $link . "</l>" . str_replace($link, "",strip_tags($line));
 			} else {
 				$ret = strip_tags($line);
@@ -587,11 +587,11 @@
 	}
 	
 	function processDefLine($line,$particle) {
-		$res = "";
+		$res = "";		
 		if (str_contains($line, 'class="kbetydelse"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="def"')) {
-				if (str_contains($line, 'class="hvtag"')) {
+			if (str_contains($line, 'class="hvtag"')) {					
 					$res = "<l>" . strip_tags($line) . "</l>";
 				} else {
 					$res = strip_tags($line);
@@ -613,11 +613,13 @@
 		} else if (str_contains($line, 'class="hv"') || str_contains($line, 'class="hvtyp"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="hvtag"')) {
-			$res = "<l>" . strip_tags($line) . "</l>";
+			$mid = strpos($line,"</a>");
+			$res = "<l>" . strip_tags(substr($line,0,$mid)) . "</l>";
 			$res = str_replace(" , ", "</l>, <l>",$res);			
 			if ($particle) {
 				$res .= ") __";
 			}
+			$res .= " " . strip_tags(substr($line,$mid));			
 		} else if (str_contains($line, 'class="deft"')) {
 			$res = "__ {" . strip_tags($line) . "}";
 		}
