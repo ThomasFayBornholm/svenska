@@ -3852,6 +3852,7 @@ blomvas
 blomvass
 blond
 blondera
+blondin
 blot
 blota
 blott
@@ -4432,6 +4433,7 @@ brottsjö
 brottslig
 brottslighet
 brottsling
+brottsoffer
 brottsplats
 brottsrekvisit
 brottstycke
@@ -4470,6 +4472,7 @@ brunbjörn
 brunbränd
 brunch
 brunera
+brunett
 brunkol
 brunn
 brunnsdrickning
@@ -4872,7 +4875,9 @@ bågsekund
 bågskytt
 bågskytte
 bål
+bålrullning
 bålverk
+bålväxt
 bårbärare
 bårhus
 bås
@@ -7716,6 +7721,7 @@ fara
 fara fram
 fara illa
 fara/resa/åka land och rike runt
+farao
 farbror
 farfar
 farhåga
@@ -7757,6 +7763,7 @@ fascinera
 fascism
 fascist
 fascistisk
+fasen
 fasett
 fasettera
 fasförskjutning
@@ -8739,6 +8746,7 @@ fredag
 fredlig
 fredlös
 fredsam
+fredsfördrag
 fredsmäklare
 fredsplikt
 fregatt
@@ -12270,6 +12278,7 @@ halsband
 halsbloss
 halsbrytande
 halsbränna
+halsböld
 halsduk
 halsfluss
 halshugga
@@ -13076,6 +13085,7 @@ hundkoja
 hundliv
 hundlort
 hundra
+hundrade
 hundradel
 hundrakronorssedel
 hundralapp
@@ -17028,6 +17038,7 @@ konversationslexikon
 konversatör
 konversera
 konversion
+konverter
 konvertera
 konvex
 konvoj
@@ -18218,6 +18229,7 @@ lagledare
 laglig
 laglighet
 laglott
+lagning
 lagom
 lagra
 lagring
@@ -19803,8 +19815,10 @@ maktskifte
 maktspel
 maktspråk
 maktövertagande
+makulera
 mal
 mala
+malaria
 malariamygga
 maliciös
 malign
@@ -19979,6 +19993,7 @@ mars
 marsch
 marsch pannkaka!
 marschera
+marschfart
 marskalk
 martera
 martialisk
@@ -20476,10 +20491,12 @@ milstolpe
 milsvid
 mimik
 mimosa
+min ringhet
 min själ
 mina
 minderårig
 mindre
+mindre vetande
 mindretal
 minera
 mineral
@@ -20881,6 +20898,7 @@ mossig
 mossros
 moster
 mot
+mot bättre vetande
 mot förmodan
 mota
 mota Olle i grind
@@ -21258,6 +21276,7 @@ mångbesjungen
 mångbyggare
 mångdubbel
 mångdubbla
+mången
 mångfald
 mångfaldig
 mångfaldiga
@@ -22153,7 +22172,6 @@ någonsin
 någonstans
 någonvart
 någorlunda
-något
 något att bita i
 något får man leta efter
 något går in genom det ena örat och ut genom det andra
@@ -22358,6 +22376,7 @@ oduglig
 odygd
 odygdig
 odyssé
+odåga
 odödlig
 odöpt
 odör
@@ -22396,6 +22415,7 @@ officer
 officerare
 officiell
 offra
+offra sig
 ofin
 oflyt
 ofog
@@ -22722,6 +22742,7 @@ omsluta
 omslutning
 omsorg
 omsorgsfull
+omspinna
 omspänna
 omstart
 omstridd
@@ -26132,6 +26153,7 @@ rödförskjutning
 rödgardist
 rödgran
 rödgrön
+rödhårig
 rödkindad
 rödkål
 rödlista
@@ -27440,6 +27462,7 @@ skaft
 skaka
 skaka hand
 skakel
+skakig
 skakning
 skal
 skala
@@ -27660,6 +27683,7 @@ skita ner
 skita ner sig
 skita på sig
 skita sig
+skitig
 skitprat
 skitsnack
 skiva
@@ -27683,7 +27707,6 @@ skjuta till
 skjuta upp
 skjuta över
 skjuta över målet
-skjutbar
 skjutdörr
 skjutfält
 skjutjärnsintervju
@@ -28072,7 +28095,6 @@ skälla ut
 skällsord
 skälm
 skälva
-skälvning
 skämd
 skämma
 skämma bort
@@ -28844,6 +28866,7 @@ snopp
 snoppa
 snoppa av
 snor
+snora
 snorig
 snorta
 snorunge
@@ -28874,6 +28897,7 @@ snustorr
 snut
 snuva
 snuva-2
+snuvig
 snyft
 snyfta
 snyftare
@@ -29826,6 +29850,7 @@ stereotyp
 steril
 sterilisera
 steroid
+sterol
 stia
 stick
 stick i stäv
@@ -30620,6 +30645,7 @@ summera
 sump
 sump-2
 sumpbäver
+sumpfeber
 sumpgas
 sumpig
 sumpmark
@@ -31045,6 +31071,7 @@ säga ut
 säga varken bu eller bä
 säga åt
 sägen
+sägenomspunnen
 säker
 säkerhet
 säkerhetsbälte
@@ -32411,6 +32438,7 @@ tolkning
 tolkningsföreträde
 tolvfingertarm
 tolvskilling
+tolvslaget
 tolvtaggare
 tolvtonsmusik
 tom
@@ -32468,6 +32496,7 @@ topologi
 topp
 topp tunnor rasande
 toppa
+toppfart
 toppform
 toppig
 topping
@@ -33708,6 +33737,7 @@ uppbringa
 uppbrott
 uppbrusande
 uppbygga
+uppbyggelse
 uppbygglig
 uppbyggnad
 uppbära
@@ -35375,6 +35405,7 @@ veta med sig
 veta om
 veta sig
 veta sin plats
+veta till sig
 veta var man har någon
 veta varken ut eller in
 vetande
@@ -35522,6 +35553,7 @@ viljestark
 viljestyrka
 viljeyttring
 villa
+villa bort
 villebråd
 villervalla
 villfarelse
