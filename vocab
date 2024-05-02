@@ -3257,7 +3257,7 @@ function toggleRegexMode(force = false) {
 	if (REGEX_MODE || force) {
 		$('#iInput').css("background", "navajowhite")
 	} else {
-		$('#iInput').css("background", "beige")
+		$('#iInput').css("background", "lightskyblue")
 	}
 }
 
