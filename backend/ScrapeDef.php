@@ -408,7 +408,7 @@
 			if (str_contains($l, "fast sammansättn.")) $particle = true;
 			if (str_contains($l, 'class="hv"')) $particle = false;
 			//if (str_contains($l, "expansion collapsed")) break;
-			if (str_contains($l,'</div>')) $skip = true;
+			if (str_contains($l,'</div>') || str_contains($l,"expansion collapsed")) $skip = true;
 			if (str_contains($l,'class="kbetydelse"')) $skip = false;
 			if (!$skip) {
 				$tmp = processDefLine($l,$particle);
@@ -419,6 +419,7 @@
 			}
 		}
 		$out = str_replace("__\n","",$out);
+		$out = str_replace("__ \n"," ",$out);
 		$out = str_replace("\n__ "," ",$out);			
 		
 		$out = str_replace("\n","<br>",$out);
