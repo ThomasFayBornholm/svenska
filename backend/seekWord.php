@@ -24,6 +24,7 @@
 		} else {
 			$fuzzyE = str_replace("é","e",$w);
 			$fuzzyE = str_replace("é","e",$fuzzyE);
+			$fuzzyE = str_replace("à", "a",$fuzzyE);
 			// Prefer exact matches		
 			if ($w === $word || $fuzzyE === $word) {
 				echo json_encode($ind);
