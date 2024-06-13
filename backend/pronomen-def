@@ -3,7 +3,7 @@
 "Ers": "● (i ett få­tal ut­tryck vid hän­vändelse till högt upp­satt person) Eders",
 "I": "● <span onmouseover=highlight(this,event) onclick=followLink(this)><b>ni</b></span> ett äldre tilltals­ord till en el. flera personer",
 "all": "●  (vanligen i böjda former) hela mängden av{något} <br>JFR hel 1, samtlig, varje",
-"allihop": "● [ibland anv. med visst efter­tryck] <l>alla</l>{i en given grupp} ",
+"allihop": "● [ibland anv. med visst efter­tryck] <l>alla</l> {i en given grupp}",
 "alltihop": "● hela mängden{i det aktuella samman­hanget} ",
 "allting": "● hela mängden{i det aktuella samman­hanget} ",
 "ann": "● [var­dagligt] (i vissa ut­tryck) annan (person)",
@@ -37,7 +37,7 @@
 "ni": "● de som just nu blir till­talade eller till­skrivna<br>JFR du, er, 1vi",
 "någon": "1 (i substantivisk an­vändning) en­skild person eller före­teelse som inte är närmare känd eller an­given<br>MOTSATS <l>ingen</l><br>2 (vanligen i adjektivisk an­vändning) som har liten om­fattning eller lågt an­tal {ofta som ett slags mått}",
 "någondera": "●  (vanligen i nekande el. frågande ut­tryck) antingen den ena eller den andra{av före­teelserna (som fram­går av samman­hanget)} <br>JFR 1endera, ingendera",
-"någonting": "● viss, inte närmare känd, före­teelse{vanligen av tämligen obestämt slag} <br>JFR någon 1",
+"någonting": "● viss, inte närmare känd, före­teelse {vanligen av tämligen obestämt slag}<br>JFR <l>någon 1</l> ",
 "nån": "1  (i substantivisk an­vändning) en­skild person eller före­teelse som inte är närmare känd eller an­given<br>MOTSATS ingen<br>2  (vanligen i adjektivisk an­vändning) som har liten om­fattning eller lågt an­tal{ofta som ett slags mått} ",
 "samma": "● som är lika med den/det tidigare (eller senare) nämnda",
 "sig": "● __ {refl. pron., vanligen med syftning på subjektet i samma sats}",
@@ -57,6 +57,6 @@
 "vemhelst": "● [något hög­tidligt] vem (som) än",
 "vi": "● jag och de andra{i den grupp som talaren etc. räknar sig till; med el. utan inne­fattande av lyssnaren etc.} ",
 "vilken": "1 __ {fråge­ord som ut­trycker önske­mål om an­givande el. identifiering av viss person el. före­teelse; anv. i direkta el. indirekta frågor}<br>JFR <l>1vad 1</l> , vem<br>2 [ofta något formellt] <l>som</l>",
-"vår": "● förknippad med oss{spec. genom ägande men äv. all­männare} <br>SE 1vi",
+"vår": "● förknippad med oss {spec. genom ägande men äv. all­männare}<br>SE <l>1vi</l> ",
 "ömse": "● både {om två parter som in­går i samma (konkreta el. abstrakta) samman­hang}"
 }

@@ -217,6 +217,7 @@ allmogekultur
 allmosa
 allmänanda
 allmänhet
+allmänläkare
 allmänning
 allmänorientering
 allmänpraktiker
@@ -224,6 +225,7 @@ allmänprevention
 allmäntjänstgöring
 allsidighet
 allsvenska
+allsång
 allusion
 allätare
 allé
@@ -231,6 +233,7 @@ almanacka
 alp
 alpacka
 alpacka-2
+alpget
 alpinism
 alpros
 alstring
@@ -2241,6 +2244,7 @@ bukhinna
 bukhåla
 bukspottkörtel
 bukt
+bukt-2
 buktalare
 bula
 bulimi
@@ -2310,6 +2314,7 @@ byteshandel
 byxa
 byxficka
 byxkjol
+byxångest
 byäldste
 bäck
 bäckravin
@@ -3111,6 +3116,7 @@ dykarutrustning
 dymling
 dyna
 dynamik
+dynamit
 dynamitgubbe
 dynamo
 dynasti
@@ -3316,6 +3322,7 @@ elektrifiering
 elektriker
 elektrochock
 elektrod
+elektrokardiografi
 elektrokemi
 elektrolys
 elektrolyt
@@ -3416,7 +3423,6 @@ entreprenör
 entré
 entusiasm
 entusiast
-entydighet
 envåldshärskare
 enäggstvilling
 ep
@@ -3906,6 +3912,7 @@ flodmynning
 flodvåg
 flopp
 florett
+florin
 florist
 floskel
 flotta
@@ -4775,6 +4782,7 @@ gala
 galax
 galder
 galeas
+galeja
 galenpanna
 galenskap
 galge
@@ -4877,6 +4885,7 @@ gemenhet
 gemensamhet
 gemensamhetsgrav
 gemenskap
+gems
 gen
 gendopning
 genealog
@@ -5079,7 +5088,6 @@ golf
 golfare
 golfbana
 golfboll
-golfplats
 golfrunda
 golftävling
 golvbeläggning
@@ -5760,6 +5768,7 @@ hjärndöd
 hjärngymnastik
 hjärninfarkt
 hjärnskakning
+hjärnstam
 hjärntumör
 hjärnvindling
 hjärtdöd
@@ -6904,6 +6913,7 @@ kalvinist
 kalvjärpe
 kalvko
 kam
+kamarilla
 kamel
 kameleont
 kamera
@@ -7036,6 +7046,7 @@ kartnagel
 kartografi
 kartong
 kase
+kashmirget
 kaskad
 kassa
 kassabok
@@ -7334,6 +7345,7 @@ koagulation
 koagulering
 koala
 koalition
+koalitionsregering
 koaxialkabel
 kobbe
 kobolt
@@ -7833,6 +7845,7 @@ kronofogde
 kronolekt
 kronologi
 kronopark
+kronprins
 kronprinsessa
 kronärtskocka
 kropp
@@ -8064,6 +8077,7 @@ kyss
 käft
 käftsmäll
 kägel
+kägelbana
 kägla
 käke
 käkrem
@@ -8604,6 +8618,7 @@ lump-2
 lunch
 lund
 lunga
+lungcancer
 lunginflammation
 lungsnäcka
 lungsot
@@ -9014,6 +9029,7 @@ mask
 maska
 maskering
 maskin
+maskinhall
 maskinkod
 maskinvara
 maskopi
@@ -9122,7 +9138,6 @@ medley
 medling
 medlöpare
 medmänniska
-medpatient
 medspelare
 medström
 medsyster
@@ -9319,6 +9334,7 @@ mittlinje
 mittpunkt
 mix
 mixeddubbel
+mixer
 mjukdata
 mjukgörare
 mjukis
@@ -9908,6 +9924,7 @@ nostalgitripp
 not
 not-2
 nota
+notabilitet
 notapparat
 notarie
 notation
@@ -10127,6 +10144,7 @@ ogräsfisk
 ogärning
 ogärningsman
 ohyra
+ohälsa
 okapi
 okarina
 oklarhet
@@ -10333,6 +10351,7 @@ oscillation
 oscillator
 oscillograf
 osed
+oskuld
 osman
 ost
 ostbågar
@@ -10525,6 +10544,8 @@ passopp
 passus
 pasta
 pastej
+pastell
+pastellfärg
 pastor
 pastoral
 pastorsadjunkt
@@ -10743,6 +10764,7 @@ pjäxa
 placebo
 placeboeffekt
 placering
+plack
 plage
 plan
 planekonomi
@@ -11649,6 +11671,7 @@ rosenkål
 rosenmun
 rosenolja
 rosmarin
+rospigg
 rossling
 rost
 rostsvamp
@@ -11681,7 +11704,6 @@ rullad
 rullbräda
 rulle
 rullgardin
-rullning
 rullskridsko
 rullsten
 rullstensås
@@ -11793,6 +11815,7 @@ rätta
 rättegång
 rättegångsfullmakt
 rättelse
+rättfärdighet
 rättighet
 rättika
 rättskrivning
@@ -12800,6 +12823,7 @@ skådespelerska
 skådis
 skål
 skålgrop
+skåning
 skåpbil
 skåra
 sköld
@@ -12940,8 +12964,8 @@ smed
 smekmånad
 smekning
 smet
+smickrare
 smidesjärn
-smidighet
 smidning
 smilgrop
 sminkrot
@@ -13208,7 +13232,6 @@ sovmorgon
 sovstad
 sovsäck
 sovvagn
-spackel
 spade
 spadtag
 spagat
@@ -13504,6 +13527,7 @@ stavelse
 stavelseskrift
 stavgång
 stavkyrka
+stavmixer
 stavning
 stege
 stek
@@ -13512,11 +13536,11 @@ stekel
 stekpanna
 stekspade
 stekvändare
-stelhet
 stelkramp
 sten
 stenfot
 stenfrukt
+stenget
 stenhuggare
 stenkista
 stenkol
@@ -14320,6 +14344,7 @@ terminal
 terminologi
 termistor
 termometer
+termoplast
 terra
 terrass
 terror
@@ -14541,6 +14566,7 @@ tjänsteförsändelse
 tjänsteman
 tjänstepension
 tjänsteperson
+tjänsteresa
 tjänstesektor
 tjänsteställning
 tjänstevikt
@@ -14787,6 +14813,7 @@ trombos
 tron
 tronarvinge
 tronavsägelse
+tronföljare
 tronföljd
 tronhimmel
 tronpretendent
@@ -16122,12 +16149,12 @@ världshistoria
 världskarta
 världsmakt
 världsmedborgare
+världsmusik
 världsmästare
 världsrymd
 världsstad
 världstid
 världsvana
-världs­vana
 värme
 värmeanläggning
 värmebölja
