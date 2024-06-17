@@ -129,7 +129,7 @@
 	$outScore .= PHP_EOL . "}";
 	file_put_contents($path . $name, $outScore);
 	
-	if ($class != "faser") {
+	if ($class != "fraser") {
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
 		if (strlen($more) > 0) {
 			$key_suffix = "_0";
@@ -160,7 +160,7 @@
 			file_put_contents($path. $name, $outMore);
 		}
 		
-		if (strlen($meta) > 0) {
+		if (strlen($meta) > 0) {			
 			$name = $class . "-meta";
 			$contents = file_get_contents($path . $name, 'UTF-8');
 			$arr = json_decode($contents,true);			

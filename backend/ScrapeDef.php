@@ -686,6 +686,8 @@
 		$res = false;
 		if ($read === "substantiv") {
 			$res =  ($given === "substantiv_en" || $given === "substantiv_ett");
+		} else if ($read = "adjektiviskt slutled") {
+			$res = ($given === "slutled");
 		} else {
 			$res = $read === $given;
 		}		
@@ -711,6 +713,7 @@
 		}
 		return $long;
 	}
+	
 	function breaker($txt) {
 		echo $txt;
 		exit();
