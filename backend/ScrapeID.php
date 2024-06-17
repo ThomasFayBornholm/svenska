@@ -33,6 +33,7 @@
 	$response = curl_exec($ch);			
 			
 	$responseArr = explode("\n", $response);	
+
 	$find = "/so/?id=";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';	
 	$tmpArrID = array();
@@ -156,6 +157,8 @@
 			$res = "adjektiv" === $given;
 		} else if ($read === "adv.") {
 			$res = "adverb" === $given;
+		} else if ($read === "adjektiviskt slutled") {
+			$res = "slutled" === $given;
 		} else {
 			$res = $read === $given;
 		}
