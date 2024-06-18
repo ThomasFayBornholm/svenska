@@ -114,6 +114,7 @@ A-nivå
 A-skatt
 A-språk
 AP-fond
+APfond
 AV-central
 AV-hjälpmedel
 Amors pilar
@@ -3573,6 +3574,7 @@ biobesök
 biobränsle
 biocid
 bioduk
+biogenetiska lagen
 biogenetiska regeln
 biograf
 biografera
@@ -3801,6 +3803,7 @@ blodbrist
 blodcancer
 blodcirkulation
 bloddopning
+bloddrypande
 blodfattig
 blodfull
 blodfärgämne
@@ -7964,6 +7967,7 @@ fet
 fet som en gris
 fetisch
 fetknopp
+fetlagd
 fetma
 fetna
 fetstil
@@ -8166,7 +8170,6 @@ fjuttig
 fjäder
 fjäderdräkt
 fjäderfä
-fjäderklädd
 fjäderlätt
 fjädernervig
 fjäderpensel
@@ -8747,6 +8750,7 @@ framsida
 framskjuten
 framskrida
 framskymta
+framspelare
 framsteg
 framstegsparti
 framstegstanke
@@ -9235,6 +9239,7 @@ fysioterapi
 fysisk
 fysisk kärlek
 fysisk person
+fä
 fäbless
 fäbod
 fäbodvall
@@ -9324,6 +9329,7 @@ fästa
 fästa sig
 fästa sig i minnet
 fäste
+fästing
 fästman
 fästmö
 fästning
@@ -17252,7 +17258,6 @@ korrespondent
 korrespondera
 korridor
 korrigera
-korrigering
 korrodera
 korrosion
 korrumpera
@@ -18320,6 +18325,9 @@ laddram
 laddstolpe
 ladugård
 lag
+lag(2)
+lag-2
+lag2
 laga
 laga efter läglighet
 laga fång
@@ -18350,6 +18358,7 @@ lagra
 lagring
 lagrum
 lagråd
+lagspel
 lagspelare
 lagspråk
 lagstifta
@@ -19393,6 +19402,7 @@ lägga vantarna på något
 lägga/fästa vikt vid något
 lägga/skjuta (över) skulden på någon
 lägga/sätta kraft bakom orden
+läggmatch
 läggning
 läggspel
 läglig
@@ -21169,6 +21179,7 @@ munklatin
 munklöfte
 munkorden
 munkorg
+munsbit
 munskydd
 munskänk
 munstycke
@@ -21633,6 +21644,7 @@ nattetid
 nattfjäril
 nattfrieri
 nattgammal
+natthimmel
 nattklubb
 nattlig
 nattlinne
@@ -21724,6 +21736,7 @@ neddragning
 nederbörd
 nederbördsområde
 nederlag
+nederländsk
 nederst
 nedersta
 nedfall
@@ -25408,6 +25421,7 @@ relativ majoritet
 relativitet
 relativt
 relativt sett
+relegera
 relevans
 relevant
 relief
@@ -27197,6 +27211,7 @@ sexlust
 sexmord
 sexobjekt
 sexsiffrig
+sextiotal
 sexualbrott
 sexualdrift
 sexualitet
@@ -29205,6 +29220,7 @@ socialliberal
 socialliberalism
 socialmedicin
 socialpornografi
+socialstyrelse
 socialtjänst
 socialtjänstlag
 socialvård
@@ -29221,6 +29237,7 @@ sockerdricka
 sockerglasyr
 sockergryn
 sockerkaka
+sockerlag
 sockerlönn
 sockerpiller
 sockerrör
@@ -29868,7 +29885,6 @@ stadga
 stadga sig
 stadga-2
 stadig
-stadighet
 stadigvarande
 stadion
 stadium
@@ -30160,6 +30176,7 @@ stjärnanis
 stjärnbild
 stjärndygn
 stjärnfamilj
+stjärnhimmel
 stjärnhop
 stjärnskott
 stjärnspäckad
@@ -33765,6 +33782,7 @@ undantagslag
 undantagstillstånd
 undantagsvis
 undantränga
+undefined
 under
 under alla omständigheter
 under bar himmel
@@ -33827,6 +33845,7 @@ underliggande
 underliv
 underlivshumor
 underlydande
+underläge
 underlägga sig
 underlägsen
 underlägsenhet
@@ -33875,6 +33894,7 @@ undersöka
 undersöka sig
 undersökare
 undersökning
+undertak
 underteckna
 undertecknad
 undertecknare
@@ -34426,6 +34446,7 @@ uråldrig
 usb
 usb-minne
 usel
+usling
 ut
 ut med språket!
 utagera
@@ -35702,7 +35723,6 @@ vettlös
 vettskrämd
 vev
 veva
-vevarm
 vevhus
 vevlager
 vi ska alla den vägen vandra

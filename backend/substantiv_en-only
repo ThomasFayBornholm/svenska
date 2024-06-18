@@ -2,6 +2,7 @@ A-aktie
 A-nivå
 A-skatt
 AP-fond
+APfond
 AV-central
 B-aktie
 B-film
@@ -4118,6 +4119,7 @@ framkomst
 frammarsch
 framryckning
 framsida
+framspelare
 framstegstanke
 framställan
 framställning
@@ -4357,6 +4359,7 @@ färs
 färskning
 färskost
 färskvara
+fästing
 fästman
 fästmö
 fästning
@@ -8227,6 +8230,8 @@ laddningsbärare
 laddstolpe
 ladugård
 lag
+lag-2
+lager
 lager-2
 lagergång
 lagerkrans
@@ -8696,6 +8701,7 @@ lägel
 lägenhet
 lägenhetshotell
 lägereld
+läggmatch
 läggning
 läkare
 läkarmottagning
@@ -9539,6 +9545,7 @@ munkjacka
 munkkåpa
 munkorden
 munkorg
+munsbit
 munskydd
 munskänk
 muntergök
@@ -9756,6 +9763,7 @@ natt
 nattdukslampa
 nattetid
 nattfjäril
+natthimmel
 nattklubb
 nattmara
 nattmössa
@@ -13143,6 +13151,7 @@ socialliberal
 socialliberalism
 socialmedicin
 socialpornografi
+socialstyrelse
 socialtjänst
 socialtjänstlag
 socialvård
@@ -13156,6 +13165,7 @@ sockerbit
 sockerdricka
 sockerglasyr
 sockerkaka
+sockerlag
 sockerlönn
 sockersjuka
 sockerskål
@@ -13456,7 +13466,6 @@ stackmyra
 stad
 stadga
 stadga-2
-stadighet
 stadion
 stadsarkitekt
 stadsbild
@@ -13606,6 +13615,7 @@ stjärna
 stjärnanis
 stjärnbild
 stjärnfamilj
+stjärnhimmel
 stjärnhop
 stjärt
 stjärtmes
@@ -15151,6 +15161,7 @@ umgängeston
 uncial
 undanflykt
 undanmanöver
+undefined
 under
 underarm
 underart
@@ -15422,6 +15433,7 @@ uruguayanska
 urvalsinstrument
 urvalsundersökning
 usb
+usling
 utandning
 utanpåskjorta
 utanskrift
