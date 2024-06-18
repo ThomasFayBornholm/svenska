@@ -3,6 +3,9 @@
 	$word = $_GET['word'];	
 	// No characters that are not visible to user to be present in storage key
 	$word = str_replace("­","",$word);
+	// Internal enumeration takes form '-#'
+	$word = str_replace("(","-",$word);
+	$word = str_replace(")","",$word);
 	$meta = $_GET['meta'];
 	$def = $_GET['def'];
 	$more = $_GET['more'];

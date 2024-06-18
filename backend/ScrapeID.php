@@ -1,5 +1,22 @@
-<?php	
+<?php
+
+	function getEnum($word) {
+		$start = strpos($word,"[");
+		if ($start != -1) {
+			$end = strpos($word,"]");
+			if ($end != -1) {
+				$enum = substr($word,$start+1, $end - $start-1);
+			} else {
+				$enum = 1;
+			}
+		} else {
+			$enum = 1;
+		}
+		return $enum;
+	}
+	
 	$word = $_GET['word'];	
+	$word = preg_replace("/\?[2-9]\?/","",$word);
 	$class = $_GET['class'];
 	if ($class === "fraser") {	
 		if (str_contains($word,"*")) {
@@ -11,16 +28,8 @@
 	$out["id"] = array();
 	$out["snr"] = array();
 	
-	$enum = 1;
-	// Remove any enumeration values from the word
-	if (str_contains($word, "-")) {
-		$tmpLen = strpos($word,"-");
-		if (is_numeric(substr($word,$tmpLen+1,1))) {
-			$enum = substr($word,$tmpLen+1);
-			$word = substr($word,0,$tmpLen);		
-		}
-	}
-	
+	$enum = getEnum($word);
+	$word = preg_replace("/\[.*\]/","",$word);
 	// return an array to support casees where multiple entries exist	
 	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';		
 	$url = str_replace(" ", "%20", $urlBase . $word);	
@@ -33,7 +42,6 @@
 	$response = curl_exec($ch);			
 			
 	$responseArr = explode("\n", $response);	
-
 	$find = "/so/?id=";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';	
 	$tmpArrID = array();
@@ -84,8 +92,7 @@
 	// Return only the requested ID.
 	if (count($tmpArrID) >= $enum) {
 		array_push($out["id"],$tmpArrID[$enum-1]);		
-	}
-	
+	}	
 	$def = "";
 	if (count($out["id"]) > 0) {		
 		$url = $urlBaseId . $out["id"][0];

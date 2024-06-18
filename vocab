@@ -3456,12 +3456,13 @@ function fetchDef() {
 	.then(json => {	
 		let id = json["id"];
 		let snr = json["snr"]		
-		let backend = 'backend/ScrapeDef.php?word=' + CUR_WORD + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
+		let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word) + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
 		if (CLASS === "fraser") {	
 			let query = $('#iInput').val();
 			query = query.replaceAll("­",""); // No invisible chars to user present in keys
 			backend = 'backend/scrapeIdiom.php?query=' + query
 		}
+		
 		fetch(backend, {
 			method: 'get',
 			mode: 'cors',
@@ -3489,7 +3490,10 @@ function fetchDef() {
 				
 			} else {
 				if (! json.hasOwnProperty("error")) {
-					addDef(json['key'],json['meta'],json['def'],json['more']);		
+					const regex = /-(\[)+[2-9](\])+/;
+					let key = json["key"].replace(regex, "");				
+					key = key.replaceAll("?","");				
+					addDef(key,json['meta'],json['def'],json['more']);		
 				} else {
 					$('#iMeta').html("Failed to find match");
 				}
@@ -3779,7 +3783,7 @@ function fetchDefWords(allWords,ind) {
 		if (json["snr"] && json["id"]) {			
 			let id = json["id"];
 			let snr = json["snr"]		
-			let backend = 'backend/ScrapeDef.php?word=' + CUR_WORD + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
+			let backend = 'backend/ScrapeDef.php?word=' + json["key"] + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
 			fetch(backend, {
 				method: 'get',
 				mode: 'cors',
@@ -3831,7 +3835,18 @@ function fetchDefWords(allWords,ind) {
 
 function forScrapeID(word) {
 	// Use * to delimit instead 
-	return word.replace("_","*");
+	word = word.replace("_","*");
+	const re = /\([2-9]\)/;
+	word = word.replace(re,"");
+	console.log(word);
+	return word;
+	
+}
+
+function forScrapeDef(word) {
+	const re = /\[[2-9]\]/;
+	word = word.replace(re,"");
+	return word;
 }
 </script>
 </html>

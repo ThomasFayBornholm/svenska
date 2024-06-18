@@ -1,6 +1,7 @@
 <?php
 	$GLOBALS["debug"]=$_GET['debug'];
 	$word = $_GET["word"];
+	$word = preg_replace("/-[2-9]/","",$word);
 	$id = $_GET['id'];	
 	$snr = $_GET["snr"];
 	$class = $_GET['class'];
@@ -423,7 +424,10 @@
 		$out = str_replace("\n__ "," ",$out);			
 		
 		$out = str_replace("\n","<br>",$out);
-		$out = str_replace("det att <br>", "det att ",$out);				
+		$out = str_replace("det att <br>", "det att ",$out);
+		// Removal of unwanted numerical references in cross-references.
+		$out = preg_replace("/\x{00a0}/u","",$out);
+		$out = preg_replace("/,[1-9]$/","",$out);
 		return $out;
 		
 	}
@@ -683,17 +687,17 @@
 	}
 	
 	function matchClass($read, $given) {
+		
 		$res = false;
 		if ($read === "substantiv") {
 			$res =  ($given === "substantiv_en" || $given === "substantiv_ett");
-		} else if ($read = "adjektiviskt slutled") {
+		} else if ($read === "adjektiviskt slutled") {
 			$res = ($given === "slutled");
+		} else if ($given === "plural" && $read === "substantiv") {
+			$res = true;
 		} else {
 			$res = $read === $given;
-		}		
-		if ($given === "plural" && $read === "substantiv") {
-			$res = true;
-		}
+		}				
 		return $res;
 	}
 	
