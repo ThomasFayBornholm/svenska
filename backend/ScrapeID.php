@@ -1,10 +1,10 @@
 <?php
 
 	function getEnum($word) {
-		$start = strpos($word,"[");
-		if ($start != -1) {
+		$start = strpos($word,"[");		
+		if ($start) {
 			$end = strpos($word,"]");
-			if ($end != -1) {
+			if ($end) {
 				$enum = substr($word,$start+1, $end - $start-1);
 			} else {
 				$enum = 1;
@@ -41,7 +41,7 @@
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
 	$response = curl_exec($ch);			
 			
-	$responseArr = explode("\n", $response);	
+	$responseArr = explode("\n", $response);		
 	$find = "/so/?id=";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';	
 	$tmpArrID = array();
@@ -87,12 +87,11 @@
 				}
 			}
 		}
-	}	
-	
+	}		
 	// Return only the requested ID.
-	if (count($tmpArrID) >= $enum) {
+	if (count($tmpArrID) >= $enum) {		
 		array_push($out["id"],$tmpArrID[$enum-1]);		
-	}	
+	}		
 	$def = "";
 	if (count($out["id"]) > 0) {		
 		$url = $urlBaseId . $out["id"][0];
@@ -161,7 +160,7 @@
 		if ($read === "subst.") {
 			$res =  ($given === "substantiv_en" || $given === "substantiv_ett");
 		} else if ($read === "adj.") {
-			$res = "adjektiv" === $given;
+			$res = "adjektiv" === $given;			
 		} else if ($read === "adv.") {
 			$res = "adverb" === $given;
 		} else if ($read === "adjektiviskt slutled") {

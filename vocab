@@ -3837,8 +3837,7 @@ function forScrapeID(word) {
 	// Use * to delimit instead 
 	word = word.replace("_","*");
 	const re = /\([2-9]\)/;
-	word = word.replace(re,"");
-	console.log(word);
+	word = word.replace(re,"");	
 	return word;
 	
 }
