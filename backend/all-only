@@ -3327,6 +3327,7 @@ betydelsefull
 betydelselära
 betydelselös
 betydelsenyans
+betydenhet
 betydlig
 betydligt
 betyg
@@ -6022,6 +6023,7 @@ diskvalificera
 disparat
 dispergera
 dispersion
+display
 disponent
 disponera
 disponibel
@@ -6712,12 +6714,14 @@ döv
 döva
 dövblind
 e
+e-bok
 e-brev
 e-mail
 e-post
 e-recept
 ebb
 ebba ut
+ebok
 ebonit
 ebonitstav
 echaufferad
@@ -11862,6 +11866,7 @@ gullhöna
 gullig
 gullunge
 gulmetall
+gulsot
 gulsparv
 gulsporre
 gulärla
@@ -12830,6 +12835,7 @@ hemtrevlig
 hemuppgift
 hemvist
 hemvård
+hemåt
 heraldik
 herbivor
 herde
@@ -16296,6 +16302,7 @@ klippare
 klippfast
 klippfisk
 klippfyr
+klippning
 klipsk
 klirr
 klirr i kassan
@@ -17261,7 +17268,6 @@ korrigera
 korrodera
 korrosion
 korrumpera
-korrumpering
 korrupt
 korruption
 kors
@@ -18594,18 +18600,19 @@ leka
 leka med döden
 leka med elden
 leka någon i hågen
+leka rommen av sig
 lekamen
 lekamlig
 lekamligen
 lekande lätt
 lekatt
+lekfull
 lekkamrat
 leklysten
 lekman
 lekplats
 leksak
 lekskola
-leksugen
 lektion
 lektor
 lem
@@ -18684,6 +18691,7 @@ levnadskonst
 levnadskonstnär
 levnadskostnad
 levnadslopp
+levnadsnivå
 levnadssaga
 levnadsstandard
 levnadstrött
@@ -18968,6 +18976,7 @@ ljuda
 ljudabsorbent
 ljudande
 ljudboj
+ljudbok
 ljuddämpare
 ljudenlig
 ljudförstärkare
@@ -19275,6 +19284,7 @@ lyfta skrot
 lyfta ut
 lyfta/lätta på förlåten
 lyftblock
+lyftkraft
 lyftkran
 lyftsax
 lyhörd
@@ -19918,6 +19928,7 @@ majoritetsledare
 majrova
 majs
 majsolja
+mak
 maka
 maka sig
 makaber
@@ -20259,7 +20270,6 @@ maxill
 maxim
 maximal
 maximera
-maximering
 maximitemperatur
 maximum
 maxtak
@@ -23098,6 +23108,7 @@ ordningsfråga
 ordningsföljd
 ordningsmakt
 ordningsregel
+ordningsstadga
 ordningstal
 ordningsvakt
 ordonnans
@@ -24727,6 +24738,7 @@ prästkrage
 prästviga
 prål
 pråla
+prålig
 pråm
 prång
 pröva
@@ -26385,6 +26397,7 @@ röka som en borstbindare/skorsten
 röka ut
 rökare
 rökdetektor
+rökelsekar
 rökgas
 rökgång
 rökkupé
@@ -26549,7 +26562,9 @@ salta
 saltbildare
 saltgurka
 salthalt
+saltkar
 saltkött
+saltströare
 saltstänkt
 saltvatten
 saltöken
@@ -27473,6 +27488,7 @@ sjukfrånvaro
 sjukförsäkring
 sjukgymnast
 sjukgymnastik
+sjukhem
 sjukhus
 sjukjournal
 sjukkassa
@@ -27949,7 +27965,6 @@ skogsmus
 skogsnäva
 skogsrå
 skogssnuva
-skogstrakt
 skogstäckt
 skogsväg
 skogsödla
@@ -29413,6 +29428,8 @@ sortera
 sortiment
 sosse
 sossig
+sot
+sot[1]
 sota
 sotare
 souvenir
@@ -33885,6 +33902,7 @@ understiga
 understreck
 understryka
 underställa
+understämma
 understöd
 understödja
 undersysselsatt
@@ -36157,6 +36175,7 @@ vräka
 vräka i sig
 vräka sig
 vräka ur sig
+vräkig
 vräkning
 vrå
 vråk
@@ -36167,6 +36186,7 @@ vrålåk
 vrång
 vrångbild
 vulen
+vulgaritet
 vulgär
 vulgärlatin
 vulkan
@@ -36831,6 +36851,7 @@ yxa
 yxskaft
 z
 zebra
+zigenare
 zink
 zinkfeber
 zon
