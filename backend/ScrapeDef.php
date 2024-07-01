@@ -428,6 +428,7 @@
 		// Removal of unwanted numerical references in cross-references.
 		$out = preg_replace("/\x{00a0}/u","",$out);
 		$out = preg_replace("/,[1-9]$/","",$out);
+		$out = preg_replace("/[1-9],[1-9],[1-9]/","",$out);
 		return $out;
 		
 	}
