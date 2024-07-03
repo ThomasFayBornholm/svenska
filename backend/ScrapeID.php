@@ -16,7 +16,7 @@
 	}
 	
 	$word = $_GET['word'];	
-	$word = preg_replace("/\?[2-9]\?/","",$word);
+	$word = preg_replace("/\?[2-9]/","",$word);
 	$class = $_GET['class'];
 	if ($class === "fraser") {	
 		if (str_contains($word,"*")) {

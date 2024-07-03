@@ -156,8 +156,8 @@
 	$out['more'] = getMore($def);	
 		
 	
-	// No dashes in word keys 
-	//$word = str_replace("-","", $word);
+	// No dashes in word keys
+	$word = str_replace("?","-",$word);
 	$out['key'] = $word;
 	echo json_encode($out);
 	
@@ -429,6 +429,7 @@
 		$out = preg_replace("/\x{00a0}/u","",$out);
 		$out = preg_replace("/,[1-9]$/","",$out);
 		$out = preg_replace("/[1-9],[1-9],[1-9]/","",$out);
+		$out = preg_replace("/[1-9],[1-9]/","",$out);
 		return $out;
 		
 	}
