@@ -283,7 +283,7 @@ function addDef(key, meta, def, more, fast = false) {
 		putMoreMany(moreArr, 0);
 	}
 	//fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
-	let url = 'backend/addDef.php?word=' + key.replace("-","") + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS; 
+	let url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS; 
 	fetch(url, {
 		method: 'get',
 		mode: 'cors',
