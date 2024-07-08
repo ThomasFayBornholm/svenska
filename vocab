@@ -1326,8 +1326,8 @@ function getSummary() {
 		.then(json => {
 			done++;
 			let id = json['id'];						
-			tmpOut[id] = ": ";				
-			tmpOut[id] += round(json["percent"],1) + "%";					
+			tmpOut[id] = ": ";
+			tmpOut[id] += Number(round(json["percent"],1)).toLocaleString("sv") + "%";					
 			score_all += parseInt(json["total"])
 			tmpTot += parseInt(json["count"]);
 			let out = "<b>all: " + "score_all" + "%</b>";
@@ -1342,9 +1342,9 @@ function getSummary() {
 				out += "<br>Aux classes:<br>";
 				del = "";						
 				for (i = N; i < N_DONE; i++) {
-					out += del + CLASSES[i]		
+					out += del + CLASSES[i]	
 					del = ", ";				
-				}	
+				}
 				$('#iSummary').html(out);
 			}												
 		})
@@ -2994,7 +2994,6 @@ function getMore(ind) {
 			}
 			let tmp = "*********************<br>"		
 			tmp += "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";						
-			tmp += " onmouseover='highlight(this,event)'";
 			tmp += tmpMore;
 			tmp = tmp.replaceAll("KONSTRUKTION:", "<b>KONSTRUKTION:</b>");
 			tmp = tmp.replaceAll("SAMMANSÄTTN./AVLEDN.:","<b>SAMMANSÄTTN./AVLEDN.:</b>");
