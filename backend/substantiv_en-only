@@ -74,6 +74,7 @@ accession
 accessionskatalog
 accesstid
 ackja
+acklamation
 ackompanjatör
 ackordshets
 ackordslön
@@ -813,6 +814,7 @@ auskultant
 autism
 autist
 autodidakt
+autofokus
 autograf
 autokrat
 automation
@@ -1024,6 +1026,7 @@ av­skiljare
 axel
 axelkoppling
 axelrem
+axelryckning
 axelvadd
 axill
 azalea
@@ -1848,6 +1851,7 @@ bläster
 blåbär
 blåhaj
 blåklocka
+blålera
 blåmanet
 blåmes
 blånad
@@ -2360,6 +2364,7 @@ bågskytt
 bål
 bålrullning
 bålväxt
+bår
 bårbärare
 båt
 båtfolket
@@ -2882,6 +2887,8 @@ diskborste
 diskho
 diskmaskin
 diskontinuitet
+diskordans
+diskrepans
 diskretion
 diskriminering
 diskrimineringsgrund
@@ -2895,8 +2902,10 @@ dispersion
 display
 disponent
 disposition
+disproportion
 disputation
 dispyt
+dissektion
 dissertation
 dissident
 dissonans
@@ -3021,6 +3030,7 @@ driva
 drivbänk
 drive
 drivfjäder
+drivhusatmosfär
 drivhusgas
 drivis
 drivkedja
@@ -3435,6 +3445,7 @@ entreprenör
 entré
 entusiasm
 entusiast
+envägskommunikation
 envåldshärskare
 enäggstvilling
 ep
@@ -3503,6 +3514,7 @@ etnografi
 etsning
 etta
 ettermyra
+ettöring
 etylalkohol
 etymolog
 etymologi
@@ -3529,6 +3541,7 @@ exaltation
 examen
 examination
 excellens
+excentricitet
 excentriker
 excentrisk
 excitation
@@ -3539,6 +3552,7 @@ exhibitionism
 exhibitionist
 exil
 existens
+exklamation
 exklusion
 exkretion
 exkurs
@@ -3755,6 +3769,7 @@ fettisdagsbulle
 fettlever
 fettsugning
 fettvävnad
+fetvadd
 fiber
 fibromyalgi
 fibros
@@ -3833,8 +3848,11 @@ fiskebåt
 fiskegräns
 fiskehamn
 fiskerättighet
+fiskevård
 fiskezon
 fiskfärs
+fiskgjuse
+fiskguano
 fiskhamn
 fiskhåv
 fiskleverolja
@@ -3842,7 +3860,15 @@ fiskmås
 fiskolja
 fiskpudding
 fiskrom
+fisksump
+fisktrappa
+fisktärna
+fiskvandring
+fiskådra
+fisködla
 fission
+fissur
+fistel
 fitta
 fixare
 fixering
@@ -4787,6 +4813,7 @@ förödmjukelse
 förökning
 förövare
 förövning
+g
 g-klav
 gadd
 gaddstekel
@@ -5063,8 +5090,8 @@ glugg
 glutenintolerans
 gluttsnäppa
 glädje
+glädjebägare
 glädjeflicka
-glädjetår
 glänta
 glöd
 glödlampa
@@ -5192,6 +5219,7 @@ grift
 griftefrid
 grill
 grillbar
+grillvante
 grimma
 grind
 grip
@@ -5258,6 +5286,7 @@ grymhet
 gryning
 gryta
 grytstek
+grytvante
 gräddbakelse
 grädde
 gräddfil
@@ -5704,6 +5733,7 @@ hemresa
 hemsida
 hemskillnad
 hemslöjd
+hemstad
 hemställan
 hemsökelse
 hemtenta
@@ -6919,6 +6949,7 @@ kalkyl
 kalkylator
 kallbad
 kallelse
+kallmangel
 kallskänk
 kallsvett
 kallvalla
@@ -7009,6 +7040,8 @@ kappsegling
 kappsäck
 kaprifol
 kaprifolium
+kapris
+kapris-2
 kapsel
 kapsyl
 kapten
@@ -7548,6 +7581,7 @@ konjunktion
 konjunktiv
 konjunktur
 konklusion
+konkordans
 konkurrens
 konkurrenskraft
 konkurrent
@@ -7706,7 +7740,6 @@ korrespondens
 korrespondensundervisning
 korrespondent
 korridor
-korrigering
 korrosion
 korrumpering
 korruption
@@ -7726,6 +7759,7 @@ kortbyxor
 kortdistans
 kortege
 kortfilm
+kortform
 korthet
 kortis
 kortkonst
@@ -7860,6 +7894,7 @@ krokant
 krokett
 krokodil
 kroksabel
+krokväg
 kromosom
 krona
 kronhjort
@@ -7937,6 +7972,7 @@ kubist
 kudde
 kuf
 kugge
+kuggfråga
 kuk
 kula
 kuling
@@ -8178,6 +8214,7 @@ kö
 köbricka
 kökshandduk
 köksingång
+köksklocka
 köksmaskin
 köksrulle
 kökssoffa
@@ -8405,6 +8442,7 @@ lergök
 lerjord
 lerkruka
 lerskiffer
+lervälling
 lett
 lettiska
 lettländare
@@ -8989,6 +9027,7 @@ manipulering
 manke
 mankhöjd
 manlighet
+manna
 mannamån
 mannekäng
 manschett
@@ -9393,6 +9432,7 @@ mobil
 mobilisering
 mobilitet
 mobiltelefon
+mobiltelefoni
 modalitet
 modd
 modedocka
@@ -9419,6 +9459,7 @@ modul
 mogenhet
 mogenhetsexamen
 mognad
+mohair
 moj
 mol
 molekyl
@@ -9577,8 +9618,10 @@ murslev
 murvel
 mus
 musa
+museishop
 music hall
 musik
+musikal
 musikalitet
 musikant
 musikdirektör
@@ -9622,6 +9665,7 @@ myndighetsperson
 mynning
 mynta
 myntunion
+myopi
 myr
 myra
 myrlejonslända
@@ -10169,6 +10213,7 @@ offerkofta
 offert
 officer
 officerare
+offset
 ofog
 ofred
 ofrihet
@@ -10190,6 +10235,7 @@ oktober
 okunnighet
 olaglighet
 olat
+oldboy
 oldtimer
 oleander
 olikhet
@@ -10297,6 +10343,7 @@ opportunist
 opposition
 oppositionsledare
 optativ
+optik
 optiker
 optimism
 optimist
@@ -10778,6 +10825,7 @@ pipeline
 piplärka
 pippi
 piprensare
+piptobak
 pir
 pirat
 piratkopia
@@ -11266,7 +11314,6 @@ påfyllning
 påföljd
 påhälsning
 påk
-påkörning
 pålaga
 pålagring
 pålandsvind
@@ -11329,6 +11376,8 @@ raggarbil
 raggarbrud
 raggare
 raggsocka
+raglan
+raglanärm
 ragnarök
 rajd
 raka
@@ -11748,6 +11797,7 @@ rullskridsko
 rullsten
 rullstensås
 rullstol
+rulltrappa
 rulltårta
 rulta
 rumpa
@@ -11858,6 +11908,8 @@ rättelse
 rättfärdighet
 rättighet
 rättika
+rättsförmåga
+rättskapacitet
 rättskrivning
 rättskänsla
 rättsläkare
@@ -12338,6 +12390,7 @@ sfär
 sherry
 shetlandsponny
 shipping
+shop
 shoppingvagn
 shoppingväska
 short track
@@ -12429,6 +12482,7 @@ sinnesstämning
 sinnesvilla
 sinnevärld
 sinolog
+sinologi
 sinus
 sinuskurva
 sionism
@@ -12652,6 +12706,7 @@ skiktröntgen
 skildrare
 skildring
 skiljedomare
+skiljelinje
 skiljevägg
 skilling
 skillnad
@@ -12681,6 +12736,7 @@ skoaffär
 skock
 skog
 skogsbrand
+skogsgräns
 skogshare
 skogsmus
 skogsnäva
@@ -12979,6 +13035,7 @@ släkt
 släktforskning
 släkting
 släktkrönika
+släktlinje
 släktsaga
 slända
 släng
@@ -13071,7 +13128,6 @@ småspik
 småstad
 småttighet
 småtting
-småvarmt
 smörblomma
 smörgås
 smörgåskrasse
@@ -13192,6 +13248,7 @@ sockerlag
 sockerlönn
 sockersjuka
 sockerskål
+sockerströare
 sockertopp
 soffa
 soffgrupp
@@ -13792,6 +13849,7 @@ strålskada
 stråsäd
 stråt
 stråtrövare
+ströare
 ström
 strömbegränsning
 strömbrytare
@@ -14081,6 +14139,7 @@ synnerv
 synod
 synonym
 synonymi
+synops
 synoptiker
 synpunkt
 syntax
@@ -14173,6 +14232,7 @@ södergök
 sökande
 sökare
 sökmotor
+sökning
 söksträng
 sökväg
 sölja
@@ -14270,6 +14330,7 @@ tandfyllning
 tandkräm
 tandlossning
 tandläkare
+tandpasta
 tandpetare
 tandprotes
 tandrot
@@ -14586,11 +14647,13 @@ tjockskalle
 tjocktarm
 tjomme
 tjugoett
+tjugofemöring
 tjugondel
 tjur
 tjurfäktare
 tjurfäktning
 tjurnacke
+tjurskalle
 tjurved
 tjusare
 tjusarlock
@@ -14723,6 +14786,7 @@ totalitarism
 totalreflexion
 touch
 touche
+tournedos
 tova
 toxikologi
 tradition
@@ -15101,7 +15165,6 @@ tyngdpunkt
 typ
 typograf
 tyrann
-tyrannisering
 tysk
 tyska
 tyskhare
@@ -15585,7 +15648,6 @@ utmattning
 utmärkelse
 utmärkning
 utmätning
-utnötning
 utombordare
 utombordsmotor
 utomjording
@@ -15665,7 +15727,6 @@ utvecklingslära
 utvidgning
 utvikning
 utvikningsbild
-utvinning
 utväg
 utvärdering
 utväxling
@@ -15845,6 +15906,7 @@ vattenspegel
 vattenspindel
 vattenspridare
 vattenså
+vattentrampning
 vattentäkt
 vattenväg
 vattenväxt
@@ -15895,6 +15957,7 @@ verkan
 verkanseld
 verklighet
 verklighetsflykt
+verklighetsuppfattning
 verkning
 verkningseld
 verkningsgrad
@@ -16079,6 +16142,7 @@ vitterhet
 vittnespsykologi
 vittring
 vittvätt
+vivisektion
 vivör
 vodka
 vojlock
@@ -16093,6 +16157,8 @@ volley
 volleyboll
 volontär
 volt
+voltige
+voltigör
 voltmeter
 volym
 votering
@@ -16155,6 +16221,7 @@ välkomma
 väll
 vällevnad
 vällevnadsman
+välling
 vällingklocka
 vällukt
 vällusting
@@ -16202,6 +16269,7 @@ världsdel
 världsetta
 världsformat
 världsförklaring
+världsgåta
 världshistoria
 världskarta
 världsklass
@@ -16239,6 +16307,7 @@ värnkraft
 värnplikt
 värnpliktsarmé
 värnpliktsriksdag
+värnpliktstjänstgöring
 värvning
 väsentlighet
 väska
@@ -16360,6 +16429,7 @@ webbmejl
 webbplats
 webbportal
 webbserver
+webbshop
 webbsida
 weber
 weekend
@@ -16876,7 +16946,6 @@ zygot
 önskesits
 önskning
 öppenhet
-öppenspis
 öppenvård
 öppettid
 öppnare
@@ -17003,7 +17072,6 @@ zygot
 överraskning
 överresa
 överrock
-överrumpling
 överrätt
 översida
 översikt
