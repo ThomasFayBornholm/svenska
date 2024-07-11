@@ -1562,6 +1562,7 @@ ask
 aska
 asketisk
 askfat
+askgrå
 askkopp
 askorbinsyra
 asocial
@@ -3102,6 +3103,7 @@ berusad
 berusning
 beryktad
 beräkna
+beräknelig
 beräkning
 berätta
 berättande
@@ -3656,6 +3658,7 @@ bittermandel
 bittersalt
 bitti
 bittida
+bitvarg
 bitvis
 bivack
 bivackera
@@ -4309,6 +4312,7 @@ boxare
 boxas
 boxershorts
 boxertrosa
+boxhandske
 boxning
 boxningsring
 bra
@@ -4769,6 +4773,8 @@ buska
 buskablyg
 buskage
 buske
+buskis
+buskteater
 busliv
 buss
 bussa
@@ -5611,6 +5617,7 @@ deltidsanställd
 deltidsgrupp
 delvis
 delägare
+demagog
 demaskera
 demens
 demenssjuk
@@ -5739,6 +5746,7 @@ dessert
 dessertkniv
 dessertost
 dessertsked
+desserttallrik
 dessförinnan
 dessutom
 dessvärre
@@ -5923,6 +5931,7 @@ digerdöden
 digerera
 digga
 digital
+digitalisera
 digitalkamera
 digitalur
 dignitet
@@ -6075,6 +6084,7 @@ distingerad
 distinkt
 distinktion
 distorsion
+distr'  -1
 distrahera
 distraherad
 distribuera
@@ -6135,6 +6145,7 @@ djävulsk
 doa
 dobbla
 docent
+docera
 dock
 docka
 doft
@@ -6707,6 +6718,7 @@ dödsmask
 dödsoffer
 dödsolycka
 dödsorsak
+dödspatrull
 dödsruna
 dödssjuk
 dödsskjutning
@@ -7315,6 +7327,7 @@ enkät
 enkönad
 enligt uppdrag
 enmansshow
+enmansteater
 enmansvalkrets
 enorm
 enpolig
@@ -8512,6 +8525,7 @@ fläskfärs
 fläskkorv
 fläskkotlett
 fläskschnitzel
+fläskänger
 fläta
 fläta in
 fläta samman
@@ -9235,6 +9249,7 @@ futil
 futilitet
 futtig
 futurolog
+futurologi
 fux
 fy bubblan
 fy skam
@@ -9477,6 +9492,7 @@ fågel
 fågelbo
 fågelfri
 fågelholk
+fågelvägen
 fåglalåt
 fåkunnig
 fåle
@@ -9524,7 +9540,6 @@ föga
 fögderi
 föl
 följa
-följa med
 följa med strömmen
 följa upp
 följaktligen
@@ -10977,6 +10992,7 @@ ge vid handen
 ge vika
 ge åter
 ge/få betalt/igen för gammal ost
+gecko
 gedigen
 gegga
 geggamoja
@@ -13698,6 +13714,7 @@ hållbarhet
 hålldam
 hållen
 hållfasthet
+hållhake
 hålligång
 hållning
 hållplats
@@ -16125,6 +16142,7 @@ kedja
 kedjehjul
 kedjehus
 kedjekrans
+kedjekrock
 kedjereaktion
 kedjeröka
 kedjestygn
@@ -16345,6 +16363,7 @@ klia
 klibba
 klibbal
 klibbig
+kliché
 klick
 klicka
 klicker
@@ -16667,7 +16686,6 @@ knölsvan
 ko
 koagulation
 koagulera
-koagulering
 koala
 koalition
 koalitionsregering
@@ -17193,6 +17211,7 @@ kontrabas
 kontradans
 kontradiktion
 kontrakt
+kontraktera
 kontraktsprost
 kontraktsvård
 kontraproduktiv
@@ -17468,6 +17487,7 @@ kraftlös
 kraftlöshet
 kraftmätning
 kraftprov
+kraftsamla
 krafttag
 kraftuttryck
 kraftverk
@@ -19117,6 +19137,7 @@ ljussläckare
 ljusstake
 ljusstråle
 ljuster
+ljustuta
 ljuta döden
 ljuv
 ljuvlig
@@ -20228,7 +20249,6 @@ marknadsföring
 marknadsgyckel
 marknadsgycklare
 marknadshyra
-marknadsklimat
 marknadsmässig
 marknadspris
 marknadsskola
@@ -20353,8 +20373,10 @@ matsäck
 matt
 matt-2
 matta
+mattallrik
 mattas av
 matte
+mattera
 matvara
 matvrak
 matvrå
@@ -20891,6 +20913,7 @@ misströstan
 misstycka
 misstyda
 misstänka
+misstänkliggöra
 misstänksam
 misstänkt
 missunna
@@ -20976,7 +20999,6 @@ modedocka
 modehus
 modelejon
 modell
-modellbyggnad
 modellera
 modelljärnväg
 modenyck
@@ -21819,6 +21841,7 @@ naturtrogen
 naturvetenskap
 naturvin
 naturvård
+nautik
 nautisk
 nautisk mil
 nav
@@ -22011,6 +22034,7 @@ nevö
 newtonmeter
 ng-ljud
 nia
+nick
 nicka
 nickel
 nidbild
@@ -22561,6 +22585,7 @@ obegåvad
 obehag
 obehaglig
 obehindrad
+obehärskad
 obehörig
 obehörig vinst
 obehövlig
@@ -22645,12 +22670,14 @@ odemokratisk
 odiskutabel
 odjur
 odla
+odlare
 odling
 odlingsbar
 odlingsbädd
 odlingskrage
 odontolog
 odontologi
+odramatisk
 odräglig
 oduglig
 odygd
@@ -22884,6 +22911,7 @@ ollonmask
 olm
 ologisk
 olovlig
+olovligen
 olust
 olustig
 olycka
@@ -23373,6 +23401,7 @@ oskriven
 oskuld
 oskuldsfull
 oskyldig
+oskälig
 oskärad
 oskön
 osman
@@ -24990,6 +25019,7 @@ pälsdjur
 pälsjägare
 pälssäl
 pälsverk
+pälsänger
 pärla
 pärlemor
 pärlspont
@@ -25148,6 +25178,7 @@ påstå
 påstå sig
 påstående
 påstötning
+påta
 påta sig
 påtaglig
 påtala
@@ -26080,6 +26111,7 @@ rov
 rova
 rovdjur
 rovdrift
+rovfågel
 rovgirig
 rovlysten
 rubba
@@ -26812,6 +26844,7 @@ sammankomst
 sammankoppla
 sammanlagd
 sammanlagt
+sammanleva
 sammanpacka
 sammanpressa
 sammanräkna
@@ -27324,6 +27357,7 @@ serie
 seriefigur
 seriekoppla
 seriekopplad
+seriekrock
 serieproduktion
 serietidning
 seriös
@@ -27788,6 +27822,7 @@ sjöduglig
 sjöelefant
 sjöfart
 sjöflygplan
+sjöfågel
 sjögräs
 sjögång
 sjökapten
@@ -28711,6 +28746,7 @@ sliten
 slitning
 slits
 slitsam
+slitvarg
 slityta
 slockna
 sloka
@@ -29385,6 +29421,7 @@ socialtjänstlag
 socialvård
 sociolekt
 sociologi
+socionom
 socka
 socker
 socker i botten
@@ -29469,6 +29506,7 @@ solsystem
 soluppgång
 solur
 solution
+solvarg
 solvind
 som
 som att tala till en vägg
@@ -29574,8 +29612,10 @@ sortiment
 sosse
 sossig
 sot
+sot-2
 sota
 sotare
+sotig
 souvenir
 sova
 sova middag
@@ -30975,6 +31015,7 @@ stöta samman
 stöta sig
 stöta till
 stöta ut
+stötande
 stötdämpare
 stötesten
 stötfångare
@@ -31488,13 +31529,13 @@ sägenomspunnen
 säker
 säkerhet
 säkerhetsbälte
-säkerhetsmål
 säkerhetsnål
 säkerhetspolis
 säkerhetspolitik
 säkerhetsrisk
 säkerhetssynpunkt
 säkerhetssystem
+säkerhetstjänst
 säkerhetständsticka
 säkerhetsventil
 säkerligen
@@ -32169,6 +32210,7 @@ teaterkritik
 teatermaskineri
 teaterpjäs
 teaterstycke
+teatersällskap
 teaterviskning
 teblask
 tecken
@@ -33662,7 +33704,6 @@ tvivelaktig
 tvivelsutan
 tvivla
 tvivlare
-tvtittare
 tvungen
 tvär
 tvära
@@ -35638,6 +35679,7 @@ varma färger
 varmblodig
 varmgarage
 varmgång
+varmkompost
 varmluft
 varmluftballong
 varmrätt
@@ -36514,6 +36556,7 @@ välvd
 välvilja
 välvillig
 välvning
+välvårdad
 vämjas
 vämjelig
 vämjelse
@@ -36640,6 +36683,7 @@ världsmusik
 världsmästare
 världsomfattande
 världsomsegling
+världsordning
 världsrekord
 världsrykte
 världsrymd

@@ -1723,6 +1723,7 @@ bit
 biton
 bittermandel
 bittersalt
+bitvarg
 bivack
 biverkan
 biverkning
@@ -2050,6 +2051,7 @@ box
 boxare
 boxershorts
 boxertrosa
+boxhandske
 boxning
 boxningsring
 bracka
@@ -2280,6 +2282,8 @@ buse
 business
 businessklass
 buske
+buskis
+buskteater
 buss
 busschaufför
 busshållplats
@@ -2753,6 +2757,7 @@ deltagare
 deltid
 deltidsgrupp
 delägare
+demagog
 demens
 dementi
 demo
@@ -2791,6 +2796,7 @@ despotism
 dessert
 dessertost
 dessertsked
+desserttallrik
 destination
 destinationsort
 destruent
@@ -3177,6 +3183,7 @@ dödskyss
 dödsmask
 dödsolycka
 dödsorsak
+dödspatrull
 dödsruna
 dödsskjutning
 dödsskugga
@@ -3429,6 +3436,7 @@ enkelsäng
 enkrona
 enkät
 enmansshow
+enmansteater
 enmansvalkrets
 ensak
 ensamhet
@@ -4016,6 +4024,7 @@ fläskfärs
 fläskkorv
 fläskkotlett
 fläskschnitzel
+fläskänger
 fläta
 flåbuse
 flåhacka
@@ -4282,6 +4291,7 @@ frälsning
 frälsningsarmén
 frälsningssoldat
 främling
+främmat
 frände
 fräs
 fräta
@@ -4325,6 +4335,7 @@ fusion
 futhark
 futilitet
 futurolog
+futurologi
 fux
 fylking
 fylla
@@ -4400,6 +4411,7 @@ fästning
 fästpunkt
 fågel
 fågelholk
+fågelvägen
 fåglalåt
 fåle
 fåll
@@ -4913,6 +4925,7 @@ gauss
 gausskurva
 gavel
 gavial
+gecko
 gegga
 geggamoja
 gejd
@@ -6095,6 +6108,7 @@ hållare
 hållbarhet
 hålldam
 hållfasthet
+hållhake
 hållning
 hållplats
 hålremsa
@@ -7157,6 +7171,7 @@ kavern
 kaviar
 kedja
 kedjekrans
+kedjekrock
 kedjereaktion
 kejsare
 kejsarhummer
@@ -7254,6 +7269,7 @@ klenod
 klensmed
 klenät
 klibbal
+kliché
 klick
 klicker
 klient
@@ -7398,7 +7414,6 @@ knölpåk
 knölsvan
 ko
 koagulation
-koagulering
 koala
 koalition
 koalitionsregering
@@ -8599,6 +8614,7 @@ ljusslinga
 ljussläckare
 ljusstake
 ljusstråle
+ljustuta
 lo
 lobotomi
 lock
@@ -9158,6 +9174,7 @@ matstrupe
 matsäck
 matt
 matta
+mattallrik
 matte
 matvara
 matvrå
@@ -9437,7 +9454,6 @@ modalitet
 modd
 modedocka
 modell
-modellbyggnad
 modellera
 modelljärnväg
 modenyck
@@ -9857,6 +9873,7 @@ natursten
 naturtillgång
 naturvetenskap
 naturvård
+nautik
 navare
 navel
 navelsträng
@@ -9939,6 +9956,7 @@ neutron
 nevö
 newtonmeter
 nia
+nick
 nickel
 nidbild
 niece
@@ -10195,6 +10213,7 @@ ockultism
 ockupant
 ockupation
 odalbonde
+odlare
 odling
 odlingsbädd
 odlingskrage
@@ -11299,6 +11318,7 @@ päll
 päls
 pälsjägare
 pälssäl
+pälsänger
 pärla
 pärlemor
 pärlspont
@@ -11776,6 +11796,7 @@ roulett
 roulette
 rova
 rovdrift
+rovfågel
 rubbning
 rubin
 rubrik
@@ -12361,6 +12382,7 @@ serenitet
 sergeant
 serie
 seriefigur
+seriekrock
 serieproduktion
 serietidning
 serveess
@@ -12590,6 +12612,7 @@ sjöbuss
 sjödistrikt
 sjöelefant
 sjöfart
+sjöfågel
 sjögång
 sjökapten
 sjöman
@@ -12996,6 +13019,7 @@ slirkoppling
 slitbana
 slitning
 slits
+slitvarg
 slityta
 slot
 slottsherre
@@ -13236,6 +13260,7 @@ socialtjänstlag
 socialvård
 sociolekt
 sociologi
+socionom
 socka
 sockerart
 sockerbagare
@@ -13288,6 +13313,7 @@ solstrimma
 solstråle
 soluppgång
 solution
+solvarg
 solvind
 sommar
 sommaradress
@@ -13330,6 +13356,7 @@ sorl
 sort
 sosse
 sot
+sot-2
 sotare
 souvenir
 sovmorgon
@@ -14180,6 +14207,7 @@ säkerhetspolis
 säkerhetspolitik
 säkerhetsrisk
 säkerhetssynpunkt
+säkerhetstjänst
 säkerhetständsticka
 säkerhetsventil
 säkring
@@ -15124,7 +15152,6 @@ tvist
 tvistefråga
 tvistighet
 tvivlare
-tvtittare
 tvären
 tvärflöjt
 tvärgata
@@ -15864,6 +15891,7 @@ variation
 varietet
 varieté
 varmgång
+varmkompost
 varmluft
 varmluftballong
 varmrätt
@@ -16279,6 +16307,7 @@ världsmedborgare
 världsmusik
 världsmästare
 världsomsegling
+världsordning
 världsrymd
 världsstad
 världstid
@@ -16599,6 +16628,7 @@ zygot
 ängamat
 ängd
 ängel
+änger
 änglakör
 änglamakerska
 änglamat
