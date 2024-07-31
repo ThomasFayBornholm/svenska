@@ -295,6 +295,7 @@ badvatten
 bagage
 bagageutrymme
 bagerimargarin
+baj
 bajs
 bakben
 bakbord
@@ -692,7 +693,6 @@ böjningsmönster
 böljeslag
 bönehus
 bönemöte
-böneutrop
 bönkaffe
 c
 café
@@ -1036,6 +1036,7 @@ festföremål
 festspel
 fett
 fetthjärta
+fetto
 fiasko
 fickformat
 fickkniv
@@ -1734,6 +1735,7 @@ huvudverb
 huvudvittne
 hyckleri
 hydroplan
+hygge
 hyperaktivitetssyndrom
 hyreshus
 hyss
@@ -2512,6 +2514,7 @@ lokus
 lopp
 lort
 lotteri
+lotto
 lov
 lovord
 ludd
@@ -2561,7 +2564,12 @@ län
 längdhopp
 längdmått
 längdsnitt
+länsmuseum
+länsråd
+länssjukhus
+länsväsen
 läppsmink
+läppsnus
 lärande
 lärft
 lärkträd
@@ -3115,6 +3123,7 @@ os
 oscillation
 oscilloskop
 oskick
+otyg
 ovett
 oväder
 oväsen
@@ -3129,6 +3138,7 @@ pack
 paket
 palats
 paltbröd
+pang
 pannben
 pannrum
 panorama
@@ -3163,6 +3173,7 @@ paustecken
 pegamoid
 pekfinger
 pekoral
+pendeltåg
 pendelur
 penicillin
 pennkniv
@@ -3371,6 +3382,7 @@ ramverk
 randberg
 rapp
 ras
+rasben
 raseri
 rassel
 rattfylleri
@@ -3596,6 +3608,7 @@ samsyn
 samtal
 samtalsgrupp
 samtalsterapi
+samtalsämne
 samtycke
 samvaro
 samvete
@@ -4057,6 +4070,7 @@ spekulum
 spel
 spelarbyte
 spelbord
+spelkort
 spelmissbruk
 spelrum
 spex
@@ -4079,6 +4093,7 @@ spott
 spratt
 sprattel
 spring
+springkorn
 spritkök
 sprängstoff
 sprängämne
@@ -4272,6 +4287,7 @@ sulfat
 supinum
 supplement
 surrogat
+sus
 sutare
 svaj
 svalg
@@ -4387,7 +4403,6 @@ taukors
 taxeringsvärde
 te
 teach-in
-teachin
 team
 teatermaskineri
 teatersällskap
@@ -4711,6 +4726,7 @@ uppseende
 uppskov
 uppslag
 uppslagsord
+uppspel
 uppstråk
 uppsåt
 uppträdande
@@ -4832,6 +4848,7 @@ valspråk
 valv
 vandrarhem
 vandringspris
+vanetänkande
 vansinne
 vanstyre
 vant
@@ -4898,6 +4915,7 @@ vidunder
 vigselformulär
 vikingaskepp
 vikingatåg
+vilddjur
 vildskott
 vildvin
 villebråd
