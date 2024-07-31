@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="sv" charset="utf-8"></html>
+<head>
+<title>Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery-3.6.0.js"></script>
+<link rel="stylesheet" href="game.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+<h1>Lyssna Noggrant!</h1>
+<audio id="iAudioFill" src="backend/Mozart.mp3"></audio><br>
+<audio id="iAudio" controls src="backend/sommar.mp3" onplay="onPlay()"></audio>
+
+<span id="iScore">0%</span>
+<br>
+<progress id="iProgInp" value="0" max="5"></progress><span id="iChunkInp"></span><br>
+<input id="iInput" type="text" ></input>
+<p id="iText"></p>
+<p id="iFb"></p>
+</body>
+<script>
+var SCORE = 0;
+var SCORE_POSSIBLE = 0;
+var CONTENT = {};
+var TIMESTAMPS = {};
+var CURRENT = "";
+var ALLOW_GUESS = false;
+var GUESS_TIME = 0;
+var INC = 0;
+var START = 0;
+var TIMER;
+var DIFF;
+var DIFF_INPUT;
+var CHUNK_TIME;
+var CHUNK_START = 0;
+var NEXT_INP;
+var ELLAPSED;
+var TICKER;
+var FIRST_RUN = true;
+var INPUT_TIME = 0;
+var REVIEW_TIME = 0;
+var PLAYING = false;
+var CURRENT_TIME = 0;
+
+function onPlay() {		
+	PLAYING = true;
+	if (FIRST_RUN) {
+		TICKER = setInterval(newInput,1000);
+		ALLOW_GUESS = true;
+		loadContent();			
+		$('#iInput').focus();
+		FIRST_RUN = false;	
+	}
+}
+
+function loadContent() {
+	fetch('backend/fetchText.php', {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		CONTENT = json;		
+		CURRENT = CONTENT[Object.keys(CONTENT)[0]];
+		TIMESTAMPS = Object.keys(CONTENT);
+		$('#iText').text(CURRENT);
+		ALLOW_GUESS = true;
+		CHUNK_TIME = StrToSeconds(TIMESTAMPS[1]);				
+		INPUT_TIME = CHUNK_TIME + 2;
+		$('#iInput').addClass("ready");		
+		$('#iChunkInp').text(INPUT_TIME + "s");		
+		$('#iProgInp').attr("max",INPUT_TIME);
+		START = new Date().getTime();
+		let fill = $('#iAudioFill').get(0);
+		fill.pause(); // Stop playing
+		fill.currentTime = 1
+	})
+	.catch(error => {
+		console.log(error);
+	})
+}
+
+// This runs periodically
+// A global ELLAPSED variable monitors ellapsed time for a given audio chunk
+function newInput() {	
+	let audio = document.getElementById("iAudio");
+	CURRENT_TIME = Math.round(audio.currentTime);
+	let key = makeTimeString(CURRENT_TIME);
+	if (CONTENT.hasOwnProperty(key) && key != "00:00") {						
+		$('#iAudio').trigger('pause');
+		$('#iAudioFill').trigger("play");
+		PLAYING = false;
+	}
+	if (!PLAYING) { 
+		if (INPUT_TIME > 0) INPUT_TIME--;
+		if (REVIEW_TIME > 0) REVIEW_TIME--;
+		$('#iProgInp').val(CHUNK_TIME + 2 - INPUT_TIME);
+	}
+	
+	if (INPUT_TIME === 0) {
+		guess();
+	}
+	if (INPUT_TIME === 0 && REVIEW_TIME === 0) {
+		INC++
+		$('#iAudio').trigger('play');
+		let fill = $('#iAudioFill').get(0);
+		fill.pause();
+		fill.currentTime = 1
+		$('#iProgInp').val(0);
+		PLAYING = true;
+		ALLOW_GUESS = true;
+		CURRENT = CONTENT[Object.keys(CONTENT)[INC]];
+		CHUNK_TIME = StrToSeconds(TIMESTAMPS[INC]) - StrToSeconds(TIMESTAMPS[INC-1]);	
+		INPUT_TIME = CHUNK_TIME + 2
+		$('#iInput').addClass('ready');
+		$('#iChunkInp').text(INPUT_TIME + "s");		
+		$('#iProgInp').attr("max", INPUT_TIME);
+	}
+	console.log(INPUT_TIME, REVIEW_TIME);
+}
+
+function makeTimeString(seconds) {
+	let sec = seconds % 60;
+	let min = Math.round((seconds - sec) / 60);
+	let secStr = "";
+	let minStr = "";
+	if (sec < 10) {
+		secStr = "0" + sec;
+	} else {
+		secStr = sec;
+	}
+	
+	if (min < 10) {
+		minStr = "0" + min;
+	} else {
+		minStr = min;
+	}
+	return minStr + ":" + secStr;
+}
+
+function guess() {		
+	if (ALLOW_GUESS) {
+		INPUT_TIME = 0;
+		let guess = $('#iInput').val();
+		rateGuess(guess);	
+		ALLOW_GUESS = false;
+		$('#iInput').removeClass("ready");
+		$('#iInput').val("");	
+	}
+	
+}
+
+function onlyWords(text) {
+	let punct = [".",",","!","?"];
+	for (el of punct) {
+		text = text.replaceAll(el,"");
+	}
+	return text.toLowerCase();
+}
+
+function rateGuess(guess) {  
+  // Rate based on first three words  
+  regex  = RegExp(guess, "i");
+  let is_perfect = onlyWords(guess) === onlyWords(CURRENT);
+  let score = 0;
+  if (is_perfect) {
+    score = 100;
+	$('#iFb').html("<span class='green'>Perfekt!</span><br>'" + CURRENT + "'");
+	
+  } else {
+	REVIEW_TIME = 2 // Review period
+    //
+	let guessWords = guess.split(" ");
+		
+	let comp = onlyWords(CURRENT);
+	let match = comp.includes(guess);
+	let matched = 0;
+	if (match) {
+		matched = guess.length;				
+	}
+	
+	// Walk guess forwards for best match
+	guessWords.splice(0,1);
+
+	while (!match) {
+		let delim = "";
+		let test = "";
+		let el = "";
+		for (el of guessWords) {
+			test += delim + el;
+			delim = " ";
+		}
+		match = comp.includes(test);
+		if (match) {
+			matched = test.length;
+			break;
+		}
+		if (guessWords.length === 1) break;		
+		guessWords.splice(0,1);
+		
+	}
+	
+	// Walk guess backwards for best match
+	guessWords = guess.split(" ");
+	guessWords.splice(guessWords.length - 1,1);
+	let matched2 = 0;
+	match = false;
+	while (!match) {
+		let delim = "";
+		let test = "";
+		let el = "";
+		for (el of guessWords) {
+			test += delim + el;
+			delim = " ";
+		}
+		match = comp.includes(test);
+		if (match) {
+			matched2 = test.length;
+			break;
+		}
+		if (guessWords.length === 1) break;
+		guessWords.splice(guessWords.length-1,1);
+	}
+	//console.log(matched,matched2,comp.length);
+	if (matched2 > matched) matched = matched2;	
+	
+	score = Math.round(matched / comp.length * 100);	
+	$('#iFb').html("Gissning: " + guess + "<br>***Facit: " + CURRENT + "***");
+  }
+  SCORE += score;
+  SCORE_POSSIBLE += 100;
+  $('#iScore').text(Math.floor(SCORE/SCORE_POSSIBLE*100) + "% (" + score + ")");
+}
+
+function createRegex(comp) {	
+	r1 = new RegExp("(_w_)","i");	
+	return new RegExp(r1.source.replace("_w_",comp),r1.flags)
+}
+
+function StrToSeconds(timeStr) {
+	tmp = timeStr.split(":");
+	return Number(tmp[0])*60 + Number(tmp[1]);	
+}
+
+</script>

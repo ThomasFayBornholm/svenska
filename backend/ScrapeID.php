@@ -1,5 +1,5 @@
 <?php
-
+	$debug = $_GET["debug"];
 	function getEnum($word) {
 		$start = strpos($word,"[");		
 		if ($start) {
@@ -41,7 +41,12 @@
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
 	$response = curl_exec($ch);			
 			
-	$responseArr = explode("\n", $response);		
+	$responseArr = explode("\n", $response);
+	
+	if ($debug) {
+		var_dump($responseArr);
+		return;
+	}
 	$find = "/so/?id=";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';	
 	$tmpArrID = array();
@@ -88,10 +93,10 @@
 			}
 		}
 	}		
-	// Return only the requested ID.
+	// Return only the requested ID.	
 	if (count($tmpArrID) >= $enum) {		
 		array_push($out["id"],$tmpArrID[$enum-1]);		
-	}		
+	}
 	$def = "";
 	if (count($out["id"]) > 0) {		
 		$url = $urlBaseId . $out["id"][0];
@@ -103,23 +108,41 @@
 	}
 
 	if (str_contains($def,"\n")) {
-		$defArr = explode("\n",$def);	
+		$defArr = explode("\n",$def);			
 		foreach ($defArr as $defLine) {							
-			// Class checks		
+			// Class checks
 			if ($class === "substantiv_en" || $class === "substantiv_ett") {
-				$tmpFind = 'class="bojning_inline"';
-				if (str_contains($defLine,$tmpFind)) {
+				$tmpFind = 'class="bojning_inline"';				
+				//$tmpFind = 'class="avstav"';
+				if (str_contains($defLine,$tmpFind)) {										
 					$tmpStart = strpos($defLine,$tmpFind) + strlen($tmpFind);
 					$tmpEnd = strpos($defLine,"</span>",strlen($tmpFind));
 					if ($tmpEnd) {
-						$firstConj = substr($defLine,$tmpStart, $tmpEnd - $tmpStart);
-						$match = substr($firstConj,-1,1) === "t" && $class === "substantiv_ett";
-						$match = $match || substr($firstConj,-1,1) === "n" && $class === "substantiv_en";						
-						if (!in_array($tmpSNR,$tmpArrSNR)) array_push($tmpArrSNR,$tmpSNR);
-					} else if (str_contains($defLine,"ingen")) {
+						// Note that we want rid of the invisible character "­" below. This is not a visible dash char!
+						$firstConj = str_replace("­","",substr($defLine,$tmpStart, $tmpEnd - $tmpStart));																													
+						$firstConj = str_replace("|","",$firstConj);
+						$firstConj = str_replace("·","",$firstConj);
+						$regex = '/' . $word . '/';
+						$match0 = preg_match($regex,$firstConj);
+						/*
+						echo $regex . "\n";
+						echo $firstConj . "\n";
+						
+						if (!$match0) echo "match0\n";
+						*/
+						
+						// Quick-hack to exclude a trouble-some edge-case.	
+						// $match0 = $match0 && strpos($firstConj,"boj919562") == null;
+						$endChar = substr($firstConj,-1,1);
+						
+						$match = $match0 && $endChar === "t" && $class === "substantiv_ett";						
+						$match = $match || $match0 && $endChar === "n" && $class === "substantiv_en";																								
+						$match = 1; // force match if needed
+						if ($match && !in_array($tmpSNR,$tmpArrSNR)) array_push($tmpArrSNR,$tmpSNR);												
+					} else if (str_contains($defLine,"ingen")) {						
 						if (!in_array($tmpSNR,$tmpArrSNR)) array_push($tmpArrSNR,$tmpSNR);
 					}
-				} 
+				}
 			} else {							
 				if (str_contains($defLine,'class="ordklass"')) {	
 					$tmpClass = strip_tags($defLine);
@@ -129,14 +152,14 @@
 					}
 				}
 			}
-			if (str_contains($defLine, 'superlemma') && strlen($defLine) > 0) {						
+			if (str_contains($defLine, 'superlemma') && strlen($defLine) > 0) {		
 				$tmpSNR = $defLine;
 				$snrStart = strpos($tmpSNR, 'id="snr');
 				if ($snrStart) {									
 					$snrStart += 4;
 					$snrEnd = strpos($tmpSNR,'">',$snrStart);
 					if ($snrEnd) {	
-						$tmpSNR = substr($tmpSNR,$snrStart,$snrEnd-$snrStart);						
+						$tmpSNR = substr($tmpSNR,$snrStart,$snrEnd-$snrStart);
 					} else {
 						echo "Could not find SNR_End";
 						exit();
@@ -146,10 +169,15 @@
 		}
 	}
 	
-	curl_close($ch);
+	curl_close($ch);	
+	// Temporary hacks
+    // array_unshift($tmpArrSNR,"test");
+	// array_push($tmpArrSNR,"snr194285");	
 	if (count($tmpArrSNR) >= $enum) {
 		$out["snr"] = $tmpArrSNR[$enum-1];
 	} else {
+		var_dump($tmpArrID);
+		var_dump($tmpArrSNR);
 		echo json_encode("Too few SNR IDs found");
 		exit();
 	}
@@ -165,6 +193,8 @@
 			$res = "adverb" === $given;
 		} else if ($read === "adjektiviskt slutled") {
 			$res = "slutled" === $given;
+		} else if ($read === "substantiverat adjektiv") {				
+			$res = "adjektiv" === $given;			
 		} else {
 			$res = $read === $given;
 		}

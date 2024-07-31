@@ -114,7 +114,9 @@
 	$contents = file_get_contents($name, 'UTF-8');	
 	$elements= preg_split("/\r\n|\r|\n/", $contents);
 	
-	foreach($tmp as $el) {	
+	foreach($tmp as $el) {			
+		$short = "";
+		$ikom = "";
 		$ref = "";
 		$def = "";
 		$deft = "";
@@ -133,16 +135,26 @@
 				$ref = substr($l, $pos1, $pos2-$pos1);
 			}
 		}
-		
+		$m = getClass($el,"idfkom",true);
+		if ($m) $short = str_replace("</span>","",$m[0]);
+		$m = getClass($el, "ikom", true);
+		if ($m) $ikom = str_replace("</span>","",$m[0]);
 		$m = getClass($el,"idiomdef",true);
 		if ($m) $def = str_replace("</span>","",$m[0]);
 		$m = getClass($el,"idiomdeft",true);
 		if ($m) $deft = str_replace("</span>","",$m[0]);
 		$m = getClass($el, "idiomex", true);
 		if ($m) $ex = str_replace("</span>","",$m[0]);
-		
+		if (strlen($short) > 0) $fullDef .= "(" . $short . ") ";
+		if (strlen($ikom) > 0) $fullDef .= "[" . $ikom . "] ";		
 		if (strlen($ref) > 0) $fullDef .= "SE " . $ref;
-		if (strlen($def) > 0) $fullDef .= "● " . $def;
+		if (strlen($def) > 0) {
+			if (strlen($fullDef) === 0) {
+				$fullDef .= "● " . $def;
+			} else {
+				$fullDef .= $def;
+			}
+		}
 		if (strlen($deft) > 0) $fullDef .= " {" . $deft . "}";
 		if (strlen($ex) > 0) $fullDef .= ": " . $ex;
 		$end = strpos($el,"</span>");

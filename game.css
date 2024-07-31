@@ -1,0 +1,50 @@
+body {
+	background-color: gray;
+}
+
+h1 {
+	color: white;
+}
+
+p {
+	color: darkblue;
+	font-size: 36pt;
+}
+
+input {
+	font-size: 36pt;
+	width: 50%;
+}
+
+.green {
+	color: green;
+}
+
+.blue {
+	color: blue;
+}
+
+.orange {
+	color: orange;
+}
+
+.red {
+	color: red;
+}
+
+span {
+	font-size: 36pt;
+	color: white;
+}
+
+.ready {
+	background-color: green;
+}
+
+#iText {
+	display: none;
+}
+
+progress {
+	width: 40%;
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv"></html>
-<head>
+<head>	
 	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ordbok</title>
 	<link rel="stylesheet" href="svenska.css">
@@ -546,6 +546,7 @@ function moveSelected() {
     let id = "#w" + SCROLL_INC;
     $(id).css("font-weight", "bold");
     LAST_OBJ = $(id)[0];
+	
     // Retrieve definition
     lookupWord(LAST_OBJ,true,true); 
 }
@@ -705,12 +706,13 @@ function showWordMatches(follow) {
 	let id = "w" + SCROLL_INC;
 	let el = document.getElementById(id);
 	let word = el.innerText;	
-	
+	word = word.replace("2","-2");
+	word = word.replace("3","-3");
 	if (LAST_OBJ) {
 		LAST_OBJ.style.fontWeight="";
 	}
 	
-	el.style.fontWeight="bold";
+	el.style.fontWeight="bold";		
 	fetch('backend/getDefAll.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -745,21 +747,22 @@ function showWordMatches(follow) {
 }
 
 function lookupWord(el,onlyLocal,inline, showMore=false) {	
+	
 	trace("lookupWord()");
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
 	// Cleanup
 	$('#iMoreText').html("");
-	$('#iMeta').html("");
-
+	$('#iMeta').html("");	
 	if (el) {
+		
 		if (CLASS === "all") {
 			SCROLL_INC = parseInt(el.id.replace("w",""));			
 			let follow = false;
 
 			if (el.innerText.indexOf(">") != -1) {
 				follow = true;
-			}
+			}			
 			showWordMatches(follow);			
 			return;
 		}
@@ -767,7 +770,7 @@ function lookupWord(el,onlyLocal,inline, showMore=false) {
 			LAST_OBJ.style.fontWeight="";
 		}
 		el.style.fontWeight="bold";
-		let word = el.innerText;
+		let word = el.innerText;		
 		if (el.innerHTML.indexOf("<sup>") != -1) {
 			word = word.replace("2","-2");
 			word = word.replace("3","-3");
@@ -1010,7 +1013,7 @@ function defFromAll(word) {
 	return new Promise((resolve) => {	
 		var out = [];
 		out["match"] = "";
-		out["class"] = "all";
+		out["class"] = "all";		
 		fetch('backend/getDefAll.php?word=' + word, {
 			method: 'get',
 			mode: 'cors',
@@ -1205,7 +1208,7 @@ function onlineLookup(elHTML, ev) {
 	word = elHTML.value;
 	if (word.length === 0) word = CUR_WORD;
 	if (word.length > 0) {
-		fetch("backend/ScrapeID.php?word=" + forScrapeID(word) + "&class=" + CLASS, {
+		fetch("backend/ScrapeID.php?word=" + forScrapeID(word) + "&class=" + CLASS + "&debug=0", {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -2838,9 +2841,11 @@ function fmtMeta(meta) {
 			delMeta = "<br>UTTAL: ";
 		} else {
 			delMeta = "<br>";
-		}
+		}		
 		// Quick-hack, do not show ORDKLASS or UTTAL
 		if (i == 0) tmpMeta += delMeta + metaArr[i];
+		// Quick-hack 2, interested to show ORDKLASS for special-cases.
+		if (i == 1 && metaArr[i].indexOf("substantiverat") != -1) tmpMeta += delMeta + metaArr[i];
 	}
 	tmpMeta = "<i>" + tmpMeta + "</i><br>"
 	// Multi-line meta information get visual divider from the following definition text.
@@ -3442,7 +3447,7 @@ function fetchDef() {
 	if (rootWord.indexOf("-") != -1) {
 		rootWord = rootWord.slice(0,rootWord.indexOf("-"));
 	}
-	fetch('backend/ScrapeID.php?word=' + forScrapeID(word) + '&class=' + CLASS, {
+	fetch('backend/ScrapeID.php?word=' + forScrapeID(word) + '&class=' + CLASS + "&debug=0", {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3743,7 +3748,7 @@ function hideTitle() {
 
 function scrapeWholeClass() {
 	let allWords = [];
-	fetch('backend/getWords.php?start=0&num=20000&class=' + CLASS, {
+	fetch('backend/getWords.php?start=1000&num=1000&class=' + CLASS, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3782,7 +3787,7 @@ function fetchDefWords(allWords,ind) {
 		if (json["snr"] && json["id"]) {			
 			let id = json["id"];
 			let snr = json["snr"]		
-			let backend = 'backend/ScrapeDef.php?word=' + json["key"] + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
+			let backend = 'backend/ScrapeDef.php?word=' + word + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
 			fetch(backend, {
 				method: 'get',
 				mode: 'cors',
@@ -3795,7 +3800,7 @@ function fetchDefWords(allWords,ind) {
 			})
 			.then(json => {
 				if (! json.hasOwnProperty("error")) {
-					let url = 'backend/addDef.php?word=' + word.replace("-","") + '&meta=&def=&more=' + json["more"] + '&class=' + CLASS; 
+					let url = 'backend/addDef.php?word=' + word.replace("-","") + '&meta=' + json["meta"] + '&def=' + json["def"] + '&more=' + json["more"] + '&class=' + CLASS; 
 					fetch(url, {
 						method: 'get',
 						mode: 'cors',
@@ -3817,7 +3822,7 @@ function fetchDefWords(allWords,ind) {
 				} else {
 					$('#iMeta').html("Failed to find match");
 					let upper = allWords.length - 1
-					if (ind >= upper) {
+					if (ind >= upper) {						
 						return;
 					} else {
 						return fetchDefWords(allWords,ind+1);
@@ -3837,6 +3842,8 @@ function forScrapeID(word) {
 	word = word.replace("_","*");
 	const re = /\([2-9]\)/;
 	word = word.replace(re,"");	
+	const re2 = /-([2-9])/;
+	word = word.replace(re2,"?$1");
 	return word;
 	
 }

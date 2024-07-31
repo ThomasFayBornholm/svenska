@@ -51,7 +51,7 @@
 	
 	function getConjugations($key, $dict) {				
 		if (array_key_exists($key, $dict)) {
-			$lines = explode("<br>", $dict[$key]);					
+			$lines = explode("<br>", $dict[$key]);								
 			$lineOne = $lines[0];
 			$lineOne = repText($lineOne,$GLOBALS['replacements'],$key);
 			// First explosion just to get root word
@@ -60,12 +60,12 @@
 			$lineOne = str_replace(", presens", "", $lineOne);
 			$lineOne = str_replace("eller ", "", $lineOne);
 			$lineOne = str_replace("~", $root, $lineOne);
-			$conjugations = explode(" ", $lineOne);
+			$conjugations = explode(" ", $lineOne);			
 		} else {
 			// Empty, no conjugations could be retrieved;
 			$conjugations = array();
 		}
-		if (count($conjugations) > 10) {
+		if (count($conjugations) > 16) {
 			$conjugations = array();
 		}		
 		return $conjugations;
@@ -100,7 +100,7 @@
 	$out["word"]="";
 	$GLOBALS["replacements"] = array("eller ",", komparativ","bestämd form ",", superlativ","supinum ","objektsform ","i vissa stelnade uttryck används ","presens ","även åld. ",",","-","­","plural","singular","bestämd","ingen böjning","<i>","</i>","genitiv ","dativ ");	
 
-	foreach ($classArr as $el) {	
+	foreach ($classArr as $el) {			
 		$name = $el . $trail;
 		// Get word list from "-only" listing
 		$inList = $path . $el . "-only";
@@ -129,7 +129,7 @@
 		} else if ($el === "adverb" && strlen($rest) > 0 && $word[0] === 'i') {			
 			$restList = explode(" ", $rest);						
 			foreach($wordList as $key) {				
-				$conjugations = getConjugations($key, $dict);									
+				$conjugations = getConjugations($key, $dict);				
 				if (containsAllWords($restList, $conjugations) && $key[0] === "i") {					
 					$out["class"] = $el;
 					$out["word"] = $key;
@@ -139,7 +139,7 @@
 			}				
 		} else {			
 			foreach($wordList as $key) {
-				$conjugations = getConjugations($key, $dict);					
+				$conjugations = getConjugations($key, $dict);						
 				if (containsWord($word, $conjugations)) {					
 					$out["class"] = $el;
 					$out["word"] = $key;

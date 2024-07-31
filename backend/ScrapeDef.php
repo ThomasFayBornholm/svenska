@@ -1,5 +1,6 @@
 <?php
-	$GLOBALS["debug"]=$_GET['debug'];
+	$debug = $_GET['debug'];
+	
 	$word = $_GET["word"];
 	$word = preg_replace("/-[2-9]/","",$word);
 	$id = $_GET['id'];	
@@ -16,9 +17,13 @@
 	curl_setopt($ch,CURLOPT_URL,$url);
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
-	$def = curl_exec($ch);			
+	$def = curl_exec($ch);		
+	if ($debug) {			
+		echo $def;
+		return;
+	}
 	curl_close($ch);	
-		
+	//var_dump($def);
 	if (strlen($def) === 0) {
 		error("Failed to retrieve content from Svenska Ordlista server #2.");		
 	}
@@ -57,11 +62,11 @@
 	$pos1 = strpos($def, $find);
 	
 	if ($pos1 || $pos1 === 0) {		
-		$pos2 = strpos($def, "</div>",$pos1);	
+		$pos2 = strpos($def, "</div>",$pos1);			
 		if ($pos2) {			
-			$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));								
+			$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));														
 			if (matchClass($tmpClass, $class)) {				
-				$find = 'class="orto">';
+				$find = 'class="orto">';				
 				$pos1 = strpos($def, $find);				
 				if ($pos1) {
 					$foundMatch = true;
@@ -69,18 +74,17 @@
 				}
 			}
 		}
-	}		
-		
-	$find = 'class="ordklass">';	
-	while ($pos1 && $foundMatch === false) {					
+	}
+	$find = 'ass="ordklass">';			
+	while ($pos1 && $foundMatch === false) {							
 		$pos1 = strpos($def, $find, $pos1 + 1);		
-		if ($pos1 || $pos1 === 0) {
-			$pos2 = strpos($def, "</div>",$pos1);
+		if ($pos1 || $pos1 === 0) {						
+			$pos2 = strpos($def, "</div>",$pos1);			
 			if ($pos2) {
-				$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));						
+				$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));												
 				if (matchClass($tmpClass, $class)) {
 					$find = 'class="orto">';					
-					if ($pos1) {
+					if ($pos1) {						
 						$foundMatch = true;
 						$pos1 -= 550; // Ugly hack to include conjugations also
 						$def = getSingleLemma($def, $pos1,$END);
@@ -121,7 +125,7 @@
 	$conjLines = array();
 	$wordRootLines = array();
 	$splitLines = array();	
-	
+	//var_dump($defLines);
 	foreach($defLines as $line) {
 		$conjugations = "";			
 		if (str_contains($line, 'class="bojning_inline"')) {					
@@ -129,29 +133,31 @@
 		} else if (str_contains($line, 'class="subtype">')) {
 			array_push($splitLines, cut($line,'class="subtype">',"</div>"));
 		} else if (str_contains($line, 'class="orto">')) {
-			array_push($wordRootLines, cut($line,'class="orto">',"</span>"));
+			array_push($wordRootLines, cut($line,'class="orto">',"</span>"));			
 		}
-	}
-
+	}	
 	$i=0;
-	$tmpConj = "";	
+	$tmpConj = "";			
 	foreach($conjLines as $c) {
 		$tmpConj .= $wordRootLines[$i] . " " . $c;
-		if ($i < count($splitLines)) {
+		if ($i < count($splitLines)) {			
 			$tmpConj .= " " . $splitLines[$i] . " ";
 		}
 		$i++;
 	}	
-	
 	$tmpConj = str_replace("  ", " ", $tmpConj); // Hack
-	if (strlen($tmpConj) === 0) $tmpConj = $word;
-	$out['meta'] = $tmpConj;
-	$out['meta'] = $out['meta'] . "<br>" . $wordClass;
+	$conjDelim = "";
+	if (strlen($tmpConj) === 0) {
+		foreach($wordRootLines as $el) {
+			$tmpConj .= $conjDelim . $el;
+			$conjDelim = " eller ";
+		}
+	}
+	$out['meta'] = $tmpConj;	
 	// Hack
 	$out['meta'] = str_replace("</span>","",$out['meta']);
 	$out['meta'] = str_replace("</div>","",$out['meta']);
-		
-	$out['meta'] .= getPronunciation($def);	
+			
 	$out['def'] = getDef($def, $defLines);		
 	$out['more'] = getMore($def);	
 		
@@ -233,6 +239,7 @@
 		}
 	}
 	
+	/* Rely on audio files for pronunciation guides
 	function getPronunciation($def) {
 		$tmp = "";
 		$block = getClass($def,"uttalblock");
@@ -245,7 +252,7 @@
 		}
 		return $tmp;
 	}	
-	
+	*/
 	function getCykel($def,$find,$start) {		
 		$out['found'] = "";
 		$out['pos'] = null;
@@ -430,6 +437,7 @@
 		$out = preg_replace("/,[1-9]$/","",$out);
 		$out = preg_replace("/[1-9],[1-9],[1-9]/","",$out);
 		$out = preg_replace("/[1-9],[1-9]/","",$out);
+		$out = preg_replace("/<l>[1-9]/","<l>",$out);
 		return $out;
 		
 	}
@@ -521,7 +529,10 @@
 		}
 		
 		$out = str_replace("\n \n","\n", $out);
-				
+		$out = preg_replace('/<l>[1-9]/',"<l>",$out);		
+		$out = preg_replace('/[1-9]<\/l>/',"</l>",$out);		
+		$out = preg_replace('/ <\/l>/',"</l>",$out);		
+		$out = preg_replace('/ /'," ",$out);		
 		return $out;
 	}
 	
@@ -688,16 +699,17 @@
 		return $out;
 	}
 	
-	function matchClass($read, $given) {
-		
+	function matchClass($read, $given) {		
 		$res = false;
 		if ($read === "substantiv") {
 			$res =  ($given === "substantiv_en" || $given === "substantiv_ett");
 		} else if ($read === "adjektiviskt slutled") {
-			$res = ($given === "slutled");
+			$res = ($given === "slutled");			
 		} else if ($given === "plural" && $read === "substantiv") {
 			$res = true;
-		} else {
+		} else if ($given === "adjektiv" && $read === "substantiverat adjektiv") {
+			$res = true;			
+		} else {			
 			$res = $read === $given;
 		}				
 		return $res;
