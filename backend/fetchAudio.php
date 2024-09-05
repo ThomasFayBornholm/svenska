@@ -1,9 +1,12 @@
 <?php
+// /*
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+// */
 $out["status"] = "Not found";
 $class = $_GET["class"];
 $word = $_GET["word"];
 $mapping = "../sounds/mapping";
-
 $contents = file_get_contents($mapping);
 // If it exists in the mapping then download it
 $lines = preg_split("/\r\n|\r|\n/", $contents);
@@ -21,6 +24,7 @@ foreach($lines as $l) {
             break;
         }
     }
+
 }
 
 if (strlen($file) > 0) {
@@ -45,7 +49,7 @@ if (strlen($file) > 0) {
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
+	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0");
 	$def = curl_exec($ch);			
 	curl_close($ch);	
 	// Remove all "mdr" class lines from def. These are not interesting to us

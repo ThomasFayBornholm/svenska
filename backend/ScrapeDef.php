@@ -438,6 +438,7 @@
 		$out = preg_replace("/[1-9],[1-9],[1-9]/","",$out);
 		$out = preg_replace("/[1-9],[1-9]/","",$out);
 		$out = preg_replace("/<l>[1-9]/","<l>",$out);
+		$out = str_replace('\\',"\\\\",$out); // Hack to avoid (rare) backslashes in definitions.
 		return $out;
 		
 	}

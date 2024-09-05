@@ -42,7 +42,6 @@
 	$response = curl_exec($ch);			
 			
 	$responseArr = explode("\n", $response);
-	
 	if ($debug) {
 		var_dump($responseArr);
 		return;
