@@ -429,14 +429,18 @@
 			}
 		}
 		$out = str_replace("__\n","",$out);
+		
 		$out = str_replace("__ \n"," ",$out);
 		$out = str_replace("\n__ "," ",$out);			
 		
 		$out = str_replace("\n","<br>",$out);
 		$out = str_replace("det att <br>", "det att ",$out);
+		
+		if (!str_contains($out,"lös förbindelse"))	$out = preg_replace("/\x{00a0}/u","",$out);
+		
 		// Removal of unwanted numerical references in cross-references.
-		$out = preg_replace("/\x{00a0}/u","",$out);
 		$out = preg_replace("/,[1-9]$/","",$out);
+		
 		$out = preg_replace("/[1-9],[1-9],[1-9]/","",$out);
 		$out = preg_replace("/[1-9],[1-9]/","",$out);
 		$out = preg_replace("/<l>[1-9]/","<l>",$out);
@@ -607,7 +611,7 @@
 		return $ret;
 	}
 	
-	function processDefLine($line,$particle) {
+	function processDefLine($line,$particle) {		
 		$res = "";		
 		if (str_contains($line, 'class="kbetydelse"')) {
 			$res = strip_tags($line) . " __";
@@ -634,6 +638,7 @@
 		} else if (str_contains($line, 'class="hv"') || str_contains($line, 'class="hvtyp"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="hvtag"')) {
+			
 			$mid = strpos($line,"</a>");
 			$res = "<l>" . strip_tags(substr($line,0,$mid)) . "</l>";
 			$res = str_replace(" , ", "</l>, <l>",$res);			
@@ -645,7 +650,7 @@
 			$res = "__ {" . strip_tags($line) . "}";
 		}
 		
-		$res = str_replace("!!","",$res); // hack, not sure what the '!!' represents so remove it for now.
+		$res = str_replace("!!","",$res); // hack, not sure what the '!!' represents, so remove it for now.
 		return $res;
 	}
 	
