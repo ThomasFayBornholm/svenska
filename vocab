@@ -26,7 +26,7 @@
 <span class="counts" id="iCntTotal">xx xxx</span>
 </div>
 <div id="iDivTitle" class="titleCentre" ondblclick="hideTitle()">
-<h1 id="iTitle" oncontextmenu="toggleDebugEv(event)" title="Double click to toggle tooltip display on web-page controls">Ordbok</h1>
+<h1 id="iTitle">Ordbok</h1>
 </div>
 <div class="titleRight">
 <span class="counts" id="iTotalScore">xx.xx%</span>
@@ -132,8 +132,8 @@ var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
 var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
 let REGEX_MODE = false;
-var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk","inf","art"]
-var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","räkneord","infinitiv","artikel"]
+var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","fï¿½r","slut","sub","kon","rï¿½k","inf","art"]
+var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","fï¿½rled","slutled","subjunktion","konjunktion","rï¿½kneord","infinitiv","artikel"]
 // Crude toggle on site load to show tool tips
 var TAB_DUMMY;
 var TAB_LOOKUP
@@ -156,6 +156,9 @@ document.addEventListener("visibilitychange", (event) => {
 function startup() {
 	if (DEBUG) log("startup()")	
 	// loop all of word class	
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	if (urlParams.get('debug') === "1") DEBUG = true;
 	randomWord();
 	wordCount();		
 	updateScore();
@@ -210,13 +213,13 @@ function setN_CUR() {
 		N_CUR = N_INTERJEKTION;
 	} else if (CLASS === "pronomen") {
 		N_CUR = N_PRONOMEN;
-	} else if (CLASS === "förled") {
+	} else if (CLASS === "fï¿½rled") {
 		N_CUR = N_PREFIX;
 	} else if (CLASS === "plural") {
 		N_CUR = N_PLURAL;
 	} else if (CLASS === "slutled") {
 		N_CUR = N_SLUTLED;
-	} else if (CLASS === "räkneord") {
+	} else if (CLASS === "rï¿½kneord") {
 		N_CUR = N_NUMMER;
 	} else if (CLASS === "konjunktion") {
 		N_CUR = N_KONJUNKTION;
@@ -310,7 +313,7 @@ function putDef(def, score) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
 	}
-	if (DEBUG) log("START putDef(def, score); def = '" + def + ",score ´" + score + "; SCROLL_INC = " + SCROLL_INC);
+	if (DEBUG) log("START putDef(def, score); def = '" + def + ",score ï¿½" + score + "; SCROLL_INC = " + SCROLL_INC);
 	if (CLASS === "fraser") {
 		putFrasDef(score);
 		return;
@@ -848,7 +851,7 @@ function displayDef(def,word) {
 			for (k = 1; k < 24; k++) {
 				defRaw[i] = defRaw[i].replaceAll(k,"")				
 			}
-			defRaw[i] = defRaw[i].replaceAll(" </b>","</b>")
+			defRaw[i] = defRaw[i].replaceAll("ï¿½</b>","</b>")
 			if (defLines.length === 0) {
 				defLines[0] = defRaw[i];
 				iWrite++;
@@ -925,9 +928,9 @@ function linkSingleWord(def) {
 				// Simple references to verbs from substantive
 				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
 				// Simple reference from adjektives to substantive
-				ref = "som vållar ";
+				ref = "som vï¿½llar ";
 				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
-				ref = "som präglas av ";
+				ref = "som prï¿½glas av ";
 				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
 				// Simple references to verbs from adjektive
 				ref = "som ";
@@ -942,7 +945,7 @@ function linkSingleWord(def) {
 				let cnt = tmp.match(/ /g);				
 				if (cnt === null) {					
 					let offset = 0
-					let word = tmp.substr(offset).replaceAll("­","");
+					let word = tmp.substr(offset).replaceAll("ï¿½","");
 					line = line.replace(word, tmpSpan.replaceAll("_w_",word));				
 				} 
 				
@@ -971,7 +974,7 @@ function addLinks(refClass,def) {
 		if (line.indexOf(m) != -1) {
 			elArr = line.split(", ");
 			for (el of elArr) {
-				el = el.replaceAll("­","");
+				el = el.replaceAll("ï¿½","");
 				if (el.includes(m)) {
 					let rep = m + spanTmp.replaceAll("_w_",el.substr(m.length, el.length - m.length))
 					line = line.replace(el, rep);
@@ -1437,7 +1440,7 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1, showMore = false) {
 	CUR_DEF_ENUM = last_enum;
 	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
 	if (word.length > 0) {
-		word = word.replaceAll("­","");
+		word = word.replaceAll("ï¿½","");
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
 			mode: 'cors',
@@ -1495,7 +1498,7 @@ function seekWord(word, link = false, lastEnum = false) {
 	$('#iAux').empty();
 	$('#iMoreText').empty();
 	// Any user supplied breaks are discarded.
-	word = word.replaceAll("­","");	
+	word = word.replaceAll("ï¿½","");	
 	REGEX_WORDS = [];
 	// Strip trailing white space	
 	while (word.substr(word.length-1) === " ") {
@@ -1620,7 +1623,7 @@ function getWordInc(word) {
 		// Special case of prefixes and suffices
 		if (word.substr(word.length-1) === "-") {
 			word = word.substr(0,word.length-1);
-			setClass("förled");
+			setClass("fï¿½rled");
 		} else if (word.slice(0,1) === "-") {
 			word = word.substr(1);
 			setClass("slutled");
@@ -1719,7 +1722,7 @@ function regexSearch(word) {
 
 function drillDown() {
 	if (DEBUG) log("drillDown()");
-	// Take word from iWords to allow for special characters such as 'é'
+	// Take word from iWords to allow for special characters such as 'ï¿½'
 	let id = "#w" + SCROLL_INC;
 	let word = $(id).text()	
 		
@@ -1932,11 +1935,11 @@ function fullClassName(name) {
 	if (name === "plu") return "plural"
 	if (name === "prep") return "preposition"
 	if (name === "pro") return "pronomen"
-	if (name === "for") return "förled"
-	if (name === "för") return "förled"
+	if (name === "for") return "fï¿½rled"
+	if (name === "fï¿½r") return "fï¿½rled"
 	if (name === "slut") return "slutled"
 	if (name === "slut") return "slutled"
-	if (name === "räk") return "räkneord"
+	if (name === "rï¿½k") return "rï¿½kneord"
 	if (name === "kon") return "konjunktion"
 	if (name === "int") return "interjektion"
 	if (name === "inf") return "infinitiv"
@@ -1960,7 +1963,7 @@ function guessClass(word) {
 	if (word.endsWith('as')) return "verb"
 	if (word.includes(' ')) return "verb"
 	if (word.endsWith("ig")) return "adjektiv"
-	if (word.endsWith("lös")) return "adjektiv"
+	if (word.endsWith("lï¿½s")) return "adjektiv"
 	if (word.endsWith("sam")) return "adjektiv"
 	if (word.endsWith("full")) return "adjektiv"
 	if (word.endsWith("ell")) return "adjektiv"
@@ -1998,7 +2001,7 @@ function addWord(remove = false) {
 	if (word[0] === '.') word = word.slice(1,word.length);
 	word = word.replaceAll("/","\/");
 	// Don't want characters in the storage key that the user would not enter
-	word = word.replaceAll("­","");
+	word = word.replaceAll("ï¿½","");
 	if (word[word.length-1] === '.' && del) word = word.slice(0,word.length-1);
 	if (word.length > 0) {
 		let op = "add"	
@@ -2046,8 +2049,8 @@ function addWord(remove = false) {
 				})
 			// Navigate to newly added word for convenience.
 			} else if (op === "add") {
-				// Undesirable to have '­' character in word keys as user not expected to specifiy these. 
-				word = word.replace("­","");
+				// Undesirable to have 'ï¿½' character in word keys as user not expected to specifiy these. 
+				word = word.replace("ï¿½","");
 				seekWordSingleClass(word)
 			}
 		})
@@ -2094,157 +2097,157 @@ function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) log("addMeta()");	
 	regexArr = [
-		/var­dagligt, skämtsamt/,
-		/ålderdomligt el. ironiskt/,
-		/sjö­fart/,
-		/något ålderdomligt el. dialektalt/,
-		/hög­tidligt el. skämtsamt/,
-		/handels­namn/,
-		/något ålderdomligt], ur­sprungligen bibliskt/,
-		/sär­skilt i juridiska samman­hang/,
-		/starkt ned­sättande; något ålderdomligt/,
-		/ned­sättande, något ålderdomligt/,
-		/något hög­tidligt; något ålderdomligt/,
-		/var­dagligt el. i barn­språk/,
-		/nästan en­bart i fack­språk/,
-		/skämtsamt/,
-		/dialektalt; något ned­sättande/,
+		/varï¿½dagligt, skï¿½mtsamt/,
+		/ï¿½lderdomligt el. ironiskt/,
+		/sjï¿½ï¿½fart/,
+		/nï¿½got ï¿½lderdomligt el. dialektalt/,
+		/hï¿½gï¿½tidligt el. skï¿½mtsamt/,
+		/handelsï¿½namn/,
+		/nï¿½got ï¿½lderdomligt], urï¿½sprungligen bibliskt/,
+		/sï¿½rï¿½skilt i juridiska sammanï¿½hang/,
+		/starkt nedï¿½sï¿½ttande; nï¿½got ï¿½lderdomligt/,
+		/nedï¿½sï¿½ttande, nï¿½got ï¿½lderdomligt/,
+		/nï¿½got hï¿½gï¿½tidligt; nï¿½got ï¿½lderdomligt/,
+		/varï¿½dagligt el. i barnï¿½sprï¿½k/,
+		/nï¿½stan enï¿½bart i fackï¿½sprï¿½k/,
+		/skï¿½mtsamt/,
+		/dialektalt; nï¿½got nedï¿½sï¿½ttande/,
 		/kemi/,
-		/var­dagligt, dialektalt/,
+		/varï¿½dagligt, dialektalt/,
 		/ekonomi, juridik/,
-		/endast vid beskrivning av äldre förhållanden/,
-		/ofta i natur­namn/,
-		/mest i äldre tid/,
-		/ofta i offentligt språk/,
-		/ofta i politiska samman­hang/,
-		/ej i fack­mässiga samman­hang/,
-		/var­dagligt, kan upp­fattas som ned­sättande/,
-		/var­dagligt, något ålderdomligt; kan upp­fattas som ned­sättande/,
-		/var­dagligt; något ålderdomligt/,
-		/ofta något hög­tidligt/,
-		/något hög­tidligt el. ålderdomligt/,
-		/något hög­tidligt; mindre brukligt/,
-		/ofta i poetiska samman­hang/,
-		/språk­vetenskap/,
-		/sär­skilt i affärs­mässiga och vetenskapliga samman­hang/,
-		/samman­fattande, formell beteckning/,
-		/nu­mera ej officiell benämning/,
-		/ofta i värderande ut­tryck/,
+		/endast vid beskrivning av ï¿½ldre fï¿½rhï¿½llanden/,
+		/ofta i naturï¿½namn/,
+		/mest i ï¿½ldre tid/,
+		/ofta i offentligt sprï¿½k/,
+		/ofta i politiska sammanï¿½hang/,
+		/ej i fackï¿½mï¿½ssiga sammanï¿½hang/,
+		/varï¿½dagligt, kan uppï¿½fattas som nedï¿½sï¿½ttande/,
+		/varï¿½dagligt, nï¿½got ï¿½lderdomligt; kan uppï¿½fattas som nedï¿½sï¿½ttande/,
+		/varï¿½dagligt; nï¿½got ï¿½lderdomligt/,
+		/ofta nï¿½got hï¿½gï¿½tidligt/,
+		/nï¿½got hï¿½gï¿½tidligt el. ï¿½lderdomligt/,
+		/nï¿½got hï¿½gï¿½tidligt; mindre brukligt/,
+		/ofta i poetiska sammanï¿½hang/,
+		/sprï¿½kï¿½vetenskap/,
+		/sï¿½rï¿½skilt i affï¿½rsï¿½mï¿½ssiga och vetenskapliga sammanï¿½hang/,
+		/sammanï¿½fattande, formell beteckning/,
+		/nuï¿½mera ej officiell benï¿½mning/,
+		/ofta i vï¿½rderande utï¿½tryck/,
 		/ofta statistik/,
 		/ofta ironiskt/,
-		/mest i vetenskapliga samman­hang/,
-		/nu­mera sällan i fack­mässiga samman­hang/,
-		/nu­mera mindre brukligt i fack­mässiga samman­hang/,
-		/i fackspråkliga samman­hang/,
-		/nu­mera mindre brukligt/,
-		/ofta i religiösa samman­hang/,
-		/sär­skilt bibliskt; något ålderdomligt ut­om i vissa ut­tryck/,
-		/sär­skilt geometri/,
-		/ofta i bild­konst/,
+		/mest i vetenskapliga sammanï¿½hang/,
+		/nuï¿½mera sï¿½llan i fackï¿½mï¿½ssiga sammanï¿½hang/,
+		/nuï¿½mera mindre brukligt i fackï¿½mï¿½ssiga sammanï¿½hang/,
+		/i facksprï¿½kliga sammanï¿½hang/,
+		/nuï¿½mera mindre brukligt/,
+		/ofta i religiï¿½sa sammanï¿½hang/,
+		/sï¿½rï¿½skilt bibliskt; nï¿½got ï¿½lderdomligt utï¿½om i vissa utï¿½tryck/,
+		/sï¿½rï¿½skilt geometri/,
+		/ofta i bildï¿½konst/,
 		/mest som marxistisk term/,
-		/sär­skilt medicin, psykologi/,
-		/sär­skilt medicin/,
-		/sär­skilt i handels­språk/,
+		/sï¿½rï¿½skilt medicin, psykologi/,
+		/sï¿½rï¿½skilt medicin/,
+		/sï¿½rï¿½skilt i handelsï¿½sprï¿½k/,
 		/medicin/,
-		/något hög­tidligt ut\u00ADom i sammansättn./,
-		/hög­tidligt; mest bibliskt/,
-		/något hög­tidligt el. formellt/,
-		/något hög­tidligt el. skämtsamt/,
-		/ibland något hög­tidligt/,
-		/något hög­tidligt/,
-		/hög­tidligt/,			
-		/något var­dagligt/,
-		/var­dagligt; dialektalt/,
-		/var­dagligt; något ned­sättande/,
-		/var­dagligt; ned­sättande/,
-		/ibland något ned­sättande/,
-		/något ned­sättande/,
-		/ned­sättande; ålderdomligt/,
-		/var­dagligt; vanligen något ned­sättande/,
-		/var­dagligt; ned\u00ADsättande/,
-		/var­dagligt, ibland något ned­sättande/,
-		/var­dagligt; sär­skilt sport/,
-		/starkt var­dagligt/,
-		/var­dagligt/,
+		/nï¿½got hï¿½gï¿½tidligt ut\u00ADom i sammansï¿½ttn./,
+		/hï¿½gï¿½tidligt; mest bibliskt/,
+		/nï¿½got hï¿½gï¿½tidligt el. formellt/,
+		/nï¿½got hï¿½gï¿½tidligt el. skï¿½mtsamt/,
+		/ibland nï¿½got hï¿½gï¿½tidligt/,
+		/nï¿½got hï¿½gï¿½tidligt/,
+		/hï¿½gï¿½tidligt/,			
+		/nï¿½got varï¿½dagligt/,
+		/varï¿½dagligt; dialektalt/,
+		/varï¿½dagligt; nï¿½got nedï¿½sï¿½ttande/,
+		/varï¿½dagligt; nedï¿½sï¿½ttande/,
+		/ibland nï¿½got nedï¿½sï¿½ttande/,
+		/nï¿½got nedï¿½sï¿½ttande/,
+		/nedï¿½sï¿½ttande; ï¿½lderdomligt/,
+		/varï¿½dagligt; vanligen nï¿½got nedï¿½sï¿½ttande/,
+		/varï¿½dagligt; ned\u00ADsï¿½ttande/,
+		/varï¿½dagligt, ibland nï¿½got nedï¿½sï¿½ttande/,
+		/varï¿½dagligt; sï¿½rï¿½skilt sport/,
+		/starkt varï¿½dagligt/,
+		/varï¿½dagligt/,
 		/dialektalt/,
-		/i fack­språk/,
-		/ofta i fackspråkliga samman­hang/,
-		/nu\u00ADmera ej i fack\u00ADmässiga samman\u00ADhang/,
-		/nu­mera mindre brukligt i fack\u00ADmässiga samman\u00ADhang/,
+		/i fackï¿½sprï¿½k/,
+		/ofta i facksprï¿½kliga sammanï¿½hang/,
+		/nu\u00ADmera ej i fack\u00ADmï¿½ssiga samman\u00ADhang/,
+		/nuï¿½mera mindre brukligt i fack\u00ADmï¿½ssiga samman\u00ADhang/,
 		/mindre brukligt/,
-		/sär­skilt ekonomi/,
-		/sär­skilt i matematiskt fack­språk/,
-		/sär­skilt matematik/,
+		/sï¿½rï¿½skilt ekonomi/,
+		/sï¿½rï¿½skilt i matematiskt fackï¿½sprï¿½k/,
+		/sï¿½rï¿½skilt matematik/,
 		/matematisk/,
 		/fysik, kemi m.m./,
 		/fysik/,
-		/sär­skilt i juridiska samman\u00ADhang/,
-		/sär­skilt juridik/,
+		/sï¿½rï¿½skilt i juridiska samman\u00ADhang/,
+		/sï¿½rï¿½skilt juridik/,
 		/juridik/,
-		/sär­skilt i lag­språk/,
-		/sär­skilt psykologi/,
+		/sï¿½rï¿½skilt i lagï¿½sprï¿½k/,
+		/sï¿½rï¿½skilt psykologi/,
 		/psykologi/,
-		/informations­teknik/,
-		/sär­skilt i fack­språk/,
-		/ofta i fack­språk/,
-		/mest i fack­mässiga samman­hang/,
-		/ålderdomligt ut\u00ADom i bibliska samman\u00ADhang/,
-		/ålderdomligt ut­om i vissa ut­tryck/,
-		/delvis något ålderdomligt/,
-		/något ålderdomligt/,
-		/något ålderdomligt el. ironiskt/,
-		/ålderdomligt/,
-		/sär­skilt vid beskrivning av ut­ländska förhållanden/,
-		/endast vid beskrivning av ut­ländska förhållanden/,
-		/något formellt/,
-		/formellt i konkret an­vändning/,
+		/informationsï¿½teknik/,
+		/sï¿½rï¿½skilt i fackï¿½sprï¿½k/,
+		/ofta i fackï¿½sprï¿½k/,
+		/mest i fackï¿½mï¿½ssiga sammanï¿½hang/,
+		/ï¿½lderdomligt ut\u00ADom i bibliska samman\u00ADhang/,
+		/ï¿½lderdomligt utï¿½om i vissa utï¿½tryck/,
+		/delvis nï¿½got ï¿½lderdomligt/,
+		/nï¿½got ï¿½lderdomligt/,
+		/nï¿½got ï¿½lderdomligt el. ironiskt/,
+		/ï¿½lderdomligt/,
+		/sï¿½rï¿½skilt vid beskrivning av utï¿½lï¿½ndska fï¿½rhï¿½llanden/,
+		/endast vid beskrivning av utï¿½lï¿½ndska fï¿½rhï¿½llanden/,
+		/nï¿½got formellt/,
+		/formellt i konkret anï¿½vï¿½ndning/,
 		/formellt/,
 		/delvis historiskt/,
 		/mest historiskt/,
 		/historiskt i Sverige/,
 		/historiskt/,
-		/sär\u00ADskilt i barn\u00ADspråk och i imiterat barn\u00ADspråk/,
-		/mest i fack\u00ADspråk/,
-		/mest i sport­jargong/,
-		/sär­skilt i vetenskapliga samman­hang/,
-		/ofta i tekniska el. vetenskapliga samman­hang/,
-		/i tekniska och vetenskapliga samman­hang/,
-		/i vetenskapliga samman­hang/,
-		/mest i tekniska samman­hang/,
+		/sï¿½r\u00ADskilt i barn\u00ADsprï¿½k och i imiterat barn\u00ADsprï¿½k/,
+		/mest i fack\u00ADsprï¿½k/,
+		/mest i sportï¿½jargong/,
+		/sï¿½rï¿½skilt i vetenskapliga sammanï¿½hang/,
+		/ofta i tekniska el. vetenskapliga sammanï¿½hang/,
+		/i tekniska och vetenskapliga sammanï¿½hang/,
+		/i vetenskapliga sammanï¿½hang/,
+		/mest i tekniska sammanï¿½hang/,
 		/mest i vetenskapliga samman\u00ADhang/,
-		/sär­skilt i vetenskapliga samman\u00ADhang/,
+		/sï¿½rï¿½skilt i vetenskapliga samman\u00ADhang/,
 		/i vetenskapliga samman\u00ADhang/,
-		/ålderdomligt el. skämtsamt/,
+		/ï¿½lderdomligt el. skï¿½mtsamt/,
 		/ofta klandrande/,
-		/mest vid beskrivning av äldre förhållanden/,
-		/sär­skilt vid beskrivning av äldre förhållanden/,
-		/äv. som musikalisk term/,
+		/mest vid beskrivning av ï¿½ldre fï¿½rhï¿½llanden/,
+		/sï¿½rï¿½skilt vid beskrivning av ï¿½ldre fï¿½rhï¿½llanden/,
+		/ï¿½v. som musikalisk term/,
 		/musikalisk/,
 		/musik/,
-		/sär­skilt meteorologi/,
-		/sär­skilt i vänster­politisk debatt/,
-		/ofta i vänster­politisk debatt/,
-		/ofta ned­sättande/,
-		/ofta något ned­sättande/,
-		/ned­sättande; något ålderdomligt/,
-		/ned­sättande/,
-		/ibland skämtsamt/,
-		/ibland något skämtsamt/,
-		/sär­skilt statistik/,
-		/sär­skilt filosofi, biologi/,
-		/sär­skilt filosofi/,			
+		/sï¿½rï¿½skilt meteorologi/,
+		/sï¿½rï¿½skilt i vï¿½nsterï¿½politisk debatt/,
+		/ofta i vï¿½nsterï¿½politisk debatt/,
+		/ofta nedï¿½sï¿½ttande/,
+		/ofta nï¿½got nedï¿½sï¿½ttande/,
+		/nedï¿½sï¿½ttande; nï¿½got ï¿½lderdomligt/,
+		/nedï¿½sï¿½ttande/,
+		/ibland skï¿½mtsamt/,
+		/ibland nï¿½got skï¿½mtsamt/,
+		/sï¿½rï¿½skilt statistik/,
+		/sï¿½rï¿½skilt filosofi, biologi/,
+		/sï¿½rï¿½skilt filosofi/,			
 		/filosofi/,		
-		/i allmän­språket/,
-		/sär­skilt sport/,
-		/sär­skilt militär­väsen och sport/,
-		/sär­skilt militär­väsen/,
-		/sär­skilt sjö­fart/,
-		/ibland något ironiskt/,
-		/sär­skilt arkeologi/,
+		/i allmï¿½nï¿½sprï¿½ket/,
+		/sï¿½rï¿½skilt sport/,
+		/sï¿½rï¿½skilt militï¿½rï¿½vï¿½sen och sport/,
+		/sï¿½rï¿½skilt militï¿½rï¿½vï¿½sen/,
+		/sï¿½rï¿½skilt sjï¿½ï¿½fart/,
+		/ibland nï¿½got ironiskt/,
+		/sï¿½rï¿½skilt arkeologi/,
 		/ej officiell svensk beteckning/,
-		/nu­mera ej officiell beteckning/,
-		/förskönande om­skrivning/,
-		/ur­sprungligen bibliskt/,
+		/nuï¿½mera ej officiell beteckning/,
+		/fï¿½rskï¿½nande omï¿½skrivning/,
+		/urï¿½sprungligen bibliskt/,
 		/bibliskt/,
 		/ofta fysik och teknik/,
 	]
@@ -2270,23 +2273,23 @@ function grammar(def) {
 	if (DEBUG) log("grammar()");
 	// Only one grammer expression is permitted.
 	gArr = [
-	 "nästan en­bart presens particip",
-	 "nästan en­bart perfekt particip",
-	 "vanligen i nekande och frågande ut­tryck",
-	 "endast obestämd form sing.; i mer el. mindre adjektivisk an­vändning",
+	 "nï¿½stan enï¿½bart presens particip",
+	 "nï¿½stan enï¿½bart perfekt particip",
+	 "vanligen i nekande och frï¿½gande utï¿½tryck",
+	 "endast obestï¿½md form sing.; i mer el. mindre adjektivisk anï¿½vï¿½ndning",
 	 "anv. som plur.",
-	 "i negerade och frågande samman­hang",
-	 "ofta i substantivisk an­vändning",
-	 "nästan en­bart bestämd form sing.",
-	 "vanligen i böjda former",
-	 "nästan alltid bestämd form sing. och med versal",
-	 "ofta bestämd form sing. och med versal",
-	 "vanligen bestämd form sing. och med versal",
-	 "med subst. som för­led",
-	 "vanligen placerat efter huvud­ordet",
+	 "i negerade och frï¿½gande sammanï¿½hang",
+	 "ofta i substantivisk anï¿½vï¿½ndning",
+	 "nï¿½stan enï¿½bart bestï¿½md form sing.",
+	 "vanligen i bï¿½jda former",
+	 "nï¿½stan alltid bestï¿½md form sing. och med versal",
+	 "ofta bestï¿½md form sing. och med versal",
+	 "vanligen bestï¿½md form sing. och med versal",
+	 "med subst. som fï¿½rï¿½led",
+	 "vanligen placerat efter huvudï¿½ordet",
 	 "ofta med versal",
-	 "ofta med efter­följande bi­sats",
-	 "sär­skilt i pass. konstruktioner",
+	 "ofta med efterï¿½fï¿½ljande biï¿½sats",
+	 "sï¿½rï¿½skilt i pass. konstruktioner",
 	 "i konstruktion med komparativ",
 	 "ofta substantiverat",
 	 "ofta refl. el. perfekt particip",
@@ -2295,34 +2298,34 @@ function grammar(def) {
 	 "med konjunktionen",,
 	 "vanligen pres.",
 	 "endast pres. el. pret.",
-	 "i bestämd form",
-	 "vanligen bestämd form sing.",
-	 "ofta bestämd form sing.",
-	 "vanligen bestämd form",
+	 "i bestï¿½md form",
+	 "vanligen bestï¿½md form sing.",
+	 "ofta bestï¿½md form sing.",
+	 "vanligen bestï¿½md form",
 	 "ofta plur.",
 	 "knappast plur.; i vissa ut\u00ADtryck",
 	 "knappast plur.",
 	 "vanligen plur.",
-	 "sällan plur.",
+	 "sï¿½llan plur.",
 	 "vanligen part.",
 	// ToDo regex to get word reference	,
-	 "ofta i sammansättn."		,
-	 "mest i sammansättn.",
-	 "nu­mera vanligen i sammansätt."	,
-	 "vanligen i sammansättn. och i vissa uttryck",
-	 "vanligen i sammansättn.",
-	"vanligen i vissa sammansätt."			,
-	"i vissa ut­tryck och sammansättn."			,
-	"i sammansättn.",
+	 "ofta i sammansï¿½ttn."		,
+	 "mest i sammansï¿½ttn.",
+	 "nuï¿½mera vanligen i sammansï¿½tt."	,
+	 "vanligen i sammansï¿½ttn. och i vissa uttryck",
+	 "vanligen i sammansï¿½ttn.",
+	"vanligen i vissa sammansï¿½tt."			,
+	"i vissa utï¿½tryck och sammansï¿½ttn."			,
+	"i sammansï¿½ttn.",
 	// ToDo regex this one			,
 	"vanligen i vissa ut\u00ADtryck",
-	"utan böjning, i vissa ut\u00ADtryck",
-	"sär­skilt i vissa ut­tryck",
-	 "sär­skilt i ett ut­tryck",
+	"utan bï¿½jning, i vissa ut\u00ADtryck",
+	"sï¿½rï¿½skilt i vissa utï¿½tryck",
+	 "sï¿½rï¿½skilt i ett utï¿½tryck",
 	"vanligen i vissa ut\u00ADtryck",
 	"i vissa ut\u00ADtryck",
-	"vanligen i några ut\u00ADtryck",
-	"i några ut\u00ADtryck",
+	"vanligen i nï¿½gra ut\u00ADtryck",
+	"i nï¿½gra ut\u00ADtryck",
 	 "ofta pass. el. perfekt particip"			,
 	"ofta pass."			,
 	"vanligen pass. el. presens particip",
@@ -2331,23 +2334,23 @@ function grammar(def) {
 	"vanligen pass. el. part.",
 	"vanligen refl. el. pass.",
 	"vanligen refl. el. perfekt particip.",
-	"ofta bestämd form",
+	"ofta bestï¿½md form",
 	"vanligen perfekt particip",
 	"ofta i perfekt particip",
 	"ofta perfekt particip",
 	"ofta presens particip",
-	 "nästan en­bart pres. el. pret.",
+	 "nï¿½stan enï¿½bart pres. el. pret.",
 	"vanligen perfekt particip"			,
-	"vanligen obestämd form sing.",
-	"vanligen obestämd form",
-	"ibl. två ord",
-	"äv. två ord",
-	"vanl. två ord",
-	"äv. tre ord",
+	"vanligen obestï¿½md form sing.",
+	"vanligen obestï¿½md form",
+	"ibl. tvï¿½ ord",
+	"ï¿½v. tvï¿½ ord",
+	"vanl. tvï¿½ ord",
+	"ï¿½v. tre ord",
 	"ofta tre ord",
 	"vanl. tre ord",
-	"nästan en\u00ADbart i sammansättn.",
-	"nästan en­bart predikativt",
+	"nï¿½stan en\u00ADbart i sammansï¿½ttn.",
+	"nï¿½stan enï¿½bart predikativt",
 	"endast predikativt",
 	"vanligen i konstruktioner"			,
 	"vanligen i konstruktion",
@@ -2358,23 +2361,23 @@ function grammar(def) {
 	"vanligen opersonlig konstruktion",
 	"vanligen koll.",
 	 "ofta koll.",
-	"ofta i nekande ut­tryck",
-	"i nekande ut­tryck",
-	"ofta i nekande el. frågande ut­tryck",
+	"ofta i nekande utï¿½tryck",
+	"i nekande utï¿½tryck",
+	"ofta i nekande el. frï¿½gande utï¿½tryck",
 	"ofta i nekande konstruktion",
-	"vanligen i nekande el. frågande ut­tryck",
-	"ofta i nekande ut­tryck",
-	"vanligen i nekande ut­tryck",
-	"nästan en­bart plur.",
+	"vanligen i nekande el. frï¿½gande utï¿½tryck",
+	"ofta i nekande utï¿½tryck",
+	"vanligen i nekande utï¿½tryck",
+	"nï¿½stan enï¿½bart plur.",
 	"i plur.",
 	"vanligen predikativt",
-	"äv. två ord",
-	"ofta två ord",
-	"i negerade samman­hang",
-	"ofta i negerade ut­tryck"	,
-	"i negerade ut­tryck",
-	 "i ett få­tal ut­tryck",
-	 "i negerade el. frågande samman­hang",
+	"ï¿½v. tvï¿½ ord",
+	"ofta tvï¿½ ord",
+	"i negerade sammanï¿½hang",
+	"ofta i negerade utï¿½tryck"	,
+	"i negerade utï¿½tryck",
+	 "i ett fï¿½tal utï¿½tryck",
+	 "i negerade el. frï¿½gande sammanï¿½hang",
 	 "vanligen supinum",
 	 "ofta best. form sing.",
 	 "ej predikativt",
@@ -2410,7 +2413,7 @@ function preProc(def) {
 	let defArr = def.split("\n");
 	// Concenate if multiple spellings are present
 	// *** META ***
-	if (defArr.length > 3 && defArr[1] === "eller" || defArr[1] === "även" || defArr[1] === "även åld." || defArr[1] === "även vardagligt" || defArr[1] === "eller vardagligt") {
+	if (defArr.length > 3 && defArr[1] === "eller" || defArr[1] === "ï¿½ven" || defArr[1] === "ï¿½ven ï¿½ld." || defArr[1] === "ï¿½ven vardagligt" || defArr[1] === "eller vardagligt") {
 		defArr[0] = defArr[0] + " </i>" + defArr[1] + " <i>" + defArr[2];
 		// Move remaining items up two elements
 		for (i = 3; i < defArr.length; i++) {
@@ -2446,7 +2449,7 @@ function preProc(def) {
 	var m;
 	if (CLASS === "slutled") {
 		m = "-" + CUR_WORD;
-	} else if (CLASS === "förled") {
+	} else if (CLASS === "fï¿½rled") {
 		m = CUR_WORD + "-";
 	} else {
 		m = CUR_WORD;
@@ -2504,7 +2507,7 @@ function preProc(def) {
 			}
 		}
 		let isSingle = char1 === "\u25cf" || char1 === "\u2022"; // single definition		
-		let isSamman = cur.slice(0,6) === "till '"// sammansättning
+		let isSamman = cur.slice(0,6) === "till '"// sammansï¿½ttning
 		if (isSingle || isLink || isNum || isSamman || CLASS === "fraser") {			
 			tmpDef += delDef + cur;			
 			delDef = "\n";			
@@ -2520,10 +2523,10 @@ function preProc(def) {
 	let outDef = "";
 	// Grammer information - Support for partikel parters
 	// Can be between 1 and 3 suggested partner words
-	let regex1 = /skilt[a-zäöå]+/;
-	let regex1_alt = /partikeln[a-zäöå]+/;
-	let regex2 = /skilt[a-zäöå]+, [a-zäöå]+/;
-	let regex3 = /skilt[a-zäöå]+, [a-zäöå]+, [a-zäöå]+/;
+	let regex1 = /skilt[a-zï¿½ï¿½ï¿½]+/;
+	let regex1_alt = /partikeln[a-zï¿½ï¿½ï¿½]+/;
+	let regex2 = /skilt[a-zï¿½ï¿½ï¿½]+, [a-zï¿½ï¿½ï¿½]+/;
+	let regex3 = /skilt[a-zï¿½ï¿½ï¿½]+, [a-zï¿½ï¿½ï¿½]+, [a-zï¿½ï¿½ï¿½]+/;
 	// Delimiter is blank on first line
 	del = "";
 	for (s of arr) {				
@@ -2533,7 +2536,7 @@ function preProc(def) {
 				s = s.slice(1,s.length)
 			}
 			// Defuault to "pretty" leading bullet point
-			if (s[0].match(/[<a-zäöå([]+/) != null) {
+			if (s[0].match(/[<a-zï¿½ï¿½ï¿½([]+/) != null) {
 				s = `\u25CF ` + s;
 			}
 			// Leading Meta tags
@@ -2563,32 +2566,32 @@ function preProc(def) {
 			}
 			s = grammar(s)
 			
-			s = s.replace("vanligen med pronomenetsjälv","(vanligen med pronomenet själv)");
+			s = s.replace("vanligen med pronomenetsjï¿½lv","(vanligen med pronomenet sjï¿½lv)");
 			// ToDo Regex this to include the multi-word verbs			
-			s = fmtVerbApart(s,/(äv. lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
+			s = fmtVerbApart(s,/(ï¿½v. lï¿½s fï¿½rbindelse, se )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
 			s = s.replace("formerna", "formerna ");
 			s = s.replace("formen", "formen ");
-			s = fmtVerbApart(s,/(äv. lös förbindelse i formen )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(äv. lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(ofta lös förbindelse i formen )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(ofta lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(ofta lös förbindelse se )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(ofta lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(vanligen lös förbindelse, se )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(vanligen lös förbindelse, jfr )([a-zöäå]+)(\s[a-zöäå_]+)/);
-			s = fmtVerbApart(s,/(äv. lös sammansättn., se )([a-zöäå]+)(\s[a-zöäå_]+)/);			
-			// Format "fast sammansättn." grammer
-			s = fmtVerbTogether(s,/(vanligen fast sammansättn., se )([a-zöäå_]+)/);
-			s = fmtVerbTogether(s,/(vanligen fast sammansättn., jfr )([a-zöäå_]+)/);
-			s = fmtVerbTogether(s,/(någon gång fast sammansättn., se )([a-zöäå_]+)/);
-			s = fmtVerbTogether(s,/(ofta fast sammansättn., se )([a-zöäå_]+)/);
-			s = fmtVerbTogether(s,/(ofta fast sammansättn., jfr )([a-zöäå_]+)/);
-			s = fmtVerbTogether(s,/(äv. fast sammansättn., se )([a-zöäå_]+)/);			
-			s = fmtVerbTogether(s,/(äv. fast sammansättn., jfr )([a-zöäå_]+)/);			
+			s = fmtVerbApart(s,/(ï¿½v. lï¿½s fï¿½rbindelse i formen )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(ï¿½v. lï¿½s fï¿½rbindelse, jfr )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(ofta lï¿½s fï¿½rbindelse i formen )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(ofta lï¿½s fï¿½rbindelse, se )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(ofta lï¿½s fï¿½rbindelse se )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(ofta lï¿½s fï¿½rbindelse, jfr )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(vanligen lï¿½s fï¿½rbindelse, se )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(vanligen lï¿½s fï¿½rbindelse, jfr )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbApart(s,/(ï¿½v. lï¿½s sammansï¿½ttn., se )([a-zï¿½ï¿½ï¿½]+)(\s[a-zï¿½ï¿½ï¿½_]+)/);			
+			// Format "fast sammansï¿½ttn." grammer
+			s = fmtVerbTogether(s,/(vanligen fast sammansï¿½ttn., se )([a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbTogether(s,/(vanligen fast sammansï¿½ttn., jfr )([a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbTogether(s,/(nï¿½gon gï¿½ng fast sammansï¿½ttn., se )([a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbTogether(s,/(ofta fast sammansï¿½ttn., se )([a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbTogether(s,/(ofta fast sammansï¿½ttn., jfr )([a-zï¿½ï¿½ï¿½_]+)/);
+			s = fmtVerbTogether(s,/(ï¿½v. fast sammansï¿½ttn., se )([a-zï¿½ï¿½ï¿½_]+)/);			
+			s = fmtVerbTogether(s,/(ï¿½v. fast sammansï¿½ttn., jfr )([a-zï¿½ï¿½ï¿½_]+)/);			
 			s = simpleRef(s);		
 			s = simpleBold(s);		
 			// ToDo Regex this to include the verb
-			//s = grammer(s,"vanligen i förbindelse");			
+			//s = grammer(s,"vanligen i fï¿½rbindelse");			
 			s = s.replaceAll("_","");			
 			outDef += del + s;			
 			// HTML newline separator bon lines subsequent to the first
@@ -2611,24 +2614,24 @@ function fmtParticles(s) {
 	if (DEBUG) log("fmtParticles(s)");
 	// Particles appear comma delimited with space delimiter before the last particle.
 
-	//const regex1 = /.*med partikel(?: eller dylikt),(sär­skilt)(([a-zöäå]+, )*[a-zöäå]+).*/;		
-	const regex1 = /.*med partikel(?: eller dylikt)?(?:, )(sär­skilt)(([a-zöäå]+, )*[a-zöäå]+).*/;		
+	//const regex1 = /.*med partikel(?: eller dylikt),(sï¿½rï¿½skilt)(([a-zï¿½ï¿½ï¿½]+, )*[a-zï¿½ï¿½ï¿½]+).*/;		
+	const regex1 = /.*med partikel(?: eller dylikt)?(?:, )(sï¿½rï¿½skilt)(([a-zï¿½ï¿½ï¿½]+, )*[a-zï¿½ï¿½ï¿½]+).*/;		
 	match = s.match(regex1);
 	
 	if (match) s = "(" + s.replace(match[1] + match[2], match[1] + " <b>" + match[2] + "</b>)"); 
 	
-	const regex2 = /.*med partikel[n]?[,]? t.ex.(([a-zöäå]+, )*[a-zöäå]+).*/;
+	const regex2 = /.*med partikel[n]?[,]? t.ex.(([a-zï¿½ï¿½ï¿½]+, )*[a-zï¿½ï¿½ï¿½]+).*/;
 	match = s.match(regex2);	
 	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");
 
-	const regex3 = /.*med partikeln([a-zöäå]+).*/;
+	const regex3 = /.*med partikeln([a-zï¿½ï¿½ï¿½]+).*/;
 	match = s.match(regex3);
 	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");
 	
-	const regex4 = /.*med partik[elnarn]+ som an.ger (?:rörelse)?riktning.*(t(?:ill)?\.ex\.|sär.skilt)/;
+	const regex4 = /.*med partik[elnarn]+ som an.ger (?:rï¿½relse)?riktning.*(t(?:ill)?\.ex\.|sï¿½r.skilt)/;
 	match = s.match(regex4);
 	
-	const regex5 = /.*med partik[elnarn]+ som betecknar riktning.*(t(?:ill)?\.ex\.|sär.skilt)/;
+	const regex5 = /.*med partik[elnarn]+ som betecknar riktning.*(t(?:ill)?\.ex\.|sï¿½r.skilt)/;
 	match = s.match(regex5);
 	
 	if (match) {
@@ -2653,12 +2656,12 @@ function fmtParticles(s) {
 		s = "(" + s.replace(match[0] + old,match[0] + rep);
 	}
 		
-	const regex6 = /.*med någon av partiklarna(([a-zöäå]+, )*[a-zöäå]+).*/;
+	const regex6 = /.*med nï¿½gon av partiklarna(([a-zï¿½ï¿½ï¿½]+, )*[a-zï¿½ï¿½ï¿½]+).*/;
 	match = s.match(regex6);	
 	if (match) s = "(" + s.replace(match[1]," <b>" + match[1] + "</b>)");		
 	
-	s = s.replace("utan</b>) större betydelse­skillnad", "</b> utan större betydelse­skillnad)");
-	s = s.replace("), utan större betydelse­skillnad",", utan större betydelse­skillnad)");
+	s = s.replace("utan</b>) stï¿½rre betydelseï¿½skillnad", "</b> utan stï¿½rre betydelseï¿½skillnad)");
+	s = s.replace("), utan stï¿½rre betydelseï¿½skillnad",", utan stï¿½rre betydelseï¿½skillnad)");
 	// Ugly hack for now
 	if (s.indexOf("([") != -1) {
 		s = s.replace("([","[");
@@ -2669,7 +2672,7 @@ function fmtParticles(s) {
 }
 
 function fmtPrep(s) {
-	const regex1 = /.*med prep.(([a-zöäå]+, )*[a-zöäå]+).*/;
+	const regex1 = /.*med prep.(([a-zï¿½ï¿½ï¿½]+, )*[a-zï¿½ï¿½ï¿½]+).*/;
 	match = s.match(regex1);
 	// Includes prep in replace for case where 'med' is the preposition
 	if (match) s = "(" + s.replace("prep." + match[1],"prep. <b>" + match[1] + "</b>)");	
@@ -2710,17 +2713,17 @@ function  fmtVerbApart(s,regx) {
 	return s	
 }
 function simpleRef(s) {
-	regx = "/\(se äv. ([a-zöäå]+)\)/"
+	regx = "/\(se ï¿½v. ([a-zï¿½ï¿½ï¿½]+)\)/"
 	let link = "<l>_w_</l>";		
 	m = s.match(regx);
 	if (m) {
-		s = s.replace(m[0],"(se äv. " + link.replaceAll("_w_",m[2]) + ")");
+		s = s.replace(m[0],"(se ï¿½v. " + link.replaceAll("_w_",m[2]) + ")");
 	}
 	return s;
 }
 
 function simpleBold(s) {
-	regx = "((vanligen (?:med )?komparativ)([a-zöäå]+))"
+	regx = "((vanligen (?:med )?komparativ)([a-zï¿½ï¿½ï¿½]+))"
 	let bold = "<b>_w_</b>";
 	m = s.match(regx);
 	if (m) {
@@ -2736,7 +2739,7 @@ function withParticle(s) {
 	s = s.replace(rep, "(" + rep)
 	rep = "vanligen with partikel";
 	s = s.replace(rep, "(" + rep);
-	repo = "vanligen med någon av partiklarna";
+	repo = "vanligen med nï¿½gon av partiklarna";
 	s = s.replace(rep, "(" + rep);
 	return s;
 }
@@ -2763,11 +2766,6 @@ function editCursor(event,el) {
 	} else {
 		el.style.cursor = "";
 	}
-}
-
-function toggleDebugEv(e) {
-	e.preventDefault();
-	toggleDebug();
 }
 
 function toggleDebug() {
@@ -2862,10 +2860,10 @@ function ScrollViewDownWrapper() {
 function bulletProofUrl(url) {
 	// Manually do escaping of Swedish unicode characters as browsers can misbehave here
 	
-	url = url.replaceAll("ä","%C3%A4");			
-	url = url.replaceAll("å","%C3%A5");			
-	url = url.replaceAll("ö","%C3%B6");	
-	url = url.replaceAll("é","%C3%A9");
+	url = url.replaceAll("ï¿½","%C3%A4");			
+	url = url.replaceAll("ï¿½","%C3%A5");			
+	url = url.replaceAll("ï¿½","%C3%B6");	
+	url = url.replaceAll("ï¿½","%C3%A9");
 	return url
 }
 function closeDefs() {
@@ -3001,7 +2999,7 @@ function getMore(ind) {
 			tmp += "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";						
 			tmp += tmpMore;
 			tmp = tmp.replaceAll("KONSTRUKTION:", "<b>KONSTRUKTION:</b>");
-			tmp = tmp.replaceAll("SAMMANSÄTTN./AVLEDN.:","<b>SAMMANSÄTTN./AVLEDN.:</b>");
+			tmp = tmp.replaceAll("SAMMANSï¿½TTN./AVLEDN.:","<b>SAMMANSï¿½TTN./AVLEDN.:</b>");
 			tmp = tmp.replaceAll("EXEMPEL:","<b>EXEMPEL:</b>");
 			tmp = tmp.replaceAll("HISTORIK:","<b>HISTORIK:</b>");
 			// Use displayDef to to dynamise word links
@@ -3084,7 +3082,7 @@ function processKeyDown(ev) {
 		addWordWithEnum();
 	} else if (ev.key === '"') {
 		defaultMeta();
-	} else if (ev.key === "¤") {
+	} else if (ev.key === "ï¿½") {
 		togglePlural();
 		ev.preventDefault();
 	} else if (ev.key === '!') {
@@ -3109,7 +3107,7 @@ function processKeyDown(ev) {
 		scrollViewDown();
 	} else if (ev.key === "PageUp") {
 		scrollViewUp(ev);
-	} else if (ev.key === '§' || ev.key === '`') {
+	} else if (ev.key === 'ï¿½' || ev.key === '`') {
 		ev.preventDefault();
 		getLastWord();	
 	}	
@@ -3460,10 +3458,12 @@ function fetchDef() {
 	.then(json => {	
 		let id = json["id"];
 		let snr = json["snr"]		
-		let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word) + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
+		// 'debug' argument shows output from external svenska.se reference
+		// 'test_spacing' argument prevents removal of spaces, useful for particle verbs for example
+		let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word) + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0&test_spacing=0';
 		if (CLASS === "fraser") {	
 			let query = $('#iInput').val();
-			query = query.replaceAll("­",""); // No invisible chars to user present in keys
+			query = query.replaceAll("ï¿½",""); // No invisible chars to user present in keys
 			backend = 'backend/scrapeIdiom.php?query=' + query
 		}
 		
@@ -3546,12 +3546,12 @@ function shortenClass() {
 		res = "adj";
 	} else if (CLASS === "interjektion") {
 		res = "int";
-	} else if (CLASS === "räkneord") {
-		res = "räk";
+	} else if (CLASS === "rï¿½kneord") {
+		res = "rï¿½k";
 	} else if (CLASS === "slutled") {
 		res = "slut";
-	} else if (CLASS === "förled") {
-		res = "för";
+	} else if (CLASS === "fï¿½rled") {
+		res = "fï¿½r";
 	} else if (CLASS === "adverb") {
 		res = "adv";
 	} else if (CLASS === "preposition") {
