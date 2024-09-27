@@ -6,12 +6,13 @@
 	$id = $_GET['id'];	
 	$snr = $_GET["snr"];
 	$class = $_GET['class'];
-	// return an array to support casees where multiple entries exist
+	// return an array to support cases where multiple entries exist
 	$out['meta'] = "";
 	$out['def'] = "";
 	$out['more'] = "";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';
 	$url = $urlBaseId . $id;
+	if ($class === "plural") $url = 'https://svenska.se/tri/f_so.php?sok=' . $word;
 	$ch = curl_init();		
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
@@ -31,12 +32,13 @@
 	$originalLength = strlen($def);
 	
 	// use "snr" id to go to the relevent lemma information
-	
-	$start = strpos($def,$snr);
-	if (!$start) {
-		echo "Could not find lemma information";
-		return;
-	}	
+	if (strlen($snr) > 0) {
+		$start = strpos($def,$snr);
+		if (!$start) {
+			echo "Could not find lemma information";
+			return;
+		}	
+	}
 	// Global end of content marker
 	$END = ">Till SO<";	
 	$end = strpos($def,$END);	
@@ -701,8 +703,8 @@
 	}
 	
 	function matchClass($read, $given) {		
-		$res = false;
-		if ($read === "substantiv") {
+		$res = false;		
+		if ($read === "substantiv" && $given != "plural") {
 			$res =  ($given === "substantiv_en" || $given === "substantiv_ett");
 		} else if ($read === "adjektiviskt slutled") {
 			$res = ($given === "slutled");			
@@ -712,7 +714,7 @@
 			$res = true;			
 		} else {			
 			$res = $read === $given;
-		}				
+		}						
 		return $res;
 	}
 	

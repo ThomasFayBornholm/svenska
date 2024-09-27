@@ -26,14 +26,14 @@
 		}
 	}	
 	$out["id"] = array();
-	$out["snr"] = array();
-	
+	$out["snr"] = array();	
 	$enum = getEnum($word);
 	$word = preg_replace("/\[.*\]/","",$word);
 	// return an array to support casees where multiple entries exist	
 	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';		
 	$url = str_replace(" ", "%20", $urlBase . $word);	
 	$url = str_replace("ä", "%C3%A4", $url);		
+	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
@@ -174,9 +174,12 @@
 	// array_push($tmpArrSNR,"snr194285");	
 	if (count($tmpArrSNR) >= $enum) {
 		$out["snr"] = $tmpArrSNR[$enum-1];
+	} else if (count($tmpArrID) === 1 && count($tmpArrSNR) === 0) {		
+		echo json_encode($out);
+		return;
 	} else {
 		var_dump($tmpArrID);
-		var_dump($tmpArrSNR);
+		var_dump($tmpArrSNR);				
 		echo json_encode("Too few SNR IDs found");
 		exit();
 	}
