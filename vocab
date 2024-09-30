@@ -34,7 +34,7 @@
 </div>
 <div id="iCountDiv" class="centred" style="visibility: hidden">
 	<span class="counts countLeft" id="iCnt">test</span>	
-	<span class="counts" "score" id="iScore">{Score}</span>
+	<span class="counts" id="iScore">{Score}</span>
 	<span class="counts" id="iCntRegex"></span>
 </div>
 <div id="iControls">
@@ -46,6 +46,7 @@
 		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()">
 		<div id="dialog" title="Basic dialog">
 			<p id="iSummary" class="summary"></p>
+		<span id="iExtern"></span>
 		</div>
 	</form>		
 </div>
@@ -132,8 +133,8 @@ var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
 var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
 let REGEX_MODE = false;
-var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","f�r","slut","sub","kon","r�k","inf","art"]
-var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","f�rled","slutled","subjunktion","konjunktion","r�kneord","infinitiv","artikel"]
+var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk","inf","art"]
+var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","r�kneord","infinitiv","artikel"]
 // Crude toggle on site load to show tool tips
 var TAB_DUMMY;
 var TAB_LOOKUP
@@ -1211,10 +1212,10 @@ function onlineLookup(elHTML, ev) {
 	word = elHTML.value;
 	if (word.length === 0) word = CUR_WORD;
 	if (word.length > 0) {
-		fetch("backend/ScrapeID.php?word=" + forScrapeID(word) + "&class=" + CLASS + "&debug=0", {
-			method: 'get',
-			mode: 'cors',
-			headers: {
+		fetch('backend/showExtern.php?word=' + word, {
+			'method': 'get',
+			'mode': 'cors',
+			'headers': {
 				'Content-Type': 'application/json'
 			}
 		})
@@ -1222,27 +1223,17 @@ function onlineLookup(elHTML, ev) {
 			return response.json();
 		})
 		.then(json => {
-			// Expectation is a numerical id of more than 3 characters
-			// Take the first ID only
-			if (json["id"][0].length > 3) {
-				let url = "https://svenska.se/so?id=" + json["id"][0] + "&pz=3";
-				// Rebust escaping of special characters		
-				TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");				
-				TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
-				TAB_DUMMY.focus();
-				
-				setTimeout(switchTab, 1000);
+			let tmp = "";
+			let delim = "";
+			for (const el of json) {
+				delim = "<br>";
+				tmp += delim + "<a href='http://svenska.se/so?sok=" + encodeURI(word) + "'>" + el + "</a>";
 			}
+			$('#iExtern').html(tmp);
 		})
 		.catch(error => {
-				// If there was a problem retrieving IDs then just go to svenska.se to se if any close matches exist
-				let url = "https://svenska.se/so?sok=" + word;
-				// Rebust escaping of special characters		
-				TAB_DUMMY = window.open("http://localhost/svenska/dummy?word=" + word,"","toolbar=no, menubar=no, location=no,popup=yes, left=0, top=0, width=1920,height=1200");				
-				TAB_LOOKUP = window.open(bulletProofUrl(url), '_blank');						
-				TAB_DUMMY.focus();				
-				setTimeout(switchTab, 1000);
-		})		
+			console.log(error)
+		})
 	}
 }
 
@@ -1362,6 +1353,7 @@ function getSummary() {
 
 function newInputWrapper(e) {
 	if (DEBUG) log("newInputWrapper()");
+	$('#iExtern').empty();
 	e.preventDefault();
 	let word = getInput();
 	if (word.length === 0) {
@@ -2536,7 +2528,7 @@ function preProc(def) {
 				s = s.slice(1,s.length)
 			}
 			// Defuault to "pretty" leading bullet point
-			if (s[0].match(/[<a-z���([]+/) != null) {
+			if (s[0].match(/[<a-zåöä([]+/) != null) {
 				s = `\u25CF ` + s;
 			}
 			// Leading Meta tags
@@ -2803,7 +2795,7 @@ function lookupManyWords() {
 			let word = json[i]
 			let url = "https://svenska.se/so?sok=" + word + "&pz=1";
 			// Manual unicode percentage escaping as some browsers misbehave here	
-			TABS.push(window.open(bulletProofUrl(url), '_blank'));		
+			TABS.push(window.open(encodeURI(url), '_blank'));		
 		}	
 	})
 	.catch(error => {
@@ -2857,15 +2849,6 @@ function ScrollViewDownWrapper() {
 	}
 }
 
-function bulletProofUrl(url) {
-	// Manually do escaping of Swedish unicode characters as browsers can misbehave here
-	
-	url = url.replaceAll("�","%C3%A4");			
-	url = url.replaceAll("�","%C3%A5");			
-	url = url.replaceAll("�","%C3%B6");	
-	url = url.replaceAll("�","%C3%A9");
-	return url
-}
 function closeDefs() {
 	if (TABS.length === 0) {
 		setClass("all");
@@ -2999,7 +2982,7 @@ function getMore(ind) {
 			tmp += "<span id='iMore' oncontextmenu=editMore(event,'" + key + "')";						
 			tmp += tmpMore;
 			tmp = tmp.replaceAll("KONSTRUKTION:", "<b>KONSTRUKTION:</b>");
-			tmp = tmp.replaceAll("SAMMANS�TTN./AVLEDN.:","<b>SAMMANS�TTN./AVLEDN.:</b>");
+			tmp = tmp.replaceAll("SAMMANS\u00c4TTN./AVLEDN.:","<b>SAMMANS\u00c4TTN./AVLEDN.:</b>");
 			tmp = tmp.replaceAll("EXEMPEL:","<b>EXEMPEL:</b>");
 			tmp = tmp.replaceAll("HISTORIK:","<b>HISTORIK:</b>");
 			// Use displayDef to to dynamise word links
@@ -3102,12 +3085,15 @@ function processKeyDown(ev) {
 			}
 		}
 	}
+
 	if (ev.key === "PageDown") {
 		ev.preventDefault();
 		scrollViewDown();
 	} else if (ev.key === "PageUp") {
 		scrollViewUp(ev);
-	} else if (ev.key === '�' || ev.key === '`') {
+	} 
+
+	if ( ev.code === "Backquote") {
 		ev.preventDefault();
 		getLastWord();	
 	}	
@@ -3845,7 +3831,6 @@ function forScrapeID(word) {
 	const re2 = /-([2-9])/;
 	word = word.replace(re2,"?$1");
 	return word;
-	
 }
 
 function forScrapeDef(word) {
