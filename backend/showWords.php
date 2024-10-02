@@ -1,5 +1,5 @@
 <?php
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];
 	$regex= $_GET['regex'];
 	$grade = $_GET['grade'];

@@ -1,6 +1,6 @@
 <?php
 	$res = -1;
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];
 	$word = $_GET['word'];
 	

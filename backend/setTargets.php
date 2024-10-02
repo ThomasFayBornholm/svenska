@@ -2,14 +2,13 @@
 	date_default_timezone_set('Europe/Stockholm');
 	$todayDate = date("l");	
 	$current_score = $_GET["cur_score"];
-	$path = getcwd() ."/";	
-	
+	$path = getcwd() ."/../lists/";	
 	$f = "targets";
 	
 	$rate = 0;
 	$f = "rate";
 	if (!file_exists($f)) fopen($f, "w");
-	$infile = fopen($path . "/" . $f , "r") or die("Could not open file: " . $f);
+	$infile = fopen($path . $f , "r") or die("Could not open file: " . $f);
 	if (filesize($f) != 0) {
 		$rate = (float)fread($infile, filesize($f));				
 	}
@@ -48,7 +47,7 @@
 			break;
 	}
 	if ($rating === 0) {
-		$infile = fopen($path . "/" . $f , "r") or die("Could not open file: " . $f);
+		$infile = fopen($path . $f , "r") or die("Could not open file: " . $f);
 		if (filesize($f) != 0 ) {
 			$rating = (float)fread($infile, filesize($f));				
 		}
@@ -59,6 +58,7 @@
 	$out["endDate"] = "";
 	$out["targetDaily"] = $rating + $rate;
 	$out["targetWeekly"] = $rating + $rate * (7 - $day);
+	if ($rate === 0) $rate = 1;
 	$out["endDate"] = (int)((100 - $rating)/$rate);	
 	$strDays = $out["endDate"];
 	$Date=date('Y-m-d');

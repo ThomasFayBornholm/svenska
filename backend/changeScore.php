@@ -2,7 +2,7 @@
 	$word = $_GET["word"];
 	$class = $_GET["class"];
 	$diff = $_GET["diff"];
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$fName = $class . "-score";
 	$contents = file_get_contents($path . $fName, 'UTF-8');
 	$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);

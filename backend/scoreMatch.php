@@ -1,5 +1,5 @@
 <?php
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];
 	// Match all words with this score
 	$score = intval($_GET['score']);

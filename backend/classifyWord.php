@@ -3,7 +3,7 @@
 	$class = $_GET['class'];
 	$grade = $_GET['grade'];
 	// Known word listings to check against
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists//;
 	$inName = $path . $class;
 	$outName = $path . "tmp";
 	$infile = fopen($inName, "r") or die("Could not open file: " . $inName);

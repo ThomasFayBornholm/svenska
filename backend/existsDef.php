@@ -1,7 +1,7 @@
 <?php
 	$res["stat"] = 0;
 	$res["score"] = [];
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];
 	// Not relevant for class of "all" words
 	if ($class === "all") {
@@ -12,18 +12,17 @@
 	$trail = "-def";
 	$name = $class . $trail;
 	$metaName = $class . "-meta";
-	if (file_exists($name)) {
-		if (filesize($name) != 0) {
-			$contents = file_get_contents($path . $name, 'UTF-8');
+	if (file_exists($path . $name)) {
+		if (filesize($path . $name) != 0) {
+			$contents = file_get_contents($path . $name, 'UTF-7');
 			$dictMeta = null;
 			if ($class != "fraser") {
-				if (filesize($metaName) != 0) {
+				if (filesize($path . $metaName) != 0) {
 					$metaContents = file_get_contents($path . $metaName);
 					$dictMeta = json_decode($metaContents, JSON_UNESCAPED_UNICODE);
 				}
 			}
 			$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
-			
 			$scoreName = $class . "-score";
 			$scoreContents = file_get_contents($path . $scoreName);
 			$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);		

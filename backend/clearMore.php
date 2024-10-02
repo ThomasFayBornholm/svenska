@@ -1,5 +1,5 @@
 <?php
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];	
 	$key = $_GET['key'];	
 	$trail = "-more";

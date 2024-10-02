@@ -7,7 +7,7 @@
 		}
 	}
 
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$files = ["all","adjektiv", "verb", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "pronomen", "interjektion", "förled", "slutled", "räkneord", "subjunktion", "konjunktion","infinitiv","artikel"];
 
 	$nTot = 0;
@@ -33,9 +33,9 @@
 	foreach($files as $f) {
 		$f_base = $f;
 		$f = $f . "-only";
-		$infile = fopen($path . "/" . $f , "r") or die("Could not open file: " . $f);
-		if (filesize($f) != 0) {
-			$contents = fread($infile, filesize($f));
+		$infile = fopen($path . $f , "r") or die("Could not open file: " . $f);
+		if (filesize($path . $f) != 0) {
+			$contents = fread($infile, filesize($path . $f));
 			$words = preg_split("/\r\n|\r|\n/", $contents);
 			if ($f_base === "all") {
 				$nAll = count($words);

@@ -1,5 +1,5 @@
 <?php
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];	
 	$name = $class . "-score";
 	$contents = file_get_contents($path . $name, 'UTF-8');

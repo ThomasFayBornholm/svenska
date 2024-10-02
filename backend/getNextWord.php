@@ -3,7 +3,7 @@
 	$start = $_GET["start"];
 	$score = $_GET["score"];
 	$back = $_GET["back"];
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	
 	$scoreName = $class . "-score";
 	$size = filesize($path . $class . "-only");

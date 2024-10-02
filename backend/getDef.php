@@ -1,11 +1,11 @@
 <?php
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];
 	$word = $_GET['word'];
 	$trail = "-def";
 	$name = $class . $trail;
 	$out = array("def"=>"", "meta"=>"");
-	if (file_exists($name)) {
+	if (file_exists($path . $name)) {
 		$contents = file_get_contents($path . $name, 'UTF-8');
 		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);	
 		

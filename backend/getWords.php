@@ -1,5 +1,5 @@
 <?php
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$start = $_GET['start'];
 	$num = $_GET['num'];
 	$class = $_GET['class'] . "-only";

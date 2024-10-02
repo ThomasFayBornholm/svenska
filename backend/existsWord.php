@@ -2,7 +2,7 @@
 	$word = $_GET['word'];
 	$class =$_GET['class'];
 	// Known word listings to check against
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$trail = "-only";
 	$checkfile = $path . $class . $trail;
 	if (filesize($checkfile) > 0) {

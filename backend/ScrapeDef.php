@@ -4,6 +4,10 @@
 	$word = $_GET["word"];
 	$word = preg_replace("/-[2-9]/","",$word);
 	$id = $_GET['id'];	
+	$enum = "";
+	if (str_contains($id,"_")) {
+		$enum = $id[strlen($id)-1];
+	}
 	$snr = $_GET["snr"];
 	$class = $_GET['class'];
 	// return an array to support cases where multiple entries exist
@@ -12,7 +16,7 @@
 	$out['more'] = "";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';
 	$url = $urlBaseId . $id;
-	if ($class === "plural") $url = 'https://svenska.se/tri/f_so.php?sok=' . $word;
+	if ($class === "plural" && strlen($snr) > 0) $url = 'https://svenska.se/tri/f_so.php?sok=' . $word;
 	$ch = curl_init();		
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch,CURLOPT_URL,$url);
@@ -39,71 +43,21 @@
 			return;
 		}	
 	}
-	// Global end of content marker
-	$END = ">Till SO<";	
-	$end = strpos($def,$END);	
-	
-	if ($end) {
-		$end += strlen($END);
-		
-	} else {
-		error("Failed to find end of lemma contents");
+	if (strlen($enum) > 0) {
+		$start = strpos($def,"<sup>" . $enum);
+		$end = strpos($def, "<sup>",$start+1);
+		if (!$end) $end = strlen($def);
+		if ($start != -1) $def = substr($def,$start,$end-$start);	
 	}
 	
-	$filteredLength = $end - $start;		
-	$def = substr($def, $start, $filteredLength);
-		
 	if (!$def) {
-		error("Failed to remove unneeded content");
+		error("Failed to get lemma for id: " . $id);
 		return;
 	}
-		
-	// Multiple lemma can exist - for now only scrape a single lemma that matches the current class.				
-	$find = 'class="ordklass">';	
-	$foundMatch = false;
-	$pos1 = strpos($def, $find);
-	
-	if ($pos1 || $pos1 === 0) {		
-		$pos2 = strpos($def, "</div>",$pos1);			
-		if ($pos2) {			
-			$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));														
-			if (matchClass($tmpClass, $class)) {				
-				$find = 'class="orto">';				
-				$pos1 = strpos($def, $find);				
-				if ($pos1) {
-					$foundMatch = true;
-					$def = getSingleLemma($def, $pos1, $END);
-				}
-			}
-		}
-	}
-	$find = 'ass="ordklass">';			
-	while ($pos1 && $foundMatch === false) {							
-		$pos1 = strpos($def, $find, $pos1 + 1);		
-		if ($pos1 || $pos1 === 0) {						
-			$pos2 = strpos($def, "</div>",$pos1);			
-			if ($pos2) {
-				$tmpClass = str_replace($find,"",substr($def, $pos1, $pos2-$pos1));												
-				if (matchClass($tmpClass, $class)) {
-					$find = 'class="orto">';					
-					if ($pos1) {						
-						$foundMatch = true;
-						$pos1 -= 550; // Ugly hack to include conjugations also
-						$def = getSingleLemma($def, $pos1,$END);
-					}
-				}				
-			}
-		}
-	}
-	
-	
-	if (!$foundMatch) {
-		error(("Failed to retrieve word with id:" . $id . "; class: " . $class));
-	}
-	
+
 	$lemmaLength = strlen($def);
 	if ($lemmaLength === 0) {
-		error("Failed to get lemma #1");
+		error("Failed to get lemma Err #1");
 		return;
 	}
 	
@@ -111,7 +65,7 @@
 	$defLines = explode("\n",$def);		
 
 	if (count($defLines) < 6) {
-		error("Failed to get lemma #2");
+		error("Failed to get lemma Err #2");
 		return;
 	}
 	
@@ -127,7 +81,6 @@
 	$conjLines = array();
 	$wordRootLines = array();
 	$splitLines = array();	
-	//var_dump($defLines);
 	foreach($defLines as $line) {
 		$conjugations = "";			
 		if (str_contains($line, 'class="bojning_inline"')) {					

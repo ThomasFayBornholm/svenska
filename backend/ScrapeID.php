@@ -61,6 +61,7 @@
 				if ($start) {
 					$idLen = 6;									
 					$tmpID = substr($l,$start,$idLen);
+					$tmpID = str_replace("&p","",$tmpID);
 					array_push($tmpArrID,$tmpID);
 				}
 			}
@@ -84,6 +85,7 @@
 							$tmpClass = substr($l,$tmpStart, $tmpEnd-$tmpStart);							
 							if (matchClass($tmpClass,$class)) {								
 								$tmpID = substr($l,$start,$idLen);					
+								$tmpID = str_replace("&p","",$tmpID);
 								array_push($tmpArrID,$tmpID);
 							}
 						}

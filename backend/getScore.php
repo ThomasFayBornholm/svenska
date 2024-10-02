@@ -1,7 +1,7 @@
 <?php
 	$class = $_GET['class'];
 	
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	
 	$score = array();
 	$score['id'] = $_GET['id'];
@@ -30,7 +30,7 @@
 			$score["count"] += count(preg_split("/\r\n|\r|\n/", $contents));
 		}
 		
-		if (file_exists($scoreName) && filesize($scoreName) != 0) {
+		if (file_exists($path . $scoreName) && filesize($path . $scoreName) != 0) {
 			$scoreContents = file_get_contents($path . $scoreName);
 			$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);		
 			

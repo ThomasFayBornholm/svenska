@@ -70,8 +70,7 @@
 		}		
 		return $conjugations;
 	}
-	
-	$path = getcwd() ."/";
+	$path = getcwd() . "/../lists/";
 	$word = $_GET['word'];
 	$rest = "";		
 	$nFind = 1;

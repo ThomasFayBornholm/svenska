@@ -1,9 +1,9 @@
 <?php
 	$res = -1;
-	$path = getcwd() ."/";
+	$path = getcwd() ."/../lists/";
 	$class = $_GET['class'];
 
-	$fileName = $path . $class . "-only";
+	$fileName = $path. $class . "-only";
 	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
 	if (filesize($fileName) == 0) {
 		$contents = "";

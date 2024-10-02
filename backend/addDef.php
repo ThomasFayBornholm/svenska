@@ -11,25 +11,22 @@
 	$more = $_GET['more'];
 	
 	// Add word to listing if not already available
-	$path = getcwd() . "/";
-	$fileName = $path . $class . "-only";
-	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
-	if (filesize($fileName) === 0) {
+	$path = getcwd() . "/../lists/";
+	$fileName = $class . "-only";
+	$infile = fopen($path . $fileName, "r") or die("Could not open file: " . $fileName);
+	if (filesize($path . $fileName) === 0) {
 		$contents = "";
 	} else {
-		$contents = fread($infile, filesize($fileName));
+		$contents = fread($infile, filesize($path . $fileName));
 	}
 	fclose($infile);
-	
-	$outfile = fopen($fileName, 'w') or die("Could not open file: " . $fileName);
-	
+	$outfile = fopen($path . $fileName, 'w') or die("Could not open file: " . $fileName);
 	
 	$elements = preg_split("/\r\n|\r|\n/", $contents);
 	$out = "";	
 	$placed = false;
 	$del = "";
 	// First in list case	
-	
 	
 	$del = "";
 	foreach($elements as $w) {				
@@ -89,7 +86,6 @@
 	fwrite($outfileAll, $out);
 	fclose($outfileAll);
 				
-	
 	// Populate 'meta', 'def' and 'more' listings, overwrite performed if entry already exists
 	$trail = "-def";
 	if (strlen($def) > 0) {
@@ -116,7 +112,7 @@
 	// Do not replace any existing score by default	
 	// If not existing score then default to "2". User can easily update this from web-interface	
 	$name = $class . "-score";
-	if (!file_exists($name)) fopen($name, "w");			
+	if (!file_exists($path . $name)) fopen($name, "w");			
 	$contents = file_get_contents($path . $name, 'UTF-8');
 	$arr = json_decode($contents, true);
 	if (!array_key_exists($word, $arr)) {
@@ -206,6 +202,4 @@
 		var_dump($b);
     	return key($a) > key($b);
 	}
-
-
 ?>

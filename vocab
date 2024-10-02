@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv"></html>
 <head>	
-	<meta char="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
 	<title>Ordbok</title>
 	<link rel="stylesheet" href="svenska.css">
 	<script src="jquery-3.6.0.js"></script>
@@ -43,11 +43,11 @@
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
 		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/Mute.png" id="iToggleSounds" onclick="toggleSounds()" onmouseover="highlight(this,event)"></img>
-		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()">
+		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" oncontextmenu="fromSwedish(event)" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()">
 		<div id="dialog" title="Basic dialog">
 			<p id="iSummary" class="summary"></p>
-		<span id="iExtern"></span>
 		</div>
+		<span id="iExtern"></span>
 	</form>		
 </div>
 
@@ -214,13 +214,13 @@ function setN_CUR() {
 		N_CUR = N_INTERJEKTION;
 	} else if (CLASS === "pronomen") {
 		N_CUR = N_PRONOMEN;
-	} else if (CLASS === "f�rled") {
+	} else if (CLASS === "förled") {
 		N_CUR = N_PREFIX;
 	} else if (CLASS === "plural") {
 		N_CUR = N_PLURAL;
 	} else if (CLASS === "slutled") {
 		N_CUR = N_SLUTLED;
-	} else if (CLASS === "r�kneord") {
+	} else if (CLASS === "räkneord") {
 		N_CUR = N_NUMMER;
 	} else if (CLASS === "konjunktion") {
 		N_CUR = N_KONJUNKTION;
@@ -400,7 +400,7 @@ function putFrasDef(score) {
 function updateScore() {
 	if (DEBUG) log("updateScore()")
 	// Hash to prevent cached value being used by browser
-	fetch('backend/getScore.php?id=0&class=' + CLASS + '&hash=' + makeHash(), {
+	fetch('backend/getScore.php?id=0&class=' + encodeURI(CLASS) + '&hash=' + makeHash(), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -422,10 +422,11 @@ function updateScore() {
 			$('#iScore').html($('#iScore').html() + ";<span class='blueWord' onclick=seekWord('bluewords') oncontextmenu='nextWord(this,event)'>" + json["blueCount"] + "</span>")
 			$('#iScore').html($('#iScore').html() + "}");
 		} else {
-			$('#iScore').html("");
+			$('#iScore').empty();
 		}
 		// Only display counts once they are initialised.
 		$('#iCountDiv').css("visibility","");		
+		/*
 		fetch('backend/getScore.php?id=0&class=all&hash=' + makeHash(), {
 			method: 'get',
 			mode: 'cors',
@@ -443,6 +444,7 @@ function updateScore() {
 		.catch(error => {
 			log(error);
 		})
+		*/
 	})
 	.catch(error => {
 		log(error);
@@ -512,7 +514,7 @@ function getWords(ind = INC, pos = 3, showMore = false) {
 			displayWords(list,-1)
 		}
 	} else {
-		fetch("backend/getWords.php?class=" + CLASS + "&start=" + ind + "&num=" + N_INC, {
+		fetch("backend/getWords.php?class=" + encodeURI(CLASS) + "&start=" + ind + "&num=" + N_INC, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
@@ -1227,7 +1229,14 @@ function onlineLookup(elHTML, ev) {
 			let delim = "";
 			for (const el of json) {
 				delim = "<br>";
-				tmp += delim + "<a href='http://svenska.se/so?sok=" + encodeURI(word) + "'>" + el + "</a>";
+				if (el.includes("; id=")) {
+					let start = el.indexOf("; id=")+5;
+					let tmpID = el.substr(start);
+					tmp += delim + '<a href="http://svenska.se/so/?id=' + tmpID + '"';
+					tmp += ' oncontextmenu=ScrapeByID(event,"' + tmpID + '")>' + el.replace("; id=" + tmpID,"") + "</a>";
+				} else {
+					tmp += delim + "<a href='http://svenska.se/so?sok=" + encodeURI(word) + "'>" + el + "</a>";
+				}
 			}
 			$('#iExtern').html(tmp);
 		})
@@ -1384,6 +1393,7 @@ function newInputWrapper(e) {
 		if (tmp[1].indexOf(",") != -1) word += ",";
 		//setClass(fullClassName(newClass));
 		setClass(fullClassName(newClass),word);
+		
 		//$('#iInput').val(word);
 		//newInputWrapper(e);		
 		return;
@@ -1432,7 +1442,8 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1, showMore = false) {
 	CUR_DEF_ENUM = last_enum;
 	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
 	if (word.length > 0) {
-		word = word.replaceAll("�","");
+		word = word.replace(/\u00A0/g, '');
+
 		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
 			method: 'get',
 			mode: 'cors',
@@ -1927,11 +1938,12 @@ function fullClassName(name) {
 	if (name === "plu") return "plural"
 	if (name === "prep") return "preposition"
 	if (name === "pro") return "pronomen"
-	if (name === "for") return "f�rled"
-	if (name === "f�r") return "f�rled"
+	if (name === "for") return "förled"
+	if (name === "för") return "förled"
 	if (name === "slut") return "slutled"
 	if (name === "slut") return "slutled"
-	if (name === "r�k") return "r�kneord"
+	if (name === "rak") return "räkneord"
+	if (name === "räk") return "räkneord"
 	if (name === "kon") return "konjunktion"
 	if (name === "int") return "interjektion"
 	if (name === "inf") return "infinitiv"
@@ -1955,7 +1967,7 @@ function guessClass(word) {
 	if (word.endsWith('as')) return "verb"
 	if (word.includes(' ')) return "verb"
 	if (word.endsWith("ig")) return "adjektiv"
-	if (word.endsWith("l�s")) return "adjektiv"
+	if (word.endsWith("lös")) return "adjektiv"
 	if (word.endsWith("sam")) return "adjektiv"
 	if (word.endsWith("full")) return "adjektiv"
 	if (word.endsWith("ell")) return "adjektiv"
@@ -2090,38 +2102,38 @@ function addMeta(def) {
 	if (DEBUG) log("addMeta()");	
 	regexArr = [
 		/var�dagligt, sk�mtsamt/,
-		/�lderdomligt el. ironiskt/,
-		/sj��fart/,
-		/n�got �lderdomligt el. dialektalt/,
-		/h�g�tidligt el. sk�mtsamt/,
+		/ålderdomligt el. ironiskt/,
+		/sjö�fart/,
+		/något ålderdomligt el. dialektalt/,
+		/hög�tidligt el. skämtsamt/,
 		/handels�namn/,
-		/n�got �lderdomligt], ur�sprungligen bibliskt/,
-		/s�r�skilt i juridiska samman�hang/,
-		/starkt ned�s�ttande; n�got �lderdomligt/,
-		/ned�s�ttande, n�got �lderdomligt/,
-		/n�got h�g�tidligt; n�got �lderdomligt/,
-		/var�dagligt el. i barn�spr�k/,
-		/n�stan en�bart i fack�spr�k/,
-		/sk�mtsamt/,
-		/dialektalt; n�got ned�s�ttande/,
+		/något �lderdomligt], ur�sprungligen bibliskt/,
+		/sär�skilt i juridiska samman�hang/,
+		/starkt ned�sättande; något ålderdomligt/,
+		/ned�sättande, något ålderdomligt/,
+		/något hög�tidligt; något ålderdomligt/,
+		/var�dagligt el. i barn�språk/,
+		/nästan en�bart i fack�språk/,
+		/skämtsamt/,
+		/dialektalt; något ned�sättande/,
 		/kemi/,
 		/var�dagligt, dialektalt/,
 		/ekonomi, juridik/,
-		/endast vid beskrivning av �ldre f�rh�llanden/,
+		/endast vid beskrivning av äldre förhållanden/,
 		/ofta i natur�namn/,
-		/mest i �ldre tid/,
-		/ofta i offentligt spr�k/,
+		/mest i äldre tid/,
+		/ofta i offentligt språk/,
 		/ofta i politiska samman�hang/,
 		/ej i fack�m�ssiga samman�hang/,
-		/var�dagligt, kan upp�fattas som ned�s�ttande/,
-		/var�dagligt, n�got �lderdomligt; kan upp�fattas som ned�s�ttande/,
+		/var�dagligt, kan upp�fattas som ned�sättande/,
+		/var�dagligt, n�got �lderdomligt; kan upp�fattas som ned�sättande/,
 		/var�dagligt; n�got �lderdomligt/,
-		/ofta n�got h�g�tidligt/,
-		/n�got h�g�tidligt el. �lderdomligt/,
-		/n�got h�g�tidligt; mindre brukligt/,
+		/ofta något hög�tidligt/,
+		/något hög�tidligt el. �lderdomligt/,
+		/något hög�tidligt; mindre brukligt/,
 		/ofta i poetiska samman�hang/,
 		/spr�k�vetenskap/,
-		/s�r�skilt i aff�rs�m�ssiga och vetenskapliga samman�hang/,
+		/sär�skilt i aff�rs�m�ssiga och vetenskapliga samman�hang/,
 		/samman�fattande, formell beteckning/,
 		/nu�mera ej officiell ben�mning/,
 		/ofta i v�rderande ut�tryck/,
@@ -2133,8 +2145,8 @@ function addMeta(def) {
 		/i fackspr�kliga samman�hang/,
 		/nu�mera mindre brukligt/,
 		/ofta i religi�sa samman�hang/,
-		/s�r�skilt bibliskt; n�got �lderdomligt ut�om i vissa ut�tryck/,
-		/s�r�skilt geometri/,
+		/sär�skilt bibliskt; n�got �lderdomligt ut�om i vissa ut�tryck/,
+		/sär�skilt geometri/,
 		/ofta i bild�konst/,
 		/mest som marxistisk term/,
 		/s�r�skilt medicin, psykologi/,
@@ -2150,95 +2162,95 @@ function addMeta(def) {
 		/h�g�tidligt/,			
 		/n�got var�dagligt/,
 		/var�dagligt; dialektalt/,
-		/var�dagligt; n�got ned�s�ttande/,
-		/var�dagligt; ned�s�ttande/,
-		/ibland n�got ned�s�ttande/,
-		/n�got ned�s�ttande/,
-		/ned�s�ttande; �lderdomligt/,
-		/var�dagligt; vanligen n�got ned�s�ttande/,
+		/var�dagligt; n�got ned�sättande/,
+		/var�dagligt; ned�sättande/,
+		/ibland n�got ned�sättande/,
+		/n�got ned�sättande/,
+		/ned�sättande; �lderdomligt/,
+		/var�dagligt; vanligen n�got ned�sättande/,
 		/var�dagligt; ned\u00ADs�ttande/,
-		/var�dagligt, ibland n�got ned�s�ttande/,
-		/var�dagligt; s�r�skilt sport/,
+		/var�dagligt, ibland n�got ned�sättande/,
+		/var�dagligt; sär�skilt sport/,
 		/starkt var�dagligt/,
 		/var�dagligt/,
 		/dialektalt/,
-		/i fack�spr�k/,
-		/ofta i fackspr�kliga samman�hang/,
+		/i fack�språk/,
+		/ofta i fackspråkliga samman�hang/,
 		/nu\u00ADmera ej i fack\u00ADm�ssiga samman\u00ADhang/,
 		/nu�mera mindre brukligt i fack\u00ADm�ssiga samman\u00ADhang/,
 		/mindre brukligt/,
-		/s�r�skilt ekonomi/,
-		/s�r�skilt i matematiskt fack�spr�k/,
-		/s�r�skilt matematik/,
+		/sär�skilt ekonomi/,
+		/sär�skilt i matematiskt fack�spr�k/,
+		/sär�skilt matematik/,
 		/matematisk/,
 		/fysik, kemi m.m./,
 		/fysik/,
-		/s�r�skilt i juridiska samman\u00ADhang/,
-		/s�r�skilt juridik/,
+		/sär�skilt i juridiska samman\u00ADhang/,
+		/sär�skilt juridik/,
 		/juridik/,
-		/s�r�skilt i lag�spr�k/,
-		/s�r�skilt psykologi/,
+		/sär�skilt i lag�språk/,
+		/sär�skilt psykologi/,
 		/psykologi/,
 		/informations�teknik/,
-		/s�r�skilt i fack�spr�k/,
-		/ofta i fack�spr�k/,
-		/mest i fack�m�ssiga samman�hang/,
-		/�lderdomligt ut\u00ADom i bibliska samman\u00ADhang/,
-		/�lderdomligt ut�om i vissa ut�tryck/,
-		/delvis n�got �lderdomligt/,
-		/n�got �lderdomligt/,
-		/n�got �lderdomligt el. ironiskt/,
-		/�lderdomligt/,
-		/s�r�skilt vid beskrivning av ut�l�ndska f�rh�llanden/,
-		/endast vid beskrivning av ut�l�ndska f�rh�llanden/,
-		/n�got formellt/,
-		/formellt i konkret an�v�ndning/,
+		/sär�skilt i fack�språk/,
+		/ofta i fack�språk/,
+		/mest i fack�mässiga samman�hang/,
+		/ålderdomligt ut\u00ADom i bibliska samman\u00ADhang/,
+		/ålderdomligt ut\u00ADom i vissa ut�tryck/,
+		/delvis något ålderdomligt/,
+		/något ålderdomligt/,
+		/något ålderdomligt el. ironiskt/,
+		/ålderdomligt/,
+		/sär�skilt vid beskrivning av ut�ländska förh�llanden/,
+		/endast vid beskrivning av ut�ländska förh�llanden/,
+		/något formellt/,
+		/formellt i konkret an�vändning/,
 		/formellt/,
 		/delvis historiskt/,
 		/mest historiskt/,
 		/historiskt i Sverige/,
 		/historiskt/,
-		/s�r\u00ADskilt i barn\u00ADspr�k och i imiterat barn\u00ADspr�k/,
+		/sär\u00ADskilt i barn\u00ADspr�k och i imiterat barn\u00ADspr�k/,
 		/mest i fack\u00ADspr�k/,
 		/mest i sport�jargong/,
-		/s�r�skilt i vetenskapliga samman�hang/,
+		/sär�skilt i vetenskapliga samman�hang/,
 		/ofta i tekniska el. vetenskapliga samman�hang/,
 		/i tekniska och vetenskapliga samman�hang/,
 		/i vetenskapliga samman�hang/,
 		/mest i tekniska samman�hang/,
 		/mest i vetenskapliga samman\u00ADhang/,
-		/s�r�skilt i vetenskapliga samman\u00ADhang/,
+		/sär�skilt i vetenskapliga samman\u00ADhang/,
 		/i vetenskapliga samman\u00ADhang/,
-		/�lderdomligt el. sk�mtsamt/,
+		/ålderdomligt el. sk�mtsamt/,
 		/ofta klandrande/,
-		/mest vid beskrivning av �ldre f�rh�llanden/,
-		/s�r�skilt vid beskrivning av �ldre f�rh�llanden/,
-		/�v. som musikalisk term/,
+		/mest vid beskrivning av äldre förh�llanden/,
+		/s�r�skilt vid beskrivning av äldre förhållanden/,
+		/äv. som musikalisk term/,
 		/musikalisk/,
 		/musik/,
-		/s�r�skilt meteorologi/,
-		/s�r�skilt i v�nster�politisk debatt/,
-		/ofta i v�nster�politisk debatt/,
-		/ofta ned�s�ttande/,
-		/ofta n�got ned�s�ttande/,
-		/ned�s�ttande; n�got �lderdomligt/,
-		/ned�s�ttande/,
-		/ibland sk�mtsamt/,
-		/ibland n�got sk�mtsamt/,
-		/s�r�skilt statistik/,
-		/s�r�skilt filosofi, biologi/,
-		/s�r�skilt filosofi/,			
+		/sär�skilt meteorologi/,
+		/sär�skilt i v�nster�politisk debatt/,
+		/ofta i vänster�politisk debatt/,
+		/ofta ned�sättande/,
+		/ofta något ned�sättande/,
+		/ned�sättande; något ålderdomligt/,
+		/ned�sättande/,
+		/ibland skämtsamt/,
+		/ibland något skämtsamt/,
+		/sär�skilt statistik/,
+		/sär�skilt filosofi, biologi/,
+		/sär�skilt filosofi/,			
 		/filosofi/,		
-		/i allm�n�spr�ket/,
-		/s�r�skilt sport/,
-		/s�r�skilt milit�r�v�sen och sport/,
-		/s�r�skilt milit�r�v�sen/,
-		/s�r�skilt sj��fart/,
-		/ibland n�got ironiskt/,
-		/s�r�skilt arkeologi/,
+		/i allmän�språket/,
+		/sär�skilt sport/,
+		/sär�skilt milit�r�v�sen och sport/,
+		/sär�skilt milit�r�v�sen/,
+		/sär�skilt sj��fart/,
+		/ibland något ironiskt/,
+		/sär�skilt arkeologi/,
 		/ej officiell svensk beteckning/,
 		/nu�mera ej officiell beteckning/,
-		/f�rsk�nande om�skrivning/,
+		/försk�nande om�skrivning/,
 		/ur�sprungligen bibliskt/,
 		/bibliskt/,
 		/ofta fysik och teknik/,
@@ -2779,7 +2791,7 @@ function lookupManyWords() {
 	let n = 8;			
 	let start = parseInt(INC) + parseInt(SCROLL_INC);	
 	if (start === -1) start = 0
-	fetch('backend/getWords.php?&class=' + CLASS + "&start=" + start.toString() + "&num=" + n, {
+	fetch('backend/getWords.php?&class=' + encodeURI(CLASS) + "&start=" + start.toString() + "&num=" + n, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3387,7 +3399,8 @@ function setTargets() {
 	})
 	.then(json => {
 		RATE = json["rate"];
-		TARGET_DAILY = json["targetDaily"];		TARGET_MONDAY = json["targetWeekly"];
+		TARGET_DAILY = json["targetDaily"];
+		TARGET_MONDAY = json["targetWeekly"];
 		getDiff();
 	})
 	.catch(error => {
@@ -3445,12 +3458,11 @@ function fetchDef() {
 		let id = json["id"];
 		let snr = json["snr"]		
 		// 'debug' argument shows output from external svenska.se reference
-		// 'test_spacing' argument prevents removal of spaces, useful for particle verbs for example
-		let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word) + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0&test_spacing=0';
+		let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word) + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
 		if (CLASS === "fraser") {	
 			let query = $('#iInput').val();
 			query = query.replaceAll("�",""); // No invisible chars to user present in keys
-			backend = 'backend/scrapeIdiom.php?query=' + query
+			backend = 'backend/ScrapeIdiom.php?query=' + query
 		}
 		
 		fetch(backend, {
@@ -3728,13 +3740,22 @@ function fromEnglish() {
 	}
 }
 
+function fromSwedish(ev) {
+	ev.preventDefault();
+	let src = $('#iInput').val();
+	if (src.length > 0) {
+		let url = "https://svenska.se/so/?sok=" + src;
+		window.open(url);
+	}
+}
+
 function hideTitle() {
 	$('#iDivTitle').css("display", "none");
 }
 
 function scrapeWholeClass() {
 	let allWords = [];
-	fetch('backend/getWords.php?start=1000&num=1000&class=' + CLASS, {
+	fetch('backend/getWords.php?start=1000&num=1000&class=' + encodeURI(CLASS), {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3837,6 +3858,28 @@ function forScrapeDef(word) {
 	const re = /\[[2-9]\]/;
 	word = word.replace(re,"");
 	return word;
+}
+
+function ScrapeByID(ev,id) {
+	ev.preventDefault();
+	let snr="";
+	let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word) + "&snr=" + snr + '&id=' + id + '&class=' + CLASS + '&debug=0';
+	fetch(backend, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(json => {
+		addDef(json["key"],json['meta'],json['def'],json['more']);		
+	})
+	.catch(error => {
+		console.log(error);
+	})
 }
 </script>
 </html>
