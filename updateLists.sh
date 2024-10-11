@@ -1,8 +1,8 @@
-git add backend/*-only
-git add backend/*-def
-git add backend/*-meta
-git add backend/*-score
-git add backend/*-more
+git add lists/*-only
+git add lists/*-def
+git add lists/*-meta
+git add lists/*-score
+git add lists/*-more
 git add sounds/mapping
-git add backend/current-rating
+git add lists/current-rating
 git commit -m "Updates word listings."
