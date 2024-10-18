@@ -1184,7 +1184,6 @@ barnmorskemottagning
 barnomsorg
 barnpassning
 barnsbörd
-barnsits
 barnskötare
 barnsäng
 barntillsyn
@@ -2006,6 +2005,7 @@ borgensförbindelse
 borgensman
 borgenssumma
 borgenär
+borgerlighet
 borgerskap
 borgmästare
 boricka
@@ -2744,6 +2744,7 @@ debut
 debutant
 december
 deciliter
+decimal
 decimeter
 deckare
 dedikation
@@ -2962,6 +2963,7 @@ ditresa
 ditvägen
 divergens
 diversehandel
+diversion
 divis
 division
 dixieland
@@ -3703,6 +3705,7 @@ farfar
 farhåga
 farkost
 farled
+farm
 farmare
 farmoder
 farmor
@@ -4076,6 +4079,7 @@ fnatt
 fnöskticka
 foaje
 fobi
+fockmast
 foderbeta
 foderkaka
 fog
@@ -4174,6 +4178,7 @@ fotgängare
 fotknöl
 fotled
 fotnot
+fotocell
 fotoelektricitet
 fotograf
 fotografering
@@ -5719,6 +5724,7 @@ hasp
 haspel
 hasselmus
 hasselnöt
+hast
 hastighet
 hastighetsmätare
 hastighetstävling
@@ -6951,6 +6957,7 @@ järnspat
 järnvilja
 järnväg
 järnvägsknut
+järnvägsstation
 järnvägsövergång
 järpe
 järtecken
@@ -7354,6 +7361,8 @@ klematis
 klenod
 klensmed
 klenät
+kleptoman
+kleptomani
 klibbal
 kliché
 klick
@@ -11193,6 +11202,7 @@ potta
 pottkanten
 poäng
 poängseger
+pr
 pracka
 practical joke
 praktik
@@ -11992,6 +12002,7 @@ ruva
 ryckighet
 ryckning
 rygg
+rygga
 ryggbedövning
 ryggkota
 ryggmärg
@@ -12204,7 +12215,9 @@ sallad
 salladskål
 sallat
 salmiak
+salong
 salongsbolsjevik
+saloon
 saloondörr
 salpeter
 salpingit
@@ -13427,6 +13440,7 @@ soffkudde
 sofism
 sojabiff
 sol
+sol-2
 solarkonstant
 solbränna
 solcell
@@ -14628,8 +14642,11 @@ termin
 terminal
 terminologi
 termistor
+termodynamik
+termoelektricitet
 termometer
 termoplast
+termostat
 terra
 terrass
 terror
@@ -15383,8 +15400,8 @@ tävlingsjury
 tävlingsledare
 tå
 tåfjutt
+tågstation
 tågvärd
-tågända
 tågångare
 tåhätta
 tåhävning

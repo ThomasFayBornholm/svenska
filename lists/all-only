@@ -2537,7 +2537,6 @@ barnomsorg
 barnpassning
 barnrikehus
 barnsbörd
-barnsits
 barnskötare
 barnslig
 barnsäng
@@ -4210,6 +4209,7 @@ bordun
 boreal
 boren
 borg
+borga
 borgare
 borgarklass
 borgarråd
@@ -4220,6 +4220,7 @@ borgensman
 borgenssumma
 borgenär
 borgerlig
+borgerlighet
 borgerskap
 borgmästare
 boricka
@@ -4442,6 +4443,7 @@ bringa
 bringa någon om livet
 brink
 brinna
+brinna av
 brinna i knutarna
 brinna som fnöske
 brinnande
@@ -4644,6 +4646,7 @@ brännolja
 brännpunkt
 brännskada
 brännskador av tredje graden
+brännsår
 brännvin
 brännvinsadvokat
 brännvinsbränneri
@@ -5571,6 +5574,7 @@ decentralisera
 dechiffrera
 deciderad
 deciliter
+decimal
 decimaltal
 decimera
 decimeter
@@ -6156,6 +6160,8 @@ divergera
 diverse
 diversehandel
 diversifiera
+diversion
+divertissemang
 dividera
 divis
 division
@@ -7903,6 +7909,7 @@ farhåga
 farkost
 farled
 farlig
+farm
 farmaka
 farmare
 farmoder
@@ -8020,6 +8027,7 @@ feja
 fejd
 fejk
 fejka
+fejla
 fekalier
 fel
 fela
@@ -8632,6 +8640,7 @@ fnöskticka
 foaje
 fob
 fobi
+fockmast
 foder
 foderbeta
 foderblad
@@ -8817,6 +8826,7 @@ fotknöl
 fotled
 fotnot
 foto
+fotocell
 fotoelektricitet
 fotogenkök
 fotograf
@@ -10025,6 +10035,7 @@ förhandsmeddelande
 förhandsvisning
 förhasta sig
 förhastad
+förhatlig
 förhinder
 förhindra
 förhistoria
@@ -11301,6 +11312,7 @@ gesäll
 get
 getabock
 geting
+getingbo
 getingstick
 getost
 getskägg
@@ -12758,6 +12770,7 @@ handviftning
 handväska
 hand­skydd
 hane
+hang
 hangarfartyg
 hanka sig
 hankön
@@ -12814,6 +12827,7 @@ haspla
 haspla ur sig
 hasselmus
 hasselnöt
+hast
 hasta
 hastig
 hastighet
@@ -14212,6 +14226,7 @@ i ett (i ett)
 i ett för allt
 i ett kör
 i ett nu
+i ett svep
 i fjol
 i flygande fläng
 i framstupa sidoläge
@@ -14402,7 +14417,6 @@ ifyllnad
 igel
 igelkott
 igen
-igenbommad
 igengrodd
 igenkännande
 igenkännbar
@@ -15760,6 +15774,7 @@ järnverk
 järnvilja
 järnväg
 järnvägsknut
+järnvägsstation
 järnvägsövergång
 järpe
 järtecken
@@ -15790,6 +15805,7 @@ kabin
 kabinbana
 kabinettsfråga
 kabla
+kablage
 kabyss
 kacka i eget bo
 kackerlacka
@@ -16503,6 +16519,8 @@ klensmide
 klentrogen
 klenvuxen
 klenät
+kleptoman
+kleptomani
 kleta
 kleta ner
 kletig
@@ -18723,6 +18741,7 @@ lantlig
 lantmätare
 lantmäteri
 lantställe
+lapa
 lapidarisk
 lapp
 lapp på luckan
@@ -19852,6 +19871,7 @@ lättbetong
 lättfattlig
 lättfil
 lättflyktig
+lättflytande
 lättfotad
 lättfärdig
 lättfångad
@@ -21160,6 +21180,7 @@ mjälthugg
 mjöl
 mjöldagg
 mjölk
+mjölka
 mjölkboskap
 mjölkchoklad
 mjölkko
@@ -21512,6 +21533,7 @@ munsbit
 munskydd
 munskänk
 munstycke
+munsår
 munter
 muntergök
 munterhet
@@ -24749,6 +24771,7 @@ pottkanten
 poäng
 poängseger
 poängtera
+pr
 pracka
 practical joke
 praktexempel
@@ -25927,6 +25950,7 @@ resa borst
 resa sig
 resa vapen
 resande
+resandefolket
 rese
 research
 resebyrå
@@ -26484,6 +26508,7 @@ ryckig
 ryckighet
 ryckning
 rygg
+rygga
 ryggbedövning
 ryggkota
 ryggläge
@@ -26942,9 +26967,11 @@ sallad
 salladskål
 sallat
 salmiak
+salong
 salongsberusad
 salongsbolsjevik
 salongslejon
+saloon
 saloondörr
 salpeter
 salpingit
@@ -29039,7 +29066,6 @@ sluta om
 sluta sig
 sluta sina dagar
 sluta upp
-slutbetyg
 sluten stavelse
 sluten vokal
 sluten vård
@@ -29712,6 +29738,7 @@ sofistikerad
 software
 sojabiff
 sol
+sol-2
 sola
 sola sig
 solarkonstant
@@ -29963,6 +29990,7 @@ speciallärare
 specialpedagog
 specialundervisning
 speciell
+species
 specificera
 specifik
 specifik vikt
@@ -30117,6 +30145,7 @@ splitter
 splitter ny
 splitterbomb
 splittra
+splittrad
 splittring
 spoiler
 spola
@@ -30801,7 +30830,6 @@ strategi
 strategisk
 strategiska kärnvapen
 strax
-strax efter
 streama
 streaming
 streber
@@ -31505,6 +31533,7 @@ svensexa
 svensk
 svenska
 svenska flaggans dag
+svep
 svepa
 svepe
 svepskäl
@@ -31750,6 +31779,7 @@ syskonkärlek
 syskonskap
 syslöjd
 sysselsätta
+sysselsätta sig
 sysselsättning
 syssla
 syssling
@@ -32591,8 +32621,12 @@ terminal
 terminologi
 termisk
 termistor
+termo-
+termodynamik
+termoelektricitet
 termometer
 termoplast
+termostat
 terra
 terra firma
 terra incognita
@@ -34173,10 +34207,10 @@ tå
 tåfjutt
 tåg
 tåga
+tågstation
 tågsätt
 tågvirke
 tågvärd
-tågända
 tågångare
 tåhätta
 tåhävning
@@ -34618,6 +34652,7 @@ upphörande
 uppiffad
 uppifrån
 uppiggande
+uppjagad
 uppjazza
 uppkalla
 uppklara
@@ -35925,6 +35960,7 @@ vara/komma på modet
 vara/mäta (viss längd) i strumplästen
 vara/stå på talefot med någon
 varaktig
+varandra
 varannan damernas
 varav
 varda
@@ -36889,6 +36925,7 @@ vänlig
 vänligen
 vänskap
 vänskaplig
+vänskapsband
 vänskapspris
 vänslas
 vänster
