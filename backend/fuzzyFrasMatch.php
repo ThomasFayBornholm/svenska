@@ -14,7 +14,7 @@
     $out["match"] = "";
     $out["status"] = "init";
 	$name = "fraser-only";
-	$contents = file_get_contents($name, 'UTF-8');
+	$contents = file_get_contents("../lists/" . $name, 'UTF-8');
 	$words = preg_split("/\r\n|\r|\n/", $contents);
     foreach($words as $w) {
 		if (preg_match($regex,$w)) {
