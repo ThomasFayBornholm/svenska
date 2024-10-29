@@ -1,7 +1,14 @@
 <?php
 	$path = getcwd() . "/../lists/";
 	$class = $_GET['class'];
-	$word = $_GET['word'];
+	$tmpWord = $_GET['word'];
+	$word = "";
+	$regex = "/[a-zäöå\/() -]/i";
+	for ($i = 0; $i < strlen($tmpWord); $i++) {
+		if (preg_match($regex,$tmpWord[$i])) {
+			$word .= $tmpWord[$i];
+		}
+	}
 	// Word after current hightlighted word
 	$INC = $_GET['inc']+3;
 	$name = $class . "-only";
