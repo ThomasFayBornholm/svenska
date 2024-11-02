@@ -1,0 +1,11 @@
+[Unit]
+Description=Locally hosted translation service
+
+[Service]
+ExecStart=/usr/local/bin/libretranslate
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target
