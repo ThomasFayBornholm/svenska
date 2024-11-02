@@ -12,15 +12,15 @@
 	
 	// Add word to listing if not already available
 	$path = getcwd() . "/../lists/";
-	$fileName = $class . "-only";
-	$infile = fopen($path . $fileName, "r") or die("Could not open file: " . $fileName);
-	if (filesize($path . $fileName) === 0) {
+	$fileName = $path . $class . "-only";
+	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
+	if (filesize($fileName) === 0) {
 		$contents = "";
 	} else {
-		$contents = fread($infile, filesize($path . $fileName));
+		$contents = fread($infile, filesize($fileName));
 	}
 	fclose($infile);
-	$outfile = fopen($path . $fileName, 'w') or die("Could not open file: " . $fileName);
+	$outfile = fopen($fileName, 'w') or die("Could not open file: " . $fileName);
 	
 	$elements = preg_split("/\r\n|\r|\n/", $contents);
 	$out = "";	
@@ -93,7 +93,7 @@
 		if (!file_exists($name)) {
 			fopen($name, "w");
 		}
-		$contents = file_get_contents($path . $name, 'UTF-8');
+		$contents = file_get_contents($name, 'UTF-8');
 		$arr = json_decode($contents, true);
 		$arr[$word] = $def;
 		ksort($arr);
@@ -106,14 +106,14 @@
 		}	
 		$outDef .= PHP_EOL . "}";
 		// Write as string rather than JSON to allow new line as delimiter
-		file_put_contents($path . $name, $outDef);
+		file_put_contents($name, $outDef);
 	}
 	
 	// Do not replace any existing score by default	
 	// If not existing score then default to "2". User can easily update this from web-interface	
-	$name = $class . "-score";
-	if (!file_exists($path . $name)) fopen($name, "w");			
-	$contents = file_get_contents($path . $name, 'UTF-8');
+	$name = $path . $class . "-score";
+	if (!file_exists($name)) fopen($name, "w");			
+	$contents = file_get_contents($name, 'UTF-8');
 	$arr = json_decode($contents, true);
 	if (!array_key_exists($word, $arr)) {
 		$arr[$word] = "2";
@@ -126,7 +126,7 @@
 		$delimScore = "," . PHP_EOL;
 	}
 	$outScore .= PHP_EOL . "}";
-	file_put_contents($path . $name, $outScore);
+	file_put_contents($name, $outScore);
 	
 	if ($class != "fraser") {
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
@@ -134,9 +134,9 @@
 			$key_suffix = "_0";
 			
 			$moreSplit = explode("||",$more);	
-			$name = $class . "-more";
+			$name = $path . $class . "-more";
 			if (!file_exists($name)) fopen($name, "w");			
-			$contents = file_get_contents($path . $name, 'UTF-8');
+			$contents = file_get_contents($name, 'UTF-8');
 			$arr = json_decode($contents,true);
 			$i = 0;
 			foreach($moreSplit as $m) {				
@@ -156,12 +156,12 @@
 				$delimMore = "," . PHP_EOL;
 			}
 			$outMore .= PHP_EOL . "}";
-			file_put_contents($path. $name, $outMore);
+			file_put_contents($name, $outMore);
 		}
 		
 		if (strlen($meta) > 0) {			
-			$name = $class . "-meta";
-			$contents = file_get_contents($path . $name, 'UTF-8');
+			$name = $path . $class . "-meta";
+			$contents = file_get_contents($name, 'UTF-8');
 			$arr = json_decode($contents,true);			
 			$arr[$word] = $meta;			
 			ksort($arr);
@@ -173,7 +173,7 @@
 				$delimMeta = "," . PHP_EOL;
 			}
 			$outMeta .= PHP_EOL . "}";
-			file_put_contents($path . $name, $outMeta);
+			file_put_contents($name, $outMeta);
 		}
 	}
 	echo json_encode("success");
