@@ -107,6 +107,7 @@
 ***naturlig dotter (till någon)
 -gradig
 -mässig
+-riktig
 -talig
 ... och fan och hans mormor/moster
 ... och på den vägen är det
@@ -2295,6 +2296,7 @@ backstag
 backstugusittare
 backtimjan
 backtrav
+backvarnare
 bad
 bada
 badare
@@ -2447,6 +2449,7 @@ bananfluga
 bananskal
 bananstock
 bananträd
+banbrytande
 banbrytare
 band
 banda
@@ -4757,6 +4760,7 @@ bukt
 bukt-2
 bukta
 bukta sig
+buktala
 buktalare
 buktig
 bula
@@ -4784,6 +4788,7 @@ bunden
 bunden form
 bunden poesi
 bunden vers
+bundet kapital
 bundsförvant
 bunke
 bunker
@@ -5990,6 +5995,7 @@ digitalur
 dignitet
 dika
 dike
+dikotomi
 dikt
 dikta
 dikta upp
@@ -6353,6 +6359,7 @@ drabba
 drabba ihop
 drabba samman
 drabbning
+draft
 drafta
 drag
 drag under galoscherna
@@ -7839,6 +7846,7 @@ falla på sin egen orimlighet
 falla undan
 falla ut
 falla/hamna i rövarhänder
+fallande peon
 fallande rytm
 fallbeskrivning
 fallen
@@ -8080,6 +8088,7 @@ fermentera
 fernissa
 feromon
 fertil
+fertilitet
 fest
 festa
 festföremål
@@ -8496,6 +8505,7 @@ flugfiske
 flugsmälla
 flugsnappare
 flugvikt
+fluidum
 fluktuation
 fluktuera
 flum
@@ -8647,11 +8657,11 @@ foderblad
 foderkaka
 fodral
 fog
+fog-2
 foga
 foga sig
 fogeord
 foglig
-fogning
 fokus
 fokusera
 foliant
@@ -8989,6 +8999,7 @@ frekvens
 frekvent
 frenesi
 frenetisk
+freon
 fresta
 frestande
 frestare
@@ -9058,6 +9069,7 @@ friluftsgudstjänst
 friluftsmåleri
 friluftsteater
 frimodig
+frimurarorden
 frimärke
 frimärkshäfte
 frimärkssamling
@@ -9883,6 +9895,7 @@ föregripa
 föregå
 föregående
 föregångare
+föregångsman
 förehavande
 förehålla
 förekomma
@@ -11005,6 +11018,7 @@ gasmask
 gasol
 gasolkök
 gasoltub
+gaspedal
 gassa
 gassa sig
 gasspis
@@ -11012,6 +11026,7 @@ gasta
 gastillförsel
 gastkrama
 gastronomi
+gastroskopi
 gasturbin
 gasurladdning
 gasutveckling
@@ -11331,6 +11346,7 @@ giftgrön
 giftig
 giftkörtel
 giftlära
+giftsnok
 gig
 gigant
 gigantisk
@@ -12688,6 +12704,7 @@ hamra
 hamster
 hamsterhjul
 hamstra
+han
 hanblomma
 hand
 handarbete
@@ -13590,6 +13607,7 @@ häkta
 häkte
 häktning
 häl
+häleri
 hälft
 hälften vore nog
 hälgångare
@@ -14613,6 +14631,7 @@ indoktrinering
 indolent
 indolog
 indra
+indrag
 indragen
 indragning
 indriva
@@ -15335,6 +15354,8 @@ intyg
 intyga
 intäkt
 intåg
+intåga
+intågande
 inuit
 inuti
 invadera
@@ -16860,6 +16881,7 @@ kobbe
 kobent
 kobolt
 koboltglans
+kobra
 kock
 kod
 koda
@@ -17121,6 +17143,7 @@ kompilator
 kompilera
 kompis
 komplement
+komplementär
 komplett
 komplettera
 komplex
@@ -18277,6 +18300,7 @@ kylare
 kylarvatten
 kylig
 kylkonserv
+kylning
 kylskada
 kylskåp
 kymig
@@ -18422,6 +18446,7 @@ kärleksnäste
 kärlig
 kärlkramp
 kärna
+kärna ur
 kärnavfall
 kärnbränsle
 kärnenergi
@@ -18659,6 +18684,7 @@ lagstridig
 lagt kort ligger
 lagtima
 laguppställning
+laissez-faire
 lajban
 laka ur
 lakan
@@ -19118,6 +19144,7 @@ lilla julafton
 lillasyrra
 lillasyster
 lillaxel
+lillbrorsa
 lillebror
 lillfinger
 lillgammal
@@ -19419,6 +19446,7 @@ lov
 lova
 lova någon guld och gröna skogar
 lovande
+love
 lovlig
 lovord
 lovorda
@@ -19538,6 +19566,7 @@ luspank
 lussekatt
 lust
 lusta
+lustgas
 lustig
 lustighet
 lustigkurre
@@ -20239,6 +20268,7 @@ magnum
 magnumbutelj
 magra
 magsaft
+magstark
 magsäck
 magsår
 magåkomma
@@ -20560,7 +20590,6 @@ matkällare
 matlust
 matmor
 matolja
-matos
 matpotatis
 matriarkat
 matris
@@ -20913,6 +20942,7 @@ metylalkohol
 metylen
 mezzosopran
 microsekund
+mid-
 middag
 middagsrast
 midja
@@ -21317,6 +21347,7 @@ montör
 monument
 monumental
 moped
+mopedist
 mopp
 moppe
 moppe-2
@@ -21579,6 +21610,7 @@ musikinstrument
 musikkår
 musiknot
 musikstycke
+musikverk
 musiköra
 muskel
 muskelatrofi
@@ -22442,7 +22474,6 @@ nya världen
 nyans
 nyansera
 nyantik
-nybilda
 nybliven
 nybrutal
 nybyggare
@@ -23673,6 +23704,8 @@ otidig
 otidighet
 otidsenlig
 otillbörlig
+otillfreds
+otillfredsställd
 otillräcklig
 otillåten
 otjänlig
@@ -23967,6 +24000,7 @@ parkera
 parkering
 parkeringsbot
 parkeringsplats
+parkeringssensor
 parkeringsvakt
 parkett
 parkettstav
@@ -24056,11 +24090,13 @@ pastorsadjunkt
 patcha
 patellarreflex
 patent
+pater
 patetisk
 patient
 patientnämnd
 patina
 patinera
+patogen
 patrask
 patriark
 patriarkal
@@ -24176,6 +24212,7 @@ period
 periodare
 periodicitet
 periodisk
+periodiska systemet
 periodsupare
 periodtal
 periodvis
@@ -24367,6 +24404,7 @@ pinnstol
 pinnved
 pinsam
 pint
+pionjär
 pipa
 pipa ner
 pipare
@@ -24428,6 +24466,7 @@ plagg
 plagiat
 plagiera
 plakat
+plakett
 plan
 plan B
 plana av
@@ -25091,7 +25130,6 @@ provinsiell
 provision
 provisorisk
 provkök
-provning
 provocera
 provocera fram
 provokation
@@ -25543,6 +25581,7 @@ rakvatten
 raljans
 raljera
 rall
+rallentando
 ram
 rama in
 ramaskri
@@ -25819,6 +25858,7 @@ rekonstruera
 rekonstruktion
 rekord
 rekorderlig
+rekryt
 rekrytera
 rekrytering
 rektangel
@@ -25940,6 +25980,7 @@ reproducera
 reproduktion
 repstege
 reptil
+reptrick
 republik
 republikan
 repulsion
@@ -26249,6 +26290,7 @@ rista
 rista-2
 rit
 rita
+ritardando
 ritblock
 ritning
 rits
@@ -26594,6 +26636,7 @@ räffla
 räfsa
 räfst
 räfst och rättarting
+räjong
 räka
 räkenskapens dag
 räkfrossa
@@ -26832,6 +26875,7 @@ röra om i grytan
 röra sig
 röra upp himmel och jord
 rörande
+rörande överens
 rördrom
 rörelse
 rörelseenergi
@@ -27546,6 +27590,7 @@ sen
 sen länge
 sena
 senap
+senapsgas
 senare
 senarelägga
 senarelärare
@@ -27581,6 +27626,7 @@ senskida
 sensmoral
 sensommar
 sensomotorisk
+sensor
 sensorisk
 sensualism
 sensualitet
@@ -28328,6 +28374,7 @@ skilja sig
 skilja ut
 skilja åt
 skiljaktig
+skiljas
 skiljedomare
 skiljeförfarande
 skiljelinje
@@ -28901,6 +28948,7 @@ sladd
 sladda
 sladdbarn
 sladder
+sladdra
 sladdrig
 slafsig
 slag
@@ -29070,6 +29118,7 @@ sluten stavelse
 sluten vokal
 sluten vård
 slutenvård
+slutet system
 slutfall
 slutföra
 slutförvaring
@@ -29556,8 +29605,10 @@ sno på
 sno sig
 snoa
 snobb
+snobba
 snobberi
 snobbig
+snobbism
 snodd
 snok
 snoka
@@ -29978,6 +30029,7 @@ speaker
 specerier
 special
 specialarbete
+specialare
 specialbegåvning
 specialfall
 specialisera sig
@@ -30233,6 +30285,7 @@ sprucken röst
 sprucken stämma
 sprudla
 spruta
+spräcka
 spräcklig
 spränga
 sprängd
@@ -30472,6 +30525,7 @@ starta/öppna eget
 startbana
 startblock
 startgrop
+startnyckel
 startspjäll
 stat
 statare
@@ -30619,6 +30673,7 @@ stifttand
 stig
 stiga
 stiga någon åt huvudet
+stigande peon
 stigande rytm
 stigbygel
 stigma
@@ -31323,6 +31378,7 @@ subjektiv
 subjektivism
 subjektivitet
 subjunktion
+subkultur
 subkutan
 sublim
 submarin
@@ -31428,6 +31484,7 @@ surkål
 surmjölk
 surmulen
 surpris
+surr
 surra
 surrogat
 surströmming
@@ -31630,6 +31687,7 @@ svärmor
 svärson
 svärta
 sväva
+sväva i okunnighet om något
 sväva i ovisshet om något
 sväva i tvivelsmål om något
 sväva på målet
@@ -31941,6 +31999,7 @@ sätta någon på pottan
 sätta någon på pottkanten
 sätta någon/något på undantag
 sätta någon/något ur spel
+sätta något i system
 sätta något i verket
 sätta något på pränt
 sätta något på spel
@@ -32444,6 +32503,7 @@ tankemässig
 tankemöda
 tankereda
 tankesmedja
+tankeutbyte
 tankevilla
 tankfartyg
 tankfull
@@ -33403,6 +33463,7 @@ traktering
 traktor
 traktör
 traktörpanna
+tralala
 trall
 trall-2
 tralla
@@ -34317,7 +34378,6 @@ undantagslag
 undantagstillstånd
 undantagsvis
 undantränga
-undefined
 under
 under alla omständigheter
 under bar himmel
@@ -34434,7 +34494,6 @@ undertak
 underteckna
 undertecknad
 undertecknare
-underteckning
 undertext
 undertitel
 undertrycka
@@ -36732,6 +36791,7 @@ vulgaritet
 vulgär
 vulgärlatin
 vulkan
+vulkanisk
 vulkanutbrott
 vurm
 vurma
@@ -36779,6 +36839,7 @@ vägd och befunnen för lätt
 vägen till mannens hjärta går genom magen
 vägg
 vägg i vägg
+vägga
 väggarna har öron
 väggfast
 vägguttag
@@ -36963,6 +37024,7 @@ värdefull
 värdeföremål
 värdeförsändelse
 värdegemenskap
+värdegrund
 värdekonservativ
 värdelös
 värdeneutral
@@ -37028,7 +37090,6 @@ världs­vana
 värma
 värma upp
 värme
-värmeanläggning
 värmebeständig
 värmebölja
 värmedyna
@@ -37220,6 +37281,7 @@ våldsamhet
 våldsbejakande
 våldsbrott
 våldsdåd
+våldshandling
 våldsman
 våldsmentalitet
 våldsvåg
@@ -37231,7 +37293,6 @@ vålm
 vålnad
 vånda
 våning
-våningsplan
 våningssäng
 vår
 vår andes stämma i världen
@@ -37385,6 +37446,7 @@ ytter
 ytterdörr
 ytterkant
 ytterligare
+ytterlighet
 ytterplagg
 ytterpunkt
 ytterrock
@@ -38334,6 +38396,7 @@ zygot
 öppenvård
 öppet brev till någon
 öppet mål
+öppet system
 öppethållande
 öppettid
 öppna
