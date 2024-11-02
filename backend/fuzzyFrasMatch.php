@@ -1,6 +1,13 @@
 <?php
 	// Match based either on regex or if all words in received key are also in listing key.
-    $key = $_GET["key"];
+    $tmpKey = $_GET["key"];
+    $key = "";
+    $regex = "/[a-zöäå ]/i";
+    for ($i = 0; $i < strlen($tmpKey); $i++) {
+        if (preg_match($regex,$tmpKey[$i])) {
+            $key .= $tmpKey[$i];
+        }
+    }
 	$regex = '/' . str_replace("/","\/",$key) . '/i';
     $allWords = explode(" ", $key);
     $cnt = count($allWords);

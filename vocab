@@ -280,6 +280,7 @@ function addDef(key, meta, def, more, fast = false) {
 	$('#iMeta').html("adding... '<b>" + key + "</b>'");
 	$('#iParDef').html("");
 	$('#iMore').html("");
+	console.log(def)
 	let moreArr = more.split("||");	
 	moreLen = moreArr.length;
 	if (moreLen > 4) {
@@ -1682,6 +1683,28 @@ function noMatch(word) {
 }
 
 function noMatchSingleClass(word) {
+	// Special case to use fuzzy search for phrases
+	if (CLASS === "fraser") {
+		fetch('backend/fuzzyFrasMatch.php?key=' + word, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			if (json["status"] === "success") {
+				seekWordSingleClass(json["match"]);
+				return;
+			}
+		})
+		.catch(error => {
+			console.log(error)
+		})
+	}
 	$('#iMeta').html("");	
 	$('#iParDef').html("No match: " + word + " in class: " + CLASS);	
 	$('#iInput').val(word);
@@ -3734,9 +3757,30 @@ function log(txt) {
 function fromEnglish() {
 	let src = $('#iInput').val();	
 	if (src.length > 0) {
-		let url = "https://translate.google.com/?sl=en&tl=sv&text=<src>&op=translate"
-		url = url.replace("<src>", src);
-		window.open(url);
+		fetch('backend/fromEnglish.php?text=' + src, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			if (json != null) {
+				$('#iInput').val(json)
+			} else {
+				// If no local translation use external service
+				
+				let url = "https://translate.google.com/?sl=en&tl=sv&text=<src>&op=translate"
+				url = url.replace("<src>", src);
+				window.open(url);
+			}
+		})
+		.catch(error => {
+			console.log(error);
+		})
 	}
 }
 
