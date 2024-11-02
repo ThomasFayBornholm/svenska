@@ -45,7 +45,7 @@
 	}
 	if (strlen($enum) > 0) {
 		$start = strpos($def,"<sup>" . $enum);
-		$end = strpos($def, "<sup>",$start+1);
+		$end = strpos($def, "lemvarhuvud",$start+1);
 		if (!$end) $end = strlen($def);
 		if ($start != -1) $def = substr($def,$start,$end-$start);	
 	}
@@ -321,7 +321,6 @@
 		$len = strlen($start);
 		
 		$pos1 = strpos ($raw, $start) + $len;
-		
 		if ($pos1) {
 			// Always expect one definition
 			$out = $out . getMoreFields($raw, $pos1);

@@ -89,7 +89,7 @@
 	// Populate 'meta', 'def' and 'more' listings, overwrite performed if entry already exists
 	$trail = "-def";
 	if (strlen($def) > 0) {
-		$name = $class . $trail;
+		$name = $path . $class . $trail;
 		if (!file_exists($name)) {
 			fopen($name, "w");
 		}
