@@ -265,6 +265,8 @@ acceleration
 accelerator
 accelerera
 accent
+accent 1
+accent 2
 accentförskjutning
 accenttecken
 accentuera
@@ -1133,7 +1135,6 @@ ansvarsnämnd
 ansvälla
 ansvällning
 ansätta
-ansök
 ansöka
 ansökan
 ansökning
@@ -1600,6 +1601,7 @@ asterisk
 asteroid
 astigmatisk
 astigmatism
+astma
 astralkropp
 astrologi
 astronaut
@@ -4183,6 +4185,7 @@ bonusförälder
 bonusmamma
 bonuspappa
 boplats
+bopålar
 bord
 borda
 borddans
@@ -4401,6 +4404,7 @@ bravera
 bravur
 bravurnummer
 braxen
+break
 bred
 breda
 breda ut
@@ -4640,6 +4644,7 @@ bränna sina skepp
 bränna sitt ljus i båda ändar
 bränna vid
 brännande
+brännbar
 brännboll
 bränning
 brännjärn
@@ -4800,6 +4805,7 @@ bur
 bura in
 burdus
 burfågel
+burgare
 burgen
 burk
 burka
@@ -5170,6 +5176,7 @@ checka
 checka in
 checka ut
 checkhäfte
+cheeseburgare
 chef
 chefa
 chefredaktör
@@ -5989,6 +5996,7 @@ digerdöden
 digerera
 digga
 digital
+digital-tv
 digitalisera
 digitalkamera
 digitalur
@@ -6216,7 +6224,9 @@ doft
 dofta
 doge
 dogm
+dogmatik
 dogmatisera
+dogmatisk
 dok
 doktor
 doktor honoris causa
@@ -7579,6 +7589,7 @@ etnisk rensning
 etnocentrisk
 etnocentrism
 etnografi
+etnologi
 etologi
 etsa
 etsa sig
@@ -8244,6 +8255,7 @@ finrum
 finsk
 finska pinnar
 finslipa
+finsmakare
 finsnickare
 finsnickeri
 fint
@@ -9457,6 +9469,7 @@ fältmässig
 fältrop
 fältslag
 fältstyrka
+fälttävlan
 fälttåg
 fängelse
 fängelsekund
@@ -11027,6 +11040,7 @@ gasspis
 gasta
 gastillförsel
 gastkrama
+gastronom
 gastronomi
 gastroskopi
 gasturbin
@@ -11151,7 +11165,6 @@ gendopning
 gendriva
 genealog
 genealogi
-genealogisk
 genera
 genera sig
 generad
@@ -11273,6 +11286,7 @@ genväg
 genvägar är (ofta) senvägar
 geocentrisk
 geodesi
+geograf
 geografi
 geografisk
 geokronologi
@@ -11649,6 +11663,7 @@ gottgöra
 gottgörelse
 gouache
 gourmand
+gourmet
 grabb
 grabbig
 grace
@@ -12176,7 +12191,6 @@ gästa
 gästabud
 gästbok
 gästfri
-gästfrihet
 gästgivargård
 gästgiveri
 gästhandduk
@@ -13199,6 +13213,7 @@ hjälp
 hjälp till självhjälp
 hjälpa
 hjälpa någon till rätta
+hjälpa någon/något på traven
 hjälpa till
 hjälpa upp
 hjälpare
@@ -14287,6 +14302,7 @@ i långa banor
 i långa/många stycken
 i lönn
 i lös vikt
+i medeltal
 i morse
 i mån av något
 i mångt och mycket
@@ -14822,6 +14838,7 @@ inkast
 inklarera
 inklination
 inkludera
+inkoherent
 inkoka
 inkomma
 inkompetens
@@ -16055,6 +16072,7 @@ kanna
 kannibal
 kannibalism
 kanon
+kanon-
 kanon-2
 kanonföda
 kanonisation
@@ -16794,6 +16812,7 @@ knocka
 knockdown
 knockout
 knog
+knoga
 knoge
 knogig
 knogjärn
@@ -19004,6 +19023,7 @@ leverne
 leverpastej
 levertran
 levitation
+levitera
 levnad
 levnadsbeskrivning
 levnadsglad
@@ -19341,6 +19361,7 @@ ljuslockig
 ljusna
 ljusning
 ljuspunkt
+ljusreklam
 ljussax
 ljusskygg
 ljusslinga
@@ -19872,6 +19893,7 @@ läsare
 läsbar
 läsdrama
 läsebok
+läsekrets
 läsfärdighet
 läsförståelse
 läshuvud
@@ -20148,6 +20170,7 @@ löneanspråk
 lönearbetare
 löneavtal
 löneförhöjning
+löneförmån
 lönegaranti
 löneglidning
 lönegrad
@@ -21408,6 +21431,7 @@ morsa
 morsarv
 morse
 morse-2
+morsealfabet
 morsgris
 morsk
 mortalitet
@@ -21771,6 +21795,7 @@ målarduk
 målare
 målarfärg
 målarskola
+målbur
 målchans
 måleri
 målerisk
@@ -23671,6 +23696,7 @@ osnygg
 osolidarisk
 ost
 ostadig
+ostburgare
 ostbågar
 osteoporos
 osteria
@@ -23887,6 +23913,7 @@ paneldebatt
 paneldiskussion
 panflöjt
 pang
+pang på rödbetan
 panik
 panikartad
 panikslagen
@@ -24910,6 +24937,7 @@ pressare
 pressfotograf
 presskonferens
 pressmeddelande
+presstöd
 pressveck
 pressylta
 prestanda
@@ -25216,6 +25244,8 @@ pucko
 pudding
 pudel
 pudelns kärna
+puder
+puderborste
 pudersnö
 pudervippa
 pudla
@@ -25381,6 +25411,7 @@ på svaj
 på sätt och vis
 på så vis
 på tal om
+på tennis
 på tok för
 på torra vägen
 på tu man hand
@@ -25998,6 +26029,7 @@ resandefolket
 rese
 research
 resebyrå
+reseda
 resenär
 reserv
 reservare
@@ -26398,6 +26430,7 @@ rotation
 roten till det onda
 rotera
 rotfyllning
+rotlös
 rotmos
 rotogravyr
 rotorblad
@@ -26907,6 +26940,7 @@ röst
 rösta
 rösta blankt
 rösta med fötterna
+röstfiske
 röstkort
 röstläge
 röstlängd
@@ -27465,6 +27499,7 @@ second hand
 sed
 sedan
 sedan/från barnsben
+sedativ
 sedefördärv
 sedeförfall
 sedel
@@ -27530,6 +27565,7 @@ segra
 segrare
 segregation
 segregera
+seismograf
 sej
 sejdel
 sejour
@@ -27566,6 +27602,7 @@ selektiv
 selfmade
 selleri
 seltyg
+semaforera
 semantik
 semantisk
 semester
@@ -27677,6 +27714,7 @@ serieproduktion
 serietidning
 seriös
 serveess
+servegenombrott
 server
 servera
 servering
@@ -28571,6 +28609,7 @@ skri
 skribent
 skrida
 skrida till verket
+skridsko
 skridskoåkning
 skrift
 skriften på väggen
@@ -28585,6 +28624,8 @@ skrika
 skrika som en stucken gris
 skrikig
 skrin
+skrinna
+skrinnare
 skript
 skriptum
 skritt
@@ -29234,6 +29275,8 @@ slå klackarna i taket
 slå knut på sig själv
 slå mynt av (något)
 slå ner
+slå ner sina bopålar
+slå ner som en bomb
 slå näven i bordet
 slå någon på fingrarna
 slå någon ur brädet
@@ -30516,6 +30559,7 @@ starka glasögon
 starksprit
 starkström
 starkt verb
+starkvaror
 starkvin
 starkvind
 starköl
@@ -30533,6 +30577,7 @@ startspjäll
 stat
 statare
 statens kaka är liten men säker
+statera
 statik
 station
 stationera
@@ -31308,6 +31353,7 @@ stål
 stålbad
 stålblank
 stålsätta sig
+ståltråd
 stålverk
 stånd
 stånda
@@ -31525,6 +31571,7 @@ svalna
 svamla
 svammel
 svamp
+svampdjur
 svan
 svanhals
 svankrygg
@@ -32358,6 +32405,7 @@ tagga ner
 taggad
 taggig
 taggtråd
+tagliatelle
 tagning
 taikonaut
 tajming
@@ -33165,6 +33213,7 @@ tjockskallig
 tjocktarm
 tjog
 tjomme
+tjong
 tjugoett
 tjugofemöring
 tjugohundratalet
@@ -33876,6 +33925,7 @@ trångt om saligheten
 trög
 trögdjur
 trögfattad
+trögflytande
 tröghet
 tröghetslag
 trögt (före) i portgången
@@ -36045,6 +36095,7 @@ varhelst
 varhärd
 vari
 variabel
+varians
 variant
 variation
 variera
@@ -36648,6 +36699,7 @@ visitera
 visitkort
 viska
 viskning
+viskös
 visning
 visp
 vispa
@@ -37482,6 +37534,8 @@ zink
 zinkfeber
 zon
 zoo
+zoologi
+zoologisk
 zoologisk trädgård
 zooma
 zooma ut

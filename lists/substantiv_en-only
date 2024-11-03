@@ -499,7 +499,6 @@ ansvarsförbindelse
 ansvarskänsla
 ansvarsnämnd
 ansvällning
-ansök
 ansökan
 ansökning
 ansökningstid
@@ -749,6 +748,7 @@ asteni
 asterisk
 asteroid
 astigmatism
+astma
 astralkropp
 astrologi
 astronaut
@@ -2302,6 +2302,7 @@ bunsenbrännare
 bunt
 bur
 burfågel
+burgare
 burk
 burka
 burkmat
@@ -2508,6 +2509,7 @@ charmör
 chatt
 chaufför
 check
+cheeseburgare
 chef
 chefredaktör
 chiffong
@@ -2874,6 +2876,7 @@ differentialkalkyl
 diffusion
 difteri
 digerdöden
+digital-tv
 digitalkamera
 dignitet
 dikotomi
@@ -2989,6 +2992,7 @@ docka
 doft
 doge
 dogm
+dogmatik
 doktor
 doktorand
 doktorsavhandling
@@ -3559,6 +3563,7 @@ etikett
 etiopier
 etnocentrism
 etnografi
+etnologi
 etologi
 etsning
 etta
@@ -3886,6 +3891,7 @@ finländska
 finmotorik
 finne
 finnmark
+finsmakare
 finsnickare
 fint
 fintvätt
@@ -4435,6 +4441,7 @@ fältbiolog
 fälthare
 fältherre
 fältstyrka
+fälttävlan
 fängelsekund
 fängsel
 fänkål
@@ -4963,6 +4970,7 @@ gasoltub
 gaspedal
 gasspis
 gastillförsel
+gastronom
 gastroskopi
 gasturbin
 gasurladdning
@@ -5065,6 +5073,7 @@ gentjänst
 gentrifiering
 genväg
 geodesi
+geograf
 geografi
 geokronologi
 geologi
@@ -5236,6 +5245,7 @@ gottegris
 gottgörelse
 gouache
 gourmand
+gourmet
 grabb
 grace
 grad
@@ -5528,7 +5538,6 @@ gäspning
 gässling
 gäst
 gästbok
-gästfrihet
 gästgivargård
 gästhandduk
 gågata
@@ -8731,6 +8740,7 @@ ljuskägla
 ljuskälla
 ljusning
 ljuspunkt
+ljusreklam
 ljussax
 ljusslinga
 ljussläckare
@@ -8951,6 +8961,7 @@ lärosats
 lärostol
 läsare
 läsebok
+läsekrets
 läsfärdighet
 läsförståelse
 läshörna
@@ -9049,6 +9060,7 @@ lökkupol
 lön
 lönearbetare
 löneförhöjning
+löneförmån
 lönegaranti
 löneglidning
 lönegrad
@@ -9864,6 +9876,7 @@ målarduk
 målare
 målarfärg
 målarskola
+målbur
 målchans
 målforskning
 målfrossa
@@ -10600,6 +10613,7 @@ osed
 oskuld
 osman
 ost
+ostburgare
 ostbågar
 osteoporos
 osteria
@@ -11426,6 +11440,7 @@ puck
 puckelrygg
 pudding
 pudel
+puderborste
 pudersnö
 pudervippa
 puff
@@ -11759,6 +11774,7 @@ resande
 rese
 research
 resebyrå
+reseda
 resenär
 reserv
 reservare
@@ -12474,6 +12490,7 @@ segment
 segmentbåge
 segrare
 segregation
+seismograf
 sej
 sejdel
 sejour
@@ -12994,10 +13011,12 @@ skrattmås
 skrattrynka
 skrattsalva
 skribent
+skridsko
 skridskoåkning
 skrift
 skriftställare
 skrika
+skrinnare
 skritt
 skrivare
 skrivbok
@@ -14143,6 +14162,7 @@ stängsel
 stänkskärm
 stärkelse
 stäv
+ståltråd
 ståndare
 ståndkrage
 ståndman
@@ -14492,6 +14512,7 @@ tafs
 taft
 tagg
 taggtråd
+tagliatelle
 tagning
 taikonaut
 tajming
@@ -14870,6 +14891,7 @@ tjockolja
 tjockskalle
 tjocktarm
 tjomme
+tjong
 tjugoett
 tjugofemöring
 tjugondel
@@ -16088,6 +16110,7 @@ vargavinter
 vargtimme
 varhärd
 variabel
+varians
 variant
 variation
 varietet
@@ -16735,6 +16758,7 @@ zigenare
 zink
 zinkfeber
 zon
+zoologi
 zucchini
 zygot
 ädelfasan
