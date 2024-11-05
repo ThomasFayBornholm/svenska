@@ -280,7 +280,6 @@ function addDef(key, meta, def, more, fast = false) {
 	$('#iMeta').html("adding... '<b>" + key + "</b>'");
 	$('#iParDef').html("");
 	$('#iMore').html("");
-	console.log(def)
 	let moreArr = more.split("||");	
 	moreLen = moreArr.length;
 	if (moreLen > 4) {
@@ -905,7 +904,6 @@ function makeLinks(def) {
 
 function linkSingleWord(def) {	
 	if (DEBUG) log("linkSingleWord(def), def = " + def);
-	if (def.substr(0,6) === "till '") return def;
 	defArr = def.split("<br>");
 	outDef = "";
 	del = "";
@@ -919,40 +917,6 @@ function linkSingleWord(def) {
 			} else {
 				let tmp = line;
 				tmp = tmp.substr(2);			
-
-				// Strip away meta and grammer information
-				let res = tmp.match(/(\[.*\])/);
-				if (res) tmp = tmp.replace(res[0] + " ","");
-				res = tmp.match(/(\(.*\))/);
-				if (res) tmp = tmp.replace(res[0] + " ","");
-				// Simple references to adjektives from substantive
-				let ref = "det att vara ";
-				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
-				ref = "det att ";
-				// Simple references to verbs from substantive
-				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
-				// Simple reference from adjektives to substantive
-				ref = "som v�llar ";
-				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
-				ref = "som pr�glas av ";
-				if (tmp.indexOf(ref) === 0) tmp = tmp.replace(ref,"");
-				// Simple references to verbs from adjektive
-				ref = "som ";
-				if (tmp.indexOf(ref) === 0) {
-					tmp = tmp.replace(ref,"");
-					// remove trailing 'r' from verb conjugation
-					if (tmp.slice(tmp.length-1) === 'r') {					
-						tmp = tmp.slice(0,tmp.length-1);
-					}
-				}
-				// What is this doing and why?
-				let cnt = tmp.match(/ /g);				
-				if (cnt === null) {					
-					let offset = 0
-					let word = tmp.substr(offset).replaceAll("�","");
-					line = line.replace(word, tmpSpan.replaceAll("_w_",word));				
-				} 
-				
 				outDef += del + line;
 				del = "<br>";
 			}

@@ -387,7 +387,8 @@
 		
 		$out = str_replace("\n","<br>",$out);
 		$out = str_replace("det att <br>", "det att ",$out);
-		
+		if (str_contains($out, "det att")) $out = preg_replace("/\x{00a0}/u"," ",$out);
+		if (str_contains($out, "fast sammansättn.")) $out = preg_replace("/\x{00a0}/u"," ",$out);
 		if (!str_contains($out,"lös förbindelse"))	$out = preg_replace("/\x{00a0}/u","",$out);
 		
 		// Removal of unwanted numerical references in cross-references.
@@ -573,7 +574,6 @@
 				} else {
 					$res = strip_tags($line);
 				}	
-
 		} else if (str_contains($line, 'class="hkom"')) {
 			$res = "[" . strip_tags($line) . "] __";
 		} else if (str_contains($line, 'class="fkomblock"')) {
@@ -583,14 +583,13 @@
 			if (substr($res,-2) === "se") {
 				$res .= " __";
 			} else {
-				$res .= ") __";
+				$res .= " __";
 			}
 			$res = str_replace(" _b", " <b>",$res);
-			$res = str_replace("b__", "</b>",$res);
+			$res = str_replace("b__", "</b>)",$res);
 		} else if (str_contains($line, 'class="hv"') || str_contains($line, 'class="hvtyp"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="hvtag"')) {
-			
 			$mid = strpos($line,"</a>");
 			$res = "<l>" . strip_tags(substr($line,0,$mid)) . "</l>";
 			$res = str_replace(" , ", "</l>, <l>",$res);			
