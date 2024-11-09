@@ -623,7 +623,6 @@ function scrollViewDown() {
 	$('#iMore').empty();
 	changeInc(N_INC);
 	$('iDefDiv').css("display", "none");	
-	getWords();
 	getWords(INC,-1);
 	showWords();
 }
@@ -2089,7 +2088,7 @@ function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
 	if (DEBUG) log("addMeta()");	
 	regexArr = [
-		/var�dagligt, sk�mtsamt/,
+		/var�dagligt, skämtsamt/,
 		/ålderdomligt el. ironiskt/,
 		/sjö�fart/,
 		/något ålderdomligt el. dialektalt/,
@@ -3103,7 +3102,6 @@ function processKeyDown(ev) {
 			ev.preventDefault();	
 			handleNumericInput(ev.key);
 		}
-        
     }
 }
 
