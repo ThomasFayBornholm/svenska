@@ -120,7 +120,6 @@ A-skatt
 A-språk
 AI
 AP-fond
-APfond
 AV-central
 AV-hjälpmedel
 Amors pilar
@@ -514,6 +513,7 @@ alfabet
 alg
 algebra
 algebraisk
+algoritm
 alias
 alienation
 alienera
@@ -5298,6 +5298,7 @@ coitus interruptus
 cola
 collage
 college
+collier
 community
 container
 containerfartyg
@@ -8104,7 +8105,6 @@ fenotyp
 feodal
 feodalism
 ferie
-feriejobb
 fermentera
 fernissa
 feromon
@@ -9409,6 +9409,8 @@ fyllig
 fyllning
 fyllo
 fylltratt
+fylogenes
+fylogeni
 fynd
 fyndig
 fyndighet
@@ -11202,6 +11204,7 @@ generera
 generisk
 generositet
 generös
+genes
 genesis
 genetisk
 gengas
@@ -14634,6 +14637,7 @@ indexaktie
 indexreglera
 indiankrasse
 indicium
+indier
 indifferent
 indignation
 indignerad
@@ -15593,8 +15597,6 @@ jobberi
 jobbig
 joddla
 jogga
-joggning
-joghurt
 jolle
 joller
 jollra
@@ -16493,6 +16495,7 @@ klampa
 klamra
 klan
 klander
+klanderfri
 klandervärd
 klandra
 klang
@@ -17136,6 +17139,7 @@ kommentar
 kommentarsfält
 kommentator
 kommentera
+kommers
 kommersiell
 kommerskollegium
 kommissarie
@@ -18981,6 +18985,8 @@ len
 len som en barnrumpa/persika
 len som honung
 leninism
+lepra
+leprös
 leptosom
 lera
 lerbotten
@@ -19488,6 +19494,7 @@ lotteri
 lotto
 lotus
 lov
+lov-2
 lova
 lova någon guld och gröna skogar
 lovande
@@ -20840,8 +20847,10 @@ medvetslös
 medvind
 medvurst
 mega-
+megahit
 megaloman
 megalomani
+megastjärna
 megaton
 meja
 meja ner
@@ -23442,6 +23451,8 @@ onomastisk
 onomatopoetisk
 onsdag
 ont krut förgås inte så lätt
+ontogenes
+ontogeni
 onykter
 onyttig
 onåbar
@@ -23577,6 +23588,7 @@ oreda
 oredig
 oredlig
 oredlighet
+oreflekterad
 oregano
 oregerlig
 oreglerad
@@ -24416,6 +24428,7 @@ piggelin
 pigghaj
 piggvar
 pigment
+pigmenterad
 pigroman
 pik
 pika
@@ -24423,6 +24436,7 @@ pikant
 pikhacka
 pikstav
 piktografisk skrift
+piktur
 pil
 pila
 pilbåge
@@ -26807,7 +26821,6 @@ rättstavning
 rättsuppfattning
 rättsvetenskap
 rättsväsen
-rättsväsende
 rättvis
 rättvisa
 rättvisefråga
@@ -26913,6 +26926,7 @@ rödpeppar
 rödräv
 rödsot
 rödsprit
+rödvin
 röj
 röja
 röja av
@@ -30206,6 +30220,7 @@ spetshund
 spetsig
 spetsig vinkel
 spetsvinklig
+spetälsk
 spex
 spexa
 spexig
@@ -31535,7 +31550,6 @@ sumpgas
 sumpig
 sumpmark
 sund
-sundhet
 sunkig
 sup
 supa
@@ -31545,6 +31559,7 @@ super-G
 supera
 superb
 superhjälte
+superkraft
 supermakt
 supermarket
 supersonisk
@@ -36813,6 +36828,7 @@ vittnespsykologi
 vittra
 vittring
 vittvätt
+vitvin
 vivisektion
 vivör
 vobba

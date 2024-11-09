@@ -287,7 +287,8 @@
 		$del = "";
 		foreach($arr as $el) {			
 			if (str_contains($el, "hvtag")) {	
-				$out .= $del . "<l>" . strip_tags($el) . "</l>";
+				$tmp = strip_tags($el);
+				$out .= $del . "<l>" . $tmp . "</l>";
 			} else if (str_contains($el, "hvord")) {
 				$out .= $del . strip_tags($el);
 			}
@@ -389,10 +390,14 @@
 		$out = str_replace("det att <br>", "det att ",$out);
 		if (str_contains($out, "det att")) $out = preg_replace("/\x{00a0}/u"," ",$out);
 		if (str_contains($out, "fast sammansättn.")) $out = preg_replace("/\x{00a0}/u"," ",$out);
-		if (!str_contains($out,"lös förbindelse"))	$out = preg_replace("/\x{00a0}/u","",$out);
+		if (str_contains(!$out,"lös förbindelse"))	$out = preg_replace("/\x{00a0}/u","",$out);
 		
 		// Removal of unwanted numerical references in cross-references.
 		$out = preg_replace("/,[1-9]$/","",$out);
+		$out = preg_replace("/ [1-9]/"," ",$out);
+
+		$out = preg_replace("/,  /",", ",$out);
+		$out = preg_replace("/ ,/",",",$out);
 		
 		$out = preg_replace("/[1-9],[1-9],[1-9]/","",$out);
 		$out = preg_replace("/[1-9],[1-9]/","",$out);
@@ -590,18 +595,28 @@
 		} else if (str_contains($line, 'class="hv"') || str_contains($line, 'class="hvtyp"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="hvtag"')) {
-			$mid = strpos($line,"</a>");
-			$res = "<l>" . strip_tags(substr($line,0,$mid)) . "</l>";
-			$res = str_replace(" , ", "</l>, <l>",$res);			
-			if ($particle) {
-				$res .= ") __";
+			$lineArr = explode(",",$line);
+			$regex ='/\s\d/u';
+			foreach($lineArr as $line) {
+				//echo $line . "<br>";
+				$mid = strpos($line,"</a>");
+				$tmp = strip_tags(substr($line,0,$mid));
+				$tmp = preg_replace($regex,"",$tmp);
+				if (strlen($res) === 0) {
+					$res .= "<l>" . $tmp . "</l>";
+				} else {
+					$res .= ", <l>" . $tmp . "</l>";
+				}
+				if ($particle) {
+					$res .= ") __";
+				}
 			}
-			$res .= " " . strip_tags(substr($line,$mid));			
 		} else if (str_contains($line, 'class="deft"')) {
 			$res = "__ {" . strip_tags($line) . "}";
 		}
 		
 		$res = str_replace("!!","",$res); // hack, not sure what the '!!' represents, so remove it for now.
+		$LAST_LINE = $line;
 		return $res;
 	}
 	
@@ -609,7 +624,8 @@
 		$start = strpos($line,"<a");
 		$end = strpos($line, "</a>");
 		if (($start === 0 || $start) && $end) {			
-			return strip_tags(substr($line,$start,$end-$start));
+			$tmp = strip_tags(substr($line,$start,$end-$start));
+			return $tmp;
 		} else {
 			return "";
 		}

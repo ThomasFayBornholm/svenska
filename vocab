@@ -903,6 +903,7 @@ function makeLinks(def) {
 }
 
 function linkSingleWord(def) {	
+
 	if (DEBUG) log("linkSingleWord(def), def = " + def);
 	defArr = def.split("<br>");
 	outDef = "";
