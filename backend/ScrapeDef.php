@@ -597,15 +597,14 @@
 		} else if (str_contains($line, 'class="hvtag"')) {
 			$lineArr = explode(",",$line);
 			$regex ='/\s\d/u';
+			$delim = "";
 			foreach($lineArr as $line) {
-				//echo $line . "<br>";
 				$mid = strpos($line,"</a>");
-				$tmp = strip_tags(substr($line,0,$mid));
-				$tmp = preg_replace($regex,"",$tmp);
-				if (strlen($res) === 0) {
-					$res .= "<l>" . $tmp . "</l>";
-				} else {
-					$res .= ", <l>" . $tmp . "</l>";
+				if (!$mid) $mid = strlen($line)-4;
+				$tmp = getLinkWord($line) . substr($line,$mid+4);
+				if (strlen($tmp) > 0) {
+					$res .= $delim . $tmp;
+					$delim = ", ";
 				}
 				if ($particle) {
 					$res .= ") __";
@@ -710,5 +709,21 @@
 	function breaker($txt) {
 		echo $txt;
 		exit();
+	}
+
+	function getLinkWord($raw) {
+		$res = $raw;
+		if (preg_match('/>[a-zöäåA-ZÖÄÅ]+/',$raw,$match)) {
+			$res = substr($match[0],1);
+		}
+		if (!preg_match('/^[a-zöäå]+$/i',$res)) {
+			$res = "";
+		}
+		if ($res != "") {
+			$res = "<l>" . $res . "</l> ";
+		} else {
+			$res = "";
+		}
+		return $res;
 	}
 ?>
