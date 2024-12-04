@@ -38,6 +38,7 @@
 	// use "snr" id to go to the relevent lemma information
 	if (strlen($snr) > 0) {
 		$start = strpos($def,$snr);
+		$def = substr($def,$start);
 		if (!$start) {
 			echo "Could not find lemma information";
 			return;
@@ -49,7 +50,6 @@
 		if (!$end) $end = strlen($def);
 		if ($start != -1) $def = substr($def,$start,$end-$start);	
 	}
-	
 	if (!$def) {
 		error("Failed to get lemma for id: " . $id);
 		return;
@@ -509,6 +509,8 @@
 			$ret = "○ ";
 		} else if (str_contains($line,'class="utv"')) {
 			$ret = "{" . strip_tags($line) . "}";
+		} else if (str_contains($line,'class="hkom"')) {
+			$ret = "{" . strip_tags($line) . "}";
 		} else if (str_contains($line,'class="def"')) {
 			if (str_contains($line,'class="hvtag')) {
 				$link = splitOutLink($line);				
@@ -523,7 +525,9 @@
 		} else if (str_contains($line, 'class="valens"')) {
 			$ret = "KONSTRUKTION:\n";		
 		} else if (str_contains($line,'class="idiom"')) {
-			$ret = "- <lf>" . strip_tags($line) . "</lf>";				
+			$tmp = strip_tags($line);
+			$tmp = preg_replace('/\x{00ad}/u', '', $tmp);
+			$ret = "- <lf>" . $tmp . "</lf>";				
 		} else if (str_contains($line,'class="fb"')) {
 			$ret = "HISTORIK: " . strip_tags($line);
 		} else if (str_contains($line,'class="et"')) {
@@ -713,10 +717,16 @@
 
 	function getLinkWord($raw) {
 		$res = $raw;
-		if (preg_match('/>[a-zöäåA-ZÖÄÅ]+/',$raw,$match)) {
-			$res = substr($match[0],1);
+		if (preg_match('/>[a-zöäåA-ZÖÄÅ ]+/',$raw,$match)) {
+			$delim = "";
+			$res = "";
+			foreach($match as $m) {
+				$delim = " ";
+				$res .= $m;
+			}
+			$res = substr($res,1);
 		}
-		if (!preg_match('/^[a-zöäå]+$/i',$res)) {
+		if (!preg_match('/^[a-zöäå ]+$/i',$res)) {
 			$res = "";
 		}
 		if ($res != "") {

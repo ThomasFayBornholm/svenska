@@ -287,6 +287,12 @@ function addDef(key, meta, def, more, fast = false) {
 		putMoreMany(moreArr, 0);
 	}
 	//fetch('backend/addDef.php?word=' + CUR_WORD + '&meta=' + meta + '&def=' + def.replaceAll("%20"," ") + '&more=' + more + '&class=' + CLASS, {
+	const MAX_URL = 2000;
+	var tmpMore = more;
+	if (def.length + more.length > MAX_URL) {
+		console.log(more);
+		more = "";
+	}
 	let url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS; 
 	fetch(url, {
 		method: 'get',
@@ -307,6 +313,25 @@ function addDef(key, meta, def, more, fast = false) {
 	.catch(error => {
 		log(error);
 	})
+	if (more.length === 0) {
+		url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=&def=&more=' + tmpMore + '&class=' + CLASS; 
+		fetch(url, {
+			method: 'get',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(json => {
+			// pass
+		})
+		.catch(error => {
+			console.log(error);
+		})
+	}
 }
 
 
