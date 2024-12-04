@@ -4,6 +4,7 @@
 (bara) i förbigående
 (både) framlänges och baklänges
 (både) länge och väl
+(dela) femtio–femtio
 (den) vita mössan
 (det får) bära eller brista
 (det är bara) toppen av ett isberg/isberget
@@ -107,6 +108,7 @@
 ***naturlig dotter (till någon)
 -aktig
 -gradig
+-haltig
 -mässig
 -riktig
 -talig
@@ -379,6 +381,7 @@ affix
 affär
 affärsbiträde
 affärsbrev
+affärsklass
 affärsman
 affärsmässig
 affärspartner
@@ -495,6 +498,7 @@ akutintag
 akutmottagning
 akvarell
 akvarium
+akvavit
 akvedukt
 alagreck
 alant
@@ -2406,6 +2410,7 @@ bakvänd
 bakväxel
 bakända
 bakåt
+bakåtböjd
 bal
 bal-2
 bala
@@ -4353,6 +4358,7 @@ bourgeoisie
 boutique
 bov
 boven i dramat
+bovstreck
 bowling
 bowlinghall
 bowlingklot
@@ -4695,6 +4701,7 @@ bråkstake
 bråkstreck
 bråktal
 brånad
+brås
 bråte
 bråte-2
 bråttom
@@ -4728,6 +4735,7 @@ brösta
 brösta av
 brösta sig
 bröstbild
+bröstgänges
 brösthåla
 bröstkaramell
 bröstkorg
@@ -5700,6 +5708,7 @@ deltidsgrupp
 delvis
 delägare
 demagog
+demagogi
 demaskera
 demens
 demenssjuk
@@ -7096,6 +7105,7 @@ ekonometri
 ekonomi
 ekonomibiträde
 ekonomibyggnad
+ekonomiklass
 ekonomisera
 ekonomisk
 ekorre
@@ -7211,6 +7221,7 @@ elevråd
 elevunderlag
 elfenben
 elgitarr
+elidera
 eliminera
 elit
 elitidrott
@@ -7437,6 +7448,7 @@ enkelsäng
 enkrona
 enkät
 enkönad
+enligt
 enligt uppdrag
 enmansshow
 enmansteater
@@ -7866,6 +7878,7 @@ fakturera
 fakultativ
 fakultet
 falang
+falaska
 fall
 falla
 falla (någon) ur minnet
@@ -9029,6 +9042,7 @@ fredagsmys
 fredlig
 fredlös
 fredsam
+fredsfot
 fredsfördrag
 fredsmäklare
 fredsplikt
@@ -11323,6 +11337,7 @@ gensaga
 genskjuta
 gensträvig
 gensvar
+gentemot
 gentil
 gentjänst
 gentrifiera
@@ -12879,6 +12894,8 @@ harang
 hardjur
 hardtop
 hare
+harhjärtad
+harig
 harkla sig
 harkrank
 harm
@@ -12986,7 +13003,6 @@ hegemoni
 hej
 heja
 heja på
-hejaramsa
 hejare
 hejarklack
 hejd
@@ -13587,6 +13603,7 @@ huvudvittne
 huvudvärk
 huvudvärkstablett
 hy
+hyacint
 hybrid
 hybridbil
 hybris
@@ -13652,6 +13669,7 @@ hytta
 hyvel
 hyveljärn
 hyvelspån
+hyvens
 hyvla
 häck
 häcka
@@ -14500,6 +14518,7 @@ idyll
 idylliker
 idyllisera
 idyllisk
+idé
 idérik
 idévärld
 ifall
@@ -16360,6 +16379,7 @@ katapultstol
 katastrof
 katastrofal
 katastrofområde
+kateder
 katederundervisning
 katedral
 kategori
@@ -24231,6 +24251,7 @@ patent
 pater
 patetik
 patetisk
+patiens
 patient
 patientnämnd
 patina
@@ -24502,6 +24523,7 @@ pigroman
 pik
 pika
 pikant
+pikera
 pikhacka
 pikstav
 piktografisk skrift
@@ -25260,6 +25282,7 @@ proton
 protoplasma
 prototyp
 protozo
+protuberans
 prov
 prov-2
 prova
@@ -25454,6 +25477,7 @@ pälsverk
 pälsänger
 pärla
 pärlemor
+pärlhyacint
 pärlsocker
 pärlspont
 pärm
@@ -25699,6 +25723,7 @@ raggarbil
 raggarbrud
 raggare
 raggig
+raggmunk
 raggsocka
 raglan
 raglanärm
@@ -26406,6 +26431,7 @@ ringa på
 ringa ut
 ringa-2
 ringakta
+ringare
 ringbarka
 ringblomma
 ringbrynja
@@ -26538,6 +26564,7 @@ rosling
 rosmarin
 rospigg
 rossla
+rosslig
 rossling
 rost
 rosta
@@ -26643,6 +26670,7 @@ runda
 runda av
 runda ord
 rundad vokal
+rundel
 rundfråga
 rundhyllt
 rundkyrka
@@ -26959,6 +26987,7 @@ rånmord
 råolja
 råplugg
 råplugga
+råraka
 råsegel
 råsiden
 råsilke
@@ -27066,6 +27095,7 @@ rösta
 rösta blankt
 rösta med fötterna
 röstfiske
+rösti
 röstkort
 röstläge
 röstlängd
@@ -27576,6 +27606,7 @@ schweizisk
 schweiziska
 schysst
 schäs
+schäslong
 scoop
 scoutlöfte
 scrolla
@@ -28128,6 +28159,7 @@ sjal
 sjalett
 sjapp
 sjaskig
+sjok
 sjua
 sjubb
 sjubbpäls
@@ -28324,6 +28356,7 @@ sjömil
 sjömärke
 sjön suger
 sjönöd
+sjöofficer
 sjöorm
 sjöpung
 sjörövare
@@ -28335,6 +28368,7 @@ sjöslag
 sjöstjärna
 sjösätta
 sjötunga
+sjövärdig
 ska
 skabb
 skada
@@ -28912,6 +28946,7 @@ skura
 skurhink
 skurk
 skurkaktig
+skurkstreck
 skurpulver
 skurtrasa
 skuta
@@ -29152,6 +29187,7 @@ slak
 slaka
 slakna
 slakta
+slakta den gödda kalven (för någon)
 slaktare
 slaktdjur
 slakteri
@@ -30031,6 +30067,7 @@ som att tala till en vägg
 som en (annan) idiot
 som en blixt från en klar himmel
 som en flock vargar
+som en kalv på grönbete
 som en oljad blixt
 som en påse nötter
 som en åsna mellan två hötappar
@@ -30089,6 +30126,7 @@ sondotter
 sonhustru
 sonika
 sonor
+sonoritet
 sonson
 sopa
 sopa banan med någon
@@ -30642,6 +30680,7 @@ stafettpinne
 staffage
 staffli
 stag
+staga
 stagflation
 stagnation
 stagnera
@@ -31198,6 +31237,7 @@ sträva
 strävan
 strävande
 strävbåge
+strävpelare
 strävsam
 stråhatt
 stråk
@@ -31895,7 +31935,6 @@ svårfattlig
 svårflörtad
 svårhanterlig
 svårighet
-svårlöslig
 svårmod
 svårslagen
 svårtillgänglig
@@ -32266,6 +32305,8 @@ sångare
 sångbar
 sångerska
 sångfågel
+sånglärka
+sångröst
 sångspel
 sångsvan
 såning
@@ -34093,6 +34134,7 @@ tsunami
 tt
 tub
 tuba
+tuberkel
 tuberkulos
 tubkikare
 tudela
@@ -34198,6 +34240,7 @@ turistbyrå
 turistfälla
 turistig
 turistinformation
+turistklass
 turk
 turkfolk
 turkisk
@@ -35882,6 +35925,7 @@ vagn
 vagnborg
 vagnhall
 vagnsätt
+vaj
 vaja
 vajer
 vak
@@ -36318,6 +36362,7 @@ vattendroppe
 vattenfall
 vattenflygplan
 vattenfylla
+vattenhyacint
 vattenkanna
 vattenkaskad
 vattenklosett
@@ -37477,6 +37522,7 @@ vågplan
 vågrät
 vågrätt
 vågrörelse
+vågskål
 vågspel
 vågstycke
 våld
@@ -37640,6 +37686,7 @@ yrvaken
 yrväder
 ysta
 ysta sig
+yster
 yta
 ytbehandla
 ytlig
@@ -38594,6 +38641,7 @@ zygot
 önskning
 önskvärd
 öppen
+öppen spis
 öppen stad
 öppen stavelse
 öppen vind

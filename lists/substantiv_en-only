@@ -120,6 +120,7 @@ affirmation
 affisch
 affischpelare
 affär
+affärsklass
 affärsman
 affärspartner
 affärsresa
@@ -184,6 +185,7 @@ aktris
 aktör
 akutmottagning
 akvarell
+akvavit
 akvedukt
 alagreck
 alant
@@ -2804,6 +2806,7 @@ deltid
 deltidsgrupp
 delägare
 demagog
+demagogi
 demens
 dementi
 demission
@@ -3368,6 +3371,7 @@ ekonom
 ekonometri
 ekonomi
 ekonomibyggnad
+ekonomiklass
 ekorre
 ekotoxikologi
 ekoturism
@@ -3688,6 +3692,7 @@ faktur
 faktura
 fakultet
 falang
+falaska
 fallbeskrivning
 fallenhet
 fallgrop
@@ -4263,6 +4268,7 @@ frasering
 fred
 fredag
 fredagsmys
+fredsfot
 fredsmäklare
 fredsplikt
 fregatt
@@ -5817,7 +5823,6 @@ hednamission
 hedning
 hedonist
 hegemoni
-hejaramsa
 hejare
 hejarklack
 hejd
@@ -6098,6 +6103,7 @@ huvudstad
 huvudvärk
 huvudvärkstablett
 hy
+hyacint
 hybrid
 hybridbil
 hybris
@@ -6449,6 +6455,7 @@ idrottsrörelse
 idrottsstjärna
 idyll
 idylliker
+idé
 idévärld
 ifyllnad
 igel
@@ -7295,6 +7302,7 @@ katamaran
 katapult
 katapultstol
 katastrof
+kateder
 katederundervisning
 katedral
 kategori
@@ -10876,6 +10884,7 @@ pastorsadjunkt
 patellarreflex
 pater
 patetik
+patiens
 patient
 patientnämnd
 patina
@@ -11457,6 +11466,7 @@ proton
 protoplasma
 prototyp
 protozo
+protuberans
 provare
 provdocka
 proveniens
@@ -11558,6 +11568,7 @@ pälssäl
 pälsänger
 pärla
 pärlemor
+pärlhyacint
 pärlspont
 pärm
 pärs
@@ -11631,6 +11642,7 @@ ragg
 raggarbil
 raggarbrud
 raggare
+raggmunk
 raggsocka
 raglan
 raglanärm
@@ -11967,6 +11979,7 @@ rimfrost
 rimkrönika
 rimlighet
 ring
+ringare
 ringblomma
 ringbrynja
 ringdans
@@ -12081,6 +12094,7 @@ rumsväxt
 runa
 runalfabet
 runda
+rundel
 rundfråga
 rundkyrka
 rundmask
@@ -12219,6 +12233,7 @@ råka
 rånare
 rånarluva
 råolja
+råraka
 råsop
 råstyrka
 råtta
@@ -12269,6 +12284,7 @@ rörmontör
 rörpost
 rörtång
 röst
+rösti
 röstlängd
 röstning
 rösträtt
@@ -12528,6 +12544,7 @@ schweizerfranc
 schweizerost
 schweiziska
 schäs
+schäslong
 sed
 sedel
 sedelpress
@@ -12889,6 +12906,7 @@ sjöman
 sjömanspräst
 sjömil
 sjönöd
+sjöofficer
 sjöorm
 sjöpung
 sjörövare
@@ -13617,6 +13635,7 @@ sond
 sondmatning
 sondotter
 sonhustru
+sonoritet
 sonson
 sopa
 sopbil
@@ -14148,6 +14167,7 @@ stränginstrument
 sträva
 strävan
 strävbåge
+strävpelare
 stråhatt
 stråk
 stråkinstrument
@@ -14538,6 +14558,8 @@ sång
 sångare
 sångerska
 sångfågel
+sånglärka
+sångröst
 sångsvan
 såning
 såpbubbla
@@ -15361,6 +15383,7 @@ trötthet
 tsunami
 tub
 tuba
+tuberkel
 tuberkulos
 tubkikare
 tudelning
@@ -15420,6 +15443,7 @@ turist
 turistbyrå
 turistfälla
 turistinformation
+turistklass
 turk
 turkfolk
 turkiska
@@ -16088,6 +16112,7 @@ vagina
 vagn
 vagnborg
 vagnhall
+vaj
 vaja
 vajer
 vak
@@ -16220,6 +16245,7 @@ vassbuk
 vattenbruk
 vattendroppe
 vattenflygplan
+vattenhyacint
 vattenkanna
 vattenkaskad
 vattenklosett
@@ -16729,6 +16755,7 @@ våglängd
 vågmästare
 vågmästarposition
 vågrörelse
+vågskål
 våldsamhet
 våldshandling
 våldsmentalitet
