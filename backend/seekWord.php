@@ -3,7 +3,7 @@
 	$class = $_GET['class'];
 	$tmpWord = $_GET['word'];
 	$word = "";
-	$regex = "/[a-zäöå\/() –-é]/i";
+	$regex = "/[a-zäöå\/() .–-é!?]/i";
 	for ($i = 0; $i < strlen($tmpWord); $i++) {
 		if (preg_match($regex,$tmpWord[$i])) {
 			$word .= $tmpWord[$i];

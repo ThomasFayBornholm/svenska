@@ -2,7 +2,7 @@
 	// Match based either on regex or if all words in received key are also in listing key.
     $tmpKey = $_GET["key"];
     $key = "";
-    $regex = "/[a-zöäå ]/i";
+    $regex = "/[a-zöäå!?.() ]/i";
     for ($i = 0; $i < strlen($tmpKey); $i++) {
         if (preg_match($regex,$tmpKey[$i])) {
             $key .= $tmpKey[$i];
