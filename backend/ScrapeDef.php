@@ -23,6 +23,8 @@
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");				
 	$def = curl_exec($ch);		
+	// Simple spaces only
+	$def = preg_replace('/\x{00a0}/u'," ", $def);
 	if ($debug) {			
 		echo $def;
 		return;
@@ -573,13 +575,13 @@
 		return $ret;
 	}
 	
-	function processDefLine($line,$particle) {		
+	function processDefLine($line,$particle) {	
 		$res = "";		
 		if (str_contains($line, 'class="kbetydelse"')) {
 			$res = strip_tags($line) . " __";
 		} else if (str_contains($line, 'class="def"')) {
 			if (str_contains($line, 'class="hvtag"')) {					
-					$res = "<l>" . strip_tags($line) . "</l>";
+					$res = getLinkWord($line) . getLinkRest($line);
 				} else {
 					$res = strip_tags($line);
 				}	
@@ -605,7 +607,8 @@
 			foreach($lineArr as $line) {
 				$mid = strpos($line,"</a>");
 				if (!$mid) $mid = strlen($line)-4;
-				$tmp = getLinkWord($line) . substr($line,$mid+4);
+				//$tmp = getLinkWord($line) . substr($line,$mid+4);
+				$tmp = getLinkWord($line);
 				if (strlen($tmp) > 0) {
 					$res .= $delim . $tmp;
 					$delim = ", ";
@@ -619,6 +622,7 @@
 		}
 		
 		$res = str_replace("!!","",$res); // hack, not sure what the '!!' represents, so remove it for now.
+		$res = str_replace(" )", ")",$res);
 		$LAST_LINE = $line;
 		return $res;
 	}
@@ -717,23 +721,34 @@
 
 	function getLinkWord($raw) {
 		$res = $raw;
-		if (preg_match('/>[a-zöäåA-ZÖÄÅ ]+/',$raw,$match)) {
+		if (preg_match('/>[a-zöäå ]+.*<\/a>/i',$raw,$match)) {
 			$delim = "";
 			$res = "";
 			foreach($match as $m) {
 				$delim = " ";
 				$res .= $m;
 			}
-			$res = substr($res,1);
+			$res = substr($res,1,strlen($res)-5);
 		}
-		if (!preg_match('/^[a-zöäå ]+$/i',$res)) {
+		$res = preg_replace('/[\s|\x{00a0}]*[1-9][\s|\x{00a0}]*/u','',$res);
+		if (!preg_match('/^[a-zöäå \x{00a0}]+$/ui',$res)) {
 			$res = "";
 		}
 		if ($res != "") {
-			$res = "<l>" . $res . "</l> ";
+			$res = "<l>" . $res . "</l>";
 		} else {
 			$res = "";
 		}
 		return $res;
+	}
+
+	function getLinkRest($raw) {
+		$res = $raw;
+		if (preg_match('/<\/a>.*/',$raw,$match)) {
+			$tmp = substr($match[0],4);
+			$tmp = str_replace("</span>","",$tmp);
+			$res = " " . $tmp;
+		}
+		return $res;	
 	}
 ?>
