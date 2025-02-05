@@ -721,7 +721,7 @@
 
 	function getLinkWord($raw) {
 		$res = $raw;
-		if (preg_match('/>[a-zöäå ]+.*<\/a>/i',$raw,$match)) {
+		if (preg_match('/>[a-zöäåé ]+.*<\/a>/i',$raw,$match)) {
 			$delim = "";
 			$res = "";
 			foreach($match as $m) {
@@ -731,7 +731,7 @@
 			$res = substr($res,1,strlen($res)-5);
 		}
 		$res = preg_replace('/[\s|\x{00a0}]*[1-9][\s|\x{00a0}]*/u','',$res);
-		if (!preg_match('/^[a-zöäå \x{00a0}]+$/ui',$res)) {
+		if (!preg_match('/^[a-zöäåé \x{00a0}]+$/ui',$res)) {
 			$res = "";
 		}
 		if ($res != "") {
