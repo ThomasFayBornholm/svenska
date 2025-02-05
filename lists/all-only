@@ -1467,6 +1467,7 @@ arktisk
 arla
 arm
 armada
+armatur
 armband
 armbandsur
 armbindel
@@ -2395,6 +2396,7 @@ bakslug
 baksmälla
 bakspår
 bakstreck
+baksträvare
 bakstycke
 bakstöt
 baksäte
@@ -2411,6 +2413,7 @@ bakväxel
 bakända
 bakåt
 bakåtböjd
+bakåtsträvare
 bal
 bal-2
 bala
@@ -2471,6 +2474,7 @@ bandgenerator
 bandhund
 bandit
 bandspagetti
+bandspelare
 bandtraktor
 bandtång
 bandvagn
@@ -2508,6 +2512,7 @@ barbari
 barbarisk
 barberare
 bard
+bardisk
 bardun
 bardval
 bark
@@ -2567,6 +2572,7 @@ barock
 barometer
 barometerstånd
 baron
+barr
 barra
 barrikad
 barrikadera
@@ -2575,6 +2581,7 @@ barrskog
 barrträd
 barservering
 barstol
+bartender
 baryton
 bas
 bas-2
@@ -3267,6 +3274,7 @@ bestämma sig
 bestämmanderätt
 bestämmelse
 bestämmelseort
+bestämning
 beständig
 beständighet
 bestänka
@@ -4935,7 +4943,9 @@ byäldste
 bä
 bäck
 bäcken
+bäckforell
 bäckravin
+bäcköring
 bädd
 bädda
 bädda in
@@ -4948,8 +4958,10 @@ bägge
 bälg
 bälga i sig
 bälta
+bälta sig
 bälte
 bälteskudde
+bälteslägga
 bäng
 bänk
 bänka sig
@@ -5555,6 +5567,7 @@ databas
 databehandla
 databehandling
 dataintrång
+datalingvistik
 datamaskin
 datanät
 dataregister
@@ -5738,6 +5751,7 @@ demonstratör
 demonstrera
 demontera
 demoralisera
+den
 den (kungliga) svenska avundsjukan
 den breda vägen
 den dagen den sorgen
@@ -6058,6 +6072,7 @@ dimension
 dimensionera
 dimensionering
 dimhöljd
+diminutiv
 dimma
 dimmig
 dimorf
@@ -6320,6 +6335,7 @@ doning
 donjuan
 dop
 dopa
+dopamin
 dopattest
 dopbevis
 dopnamn
@@ -8064,6 +8080,7 @@ fattig som en kyrkråtta/lus/skåpråtta
 fattiga riddare
 fattigdom
 fattigdomsbevis
+fattighjon
 fattigvård
 fattning
 fatwa
@@ -8814,6 +8831,7 @@ formbröd
 formel
 formell
 formellt subjekt
+formelspråk
 formera
 formge
 formlig
@@ -9513,6 +9531,7 @@ fältarbetare
 fältarbete
 fältassistent
 fältbiolog
+fältbiologi
 fältflaska
 fältflygare
 fälthare
@@ -9724,6 +9743,7 @@ födelsenummer
 födelsetal
 födoämne
 födsel
+födslorätt
 föga
 fögderi
 föl
@@ -9791,6 +9811,7 @@ för sveda och värk
 för säkerhets skull
 för så vitt
 för vardagsbruk
+för ögonblicket
 för övrigt
 föra
 föra avog sköld mot någon/något
@@ -11613,6 +11634,7 @@ gnissla
 gnissla tänder
 gnista
 gnistra
+gnistskydd
 gno
 gnoding
 gnola
@@ -12001,7 +12023,6 @@ grädde på moset
 gräddfil
 gräddost
 gräddsnipa
-gräddsnäcka
 gräddtårta
 gräl
 gräla
@@ -12009,6 +12030,7 @@ gräll
 grälsjuk
 gräma
 gräma sig
+gränd
 gräns
 gränsa
 gränsbevakning
@@ -13182,6 +13204,7 @@ herresäte
 herrgård
 herrgårdsvagn
 herrsingel
+herrskap
 hertig
 hertigdöme
 hes
@@ -13277,6 +13300,7 @@ hitåt
 hiv
 hiva
 hivpositiv
+hjon
 hjord
 hjordinstinkt
 hjort
@@ -13362,6 +13386,7 @@ hommage
 homo
 homo sapiens
 homoadoption
+homofil
 homofon
 homogen
 homograf
@@ -14297,6 +14322,7 @@ höst
 hösta in
 höstack
 höstdagjämning
+höstig
 höstlig
 höstlov
 höstmånad
@@ -14423,6 +14449,7 @@ i sista instans
 i sista minuten
 i sista sekunden
 i sista stund
+i sista ögonblicket
 i sitt stilla sinne
 i själ och hjärta
 i själva verket
@@ -14683,7 +14710,6 @@ inbringa
 inbringande
 inbrott
 inbrottstjuv
-inbuktning
 inbunden
 inbyggd
 inbyte
@@ -15936,12 +15962,16 @@ jönsig
 k
 kabal
 kabaré
+kabaréorkester
+kabbala
+kabbalism
 kabel
 kabelbrunn
 kabelgatt
 kabeljo
 kabin
 kabinbana
+kabinbåt
 kabinettsfråga
 kabla
 kablage
@@ -16333,6 +16363,7 @@ kassera
 kassera in
 kassett
 kassettak
+kassettbandspelare
 kassettdäck
 kassettradio
 kassler
@@ -17073,6 +17104,7 @@ kolerisk
 kolesterol
 kolgruva
 kolhydrat
+kolhydratrik
 kolibri
 kolik
 kolja
@@ -17297,6 +17329,7 @@ kompromettera
 kompromiss
 kompromissa
 komvux
+kon
 kona
 koncentrat
 koncentration
@@ -17404,6 +17437,7 @@ konselj
 konsensus
 konsert
 konsertant
+konsertera
 konserthus
 konserv
 konservatism
@@ -17733,6 +17767,7 @@ korthet
 korthus
 kortis
 kortison
+kortkatalog
 kortkommando
 kortkonst
 kortlek
@@ -17754,6 +17789,7 @@ kortväxt
 kortvåg
 korund
 korv
+korv Stroganoff
 korvett
 korvgubbe
 korvkiosk
@@ -17930,6 +17966,8 @@ kris-2
 krisp
 krispaket
 kristall
+kristallin
+kristallinisk
 kristallisera
 kristallisera sig
 kristallkrona
@@ -18070,6 +18108,7 @@ krypa ihop
 krypa till kojs
 krypa till korset
 krypa/kräla i stoftet
+kryperi
 kryphål
 krypskytte
 krypta
@@ -18175,6 +18214,7 @@ kullerbytta
 kullersten
 kullig
 kullkasta
+kullra
 kullrig
 kulmage
 kulmen
@@ -19308,6 +19348,8 @@ lingon
 lingonbuske
 lingonpäron
 lingonris
+lingvist
+lingvistik
 linjal
 linje
 linjearbete
@@ -19823,6 +19865,7 @@ läger
 lägerbål
 lägereld
 lägerliv
+lägesbestämning
 lägga
 lägga (någon) något till last
 lägga alla ägg i samma korg
@@ -21583,6 +21626,7 @@ motbok
 motdrag
 motell
 motett
+motfråga
 motgift
 motgång
 mothugg
@@ -21932,6 +21976,7 @@ målkalas
 mållinje
 målmedveten
 målning
+målron
 målskillnad
 målskytt
 målstolpe
@@ -22036,6 +22081,7 @@ mördare
 mördarsnigel
 mörja
 mörk
+mörka
 mörkblond
 mörkblå
 mörker
@@ -22047,6 +22093,7 @@ mörkhyad
 mörklagd
 mörklägga
 mörkläggning
+mörkman
 mörkrets furste
 mörkrädd
 mörksens gärningar
@@ -22551,6 +22598,8 @@ normalisera
 normalitet
 normativ
 normera
+normerande
+normgivande
 norra
 norrbottning
 norrbottniska
@@ -22926,6 +22975,7 @@ nödga
 nödgas
 nödhamn
 nödhjälp
+nödig
 nödläge
 nödlögn
 nödlösning
@@ -23150,6 +23200,7 @@ ofreda
 ofri
 ofrihet
 ofrivillig
+ofruktbar
 ofruktsam
 ofrånkomlig
 ofta
@@ -23875,6 +23926,7 @@ otidig
 otidighet
 otidsenlig
 otillbörlig
+otillbörlighet
 otillfreds
 otillfredsställd
 otillfredsställelse
@@ -24264,6 +24316,7 @@ pastisch
 pastor
 pastoral
 pastorsadjunkt
+patch
 patcha
 patellarreflex
 patent
@@ -24888,6 +24941,7 @@ poncho
 pondus
 ponera
 ponny
+pontifikat
 ponton
 pool
 poolbiljard
@@ -25119,6 +25173,7 @@ pricka
 pricken över i
 prickfri
 prickig
+prickig korv
 prickning
 prickskytt
 prilla
@@ -25225,6 +25280,7 @@ prognostisera
 prognostisk
 program
 programenlig
+programfix
 programförklaring
 programkod
 programledare
@@ -25373,6 +25429,7 @@ psykiatri
 psykiatrisk
 psykisk
 psykofarmaka
+psykolingvistik
 psykolog
 psykologi
 psykologisk
@@ -26295,7 +26352,6 @@ reträtt
 reträttplats
 retsam
 retur
-returbiljett
 returglas
 returmatch
 returmöte
@@ -26531,6 +26587,7 @@ rodel
 roder
 roffa
 rofferi
+rofylld
 rogivande
 rojalist
 rolig
@@ -26714,6 +26771,7 @@ ruptur
 rus
 rusa
 rusig
+rusk
 ruska
 ruska av sig
 ruskig
@@ -27903,6 +27961,8 @@ servicehus
 serviceman
 servicenäring
 servis
+servitris
+servitör
 set
 setboll
 sevärdhet
@@ -27952,6 +28012,7 @@ show
 sia
 siameskatt
 sickel
+sicken
 sickla-2
 sicksack
 sicksacka
@@ -28897,7 +28958,6 @@ skräda
 skrädda
 skräddare
 skräddarsy
-skräddarsydd
 skrädderi
 skräll
 skrälla
@@ -29995,6 +30055,7 @@ socialtjänst
 socialtjänstlag
 socialvård
 sociolekt
+sociolingvistik
 sociologi
 socionom
 socka
@@ -30194,6 +30255,7 @@ sot-2
 sota
 sotare
 sotig
+sotsäng
 souvenir
 sova
 sova middag
@@ -30363,6 +30425,7 @@ spetshund
 spetsig
 spetsig vinkel
 spetsvinklig
+spett
 spetälsk
 spex
 spexa
@@ -30526,6 +30589,8 @@ sprucken röst
 sprucken stämma
 sprudla
 spruta
+sprutlackera
+sprutmåla
 spräcka
 spräcklig
 spränga
@@ -30562,8 +30627,10 @@ språklig
 språkljud
 språklära
 språkpolis
+språkpsykologi
 språkrör
 språksam
+språksociologi
 språkstrid
 språkteori
 språkvetenskap
@@ -32345,6 +32412,7 @@ sås
 såsom
 såt
 såta vänner
+såtillvida
 såvida
 såvitt
 söder
@@ -33099,6 +33167,7 @@ tiga
 tiga som muren
 tiger
 tigerhaj
+tigerhjärta
 tigerorm
 tigersprång
 tigerstrimmig
@@ -33410,6 +33479,7 @@ tjatig
 tjattra
 tjeckisk
 tjej
+tji
 tjock
 tjock-tv
 tjockis
@@ -34144,6 +34214,7 @@ tröskel
 tröskelvärde
 tröskverk
 tröst
+tröst för ett tigerhjärta
 trösta
 tröstare
 tröstköp
@@ -34312,6 +34383,7 @@ tvekamp
 tvekan
 tveklös
 tveksam
+tvenne
 tvetydig
 tvetydighet
 tvilling
@@ -34895,7 +34967,6 @@ uppbördstermin
 uppdaga
 uppdatera
 uppdela
-uppdelning
 uppdiktad
 uppdra
 uppdrag
@@ -36000,6 +36071,9 @@ vall
 valla
 valla in
 vallare
+vallfart
+vallfärd
+vallfärda
 vallgrav
 vallmo
 vallmofrö
@@ -36449,6 +36523,7 @@ veck
 vecka
 vecka ut och vecka in
 veckberg
+veckig
 veckla
 veckla in
 veckning
@@ -36653,6 +36728,7 @@ vidrig
 vidröra
 vidsittande
 vidskepelse
+vidskeplig
 vidsträckt
 vidstående
 vidsyn
@@ -36667,6 +36743,7 @@ viga
 vigd jord
 vigg
 vigga
+vigilia
 vigsel
 vigselformulär
 vigör
@@ -36740,6 +36817,7 @@ villrådig
 viloläge
 viloläger
 vilopaus
+vilsam
 vilse
 vilsekommen
 vilseleda
