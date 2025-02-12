@@ -3506,6 +3506,7 @@ function fetchDef() {
 					const regex = /-(\[)+[2-9](\])+/;
 					let key = json["key"].replace(regex, "");				
 					key = key.replaceAll("?","");				
+					if (key[0] === "-") key = key.substr(1);
 					addDef(key,json['meta'],json['def'],json['more']);		
 				} else {
 					$('#iMeta').html("Failed to find match");
@@ -3916,6 +3917,7 @@ function ScrapeByID(ev,id) {
 		return response.json();
 	})
 	.then(json => {
+		if (key[0] === "-") key = substr(key,1);
 		addDef(json["key"],json['meta'],json['def'],json['more']);		
 	})
 	.catch(error => {

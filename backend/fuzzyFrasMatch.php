@@ -24,6 +24,7 @@
 	$contents = file_get_contents("../lists/" . $name, 'UTF-8');
 	$words = preg_split("/\r\n|\r|\n/", $contents);
     foreach($words as $w) {
+        $w = str_replace("é","e",$w);
 		if (preg_match($regex,$w)) {
 			$out["match"] = $w;
             $out["status"] = "success";
@@ -39,6 +40,9 @@
 		$noPunc = str_replace("!","",$noPunc);
         $matchArr = explode(" ", $noPunc);
         foreach($allWords as $el) {
+            $el = str_replace("é","e",$el);
+            $el = str_replace("(","",$el);
+            $el = str_replace(")","",$el);
             if (in_array($el, $matchArr)) {
                 $tmpCnt++;
             }

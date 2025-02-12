@@ -28,5 +28,8 @@ except KeyError:
                 outfile.write(d + key + " -> " + str(val))              
                 d = "\n"
             print(len(jsonDict))
+    elif key == "show_keys":
+        for el in jsonDict.keys():
+            print(el)
     else:
         print("Key : " + key + " is not found in source")

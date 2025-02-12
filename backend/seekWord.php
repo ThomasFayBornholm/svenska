@@ -3,7 +3,7 @@
 	$class = $_GET['class'];
 	$tmpWord = $_GET['word'];
 	$word = "";
-	$regex = "/[a-zäöå\/() ,.\-é!?]/i";
+	$regex = "/[a-zäöå\/() ,.\-éè!?]/i";
 	for ($i = 0; $i < strlen($tmpWord); $i++) {
 		if (preg_match($regex,$tmpWord[$i])) {
 			$word .= $tmpWord[$i];
@@ -21,6 +21,10 @@
 	// First non-exact match is prioritised over later ones
 	// Exact match is always returned when present 
 	$match2 = -1;
+	$fuzzyWord = str_replace("é","e",$word);
+	$fuzzyWord = str_replace("è","e",$fuzzyWord);
+	$fuzzyWord = str_replace("à","a",$fuzzyWord);
+	
 	foreach($words as $w) {
 		// Why the special case for single character word?
 		if (strlen($word) === 1) {
@@ -30,13 +34,15 @@
 			}
 		} else {
 			$fuzzyE = str_replace("é","e",$w);
-			$fuzzyE = str_replace("é","e",$fuzzyE);
+			$fuzzyE = str_replace("è","e",$fuzzyE);
 			$fuzzyE = str_replace("à", "a",$fuzzyE);
+
+
 			// Prefer exact matches		
-			if ($w === $word || $fuzzyE === $word) {
+			if ($w === $word || $fuzzyE === $fuzzyWord) {
 				echo json_encode($ind);
 				return;
-			}			
+			}
 				/* No fuzzy matches now, prefer to match conjugations instead
 				// First non-exact match after current selection prioritised 
 				if ($ind > $INC) {
