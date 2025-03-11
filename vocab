@@ -290,7 +290,6 @@ function addDef(key, meta, def, more, fast = false) {
 	const MAX_URL = 2000;
 	var tmpMore = more;
 	if (def.length + more.length > MAX_URL) {
-		console.log(more);
 		more = "";
 	}
 	let url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + CLASS; 
