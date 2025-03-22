@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 set -e
+sudo apt install apache2 php php-curl
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 post=${script_dir#*svenska}
 root_path=${script_dir//$post/}
@@ -25,3 +26,5 @@ mkdir -p $install_path/sounds/adj
 mkdir -p $install_path/sounds/adv
 sudo chown -R www-data:www-data $install_path/sounds/*
 wget -O "$install_path/jquery-3.6.0.js" https://code.jquery.com/jquery-3.6.0.js
+
+sudo systemctl restart apache2
