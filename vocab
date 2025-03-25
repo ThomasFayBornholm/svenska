@@ -40,10 +40,12 @@
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
 	<form class="centred" onsubmit="newInputWrapper(event)">	
-		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
+		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)"
+		title="Go back">
 		<input id="iInput" placeholder="Sök ord/fras här" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
-		<img class="b2" src="img/Mute.png" id="iToggleSounds" onclick="toggleSounds()" onmouseover="highlight(this,event)"></img>
-		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" ondblclick="fromEnglishExternal()" oncontextmenu="fromSwedish(event)" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()">
+		<img class="b2" src="img/Mute.png" id="iToggleSounds" onclick="toggleSounds()" onmouseover="highlight(this,event)" title="Enable audio"></img>
+		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" ondblclick="fromEnglishExternal()" oncontextmenu="fromSwedish(event)" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()"
+		title="Translate from English to Swedish">
 		<div id="dialog" title="Basic dialog">
 			<p id="iSummary" class="summary"></p>
 		</div>
@@ -902,7 +904,7 @@ function displayDef(def,word) {
 	}
 	outDef = outDef.replaceAll(" </b>","</b>")
 	// Dynamise links
-	outDef = outDef.replaceAll("<l>","<span onclick=followLink(this.innerText) onmouseover=highlight(this,event)><b>");
+	outDef = outDef.replaceAll("<l>","<span onclick=followLink(this.innerText) onmouseover=highlight(this,event) title='Click to follow'><b>");
 	outDef = outDef.replaceAll("</l>","</b></span>");
 	let tmpSpan = "<span id='iMeta' oncontextmenu=editDefWrapper(event) onmouseover=editCursor(event,this)"
 
@@ -960,7 +962,7 @@ function addLinks(refClass,def) {
 	def = "";
 	m = refClass + " ";
 	delim = "";
-	beginSpan = "<span onclick=followLink(this.innerText)";
+	beginSpan = "<span onclick=followLink(this.innerText) title='Click to follow'";
 	beginSpan += " onmouseover=highlight(this,event)";
 	beginSpan += ">"
 	spanTmp = beginSpan + "<b>_w_</b></span>";
@@ -3688,8 +3690,10 @@ function toggleSounds() {
 	SOUNDS = !SOUNDS
 	if (SOUNDS) {
 		$('#iToggleSounds').attr("src", "img/Volume.jpg")
+		$('#iToggleSounds').attr("title", "Disable audio");
 	} else {
 		$('#iToggleSounds').attr("src", "img/Mute.png")
+		$('#iToggleSounds').attr("title", "Enable audio");
 	}
 }
 
