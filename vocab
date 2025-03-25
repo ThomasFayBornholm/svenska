@@ -5,8 +5,8 @@
 	<title>Ordbok</title>
 	<link rel="stylesheet" href="svenska.css">
 	<script src="jquery-3.6.0.js"></script>
-	<script src="jquery-ui.js"></script>
-	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="jquery-ui-1.14.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery-ui-1.14.1/jquery-ui.css">
 	<link rel="icon" type="image/x-icon" href="img/Flag_of_Sweden.png">
 	<script>
 	$( function() {
@@ -41,7 +41,7 @@
 	<p class="debug" id="iDebugTxt"></p>
 	<form class="centred" onsubmit="newInputWrapper(event)">	
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)">
-		<input id="iInput" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
+		<input id="iInput" placeholder="Sök ord/fras här" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
 		<img class="b2" src="img/Mute.png" id="iToggleSounds" onclick="toggleSounds()" onmouseover="highlight(this,event)"></img>
 		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" ondblclick="fromEnglishExternal()" oncontextmenu="fromSwedish(event)" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()">
 		<div id="dialog" title="Basic dialog">
@@ -167,6 +167,7 @@ function startup() {
 	setTimeout(setTargets,1000);
 	$('#iCntRegex').on("dblclick", resetFilter);
 }
+
 
 function clearSummary() {
     trace("clearSummary");
@@ -836,6 +837,7 @@ function lookupWord(el,onlyLocal,inline, showMore=false) {
 						getCompDef(meta,def);
 						return;
 					}
+					if (CLASS != "fraser") $('#iInput').attr("placeholder", "Press ENTER to see more");
 					pronounce(word);
 					displayMeta(meta);
 					displayDef(def,word);											
@@ -1359,8 +1361,11 @@ function newInputWrapper(e) {
 			getMore(CUR_DEF_ENUM);
 		} else {
 			$('#iMoreText').empty();
+			$('#iInput').attr("placeholder","Press ENTER to show more");
 		}
 		return;
+	} else {
+		$('#iInput').removeAttr('placeholder');
 	}
 	// Navigation only to a given word class.
 	if (word.indexOf("@") === 0) {
@@ -1456,6 +1461,7 @@ function seekWordSingleClass(word = CUR_WORD, last_enum = 1, showMore = false) {
 				}
 				getWords(INC, pos,showMore);		
 				getDefInd(last_enum);		
+				$('#iInput').attr("placeholder","Press ENTER to show more");
 			} else {
 				noMatchSingleClass(word);			
 			}
@@ -1489,6 +1495,7 @@ function seekWord(word, link = false, lastEnum = false) {
 	// Cleanup 
 	$('#iAux').empty();
 	$('#iMoreText').empty();
+	$('#iInput').attr("placeholder","Press ENTER to show more");
 	// Any user supplied breaks are discarded.
 	word = word.replaceAll("�","");	
 	REGEX_WORDS = [];
@@ -2970,7 +2977,7 @@ function getMore(ind) {
 	trace("getMore()");	
 	if (CLASS === "fraser") return;
 	if (!isNumeric(ind)) {
-		log("getMore(ind), ind is NaN");
+		console.log("getMore(ind), ind is NaN");
 		return;
 	}
 	
@@ -2990,7 +2997,7 @@ function getMore(ind) {
 	})
 	.then(json => {
 		if (json.length === 0) {
-			$('#iMoreText').html("");
+			$('#iMoreText').empty();
 		} else {												
 			// Add links
 			moreArr = json.split("<br>");
@@ -3023,15 +3030,13 @@ function getMore(ind) {
 			} else {			
 				$('body').css("overflow-y", "hidden");
 			}
-												
+			$('#iInput').attr("placeholder", "Press ENTER to show less");
 		}				
 	})
 	.catch(error => {
 		log(error);
 	})
 }
-
-
 
 function editMore(ev,key) {
 	if (DEBUG) log(ev,key)	
@@ -3146,29 +3151,6 @@ function navDef(ev) {
 	}	
 }
 
-function clearMore() {
-	let key = CUR_WORD.replaceAll(" ","-") + "_" + CUR_DEF_ENUM;
-	if (DEBUG) log("clearMore(key), key = " + key)
-	fetch('backend/clearMore.php?key=' + key + '&class=' + CLASS, {
-		method: 'get',
-		mode: 'cors',
-		heaaders: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		
-	})
-	.catch(error => {
-		log(error)
-	})
-	toggleMore(key,true);
-	$('#iDefDiv').css("display", "none");
-	$('#iDivMore').css("display", "none");
-}
 function hack(ev) {
 	if (DEBUG) log("hack()");
 	ev.preventDefault();
@@ -3248,7 +3230,7 @@ function randomWord() {
 		return response.json();
 	})
 	.then(json => {
-		setClass("all", json["word"]);		
+		setClass("fraser", json["word"]);		
 	})
 	.catch(error => {
 		log(error);
