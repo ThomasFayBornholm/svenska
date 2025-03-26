@@ -71,8 +71,6 @@
 		return;
 	}
 	
-	$wordClass = $tmpClass;			
-
 	if ($class === "slutled") $word = "-" . $word;
 	if ($class === "förled") $word = $word . "-";	
 	/* Find all the word roots, e.g. 'ge','giva'
