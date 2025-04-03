@@ -1,0 +1,11 @@
+[Unit]
+Description="Local web service for translation from English to Swedish
+After=network.target 
+
+[Service]
+ExecStart=/var/www/html/svenska/venv-libretranslate/bin/libretranslate --load-only en,sv
+Restart=on-failure
+WorkingDirectory=/var/www/html/svenska/venv-libretranslate/bin
+
+[Install]
+WantedBy=multi-user.target

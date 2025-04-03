@@ -111,7 +111,7 @@
 	
 	// Check existing idioms and mark any that are not already listed
 	$name = "fraser-only";	
-	$contents = file_get_contents($name, 'UTF-8');	
+	$contents = file_get_contents("../lists/" . $name, 'UTF-8');	
 	$elements= preg_split("/\r\n|\r|\n/", $contents);
 	
 	foreach($tmp as $el) {			
