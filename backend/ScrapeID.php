@@ -33,6 +33,8 @@
 	$urlBase = 'https://svenska.se/tri/f_so.php?sok=';		
 	$url = str_replace(" ", "%20", $urlBase . $word);	
 	$url = str_replace("ä", "%C3%A4", $url);		
+	$url = str_replace("ö", "%C3%B6", $url);		
+	$url = str_replace("å", "%C3%A5", $url);		
 	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
