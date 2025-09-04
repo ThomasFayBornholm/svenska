@@ -22,20 +22,8 @@
 </head>
 <body onload="startup()" onkeydown="bodyListener(event)">
 <div >
-<div class="titleLeft">
-<span class="counts" id="iCntTotal">xx xxx</span>
-</div>
-<div id="iDivTitle" class="titleCentre" ondblclick="hideTitle()">
-<h1 id="iTitle">Ordbok</h1>
-</div>
-<div class="titleRight">
-<span class="counts" id="iTotalScore">xx.xx%</span>
-</div>
-</div>
 <div id="iCountDiv" class="centred" style="visibility: hidden">
 	<span class="counts countLeft" id="iCnt">test</span>	
-	<span class="counts" id="iScore">{Score}</span>
-	<span class="counts" id="iCntRegex"></span>
 </div>
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
@@ -43,7 +31,6 @@
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)"
 		title="Go back">
 		<input id="iInput" placeholder="Sök ord/fras här" oncontextmenu="onlineLookup(this,event)" ondblclick="toggleRegexMode()" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
-		<img class="b2" src="img/Mute.png" id="iToggleSounds" onclick="toggleSounds()" onmouseover="highlight(this,event)" title="Enable audio"></img>
 		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" ondblclick="fromEnglishExternal()" oncontextmenu="fromSwedish(event)" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()"
 		title="Translate from English to Swedish">
 		<div id="dialog" title="Basic dialog">
@@ -62,15 +49,11 @@
 		 <button class="putDefThree" id="iPut2" onclick="putDef('', 2)">2</button>			 			 
 		 </div>		
 	</div>				
-	<p class="pDef" id="iMeta"</p>					
+	<p class="pDef" id="iMeta"></p>					
 	<p class="pDef" id="iParDef" ondblclick="clearDef()"></p>					
-	<p class="pMore" id="iMoreText"</p>					
+	<p class="pMore" id="iMoreText"></p>					
 	<div id="iNavDiv" onclick="scrollViewDown()" oncontextmenu="scrollViewUp(event)"></div>
 </div>	
-<div id="iWordBox" class="secondColumn" onwheel="scrollWords(event)" onclick="clearDef()">
-	<p id="iWords" class="fmtWords">Test<br>Words</p>
-	<p id="iAux" class="fmtAuxClass"></p>
-</div>
 </body>
 <script>
 $(window).focus(function() {
@@ -88,11 +71,6 @@ function focusInput() {
 		$('#iInput').focus();
 	}
 }
-
-let INC = 0;
-let N_INC= 8;
-let SCROLL_INC=0
-let N_FOUND=0;
 
 let N_TOT=0;
 let N_ADJ=0;
@@ -125,28 +103,17 @@ let N_DEF = 0;
 let CLASS = "all";
 var LAST_OBJ;
 let DEBUG=false;
-let SOUNDS=false;
 let LAST_DEF = "";
 let LAST_CLASS = "all";
 let CONTROLS_VISIBLE=true;
 var TABS = [];
-var REGEX_WORDS = [];
-var N_REGEX = 0;
 var CACHED_DEF_HTML = "";
-var SCORE_COLOURS = ["darkred", "steelblue", "darkgreen"];
-let REGEX_MODE = false;
 var CLASSES = ["en","verb","adj","ett","adv","fra","plu","prep","pro","int","för","slut","sub","kon","räk","inf","art"]
 var CLASS_LIST = ["substantiv_en","verb","adjektiv","substantiv_ett","adverb","fraser","plural","preposition","pronomen","interjektion","förled","slutled","subjunktion","konjunktion","r�kneord","infinitiv","artikel"]
 // Crude toggle on site load to show tool tips
 var TAB_DUMMY;
 var TAB_LOOKUP
 let ALL_DEFS = "";
-
-let TOTAL_SCORE = 0;
-let TARGET_DAILY = 0;
-let TARGET_MONDAY = 0;
-let RATE = 0;
-let SHOW_SUMMARY = true;
 
 document.addEventListener("visibilitychange", (event) => {
 	if (TABS.length > 0) {
@@ -157,14 +124,12 @@ document.addEventListener("visibilitychange", (event) => {
 });
 
 function startup() {
-	if (DEBUG) log("startup()")	
+	if (DEBUG) console.log("startup()")	
 	// loop all of word class	
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 	if (urlParams.get('debug') === "1") DEBUG = true;
-	randomWord();
 	wordCount();		
-	updateScore();
 	focusInput();
 	setTimeout(setTargets,1000);
 	$('#iCntRegex').on("dblclick", resetFilter);
@@ -172,12 +137,12 @@ function startup() {
 
 
 function clearSummary() {
-    trace("clearSummary");
+    if (DEBUG) console.log("clearSummary");
     $('#iSummary').text("");
 }
 
 function getInput() {
-	if (DEBUG) log("getInput()");
+	if (DEBUG) console.log("getInput()");
 	let word = $('#iInput').val();		
 	if (word === "~") word = CUR_WORD;
 	$('#iInput').val(word);
@@ -198,7 +163,7 @@ function setN_DEF(n_def) {
 }
 
 function setN_CUR() {
-	if (DEBUG) log("setN_CUR()")
+	if (DEBUG) console.log("setN_CUR()")
 	if (CLASS === "adjektiv") {
 		N_CUR = N_ADJ;
 	} else if (CLASS === "verb") {
@@ -245,11 +210,11 @@ function setN_CUR() {
 		$('#iCnt').text(N_CUR.toLocaleString('sv'));		
 	}	
 	
-	if (DEBUG) log("setN_CUR(); N_CUR = " + N_CUR);
+	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
 }
 
 function fmtDef(def) {
-	if (DEBUG) log("fmtDef()")
+	if (DEBUG) console.log("fmtDef()")
 	for (i = 0; i < 24; i++) {
 		let old = " " + i + " ";
 		let rep = "<br>" + i + " ";
@@ -259,7 +224,7 @@ function fmtDef(def) {
 }
 
 function putMoreMany(moreArr, cur) {
-	if (DEBUG) log("putMoreMany()");
+	if (DEBUG) console.log("putMoreMany()");
 	let moreLen = moreArr.length;
 	// Don't forget no spaces in storage keys, use "-" instead
 	fetch('backend/putMore.php?key=' + CUR_WORD.replaceAll(" ","-") + "_" + cur + '&more=' + moreArr[cur] + '&class=' + CLASS, {
@@ -279,7 +244,7 @@ function putMoreMany(moreArr, cur) {
 }
 
 function addDef(key, meta, def, more, fast = false) {
-	trace("addDef(meta,def,more)");
+	if (DEBUG) console.log("addDef(meta,def,more)");
 	$('#iMeta').html("adding... '<b>" + key + "</b>'");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -308,7 +273,6 @@ function addDef(key, meta, def, more, fast = false) {
 	})
 	.then(json => {
 		if (CLASS === "fraser") $('#iInput').val(key);
-		 if (!fast) updateScore();
 		CUR_DEF_ENUM = 1;
 		if (!fast) setTimeout(updateDef(),2000);
 	})
@@ -337,13 +301,15 @@ function addDef(key, meta, def, more, fast = false) {
 }
 
 
-function putDef(def, score) {
+function putDef(def) {
 	if (def.length === 0) {
 		def = $('#iDefText').val();
 	}
-	if (DEBUG) log("START putDef(def, score); def = '" + def + ",score �" + score + "; SCROLL_INC = " + SCROLL_INC);
+	if (DEBUG) console.log("FUNC putDef(def)")
+	if (DEBUG) console.log("  PARAM def = " + def);
+
 	if (CLASS === "fraser") {
-		putFrasDef(score);
+		putFrasDef();
 		return;
 	}
 	
@@ -354,7 +320,7 @@ function putDef(def, score) {
 	def = processed[0];	
 	meta = processed[1];
 	more = processed[2];
-	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta + "&score=" + score + "&more=" + more, {
+	fetch('backend/putDef.php?class=' + CLASS + '&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta + "&more=" + more, {
 		method: 'get',
 		mode:	'cors',
 		headers: {
@@ -366,30 +332,16 @@ function putDef(def, score) {
 		$('#iDefDiv').css("display", "none");
 		// Reset highlighting of missing definition
 		LAST_OBJ.innerHTML = LAST_OBJ.innerText;		
-		// Find last non-null tabindex
-		if (TABS.length > 0) {
-			let tmpInd = parseInt(SCROLL_INC) + parseInt(1);		
-			TABS[tmpInd].focus();
-			scrollDown()
-		}		
 		updateDef();
-		getWords();
-		updateScore();	
 		wordCount();
 		displaySelection();
-		// Race condition here between file write and def display	
-		/*
-		if (SCROLL_INC === (N_FOUND - 1)) {
-			lookupWord(LAST_OBJ,true,true);
-		}
-		*/
 		focusInput()
 	})
 	getDiff();
 }
 
-function putFrasDef(score) {
-	if (DEBUG) log("putFrasDef()")
+function putFrasDef() {
+	if (DEBUG) console.log("FUNC putFrasDef()")
 	let def = $('#iDefText').val();
 	if (def.indexOf("%%") == -1) {
 		return;
@@ -403,7 +355,7 @@ function putFrasDef(score) {
 	def = def.replace("2", "<br>2");
 	def = def.replace("3","<br>3");
 	
-	fetch('backend/putDef.php?class=fraser&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta + "&score=" + score, {
+	fetch('backend/putDef.php?class=fraser&word=' + CUR_WORD + '&def=' + def + '&meta=' + meta, {
 		method: 'get',
 		mode:	'cors',
 		headers: {
@@ -420,306 +372,11 @@ function putFrasDef(score) {
 	$('#iDefText').val("");
 	setTimeout(seekWordSingleClass,500);		
 	wordCount();
-	updateScore();
-}
-
-
-function updateScore() {
-	if (DEBUG) log("updateScore()")
-	// Hash to prevent cached value being used by browser
-	fetch('backend/getScore.php?id=0&class=' + encodeURI(CLASS) + '&hash=' + makeHash(), {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		let score = 0;
-		if (N_TOT > 0) {
-			score = Math.round(json["total"]/(N_CUR*2) * 1000)/10;
-		}
-		// Score for all classes is already available for "all" class
-		if (CLASS != "all") {			
-			$('#iScore').html("{" + score + "%");
-			$('#iScore').html($('#iScore').html() + " <span class='redWord' onclick=seekWord('redwords') oncontextmenu='nextWord(this,event)'>" + json["redCount"] + "</span>")
-			$('#iScore').html($('#iScore').html() + ";<span class='blueWord' onclick=seekWord('bluewords') oncontextmenu='nextWord(this,event)'>" + json["blueCount"] + "</span>")
-			$('#iScore').html($('#iScore').html() + "}");
-		} else {
-			$('#iScore').empty();
-		}
-		// Only display counts once they are initialised.
-		$('#iCountDiv').css("visibility","");		
-		/*
-		fetch('backend/getScore.php?id=0&class=all&hash=' + makeHash(), {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {			
-			TOTAL_SCORE = round(json["percent"]*N_TOT/100,0);								
-			getDiff();			
-		})
-		.catch(error => {
-			log(error);
-		})
-		*/
-	})
-	.catch(error => {
-		log(error);
-	})
-}
-
-function changeInc(delta) {
-	trace("changeInc()")
-	if (INC + delta > N_CUR) {
-		INC = INC;
-	} else {
-		if (N_REGEX > 0) {
-			if (INC + delta < N_REGEX) {			
-				INC += delta
-			}
-		} else {
-			INC += delta
-		}
-	}
-
-	if (INC < 0) {
-		INC = 0;
-	}
-	SCROLL_INC = 0;
-}
-function nextID(id) {
-	if (DEBUG) log("nextId()")
-	let num = id.replace("w","");
-	if (++num < N_FOUND) {
-		return "w" + num;
-	} else {
-		return id;
-	}
-}
-
-function advance() {	
-	if (DEBUG) log("advance()");
-	changeInc(N_INC)
-	getWords(INC,-1)
-}
-
-function retreat(e) {
-	if (DEBUG) log("retreat()");
-	e.preventDefault()
-	changeInc(-N_INC)
-	getWords(INC, -1)
-}
-
-function getWords(ind = INC, pos = 3, showMore = false) {	
-	// Ind is used to highlight and lookup a given word index from the returned list
-	// Global INC is used to get the starting index of the returned list		
-	trace("getWords");		
-	$('#iInput').val("");
-	SCROLL_INC= -1;
-	N_FOUND=0;
-	$('#iParDef').text("");
-	if (N_REGEX > 0) {
-		list = REGEX_WORDS[ind];	
-		N_FOUND = N_REGEX - ind;		
-		if (N_FOUND > N_INC) N_FOUND = N_INC;	
-		for (i = ind + 1; i < N_FOUND + ind; i++) {
-			list += "|" + REGEX_WORDS[i];
-		}
-		if (N_REGEX === 1) {
-			displayWords(list,0)
-		} else {
-			displayWords(list,-1)
-		}
-	} else {
-		fetch("backend/getWords.php?class=" + encodeURI(CLASS) + "&start=" + ind + "&num=" + N_INC, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json',
-			}
-		})
-		.then(response => {
-			return response.json()
-		})
-		.then(json => {			
-			let lastJson = json;
-			N_FOUND = json.length;
-			if (N_FOUND > 0) {
-				let list = json[0];
-				let scores = [];
-				for (i = 1; i < N_FOUND; i++) {
-					list += "|" + json[i];
-				}
-				var tmpOff;
-				displayWords(list,pos, showMore)
-			}
-		})
-		.catch(error => {
-			console.log(error)
-		})
-	}
-}
-
-// Enables to updating of the selected word without refreshing the whole screen
-function moveSelected() {
-    trace("moveSelected()");
-    // Clear all highlights
-    if (LAST_OBJ) LAST_OBJ.style.fontWeight="";
-    // Highlight new selection
-    let id = "#w" + SCROLL_INC;
-    $(id).css("font-weight", "bold");
-    LAST_OBJ = $(id)[0];
-	
-    // Retrieve definition
-    lookupWord(LAST_OBJ,true,true); 
-}
-
-// Create listing of words for display on left side of screen
-function displayWords(list,ind,showMore = false) {
-	if (DEBUG) log("displayWords(), list = " + list + ", ind = " + ind)
-	let out = ""
-	list = list.replaceAll("  "," ");	
-	fetch('backend/existsDef.php?class=' + CLASS + "&words=" + list + "&caller=displayWords", {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		list = list.replaceAll("-2","<sup>2</sup>");
-		list = list.replaceAll("-3","<sup>3</sup>");
-		res = json["stat"];
-		let score = json["score"];
-		let del = "";
-		let words = list.split("|");	
-		N_FOUND = words.length;		
-		for (let i = 0; i < N_FOUND; i++) {
-			let tmp = 1 << i;
-			let hasMeta = (res & tmp);
-			out += del + popSpan(i, words[i],hasMeta) 
-			del = "<br>";
-		}
-		
-		out = out.replaceAll("-2</span>","<sup>2</sup></span>");
-		$('#iWords').html(out);
-		// Formatting to show score indicators
-		if (CLASS != "all") {
-			for (let i = 0; i < N_FOUND; i++) {
-				let tmp = "#w" + i;
-				if (score[i] > 1) {
-			 		$(tmp).css("color","darkgreen");
-				} else if (score[i] > 0) {
-					$(tmp).css("color","steelblue");
-				} else {
-					$(tmp).css("color","darkred");
-				}
-			}
-		}
-		showWords();				
-		
-		if (ind > -1) {
-			let el = document.getElementById("w" + ind);
-			if (el)  {
-				//setCUR_WORD(el.innerText);
-				lookupWord(el,false,true,showMore);
-			}
-		}				
-	})
-	.catch(error => {
-		console.log(error);
-	})
-}
-
-function scrollViewDown() {
-	trace("scrollViewDown()");
-	$('#iMeta').empty();
-	$('#iMore').empty();
-	changeInc(N_INC);
-	$('iDefDiv').css("display", "none");	
-	getWords(INC,-1);
-	showWords();
-}
-
-function scrollViewUp() {
-	trace("scrollViewUp()");	
-	$('#iMeta').empty();
-	$('#iMore').empty();
-	changeInc(-N_INC);
-	getWords(INC,-1);	
-	showWords();
-}
-
-function scrollView(e) {
-	if (DEBUG) log("scrollView() begin");
-	e.preventDefault();
-	showWords();
-	if (e.deltaY > 0) {
-		scrollViewDown();
-	} else {
-		scrollViewUp();
-	}
-	if (DEBUG) log("scrollView(); INC = " + INC)
-}
-
-function scrollWords(e) {
-	e.preventDefault();
-	if (event.deltaY > 0) {
-		scrollDown();
-	} else {
-		scrollUp();
-	}
-	// Show local definition if available
-	if (CLASS === "all") {	
-		showWordMatches()
-	} else {
-		updateDef();
-	}
-	if (DEBUG) log("scrollWords() -> SCROLL_INC = " + SCROLL_INC);
-}
-
-function scrollDown() {
-	CUR_DEF_ENUM = 1;
-	if (SCROLL_INC < N_FOUND-1) {
-		SCROLL_INC++;
-	}
-	if (DEBUG) log("scrollDown(); SCROLL_INC = " + SCROLL_INC);
-}
-function scrollUp() {
-	CUR_DEF_ENUM = 1;
-	if (SCROLL_INC > 0) {
-		SCROLL_INC--;
-	} else if (SCROLL_INC == -1) {
-		SCROLL_INC = N_FOUND - 1;
-	}
-	if (DEBUG) log("scrollUp(); SCROLL_INC = " + SCROLL_INC);
-}
-
-function updateDef() {
-	if (DEBUG) log("updateDef()");
-	if (SCROLL_INC != -1) {		
-		let id = "w" + SCROLL_INC;
-		let el = document.getElementById(id);
-		lookupWord(el,true,true);
-	}
 }
 
 function popSpan(i, w, hasMeta) {
 	tmp = "<span id='w<i>' onclick='lookupWord(this,false,false)' oncontextmenu='onlineLookup(this,event)'><w></span>"
-	if (DEBUG) log("popSpan(i=" + i + ",w=" + w + ",hasMeta=" + hasMeta + ")");
+	if (DEBUG) console.log("popSpan(i=" + i + ",w=" + w + ",hasMeta=" + hasMeta + ")");
 	tmp = tmp.replace("<i>",i)
 	if (hasMeta || CLASS === "all") {
 		tmp = tmp.replaceAll("<w>",w);
@@ -729,58 +386,9 @@ function popSpan(i, w, hasMeta) {
 	return tmp
 }
 
-// Only call when word class is "all"
-function showWordMatches(follow) {
-	if (DEBUG) log("showWordMatches()");
-	if (CLASS != "all") {
-		return;
-	}
-	let id = "w" + SCROLL_INC;
-	let el = document.getElementById(id);
-	let word = el.innerText;	
-	word = word.replace("2","-2");
-	word = word.replace("3","-3");
-	if (LAST_OBJ) {
-		LAST_OBJ.style.fontWeight="";
-	}
-	
-	el.style.fontWeight="bold";		
-	fetch('backend/getDefAll.php?word=' + word, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {		
-		let keys = Object.keys(json);
-		if (keys.length === 1 && keys[0] != CLASS && follow) {			
-			// Go direct to class if no ambiguity in found word(s)
-			setClass(keys[0]);
-			seekWordSingleClass(word);
-		}
-		let def = "";
-		let delim ="";			
-		let tmp = "<span onmouseover=highlight(this,event) onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";			
-		for (let i = 0; i < keys.length; i++) {		
-			def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(json[keys[i]]);
-			delim="<br>";
-		}
-		displayDef(def, word);						
-		return;
-	})
-	.catch(error => {
-		log(error);
-	})
-	LAST_OBJ = el;
-}
-
 function lookupWord(el,onlyLocal,inline, showMore=false) {	
 	
-	trace("lookupWord()");
+	if (DEBUG) console.log("lookupWord()");
 	$('#iPutDef').css("display","block");
 	$('#iPutMore').css("display","none");
 	// Cleanup
@@ -789,7 +397,6 @@ function lookupWord(el,onlyLocal,inline, showMore=false) {
 	if (el) {
 		
 		if (CLASS === "all") {
-			SCROLL_INC = parseInt(el.id.replace("w",""));			
 			let follow = false;
 
 			if (el.innerText.indexOf(">") != -1) {
@@ -810,10 +417,6 @@ function lookupWord(el,onlyLocal,inline, showMore=false) {
 		CUR_WORD=word;
 		LAST_OBJ = el;
 				
-		scroll_inc = el.id.replace("w","");
-		if (scroll_inc > -1 && scroll_inc < N_INC) {
-			SCROLL_INC = scroll_inc; 
-		}
 		if (CLASS === "all") {
 			wordFromAll(word);
 		} else {
@@ -840,13 +443,9 @@ function lookupWord(el,onlyLocal,inline, showMore=false) {
 						return;
 					}
 					if (CLASS != "fraser") $('#iInput').attr("placeholder", "Press ENTER to see more");
-					pronounce(word);
 					displayMeta(meta);
 					displayDef(def,word);											
 					$('#iDefDiv').css("display", "none"); // ?!
-					if (!inline) {
-						$('#iWords').css("visibility", "hidden");
-					}
 					
 				} else {					
 					$('#iParDef').html("");
@@ -867,7 +466,7 @@ function displayMeta(meta, word) {
 }
 
 function displayDef(def,word) {	
-	if (DEBUG) log("displayDef(def,word)");	
+	if (DEBUG) console.log("displayDef(def,word)");	
 	def = makeLinks(def);
 	let defRaw = def.split("<br>");	
 	let defLines = [];
@@ -916,7 +515,7 @@ function displayDef(def,word) {
 
 // Make links to referenced words
 function makeLinks(def) {
-	if (DEBUG) log("makeLinks()")
+	if (DEBUG) console.log("makeLinks()")
 	def = linkSingleWord(def);	
 	if (def.split("<br>").length == 1) {
 		return def;
@@ -931,7 +530,7 @@ function makeLinks(def) {
 
 function linkSingleWord(def) {	
 
-	if (DEBUG) log("linkSingleWord(def), def = " + def);
+	if (DEBUG) console.log("linkSingleWord(def), def = " + def);
 	defArr = def.split("<br>");
 	outDef = "";
 	del = "";
@@ -954,7 +553,7 @@ function linkSingleWord(def) {
 }
 
 function addLinks(refClass,def) {	
-	if (DEBUG) log("addLinks(), refClass = " + refClass + ", def = " + def);
+	if (DEBUG) console.log("addLinks(), refClass = " + refClass + ", def = " + def);
 	if (def.indexOf(refClass) === -1) return def;
 	// Easiest to handle line by line and skip the lines without links
 	// Expectation is each link class (JFR, SE etc.) has its own new line.
@@ -987,12 +586,10 @@ function addLinks(refClass,def) {
 }
 
 function followLink(word) {
-    trace("followLink(" + word +  ")");
+    if (DEBUG) console.log("followLink(" + word +  ")");
 	LAST_SCROLL_Y = window.pageYOffset;	
 	LAST_CLASS = CLASS;	
 	LAST_DEF_ENUM = CUR_DEF_ENUM;	
-	N_REGEX = 0;
-	REGEX_WORDS = [];
     // Remove any soft hyphens in word
     word = word.replaceAll("\u00ad","");
 	let rep = word.match(/\s/);
@@ -1004,11 +601,10 @@ function followLink(word) {
 	}
 	setCUR_WORD(word);
 	wordFromAll(word);		
-	let oldINC = INC;
 }
 
 function defFromAll(word) {
-	trace("defFromAll(" + word + ")");
+	if (DEBUG) console.log("defFromAll(" + word + ")");
 	return new Promise((resolve) => {	
 		var out = [];
 		out["match"] = "";
@@ -1070,7 +666,7 @@ function wordFromAll(word) {
 }					
 
 function wordFromAll_getConj(inp, word) {
-	trace("wordFromAll_getConj");
+	if (DEBUG) console.log("wordFromAll_getConj");
 	return new Promise((resolve) => {	
 		var out = [];
 		out['class'] = "all";
@@ -1104,7 +700,7 @@ function wordFromAll_getConj(inp, word) {
 }
 
 function wordFromAll_FrasFuzzy(inp,word) {	
-	trace("wordFromAll_FrasFuzzy");
+	if (DEBUG) console.log("wordFromAll_FrasFuzzy");
 	return new Promise((resolve) => {	
 		var out = [];
 		out['class'] = "all";
@@ -1139,7 +735,7 @@ function wordFromAll_FrasFuzzy(inp,word) {
 }
 
 function getCompDef(meta, def) {
-	if (DEBUG) log("getCompDef(def); def = " + def);
+	if (DEBUG) console.log("getCompDef(def); def = " + def);
 	// Compose and output string that combines definition of multiple (usually two)
 	// component words
 	words = getRefs(def);
@@ -1197,12 +793,12 @@ function getRefs(def) {
 	def = def.replaceAll("till ", "");
 	def = def.replaceAll("'","");
 	arr = def.split(",");
-	if (DEBUG) log("getRef(), arr = " + arr);
+	if (DEBUG) console.log("getRef(), arr = " + arr);
 	return arr;
 }
 
 function onlineLookup(elHTML, ev) {	
-	if (DEBUG) log("onlineLookup(elHTML, ev)");
+	if (DEBUG) console.log("onlineLookup(elHTML, ev)");
 	ev.preventDefault();
 	word = elHTML.value;
 	if (word.length === 0) word = CUR_WORD;
@@ -1265,7 +861,7 @@ function wordCount() {
 		N_FRASER = json["fraser"];
 		N_EN = json["substantiv_en"];
 		N_ETT = json["substantiv_ett"];		
-		N_PLURAL = json["plural"];		
+		N_PLURAL = json["plural"];
 		N_PREPOSITION = json["preposition"];
 		N_INTERJEKTION = json["interjektion"];
 		N_PRONOMEN = json["pronomen"];
@@ -1277,8 +873,8 @@ function wordCount() {
 		N_INFINITIV = json["infinitiv"];
 		N_ARTIKEL = json["artikel"];
 		setN_CUR();		
-		$('#iCntTotal').html(N_TOT.toLocaleString('sv'));
-	})
+		$('#iInput').attr("placeholder",Math.round(N_ALL/1000,0) + "k searchable words");
+		})
 	.catch(error => {
 		log(error);
 	})
@@ -1297,64 +893,11 @@ function showToggle() {
 		focusInput()
 		CONTROLS_VISIBLE=true;
 	}
-	if (DEBUG) log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
-}
-
-function getSummary() {
-	var tmpOut = [];
-	let done = 0;
-	let score_all = 0;
-	// for (let i = 0; i < CLASS_LIST.length; i++) {
-	// Only list the major class groups for brevity
-	let N = 6;
-	let N_DONE = CLASS_LIST.length;
-	let tmpTot = 0;
-	for (let i = 0; i < N; i++) {
-		let c = CLASS_LIST[i];
-		// ID used to get deterministic ordering of classes
-		fetch('backend/getScore.php?class=' + c + '&id=' + i, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {
-			done++;
-			let id = json['id'];						
-			tmpOut[id] = ": ";
-			tmpOut[id] += Number(round(json["percent"],1)).toLocaleString("sv") + "%";					
-			score_all += parseInt(json["total"])
-			tmpTot += parseInt(json["count"]);
-			let out = "<b>all: " + "score_all" + "%</b>";
-			// All serial requests are done
-			if (done === N) {			
-				for (i = 0; i < N; i++) {
-					out += "<br>" + CLASSES[i] + tmpOut[i];
-				}						
-				score_all = Math.round(score_all / tmpTot / 2 * 100 * 10) / 10;
-				out = out.replace("score_all",score_all.toLocaleString("sv"));			
-				// Append auxiliary classes in smaller text
-				out += "<br>Aux classes:<br>";
-				del = "";						
-				for (i = N; i < N_DONE; i++) {
-					out += del + CLASSES[i]	
-					del = ", ";				
-				}
-				$('#iSummary').html(out);
-			}												
-		})
-		.catch(error => {
-			log(error);
-		})	
-	}			
+	if (DEBUG) console.log("showToggle(); seek.v = " + $('#iInput').css("visibility") + ", sel.v = " + $('#iSelect').css("visibility"));
 }
 
 function newInputWrapper(e) {
-	if (DEBUG) log("newInputWrapper()");
+	if (DEBUG) console.log("newInputWrapper()");
 	$('#iExtern').empty();
 	e.preventDefault();
 	let word = getInput();
@@ -1372,8 +915,6 @@ function newInputWrapper(e) {
 	// Navigation only to a given word class.
 	if (word.indexOf("@") === 0) {
 		let newClass  = fullClassName(word.substr(1));
-		REGEX_WORDS = [];		
-		N_REGEX = 0;
 		if (newClass != "") {
 			setClass(newClass);		
             clearInput();
@@ -1405,91 +946,43 @@ function newInputWrapper(e) {
 }
 
 function fmtUnit(val, unit) {
-	if (DEBUG) log("fmtUnit()");
+	if (DEBUG) console.log("fmtUnit()");
 	let tmp = " (" + val + " " + unit + ")";
 	return tmp;
 }
 
 function clearInput() {
-    trace("clearInput()");
+    if (DEBUG) console.log("clearInput()");
     $('#iInput').val(""); 
 }
 
-function handleNumericInput(key) {
-	if (DEBUG) log("handleNumericInput(" + key + ")")
-	let inc = parseInt(key);	
-	setTimeout(clearInput,100);
-	if (inc === 0) {
-        SCROLL_INC++;		
-    } else if (inc === 9) {
-        SCROLL_INC--;
-    } else {
-		SCROLL_INC = key - 1;
-	}
-    if (SCROLL_INC < 0) SCROLL_INC = 0
-    if (SCROLL_INC > 7) SCROLL_INC = 7
-    moveSelected();
-}
 
 // Called internally when word class is known in advance
 function seekWordSingleClass(word = CUR_WORD, last_enum = 1, showMore = false) {				
-    trace("seekWordSingleClass(word = " + CUR_WORD + ", last_enum = " + last_enum + ")");
+    if (DEBUG) console.log("seekWordSingleClass(word = " + CUR_WORD + ", last_enum = " + last_enum + ")");
 	//LAST_DEF_ENUM = CUR_DEF_ENUM;
 	CUR_DEF_ENUM = last_enum;
 	if (CLASS === "fraser") CUR_DEF_ENUM = 1;
 	if (word.length > 0) {
 		word = word.replace(/\u00A0/g, '');
-
-		fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {			
-			if (json > -1) {				
-				setCUR_WORD(word);
-				// Put selected word in the middle of the word collection				
-				INC = json - 3;
-				let pos = 3;
-				let mid = N_INC/2;
-				if (json < mid - 1) {					
-					INC = 0;
-					pos = json;
-				}
-				getWords(INC, pos,showMore);		
-				getDefInd(last_enum);		
-				$('#iInput').attr("placeholder","Press ENTER to show more");
-			} else {
-				noMatchSingleClass(word);			
-			}
-		})
-		.catch(error => {
-			log(error);
-		})
 	}
 	focusInput();
 }
 
 /* Priorities for search
- 1) Regex/match score
- 2) Exact match within class
- 3) Matches conjugation within class
- 4) Exact match within "all" class
- 5) Matches conjugation within any class (first found).
- 6) Fuzzy match on idiom/fras.
+ 1) Exact match within class
+ 2) Matches conjugation within class
+ 3) Exact match within "all" class
+ 4) Matches conjugation within any class (first found).
+ 5) Fuzzy match on idiom/fras.
  */
 // Link is set if this seek is called from a clickable link
 
 // Called by user, prefer current class but allow for secondary matching in other word classes
 // There is a recursion here somewhere, find it
 
-function seekWord(word, link = false, lastEnum = false) {
-	trace ("seekWord()");
+async function seekWord(word, link = false, lastEnum = false) {
+	if (DEBUG) console.log ("seekWord()");
 	CUR_DEF_ENUM = 1; // Always show first defintion for a word the user has searched for
 	// For backwards navigation
 	LAST_CLASS = CLASS;
@@ -1500,61 +993,20 @@ function seekWord(word, link = false, lastEnum = false) {
 	$('#iInput').attr("placeholder","Press ENTER to show more");
 	// Any user supplied breaks are discarded.
 	word = word.replaceAll("�","");	
-	REGEX_WORDS = [];
 	// Strip trailing white space	
 	while (word.substr(word.length-1) === " ") {
 		word = word.substr(0,word.length-1)
 	}
-	// (Nearly) Always regex for phrases
-	if (CLASS === "fraser") {
-		if (REGEX_MODE) {		
-			word = word.replaceAll("/","\\/");
-			word = word.replaceAll("(","\\(");
-			word = word.replaceAll(")","\\)");
+	const res = fetch('backend/getDef.php?class=' + CLASS + '&word=' + word, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
 		}
-	}
-	$('#iCntRegex').empty();		
-	scoreMatch = word.indexOf("redwords") != -1 || word.indexOf("bluewords") != - 1;
-	
-	if (REGEX_MODE) {				
-		regexSeek(word)
-		.then(result => {
-			REGEX_WORDS = result["match"];
-			N_REGEX = REGEX_WORDS.length;
-			dispRegexWords();
-		})
-		.catch(error => {
-			console.log(error);
-		})
-		
-	} else if (scoreMatch) {
-		matchByScore(word)
-		.then(result => {
-			REGEX_WORDS = result["match"];
-			N_REGEX = REGEX_WORDS.length;
-			dispRegexWords();
-		})
-		.catch(error => {
-			console.log(error);
-		})
-	} else {
-		REGEX_WORDS = [];
-		N_REGEX = 0;
-		getWordInc(word)
-		.then(result => {			
-			INC = result;
-			LAST_WORD = CUR_WORD;
-			CUR_WORD = word;
-			var pos = 3;
-			if (result > -1) {				
-				if (result > 2)  {
-					result -= 3;
-					pos = 3;
-				} else {
-					pos = result;
-					result = 0;					
-				}
-				getWords(result,pos);		
+	})
+	let json = await res.json();
+	console.log(json);
+	/*
 			} else {
 				getWordConj(word)
 				.then(resWord => {					
@@ -1567,91 +1019,11 @@ function seekWord(word, link = false, lastEnum = false) {
 			}
 		})
 	}	
-}
-
-function dispRegexWords() {
-	INC = 0;
-	getWords();
-}
-
-function regexSeek(word) {
-	trace("regexSeek()");
-	return new Promise((resolve) => {		
-		fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json()
-		})
-		.then(json => {
-			var out = [];
-			out["match"] = json["matches"];			
-			resolve(out);
-		})
-	})
-}
-
-function matchByScore(word) {
-	trace("matchByScore");
-	return new Promise((resolve) => {
-		let score = 0;
-		if (word === "bluewords") score = 1;		
-		fetch('backend/scoreMatch.php?class=' + CLASS + '&score=' + score, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {
-			var out = [];
-			out["match"] = json["matches"];			
-			resolve (out);
-		})
-	})
-}
-
-function getWordInc(word) {
-	trace("getWordInc()");
-	return new Promise((resolve) => {		
-		// Special case of prefixes and suffices
-		if (word.substr(word.length-1) === "-") {
-			word = word.substr(0,word.length-1);
-			setClass("f�rled");
-		} else if (word.slice(0,1) === "-") {
-			word = word.substr(1);
-			setClass("slutled");
-		}
-		if (word.length > 0) {
-			// Search based on current position in word listing of current word class
-			fetch('backend/seekWord.php?class=' + CLASS + "&word=" + word + "&inc=" + INC, {
-				method: 'get',
-				mode: 'cors',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {				
-				return response.json();				
-			})
-			.then(json => {
-				resolve(json);
-			})
-		} else {
-			resolve(-1);
-		}
-	})		
+	*/
 }
 
 function getWordConj(word) {
-	trace("getWordConj");
+	if (DEBUG) console.log("getWordConj");
 	return new Promise((resolve) => {	
 		if (CLASS === "fraser") {			
 			resolve(word);
@@ -1707,100 +1079,19 @@ function noMatchSingleClass(word) {
 	$('#iInput').val(word);
 }
 
-function regexSearch(word) {
-	if (DEBUG) log("regexSearch()");
-	toggleRegexMode(true);
-	fetch('backend/regexSeek.php?class=' + CLASS + '&regex=' + word, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json()
-	})
-	.then(json => {
-		REGEX_WORDS = json["matches"];			
-		N_REGEX = json["count"];			
-		$('#iScore').empty();
-		$('#iMeta').empty();
-		$('#iCntRegex').html("*" + N_REGEX + "*");			
-		if (N_REGEX > 0) {
-			INC = 0;
-			SCROLL_INC = -1;
-			getWords(INC)
-		} else {
-			for (i = 0; i < 8; i++) {
-				id = "#w" + i;
-				$(id).html("")					
-			}
-			noMatch(word);
-		}
-	})
-	.catch(error => {
-		log(error);
-	})
-}
-
-function drillDown() {
-	if (DEBUG) log("drillDown()");
-	// Take word from iWords to allow for special characters such as '�'
-	let id = "#w" + SCROLL_INC;
-	let word = $(id).text()	
-		
-	fetch('backend/getDefAll.php?word=' + word, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		if (Object.keys(json).length > 0) {
-			let keys = Object.keys(json);	
-			if (keys.length === 1 && keys[0] != CLASS) {			
-			// Go direct to class if no ambiguity in found word(s)
-				setClass(keys[0]);
-				seekWord(word);
-				let def = "";
-				let delim ="";									
-				let tmp = "<span onmouseover=\"highlight(this,event)\"";
-				tmp += "onclick=\"setClass(\'_k_\',\'_w_\')\"><i>_k_:</i></span><br>";						
-				for (let i = 0; i < keys.length; i++) {			
-				let compDef = json[keys[i]];															
-				def += delim + tmp.replaceAll("_k_", keys[i]).replace("_w_",word) + makeLinks(compDef);
-				delim="<br>";
-				LAST_DEF = def;
-				$('#iParDef').html("<b>" + word + ":</b><br>" + def);
-				}
-			}
-		}
-	})
-	.catch(error => {
-		log(error);
-	})
-}
-
 function setClass(c, seek = "", showMore = false) {
-    trace("setClass(" + c + ", seek = " + seek + ")");
+    if (DEBUG) console.log("setClass(" + c + ", seek = " + seek + ")");
 	LAST_CLASS = CLASS;	
 	if (CLASS != "fraser") LAST_SCROLL_Y = window.pageYOffset;	
 	
 	if (c === "all") clearRegexMode();	
-	if (DEBUG) log("setClass(c, seek), c = " + c + ", seek = " + seek);
+	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
 	$('#iAux').html("");	
 	$('#iMeta').html("");
 	//wordCount(); // Think it is better to do word count only when there is an addition to the listing. This line was a previous hack.
 	if (c != CLASS) {		
-		REGEX_WORDS = [];
-		N_REGEX = 0;
 		$('#iCntRegex').html("");
 		$('#iDefDiv').css("display", "none");
-		$('#iWords').css("visibility", "visible");
 		$('#iMore').empty();
 		if (c != "all") {
 			$('#iDefProgContainer').css("visibility","visible");
@@ -1808,21 +1099,13 @@ function setClass(c, seek = "", showMore = false) {
 			$('#iDefProgContainer').css("visibility","hidden");
 		}
 		CLASS = c;
-		INC = 0;
-		SCROLL_INC=-1;
 		setN_CUR();	
 	}
-	if (seek.length > 0) {
-		seekWordSingleClass(seek, LAST_DEF_ENUM, showMore);
-	} else {
-		INC = 0;
-		getWords();
-	}	
-	updateScore();
+	seekWordSingleClass(seek, LAST_DEF_ENUM, showMore);
 }
 
 function getLastWord() {
-	trace("getLastWord()");			
+	if (DEBUG) console.log("getLastWord()");			
 	if (LAST_WORD.length > 0) {		
 		let tmp = CLASS;
 		let showMore = true
@@ -1853,19 +1136,18 @@ function countDefs() {
 		.then(json => {
 			if (json != "Failed to read definition file.") {	
 				N_LEMMAS=json["cnt"];
-				if (DEBUG) log("countDefs(); N_LEMMAS = " + N_LEMMAS);
+				if (DEBUG) console.log("countDefs(); N_LEMMAS = " + N_LEMMAS);
 				$('#iDefProg').css("width", N_LEMMAS/N_CUR * 100 + "%");
 			} else {
-				if (DEBUG) log("countDefs(); N_LEMMAS = " + N_LEMMAS);
+				if (DEBUG) console.log("countDefs(); N_LEMMAS = " + N_LEMMAS);
 			}
 		})
 	}
 }
 
 function editDef() {	
-	trace("editDef()")	
+	if (DEBUG) console.log("editDef()")	
 	if ($('#iParDef').text() != "" || CLASS === "fraser") {
-		showWords();
 		$('#iDefDiv').css("display", "block");
 		$('#iPutDef').css("display", "block");		
 		focusDef();
@@ -1878,20 +1160,16 @@ function editDefWrapper(e) {
 }
 
 function clearDef() {
-	if (DEBUG) log("clearDef()");
-	if ($('#iWords').css("visibility") === "hidden") {
-		$('#iParDef').html("");
-		$('#iWords').css("visibility", "visible");
-		$('#iDefDiv').css("display", "none");
-		SCROLL_INC = -1;
-		for (let i = 0; i< N_FOUND; i++) {
-			$('#w' + i).css("fontWeight", "");
-		}
+	if (DEBUG) console.log("clearDef()");
+	$('#iParDef').html("");
+	$('#iDefDiv').css("display", "none");
+	for (let i = 0; i< N_FOUND; i++) {
+		$('#w' + i).css("fontWeight", "");
 	}
 }
 
 function pretty(def) {
-	if (DEBUG) log("pretty(def); def = " + def);
+	if (DEBUG) console.log("pretty(def); def = " + def);
 	let out = "";
 	subdefs = def.split("<br>");
 	for (let i = 0; i < subdefs.length; i++) {
@@ -2008,12 +1286,12 @@ function removeClassDesc(word) {
 }
 
 function removeWord() {
-	if (DEBUG) log("removeWord()");
+	if (DEBUG) console.log("removeWord()");
 	addWord(true);
 }
 
 function addWord(remove = false) {	
-	if (DEBUG) log("addWord()");	
+	if (DEBUG) console.log("addWord()");	
 	
 	let word = $('#iInput').val();		
 	let del = (word[word.length-1] === "." && word.indexOf("..") === -1) || remove;
@@ -2085,7 +1363,7 @@ function addWord(remove = false) {
 }
 
 function addWordWithEnum() {
-	if (DEBUG) log("addWordWithEnum()");
+	if (DEBUG) console.log("addWordWithEnum()");
 	// Get enum index
 	let word = $('#iInput').val();		
 	if (word.length === 1) return;
@@ -2119,7 +1397,7 @@ function addWordWithEnum() {
 
 function addMeta(def) {
 	// If a known meta phrase is identified at start of definition line then enclose it in square bracket formatting
-	if (DEBUG) log("addMeta()");	
+	if (DEBUG) console.log("addMeta()");	
 	regexArr = [
 		/var�dagligt, skämtsamt/,
 		/ålderdomligt el. ironiskt/,
@@ -2294,7 +1572,7 @@ function addMeta(def) {
 }
 
 function grammar(def) {	
-	if (DEBUG) log("grammar()");
+	if (DEBUG) console.log("grammar()");
 	// Only one grammer expression is permitted.
 	gArr = [
 	 "n�stan en�bart presens particip",
@@ -2424,7 +1702,7 @@ function grammar(def) {
 }
 
 function preProc(def) {
-	if (DEBUG) log("preProc(def(); def = '" + def + "'")
+	if (DEBUG) console.log("preProc(def(); def = '" + def + "'")
 	// takes user input and splits into "meta", "def" and "more" components
 	let meta = "";	
 	
@@ -2635,7 +1913,7 @@ function preProc(def) {
 }
 
 function fmtParticles(s) {
-	if (DEBUG) log("fmtParticles(s)");
+	if (DEBUG) console.log("fmtParticles(s)");
 	// Particles appear comma delimited with space delimiter before the last particle.
 
 	//const regex1 = /.*med partikel(?: eller dylikt),(s�r�skilt)(([a-z���]+, )*[a-z���]+).*/;		
@@ -2704,7 +1982,7 @@ function fmtPrep(s) {
 }
 
 function fmtVerbTogether(s,regx) {
-	if (DEBUG) log("fmtVerbTogether(s,regx), s = " + s + ", regx = " + regx);	
+	if (DEBUG) console.log("fmtVerbTogether(s,regx), s = " + s + ", regx = " + regx);	
 	m = s.match(regx);
 	
 	if (m != null) {
@@ -2719,10 +1997,10 @@ function fmtVerbTogether(s,regx) {
 }
 
 function  fmtVerbApart(s,regx) {
-	if (DEBUG) log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
+	if (DEBUG) console.log("fmtVerbApart(s,regx), s = " + s + ", regx = " + regx);
 	m = s.match(regx);
 	if (m != null) {
-		if (DEBUG) log("fmtVerbApart: Match!");
+		if (DEBUG) console.log("fmtVerbApart: Match!");
 		if (m.length === 4) {		
 			let repWord = m[2] + " " + m[3].substring(1);			
 			// remove leading space from second word and replace with regular space.
@@ -2768,14 +2046,6 @@ function withParticle(s) {
 	return s;
 }
 
-// Toggle visibility of word list on right hand side of screen
-function showWords() {
-	if (DEBUG) log("showWords");
-	if ($('#iWords').css("visibility") == "hidden") {
-		$('#iWords').css("visibility", "visible");
-	}
-}
-
 function highlight(el,event) {
 	if (event.type === "mouseover") {
 		el.style.cursor = "pointer";
@@ -2805,41 +2075,9 @@ function toggleDebug() {
 	}
 }
 
-function lookupManyWords() {	
-	// Clear existing tabs collection
-	TABS.length = 0;
-	let n = 8;			
-	let start = parseInt(INC) + parseInt(SCROLL_INC);	
-	if (start === -1) start = 0
-	fetch('backend/getWords.php?&class=' + encodeURI(CLASS) + "&start=" + start.toString() + "&num=" + n, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json()
-	})
-	.then(json => {
-		if (json.length < n) n = json.length
-		for (let i = 0; i < n; i++) {			
-			let word = json[i]
-			let url = "https://svenska.se/so?sok=" + word + "&pz=1";
-			// Manual unicode percentage escaping as some browsers misbehave here	
-			TABS.push(window.open(encodeURI(url), '_blank'));		
-		}	
-	})
-	.catch(error => {
-		log(error);
-	})
-}
-
 function fmtMeta(meta) {	
 	let rep = "<span id='iWordRoot'"
 	rep += " onmouseover=highlight(this,event)";
-	rep += " oncontextmenu='changeScore(event,-1)'";	
-	rep += " onclick='changeScore(event,1)'";	
 	// Remove any disambiguation suffix when more than one entry exists for root key
 	tmpCUR_WORD = CUR_WORD
 	for (i = 2; i < 9; i++) {
@@ -2890,75 +2128,6 @@ function closeDefs() {
 	}
 	TABS.length = 0;
 }
-function keyNav(ev) {
-	ev.preventDefault();
-	log("nav");
-}
-
-function editNext() {
-	if (DEBUG) log("editNext()")
-	if (SCROLL_INC < N_FOUND-1) {
-		SCROLL_INC++;
-	}
-	let cur = "#w" + SCROLL_INC;
-	setCUR_WORD($(cur).text());
-	editDef();
-	// ToDo show any current definition
-}
-function displaySelection() {
-	for (let i = 0; i < N_FOUND; i++) {
-		let tmp = "#w" + i;
-		$(tmp).css("font-weight", "")
-	}
-	let cur = "#w" + SCROLL_INC;
-	$(cur).css("font-weight", "bold");
-}
-function clickMiddle(ev) {
-	if (DEBUG) log("clickMiddle()");
-	ev.preventDefault();			
-	if (ev.target.style.cursor != "pointer" && ev.target.className != "redWord" && ev.target.className != "blueWord") {
-		if ($('#iDefDiv').css("display") === "none" && $('#iParDef').text() === "") { 
-			let btn = ev.button;
-			if (btn === 0) {
-				scrollViewDown()
-			} else {
-				scrollViewUp()
-			}	
-		}
-	}
-}
-function getCurr() {
-	if (SCROLL_INC === -1) {
-		return INC
-	} else {
-		return (parseInt(INC) + parseInt(SCROLL_INC))
-	}
-}
-function nextWord(el,ev) {
-	ev.preventDefault();
-	if (DEBUG) log("nextWord()")
-	// Find the next word with the relevant score
-	updateScore();
-	let score = 0;
-	if (el.className === "blueWord") score = 1
-	let back = ev.button === 2;
-	fetch('backend/getNextWord.php?class=' + CLASS + '&start=' + getCurr() + '&score=' + score + '&back=' + back, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json()
-	})
-	.then(json => {
-		seekWord(json);
-	})
-	.catch(error => {
-		log(error)
-	})		
-}
 
 // 1-based indices instead of 0-based for storage
 function keyForUser(key) {
@@ -2976,14 +2145,14 @@ function keyForUser(key) {
 }
 
 function getMore(ind) {		
-	trace("getMore()");	
+	if (DEBUG) console.log("getMore()");	
 	if (CLASS === "fraser") return;
 	if (!isNumeric(ind)) {
 		console.log("getMore(ind), ind is NaN");
 		return;
 	}
 	
-	if (DEBUG) log("getMore(ind), ind = " + ind);			
+	if (DEBUG) console.log("getMore(ind), ind = " + ind);			
 	ind--;
 	if (ind > N_DEFS) return;	
 	let key = CUR_WORD.replaceAll(" ","-") + "_" + ind;	
@@ -3041,7 +2210,7 @@ function getMore(ind) {
 }
 
 function editMore(ev,key) {
-	if (DEBUG) log(ev,key)	
+	if (DEBUG) console.log(ev,key)	
 	ev.preventDefault();
 	let tmp = $('#iParDef').html();
 	if (tmp.indexOf(" --") === -1 && tmp.indexOf(" ++") != -1) {
@@ -3061,21 +2230,15 @@ function processKeyDown(ev) {
 		$('#iInput').val("");
 	}
 	if (ev.key === "!") {			
-		if (!REGEX_MODE) {
-			ev.preventDefault();	
-			let tmp = $('#iInput').val() + "!"		
-			seekWord(tmp);
-		} else {
-		
-		}
+		ev.preventDefault();	
+		let tmp = $('#iInput').val() + "!"		
+		seekWord(tmp);
 	}
 	if (ev.key === "ArrowUp") {
 		let el = document.getElementById("iInput");
 		onlineLookup(el,ev);
 		// ?!
 		focusDef()
-	} else if (ev.key === "ArrowDown" && CLASS === "all") {
-		drillDown()
 	} else if (ev.key === "Insert") {
 		addWord();	
 	} else if (ev.key === "Delete") {
@@ -3083,11 +2246,9 @@ function processKeyDown(ev) {
 	} else if (ev.key === "F1") {
 		//showHelp
 	} else if (ev.key === "*") {
-		if (!REGEX_MODE) {
-			ev.preventDefault();
-			fromEnglish();
-		}
-	} else if (ev.key === "ArrowDown") {
+		ev.preventDefault();
+		fromEnglish();
+	} else if (ev.key === "ArrowDown" || ev.key === "F2") {
 		fetchDef();
 	} else if (ev.key === "F6") {
 		walkListing();
@@ -3111,7 +2272,6 @@ function processKeyDown(ev) {
 				randomWord();
 			} else {
 				$('#iInput').val("");
-				REGEX_WORDS = [];
 			}
 		}
 	}
@@ -3137,7 +2297,7 @@ function processKeyDown(ev) {
 }
 
 function navDef(ev) {
-	if (DEBUG) log("navDef(ev)");
+	if (DEBUG) console.log("navDef(ev)");
 	let tmp = $('#iInput').val();
 	$('#iMoreText').empty();
 	if (tmp.length === 0) {
@@ -3154,7 +2314,7 @@ function navDef(ev) {
 }
 
 function hack(ev) {
-	if (DEBUG) log("hack()");
+	if (DEBUG) console.log("hack()");
 	ev.preventDefault();
 	$('#iDefDiv').css("display","block");
 }
@@ -3190,34 +2350,11 @@ function defEntry(ev) {
 }
 
 function showCachedDef(el) {
-	if (DEBUG) log("showCachedDef(el), el = " + el);
+	if (DEBUG) console.log("showCachedDef(el), el = " + el);
 	$('#iParDef').html(CACHED_DEF_HTML);	
 	$('#iParDef').css("display","block");
 }
 
-function changeScore(ev,diff) {
-	ev.preventDefault();
-	ev.stopPropagation();
-	$('#iDefDiv').css("display","none");
-	fetch('backend/changeScore.php?word=' + CUR_WORD + '&class=' + CLASS + '&diff=' + diff, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-type': 'application/json'
-		}		
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		if (json["res"] === "success") {		
-			let newScore = json["new"];
-			let id = "#w" + parseInt(SCROLL_INC);
-			$(id).css("color",SCORE_COLOURS[newScore]);			
-			updateScore();
-		}
-	})
-}
 function randomWord() {
 	// Hash is to prevent caching of the url by the browser. Server ignores the hash		
 	
@@ -3245,27 +2382,9 @@ function makeHash() {
 	return hash;
 }
 
-function toggleRegexMode(force = false) {
-	if (DEBUG) log("toggleRegexMode()")
-	REGEX_MODE = !REGEX_MODE
-	if (REGEX_MODE || force) {
-		$('#iInput').css("background", "navajowhite")
-	} else {
-		$('#iInput').css("background", "lightskyblue")
-	}
-}
-
-function clearRegexMode() {
-	if (DEBUG) log("clearRegexMode()");
-	REGEX_MODE = false;
-	$('#iInput').css("background", "")
-}
-
 function bodyListener(ev) {
 	if (ev.key === "Home") {
         focusInput();
-    } else if (ev.key === "F2") {
-        toggleScores();
     } else if (ev.key === "v") {
         if (! $('#iInput').is(":focus")) {
 			if(! $('#iDefText').is(":focus")) {
@@ -3332,7 +2451,7 @@ function defaultMeta(hasPlural = true) {
 	}
 	// So far only support for "en" words
 	if (CLASS != "substantiv_en" && CLASS != "adjektiv" && CLASS != "verb" && CLASS != "substantiv_ett") return;
-	fetch('backend/putDef.php?score=&def=' + '&meta=' + meta + '&class=' + CLASS + '&word=' + CUR_WORD, {
+	fetch('backend/putDef.php?&def=' + '&meta=' + meta + '&class=' + CLASS + '&word=' + CUR_WORD, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
@@ -3351,7 +2470,7 @@ function defaultMeta(hasPlural = true) {
 }
 
 function togglePlural() {
-	if (DEBUG) log("togglePlural()");
+	if (DEBUG) console.log("togglePlural()");
 	// Go direct to the backend to make the change.	
 	// Only support "en" words for now.
 	if (CLASS === "substantiv_en" || CLASS === "substantiv_ett") {
@@ -3377,49 +2496,6 @@ function togglePlural() {
 	
 }
 
-
-// Gamificiation of progress, show daily and weekly goal + end date
-function setTargets() {
-	if (DEBUG) log("setTargets()");
-	fetch('backend/setTargets.php?cur_score=' + TOTAL_SCORE, {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		RATE = json["rate"];
-		TARGET_DAILY = json["targetDaily"];
-		TARGET_MONDAY = json["targetWeekly"];
-		getDiff();
-	})
-	.catch(error => {
-		log(error);
-	})
-}
-
-function getDiff() {
-	if (DEBUG) log("getDiff()");
-	let diff = "";
-	let fmt = "";
-	if (TARGET_DAILY != 0) {		
-		// Express diff as a percentage of the intended rate
-		diff = ((TOTAL_SCORE - TARGET_DAILY) / RATE * 100);		
-		diff = Math.round(diff);
-		if (diff > 0) {
-			fmt = " <span class='diffPlus'>_diff_</span>";
-		} else {
-			fmt = " <span class='diffMinus'>_diff_</span>";
-		}
-		fmt = fmt.replace("_diff_",diff);
-	}
-	$('#iTotalScore').html(parseInt(TOTAL_SCORE).toLocaleString('sv') + fmt);
-}
-
 function round(dec, places) {
 	let mult = 10 ** places;	
 	let res = (Math.round(dec * mult) / mult).toString();
@@ -3428,7 +2504,7 @@ function round(dec, places) {
 }
 
 function fetchDef() {
-	trace("fetchDef()");
+	if (DEBUG) console.log("FUNC fetchDef()");
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -3506,7 +2582,7 @@ function fetchDef() {
 }
 
 function getRaw() {
-	if (DEBUG) log("getRaw()")
+	if (DEBUG) console.log("FUNC getRaw()")
 	fetch('backend/scrapeRaw.php?word=' + CUR_WORD + "&class=" + CLASS, {
 		nethod: 'get',
 		mode: 'cors',
@@ -3557,60 +2633,8 @@ function shortenClass() {
 	return res;
 }
 
-function pronounce(word) {
-	if (DEBUG) log("pronounce()");
-	if (SOUNDS && CLASS != "all") {				
-		let shortClass = shortenClass(CLASS);
-		let path = "sounds/" + shortClass + "/";
-		//word = word.replaceAll(" ", "_");
-		fetch('backend/existsAudio.php?class=' + shortClass + '&word=' + word, {			
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			}
-			
-		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {			
-			if (json === "exists") {
-				//var audio = new Audio(path + word + ".mp3");
-				var audio = new Audio(path + word);
-				audio.play();
-			} else {
-                // Try and fetch audio
-				if (CLASS != "fraser") {
-					fetch('backend/fetchAudio.php?word=' + word + '&class=' + CLASS, {
-						method: 'get',
-						mode: 'cors',
-						headers: {
-							'Content-Type': 'application/json'
-						}
-					})
-					.then(response => {
-						return response.json();
-					})
-					.then(json => {
-						if (json["status"] === "Found") {
-							pronounce(word);
-						}
-					})
-					.catch(error => {
-						log(error);
-					})
-				}
-            }
-		})
-		.catch(error => {
-			log(error);
-		})		
-	}
-}
-
 function nDefs() {
-	if (DEBUG) log("nDefs(def)")
+	if (DEBUG) console.log("FUNC nDefs(def)")
 	let n = 0;	
 	let regex = /^\d+/;
 	let tmpArr = CUR_DEF.split("<br>");
@@ -3625,7 +2649,7 @@ function nDefs() {
 // Pick out a single definition based on index
 function getDefInd(ind) {		
 	if (CLASS === "fraser") return CUR_DEF;
-	if (DEBUG) log("getDefInd(ind), ind = " + ind)	
+	if (DEBUG) console.log("FUNC getDefInd(ind), ind = " + ind)	
 	let out = "";
 	regex = /^\d+/;
 	let tmpArr = CUR_DEF.split("<br>");
@@ -3647,7 +2671,7 @@ function isNumeric(value) {
 }
 
 function walkListing() {
-	if (DEBUG) log("walkListing()");
+	if (DEBUG) console.log("FUNC walkListing()");
 	fetch('backend/getListing.php', {
 		method: 'get',
 		mode: 'cors',
@@ -3678,54 +2702,12 @@ function walkListing() {
 }
 
 function fillInput(text) {	
-	if (DEBUG) log("fillInput(text), text = " + text)
+	if (DEBUG) console.log("FUNC fillInput(text), text = " + text)
 	$('#iInput').val(text);
 }
 
 function rand() {
 	$('#iInput').val(Math.random());
-}
-
-function toggleSounds() {
-	SOUNDS = !SOUNDS
-	if (SOUNDS) {
-		$('#iToggleSounds').attr("src", "img/Volume.jpg")
-		$('#iToggleSounds').attr("title", "Disable audio");
-	} else {
-		$('#iToggleSounds').attr("src", "img/Mute.png")
-		$('#iToggleSounds').attr("title", "Enable audio");
-	}
-}
-
-function resetFilter() {
-    trace("resetFilter()");
-    N_REGEX = 0;
-	updateScore();
-	$('#iCntRegex').html("");
-    IND = 0;
-    getWords();
-}
-
-function trace(txt) {
-    if (DEBUG) console.log(txt);
-}
-
-function toggleScores() {
-	trace("toggleScores()");
-    let len = $('#iSummary').text().length;
-    if (len > 0) {
-        $( "#dialog" ).dialog('close');
-    } else {
-        $( function() {
-            $( "#dialog" ).dialog({title: "Summary",width: "100%", position: 'top', maxheight: '1200pt'});
-        } );
-        $('#dialog').on("dialogclose", clearSummary);
-        getSummary();
-    }
-}
-
-function log(txt) {
-    console.log(txt);
 }
 
 function fromEnglishExternal() {
@@ -3780,26 +2762,8 @@ function hideTitle() {
 	$('#iDivTitle').css("display", "none");
 }
 
-function scrapeWholeClass() {
-	let allWords = [];
-	fetch('backend/getWords.php?start=1000&num=1000&class=' + encodeURI(CLASS), {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		allWords = json;		
-		fetchDefWords(allWords, INC)
-	})		
-}
-
 function fetchDefWords(allWords,ind) {
-	trace("fetchDefWord()");		
+	if (DEBUG) console.log("fetchDefWord()");		
 	let word = allWords[ind];
 	if (word === "anno dazumal") {
 		alert(1);

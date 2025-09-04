@@ -15,6 +15,7 @@ p {
 span {
 	color: dimgray;
 }
+
 #iNavDiv {
 	width: 100%;
 	height: 100%;
@@ -270,6 +271,7 @@ label {
 	height: 50pt;
 	margin-right: 1%;	
 	border-width: thick;
+	text-align: center;
 }
 .dropEl {
 	font-size: 24pt;
@@ -297,11 +299,15 @@ label {
 }
 
 .fraser {
-	color: blue;
+	color: skyblue;
 	cursor: pointer;
 }
 
 .link {
 	font-weight: bold;
 	cursor: pointer;
+}
+
+#iCountDiv {
+	margin-top: 5vh;
 }
