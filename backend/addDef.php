@@ -1,5 +1,7 @@
 <?php
+	include "error_catch.php";
 	$class = $_GET['class'];
+	$class = preg_replace("/_.*/","",$class);
 	$word = $_GET['word'];	
 	// No characters that are not visible to user to be present in storage key
 	$word = str_replace("­","",$word);
@@ -109,25 +111,6 @@
 		file_put_contents($name, $outDef);
 	}
 	
-	// Do not replace any existing score by default	
-	// If not existing score then default to "2". User can easily update this from web-interface	
-	$name = $path . $class . "-score";
-	if (!file_exists($name)) fopen($name, "w");			
-	$contents = file_get_contents($name, 'UTF-8');
-	$arr = json_decode($contents, true);
-	if (!array_key_exists($word, $arr)) {
-		$arr[$word] = "2";
-	}
-	ksort($arr);
-	$outScore = "{" . PHP_EOL;
-	$delimScore = "";
-	foreach ($arr as $key => $value)   {
-		$outScore .= $delimScore . '"' . $key . '": "' . $value . '"';
-		$delimScore = "," . PHP_EOL;
-	}
-	$outScore .= PHP_EOL . "}";
-	file_put_contents($name, $outScore);
-	
 	if ($class != "fraser") {
 		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
 		if (strlen($more) > 0) {
@@ -160,20 +143,12 @@
 		}
 		
 		if (strlen($meta) > 0) {			
-			$name = $path . $class . "-meta";
+			$name = $path . $class . "-conj";
 			$contents = file_get_contents($name, 'UTF-8');
-			$arr = json_decode($contents,true);			
-			$arr[$word] = $meta;			
-			ksort($arr);
-			$outMeta = "{" . PHP_EOL;
-			$delimMeta = "";
-			foreach($arr as $key => $value) {
-				$value = str_replace('"',"'",$value);
-				$outMeta .= $delimMeta . '"' . $key . '": "' . $value . '"';
-				$delimMeta = "," . PHP_EOL;
-			}
-			$outMeta .= PHP_EOL . "}";
-			file_put_contents($name, $outMeta);
+			$dict = json_decode($contents,true);
+			$dict[$word] = explode(" ",$meta);
+			ksort($dict);
+			$res = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 		}
 	}
 	echo json_encode("success");

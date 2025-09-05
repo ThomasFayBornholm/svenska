@@ -2,7 +2,7 @@
 	$path = getcwd() ."/../lists/";
 	$word = $_GET['word'];
 	$trail = "-def";
-	$classArr = array("verb", "adjektiv", "adverb", "substantiv_en", "substantiv_ett", "fraser", "plural", "preposition", "interjektion", "pronomen", "förled","slutled","räkneord","konjunktion","subjunktion","infinitiv");
+	$classArr = array("verb", "adjektiv", "adverb", "substantiv", "fraser", "plural", "preposition", "interjektion", "pronomen", "förled","slutled","räkneord","konjunktion","subjunktion","infinitiv");
 	$out = "";
 	// HTML escape chars
 	// Choose to do dynamic HTML formatting here as easier to handle each item directly
@@ -20,7 +20,19 @@
 				$del = "";
 			}
 			if (array_key_exists($word, $dict)) {
-				$outArr[$el] = $dict[$word];						
+				$outArr[$el]["word"] = $word;						
+				$outArr[$el]["def"] = $dict[$word];						
+				if ($el === "fraser") {
+					$outArr[$el]["meta"] = $word;						
+				}
+			}
+		}
+		$name = $el . "-meta";
+		$contents = file_get_contents($path . $name, 'UTF-8');
+		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
+		if ($dict) {
+			if (array_key_exists($word, $dict)) {
+				$outArr[$el]["meta"] = $dict[$word];						
 			}
 		}
 	}

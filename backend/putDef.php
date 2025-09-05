@@ -7,7 +7,6 @@
 	$word = str_replace("­","",$word);
 	$def = $_GET['def'];
 	$meta = $_GET['meta'];
-	$score = $_GET['score'];
 	$more = "";
 	if (isset($_GET['more'])) {
 		$more = $_GET['more'];
@@ -67,21 +66,6 @@
 			$outMore .= PHP_EOL . "}";
 			file_put_contents($path. $name, $outMore);
 		}
-	}
-	if (strlen($score) > 0) {
-		$name = $class . "-score";
-		$contents = file_get_contents($path . $name, 'UTF-8');
-		$arr = json_decode($contents,true);
-		$arr[$word] = $score;
-		ksort($arr);
-		$outScore = "{" . PHP_EOL;
-		$delimScore = "";
-		foreach ($arr as $key => $value)   {
-			$outScore .= $delimScore . '"' . $key . '": "' . $value . '"';
-			$delimScore = "," . PHP_EOL;
-		}
-		$outScore .= PHP_EOL . "}";
-		file_put_contents($path . $name, $outScore);
 	}
 	echo json_encode("success");
 ?>

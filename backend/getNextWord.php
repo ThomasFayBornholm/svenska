@@ -1,11 +1,9 @@
 <?php
 	$class = $_GET['class'];
 	$start = $_GET["start"];
-	$score = $_GET["score"];
 	$back = $_GET["back"];
 	$path = getcwd() ."/../lists/";
 	
-	$scoreName = $class . "-score";
 	$size = filesize($path . $class . "-only");
 	if ($size !== 0) {
 		$infile = fopen($path . $class . "-only", "r");
@@ -13,10 +11,6 @@
 		$words = preg_split("/\r\n|\r|\n/", $contents);
 	}
 
-	if (file_exists($scoreName)) {
-		$scoreContents = file_get_contents($path . $scoreName);
-		$dictScore = json_decode($scoreContents, JSON_UNESCAPED_UNICODE);						
-	}
 	$res = $words[$start];
 	$end = sizeof($words);
 	$inc = 1;	
@@ -33,15 +27,6 @@
 	for ($i = $start; $i < $end; $i = $i + $inc) {			
 		if ($i === -1) {
 			$res = $words[0];
-			break;
-		}
-		if (!array_key_exists($words[$i],$dictScore)) {
-			if ($score == 2) {
-				$res = $words[$i];
-				break;
-			}
-		} else if ($dictScore[$words[$i]] === $score) {			
-			$res = $words[$i];
 			break;
 		}
 	}
