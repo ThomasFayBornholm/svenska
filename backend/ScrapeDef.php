@@ -9,11 +9,11 @@
 		$enum = $id[strlen($id)-1];
 	}
 	$snr = $_GET["snr"];
-	$class = $_GET['class'];
 	// return an array to support cases where multiple entries exist
 	$out['meta'] = "";
 	$out['def'] = "";
 	$out['more'] = "";
+	$out["class"] = "";
 	$urlBaseId = 'https://svenska.se/tri/f_so.php?id=';
 	$url = $urlBaseId . $id;
 	if ($class === "plural" && strlen($snr) > 0) $url = 'https://svenska.se/tri/f_so.php?sok=' . $word;
@@ -89,6 +89,8 @@
 			array_push($splitLines, cut($line,'class="subtype">',"</div>"));
 		} else if (str_contains($line, 'class="orto">')) {
 			array_push($wordRootLines, cut($line,'class="orto">',"</span>"));			
+		} else if (str_contains($line, 'class="ordklass"')) {
+			$out["class"] = strip_tags($line);
 		}
 	}	
 	$i=0;
