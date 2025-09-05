@@ -143,22 +143,6 @@
 		}
 		
 		if (strlen($meta) > 0) {			
-			/*
-			$name = $path . $class . "-meta";
-			$contents = file_get_contents($name, 'UTF-8');
-			$arr = json_decode($contents,true);			
-			$arr[$word] = $meta;			
-			ksort($arr);
-			$outMeta = "{" . PHP_EOL;
-			$delimMeta = "";
-			foreach($arr as $key => $value) {
-				$value = str_replace('"',"'",$value);
-				$outMeta .= $delimMeta . '"' . $key . '": "' . $value . '"';
-				$delimMeta = "," . PHP_EOL;
-			}
-			$outMeta .= PHP_EOL . "}";
-			file_put_contents($name, $outMeta);
-			*/
 			$name = $path . $class . "-conj";
 			$contents = file_get_contents($name, 'UTF-8');
 			$dict = json_decode($contents,true);
