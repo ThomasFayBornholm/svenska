@@ -38,6 +38,7 @@ let LAST_WORD=""; // Allow user to go back to previous word
 let LAST_DEF_ENUM = 1; // The viewed definition is also remembered when recalling the previous word
 let LAST_SCROLL_Y = 0;
 let CUR_WORD="";
+let CUR_CONJ="";
 let CUR_DEF = "";
 let CUR_DEF_ENUM = 1;
 let N_DEF = 0;
@@ -820,6 +821,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 	if (DEBUG) console.log ("seekWord()");
 	$('#iInput').val("");
 	CUR_DEF_ENUM = 1; // Always show first defintion for a word the user has searched for
+	CUR_CONJ = "";
 	// For backwards navigation
 	
 	LAST_CLASS = CLASS;
@@ -840,6 +842,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 		}
 	})
 	let json = await res.json();
+	if (json.length > 0) CUR_WORD = word;
 	const res_conj = await fetch('backend/getConj.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -847,11 +850,12 @@ async function seekWord(word, link = false, lastEnum = false) {
 			'Content-Type': 'application/json'
 		}
 	})
-	CUR_WORD = word;
 	let json_conj = await res_conj.json();
 	let conj_keys = Object.keys(json_conj);
 	for(const k of conj_keys) {
 		json[k] = json_conj[k];
+		CUR_WORD = json[k]["word"];
+		CUR_CONJ = word;
 	}
 	let matches = Object.keys(json);
 	if (matches.length > 0) {
@@ -1885,7 +1889,7 @@ function fmtMeta(meta) {
 	let rep = "<span id='iWordRoot'"
 	rep += " onmouseover=highlight(this,event)";
 	// Remove any disambiguation suffix when more than one entry exists for root key
-	tmpCUR_WORD = CUR_WORD
+	tmpCUR_WORD = CUR_CONJ;
 	tmpCUR_WORD = tmpCUR_WORD.replace(/-.*/,"");
 	rep += "><b>" + tmpCUR_WORD + "</b></span>"
 	if (CLASS === "fraser") {
