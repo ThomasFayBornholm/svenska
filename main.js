@@ -822,6 +822,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 	$('#iInput').val("");
 	CUR_DEF_ENUM = 1; // Always show first defintion for a word the user has searched for
 	CUR_CONJ = "";
+	CUR_WORD = "";
 	// For backwards navigation
 	
 	LAST_CLASS = CLASS;
@@ -842,7 +843,8 @@ async function seekWord(word, link = false, lastEnum = false) {
 		}
 	})
 	let json = await res.json();
-	if (json.length > 0) CUR_WORD = word;
+	let exact_matches = Object.keys(json);
+	if (exact_matches.length > 0) CUR_WORD = word;
 	const res_conj = await fetch('backend/getConj.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -854,7 +856,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 	let conj_keys = Object.keys(json_conj);
 	for(const k of conj_keys) {
 		json[k] = json_conj[k];
-		CUR_WORD = json[k]["word"];
+		if (exact_matches.length === 0) CUR_WORD = json[k]["word"];
 		CUR_CONJ = word;
 	}
 	let matches = Object.keys(json);
@@ -1889,7 +1891,7 @@ function fmtMeta(meta) {
 	let rep = "<span id='iWordRoot'"
 	rep += " onmouseover=highlight(this,event)";
 	// Remove any disambiguation suffix when more than one entry exists for root key
-	tmpCUR_WORD = CUR_CONJ;
+	CUR_CONJ.length > 0 ? tmpCUR_WORD = CUR_CONJ : tmpCUR_WORD = CUR_WORD;
 	tmpCUR_WORD = tmpCUR_WORD.replace(/-.*/,"");
 	rep += "><b>" + tmpCUR_WORD + "</b></span>"
 	if (CLASS === "fraser") {
@@ -1916,7 +1918,6 @@ function fmtMeta(meta) {
 	tmpMeta = "<i>" + tmpMeta + "</i><br>"
 	let pretty_class = CLASS.replace(/_.*/,"");
 	tmpMeta += "<br>" + pretty_class + "<br>";
-	// Multi-line meta information get visual divider from the following definition text.
 	tmpMeta += "---------------------<br>";
 	return tmpMeta;
 }
@@ -2607,6 +2608,7 @@ function inc_match(inc) {
 		setClass(key);
 		// This implies unique keys return from getDefAll
 		CUR_DEF = GLOBAL.cur_matches[CLASS]["def"];
+		CUR_WORD = GLOBAL.cur_matches[CLASS]["word"];
 		N_DEFS = nDefs();
 		let def = "";
 		if (N_DEFS > 1) {
