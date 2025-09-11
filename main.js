@@ -872,6 +872,8 @@ async function seekWord(word, link = false, lastEnum = false) {
 		if (def.length != 0) displayDef(def);
 		let meta = json[CLASS]["meta"];
 		if (meta.length != 0) displayMeta(meta);
+	} else {
+		$('#iInput').attr("placeholder","No match for '" + word + "'");
 	}
 	if (matches.length > 1) {
 		$('#iInput').attr("placeholder",matches.length + " matches, navigate with PageUp/Down");
