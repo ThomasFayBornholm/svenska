@@ -149,6 +149,14 @@
 			$dict[$word] = explode(" ",$meta);
 			ksort($dict);
 			$res = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+
+			$name = $path . $class . "-meta";
+			$contents = file_get_contents($name, 'UTF-8');
+			$dict = json_decode($contents,true);
+			$tmp = $meta  . "<br>"  . $class;
+			$dict[$word] = $tmp;
+			ksort($dict);
+			$res = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 		}
 	}
 	echo json_encode("success");

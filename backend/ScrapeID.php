@@ -55,15 +55,23 @@
 	$tmpID = "";
 	$tmpSNR = "";
 	// Extract IDs
-	if (count($responseArr) > 25) {
+	if (count($responseArr) > 2) {
 		// Full definition information
 		foreach($responseArr as $l) {	
-			if (str_contains($l, "Till SO")) {		
+			if (str_contains($l, "Till SO")) {
 				$start = strpos($l,$find) + strlen($find);
 				if ($start) {
 					$idLen = 6;									
 					$tmpID = substr($l,$start,$idLen);
 					$tmpID = str_replace("&p","",$tmpID);
+					array_push($tmpArrID,$tmpID);
+				}
+			} else if (str_contains($l, "/so/?id=") && str_contains($l,"wordclass")) {
+				$posStart = strpos($l,"/so/?id=");
+				if ($posStart != -1) {
+					$posStart += strlen("/so/?id=");
+					$posEnd = strpos($l,"&pz=3",$posStart);
+					$tmpID = substr($l,$posStart,$posEnd-$posStart);
 					array_push($tmpArrID,$tmpID);
 				}
 			}
