@@ -19,7 +19,7 @@ if (count($id_lines) != 1) {
 }
 
 $id_line = reset($id_lines);
-$regex_id = '/id=(\d+[_\d]?)/';
+$regex_id = '/id=(\d+[_\d]{2}?)/';
 if (preg_match($regex_id, $id_line, $matches)) {
 	$id = $matches[1];
 } else {
