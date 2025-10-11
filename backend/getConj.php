@@ -6,6 +6,7 @@ include "error_catch.php";
 	
 	$out = array();
 	$classArr = array("substantiv","adjektiv","pronomen","verb");
+	$out["matches"] = [];
 	foreach ($classArr as $el) {			
 		$name = $el . $trail;
 		// Get word list from "-only" listing
@@ -18,23 +19,23 @@ include "error_catch.php";
 				$conjugations = array_slice($conjugations,1); 
 			}
 			if (in_array($word, $conjugations)) {					
-				$out[$el] = array();
-				$out[$el]["conj"]= $conjugations;
+				$tmp = [];
+				$tmp["conj"]= $conjugations;
+				$tmp["class"] = $el;
 				$name = $el . "-def";
 				$contents_def = file_get_contents($path . $name, 'UTF-8');
 				$defDict = json_decode($contents_def, JSON_UNESCAPED_UNICODE);
 				if (array_key_exists($key, $defDict)) {
-					$out[$el]["def"] = $defDict[$key];
+					$tmp["def"] = $defDict[$key];
 				}
 				$name = $el . "-meta";
 				$contents_meta = file_get_contents($path . $name, 'UTF-8');
 				$metaDict = json_decode($contents_meta, JSON_UNESCAPED_UNICODE);
 				if (array_key_exists($key, $metaDict)) {
-					$out[$el]["meta"] = $metaDict[$key];
+					$tmp["meta"] = $metaDict[$key];
 				}	
-				$out[$el]["word"] = $key;
-				echo json_encode($out);
-				return;
+				$tmp["word"] = $key;
+				$out["matches"][$el . "_" . $key] = $tmp;
 			}
 		}
 	}

@@ -1,12 +1,30 @@
 <?php
+function get_details($word, $dict,$class) {
+	$tmp["word"] = $word;
+	$tmp["def"] = $dict[$word];
+	$tmp["class"] = $class;
+	if ($el === "fraser") {
+		$tmp["meta"] = $word;						
+	}
+	if ($el === "fraser") {
+		$tmp["meta"] = $word;						
+	} else {
+		$path = getcwd() ."/../lists/";
+		$meta_name = $path . $class . "-meta";
+		$contents = file_get_contents($meta_name, 'UTF-8');
+		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
+		if ($dict) {
+			if (array_key_exists($word, $dict)) {
+				$tmp["meta"] = $dict[$word];						
+			}
+		}
+	}
+	return $tmp;
+}
 	$path = getcwd() ."/../lists/";
 	$word = $_GET['word'];
 	$trail = "-def";
 	$classArr = array("verb", "adjektiv", "adverb", "substantiv", "fraser", "plural", "preposition", "interjektion", "pronomen", "förled","slutled","räkneord","konjunktion","subjunktion","infinitiv");
-	$out = "";
-	// HTML escape chars
-	// Choose to do dynamic HTML formatting here as easier to handle each item directly
-	$tmp = "_c_:<br>";
 	// Should it be associate array. Probably yes
 	$outArr = array();
 	foreach ($classArr as $el) {
@@ -20,21 +38,22 @@
 				$del = "";
 			}
 			if (array_key_exists($word, $dict)) {
-				$outArr[$el]["word"] = $word;						
-				$outArr[$el]["def"] = $dict[$word];						
-				if ($el === "fraser") {
-					$outArr[$el]["meta"] = $word;						
-				}
+				$tmp = get_details($word, $dict,$el);
+				$outArr[$el . "_" . $word] =  $tmp;
 			}
-		}
-		$name = $el . "-meta";
-		$contents = file_get_contents($path . $name, 'UTF-8');
-		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
-		if ($dict) {
-			if (array_key_exists($word, $dict)) {
-				$outArr[$el]["meta"] = $dict[$word];						
+			$word2 = $word . "-2";
+			if (array_key_exists($word2,$dict)) {
+				$tmp = get_details($word2, $dict,$el);
+				$outArr[$el . "_" . $word2] = $tmp;
 			}
+			$word3 = $word . "-3";
+			if (array_key_exists($word3,$dict)) {
+				$tmp = get_details($word3, $dict,$el);
+				$outArr[$el . "_" . $word3] = $tmp;
+			} 
 		}
 	}
-	echo json_encode($outArr);
+	$out["count"] = count($outArr);
+	$out["matches"] = $outArr;
+	echo json_encode($out);
 ?>

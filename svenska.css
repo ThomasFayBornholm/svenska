@@ -266,8 +266,8 @@ label {
 
 .inputSearch {
 	background: dimgray;
-	font-size: 32pt;
-	width: 32%;
+	font-size: 2em;
+	width: 40vw;
 	height: 50pt;
 	margin-right: 1%;	
 	border-width: thick;
@@ -310,4 +310,8 @@ label {
 
 #iCountDiv {
 	margin-top: 5vh;
+}
+
+.suggestions {
+	height: 12vh;
 }

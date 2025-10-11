@@ -99,57 +99,6 @@ function setN_DEF(n_def) {
 	N_DEF = n_def;
 }
 
-function setN_CUR() {
-	if (DEBUG) console.log("setN_CUR()")
-	if (CLASS === "adjektiv") {
-		N_CUR = N_ADJ;
-	} else if (CLASS === "verb") {
-		N_CUR = N_VERB;
-	} else if (CLASS === "adverb") {
-		N_CUR = N_ADVERB;
-	} else if (CLASS === "substantiv_en") {
-		N_CUR = N_EN;
-	} else if (CLASS === "substantiv_ett") {
-		N_CUR = N_ETT;
-	} else if (CLASS === "fraser") {
-		N_CUR = N_FRASER;
-	} else if (CLASS === "preposition") {
-		N_CUR = N_PREPOSITION;
-	} else if (CLASS === "interjektion") {
-		N_CUR = N_INTERJEKTION;
-	} else if (CLASS === "pronomen") {
-		N_CUR = N_PRONOMEN;
-	} else if (CLASS === "förled") {
-		N_CUR = N_PREFIX;
-	} else if (CLASS === "plural") {
-		N_CUR = N_PLURAL;
-	} else if (CLASS === "slutled") {
-		N_CUR = N_SLUTLED;
-	} else if (CLASS === "räkneord") {
-		N_CUR = N_NUMMER;
-	} else if (CLASS === "konjunktion") {
-		N_CUR = N_KONJUNKTION;
-	} else if (CLASS === "subjunktion") {
-		N_CUR = N_SUBJUNKTION;
-	} else if (CLASS === "infinitiv") {
-		N_CUR = N_INFINITIV;
-	} else if (CLASS === "artikel") {
-		N_CUR = N_ARTIKEL;
-	} else if (CLASS === "all") {
-		N_CUR = N_ALL;
-	} else {
-		N_CUR = N_ALL;
-	}
-	
-	if (CLASS === "all") {
-		$('#iCnt').text("");		
-	} else {
-		$('#iCnt').text(N_CUR.toLocaleString('sv'));		
-	}	
-	
-	if (DEBUG) console.log("setN_CUR(); N_CUR = " + N_CUR);
-}
-
 function fmtDef(def) {
 	if (DEBUG) console.log("fmtDef()")
 	for (i = 0; i < 24; i++) {
@@ -722,7 +671,6 @@ function wordCount() {
 		N_SUBJUNKTION = json["subjunktion"];
 		N_INFINITIV = json["infinitiv"];
 		N_ARTIKEL = json["artikel"];
-		setN_CUR();		
 		$('#iInput').attr("placeholder",Math.round(N_ALL/1000,0) + "k searchable words");
 		})
 	.catch(error => {
@@ -823,6 +771,9 @@ async function seekWord(word, link = false, lastEnum = false) {
 	CUR_DEF_ENUM = 1; // Always show first defintion for a word the user has searched for
 	CUR_CONJ = "";
 	CUR_WORD = "";
+	GLOBAL.cur_matches = [];
+	GLOBAL.cur_matches_count = 0;
+	GLOBAL.cur_match_inc = 0;
 	// For backwards navigation
 	
 	LAST_CLASS = CLASS;
@@ -843,8 +794,9 @@ async function seekWord(word, link = false, lastEnum = false) {
 		}
 	})
 	let json = await res.json();
-	let exact_matches = Object.keys(json);
-	if (exact_matches.length > 0) CUR_WORD = word;
+	// Combine exact (root) matches and conjugation/declination matches
+	let exact_matches = json["matches"];
+	if (Object.keys(exact_matches).length > 0) CUR_WORD = word;
 	const res_conj = await fetch('backend/getConj.php?word=' + word, {
 		method: 'get',
 		mode: 'cors',
@@ -852,32 +804,38 @@ async function seekWord(word, link = false, lastEnum = false) {
 			'Content-Type': 'application/json'
 		}
 	})
+	let matches = exact_matches;
 	let json_conj = await res_conj.json();
-	let conj_keys = Object.keys(json_conj);
+	conj_matches = json_conj["matches"];
+	conj_keys = Object.keys(conj_matches);
 	for(const k of conj_keys) {
-		json[k] = json_conj[k];
-		if (exact_matches.length === 0) CUR_WORD = json[k]["word"];
+		if (!(k in Object.keys(matches))) {
+			matches[k] = conj_matches[k];
+		}
+		if (CUR_WORD === "") CUR_WORD = conj_matches[k]["word"];
 		CUR_CONJ = word;
 	}
-	let matches = Object.keys(json);
-	if (matches.length > 0) {
-		GLOBAL.cur_matches = json;
-		GLOBAL.cur_matches_count = matches.length;
+	let match_keys = Object.keys(matches);
+	if (match_keys.length > 0) {
+		GLOBAL.cur_matches = matches;
+		GLOBAL.cur_matches_count = match_keys.length;
 		GLOBAL.match_inc = 0;
-		let tmp_class = matches[0];
+		let first_match_key = match_keys[0];
+		let tmp_class = GLOBAL.cur_matches[first_match_key]["class"];
 		setClass(tmp_class);
-		CUR_DEF = GLOBAL.cur_matches[CLASS]["def"];
+		CUR_DEF = GLOBAL.cur_matches[first_match_key]["def"];
 		N_DEFS = nDefs();
 		let def = getDefInd(CUR_DEF_ENUM);
 		if (def.length != 0) displayDef(def);
-		let meta = json[CLASS]["meta"];
+		let meta = GLOBAL.cur_matches[first_match_key]["meta"];
 		if (meta.length != 0) displayMeta(meta);
 	} else {
 		$('#iInput').attr("placeholder","No match for '" + word + "'");
 	}
-	if (matches.length > 1) {
-		$('#iInput').attr("placeholder",matches.length + " matches, navigate with PageUp/Down");
+	if (GLOBAL.cur_matches_count > 1) {
+		$('#iInput').attr("placeholder",GLOBAL.cur_matches_count + " matches, navigate with PageUp/Down");
 	}
+	$('#iSuggestions').text(CUR_WORD);
 	focusInput();
 }
 
@@ -928,7 +886,6 @@ function setClass(c, showMore = false) {
 			$('#iDefProgContainer').css("visibility","hidden");
 		}
 		CLASS = c;
-		setN_CUR();	
 	}
 }
 
@@ -2227,7 +2184,7 @@ function round(dec, places) {
 	return res;
 }
 
-function fetchDef() {
+async function fetchDef() {
 	if (DEBUG) console.log("FUNC fetchDef()");
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
@@ -2237,72 +2194,49 @@ function fetchDef() {
 	let rootWord = CUR_WORD;
 	if (rootWord.indexOf("-") != -1) {
 		rootWord = rootWord.slice(0,rootWord.indexOf("-"));
-	}
-	fetch('backend/ScrapeID.php?word=' + forScrapeID(word) + '&class=' + CLASS + "&debug=0", {
-		method: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-	.then(response => {
-		return response.json()
-	})
-	.then(json => {	
-		let id = json["id"];
-		let snr = json["snr"]		
-		// 'debug' argument shows output from external svenska.se reference
-		let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word) + "&snr=" + snr + '&id='  + id + '&class=' + CLASS + '&debug=0';
+		let backend = 'backend/ScrapeDefII.php?word=' + forScrapeDef(word);
 		if (CLASS === "fraser") {	
 			let query = $('#iInput').val();
 			query = query.replaceAll("�",""); // No invisible chars to user present in keys
 			backend = 'backend/ScrapeIdiom.php?query=' + query
 		}
 		
-		fetch(backend, {
+		const res = await fetch(backend, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
-		.then(response => {
-			return response.json();
-		})	
-		.then(json => {		
-			if (CLASS === "fraser") {			
-				let tmp ="";
-				let keys = Object.keys(json);
-				del = "";
-				for(let i = 0; i < keys.length; i++) {
-					tmp += del + keys[i] + "%% " + json[keys[i]];
-					del = "\n";
-				}			
-				$('#iDefDiv').css("display", "block");
-				$('#iPutDef').css("display", "block");
-				$('#iDivMore').css("display", "none");
-				focusDef();
-				$('#iDefText').val(tmp);					
+		const json = await res.json();
+		if (CLASS === "fraser") {			
+			let tmp ="";
+			let keys = Object.keys(json);
+			del = "";
+			for(let i = 0; i < keys.length; i++) {
+				tmp += del + keys[i] + "%% " + json[keys[i]];
+				del = "\n";
+			}			
+			$('#iDefDiv').css("display", "block");
+			$('#iPutDef').css("display", "block");
+			$('#iDivMore').css("display", "none");
+			focusDef();
+			$('#iDefText').val(tmp);					
 				
-			} else {
-				if (! json.hasOwnProperty("error")) {
+		} else {
+			if (! json.hasOwnProperty("error")) {
+				for(const el of json["matches"]) {
 					const regex = /-(\[)+[2-9](\])+/;
 					let key = json["key"].replace(regex, "");				
 					key = key.replaceAll("?","");				
 					if (key[0] === "-") key = key.substr(1);
-					addDef(key,json['meta'],json['def'],json['more'], json["class"]);		
-				} else {
-					$('#iMeta').html("Failed to find match");
+					addDef(key,el['meta'],el['def'],el['more'], el["class"]);		
 				}
+			} else {
+				$('#iMeta').html("Failed to find match");
 			}
-		})
-		.catch(error => {
-			console.log(error);
-		})
-	})
-	.catch(error => {
-		console.log(error);
-	})
+		}
+	}
 }
 
 function getRaw() {
@@ -2358,7 +2292,7 @@ function shortenClass() {
 }
 
 function nDefs() {
-	if (DEBUG) console.log("FUNC nDefs()")
+	if (DEBUG) console.log("FUNC ()")
 	let n = 0;	
 	let regex = /^\d+/;
 	let tmpArr = CUR_DEF.split("<br>");
@@ -2609,8 +2543,8 @@ function inc_match(inc) {
 		let key = Object.keys(GLOBAL.cur_matches)[GLOBAL.match_inc];
 		setClass(key);
 		// This implies unique keys return from getDefAll
-		CUR_DEF = GLOBAL.cur_matches[CLASS]["def"];
-		CUR_WORD = GLOBAL.cur_matches[CLASS]["word"];
+		CUR_DEF = GLOBAL.cur_matches[key]["def"];
+		CUR_WORD = GLOBAL.cur_matches[key]["word"];
 		N_DEFS = nDefs();
 		let def = "";
 		if (N_DEFS > 1) {
@@ -2620,5 +2554,29 @@ function inc_match(inc) {
 		}
 		displayDef(def);
 		displayMeta(GLOBAL.cur_matches[CLASS]["meta"]);
+	}
+}
+
+async function checkCompletions(ev) {
+	if (DEBUG) console.log("FUNC checkCompletions(ev)");
+	if (ev.key === "Enter") return;
+	let input = $('#iInput').val();
+	if (input.length > 2) {
+		const res = await fetch('backend/getCompletions.php?txt=' + input, {
+			method: 'GET',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		let json = await res.json();
+		let out_html = "";
+		let delim = ""
+		let entries = json["matches"];
+		for (const entry of entries) {
+			out_html.length > 0 ? delim = "<br>" : delim = "";
+			out_html += delim + entry;
+		}
+		$('#iSuggestions').html(out_html);
 	}
 }

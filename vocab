@@ -19,7 +19,7 @@
 		display: inline-block;
 		width: 5em;
 	}
-	</style>	
+	</style>
 </head>
 <body onload="startup()" onkeydown="bodyListener(event)">
 <div >
@@ -31,9 +31,10 @@
 	<form class="centred" onsubmit="newInputWrapper(event)">	
 		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)"
 		title="Go back">
-		<input id="iInput" placeholder="Sök ord/fras här" oncontextmenu="onlineLookup(this,event)" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)">				
+		<input id="iInput" placeholder="Sök ord/fras här" oncontextmenu="onlineLookup(this,event)" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)" onkeyup="checkCompletions(event)">				
 		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" ondblclick="fromEnglishExternal()" oncontextmenu="fromSwedish(event)" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()"
 		title="Translate from English to Swedish">
+		<p id="iSuggestions" class="suggestions"></p>
 		<div id="dialog" title="Basic dialog">
 			<p id="iSummary" class="summary"></p>
 		</div>
