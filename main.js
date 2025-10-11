@@ -129,7 +129,7 @@ function putMoreMany(moreArr, cur) {
 	})
 }
 
-function addDef(key, meta, def, more, word_class, fast = false) {
+async function addDef(key, meta, def, more, word_class, fast = false) {
 	if (DEBUG) console.log("addDef(meta,def,more)");
 	$('#iMeta').html("adding... '<b>" + key + "</b>'");
 	$('#iParDef').html("");
@@ -146,42 +146,27 @@ function addDef(key, meta, def, more, word_class, fast = false) {
 		more = "";
 	}
 	let url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + word_class; 
-	fetch(url, {
+	const res = await fetch(url, {
 		method: 'get',
 		mode: 'cors',
 		headers: {
 			'Content-Type': 'application/json'
 		}
 	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		if (CLASS === "fraser") $('#iInput').val(key);
-		CUR_DEF_ENUM = 1;
-	})
-	.catch(error => {
-		console.log(error);
-	})
+	const json = await res.json();
+	if (CLASS === "fraser") $('#iInput').val(key);
+	CUR_DEF_ENUM = 1;
 	if (more.length === 0) {
-		url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=&def=&more=' + tmpMore + '&class=' + CLASS; 
-		fetch(url, {
+		url = 'backend/addDef.php?class=' + CLASS + '&word=' + key.replace("/-[1-9]","") + '&meta=&def=&more=' + tmpMore; 
+		const res = await fetch(url, {
 			method: 'get',
 			mode: 'cors',
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {
-			console.log(json);
-			$('#iMeta').html("addded '<b>" + key + "</b>'");
-		})
-		.catch(error => {
-			console.log(error);
-		})
+		const json = await res.json();
+		$('#iMeta').html("addded '<b>" + key + "</b>'");
 	}
 }
 
@@ -2012,7 +1997,7 @@ function processKeyDown(ev) {
 	} else if (ev.key === "Delete") {
 		removeWord();
 	} else if (ev.key === "F1") {
-		//showHelp
+		showExternal();	
 	} else if (ev.key === "*") {
 		ev.preventDefault();
 		fromEnglish();
@@ -2191,50 +2176,45 @@ async function fetchDef() {
 	$('#iMore').html("");
 	let word = $('#iInput').val();
 	if (word.length === 0) word = CUR_WORD;
-	let rootWord = CUR_WORD;
-	if (rootWord.indexOf("-") != -1) {
-		rootWord = rootWord.slice(0,rootWord.indexOf("-"));
-		let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word);
-		if (CLASS === "fraser") {	
-			let query = $('#iInput').val();
-			query = query.replaceAll("�",""); // No invisible chars to user present in keys
-			backend = 'backend/ScrapeIdiom.php?query=' + query
+	let backend = 'backend/ScrapeDef.php?word=' + forScrapeDef(word);
+	if (CLASS === "fraser") {	
+		let query = $('#iInput').val();
+		query = query.replaceAll("�",""); // No invisible chars to user present in keys
+		backend = 'backend/ScrapeIdiom.php?query=' + query
+	}
+	
+	const res = await fetch(backend, {
+		method: 'get',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
 		}
-		
-		const res = await fetch(backend, {
-			method: 'get',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
+	})
+	const json = await res.json();
+	if (CLASS === "fraser") {	
+		let tmp ="";
+		let keys = Object.keys(json);
+		del = "";
+		for(let i = 0; i < keys.length; i++) {
+			tmp += del + keys[i] + "%% " + json[keys[i]];
+			del = "\n";
+		}			
+		$('#iDefDiv').css("display", "block");
+		$('#iPutDef').css("display", "block");
+		$('#iDivMore').css("display", "none");
+		focusDef();
+		$('#iDefText').val(tmp);					
+			
+	} else {
+		if (! json.hasOwnProperty("error")) {
+			for(const el of json["matches"]) {
+				let key = word;
+				key = key.replaceAll("?","");				
+				if (key[0] === "-") key = key.substr(1);
+				adddDef(key,el['meta'],el['def'],el['more'], el["class"]);		
 			}
-		})
-		const json = await res.json();
-		if (CLASS === "fraser") {			
-			let tmp ="";
-			let keys = Object.keys(json);
-			del = "";
-			for(let i = 0; i < keys.length; i++) {
-				tmp += del + keys[i] + "%% " + json[keys[i]];
-				del = "\n";
-			}			
-			$('#iDefDiv').css("display", "block");
-			$('#iPutDef').css("display", "block");
-			$('#iDivMore').css("display", "none");
-			focusDef();
-			$('#iDefText').val(tmp);					
-				
 		} else {
-			if (! json.hasOwnProperty("error")) {
-				for(const el of json["matches"]) {
-					const regex = /-(\[)+[2-9](\])+/;
-					let key = json["key"].replace(regex, "");				
-					key = key.replaceAll("?","");				
-					if (key[0] === "-") key = key.substr(1);
-					addDef(key,el['meta'],el['def'],el['more'], el["class"]);		
-				}
-			} else {
-				$('#iMeta').html("Failed to find match");
-			}
+			$('#iMeta').html("Failed to find match");
 		}
 	}
 }
@@ -2487,6 +2467,7 @@ function inc_match(inc) {
 async function checkCompletions(ev) {
 	if (DEBUG) console.log("FUNC checkCompletions(ev)");
 	if (ev.key === "Enter") return;
+	if (ev.key === "F2") return``
 	let input = $('#iInput').val();
 	if (input.length > 2) {
 		const res = await fetch('backend/getCompletions.php?txt=' + input, {
@@ -2505,5 +2486,29 @@ async function checkCompletions(ev) {
 			out_html += delim + entry;
 		}
 		$('#iSuggestions').html(out_html);
+	}
+}
+
+async function showExternal() {
+	console.log("FUNC showExternal");
+	let inp = $('#iInput').val();
+	if (inp.length === 0) return;
+	const res = await fetch('backend/getID.php?word=' + inp, {
+		method: 'GET',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+
+	const json = await res.json();
+	const status = json["status"];
+	if (json.status.includes("Error")) {
+		const base_url = "https://svenska.se/so/?sok=";
+		window.open(base_url + inp);
+	} else {
+		const base_url = "https://svenska.se/so/?id=";
+		const id = json["id"];
+		window.open(base_url + id);
 	}
 }
