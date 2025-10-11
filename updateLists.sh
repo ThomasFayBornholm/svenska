@@ -5,6 +5,4 @@ git add lists/*-def
 git add lists/*-meta
 git add lists/*-score
 git add lists/*-more
-git add sounds/mapping
-git add lists/current-rating
 git commit -m "Updates word listings."
