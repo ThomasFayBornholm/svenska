@@ -1819,7 +1819,8 @@ function fmtMeta(meta) {
 		let tmpMeta = rep = "<i>" + rep + "</i><br>"
 		return tmpMeta
 	}
-	const regex = new RegExp("\\p" + tmpCUR_WORD + "\\p","g");
+	//const regex = new RegExp("\\b" + tmpCUR_WORD + "\\b","gu");
+	const regex = new RegExp(tmpCUR_WORD + "\\b", "gu");
 	meta = meta.replace(regex, "<b>" + tmpCUR_WORD + "</b>");
 	metaArr = meta.split("<br>");
 	let tmpMeta = "";
