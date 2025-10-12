@@ -2178,9 +2178,19 @@ async function fetchDef() {
 		*/	
 	} else {
 		if (json.matches.length > 0) {
-			for(const el of json.matches) {
-				let key = word;
-				addDef(key,el['meta'],el['def'],el['more'], el["class"],el["options"]);		
+			added_keys = [];
+			classes = [];
+			for(const el of json["matches"]) {
+				if (!classes.includes(el["class"])) classes.push(el["class"]);
+			}
+			for(const c of classes) {
+				added_keys[c] = [];
+			}
+			let delay = 0;
+			for(const el of json["matches"]) {
+				let key = get_unique_key(word,el["class"],added_keys);
+				setTimeout(addDef,delay,key,el['meta'],el['def'],el['more'], el["class"],el["options"]);		
+				delay += 1000;
 			}
 			$('#iMeta').html("Finised adding entries for '<b>" + word + "</b>'");
 			seekWord(word);
@@ -2188,6 +2198,24 @@ async function fetchDef() {
 			$('#iMeta').html("Failed to find match");
 		}
 	}
+}
+
+function get_unique_key(key,word_class,added_keys) {
+	if (added_keys[word_class].includes(key)) {
+		// Make unique keys by addition of suffixes "_2", "_3", etc. as needed
+		// Increment suffix
+		let last = added_keys[word_class].at(-1);
+		const regex = /-\d{1}$/;
+		if (regex.test(last)) {
+			let ind = last.at(-1);
+			console.log(last,ind)
+			key = last.slice(0,-1) + (Number(ind) + 1);
+		} else {
+			key = key + "-2";
+		}
+	}
+	added_keys[word_class].push(key);
+	return key;
 }
 
 function getRaw() {
@@ -2414,6 +2442,7 @@ function inc_match(inc) {
 	if (DEBUG) console.log("FUNC inc_match(inc)");
 	if (DEBUG) console.log("  PARAM inc = " + inc);
 	let cur_match_inc = GLOBAL.match_inc;
+	CUR_DEF_ENUM = 1;
 	GLOBAL.match_inc += inc;
 	if (GLOBAL.match_inc < 0) GLOBAL.match_inc = 0;
 	if (GLOBAL.match_inc > GLOBAL.cur_matches_count-1) GLOBAL.match_inc = GLOBAL.cur_matches_count- 1;

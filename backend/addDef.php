@@ -15,79 +15,82 @@
 	
 	// Add word to listing if not already available
 	$path = getcwd() . "/../lists/";
-	$fileName = $path . $class . "-only";
-	$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
-	if (filesize($fileName) === 0) {
-		$contents = "";
-	} else {
-		$contents = fread($infile, filesize($fileName));
-	}
-	fclose($infile);
-	$outfile = fopen($fileName, 'w') or die("Could not open file: " . $fileName);
-	
-	$elements = preg_split("/\r\n|\r|\n/", $contents);
-	$out = "";	
-	$placed = false;
-	$del = "";
-	// First in list case	
-	
-	$del = "";
-	foreach($elements as $w) {				
-		// Insertion point
-		if ($w === $word) {			
-			$out .= $del . $word;			
-			$placed = true;
-		} else if ($w > $word && !$placed) {
-			$out .= $del . $word;				
-			$out .= $del . $w;
-			$placed = true;
-		} else {				
-			$out .= $del . $w;				
-		}
-		$del = "\n";
-	}
-	
-	// For case where word is last in alphabetical sorting
-	if ($placed === false) {
-		$out = $out . $del . $word;
-	}
-	
-	fwrite($outfile,$out);
-	fclose($outfile);
-	
-	// Add word to all listing if needed
-	$allName = $path . "all-only";
-	$allFile = fopen($allName, "r") or die ("Could not open file: " . $allName);
-	$contents = fread($allFile, filesize($allName));
-	fclose($allFile);
-	$elements = preg_split("/\r\n|\r|\n/", $contents);
-	$out = "";
-	$placed = false;
-	$del = "";
-	
-	foreach($elements as $w) {
-		// Insertion point
-		if ($w === $word) {
-			$out = $out . $del . $word;
-			$placed = true;
-		} else if ($w > $word && !$placed) {
-			$out = $out . $del . $word;
-			$del = "\n";
-			$out = $out . $del. $w;
-			$placed = true;
+	if (! str_contains($word, "-")) {
+
+		$fileName = $path . $class . "-only";
+		$infile = fopen($fileName, "r") or die("Could not open file: " . $fileName);
+		if (filesize($fileName) === 0) {
+			$contents = "";
 		} else {
-			$out = $out . $del . $w;
+			$contents = fread($infile, filesize($fileName));
+		}
+		fclose($infile);
+		$outfile = fopen($fileName, 'w') or die("Could not open file: " . $fileName);
+		
+		$elements = preg_split("/\r\n|\r|\n/", $contents);
+		$out = "";	
+		$placed = false;
+		$del = "";
+		// First in list case	
+		
+		$del = "";
+		foreach($elements as $w) {				
+			// Insertion point
+			if ($w === $word) {			
+				$out .= $del . $word;			
+				$placed = true;
+			} else if ($w > $word && !$placed) {
+				$out .= $del . $word;				
+				$out .= $del . $w;
+				$placed = true;
+			} else {				
+				$out .= $del . $w;				
+			}
 			$del = "\n";
 		}
+		
+		// For case where word is last in alphabetical sorting
+		if ($placed === false) {
+			$out = $out . $del . $word;
+		}
+		
+		fwrite($outfile,$out);
+		fclose($outfile);
+		
+		// Add word to all listing if needed
+		$allName = $path . "all-only";
+		$allFile = fopen($allName, "r") or die ("Could not open file: " . $allName);
+		$contents = fread($allFile, filesize($allName));
+		fclose($allFile);
+		$elements = preg_split("/\r\n|\r|\n/", $contents);
+		$out = "";
+		$placed = false;
+		$del = "";
+		
+		foreach($elements as $w) {
+			// Insertion point
+			if ($w === $word) {
+				$out = $out . $del . $word;
+				$placed = true;
+			} else if ($w > $word && !$placed) {
+				$out = $out . $del . $word;
+				$del = "\n";
+				$out = $out . $del. $w;
+				$placed = true;
+			} else {
+				$out = $out . $del . $w;
+				$del = "\n";
+			}
+		}
+		// If word is alphabetically last in listing
+		if ($placed === false) {
+			$out = $out . $del . $word;
+		}
+		
+		$outfileAll = fopen($allName, "w") or die("Could not open file: " . $allName);
+		fwrite($outfileAll, $out);
+		fclose($outfileAll);
 	}
-	// If word is alphabetically last in listing
-	if ($placed === false) {
-		$out = $out . $del . $word;
-	}
-	
-	$outfileAll = fopen($allName, "w") or die("Could not open file: " . $allName);
-	fwrite($outfileAll, $out);
-	fclose($outfileAll);
 				
 	// Populate 'meta', 'def' and 'more' listings, overwrite performed if entry already exists
 	$trail = "-def";

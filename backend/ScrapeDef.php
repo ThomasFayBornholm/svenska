@@ -55,7 +55,7 @@ $regex_grammar = '/<span class="fkomblock">(.*?)<\/a><\/span>/s';
 $regex_def_txt = '/<span class="def">(.*?)<\/span/s';
 $regex_def_aux= '/<span class="deft">(.*?)<\/span/s';
 $regex_dec = '/(<span class="bojning_inline".*?<\/span><\/span>)/';
-$regex_related='/<span class="hvtyp">(.*?)<\/span>.*?>(.*?)<\/a>/s';
+$regex_related='/(<div class="hv">.*?<\/div>)/s';
 $regex_compound = '/<div class="mxblocklx">(<span class="mx">.*?)<\/div>/';
 $regex_history = '/<span class="etymologi".*?>(.*?)<\/div>/s';
 $regex_usage = '/(<span class="vt">.*?)<\/div>/s';
@@ -64,20 +64,29 @@ $regex_extra = '/<div class="cykel">(.*?)<\/div>/s';
 $out_arr = [];
 
 foreach($tmp_arr as $el) {
-	$tmp = [];
+	$tmp["def"] = "";
+	$pre = $context = $grammar = $def = $def_aux = $related = "";
+	if (preg_match_all($regex_def,$el,$matches)) {
+		foreach($matches[1] as $def_chunk) {
+			if (preg_match($regex_pre,$def_chunk,$matches)) $pre = $matches[1];
+			if (preg_match($regex_context,$def_chunk,$matches)) $context = process_context($matches[1]);
+			if (preg_match($regex_grammar,$def_chunk,$matches)) $grammar = process_grammar($matches[1]);
+			if (preg_match($regex_def_txt,$def_chunk,$matches)) $def = process_def($matches[1]);
+			if (preg_match($regex_def_aux,$def_chunk,$matches)) $def_aux = process_aux($matches[1]);
+			if (preg_match($regex_related,$def_chunk,$matches)) $related = process_related($matches[1]);
+
+			if (strlen($pre) > 0) $pre = $pre . " ";
+			if (strlen($tmp["def"]) === 0) {
+				$tmp["def"] = $pre . $context . $grammar . $def . $def_aux . "<br>" . $related;
+			} else {
+				$tmp["def"] .= "<br>" . $pre . $context . $grammar . $def . $def_aux . "<br>" . $related;
+			}
+		}
+	}
 	$class = $dec = $context = $grammar = $def = $def_aux = $rel = "";
 	$history = $usage = $example = $extra = "";
 	$compound = [];
 	if (preg_match($regex_class,$el,$matches)) $class = $matches[1];
-	if (preg_match($regex_def,$el,$matches)) {
-		$def_chunk = $matches[1];
-		if (preg_match($regex_pre,$def_chunk,$matches)) $pre = $matches[1];
-		if (preg_match($regex_context,$def_chunk,$matches)) $context = process_context($matches[1]);
-		if (preg_match($regex_grammar,$def_chunk,$matches)) $grammar = process_grammar($matches[1]);
-		if (preg_match($regex_def_txt,$def_chunk,$matches)) $def = process_def($matches[1]);
-		if (preg_match($regex_def_aux,$def_chunk,$matches)) $def_aux = process_aux($matches[1]);
-		if (preg_match($regex_related,$def_chunk,$matches)) $related = $matches[1];
-	}
 	if (preg_match($regex_dec,$el,$matches)) $dec = $matches[1];
 	if (preg_match($regex_compound,$el,$matches)) $compound = process_compound($matches[1]);
 	if (preg_match($regex_history,$el,$matches)) $history = process_history($matches[1]);
@@ -87,8 +96,6 @@ foreach($tmp_arr as $el) {
 	$extra = str_replace("○\n","○ ",$extra);
 	$extra = str_replace("\n\n\n","<br>EXEMPEL: ",$extra);
 	$tmp["class"] = $class;
-	if (strlen($pre) > 0) $pre = $pre . " ";
-	$tmp["def"] = $pre . $context . $grammar . $def . $def_aux . "<br>" . $rel;
 	$tmp["options"] = process_options($dec);
 	$dec = process_dec(trim(strip_tags($dec)));
 	$tmp["meta"] = $word . " " . $dec;
@@ -190,4 +197,27 @@ function process_context($raw) {
 	$tmp = $raw;
 	if (strlen($tmp) > 0) $tmp = "<" . $tmp . "> ";
 	return $tmp;
+}
+
+function process_related($raw) {
+	$tmp = $raw;
+	$regex_type= '/<span class="hvtyp">(.*?)<\/span>/';
+	$regex_rel = '/<a class="hvtag".*?>(.*?)<\/a>/';
+	$type = "";
+	if (preg_match($regex_type,$tmp,$matches)) {
+		$type = $matches[1];
+	}
+	if (preg_match_all($regex_rel,$tmp,$matches)) {
+		$out_rel = "";
+		$rel_arr = $matches[1];
+		$i=0;
+		foreach($rel_arr as $el) {
+			$tmp = trim(preg_replace("/\d/","",strip_tags($el)));
+			$tmp = preg_replace('/\x{00A0}/u', '', $tmp);
+			$rel_arr[$i] = $tmp;
+			$i++;
+		}
+		return $type . " " . implode(", ",$rel_arr);
+	}
+	return "";
 }
