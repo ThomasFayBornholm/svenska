@@ -457,9 +457,7 @@
         "adepter"
     ],
     "adhd": [
-        "adhd",
-        "",
-        "utrum"
+        ""
     ],
     "adjunkt": [
         "adjunkt",
@@ -1987,14 +1985,6 @@
     ],
     "anhållan": [
         "anhållan",
-        "bestämd",
-        "form",
-        "anhållan",
-        "utrum",
-        ";",
-        "som",
-        "kan",
-        "användas",
         "anhållanden"
     ],
     "animation": [
@@ -6202,9 +6192,7 @@
         "batteridriften"
     ],
     "baud": [
-        "baud",
-        "baud",
-        "utrum"
+        "baud"
     ],
     "bautasten": [
         "bautasten",
@@ -6683,6 +6671,11 @@
         "behaviorist",
         "behavioristen",
         "behaviorister"
+    ],
+    "behov": [
+        "behovet",
+        "behov",
+        "behoven"
     ],
     "behovsprövning": [
         "behovsprövning",
@@ -23562,6 +23555,11 @@
         "förlitan",
         "utrum"
     ],
+    "förlopp": [
+        "förloppet",
+        "förlopp",
+        "förloppen"
+    ],
     "förlorare": [
         "förlorare",
         "förloraren",
@@ -30028,7 +30026,7 @@
         "form"
     ],
     "hiv": [
-        "hiv"
+        ""
     ],
     "hjord": [
         "hjord",
@@ -31146,7 +31144,6 @@
         "hälgångarna"
     ],
     "hälla": [
-        "hälla",
         "hällan",
         "hällor"
     ],
@@ -44614,6 +44611,11 @@
         "loopen",
         "loopar"
     ],
+    "lopp": [
+        "loppet",
+        "lopp",
+        "loppen"
+    ],
     "loppa": [
         "loppa",
         "loppan",
@@ -52378,7 +52380,6 @@
         "notar"
     ],
     "nöd": [
-        "nöd",
         "nöden"
     ],
     "nödbroms": [
@@ -56875,6 +56876,10 @@
         "riggen",
         "riggar"
     ],
+    "rike": [
+        "riket",
+        "riken"
+    ],
     "rikedom": [
         "rikedom",
         "rikedomen",
@@ -59021,6 +59026,10 @@
         "samfärdsled",
         "samfärdsleden",
         "samfärdsleder"
+    ],
+    "samhälle": [
+        "samhället",
+        "samhällen"
     ],
     "samhällsbärare": [
         "samhällsbärare",
@@ -68516,6 +68525,10 @@
         "ställningen",
         "ställningar"
     ],
+    "ställningstagande": [
+        "ställningstagandet",
+        "ställningstaganden"
+    ],
     "stämgaffel": [
         "stämgaffel",
         "stämgaffeln",
@@ -69774,6 +69787,11 @@
         "syssling",
         "sysslingen",
         "sysslingar"
+    ],
+    "system": [
+        "systemet",
+        "system",
+        "systemen"
     ],
     "syster": [
         "syster",
@@ -73152,6 +73170,10 @@
     "tramp": [
         "tramp",
         "trampet"
+    ],
+    "trampa": [
+        "trampan",
+        "trampor"
     ],
     "trampcykel": [
         "trampcykel",
@@ -83638,7 +83660,6 @@
         "återväxten"
     ],
     "åtgärd": [
-        "åtgärd",
         "åtgärden",
         "åtgärder"
     ],
