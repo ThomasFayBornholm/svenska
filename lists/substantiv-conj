@@ -5763,12 +5763,10 @@
         "baptister"
     ],
     "bar": [
-        "bar",
         "baren",
         "barer"
     ],
     "bar-2": [
-        "bar",
         "baren",
         "bar",
         "baren"
@@ -12714,6 +12712,11 @@
         "chefredaktör",
         "chefredaktören",
         "chefredaktörer"
+    ],
+    "chiffer": [
+        "chiffret",
+        "chiffer",
+        "chiffren"
     ],
     "chiffong": [
         "chiffong",
@@ -51549,7 +51552,6 @@
         "nordpoler"
     ],
     "norm": [
-        "norm",
         "normen",
         "normer"
     ],
@@ -54452,6 +54454,18 @@
         "protuberansen",
         "protuberanser"
     ],
+    "prov": [
+        "provet",
+        "prov",
+        "proven"
+    ],
+    "prov-2": [
+        "provet",
+        "prov",
+        "prover",
+        "proven",
+        "proverna"
+    ],
     "provare": [
         "provare",
         "provaren",
@@ -54624,7 +54638,6 @@
         "psykoterapeuter"
     ],
     "pub": [
-        "pub",
         "puben",
         "pubar"
     ],
@@ -75410,6 +75423,11 @@
         "underkäken",
         "underkäkar"
     ],
+    "underlag": [
+        "underlaget",
+        "underlag",
+        "underlagen"
+    ],
     "underledare": [
         "underledare",
         "underledaren",
@@ -83853,7 +83871,6 @@
         "ölrättigheter"
     ],
     "ölstuga": [
-        "ölstuga",
         "ölstugan",
         "ölstugor"
     ],

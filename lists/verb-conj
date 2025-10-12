@@ -374,7 +374,6 @@
         "anfallit",
         "anfallen",
         "anfallna,",
-        "presens",
         "anfaller"
     ],
     "anfräta": [
@@ -392,7 +391,6 @@
         "anföra",
         "anförde",
         "anfört,",
-        "presens",
         "anför"
     ],
     "anförtro": [
@@ -414,7 +412,6 @@
         "angett,",
         "angiven",
         "angivna,",
-        "presens",
         "anger",
         "åld.",
         "angiva",
@@ -422,7 +419,6 @@
         "angivit,",
         "angiven",
         "angivna,",
-        "presens",
         "angiver"
     ],
     "angla": [
@@ -496,7 +492,6 @@
         "anknutit",
         "anknuten",
         "anknutna,",
-        "presens",
         "anknyter"
     ],
     "ankomma": [
@@ -559,14 +554,12 @@
         "anmäla",
         "anmälde",
         "anmält,",
-        "presens",
         "anmäler"
     ],
     "anmärka": [
         "anmärka",
         "anmärkte",
         "anmärkt,",
-        "presens",
         "anmärker"
     ],
     "annektera": [
@@ -649,7 +642,6 @@
         "anse",
         "ansåg",
         "ansett,",
-        "presens",
         "anser"
     ],
     "anskaffa": [
@@ -698,7 +690,6 @@
         "anstränga",
         "ansträngde",
         "ansträngt,",
-        "presens",
         "anstränger"
     ],
     "anstränga sig": [
@@ -749,7 +740,6 @@
         "antagit",
         "antagen",
         "antagna,",
-        "presens",
         "antar",
         "åld.",
         "antaga",
@@ -757,7 +747,6 @@
         "antagit",
         "antagen",
         "antagna,",
-        "presens",
         "antager"
     ],
     "antasta": [
@@ -810,7 +799,6 @@
         "antyda",
         "antydde",
         "antytt,",
-        "presens",
         "antyder"
     ],
     "antända": [
@@ -833,7 +821,6 @@
         "använda",
         "använde",
         "använt,",
-        "presens",
         "använder"
     ],
     "använda sig": [
@@ -1139,7 +1126,6 @@
         "avbeställa",
         "avbeställde",
         "avbeställt,",
-        "presens",
         "avbeställer"
     ],
     "avbetala": [
@@ -1349,7 +1335,6 @@
         "avhjälpa",
         "avhjälpte",
         "avhjälpt,",
-        "presens",
         "avhjälper"
     ],
     "avhysa": [
@@ -1566,7 +1551,6 @@
         "avlägga",
         "avlade",
         "avlagt,",
-        "presens",
         "avlägger"
     ],
     "avlägsna": [
@@ -1607,7 +1591,6 @@
         "avlöpa",
         "avlöpte",
         "avlöpt,",
-        "presens",
         "avlöper"
     ],
     "avlösa": [
@@ -1786,7 +1769,6 @@
         "avse",
         "avsåg",
         "avsett,",
-        "presens",
         "avser"
     ],
     "avsegla": [
@@ -1877,7 +1859,6 @@
         "avslagit",
         "avslagen",
         "avslagna,",
-        "presens",
         "avslår"
     ],
     "avslöja": [
@@ -1962,7 +1943,6 @@
         "avstyrka",
         "avstyrkte",
         "avstyrkt,",
-        "presens",
         "avstyrker"
     ],
     "avställa": [
@@ -1981,14 +1961,12 @@
         "avstänga",
         "avstängde",
         "avstängt,",
-        "presens",
         "avstänger"
     ],
     "avstå": [
         "avstå",
         "avstod",
         "avstått,",
-        "presens",
         "avstår"
     ],
     "avstöra": [
@@ -2233,7 +2211,6 @@
         "avvända",
         "avvände",
         "avvänt,",
-        "presens",
         "avvänder"
     ],
     "avvänja": [
@@ -2251,7 +2228,6 @@
         "avvärja",
         "avvärjde",
         "avvärjt,",
-        "presens",
         "avvärjer"
     ],
     "avyttra": [
@@ -2265,7 +2241,6 @@
         "avätit",
         "aväten",
         "avätna,",
-        "presens",
         "aväter"
     ],
     "axiomatisera": [
@@ -2578,7 +2553,6 @@
         "bedragit",
         "bedragen",
         "bedragna,",
-        "presens",
         "bedrar",
         "åld.",
         "bedraga",
@@ -2586,7 +2560,6 @@
         "bedragit",
         "bedragen",
         "bedragna,",
-        "presens",
         "bedrager"
     ],
     "bedra sig": [
@@ -2665,7 +2638,6 @@
         "sig",
         "befann",
         "befunnit,",
-        "presens",
         "befinner"
     ],
     "befinnas": [
@@ -2775,7 +2747,6 @@
         "begripa",
         "begrep",
         "begripit,",
-        "presens",
         "begriper"
     ],
     "begripa sig på": [
@@ -2784,7 +2755,6 @@
         "på",
         "begrep",
         "begripit,",
-        "presens",
         "begriper"
     ],
     "begrunda": [
@@ -2821,7 +2791,6 @@
         "begära",
         "begärde",
         "begärt,",
-        "presens",
         "begär"
     ],
     "begå": [
@@ -2881,14 +2850,12 @@
         "behöva",
         "behövde",
         "behövt,",
-        "presens",
         "behöver"
     ],
     "behövas": [
         "behövas",
         "behövdes",
         "behövts,",
-        "presens",
         "behövs",
         "äv.",
         "behöves"
@@ -2936,12 +2903,10 @@
         "bekläda",
         "beklädde",
         "beklätt,",
-        "presens",
         "bekläder",
         "beklä",
         "be­klädde",
         "be­klätt,",
-        "presens",
         "be­klär"
     ],
     "beknipa sig": [
@@ -3011,7 +2976,6 @@
         "bekänna",
         "bekände",
         "bekänt,",
-        "presens",
         "bekänner"
     ],
     "bekänna sig": [
@@ -3052,7 +3016,6 @@
         "beljugit",
         "beljugen",
         "beljugna,",
-        "presens",
         "beljuger"
     ],
     "belysa": [
@@ -3205,7 +3168,6 @@
         "bero",
         "berodde",
         "berott,",
-        "presens",
         "beror"
     ],
     "berusa": [
@@ -3238,7 +3200,6 @@
         "beröra",
         "berörde",
         "berört,",
-        "presens",
         "berör"
     ],
     "beröva": [
@@ -3495,7 +3456,6 @@
         "bestridna",
         "el.",
         "bestridda,",
-        "presens",
         "bestrider"
     ],
     "bestryka": [
@@ -3527,21 +3487,18 @@
         "bestyrka",
         "bestyrkte",
         "bestyrkt,",
-        "presens",
         "bestyrker"
     ],
     "beställa": [
         "beställa",
         "beställde",
         "beställt,",
-        "presens",
         "beställer"
     ],
     "bestämma": [
         "bestämma",
         "bestämde",
         "bestämt,",
-        "presens",
         "bestämmer"
     ],
     "bestämma sig": [
@@ -3594,7 +3551,6 @@
         "beså",
         "besådde",
         "besått,",
-        "presens",
         "besår"
     ],
     "besöka": [
@@ -3628,7 +3584,6 @@
         "betalat",
         "el.",
         "betalt,",
-        "presens",
         "betalar"
     ],
     "betala av": [
@@ -3655,7 +3610,6 @@
         "sig",
         "betedde",
         "betett,",
-        "presens",
         "beter"
     ],
     "beteckna": [
@@ -4007,7 +3961,6 @@
         "ifrån",
         "bet",
         "bitit,",
-        "presens",
         "biter"
     ],
     "bita ifrån sig": [
@@ -4049,7 +4002,6 @@
         "bjudit",
         "bjuden",
         "bjudna,",
-        "presens",
         "bjuder"
     ],
     "bjuda emot": [
@@ -4363,7 +4315,6 @@
         "blåsa",
         "blåste",
         "blåst,",
-        "presens",
         "blåser"
     ],
     "blåsa an": [
@@ -4638,7 +4589,6 @@
         "sig",
         "bosatte",
         "bosatt,",
-        "presens",
         "bosätter"
     ],
     "bota": [
@@ -4700,12 +4650,10 @@
         "breda",
         "bredde",
         "brett,",
-        "presens",
         "breder",
         "bre",
         "bredde",
         "brett,",
-        "presens",
         "brer"
     ],
     "breda ut": [
@@ -4726,14 +4674,12 @@
         "sig",
         "bredde",
         "brett,",
-        "presens",
         "breder",
         "bre",
         "ut",
         "sig",
         "bredde",
         "brett,",
-        "presens",
         "brer"
     ],
     "bredda": [
@@ -4780,7 +4726,6 @@
         "bringat",
         "el.",
         "bragt,",
-        "presens",
         "bringar"
     ],
     "brinna": [
@@ -4796,7 +4741,6 @@
         "av",
         "brann",
         "brunnit,",
-        "presens",
         "brinner"
     ],
     "brisera": [
@@ -4810,7 +4754,6 @@
         "brustit",
         "brusten",
         "brustna,",
-        "presens",
         "brister"
     ],
     "brodda": [
@@ -4976,7 +4919,6 @@
         "samman",
         "bröt",
         "brutit,",
-        "presens",
         "bryter"
     ],
     "bryta sig": [
@@ -5098,7 +5040,6 @@
         "brås",
         "bråddes",
         "bråtts,",
-        "presens",
         "brås"
     ],
     "bröa": [
@@ -5255,7 +5196,6 @@
         "bygga",
         "byggde",
         "byggt,",
-        "presens",
         "bygger"
     ],
     "bygga samman": [
@@ -5290,7 +5230,6 @@
         "byta",
         "bytte",
         "bytt,",
-        "presens",
         "byter"
     ],
     "byta av": [
@@ -5362,7 +5301,6 @@
         "bälteslägga",
         "bälteslade",
         "bälteslagt,",
-        "presens",
         "bälteslägger"
     ],
     "bänka sig": [
@@ -5383,7 +5321,6 @@
         "burit",
         "buren",
         "burna,",
-        "presens",
         "bär"
     ],
     "bära av": [
@@ -5406,7 +5343,6 @@
         "åt",
         "bar",
         "burit,",
-        "presens",
         "bär"
     ],
     "bärga": [
@@ -5461,7 +5397,6 @@
         "böja",
         "böjde",
         "böjt,",
-        "presens",
         "böjer"
     ],
     "böja sig": [
@@ -5509,7 +5444,6 @@
         "böra",
         "borde",
         "bort,",
-        "presens",
         "bör"
     ],
     "börja": [
@@ -6085,7 +6019,6 @@
         "delgett,",
         "delgiven",
         "delgivna,",
-        "presens",
         "delger",
         "åld.",
         "delgiva",
@@ -6093,7 +6026,6 @@
         "delgivit,",
         "delgiven",
         "delgivna,",
-        "presens",
         "delgiver"
     ],
     "delta": [
@@ -6782,7 +6714,6 @@
         "sig",
         "drog",
         "dragit,",
-        "presens",
         "drar"
     ],
     "dra till": [
@@ -7450,14 +7381,12 @@
         "efterhållit",
         "efterhållen",
         "efterhållna,",
-        "presens",
         "efterhåller"
     ],
     "efterhöra": [
         "efterhöra",
         "efterhörde",
         "efterhört,",
-        "presens",
         "efterhör"
     ],
     "efterkomma": [
@@ -7717,7 +7646,6 @@
         "erbjudit",
         "erbjuden",
         "erbjudna,",
-        "presens",
         "erbjuder"
     ],
     "erbjuda sig": [
@@ -7756,7 +7684,6 @@
         "erkänna",
         "erkände",
         "erkänt,",
-        "presens",
         "erkänner"
     ],
     "erkänna sig": [
@@ -8089,7 +8016,6 @@
         "fastlägga",
         "fastlade",
         "fastlagt,",
-        "presens",
         "fastlägger"
     ],
     "fastna": [
@@ -8103,7 +8029,6 @@
         "fastslagit",
         "fastslagen",
         "fastslagna,",
-        "presens",
         "fastslår"
     ],
     "fastställa": [
@@ -8163,7 +8088,6 @@
         "felsöka",
         "felsökte",
         "felsökt,",
-        "presens",
         "felsöker"
     ],
     "fermentera": [
@@ -8929,7 +8853,6 @@
         "framföra",
         "framförde",
         "framfört,",
-        "presens",
         "framför"
     ],
     "framgå": [
@@ -8970,7 +8893,6 @@
         "framkommit",
         "framkommen",
         "framkomna,",
-        "presens",
         "framkommer"
     ],
     "framleva": [
@@ -9029,7 +8951,6 @@
         "framträda",
         "framträdde",
         "framträtt,",
-        "presens",
         "framträder"
     ],
     "framtvinga": [
@@ -9064,7 +8985,6 @@
         "framvuxna",
         "el.",
         "framväxta,",
-        "presens",
         "framväxer"
     ],
     "frasa": [
@@ -9671,7 +9591,6 @@
         "föra",
         "förde",
         "fört,",
-        "presens",
         "för"
     ],
     "föra bort": [
@@ -10349,7 +10268,6 @@
         "företräda",
         "företrädde",
         "företrätt,",
-        "presens",
         "företräder"
     ],
     "förevara": [
@@ -10429,7 +10347,6 @@
         "förflutit",
         "förfluten",
         "förflutna,",
-        "presens",
         "förflyter"
     ],
     "förflytta": [
@@ -10451,7 +10368,6 @@
         "förfrysa",
         "förfrös",
         "förfrusit,",
-        "presens",
         "förfryser"
     ],
     "förfrämliga": [
@@ -10700,7 +10616,6 @@
         "förhöja",
         "förhöjde",
         "förhöjt,",
-        "presens",
         "förhöjer"
     ],
     "förhöra": [
@@ -10877,7 +10792,6 @@
         "förleda",
         "förledde",
         "förlett,",
-        "presens",
         "förleder"
     ],
     "förlika": [
@@ -10978,7 +10892,6 @@
         "förlänga",
         "förlängde",
         "förlängt,",
-        "presens",
         "förlänger"
     ],
     "förläsa sig": [
@@ -10994,7 +10907,6 @@
         "förlåtit",
         "förlåten",
         "förlåtna,",
-        "presens",
         "förlåter"
     ],
     "förlöjliga": [
@@ -11066,7 +10978,6 @@
         "förmäla",
         "förmälde",
         "förmält,",
-        "presens",
         "förmäler"
     ],
     "förmäla sig": [
@@ -11098,7 +11009,6 @@
         "förmå",
         "förmådde",
         "förmått,",
-        "presens",
         "förmår"
     ],
     "förmå sig": [
@@ -11139,7 +11049,6 @@
         "förnummit",
         "förnummen",
         "förnumna,",
-        "presens",
         "förnimmer"
     ],
     "förnya": [
@@ -11256,7 +11165,6 @@
         "förrunnit",
         "förrunnen",
         "förrunna,",
-        "presens",
         "förrinner"
     ],
     "förruttna": [
@@ -11347,7 +11255,6 @@
         "försiggått",
         "försiggången",
         "försiggångna,",
-        "presens",
         "försiggår"
     ],
     "försilvra": [
@@ -11397,7 +11304,6 @@
         "förskjutit",
         "förskjuten",
         "förskjutna,",
-        "presens",
         "förskjuter"
     ],
     "förskona": [
@@ -11772,7 +11678,6 @@
         "försöka",
         "försökte",
         "försökt,",
-        "presens",
         "försöker"
     ],
     "försöka sig på": [
@@ -11781,14 +11686,12 @@
         "på",
         "försökte",
         "försökt,",
-        "presens",
         "försöker"
     ],
     "försörja": [
         "försörja",
         "försörjde",
         "försörjt,",
-        "presens",
         "försörjer"
     ],
     "förta": [
@@ -11990,7 +11893,6 @@
         "förtäljt",
         "äv.",
         "förtalt,",
-        "presens",
         "förtäljer"
     ],
     "förtänka": [
@@ -12003,7 +11905,6 @@
         "förtära",
         "förtärde",
         "förtärt,",
-        "presens",
         "förtär"
     ],
     "förtäta": [
@@ -12015,7 +11916,6 @@
         "förtöja",
         "förtöjde",
         "förtöjt,",
-        "presens",
         "förtöjer"
     ],
     "förtörna": [
@@ -12084,7 +11984,6 @@
         "förutsätta",
         "förutsatte",
         "förutsatt,",
-        "presens",
         "förutsätter"
     ],
     "förvalta": [
@@ -12347,7 +12246,6 @@
         "fösa",
         "föste",
         "föst,",
-        "presens",
         "föser"
     ],
     "gadda ihop sig": [
@@ -12471,7 +12369,6 @@
         "gett,",
         "given",
         "givna,",
-        "presens",
         "ger",
         "åld.",
         "giva",
@@ -12479,7 +12376,6 @@
         "givit,",
         "given",
         "givna,",
-        "presens",
         "giver"
     ],
     "ge efter": [
@@ -12673,7 +12569,6 @@
         "genomgått",
         "genomgången",
         "genomgångna,",
-        "presens",
         "genomgår"
     ],
     "genomkorsa": [
@@ -12699,7 +12594,6 @@
         "genomlysa",
         "genomlyste",
         "genomlyst,",
-        "presens",
         "genomlyser"
     ],
     "genomskåda": [
@@ -12853,7 +12747,6 @@
         "gjutit",
         "gjuten",
         "gjutna,",
-        "presens",
         "gjuter"
     ],
     "gjuta av": [
@@ -12915,7 +12808,6 @@
         "glidit",
         "gliden",
         "glidna,",
-        "presens",
         "glider"
     ],
     "glimma": [
@@ -13037,7 +12929,6 @@
         "gnidit",
         "gniden",
         "gnidna,",
-        "presens",
         "gnider"
     ],
     "gnissla": [
@@ -13096,7 +12987,6 @@
         "godkänna",
         "godkände",
         "godkänt,",
-        "presens",
         "godkänner"
     ],
     "godspela": [
@@ -13110,7 +13000,6 @@
         "godtagit",
         "godtagen",
         "godtagna,",
-        "presens",
         "godtar",
         "åld.",
         "godtaga",
@@ -13118,7 +13007,6 @@
         "godtagit",
         "godtagen",
         "godtagna,",
-        "presens",
         "godtager"
     ],
     "gola": [
@@ -13223,7 +13111,6 @@
         "gravsätta",
         "gravsatte",
         "gravsatt,",
-        "presens",
         "gravsätter"
     ],
     "greja": [
@@ -13281,7 +13168,6 @@
         "gripit",
         "gripen",
         "gripna,",
-        "presens",
         "griper"
     ],
     "gripa in": [
@@ -13417,7 +13303,6 @@
         "gräma",
         "grämde",
         "grämt,",
-        "presens",
         "grämer"
     ],
     "gräma sig": [
@@ -13447,7 +13332,6 @@
         "gråta",
         "grät",
         "gråtit,",
-        "presens",
         "gråter"
     ],
     "gråta ut": [
@@ -13547,7 +13431,6 @@
         "gälla",
         "gällde",
         "gällt,",
-        "presens",
         "gäller"
     ],
     "gänga": [
@@ -13582,7 +13465,6 @@
         "gått",
         "gången",
         "gångna,",
-        "presens",
         "går"
     ],
     "gå an": [
@@ -13634,7 +13516,6 @@
         "igenom",
         "gick",
         "gått,",
-        "presens",
         "går"
     ],
     "gå ihop": [
@@ -13757,7 +13638,6 @@
         "göra",
         "gjorde",
         "gjort,",
-        "presens",
         "gör"
     ],
     "göra an": [
@@ -13835,7 +13715,6 @@
         "sig",
         "hade",
         "haft,",
-        "presens",
         "har"
     ],
     "hacka": [
@@ -14211,7 +14090,6 @@
         "hunnit",
         "hunnen",
         "hunna,",
-        "presens",
         "hinner"
     ],
     "hinna med": [
@@ -14258,7 +14136,6 @@
         "hjälpa",
         "hjälpte",
         "hjälpt,",
-        "presens",
         "hjälper"
     ],
     "hjälpa till": [
@@ -14572,7 +14449,6 @@
         "hälla",
         "hällde",
         "hällt,",
-        "presens",
         "häller"
     ],
     "hällregna": [
@@ -14625,7 +14501,6 @@
         "hända",
         "hände",
         "hänt,",
-        "presens",
         "händer"
     ],
     "hänföra": [
@@ -14830,7 +14705,6 @@
         "av",
         "höll",
         "hållit,",
-        "presens",
         "håller"
     ],
     "hålla efter": [
@@ -14853,7 +14727,6 @@
         "sig",
         "höll",
         "hållit,",
-        "presens",
         "håller"
     ],
     "hålla igen": [
@@ -14889,7 +14762,6 @@
         "på",
         "höll",
         "hållit,",
-        "presens",
         "håller"
     ],
     "hålla samman": [
@@ -15020,7 +14892,6 @@
         "höja",
         "höjde",
         "höjt,",
-        "presens",
         "höjer"
     ],
     "höja sig": [
@@ -15135,7 +15006,6 @@
         "hövas",
         "hövdes",
         "hövts,",
-        "presens",
         "höves"
     ],
     "i tid och otid": [
@@ -15543,7 +15413,6 @@
         "införa",
         "införde",
         "infört,",
-        "presens",
         "inför"
     ],
     "införliva": [
@@ -15587,7 +15456,6 @@
         "ingripa",
         "ingrep",
         "ingripit,",
-        "presens",
         "ingriper"
     ],
     "ingå": [
@@ -15737,7 +15605,6 @@
         "inleda",
         "inledde",
         "inlett,",
-        "presens",
         "inleder"
     ],
     "inlemma": [
@@ -15771,7 +15638,6 @@
         "sig",
         "inlät",
         "inlåtit,",
-        "presens",
         "inlåter"
     ],
     "inlöpa": [
@@ -15800,7 +15666,6 @@
         "innebära",
         "innebar",
         "inneburit,",
-        "presens",
         "innebär"
     ],
     "innefatta": [
@@ -15878,7 +15743,6 @@
         "inreda",
         "inredde",
         "inrett,",
-        "presens",
         "inreder"
     ],
     "inregistrera": [
@@ -15949,7 +15813,6 @@
         "inse",
         "insåg",
         "insett,",
-        "presens",
         "inser"
     ],
     "inseminera": [
@@ -16078,7 +15941,6 @@
         "inställa",
         "inställde",
         "inställt,",
-        "presens",
         "inställer"
     ],
     "inställa sig": [
@@ -16132,7 +15994,6 @@
         "intagit",
         "intagen",
         "intagna,",
-        "presens",
         "intar",
         "åld.",
         "intaga",
@@ -16140,7 +16001,6 @@
         "intagit",
         "intagen",
         "intagna,",
-        "presens",
         "intager"
     ],
     "intala": [
@@ -16253,7 +16113,6 @@
         "inträda",
         "inträdde",
         "inträtt,",
-        "presens",
         "inträder"
     ],
     "inträffa": [
@@ -16343,7 +16202,6 @@
         "invända",
         "invände",
         "invänt,",
-        "presens",
         "invänder"
     ],
     "invänta": [
@@ -17253,7 +17111,6 @@
         "klargöra",
         "klargjorde",
         "klargjort,",
-        "presens",
         "klargör"
     ],
     "klarlägga": [
@@ -17474,7 +17331,6 @@
         "klyvt,",
         "kluven",
         "kluvna,",
-        "presens",
         "klyver"
     ],
     "klä": [
@@ -17584,7 +17440,6 @@
         "klösa",
         "klöste",
         "klöst,",
-        "presens",
         "klöser"
     ],
     "klösas": [
@@ -18089,7 +17944,6 @@
         "in",
         "kom",
         "kommit,",
-        "presens",
         "kommer"
     ],
     "komma på": [
@@ -18935,7 +18789,6 @@
         "kränka",
         "kränkte",
         "kränkt,",
-        "presens",
         "kränker"
     ],
     "kräva": [
@@ -19038,7 +18891,6 @@
         "kunna",
         "kunde",
         "kunnat,",
-        "presens",
         "kan"
     ],
     "kupa": [
@@ -19323,7 +19175,6 @@
         "igen",
         "kände",
         "känt,",
-        "presens",
         "känner"
     ],
     "känna igen sig": [
@@ -19441,7 +19292,6 @@
         "köpa",
         "köpte",
         "köpt,",
-        "presens",
         "köper"
     ],
     "köpa in": [
@@ -19654,7 +19504,6 @@
         "landstigit",
         "landstigen",
         "landstigna,",
-        "presens",
         "landstiger"
     ],
     "landsätta": [
@@ -19767,7 +19616,6 @@
         "leda",
         "ledde",
         "lett,",
-        "presens",
         "leder"
     ],
     "leda av": [
@@ -19781,7 +19629,6 @@
         "ledas",
         "leddes",
         "letts,",
-        "presens",
         "leds"
     ],
     "ledigförklara": [
@@ -19819,7 +19666,6 @@
         "leka",
         "lekte",
         "lekt,",
-        "presens",
         "leker"
     ],
     "lemlästa": [
@@ -19880,7 +19726,6 @@
         "levt",
         "el.",
         "levat,",
-        "presens",
         "lever"
     ],
     "leva ut": [
@@ -19951,7 +19796,6 @@
         "ligga",
         "låg",
         "legat,",
-        "presens",
         "ligger"
     ],
     "ligga an": [
@@ -20457,7 +20301,6 @@
         "sig",
         "lyfte",
         "lyft,",
-        "presens",
         "lyfter"
     ],
     "lyfta ut": [
@@ -20488,7 +20331,6 @@
         "igenom",
         "lyste",
         "lyst,",
-        "presens",
         "lyser"
     ],
     "lysa upp": [
@@ -20523,10 +20365,6 @@
         "lyssnat",
         ""
     ],
-    "lyster": [
-        "lyster",
-        "presens"
-    ],
     "läcka": [
         "läcka",
         "läckte",
@@ -20539,7 +20377,6 @@
         "äv.",
         "la,",
         "lagt,",
-        "presens",
         "lägger"
     ],
     "lägga an": [
@@ -20765,10 +20602,6 @@
         "läppjade",
         "läppjat"
     ],
-    "lär": [
-        "lär",
-        "presens"
-    ],
     "lära": [
         "lära",
         "lärde",
@@ -20945,7 +20778,6 @@
         "låta",
         "lät",
         "låtit,",
-        "presens",
         "låter,",
         "åld.",
         "imper.",
@@ -21002,7 +20834,6 @@
         "löpa",
         "löpte",
         "löpt,",
-        "presens",
         "löper"
     ],
     "löpa in": [
@@ -21365,7 +21196,6 @@
         "medföra",
         "medförde",
         "medfört,",
-        "presens",
         "medför"
     ],
     "medge": [
@@ -21532,14 +21362,11 @@
         "minna",
         "minde",
         "mint,",
-        "presens",
         "minner"
     ],
     "minnas": [
-        "minnas",
         "mindes",
-        "mints,",
-        "presens",
+        "mints",
         "minns"
     ],
     "minska": [
@@ -21712,7 +21539,6 @@
         "misstänka",
         "misstänkte",
         "misstänkt,",
-        "presens",
         "misstänker"
     ],
     "misstänkliggöra": [
@@ -21917,7 +21743,6 @@
         "motsäga",
         "motsade",
         "motsagt,",
-        "presens",
         "motsäger"
     ],
     "motsätta sig": [
@@ -21925,7 +21750,6 @@
         "sig",
         "motsatte",
         "motsatt,",
-        "presens",
         "motsätter"
     ],
     "motta": [
@@ -21934,7 +21758,6 @@
         "mottagit",
         "mottagen",
         "mottagna,",
-        "presens",
         "mottar",
         "åld.",
         "mottaga",
@@ -21942,7 +21765,6 @@
         "mottagit",
         "mottagen",
         "mottagna,",
-        "presens",
         "mottager"
     ],
     "mottaga": [
@@ -21951,7 +21773,6 @@
         "mottagit",
         "mottagen",
         "mottagna,",
-        "presens",
         "mottar",
         "åld.",
         "mottaga",
@@ -21959,7 +21780,6 @@
         "mottagit",
         "mottagen",
         "mottagna,",
-        "presens",
         "mottager"
     ],
     "motverka": [
@@ -22141,7 +21961,6 @@
         "märka",
         "märkte",
         "märkt,",
-        "presens",
         "märker"
     ],
     "märka ut": [
@@ -22448,7 +22267,6 @@
         "nedbringat",
         "äv.",
         "nedbragt,",
-        "presens",
         "nedbringar",
         "nerbringa",
         "nerbringade",
@@ -22457,7 +22275,6 @@
         "nerbringat",
         "äv.",
         "nerbragt,",
-        "presens",
         "nerbringar"
     ],
     "nedgradera": [
@@ -22637,7 +22454,6 @@
         "niga",
         "neg",
         "nigit,",
-        "presens",
         "niger"
     ],
     "nischa in": [
@@ -22866,7 +22682,6 @@
         "nämna",
         "nämnde",
         "nämnt,",
-        "presens",
         "nämner"
     ],
     "näpsa": [
@@ -22950,7 +22765,6 @@
         "nöta",
         "nötte",
         "nött,",
-        "presens",
         "nöter"
     ],
     "obducera": [
@@ -23062,7 +22876,6 @@
         "ombesörja",
         "ombesörjde",
         "ombesörjt,",
-        "presens",
         "ombesörjer"
     ],
     "ombetro": [
@@ -23172,7 +22985,6 @@
         "omhändertagit",
         "omhändertagen",
         "omhändertagna,",
-        "presens",
         "omhändertar",
         "åld.",
         "omhändertaga",
@@ -23180,7 +22992,6 @@
         "omhändertagit",
         "omhändertagen",
         "omhändertagna,",
-        "presens",
         "omhändertager"
     ],
     "omhölja": [
@@ -23193,7 +23004,6 @@
         "omintetgöra",
         "omintetgjorde",
         "omintetgjort,",
-        "presens",
         "omintetgör"
     ],
     "omkomma": [
@@ -23202,7 +23012,6 @@
         "omkommit",
         "omkommen",
         "omkomna,",
-        "presens",
         "omkommer"
     ],
     "ommöblera": [
@@ -23214,7 +23023,6 @@
         "omnämna",
         "omnämnde",
         "omnämnt,",
-        "presens",
         "omnämner"
     ],
     "omplacera": [
@@ -23272,7 +23080,6 @@
         "omskurit",
         "omskuren",
         "omskurna,",
-        "presens",
         "omskär"
     ],
     "omsluta": [
@@ -23281,7 +23088,6 @@
         "omslutit",
         "omsluten",
         "omslutna,",
-        "presens",
         "omsluter"
     ],
     "omspinna": [
@@ -24031,7 +23837,6 @@
         "planlägga",
         "planlade",
         "planlagt,",
-        "presens",
         "planlägger"
     ],
     "planta": [
@@ -24594,7 +24399,6 @@
         "pryda",
         "prydde",
         "prytt,",
-        "presens",
         "pryder"
     ],
     "prygla": [
@@ -24788,7 +24592,6 @@
         "påbjudit",
         "påbjuden",
         "påbjudna,",
-        "presens",
         "påbjuder"
     ],
     "påbörja": [
@@ -24816,7 +24619,6 @@
         "påminna",
         "påminde",
         "påmint,",
-        "presens",
         "påminner"
     ],
     "påpeka": [
@@ -24826,7 +24628,6 @@
     ],
     "påskina": [
         "påskina",
-        "presens",
         "påskiner"
     ],
     "påskynda": [
@@ -24903,7 +24704,6 @@
         "pösa",
         "pöste",
         "pöst,",
-        "presens",
         "pöser"
     ],
     "quizza": [
@@ -25173,7 +24973,6 @@
         "sig",
         "redde",
         "rett,",
-        "presens",
         "reder"
     ],
     "reda till": [
@@ -25207,7 +25006,6 @@
         "redogöra",
         "redogjorde",
         "redogjort,",
-        "presens",
         "redogör"
     ],
     "redovisa": [
@@ -25499,7 +25297,6 @@
         "resa",
         "reste",
         "rest,",
-        "presens",
         "reser"
     ],
     "resa sig": [
@@ -25769,7 +25566,6 @@
         "runnit",
         "runnen",
         "runna,",
-        "presens",
         "rinner"
     ],
     "rinna av": [
@@ -25828,7 +25624,6 @@
         "rivit",
         "riven",
         "rivna,",
-        "presens",
         "river"
     ],
     "rivalisera": [
@@ -25862,7 +25657,6 @@
         "rollsätta",
         "rollsatte",
         "rollsatt,",
-        "presens",
         "rollsätter"
     ],
     "romantisera": [
@@ -26157,7 +25951,6 @@
         "rymma",
         "rymde",
         "rymt,",
-        "presens",
         "rymmer"
     ],
     "rymma ut": [
@@ -26373,7 +26166,6 @@
         "för",
         "rådde",
         "rått,",
-        "presens",
         "rår"
     ],
     "råda": [
@@ -26457,7 +26249,6 @@
         "röja",
         "röjde",
         "röjt,",
-        "presens",
         "röjer"
     ],
     "röja av": [
@@ -26518,7 +26309,6 @@
         "röra",
         "rörde",
         "rört,",
-        "presens",
         "rör"
     ],
     "röra sig": [
@@ -26813,7 +26603,6 @@
         "sammansätta",
         "sammansatte",
         "sammansatt,",
-        "presens",
         "sammansätter"
     ],
     "sammanträda": [
@@ -26980,7 +26769,6 @@
         "se",
         "såg",
         "sett,",
-        "presens",
         "ser"
     ],
     "se bort": [
@@ -27292,7 +27080,6 @@
         "sitta",
         "satt",
         "suttit,",
-        "presens",
         "sitter"
     ],
     "sitta av": [
@@ -27373,7 +27160,6 @@
         "sjunkit",
         "sjunken",
         "sjunkna,",
-        "presens",
         "sjunker"
     ],
     "självdö": [
@@ -27511,14 +27297,12 @@
         "skava",
         "skavde",
         "skavt,",
-        "presens",
         "skaver"
     ],
     "ske": [
         "ske",
         "skedde",
         "skett,",
-        "presens",
         "sker"
     ],
     "skeda": [
@@ -27670,7 +27454,6 @@
         "skilts",
         "äv.",
         "skiljts,",
-        "presens",
         "skiljs",
         "äv.",
         "skils",
@@ -27766,7 +27549,6 @@
         "skjutit",
         "skjuten",
         "skjutna,",
-        "presens",
         "skjuter"
     ],
     "skjuta av": [
@@ -27847,7 +27629,6 @@
         "skola",
         "skulle",
         "skolat,",
-        "presens",
         "ska",
         "el.",
         "skall",
@@ -27926,7 +27707,6 @@
         "skrika",
         "skrek",
         "skrikit,",
-        "presens",
         "skriker"
     ],
     "skrinna": [
@@ -28217,7 +27997,6 @@
         "skvätta",
         "skvätte",
         "skvätt,",
-        "presens",
         "skvätter"
     ],
     "sky": [
@@ -28304,7 +28083,6 @@
         "skälla",
         "skällde",
         "skällt,",
-        "presens",
         "skäller"
     ],
     "skälla ut": [
@@ -28320,7 +28098,6 @@
         "äv.",
         "skalv,",
         "skälvt,",
-        "presens",
         "skälver"
     ],
     "skämma": [
@@ -28347,7 +28124,6 @@
         "skämmas",
         "skämdes",
         "skämts,",
-        "presens",
         "skäms"
     ],
     "skämta": [
@@ -28496,7 +28272,6 @@
         "skönja",
         "skönjde",
         "skönjt,",
-        "presens",
         "skönjer"
     ],
     "skönmåla": [
@@ -28634,14 +28409,12 @@
         "slinka",
         "slank",
         "slunkit,",
-        "presens",
         "slinker"
     ],
     "slinta": [
         "slinta",
         "slant",
         "sluntit,",
-        "presens",
         "slinter"
     ],
     "slipa": [
@@ -28777,7 +28550,6 @@
         "slutföra",
         "slutförde",
         "slutfört,",
-        "presens",
         "slutför"
     ],
     "slutta": [
@@ -28897,7 +28669,6 @@
         "slagit",
         "slagen",
         "slagna,",
-        "presens",
         "slår"
     ],
     "slå an": [
@@ -29117,7 +28888,6 @@
         "smaksätta",
         "smaksatte",
         "smaksatt,",
-        "presens",
         "smaksätter"
     ],
     "smalna": [
@@ -29144,7 +28914,6 @@
         "smeka",
         "smekte",
         "smekt,",
-        "presens",
         "smeker"
     ],
     "smeta": [
@@ -29201,7 +28970,6 @@
         "smita",
         "smet",
         "smitit,",
-        "presens",
         "smiter"
     ],
     "smita åt": [
@@ -29276,7 +29044,6 @@
         "smugit",
         "smugen",
         "smugna,",
-        "presens",
         "smyger"
     ],
     "smyga in": [
@@ -29320,7 +29087,6 @@
         "av",
         "smällde",
         "smällt,",
-        "presens",
         "smäller"
     ],
     "smälla i": [
@@ -29435,7 +29201,6 @@
         "smörja",
         "smorde",
         "smort,",
-        "presens",
         "smörjer"
     ],
     "snabba": [
@@ -29553,7 +29318,6 @@
         "sno",
         "snodde",
         "snott,",
-        "presens",
         "snor"
     ],
     "sno ihop": [
@@ -30204,7 +29968,6 @@
         "spritt",
         "el.",
         "spridit,",
-        "presens",
         "sprider"
     ],
     "spridas": [
@@ -30222,7 +29985,6 @@
         "sprungit",
         "sprungen",
         "sprungna,",
-        "presens",
         "springer"
     ],
     "sprita": [
@@ -30266,7 +30028,6 @@
         "spräcka",
         "spräckte",
         "spräckt,",
-        "presens",
         "spräcker"
     ],
     "spränga": [
@@ -30458,7 +30219,6 @@
         "stadfästa",
         "stadfäste",
         "stadfäst,",
-        "presens",
         "stadfäster"
     ],
     "stadga": [
@@ -30589,7 +30349,6 @@
         "steka",
         "stekte",
         "stekt,",
-        "presens",
         "steker"
     ],
     "steka sig": [
@@ -30705,7 +30464,6 @@
         "stigit",
         "stigen",
         "stigna,",
-        "presens",
         "stiger"
     ],
     "stillna": [
@@ -30980,7 +30738,6 @@
         "strukit",
         "struken",
         "strukna,",
-        "presens",
         "stryker"
     ],
     "stryka för": [
@@ -31042,7 +30799,6 @@
         "sträcka",
         "sträckte",
         "sträckt,",
-        "presens",
         "sträcker"
     ],
     "sträcka sig": [
@@ -31150,7 +30906,6 @@
         "styra",
         "styrde",
         "styrt,",
-        "presens",
         "styr"
     ],
     "styra om": [
@@ -31195,7 +30950,6 @@
         "ställa",
         "ställde",
         "ställt,",
-        "presens",
         "ställer"
     ],
     "ställa av": [
@@ -31282,7 +31036,6 @@
         "stämma",
         "stämde",
         "stämt,",
-        "presens",
         "stämmer"
     ],
     "stämma av": [
@@ -31329,7 +31082,6 @@
         "stänga",
         "stängde",
         "stängt,",
-        "presens",
         "stänger"
     ],
     "stänga av": [
@@ -31395,7 +31147,6 @@
         "stå",
         "stod",
         "stått,",
-        "presens",
         "står"
     ],
     "stå bakom": [
@@ -31569,7 +31320,6 @@
         "stöta",
         "stötte",
         "stött,",
-        "presens",
         "stöter"
     ],
     "stöta av": [
@@ -31667,7 +31417,6 @@
         "sugit",
         "sugen",
         "sugna,",
-        "presens",
         "suger"
     ],
     "suga av": [
@@ -31851,7 +31600,6 @@
         "svikit",
         "sviken",
         "svikna,",
-        "presens",
         "sviker"
     ],
     "svikta": [
@@ -31948,7 +31696,6 @@
         "svänga",
         "svängde",
         "svängt,",
-        "presens",
         "svänger"
     ],
     "svänga ihop": [
@@ -32085,7 +31832,6 @@
         "sysselsätta",
         "sysselsatte",
         "sysselsatt,",
-        "presens",
         "sysselsätter"
     ],
     "sysselsätta sig": [
@@ -32093,7 +31839,6 @@
         "sig",
         "sysselsatte",
         "sysselsatt,",
-        "presens",
         "sysselsätter"
     ],
     "syssla": [
@@ -32112,7 +31857,6 @@
         "el.",
         "sa,",
         "sagt,",
-        "presens",
         "säger"
     ],
     "säga emot": [
@@ -32179,7 +31923,6 @@
         "sälja",
         "sålde",
         "sålt,",
-        "presens",
         "säljer"
     ],
     "sälla sig": [
@@ -32238,14 +31981,12 @@
         "särskilt",
         "äv.",
         "särskiljt,",
-        "presens",
         "särskiljer"
     ],
     "sätta": [
         "sätta",
         "satte",
         "satt,",
-        "presens",
         "sätter"
     ],
     "sätta av": [
@@ -32275,7 +32016,6 @@
         "sig",
         "satte",
         "satt,",
-        "presens",
         "sätter"
     ],
     "sätta ifråga": [
@@ -32330,7 +32070,6 @@
         "samman",
         "satte",
         "satt,",
-        "presens",
         "sätter"
     ],
     "sätta sig": [
@@ -32354,7 +32093,6 @@
         "in",
         "satte",
         "satt,",
-        "presens",
         "sätter"
     ],
     "sätta till": [
@@ -32422,7 +32160,6 @@
         "söka",
         "sökte",
         "sökt,",
-        "presens",
         "söker"
     ],
     "söka av": [
@@ -32473,7 +32210,6 @@
         "sörja",
         "sörjde",
         "sörjt,",
-        "presens",
         "sörjer"
     ],
     "ta": [
@@ -32482,7 +32218,6 @@
         "tagit",
         "tagen",
         "tagna,",
-        "presens",
         "tar",
         "åld.",
         "taga",
@@ -32490,7 +32225,6 @@
         "tagit",
         "tagen",
         "tagna,",
-        "presens",
         "tager"
     ],
     "ta av": [
@@ -32526,7 +32260,6 @@
         "fram",
         "tog",
         "tagit,",
-        "presens",
         "tar"
     ],
     "ta för sig": [
@@ -33047,7 +32780,6 @@
         "sig",
         "tilldrog",
         "tilldragit,",
-        "presens",
         "tilldrar",
         "äv.",
         "åld.",
@@ -33057,7 +32789,6 @@
         "sig",
         "tilldrog",
         "tilldragit,",
-        "presens",
         "tilldrar",
         "äv.",
         "åld.",
@@ -33114,7 +32845,6 @@
         "tillföra",
         "tillförde",
         "tillfört,",
-        "presens",
         "tillför"
     ],
     "tillförsäkra": [
@@ -33133,7 +32863,6 @@
         "tillgodose",
         "tillgodosåg",
         "tillgodosett,",
-        "presens",
         "tillgodoser"
     ],
     "tillgripa": [
@@ -33148,7 +32877,6 @@
         "tillgå",
         "tillgick",
         "tillgått,",
-        "presens",
         "tillgår"
     ],
     "tillhandahålla": [
@@ -33157,7 +32885,6 @@
         "tillhandahållit",
         "tillhandahållen",
         "tillhandahållna,",
-        "presens",
         "tillhandahåller"
     ],
     "tillhöra": [
@@ -33196,7 +32923,6 @@
         "tillkännagett,",
         "tillkännagiven",
         "tillkännagivna,",
-        "presens",
         "tillkännager",
         "åld.",
         "tillkännagiva",
@@ -33204,7 +32930,6 @@
         "tillkännagivit,",
         "tillkännagiven",
         "tillkännagivna,",
-        "presens",
         "tillkännagiver"
     ],
     "tillmäta": [
@@ -33223,7 +32948,6 @@
         "tillreda",
         "tillredde",
         "tillrett,",
-        "presens",
         "tillreder"
     ],
     "tillryggalägga": [
@@ -33252,7 +32976,6 @@
         "tillråda",
         "tillrådde",
         "tillrått,",
-        "presens",
         "tillråder"
     ],
     "tillse": [
@@ -33342,27 +33065,23 @@
         "tillstå",
         "tillstod",
         "tillstått,",
-        "presens",
         "tillstår"
     ],
     "tillsätta": [
         "tillsätta",
         "tillsatte",
         "tillsatt,",
-        "presens",
         "tillsätter"
     ],
     "tillta": [
         "tillta",
         "tilltog",
         "tilltagit,",
-        "presens",
         "tilltar",
         "åld.",
         "tilltaga",
         "tilltog",
         "tilltagit,",
-        "presens",
         "tilltager"
     ],
     "tilltala": [
@@ -33448,7 +33167,6 @@
         "tillåtit",
         "tillåten",
         "tillåtna,",
-        "presens",
         "tillåter"
     ],
     "tillåta sig": [
@@ -33601,7 +33319,6 @@
         "tjuta",
         "tjöt",
         "tjutit,",
-        "presens",
         "tjuter"
     ],
     "tjuvhålla": [
@@ -33744,7 +33461,6 @@
         "topphuggit",
         "topphuggen",
         "topphuggna,",
-        "presens",
         "topphugger"
     ],
     "topprida": [
@@ -34110,7 +33826,6 @@
         "tro",
         "trodde",
         "trott,",
-        "presens",
         "tror"
     ],
     "trolla": [
@@ -34198,7 +33913,6 @@
         "trycka",
         "tryckte",
         "tryckt,",
-        "presens",
         "trycker"
     ],
     "trycka av": [
@@ -34292,7 +34006,6 @@
         "tränga",
         "trängde",
         "trängt,",
-        "presens",
         "tränger"
     ],
     "tränga igenom": [
@@ -34482,7 +34195,6 @@
         "tvingade",
         "el.",
         "tvungna,",
-        "presens",
         "tvingar"
     ],
     "tvinga av": [
@@ -34584,7 +34296,6 @@
         "tycka",
         "tyckte",
         "tyckt,",
-        "presens",
         "tycker"
     ],
     "tycka om": [
@@ -34592,7 +34303,6 @@
         "om",
         "tyckte",
         "tyckt,",
-        "presens",
         "tycker"
     ],
     "tycka sig": [
@@ -34618,7 +34328,6 @@
         "tyda",
         "tydde",
         "tytt,",
-        "presens",
         "tyder"
     ],
     "tydliggöra": [
@@ -34651,7 +34360,6 @@
         "täcka",
         "täckte",
         "täckt,",
-        "presens",
         "täcker"
     ],
     "tälja": [
@@ -34685,7 +34393,6 @@
         "tänja",
         "tänjde",
         "tänjt,",
-        "presens",
         "tänjer"
     ],
     "tänka": [
@@ -34747,14 +34454,12 @@
         "täppa",
         "täppte",
         "täppt,",
-        "presens",
         "täpper"
     ],
     "tära": [
         "tära",
         "tärde",
         "tärt,",
-        "presens",
         "tär"
     ],
     "tärna": [
@@ -34810,19 +34515,16 @@
         "tömma",
         "tömde",
         "tömt,",
-        "presens",
         "tömmer"
     ],
     "töras": [
         "töras",
         "tordes",
         "torts,",
-        "presens",
         "törs",
         "tordas",
         "tordes",
         "tordats,",
-        "presens",
         "törs"
     ],
     "uggla": [
@@ -34854,7 +34556,6 @@
         "particip",
         "vanl.",
         "ugnskokt,",
-        "presens",
         "ugnskokar"
     ],
     "ugnssteka": [
@@ -34962,7 +34663,6 @@
         "undergått",
         "undergången",
         "undergångna,",
-        "presens",
         "undergår"
     ],
     "underhandla": [
@@ -35073,7 +34773,6 @@
         "understrukit",
         "understruken",
         "understrukna,",
-        "presens",
         "understryker"
     ],
     "underställa": [
@@ -35146,7 +34845,6 @@
         "undfå",
         "undfick",
         "undfått,",
-        "presens",
         "undfår"
     ],
     "undgå": [
@@ -35189,7 +34887,6 @@
         "undsätta",
         "undsatte",
         "undsatt,",
-        "presens",
         "undsätter"
     ],
     "undulera": [
@@ -35211,7 +34908,6 @@
         "undvikit",
         "undviken",
         "undvikna,",
-        "presens",
         "undviker"
     ],
     "uniformera": [
@@ -35335,7 +35031,6 @@
         "uppfunnit",
         "uppfunnen",
         "uppfunna,",
-        "presens",
         "uppfinner"
     ],
     "uppfordra": [
@@ -35370,7 +35065,6 @@
         "uppföra",
         "uppförde",
         "uppfört,",
-        "presens",
         "uppför"
     ],
     "uppföra sig": [
@@ -35403,7 +35097,6 @@
         "uppgå",
         "uppgick",
         "uppgått,",
-        "presens",
         "uppgår"
     ],
     "upphandla": [
@@ -35541,7 +35234,6 @@
         "uppresa",
         "uppreste",
         "upprest,",
-        "presens",
         "uppreser"
     ],
     "uppresa sig": [
@@ -35649,14 +35341,12 @@
         "uppstått",
         "uppstånden",
         "uppståndna,",
-        "presens",
         "uppstår"
     ],
     "uppsöka": [
         "uppsöka",
         "uppsökte",
         "uppsökt,",
-        "presens",
         "uppsöker"
     ],
     "uppta": [
@@ -35692,7 +35382,6 @@
         "uppträda",
         "uppträdde",
         "uppträtt,",
-        "presens",
         "uppträder"
     ],
     "upptäcka": [
@@ -35932,7 +35621,6 @@
         "sig",
         "utbredde",
         "utbrett,",
-        "presens",
         "utbreder"
     ],
     "utbringa": [
@@ -36115,7 +35803,6 @@
         "utföra",
         "utförde",
         "utfört,",
-        "presens",
         "utför"
     ],
     "utförsälja": [
@@ -36183,7 +35870,6 @@
         "utgöra",
         "utgjorde",
         "utgjort,",
-        "presens",
         "utgör"
     ],
     "uthärda": [
@@ -36330,7 +36016,6 @@
         "utmärka",
         "utmärkte",
         "utmärkt,",
-        "presens",
         "utmärker"
     ],
     "utmärka sig": [
@@ -36567,7 +36252,6 @@
         "utstått",
         "utstånden",
         "utståndna,",
-        "presens",
         "utstår"
     ],
     "utstöta": [
@@ -36600,7 +36284,6 @@
         "utsätta",
         "utsatte",
         "utsatt,",
-        "presens",
         "utsätter"
     ],
     "utsätta sig": [
@@ -36881,7 +36564,6 @@
         "vanställa",
         "vanställde",
         "vanställt,",
-        "presens",
         "vanställer"
     ],
     "vantolka": [
@@ -36914,9 +36596,7 @@
         "vara",
         "var",
         "varit,",
-        "presens",
         "är,",
-        "presens",
         "konjunktiv",
         "vare,",
         "preteritum",
@@ -37045,7 +36725,6 @@
     ],
     "vederböra": [
         "vederböra",
-        "presens",
         "vederbör",
         "övriga",
         "former",
@@ -37101,7 +36780,6 @@
         "verkställa",
         "verkställde",
         "verkställt,",
-        "presens",
         "verkställer"
     ],
     "veta": [
@@ -37123,7 +36801,6 @@
         "sig",
         "visste",
         "vetat,",
-        "presens",
         "vet"
     ],
     "veta om": [
@@ -37138,7 +36815,6 @@
         "sig",
         "visste",
         "vetat,",
-        "presens",
         "vet"
     ],
     "veta till sig": [
@@ -37200,7 +36876,6 @@
         "vidgå",
         "vidgick",
         "vidgått,",
-        "presens",
         "vidgår"
     ],
     "vidhäfta": [
@@ -37251,7 +36926,6 @@
         "vidröra",
         "vidrörde",
         "vidrört,",
-        "presens",
         "vidrör"
     ],
     "vidta": [
@@ -37331,7 +37005,6 @@
         "vikit",
         "el.",
         "vikt,",
-        "presens",
         "viker"
     ],
     "vika upp": [
@@ -37428,7 +37101,6 @@
         "vilseleda",
         "vilseledde",
         "vilselett,",
-        "presens",
         "vilseleder"
     ],
     "vimla": [
@@ -37506,7 +37178,6 @@
         "vunnit",
         "vunnen",
         "vunna,",
-        "presens",
         "vinner"
     ],
     "vinscha": [
@@ -37758,7 +37429,6 @@
         "väga",
         "vägde",
         "vägt,",
-        "presens",
         "väger"
     ],
     "väga ned": [
@@ -37800,7 +37470,6 @@
         "väja",
         "väjde",
         "väjt,",
-        "presens",
         "väjer"
     ],
     "välja": [
@@ -37839,7 +37508,6 @@
         "välla",
         "vällde",
         "vällt,",
-        "presens",
         "väller"
     ],
     "välsigna": [
@@ -37917,7 +37585,6 @@
         "vänja",
         "vande",
         "vant,",
-        "presens",
         "vänjer"
     ],
     "vänja av": [
@@ -38019,7 +37686,6 @@
         "värja",
         "värjde",
         "värjt,",
-        "presens",
         "värjer"
     ],
     "värka": [
@@ -38123,7 +37789,6 @@
         "vuxna",
         "el.",
         "växta,",
-        "presens",
         "växer"
     ],
     "växa bort": [
@@ -38198,7 +37863,6 @@
         "vuxit",
         "el.",
         "växt,",
-        "presens",
         "växer"
     ],
     "växa ur": [
@@ -38417,7 +38081,6 @@
         "äga",
         "ägde",
         "ägt,",
-        "presens",
         "äger"
     ],
     "ägna": [
@@ -38557,7 +38220,6 @@
         "ätit",
         "äten",
         "ätna,",
-        "presens",
         "äter"
     ],
     "äta upp": [
@@ -38641,7 +38303,6 @@
         "åka",
         "åkte",
         "åkt,",
-        "presens",
         "åker"
     ],
     "åka dit": [
@@ -38816,7 +38477,6 @@
         "åstadkommit",
         "åstadkommen",
         "åstadkomna,",
-        "presens",
         "åstadkommer"
     ],
     "åstunda": [
@@ -38834,14 +38494,12 @@
         "sig",
         "åtog",
         "åtagit,",
-        "presens",
         "åtar",
         "åld.",
         "åtaga",
         "sig",
         "åtog",
         "åtagit,",
-        "presens",
         "åtager"
     ],
     "åtala": [
@@ -38973,7 +38631,6 @@
         "återgått",
         "återgången",
         "återgångna,",
-        "presens",
         "återgår"
     ],
     "återhämta": [
@@ -39016,7 +38673,6 @@
         "återknutit",
         "återknuten",
         "återknutna,",
-        "presens",
         "återknyter"
     ],
     "återkomma": [
@@ -39087,7 +38743,6 @@
         "återtagit",
         "återtagen",
         "återtagna,",
-        "presens",
         "återtar",
         "åld.",
         "återtaga",
@@ -39095,7 +38750,6 @@
         "återtagit",
         "återtagen",
         "återtagna,",
-        "presens",
         "återtager"
     ],
     "återträffa": [
@@ -39170,7 +38824,6 @@
         "återvända",
         "återvände",
         "återvänt,",
-        "presens",
         "återvänder"
     ],
     "åtfölja": [
@@ -39222,7 +38875,6 @@
         "åtrå",
         "åtrådde",
         "åtrått,",
-        "presens",
         "åtrår"
     ],
     "åtskilja": [
@@ -39523,7 +39175,6 @@
         "överfallit",
         "överfallen",
         "överfallna,",
-        "presens",
         "överfaller"
     ],
     "överflygla": [
@@ -39553,7 +39204,6 @@
         "övergett,",
         "övergiven",
         "övergivna,",
-        "presens",
         "överger",
         "åld.",
         "övergiva",
@@ -39561,7 +39211,6 @@
         "övergivit,",
         "övergiven",
         "övergivna,",
-        "presens",
         "övergiver"
     ],
     "överglänsa": [
@@ -39591,7 +39240,6 @@
         "överhölja",
         "överhöljde",
         "överhöljt,",
-        "presens",
         "överhöljer"
     ],
     "överhöra": [
@@ -39702,7 +39350,6 @@
         "överräcka",
         "överräckte",
         "överräckt,",
-        "presens",
         "överräcker"
     ],
     "överrösta": [
@@ -39783,7 +39430,6 @@
         "översända",
         "översände",
         "översänt,",
-        "presens",
         "översänder"
     ],
     "översätta": [
@@ -39835,7 +39481,6 @@
         "överträda",
         "överträdde",
         "överträtt,",
-        "presens",
         "överträder"
     ],
     "överträffa": [
@@ -39885,7 +39530,6 @@
         "överväga",
         "övervägde",
         "övervägt,",
-        "presens",
         "överväger"
     ],
     "överväldiga": [

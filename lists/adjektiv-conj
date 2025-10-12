@@ -1575,7 +1575,6 @@
         "bankrutta"
     ],
     "bar": [
-        "bar",
         "bart",
         "bara"
     ],
@@ -5958,7 +5957,6 @@
         "fullriggade"
     ],
     "fullsatt": [
-        "fullsatt",
         "fullsatt",
         "fullsatta"
     ],
@@ -21664,6 +21662,10 @@
         "spexig",
         "spexigt",
         "spexiga"
+    ],
+    "spikad": [
+        "spikat",
+        "spikade"
     ],
     "spikrak": [
         "spikrak",
