@@ -21101,7 +21101,6 @@
         "forskningar"
     ],
     "forsränning": [
-        "forsränning",
         "forsränningen"
     ],
     "forsärla": [
@@ -23164,6 +23163,11 @@
         "föreläsning",
         "föreläsningen",
         "föreläsningar"
+    ],
+    "föremål": [
+        "föremålet",
+        "föremål",
+        "föremålen"
     ],
     "förening": [
         "förening",
@@ -52469,6 +52473,11 @@
         "obegriplighet",
         "~en"
     ],
+    "objekt": [
+        "objektet",
+        "objekt",
+        "objekten"
+    ],
     "objektivitet": [
         "objektivitet",
         "objektiviteten"
@@ -57971,7 +57980,6 @@
         "rämnor"
     ],
     "ränna": [
-        "ränna",
         "rännan",
         "rännor"
     ],
@@ -83074,6 +83082,11 @@
         "ångvält",
         "ångvälten",
         "ångvältar"
+    ],
+    "år": [
+        "året",
+        "år",
+        "åren"
     ],
     "åra": [
         "åra",
