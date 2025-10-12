@@ -782,7 +782,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 	if (GLOBAL.cur_matches_count > 1) {
 		$('#iInput').attr("placeholder","Navigate matches with PageUp/Down");
 	}
-	let out_html = "'" + CUR_WORD + "'";
+	let out_html = "'" + CUR_WORD.replace(/-\d/,"") + "'";
 	let n_pVerbs = 0; // Particle verbs
 	for(const key of Object.keys(GLOBAL.cur_matches)) {
 		let tmp =  GLOBAL.cur_matches[key];
@@ -1819,7 +1819,8 @@ function fmtMeta(meta) {
 		let tmpMeta = rep = "<i>" + rep + "</i><br>"
 		return tmpMeta
 	}
-	meta = meta.replace(tmpCUR_WORD,rep);
+	const regex = new RegExp("\\p" + tmpCUR_WORD + "\\p","g");
+	meta = meta.replace(regex, "<b>" + tmpCUR_WORD + "</b>");
 	metaArr = meta.split("<br>");
 	let tmpMeta = "";
 	delMeta = "";	
@@ -2495,6 +2496,7 @@ async function showExternal() {
 	let inp = $('#iInput').val();
 	if (inp.length === 0) inp = CUR_WORD
 	if (inp.length === 0) return;
+	inp = inp.replace(/-\d/,"");
 	const res = await fetch('backend/getID.php?word=' + inp, {
 		method: 'GET',
 		mode: 'cors',
