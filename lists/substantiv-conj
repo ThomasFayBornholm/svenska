@@ -709,9 +709,7 @@
         "agronomin"
     ],
     "aids": [
-        "aids",
-        "",
-        "utrum"
+        ""
     ],
     "airbag": [
         "airbag",
@@ -3077,6 +3075,10 @@
         "arbetarrörelsen",
         "arbetarrörelser"
     ],
+    "arbete": [
+        "arbetet",
+        "arbeten"
+    ],
     "arbetsbelastning": [
         "arbetsbelastning",
         "arbetsbelastningen",
@@ -3595,6 +3597,10 @@
         "arvfiende",
         "arvfienden",
         "arvfiender"
+    ],
+    "arvode": [
+        "arvodet",
+        "arvoden"
     ],
     "arvsfaktor": [
         "arvsfaktor",
@@ -4255,6 +4261,11 @@
         "avbrytaren",
         "avbrytare",
         "avbrytarna"
+    ],
+    "avbräck": [
+        "avbräcket",
+        "avbräck",
+        "avbräcken"
     ],
     "avbränning": [
         "avbränning",
@@ -4973,6 +4984,11 @@
         "avstängningen",
         "avstängningar"
     ],
+    "avstånd": [
+        "avståndet",
+        "avstånd",
+        "avstånden"
+    ],
     "avståndsverkan": [
         "avståndsverkan",
         "bestämd",
@@ -5097,7 +5113,6 @@
         "avtvagningar"
     ],
     "avund": [
-        "avund",
         "avunden"
     ],
     "avundsjuka": [
@@ -5181,6 +5196,11 @@
         "axill",
         "axillen",
         "axiller"
+    ],
+    "axiom": [
+        "axiomet",
+        "axiom",
+        "axiomen"
     ],
     "azalea": [
         "azalea",
@@ -16638,7 +16658,6 @@
         "efterföljden"
     ],
     "eftergift": [
-        "eftergift",
         "eftergiften",
         "eftergifter"
     ],
@@ -18236,6 +18255,11 @@
     "exekvering": [
         "exekvering",
         "~en"
+    ],
+    "exempel": [
+        "exemplet",
+        "exempel",
+        "exemplen"
     ],
     "exhalation": [
         "exhalation",
@@ -20985,6 +21009,11 @@
         "forceringen",
         "forceringar"
     ],
+    "fordon": [
+        "fordonet",
+        "fordon",
+        "fordonen"
+    ],
     "fordonsskatt": [
         "fordonsskatt",
         "~en",
@@ -22189,6 +22218,11 @@
         "fulländning",
         "fulländningen"
     ],
+    "fundament": [
+        "fundamentet",
+        "fundament",
+        "fundamenten"
+    ],
     "fundamentalism": [
         "fundamentalism",
         "fundamentalismen"
@@ -22658,6 +22692,10 @@
         "färjelinje",
         "~n",
         "färjelinjor"
+    ],
+    "färjeläge": [
+        "färjeläget",
+        "färjelägen"
     ],
     "färjeterminal": [
         "färjeterminal",
@@ -23207,7 +23245,6 @@
         "förespråkarna"
     ],
     "föreställning": [
-        "föreställning",
         "föreställningen",
         "föreställningar"
     ],
@@ -26671,9 +26708,8 @@
         "gradualavhandlingar"
     ],
     "graf": [
-        "-graf",
-        "-grafen",
-        "-grafer"
+        "grafen",
+        "grafer"
     ],
     "graffiti": [
         "graffiti",
@@ -27193,7 +27229,6 @@
         "grundläggningar"
     ],
     "grundsats": [
-        "grundsats",
         "grundsatsen",
         "grundsatser"
     ],
@@ -28295,6 +28330,9 @@
         "göl",
         "gölen",
         "gölar"
+    ],
+    "göra": [
+        "görat"
     ],
     "görare": [
         "görare",
@@ -33293,7 +33331,6 @@
         "inkompetensen"
     ],
     "inkomst": [
-        "inkomst",
         "inkomsten",
         "inkomster"
     ],
@@ -34149,6 +34186,11 @@
     "introspektion": [
         "introspektion",
         "introspektionen"
+    ],
+    "intryck": [
+        "intrycket",
+        "intryck",
+        "intrycken"
     ],
     "inträdesbiljett": [
         "inträde",
@@ -38363,12 +38405,10 @@
         "kojor"
     ],
     "koka": [
-        "koka",
         "kokan",
         "kokor"
     ],
     "koka-2": [
-        "koka",
         "kokan"
     ],
     "kokard": [
@@ -49202,6 +49242,11 @@
         "motgången",
         "motgångar"
     ],
+    "mothugg": [
+        "mothugget",
+        "mothugg",
+        "mothuggen"
+    ],
     "motighet": [
         "motighet",
         "motigheten",
@@ -50296,6 +50341,10 @@
         "måttsats",
         "måttsatsen",
         "måttsatser"
+    ],
+    "måttstock": [
+        "måttstocken",
+        "måttstockar"
     ],
     "möbel": [
         "möbel",
@@ -51960,7 +52009,6 @@
         "nynorskan"
     ],
     "nypa": [
-        "nypa",
         "nypan",
         "nypor"
     ],
@@ -52390,6 +52438,10 @@
         "nödvändighetsvara",
         "nödvändighetsvaran",
         "nödvändighetsvaror"
+    ],
+    "nöje": [
+        "nöjet",
+        "nöjen"
     ],
     "nöjesbransch": [
         "nöjesbransch",
@@ -53064,6 +53116,10 @@
     "omoral": [
         "omoral",
         "omoralen"
+    ],
+    "område": [
+        "området",
+        "områden"
     ],
     "omrörning": [
         "omrörning",
@@ -53874,6 +53930,10 @@
     "otillfredsställelse": [
         "otillfredsställelse",
         "otillfredsställelsen"
+    ],
+    "period": [
+        "perioden",
+        "perioder"
     ],
     "poäng": [
         "poängen",
@@ -62004,6 +62064,10 @@
         "sked",
         "skeden",
         "skedar"
+    ],
+    "skede": [
+        "skedet",
+        "skeden"
     ],
     "skeleton": [
         "skeleton",
@@ -70895,6 +70959,11 @@
         "teaterviskningen",
         "teaterviskningar"
     ],
+    "tecken": [
+        "tecknet",
+        "tecken",
+        "tecknen"
+    ],
     "teckengivning": [
         "teckengivning",
         "teckengivningen"
@@ -77476,6 +77545,9 @@
         "utrotningen",
         "utrotningar"
     ],
+    "utrum": [
+        ""
+    ],
     "utrusning": [
         "utrusning",
         "utrusningen",
@@ -77687,6 +77759,11 @@
         "uttagsautomat",
         "uttagsautomaten",
         "uttagsautomater"
+    ],
+    "uttal": [
+        "uttalet",
+        "uttal",
+        "uttalen"
     ],
     "uttalsbeteckning": [
         "uttalsbeteckning",
@@ -78360,13 +78437,14 @@
         "varar"
     ],
     "vara": [
-        "vara",
         "varan",
         "varor"
     ],
     "vara-2": [
-        "vara",
         ""
+    ],
+    "vara-3": [
+        "varat"
     ],
     "vardag": [
         "vardag",
@@ -79316,6 +79394,13 @@
         "vimpel",
         "vimpeln",
         "vimplar"
+    ],
+    "vin": [
+        "vinet",
+        "viner"
+    ],
+    "vin-2": [
+        "vinet"
     ],
     "vind": [
         "vind",
@@ -82863,7 +82948,6 @@
         "åkturer"
     ],
     "ål": [
-        "ål",
         "ålen",
         "ålar"
     ],
@@ -83361,7 +83445,6 @@
         "åtanken"
     ],
     "åtbörd": [
-        "åtbörd",
         "åtbörden",
         "åtbörder"
     ],

@@ -531,12 +531,8 @@
         "anländer"
     ],
     "anlöpa": [
-        "anlöpa",
         "anlöpte",
         "anlöpt",
-        "perfekt",
-        "particip",
-        "ibland",
         "anlupen",
         "anlöper"
     ],
@@ -3774,19 +3770,12 @@
         "bevattnat"
     ],
     "beveka": [
-        "beveka",
         "bevekade",
-        "el.",
         "bevekte",
         "bevekat",
-        "el.",
         "bevekt",
-        "perfekt",
-        "particip",
-        "vanl.",
         "bevekt",
         "bevekar",
-        "el.",
         "beveker"
     ],
     "bevilja": [
@@ -5959,15 +5948,9 @@
         "dekorerat"
     ],
     "dela": [
-        "dela",
         "delade",
         "delat",
-        "perfekt",
-        "particip",
         "delad",
-        "i",
-        "ett",
-        "uttr.",
         "delt"
     ],
     "dela av": [
@@ -8448,16 +8431,10 @@
         "flottat"
     ],
     "flottyrkoka": [
-        "flottyrkoka",
         "flottyrkokade",
-        "el.",
         "flottyrkokte",
         "flottyrkokat",
-        "el.",
         "flottyrkokt",
-        "perfekt",
-        "particip",
-        "vanl.",
         "flottyrkokt",
         "flottyrkokar"
     ],
@@ -8730,7 +8707,6 @@
         "fortgår"
     ],
     "fortleva": [
-        "fortleva",
         "fortlevde",
         "fortlevt",
         "fortlever"
@@ -9496,13 +9472,9 @@
         "färskat"
     ],
     "fästa": [
-        "fästa",
         "fäste",
         "fäst",
         "fäster",
-        "perfekt",
-        "particip",
-        "ibland",
         "fästad"
     ],
     "fästa sig": [
@@ -10139,13 +10111,9 @@
         "föreläser"
     ],
     "förena": [
-        "förena",
         "förenade",
         "förenat",
-        "perfekt",
-        "particip",
         "förenad",
-        "ibland",
         "förent"
     ],
     "förena sig": [
@@ -13417,12 +13385,8 @@
         "gäckat"
     ],
     "gälda": [
-        "gälda",
         "gäldade",
         "gäldat",
-        "perfekt",
-        "particip",
-        "ibland",
         "gulden"
     ],
     "gälla": [
@@ -13633,9 +13597,8 @@
         "gömmer"
     ],
     "göra": [
-        "göra",
         "gjorde",
-        "gjort,",
+        "gjort",
         "gör"
     ],
     "göra an": [
@@ -14415,12 +14378,8 @@
         "häcklat"
     ],
     "häda": [
-        "häda",
         "hädade",
         "hädat",
-        "perfekt",
-        "particip",
-        "ibland",
         "hädd"
     ],
     "häfta": [
@@ -15541,16 +15500,10 @@
         "inkluderat"
     ],
     "inkoka": [
-        "inkoka",
         "inkokade",
-        "el.",
         "inkokte",
         "inkokat",
-        "el.",
         "inkokt",
-        "perfekt",
-        "particip",
-        "vanl.",
         "inkokt",
         "inkokar"
     ],
@@ -17750,16 +17703,10 @@
         "kojat"
     ],
     "koka": [
-        "koka",
         "kokade",
-        "el.",
         "kokte",
         "kokat",
-        "el.",
         "kokt",
-        "perfekt",
-        "particip",
-        "vanl.",
         "kokt",
         "kokar"
     ],
@@ -19350,8 +19297,6 @@
         "kör"
     ],
     "köra om": [
-        "köra",
-        "om",
         "körde",
         "kört",
         "kör"
@@ -20725,18 +20670,9 @@
         "lågat"
     ],
     "låna": [
-        "låna",
-        "lånade,",
-        "lånat",
-        ";",
-        "perfekt",
-        "particip",
-        "plural",
         "lånade",
-        "i",
-        "ett",
-        "uttr.",
-        "äv.",
+        "lånat",
+        "lånade",
         "lånta"
     ],
     "långledas": [
@@ -21289,8 +21225,6 @@
         "menar"
     ],
     "mena på": [
-        "mena",
-        "på",
         "menade",
         "mente",
         "menat",
@@ -22604,12 +22538,9 @@
         "nynnat"
     ],
     "nypa": [
-        "nypa",
         "nöp",
         "nypt",
         "nupit",
-        "perfekt",
-        "particip",
         "nypt",
         "nypta",
         "nyper"
@@ -27266,13 +27197,8 @@
         "skanderat"
     ],
     "skapa": [
-        "skapa",
         "skapade",
         "skapat",
-        "i",
-        "perfekt",
-        "particip",
-        "ibland",
         "skapt"
     ],
     "skapa om": [
@@ -29946,14 +29872,10 @@
         "spricker"
     ],
     "sprida": [
-        "sprida",
         "spred",
         "spridde",
         "spritt",
-        "el.",
         "spridit",
-        "perfekt",
-        "particip",
         "spridd",
         "sprider"
     ],
@@ -30782,14 +30704,8 @@
         "stryker"
     ],
     "strypa": [
-        "strypa",
         "ströp",
         "strypte",
-        "supinum",
-        "och",
-        "perfekt",
-        "particip",
-        "endast",
         "strypt",
         "stryper"
     ],
@@ -34543,17 +34459,11 @@
         "ugnsgräddat"
     ],
     "ugnskoka": [
-        "ugnskoka",
         "ugnskokade",
-        "el.",
-        "ugnskokte,",
+        "ugnskokte",
         "ugnskokat",
-        "el.",
-        "ugnskokt,",
-        "perfekt",
-        "particip",
-        "vanl.",
-        "ugnskokt,",
+        "ugnskokt",
+        "ugnskokt",
         "ugnskokar"
     ],
     "ugnssteka": [
@@ -34914,12 +34824,8 @@
         "uniformerat"
     ],
     "unna": [
-        "unna",
         "unnade",
         "unnat",
-        "perfekt",
-        "particip",
-        "ibland",
         "unt"
     ],
     "upparbeta": [
@@ -35965,12 +35871,8 @@
         "utlåter"
     ],
     "utlöpa": [
-        "utlöpa",
         "utlöpte",
         "utlöpt",
-        "perfekt",
-        "particip",
-        "ofta",
         "utlupen",
         "utlöper"
     ],
@@ -36591,14 +36493,10 @@
         "vanärat"
     ],
     "vara": [
-        "vara",
         "var",
-        "varit,",
-        "är,",
-        "konjunktiv",
-        "vare,",
-        "preteritum",
-        "konjunktiv",
+        "varit",
+        "är",
+        "vare",
         "vore"
     ],
     "vara sig": [
@@ -36608,16 +36506,12 @@
         "varat"
     ],
     "vara-2": [
-        "vara",
         "varade",
         "varat"
     ],
     "varda": [
-        "varda",
         "vart",
         "varder",
-        "preteritum",
-        "particip",
         "vorden"
     ],
     "variera": [
@@ -38407,16 +38301,10 @@
         "ångat"
     ],
     "ångkoka": [
-        "ångkoka",
         "ångkokade",
-        "el.",
         "ångkokte",
         "ångkokat",
-        "el.",
         "ångkokt",
-        "perfekt",
-        "particip",
-        "vanl.",
         "ångkokt",
         "ångkokar"
     ],
@@ -39095,7 +38983,6 @@
         "överbeskyddat"
     ],
     "överbevisa": [
-        "överbevisa",
         "överbevisade",
         "överbevisat"
     ],
@@ -39451,7 +39338,6 @@
         "övertager"
     ],
     "övertala": [
-        "övertala",
         "övertalade",
         "övertalat"
     ],

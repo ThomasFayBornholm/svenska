@@ -13723,6 +13723,10 @@
         "metaboliskt",
         "metaboliska"
     ],
+    "metodisk": [
+        "metodiskt",
+        "metodiska"
+    ],
     "metrisk": [
         "metrisk",
         "metriskt",
@@ -14259,7 +14263,6 @@
         "märkvärdiga"
     ],
     "mätbar": [
-        "mätbar",
         "mätbart",
         "mätbara"
     ],
@@ -21942,10 +21945,9 @@
         "stolts"
     ],
     "stor": [
-        "stor",
         "stort",
         "stora",
-        "större,",
+        "större",
         "störst"
     ],
     "storartad": [
@@ -23354,7 +23356,6 @@
         "toppseedade"
     ],
     "torftig": [
-        "torftig",
         "torftigt",
         "torftiga"
     ],
