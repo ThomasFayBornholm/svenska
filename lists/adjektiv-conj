@@ -5528,7 +5528,6 @@
         "formbara"
     ],
     "formell": [
-        "formell",
         "formellt",
         "formella"
     ],
@@ -6183,10 +6182,7 @@
         "fästa"
     ],
     "få": [
-        "få",
-        "plural",
-        "",
-        "färre,",
+        "färre",
         "färst"
     ],
     "fåfäng": [
@@ -8887,9 +8883,8 @@
         "hårlösa"
     ],
     "hög": [
-        "hög",
         "högt",
-        "högre,",
+        "högre",
         "högst",
         "högan"
     ],

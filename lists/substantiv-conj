@@ -4079,8 +4079,7 @@
         "utrum"
     ],
     "auspicier": [
-        "auspicier",
-        "plural"
+        ""
     ],
     "australiensare": [
         "australiensare",
@@ -7442,7 +7441,6 @@
     ],
     "bermudashorts": [
         "bermudashorts",
-        "plural",
         "bermudashortsen"
     ],
     "berusning": [
@@ -10456,7 +10454,6 @@
     ],
     "boxershorts": [
         "boxershorts",
-        "plural",
         "boxershortsen"
     ],
     "boxertrosa": [
@@ -12959,7 +12956,6 @@
     ],
     "cityshorts": [
         "cityshorts",
-        "plural",
         "cityshortsen"
     ],
     "civilbefolkning": [
@@ -13801,10 +13797,6 @@
         "dat",
         "daten",
         "dater"
-    ],
-    "data": [
-        "data",
-        "plural"
     ],
     "data-2": [
         "data",
@@ -19162,10 +19154,6 @@
         "fejden",
         "fejder"
     ],
-    "fekalier": [
-        "fekalier",
-        "plural"
-    ],
     "fela": [
         "fela",
         "felan",
@@ -19443,10 +19431,6 @@
         "ficklampa",
         "ficklampan",
         "ficklampor"
-    ],
-    "fickpengar": [
-        "fickpengar",
-        "plural"
     ],
     "fickräknare": [
         "fickräknare",
@@ -31643,10 +31627,6 @@
         "hårbotten",
         "hårbottnar"
     ],
-    "hårddata": [
-        "hårddata",
-        "plural"
-    ],
     "hårddisk": [
         "hårddisk",
         "hårddisken",
@@ -34226,10 +34206,6 @@
         "invasionen",
         "invasioner"
     ],
-    "inventarier": [
-        "inventarier",
-        "plural"
-    ],
     "inventering": [
         "inventering",
         "inventeringen",
@@ -34648,7 +34624,6 @@
     ],
     "jeansshorts": [
         "jeansshorts",
-        "plural",
         "jeansshortsen"
     ],
     "jet": [
@@ -40070,10 +40045,6 @@
         "kortbana",
         "kortbanan",
         "kortbanor"
-    ],
-    "kortbyxor": [
-        "kortbyxor",
-        "plural"
     ],
     "kortdistans": [
         "kortdistans",
@@ -48580,10 +48551,6 @@
         "äv.",
         "mixers"
     ],
-    "mjukdata": [
-        "mjukdata",
-        "plural"
-    ],
     "mjukgörare": [
         "mjukgörare",
         "mjukgöraren",
@@ -49827,7 +49794,6 @@
     ],
     "mygg": [
         "mygg",
-        "plural",
         "myggen"
     ],
     "mygga": [
@@ -53835,10 +53801,6 @@
         "ostburgare",
         "ostburgarna"
     ],
-    "ostbågar": [
-        "ostbågar",
-        "plural"
-    ],
     "osteoporos": [
         "osteoporos",
         "osteoporosen"
@@ -53857,10 +53819,6 @@
         "ostkant",
         "ostkanten",
         "ostkanter"
-    ],
-    "ostkrokar": [
-        "ostkrokar",
-        "plural"
     ],
     "ostkupa": [
         "ostkupa",
@@ -56767,10 +56725,6 @@
         "ribbstolen",
         "ribbstolar"
     ],
-    "ridbyxor": [
-        "ridbyxor",
-        "plural"
-    ],
     "riddare": [
         "riddare",
         "riddaren",
@@ -58228,15 +58182,6 @@
         "råbock",
         "råbocken",
         "råbockar"
-    ],
-    "råd": [
-        "råd",
-        "",
-        "utrum"
-    ],
-    "rådata": [
-        "rådata",
-        "plural"
     ],
     "rådgivare": [
         "rådgivare",
@@ -60650,7 +60595,6 @@
     ],
     "shorts": [
         "shorts",
-        "plural",
         "shortsen"
     ],
     "show": [
@@ -64362,10 +64306,6 @@
         "småkakan",
         "småkakor"
     ],
-    "småkusiner": [
-        "småkusiner",
-        "plural"
-    ],
     "småkyrka": [
         "småkyrka",
         "småkyrkan",
@@ -65706,10 +65646,6 @@
         "speaker",
         "äv.",
         "speakers"
-    ],
-    "specerier": [
-        "specerier",
-        "plural"
     ],
     "special": [
         "special",
@@ -67636,10 +67572,6 @@
         "stormfloden",
         "stormfloder"
     ],
-    "stormsteg": [
-        "stormsteg",
-        "plural"
-    ],
     "stormvarning": [
         "stormvarning",
         "stormvarningen",
@@ -67831,10 +67763,6 @@
         "stridshandske",
         "stridshansken",
         "stridshanskar"
-    ],
-    "stridskrafter": [
-        "stridskrafter",
-        "plural"
     ],
     "stridssele": [
         "stridssele",
@@ -75900,6 +75828,11 @@
         "uppbördsterminen",
         "uppbördsterminer"
     ],
+    "uppdrag": [
+        "uppdraget",
+        "uppdrag",
+        "uppdragen"
+    ],
     "uppdragsforskning": [
         "uppdragsforskning",
         "uppdragsforskningen"
@@ -83577,10 +83510,6 @@
         "åthutning",
         "åthutningen",
         "åthutningar"
-    ],
-    "åthävor": [
-        "åthävor",
-        "plural"
     ],
     "åtkomst": [
         "åtkomst",
