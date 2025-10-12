@@ -65,23 +65,9 @@
         "F-skatt",
         "F-skatten"
     ],
-    "G": [
-        "G",
-        "G",
-        "neutrum"
-    ],
     "IQ": [
         "IQ",
         "IQ:n"
-    ],
-    "MVG": [
-        "MVG",
-        "MVG",
-        "neutrum",
-        "eller",
-        "mvg",
-        "mvg",
-        "neutrum"
     ],
     "Montessoripedagogik": [
         "Montessoripedagogik",
@@ -89,16 +75,12 @@
     ],
     "NN": [
         "NN",
-        "eller",
-        "N.N.",
-        "ingen",
-        "böjning"
+        "N.N."
     ],
     "Orienten": [
         "Orienten",
         "bestämd",
         "form",
-        "eller",
         "orienten",
         "bestämd",
         "form"
@@ -182,13 +164,8 @@
     "abdomen": [
         "abdomen",
         "abdomen",
-        "abdomen",
-        "el.",
         "abdomina",
-        "abdomina",
-        "utrum",
-        "el.",
-        "neutrum"
+        "abdomina"
     ],
     "aberration": [
         "aberration",
@@ -297,14 +274,11 @@
     "abstract": [
         "abstract",
         "abstractet",
-        "el.",
         "abstracten",
         "abstract",
-        "el.",
         "abstracter"
     ],
     "abstrakt": [
-        "abstrakt",
         "abstraktet",
         "abstrakter"
     ],
@@ -350,7 +324,6 @@
     "accept-2": [
         "accept",
         "acceptet",
-        "el.",
         "accepten",
         "accept",
         "accepten"
@@ -407,7 +380,6 @@
         "ackordssättning",
         "ackordssättningen",
         "ackordssättningar",
-        "eller",
         "ackordsättning",
         "ackordsättningen",
         "ackordsättningar"
@@ -498,11 +470,6 @@
         "adjutant",
         "adjutanten",
         "adjutanter"
-    ],
-    "adjö": [
-        "adjö",
-        "",
-        "neutrum"
     ],
     "administration": [
         "administration",
@@ -630,22 +597,10 @@
         "affärsresa"
     ],
     "aftershave": [
-        "aftershave",
-        "aftershaven",
-        "eller",
-        "after",
-        "shave",
-        "after",
-        "shaven"
+        "after shaven"
     ],
     "afterwork": [
-        "afterwork",
-        "afterworken",
-        "eller",
-        "after",
-        "work",
-        "after",
-        "worken"
+        "after worken"
     ],
     "afton": [
         "afton",
@@ -981,7 +936,6 @@
         "alf",
         "alfen",
         "alfer",
-        "eller",
         "alv",
         "alven",
         "alver"
@@ -1055,25 +1009,19 @@
     "alkoholtest": [
         "alkoholtest",
         "alkoholtestet",
-        "el.",
         "alkoholtesten",
         "alkoholtester",
-        "el.",
         "alkoholtest",
         "alkoholtesterna",
-        "el.",
         "alkoholtesten"
     ],
     "alkotest": [
         "alkotest",
         "alkotestet",
-        "el.",
         "alkotesten",
         "alkotester",
-        "el.",
         "alkotest",
         "alkotesterna",
-        "el.",
         "alkotesten"
     ],
     "allegori": [
@@ -1714,7 +1662,6 @@
         "andrabas",
         "andrabasen",
         "andrabasar",
-        "eller",
         "andrebas",
         "andrebasen",
         "andrebasar"
@@ -1762,7 +1709,6 @@
         "andratenor",
         "andratenoren",
         "andratenorer",
-        "eller",
         "andretenor",
         "andretenoren",
         "andretenorer"
@@ -1966,7 +1912,6 @@
         "anglosaxaren",
         "anglosaxare",
         "anglosaxarna",
-        "även",
         "anglosachsare",
         "anglosachsaren",
         "anglosachsare",
@@ -2110,7 +2055,6 @@
         "ankare",
         "ankaret",
         "ankare",
-        "el.",
         "ankaren",
         "ankarna",
         ";",
@@ -2193,13 +2137,10 @@
     "anlagstest": [
         "anlagstest",
         "anlagstestet",
-        "el.",
         "anlagstesten",
         "anlagstester",
-        "el.",
         "anlagstest",
         "anlagstesterna",
-        "el.",
         "anlagstesten"
     ],
     "anledning": [
@@ -2286,7 +2227,6 @@
         "annektion",
         "annektionen",
         "annektioner",
-        "eller",
         "annexion",
         "annexionen",
         "annexioner"
@@ -2587,9 +2527,7 @@
         "ansökningstider"
     ],
     "antabus": [
-        "antabus",
-        "",
-        "neutrum"
+        ""
     ],
     "antagning": [
         "antagning",
@@ -2640,7 +2578,6 @@
         "bestämd",
         "form",
         "antepenultima",
-        "el.",
         "antepenultiman",
         "antepenultimor"
     ],
@@ -2753,7 +2690,6 @@
     "antimateria": [
         "antimateria",
         "antimaterian",
-        "el.",
         "antimaterien"
     ],
     "antimilitarism": [
@@ -2912,11 +2848,6 @@
         "~en",
         "~ar"
     ],
-    "antågande": [
-        "antågande",
-        "",
-        "neutrum"
-    ],
     "anvisning": [
         "anvisning",
         "anvisningen",
@@ -2949,7 +2880,6 @@
         "bestämd",
         "form",
         "aorta",
-        "el.",
         "aortan"
     ],
     "apa": [
@@ -3142,7 +3072,6 @@
         "arbetarkommun",
         "arbetarkommunen",
         "arbetarkommuner",
-        "eller",
         "arbetarekommun",
         "arbetarekommunen",
         "arbetarekommuner"
@@ -3301,10 +3230,8 @@
         "bestämd",
         "form",
         "arbetsplenum",
-        "el.",
         "arbetsplenumet",
         "arbetsplenum",
-        "el.",
         "arbetsplena"
     ],
     "arbetsseger": [
@@ -3523,7 +3450,6 @@
         "aromaterapeut",
         "aromaterapeuten",
         "aromaterapeuter",
-        "eller",
         "aromterapeut",
         "aromterapeuten",
         "aromterapeuter"
@@ -3531,7 +3457,6 @@
     "aromaterapi": [
         "aromaterapi",
         "aromaterapin",
-        "eller",
         "aromterapi",
         "aromterapin"
     ],
@@ -3886,14 +3811,12 @@
         "aterosklerosen"
     ],
     "atlas": [
-        "atlas",
         "atlasen",
         "atlaser"
     ],
     "atlas-2": [
         "atlas",
         "atlasen",
-        "el.",
         "atlaset"
     ],
     "atlas-3": [
@@ -4366,7 +4289,6 @@
     "avbärning": [
         "avbärning",
         "avbärningen",
-        "eller",
         "avbäring",
         "avbäringen"
     ],
@@ -4639,11 +4561,6 @@
         "avitaminos",
         "avitaminosen"
     ],
-    "avkall": [
-        "avkall",
-        "",
-        "neutrum"
-    ],
     "avkastning": [
         "avkastning",
         "avkastningen",
@@ -4824,13 +4741,10 @@
         "avokado",
         "avokadon",
         "avokados",
-        "el.",
         "avokador",
-        "eller",
         "avocado",
         "avocadon",
         "avocados",
-        "el.",
         "avocador"
     ],
     "avrad": [
@@ -5291,7 +5205,6 @@
         "baby",
         "babyn",
         "babies",
-        "el.",
         "babys"
     ],
     "baccarat": [
@@ -5594,7 +5507,6 @@
         "bakända",
         "kortändan",
         "kortändar",
-        "eller",
         "bakände",
         "bakänden",
         "bakändar"
@@ -5619,7 +5531,6 @@
         "balaklava",
         "balaklavan",
         "balaklavor",
-        "el.",
         "balaklavas"
     ],
     "balans": [
@@ -5769,7 +5680,6 @@
     "bandspagetti": [
         "bandspagetti",
         "bandspagettin",
-        "eller",
         "bandspaghetti",
         "bandspaghettin"
     ],
@@ -5806,7 +5716,6 @@
         "banger",
         "bangern",
         "bangers",
-        "el.",
         "banger"
     ],
     "bangolf": [
@@ -5916,7 +5825,6 @@
         "barlast",
         "barlasten",
         "barlaster",
-        "eller",
         "ballast",
         "ballasten",
         "ballaster"
@@ -5944,7 +5852,6 @@
         "barnafar",
         "barnafadern",
         "barnafäder",
-        "även",
         "barnafader",
         "barnafadern",
         "barnafäder"
@@ -6009,7 +5916,6 @@
         "vardagligt",
         "barnkammarn",
         "barnkamrar",
-        "el.",
         "barnkammare",
         "barnkamrarna",
         "äv.",
@@ -6171,7 +6077,6 @@
         "basidsvamp",
         "basidsvampen",
         "basidsvampar",
-        "eller",
         "basidiesvamp",
         "basidiesvampen",
         "basidiesvampar"
@@ -6274,13 +6179,16 @@
         "batch",
         "batchen",
         "batchar",
-        "el.",
         "batcher"
     ],
     "batong": [
         "batong",
         "batongen",
         "batonger"
+    ],
+    "batteri": [
+        "batteriet",
+        "batterier"
     ],
     "batteridrift": [
         "batteridrift",
@@ -6330,7 +6238,6 @@
         "bebis",
         "bebisen",
         "bebisar",
-        "eller",
         "bäbis",
         "bäbisen",
         "bäbisar"
@@ -6779,11 +6686,6 @@
         "behärskning",
         "behärskningen"
     ],
-    "behåll": [
-        "behåll",
-        "",
-        "neutrum"
-    ],
     "behållare": [
         "behållare",
         "behållaren",
@@ -6899,7 +6801,6 @@
     "bel canto": [
         "bel",
         "canto",
-        "eller",
         "belcanto",
         "ingen",
         "böjning"
@@ -6970,7 +6871,6 @@
         "bellis",
         "bellisen",
         "bellisar",
-        "el.",
         "bellis"
     ],
     "belysning": [
@@ -7053,7 +6953,6 @@
     "bemärkelsedag": [
         "bemärkelsedag",
         "bemärkelsedagen",
-        "el.",
         "vardagligt",
         "bemärkelsedan",
         "bemärkelsedagar"
@@ -7086,7 +6985,6 @@
         "benediktinklostret",
         "benediktinkloster",
         "benediktinklostren",
-        "även",
         "benediktinerkloster",
         "benediktinerklostret",
         "benediktinerkloster",
@@ -7098,7 +6996,6 @@
         "bestämd",
         "form",
         "utrum",
-        "även",
         "benediktinerorden",
         "bestämd",
         "form",
@@ -7188,7 +7085,6 @@
     "bensen": [
         "bensen",
         "bensenen",
-        "el.",
         "bensenet"
     ],
     "bensin": [
@@ -8057,7 +7953,6 @@
         "bh",
         "bh:n",
         "bh:ar",
-        "eller",
         "behå",
         "behån",
         "behåar"
@@ -8109,7 +8004,6 @@
     "biceps": [
         "biceps",
         "bicepsen",
-        "el.",
         "biceps",
         "bicepsar"
     ],
@@ -8176,12 +8070,10 @@
         "biktstolar"
     ],
     "bikupa": [
-        "bikupa",
         "bikupan",
         "bikupor"
     ],
     "bil": [
-        "bil",
         "bilen",
         "bilar"
     ],
@@ -8201,7 +8093,6 @@
         "bilbarnstolar"
     ],
     "bilbatteri": [
-        "bilbatteri",
         "bilbatteriet",
         "bilbatterier"
     ],
@@ -8216,7 +8107,6 @@
         "bilbomber"
     ],
     "bild": [
-        "bild",
         "bilden",
         "bilder"
     ],
@@ -9224,7 +9114,6 @@
     "bloddopning": [
         "bloddopning",
         "bloddopningen",
-        "även",
         "bloddoping",
         "bloddopingen"
     ],
@@ -9309,7 +9198,6 @@
         "form",
         "blodspillan",
         "utrum",
-        "även",
         "blodsspillan",
         "bestämd",
         "form",
@@ -10013,7 +9901,6 @@
         "bombräd",
         "bombräden",
         "bombräder",
-        "även",
         "bombraid",
         "bombraiden",
         "bombraider"
@@ -10166,7 +10053,6 @@
         "bordslöparen",
         "bordslöpare",
         "bordslöparna",
-        "eller",
         "bordlöpare",
         "bordlöparen",
         "bordlöpare",
@@ -10335,10 +10221,6 @@
         "bortaplaner"
     ],
     "bortavaro": [
-        "bortavaro",
-        "bortavaron",
-        "eller",
-        "bortovaro",
         "bortovaron"
     ],
     "bortförklaring": [
@@ -10769,7 +10651,6 @@
         "bratwurst",
         "bratwursten",
         "bratwurstar",
-        "eller",
         "bratvurst",
         "bratvursten",
         "bratvurstar"
@@ -10986,7 +10867,6 @@
         "bromskloss",
         "bromsklossen",
         "bromsklossar",
-        "även",
         "bromsklots",
         "bromsklotsen",
         "bromsklotsar"
@@ -11025,7 +10905,6 @@
         "ingen",
         "egen",
         "böjning",
-        "eller",
         "broder",
         "brodern",
         "bröder"
@@ -11370,6 +11249,10 @@
         "brännässlan",
         "brännässlor"
     ],
+    "bränsle": [
+        "bränslet",
+        "bränslen"
+    ],
     "bränslecell": [
         "bränslecell",
         "bränslecellen",
@@ -11552,7 +11435,6 @@
     "buddism": [
         "buddism",
         "buddismen",
-        "eller",
         "buddhism",
         "buddhismen"
     ],
@@ -11602,7 +11484,6 @@
         "buffé",
         "buffén",
         "bufféer",
-        "även",
         "byffé",
         "byffén",
         "byfféer"
@@ -11650,7 +11531,6 @@
         "bukspottkörtel",
         "bukspottkörteln",
         "bukspottkörtlar",
-        "eller",
         "bukspottskörtel",
         "bukspottskörteln",
         "bukspottskörtlar"
@@ -11877,7 +11757,6 @@
         "buffé",
         "buffén",
         "bufféer",
-        "även",
         "byffé",
         "byffén",
         "byfféer"
@@ -12222,7 +12101,6 @@
         "både",
         "båden",
         "bådar",
-        "även",
         "båda",
         "bådan",
         "bådar"
@@ -12451,11 +12329,6 @@
     ],
     "bördsstolt": [
         "bördsstolt",
-        "neutrum",
-        "bördsstolt",
-        "bestämd",
-        "form",
-        "och",
         "bördsstolta"
     ],
     "början": [
@@ -12515,7 +12388,6 @@
         "cafeteria",
         "cafeterian",
         "cafeterior",
-        "eller",
         "kafeteria",
         "kafeterian",
         "kafeterior"
@@ -12523,7 +12395,6 @@
     "caffe latte": [
         "caffelatte",
         "caffelatten",
-        "eller",
         "caffe",
         "latte",
         "caffe",
@@ -12540,7 +12411,6 @@
         "cafévagn",
         "cafévagnen",
         "cafévagnar",
-        "eller",
         "kafévagn",
         "kafévagnen",
         "kafévagnar"
@@ -12790,12 +12660,6 @@
         "cesuren",
         "cesurer"
     ],
-    "chambre séparée": [
-        "chambre",
-        "séparée",
-        "",
-        "neutrum"
-    ],
     "champagne": [
         "champagne",
         "champagnen"
@@ -12965,7 +12829,6 @@
         "cigarett",
         "cigaretten",
         "cigaretter",
-        "eller",
         "cigarrett",
         "cigarretten",
         "cigarretter"
@@ -12974,7 +12837,6 @@
         "cigarettfimp",
         "cigarettfimpen",
         "cigarettfimpar",
-        "eller",
         "cigarrettfimp",
         "cigarrettfimpen",
         "cigarrettfimpar"
@@ -12983,7 +12845,6 @@
         "cigarettlimpa",
         "cigarettlimpan",
         "cigarettlimpor",
-        "eller",
         "cigarrettlimpa",
         "cigarrettlimpan",
         "cigarrettlimpor"
@@ -12996,7 +12857,6 @@
         "cigarettändarn",
         "cigarettändare",
         "cigarettändarna",
-        "eller",
         "cigarrettändare",
         "cigarrettändaren",
         "äv.",
@@ -13020,7 +12880,6 @@
         "cigarrcigarett",
         "cigarrcigaretten",
         "cigarrcigaretter",
-        "eller",
         "cigarrcigarrett",
         "cigarrcigarretten",
         "cigarrcigarretter"
@@ -13179,7 +13038,6 @@
         "clementin",
         "clementinen",
         "clementiner",
-        "eller",
         "klementin",
         "klementinen",
         "klementiner"
@@ -13243,15 +13101,12 @@
         "codor"
     ],
     "coitus": [
-        "coitus",
-        "",
-        "neutrum"
+        ""
     ],
     "cola": [
         "cola",
         "colan",
         "color",
-        "eller",
         "kola",
         "kolan",
         "kolor"
@@ -13328,15 +13183,8 @@
         "crawl",
         "crawlen"
     ],
-    "cred": [
-        "cred",
-        "",
-        "utrum",
-        "eller"
-    ],
     "credit": [
         "credit",
-        "eller",
         "kredit",
         "ingen",
         "böjning"
@@ -13354,7 +13202,6 @@
     "cricket": [
         "cricket",
         "cricketen",
-        "även",
         "kricket",
         "kricketen"
     ],
@@ -13739,7 +13586,6 @@
         "dagslön",
         "dagslönen",
         "dagslöner",
-        "eller",
         "daglön",
         "daglönen",
         "daglöner"
@@ -14087,11 +13933,6 @@
         "debattören",
         "debattörer"
     ],
-    "debet": [
-        "debet",
-        "",
-        "neutrum"
-    ],
     "debetsida": [
         "debetsida",
         "debetsidan"
@@ -14224,7 +14065,6 @@
         "dejt",
         "dejten",
         "dejter",
-        "eller",
         "date",
         "daten",
         "dater"
@@ -14237,7 +14077,6 @@
     "dekadans": [
         "dekadens",
         "dekadensen",
-        "eller",
         "dekadans",
         "dekadansen"
     ],
@@ -14289,11 +14128,6 @@
         "dekoratör",
         "dekoratören",
         "dekoratörer"
-    ],
-    "dekorum": [
-        "dekorum",
-        "",
-        "neutrum"
     ],
     "del": [
         "del",
@@ -14452,14 +14286,6 @@
     "deplacement": [
         "deplacement",
         "deplacementet"
-    ],
-    "deponens": [
-        "deponens",
-        "bestämd",
-        "form",
-        "och",
-        "deponens",
-        "neutrum"
     ],
     "deponent": [
         "deponent",
@@ -14810,15 +14636,7 @@
     ],
     "diktamen": [
         "diktamen",
-        "bestämd",
-        "form",
-        "diktamen",
-        "diktamen",
-        "el.",
-        "diktamina",
-        "utrum",
-        "äv.",
-        "neutrum"
+        "diktamina"
     ],
     "diktare": [
         "diktare",
@@ -14938,7 +14756,6 @@
         "dipp",
         "dippen",
         "dippar",
-        "eller",
         "dip",
         "dippen",
         "dippar"
@@ -14952,7 +14769,6 @@
         "dipsås",
         "dipsåsen",
         "dipsåser",
-        "eller",
         "dippsås",
         "dippsåsen",
         "dippsåser"
@@ -15015,7 +14831,6 @@
         "disco",
         "discot",
         "discon",
-        "eller",
         "disko",
         "diskot",
         "diskon"
@@ -15023,7 +14838,6 @@
     "discodunk": [
         "discodunk",
         "discodunket",
-        "eller",
         "diskodunk",
         "diskodunket"
     ],
@@ -15611,7 +15425,6 @@
     "dopning": [
         "dopning",
         "dopningen",
-        "eller",
         "doping",
         "dopingen"
     ],
@@ -15693,7 +15506,6 @@
         "dragking",
         "dragkingen",
         "dragkings",
-        "eller",
         "drag",
         "king",
         "drag",
@@ -15720,7 +15532,6 @@
         "dragqueen",
         "dragqueenen",
         "dragqueens",
-        "eller",
         "drag",
         "queen",
         "drag",
@@ -15806,7 +15617,6 @@
         "driftskostnad",
         "driftskostnaden",
         "driftskostnader",
-        "eller",
         "driftkostnad",
         "driftkostnaden",
         "driftkostnader"
@@ -16093,7 +15903,6 @@
         "drös",
         "drösen",
         "drösar",
-        "eller",
         "dröse",
         "drösen",
         "drösar"
@@ -16183,7 +15992,6 @@
         "dubblett",
         "dubbletten",
         "dubbletter",
-        "eller",
         "dublett",
         "dubletten",
         "dubletter"
@@ -16528,7 +16336,6 @@
     "déjà vu": [
         "déjà",
         "vu",
-        "eller",
         "deja",
         "vu",
         "ingen",
@@ -16708,7 +16515,6 @@
         "döskalle",
         "döskallen",
         "döskallar",
-        "eller",
         "dödskalle",
         "dödskallen",
         "dödskallar"
@@ -17313,7 +17119,6 @@
         "elasticiteten"
     ],
     "elbil": [
-        "elbil",
         "elbilen",
         "elbilar"
     ],
@@ -17795,14 +17600,6 @@
         "enfald",
         "enfalden"
     ],
-    "enfant terrible": [
-        "enfant",
-        "terrible",
-        "",
-        "utrum",
-        "el.",
-        "neutrum"
-    ],
     "engelska": [
         "engelska",
         "engelskan",
@@ -17940,7 +17737,6 @@
         "entrecote",
         "entrecoten",
         "entrecoter",
-        "eller",
         "entrecôte",
         "entrecôten",
         "entrecôter"
@@ -18139,7 +17935,6 @@
     "erotika": [
         "erotika",
         "erotikan",
-        "eller",
         "erotica",
         "erotican"
     ],
@@ -18205,7 +18000,6 @@
     "espri": [
         "espri",
         "esprin",
-        "eller",
         "esprit",
         "espriten"
     ],
@@ -18213,7 +18007,6 @@
         "essä",
         "essän",
         "essäer",
-        "även",
         "essay",
         "essayn",
         "essayer"
@@ -18221,7 +18014,6 @@
     "essäistik": [
         "essäistik",
         "essäistiken",
-        "även",
         "essayistik",
         "essayistiken"
     ],
@@ -18776,14 +18568,6 @@
         "faciliteten",
         "faciliteter"
     ],
-    "facit": [
-        "facit",
-        "bestämd",
-        "form",
-        "och",
-        "facit",
-        "neutrum"
-    ],
     "fackbok": [
         "fackbok",
         "fackboken",
@@ -18832,7 +18616,6 @@
         "far",
         "fadern",
         "fäder",
-        "eller",
         "fader",
         "fadern",
         "fäder"
@@ -19040,7 +18823,6 @@
         "far",
         "fadern",
         "fäder",
-        "eller",
         "fader",
         "fadern",
         "fäder"
@@ -19063,7 +18845,6 @@
         "farbror",
         "farbrorn",
         "farbröder",
-        "även",
         "farbroder",
         "farbrodern",
         "farbröder"
@@ -19072,7 +18853,6 @@
         "farfar",
         "farfarn",
         "farfäder",
-        "även",
         "farfader",
         "farfadern",
         "farfäder"
@@ -19109,7 +18889,6 @@
         "farmor",
         "farmorn",
         "farmödrar",
-        "även",
         "farmoder",
         "farmodern",
         "farmödrar"
@@ -19118,7 +18897,6 @@
         "farmor",
         "farmorn",
         "farmödrar",
-        "även",
         "farmoder",
         "farmodern",
         "farmödrar"
@@ -19225,7 +19003,6 @@
         "fasett",
         "fasetten",
         "fasetter",
-        "eller",
         "facett",
         "facetten",
         "facetter"
@@ -19548,8 +19325,6 @@
         "femtiokronorssedel",
         "femtiokronorssedeln",
         "femtiokronorssedlar",
-        "även",
-        "vardagligt",
         "femtikronorssedel",
         "femtikronorssedeln",
         "femtikronorssedlar"
@@ -19558,8 +19333,6 @@
         "femtiolapp",
         "femtiolappen",
         "femtiolappar",
-        "även",
-        "vardagligt",
         "femtilapp",
         "femtilappen",
         "femtilappar"
@@ -19765,7 +19538,6 @@
         "fight",
         "fighten",
         "fighter",
-        "eller",
         "fajt",
         "fajten",
         "fajter"
@@ -19892,7 +19664,6 @@
         "filtercigarett",
         "filtercigaretten",
         "filtercigaretter",
-        "eller",
         "filtercigarrett",
         "filtercigarretten",
         "filtercigarretter"
@@ -20100,7 +19871,6 @@
         "fiskhamn",
         "fiskhamnen",
         "fiskhamnar",
-        "eller",
         "fiskehamn",
         "fiskehamnen",
         "fiskehamnar"
@@ -20136,7 +19906,6 @@
         "fiskhamn",
         "fiskhamnen",
         "fiskhamnar",
-        "eller",
         "fiskehamn",
         "fiskehamnen",
         "fiskehamnar"
@@ -20347,11 +20116,6 @@
         "fjärilskotletten",
         "fjärilskotletter"
     ],
-    "fjärran": [
-        "fjärran",
-        "",
-        "neutrum"
-    ],
     "fjärrkontroll": [
         "fjärrkontroll",
         "fjärrkontrollen",
@@ -20532,7 +20296,6 @@
         "flexion",
         "flexionen",
         "flexioner",
-        "eller",
         "flektion",
         "flektionen",
         "flektioner"
@@ -20997,7 +20760,6 @@
         "flört",
         "flörten",
         "flörter",
-        "eller",
         "flirt",
         "flirten",
         "flirter"
@@ -21040,11 +20802,6 @@
         "fog",
         "fogen",
         "fogar"
-    ],
-    "fog-2": [
-        "fog",
-        "",
-        "neutrum"
     ],
     "fogde": [
         "fogde",
@@ -21992,13 +21749,10 @@
         "friholt",
         "el.",
         "friholtar",
-        "även",
         "frihult",
         "frihultet",
-        "el.",
         "frihulten",
         "frihult",
-        "el.",
         "frihultar"
     ],
     "friidrott": [
@@ -22043,7 +21797,6 @@
         "frilans",
         "frilansen",
         "frilansar",
-        "eller",
         "frilansare",
         "frilansaren",
         "frilansare",
@@ -22448,7 +22201,6 @@
         "frånsidor"
     ],
     "frånvaro": [
-        "frånvaro",
         "frånvaron"
     ],
     "fröjd": [
@@ -22467,11 +22219,6 @@
         "fröväxt",
         "fröväxten",
         "fröväxter"
-    ],
-    "fuffens": [
-        "fuffens",
-        "fuffens",
-        "neutrum"
     ],
     "fuga": [
         "fuga",
@@ -22494,11 +22241,6 @@
         "fullmakt",
         "fullmakten",
         "fullmakter"
-    ],
-    "fullmäktige": [
-        "fullmäktige",
-        "",
-        "neutrum"
     ],
     "fullmåne": [
         "fullmåne",
@@ -22733,7 +22475,6 @@
         "fäbless",
         "fäblessen",
         "fäblesser",
-        "eller",
         "faiblesse",
         "faiblessen",
         "faiblesser"
@@ -23192,9 +22933,7 @@
         "födslorätter"
     ],
     "föga": [
-        "föga",
-        "igen",
-        "böjning"
+        ""
     ],
     "följare": [
         "följare",
@@ -25270,7 +25009,6 @@
         "galjon",
         "galjonen",
         "galjoner",
-        "även",
         "gallion",
         "gallionen",
         "gallioner"
@@ -25368,7 +25106,6 @@
         "gammaldans",
         "gammaldansen",
         "gammaldanser",
-        "eller",
         "gammeldans",
         "gammeldansen",
         "gammeldanser"
@@ -25803,7 +25540,6 @@
     "gendopning": [
         "gendopning",
         "gendopningen",
-        "även",
         "gendoping",
         "gendopingen"
     ],
@@ -26167,7 +25903,6 @@
         "gerbill",
         "gerbillen",
         "gerbiller",
-        "eller",
         "gerbil",
         "gerbilen",
         "gerbiler"
@@ -26266,7 +26001,6 @@
         "getto",
         "gettot",
         "getton",
-        "eller",
         "ghetto",
         "ghettot",
         "ghetton"
@@ -26372,7 +26106,6 @@
         "girlang",
         "girlangen",
         "girlanger",
-        "eller",
         "girland",
         "girlanden",
         "girlander"
@@ -26403,11 +26136,6 @@
         "gitarr",
         "gitarren",
         "gitarrer"
-    ],
-    "givakt": [
-        "givakt",
-        "",
-        "neutrum"
     ],
     "givare": [
         "givare",
@@ -26824,7 +26552,6 @@
         "gokarter",
         "äv.",
         "gokarts",
-        "eller",
         "gocart",
         "gocarten",
         "gocarter"
@@ -26955,7 +26682,6 @@
         "gourmet",
         "gourmeten",
         "gourmeter",
-        "även",
         "gourmé",
         "gourmén",
         "gourméer"
@@ -27070,7 +26796,6 @@
     ],
     "grann": [
         "grann",
-        "eller",
         "grand",
         "ingen",
         "böjning"
@@ -27553,7 +27278,6 @@
         "grundskolläraren",
         "grundskollärare",
         "grundskollärarna",
-        "eller",
         "grundskolelärare",
         "grundskoleläraren",
         "grundskolelärare",
@@ -27585,7 +27309,6 @@
         "grunkor"
     ],
     "grupp": [
-        "grupp",
         "gruppen",
         "grupper"
     ],
@@ -27941,7 +27664,6 @@
         "gudfar",
         "gudfadern",
         "gudfäder",
-        "eller",
         "gudfader",
         "gudfadern",
         "gudfäder"
@@ -28341,7 +28063,6 @@
     "gympa": [
         "gympa",
         "gympan",
-        "även",
         "jympa",
         "jympan"
     ],
@@ -28426,11 +28147,9 @@
         "gärdsgård",
         "gärdsgården",
         "gärdsgårdar",
-        "eller",
         "gärdesgård",
         "gärdesgården",
         "gärdesgårdar",
-        "eller",
         "gärsgård",
         "gärsgården",
         "gärsgårdar",
@@ -28465,7 +28184,6 @@
         "gärs",
         "gärsen",
         "gärsar",
-        "eller",
         "gers",
         "gersen",
         "gersar"
@@ -28903,7 +28621,6 @@
         "halvbror",
         "halvbrodern",
         "halvbröder",
-        "även",
         "halvbroder",
         "halvbrodern",
         "halvbröder"
@@ -29065,7 +28782,6 @@
         "halvtimme",
         "halvtimmen",
         "halvtimmar",
-        "även",
         "halvtimma",
         "halvtimman",
         "halvtimmar"
@@ -29753,7 +29469,6 @@
         "hejarklack",
         "hejarklacken",
         "hejarklackar",
-        "eller",
         "hejaklack",
         "hejaklacken",
         "hejaklackar"
@@ -30373,6 +30088,12 @@
         "hjortron",
         "hjortronen"
     ],
+    "hjul": [
+        "hjul",
+        "hjulet",
+        "hjul",
+        "hjulen"
+    ],
     "hjulupphängning": [
         "hjulupphängning",
         "hjulupphängningen",
@@ -30647,7 +30368,6 @@
         "hopdragning",
         "hopdragningen",
         "hopdragningar",
-        "eller",
         "ihopdragning",
         "ihopdragningen",
         "ihopdragningar"
@@ -30848,13 +30568,6 @@
         "hullingen",
         "hullingar"
     ],
-    "hum": [
-        "hum",
-        "",
-        "neutrum",
-        "el.",
-        "utrum"
-    ],
     "humanekologi": [
         "humanekologi",
         "humanekologin"
@@ -31044,7 +30757,6 @@
         "husmor",
         "husmorn",
         "husmödrar",
-        "även",
         "husmoder",
         "husmodern",
         "husmödrar"
@@ -32224,7 +31936,6 @@
         "höftleder"
     ],
     "hög": [
-        "hög",
         "högen",
         "högar"
     ],
@@ -32510,11 +32221,6 @@
         "högvakten",
         "högvakter"
     ],
-    "högvarv": [
-        "högvarv",
-        "",
-        "neutrum"
-    ],
     "höjd": [
         "höjd",
         "höjden",
@@ -32793,7 +32499,6 @@
         "id-bricka",
         "id-brickan",
         "id-brickor",
-        "eller",
         "ID-bricka",
         "ID-brickan",
         "ID-brickor"
@@ -32901,11 +32606,6 @@
         "idrottshall",
         "idrottshallen",
         "idrottshallar"
-    ],
-    "idrottshjärta": [
-        "idrottshjärta",
-        "",
-        "neutrum"
     ],
     "idrottsklubb": [
         "idrottsklubb",
@@ -33881,11 +33581,6 @@
         "inombordsmotorn",
         "inombordsmotorer"
     ],
-    "inomhusbruk": [
-        "inomhusbruk",
-        "",
-        "neutrum"
-    ],
     "input": [
         "input",
         "inputen"
@@ -34321,7 +34016,6 @@
         "intendenturer"
     ],
     "intension": [
-        "intension",
         "intensionen"
     ],
     "intensitet": [
@@ -34417,11 +34111,6 @@
         "internering",
         "interneringen",
         "interneringar"
-    ],
-    "internet": [
-        "internet",
-        "",
-        "neutrum"
     ],
     "internetbank": [
         "internetbank",
@@ -34929,7 +34618,6 @@
         "jackpoter",
         "el.",
         "jackpotar",
-        "eller",
         "jackpott",
         "jackpotten",
         "jackpotter",
@@ -35457,7 +35145,6 @@
         "juice",
         "juicen",
         "juicer",
-        "även",
         "jos",
         "josen",
         "joser"
@@ -35465,7 +35152,6 @@
     "jujutsu": [
         "jujutsu",
         "jujutsun",
-        "eller",
         "jiujitsu",
         "jiujitsun"
     ],
@@ -35861,7 +35547,6 @@
         "jävel",
         "jäveln",
         "jävlar",
-        "eller",
         "djävel",
         "djäveln",
         "djävlar"
@@ -36651,7 +36336,6 @@
     "kanvas": [
         "kanvas",
         "kanvasen",
-        "eller",
         "canvas",
         "canvasen"
     ],
@@ -36783,7 +36467,6 @@
         "karakteristik",
         "karakteristiken",
         "karakteristiker",
-        "eller",
         "karaktäristik",
         "karaktäristiken",
         "karaktäristiker"
@@ -36792,7 +36475,6 @@
         "karakteristika",
         "karakteristikan",
         "karakteristikor",
-        "eller",
         "karaktäristika",
         "karaktäristikan",
         "karaktäristikor"
@@ -36806,7 +36488,6 @@
         "karakteristika",
         "karakteristikan",
         "karakteristikor",
-        "eller",
         "karaktäristika",
         "karaktäristikan",
         "karaktäristikor"
@@ -37055,7 +36736,6 @@
         "kase",
         "kasen",
         "kasar",
-        "eller",
         "kas",
         "kasen",
         "kasar"
@@ -37122,7 +36802,6 @@
         "kassun",
         "kassunen",
         "kassuner",
-        "eller",
         "kasun",
         "kasunen",
         "kasuner"
@@ -37176,7 +36855,6 @@
     "kat": [
         "kat",
         "katen",
-        "även",
         "khat",
         "khaten"
     ],
@@ -37256,7 +36934,6 @@
         "katharsis",
         "",
         "utrum",
-        "eller",
         "katarsis",
         "ingen",
         "böjning",
@@ -37426,7 +37103,6 @@
         "kelvin",
         "",
         "utrum",
-        "eller",
         "Kelvin",
         "ingen",
         "böjning",
@@ -37888,7 +37564,6 @@
         "klematis",
         "el.",
         "klematisar",
-        "även",
         "clematis",
         "clematisen",
         "clematis",
@@ -37938,7 +37613,6 @@
         "klicker",
         "klickern",
         "klickers",
-        "eller",
         "clicker",
         "clickern",
         "clickers"
@@ -38036,7 +37710,6 @@
         "klitoris",
         "klitorisen",
         "klitorisar",
-        "även",
         "clitoris",
         "clitorisen",
         "clitorisar"
@@ -38247,7 +37920,6 @@
         "klädmal",
         "klädmalen",
         "klädmalar",
-        "även",
         "klädesmal",
         "klädesmalen",
         "klädesmalar"
@@ -38332,7 +38004,6 @@
         "knagg",
         "knaggen",
         "knaggar",
-        "även",
         "knagge",
         "knaggen",
         "knaggar"
@@ -38408,11 +38079,6 @@
     "knarr": [
         "knarr",
         "knarret"
-    ],
-    "knas": [
-        "knas",
-        "",
-        "neutrum"
     ],
     "knasboll": [
         "knasboll",
@@ -38492,7 +38158,6 @@
         "knivrygg",
         "knivryggen",
         "knivryggar",
-        "eller",
         "knivsrygg",
         "knivsryggen",
         "knivsryggar"
@@ -38604,11 +38269,6 @@
         "knyppling",
         "knypplingen",
         "knypplingar"
-    ],
-    "knyst": [
-        "knyst",
-        "",
-        "neutrum"
     ],
     "knytblus": [
         "knytblus",
@@ -39496,7 +39156,6 @@
         "äv.",
         "konferenciern",
         "konferencierer",
-        "även",
         "konferencié",
         "konferencién",
         "konferenciéer"
@@ -39973,11 +39632,6 @@
     "kontinuitet": [
         "kontinuitet",
         "kontinuiteten"
-    ],
-    "kontinuum": [
-        "kontinuum",
-        "",
-        "neutrum"
     ],
     "kontokurant": [
         "kontokurant",
@@ -40620,11 +40274,6 @@
         "kosmopolit",
         "kosmopoliten",
         "kosmopoliter"
-    ],
-    "kosmos": [
-        "kosmos",
-        "",
-        "neutrum"
     ],
     "kost": [
         "kost",
@@ -41485,7 +41134,6 @@
         "kräm",
         "krämen",
         "krämer",
-        "även",
         "crème",
         "crèmen",
         "crèmer"
@@ -41569,7 +41217,6 @@
         "kugge",
         "kuggen",
         "kuggar",
-        "eller",
         "kugg",
         "kuggen",
         "kuggar"
@@ -41661,12 +41308,15 @@
         "kulstötningen"
     ],
     "kult": [
-        "kult",
         "kulten",
         "kulter"
     ],
+    "kultföremål": [
+        "kultföremålet",
+        "kultföremål",
+        "kultföremålen"
+    ],
     "kulthandling": [
-        "kulthandling",
         "kulthandlingen",
         "kulthandlingar"
     ],
@@ -42070,7 +41720,6 @@
         "kvalitet",
         "kvaliteten",
         "kvaliteter",
-        "även",
         "kvalité",
         "kvalitén",
         "kvalitéer"
@@ -42233,13 +41882,6 @@
         "kvisten",
         "kvistar"
     ],
-    "kvitten": [
-        "kvitten",
-        "kvitten",
-        "utrum",
-        "el.",
-        "neutrum"
-    ],
     "kvittens": [
         "kvittens",
         "kvittensen",
@@ -42372,7 +42014,6 @@
         "kyrkobibel",
         "kyrkobibeln",
         "kyrkobiblar",
-        "eller",
         "kyrkbibel",
         "kyrkbibeln",
         "kyrkbiblar"
@@ -42705,7 +42346,6 @@
         "kärring",
         "kärringen",
         "kärringar",
-        "eller",
         "käring",
         "käringen",
         "käringar"
@@ -43085,7 +42725,6 @@
         "labb",
         "labben",
         "labbar",
-        "även",
         "labbe",
         "labben",
         "labbar"
@@ -43143,7 +42782,6 @@
         "ladugård",
         "ladugården",
         "ladugårdar",
-        "eller",
         "lagård",
         "lagården",
         "lagårdar"
@@ -44297,7 +43935,6 @@
         "lillsyrra",
         "lillsyrran",
         "lillsyrror",
-        "eller",
         "lillasyrra",
         "lillasyrran",
         "lillasyrror"
@@ -44316,7 +43953,6 @@
         "lillbrorsa",
         "lillbrorsan",
         "lillbrorsor",
-        "eller",
         "lillebrorsa",
         "lillebrorsan",
         "lillebrorsor"
@@ -44349,7 +43985,6 @@
         "limousine",
         "limousinen",
         "limousiner",
-        "eller",
         "limousin",
         "limousinen",
         "limousiner"
@@ -44597,7 +44232,6 @@
         "livskvalitet",
         "livskvaliteten",
         "livskvaliteter",
-        "även",
         "livskvalité",
         "livskvalitén",
         "livskvalitéer"
@@ -45109,11 +44743,6 @@
         "loven",
         "lovar"
     ],
-    "lov-2": [
-        "lov",
-        "",
-        "neutrum"
-    ],
     "love": [
         "love",
         "loven",
@@ -45260,11 +44889,6 @@
         "lumbalpunktion",
         "lumbalpunktionen",
         "lumbalpunktioner"
-    ],
-    "lumen": [
-        "lumen",
-        "lumen",
-        "neutrum"
     ],
     "luminans": [
         "luminans",
@@ -45621,11 +45245,6 @@
         "lyxkryssning",
         "lyxkryssningen",
         "lyxkryssningar"
-    ],
-    "lä": [
-        "lä",
-        "",
-        "neutrum"
     ],
     "läcka": [
         "läcka",
@@ -46151,11 +45770,6 @@
     "lågtyska": [
         "lågtyska",
         "lågtyskan"
-    ],
-    "lågvarv": [
-        "lågvarv",
-        "",
-        "neutrum"
     ],
     "lånebibliotek": [
         "lånebibliotek",
@@ -46824,11 +46438,6 @@
         "makroekonomin",
         "makroekonomier"
     ],
-    "makrokosmos": [
-        "makrokosmos",
-        "",
-        "neutrum"
-    ],
     "makt": [
         "makt",
         "makten",
@@ -47199,7 +46808,6 @@
         "maori",
         "maorin",
         "maorier",
-        "eller",
         "maorier",
         "maoriern",
         "maorier"
@@ -47619,7 +47227,6 @@
         "materia",
         "materian",
         "materier",
-        "även",
         "materie",
         "materien",
         "materier"
@@ -47776,11 +47383,6 @@
         "mauretaniern",
         "mauretanier"
     ],
-    "max": [
-        "max",
-        "",
-        "neutrum"
-    ],
     "maxill": [
         "maxill",
         "maxillen",
@@ -47800,7 +47402,6 @@
         "mbl-förhandling",
         "mbl-förhandlingen",
         "mbl-förhandlingar",
-        "eller",
         "MBL-förhandling",
         "MBL-förhandlingen",
         "MBL-förhandlingar"
@@ -47819,7 +47420,6 @@
         "med",
         "meden",
         "medar",
-        "även",
         "mede",
         "meden",
         "medar"
@@ -48183,7 +47783,6 @@
         "memes",
         "el.",
         "memer",
-        "eller",
         "meme",
         "memet",
         "el.",
@@ -48318,7 +47917,6 @@
         "mervärdesskatt",
         "mervärdesskatten",
         "mervärdesskatter",
-        "även",
         "mervärdeskatt",
         "mervärdeskatten",
         "mervärdeskatter"
@@ -48512,7 +48110,6 @@
     "mikro": [
         "mikro",
         "mikron",
-        "eller",
         "micro",
         "micron"
     ],
@@ -48536,11 +48133,6 @@
         "mikrofonen",
         "mikrofoner"
     ],
-    "mikrokosmos": [
-        "mikrokosmos",
-        "",
-        "neutrum"
-    ],
     "mikroorganism": [
         "mikroorganism",
         "mikroorganismen",
@@ -48550,7 +48142,6 @@
         "mikrougn",
         "mikrougnen",
         "mikrougnar",
-        "eller",
         "microugn",
         "microugnen",
         "microugnar"
@@ -48559,7 +48150,6 @@
         "mikrovågsugn",
         "mikrovågsugnen",
         "mikrovågsugnar",
-        "eller",
         "microvågsugn",
         "microvågsugnen",
         "microvågsugnar"
@@ -49475,7 +49065,6 @@
         "mor",
         "modern",
         "mödrar",
-        "eller",
         "moder",
         "modern",
         "mödrar"
@@ -49520,7 +49109,6 @@
         "morbror",
         "morbrorn",
         "morbröder",
-        "även",
         "morbroder",
         "morbrodern",
         "morbröder"
@@ -49568,7 +49156,6 @@
         "morfar",
         "morfarn",
         "morfäder",
-        "även",
         "morfader",
         "morfadern",
         "morfäder"
@@ -49599,8 +49186,6 @@
         "morgon",
         "morgonen",
         "morgnar",
-        "även",
-        "vardagligt",
         "morron",
         "morronen",
         "mornar"
@@ -49629,7 +49214,6 @@
         "mormor",
         "mormorn",
         "mormödrar",
-        "även",
         "mormoder",
         "mormodern",
         "mormödrar"
@@ -49774,7 +49358,6 @@
         "motorbåtar"
     ],
     "motorcykel": [
-        "motorcykel",
         "motorcykeln",
         "motorcyklar"
     ],
@@ -49837,6 +49420,11 @@
         "motström",
         "motströmmen",
         "motströmmar"
+    ],
+    "motstånd": [
+        "motståndet",
+        "motstånd",
+        "motstånden"
     ],
     "motståndare": [
         "motståndare",
@@ -49905,11 +49493,6 @@
         "motvinden",
         "motvindar"
     ],
-    "motvärn": [
-        "motvärn",
-        "",
-        "neutrum"
-    ],
     "motåtgärd": [
         "motåtgärd",
         "motåtgärden",
@@ -49919,11 +49502,6 @@
         "mousse",
         "moussen",
         "mousser"
-    ],
-    "muck": [
-        "muck",
-        "",
-        "neutrum"
     ],
     "muezzin": [
         "muezzin",
@@ -50034,7 +49612,6 @@
         "munkavle",
         "munkavlen",
         "munkavlar",
-        "eller",
         "munkavel",
         "munkaveln",
         "munkavlar"
@@ -50555,6 +50132,12 @@
         "mästare",
         "mästarna"
     ],
+    "mästerverk": [
+        "mästerverk",
+        "mäster­verket",
+        "mäster­verk",
+        "mäster­verken"
+    ],
     "mätare": [
         "mätare",
         "mätaren",
@@ -50921,7 +50504,6 @@
         "nabb",
         "nabben",
         "nabbar",
-        "eller",
         "nabbe",
         "nabben",
         "nabbar"
@@ -51445,7 +51027,6 @@
         "nedbrytning",
         "nedbrytningen",
         "nedbrytningar",
-        "eller",
         "nerbrytning",
         "nerbrytningen",
         "nerbrytningar"
@@ -51453,7 +51034,6 @@
     "nedbusning": [
         "nedbusning",
         "nedbusningen",
-        "eller",
         "nerbusning",
         "nerbusningen"
     ],
@@ -51461,7 +51041,6 @@
         "neddragning",
         "neddragningen",
         "neddragningar",
-        "eller",
         "nerdragning",
         "nerdragningen",
         "nerdragningar"
@@ -51474,7 +51053,6 @@
         "nedfart",
         "nedfarten",
         "nedfarter",
-        "eller",
         "nerfart",
         "nerfarten",
         "nerfarter"
@@ -51483,7 +51061,6 @@
         "nedförsbacke",
         "nedförsbacken",
         "nedförsbackar",
-        "eller",
         "nerförsbacke",
         "nerförsbacken",
         "nerförsbackar"
@@ -51492,7 +51069,6 @@
         "nedgång",
         "nedgången",
         "nedgångar",
-        "eller",
         "nergång",
         "nergången",
         "nergångar"
@@ -51512,7 +51088,6 @@
         "nedkylning",
         "nedkylningen",
         "nedkylningar",
-        "eller",
         "nerkylning",
         "nerkylningen",
         "nerkylningar"
@@ -51521,7 +51096,6 @@
         "nedläggelse",
         "nedläggelsen",
         "nedläggelser",
-        "eller",
         "nerläggelse",
         "nerläggelsen",
         "nerläggelser"
@@ -51530,7 +51104,6 @@
         "nedläggning",
         "nedläggningen",
         "nedläggningar",
-        "eller",
         "nerläggning",
         "nerläggningen",
         "nerläggningar"
@@ -51543,7 +51116,6 @@
         "nedrustning",
         "nedrustningen",
         "nedrustningar",
-        "eller",
         "nerrustning",
         "nerrustningen",
         "nerrustningar"
@@ -51552,7 +51124,6 @@
         "nedräkning",
         "nedräkningen",
         "nedräkningar",
-        "eller",
         "nerräkning",
         "nerräkningen",
         "nerräkningar"
@@ -51561,7 +51132,6 @@
         "nedskärning",
         "nedskärningen",
         "nedskärningar",
-        "eller",
         "nerskärning",
         "nerskärningen",
         "nerskärningar"
@@ -51570,7 +51140,6 @@
         "nedslagning",
         "nedslagningen",
         "nedslagningar",
-        "eller",
         "nerslagning",
         "nerslagningen",
         "nerslagningar"
@@ -51583,7 +51152,6 @@
         "nedstrykning",
         "nedstrykningen",
         "nedstrykningar",
-        "eller",
         "nerstrykning",
         "nerstrykningen",
         "nerstrykningar"
@@ -51596,7 +51164,6 @@
         "nedsättning",
         "nedsättningen",
         "nedsättningar",
-        "eller",
         "nersättning",
         "nersättningen",
         "nersättningar"
@@ -51605,7 +51172,6 @@
         "nedtagning",
         "nedtagningen",
         "nedtagningar",
-        "eller",
         "nertagning",
         "nertagningen",
         "nertagningar"
@@ -51614,7 +51180,6 @@
         "nedtoning",
         "nedtoningen",
         "nedtoningar",
-        "eller",
         "nertoning",
         "nertoningen",
         "nertoningar"
@@ -51623,7 +51188,6 @@
         "nedtrappning",
         "nedtrappningen",
         "nedtrappningar",
-        "eller",
         "nertrappning",
         "nertrappningen",
         "nertrappningar"
@@ -51945,8 +51509,6 @@
     "nittiotalism": [
         "nittiotalism",
         "nittiotalismen",
-        "även",
-        "vardagligt",
         "nittitalism",
         "nittitalismen"
     ],
@@ -52080,11 +51642,6 @@
     "nonchalans": [
         "nonchalans",
         "nonchalansen"
-    ],
-    "nonsens": [
-        "nonsens",
-        "",
-        "neutrum"
     ],
     "noppa": [
         "noppa",
@@ -52269,11 +51826,6 @@
         "nukleon",
         "nukleonen",
         "nukleoner"
-    ],
-    "numerus": [
-        "numerus",
-        "numerus",
-        "neutrum"
     ],
     "numerär": [
         "numerär",
@@ -52877,7 +52429,6 @@
         "nåt",
         "nåten",
         "nåtar",
-        "eller",
         "not",
         "noten",
         "notar"
@@ -53296,7 +52847,6 @@
         "okarina",
         "okarinan",
         "okarinor",
-        "eller",
         "ocarina",
         "ocarinan",
         "ocarinor"
@@ -53618,7 +53168,6 @@
         "omrörning",
         "omrörningen",
         "omrörningar",
-        "eller",
         "omröring",
         "omröringen",
         "omröringar"
@@ -54432,3351 +53981,6 @@
     "otillfredsställelse": [
         "otillfredsställelse",
         "otillfredsställelsen"
-    ],
-    "otium": [
-        "otium",
-        "",
-        "neutrum"
-    ],
-    "otjänst": [
-        "otjänst",
-        "otjänsten",
-        "otjänster"
-    ],
-    "otro": [
-        "otro",
-        "otron"
-    ],
-    "otrohet": [
-        "otrohet",
-        "otroheten",
-        "otroheter"
-    ],
-    "otukt": [
-        "otukt",
-        "otukten"
-    ],
-    "otur": [
-        "otur",
-        "oturen"
-    ],
-    "output": [
-        "output",
-        "outputen"
-    ],
-    "oval": [
-        "oval",
-        "ovalen",
-        "ovaler"
-    ],
-    "ovana": [
-        "ovana",
-        "ovanan",
-        "ovanor"
-    ],
-    "ovandel": [
-        "ovandel",
-        "ovandelen",
-        "ovandelar"
-    ],
-    "ovanlighet": [
-        "ovanlighet",
-        "ovanligheten",
-        "ovanligheter"
-    ],
-    "ovansida": [
-        "ovansida",
-        "ovansidan",
-        "ovansidor"
-    ],
-    "ovation": [
-        "ovation",
-        "ovationen",
-        "ovationer"
-    ],
-    "overall": [
-        "overall",
-        "overallen",
-        "overaller"
-    ],
-    "overheadbild": [
-        "overheadbild",
-        "overheadbilden",
-        "overheadbilder"
-    ],
-    "overheadprojektor": [
-        "overheadprojektor",
-        "overheadprojektorn",
-        "overheadprojektorer"
-    ],
-    "ovilja": [
-        "ovilja",
-        "oviljan"
-    ],
-    "ovisshet": [
-        "ovisshet",
-        "ovissheten"
-    ],
-    "ovän": [
-        "ovän",
-        "ovännen",
-        "ovänner"
-    ],
-    "ovänskap": [
-        "ovänskap",
-        "ovänskapen"
-    ],
-    "oxe": [
-        "oxe",
-        "oxen",
-        "oxar"
-    ],
-    "oxfilé": [
-        "oxfilé",
-        "oxfilén",
-        "oxfiléer"
-    ],
-    "oxid": [
-        "oxid",
-        "oxiden",
-        "oxider"
-    ],
-    "oxidation": [
-        "oxidation",
-        "oxidationen",
-        "oxidationer"
-    ],
-    "oxymoron": [
-        "oxymoron",
-        "",
-        "utrum",
-        "äv.",
-        "neutrum"
-    ],
-    "ozon": [
-        "ozon",
-        "ozonet"
-    ],
-    "oändlighet": [
-        "oändlighet",
-        "oändligheten"
-    ],
-    "pH": [
-        "pH",
-        ""
-    ],
-    "pacifism": [
-        "pacifism",
-        "pacifismen"
-    ],
-    "pacifist": [
-        "pacifist",
-        "pacifisten",
-        "pacifister"
-    ],
-    "packbox": [
-        "packbox",
-        "packboxen",
-        "packboxar"
-    ],
-    "packe": [
-        "packe",
-        "packen",
-        "packar"
-    ],
-    "packlår": [
-        "packlår",
-        "packlåren",
-        "packlårar"
-    ],
-    "packning": [
-        "packning",
-        "packningen",
-        "packningar"
-    ],
-    "packsadel": [
-        "packsadel",
-        "packsadeln",
-        "packsadlar"
-    ],
-    "padda": [
-        "padda",
-        "paddan",
-        "paddor"
-    ],
-    "paddel": [
-        "paddel",
-        "paddeln",
-        "paddlar"
-    ],
-    "padel": [
-        "padel",
-        "padeln"
-    ],
-    "pagina": [
-        "pagina",
-        "paginan",
-        "paginor"
-    ],
-    "pain riche": [
-        "pain",
-        "riche",
-        "pain",
-        "richen",
-        "el.",
-        "pain",
-        "richet",
-        "pain",
-        "riche",
-        "el.",
-        "pain",
-        "richer"
-    ],
-    "pajas": [
-        "pajas",
-        "pajasen",
-        "pajasar",
-        "el.",
-        "pajaser"
-    ],
-    "paketering": [
-        "paketering",
-        "paketeringen",
-        "paketeringar"
-    ],
-    "pakethållare": [
-        "pakethållare",
-        "pakethållaren",
-        "pakethållare",
-        "pakethållarna"
-    ],
-    "paketinlämning": [
-        "paketinlämning",
-        "paketinlämningen",
-        "paketinlämningar"
-    ],
-    "paketresa": [
-        "paketresa",
-        "paketresan",
-        "paketresor"
-    ],
-    "pakt": [
-        "pakt",
-        "pakten",
-        "pakter"
-    ],
-    "paktum": [
-        "paktum",
-        "",
-        "neutrum"
-    ],
-    "palatsrevolution": [
-        "palatsrevolution",
-        "palatsrevolutionen",
-        "palatsrevolutioner"
-    ],
-    "palestinier": [
-        "palestinier",
-        "palestiniern",
-        "palestinier"
-    ],
-    "palett": [
-        "palett",
-        "paletten",
-        "paletter"
-    ],
-    "palissad": [
-        "palissad",
-        "palissaden",
-        "palissader"
-    ],
-    "pall": [
-        "pall",
-        "pallen",
-        "pallar"
-    ],
-    "pallkrage": [
-        "pallkrage",
-        "pallkragen",
-        "pallkragar"
-    ],
-    "palm": [
-        "palm",
-        "palmen",
-        "palmer"
-    ],
-    "palt": [
-        "palt",
-        "palten",
-        "paltar"
-    ],
-    "pamflett": [
-        "pamflett",
-        "pamfletten",
-        "pamfletter"
-    ],
-    "pamp": [
-        "pamp",
-        "pampen",
-        "pampar"
-    ],
-    "pampusch": [
-        "pampusch",
-        "pampuschen",
-        "pampuscher"
-    ],
-    "panda": [
-        "panda",
-        "pandan",
-        "pandor"
-    ],
-    "pandemi": [
-        "pandemi",
-        "pandemin",
-        "pandemier"
-    ],
-    "panegyrik": [
-        "panegyrik",
-        "panegyriken",
-        "panegyriker"
-    ],
-    "panel": [
-        "panel",
-        "panelen",
-        "paneler"
-    ],
-    "paneldebatt": [
-        "paneldebatt",
-        "paneldebatten",
-        "paneldebatter"
-    ],
-    "paneldiskussion": [
-        "paneldiskussion",
-        "paneldiskussionen",
-        "paneldiskussioner"
-    ],
-    "panflöjt": [
-        "panflöjt",
-        "panflöjten",
-        "panflöjter"
-    ],
-    "panik": [
-        "panik",
-        "paniken"
-    ],
-    "panikunge": [
-        "panikunge",
-        "panikungen",
-        "panikungar"
-    ],
-    "panna": [
-        "panna",
-        "pannan",
-        "pannor"
-    ],
-    "pannbiff": [
-        "pannbiff",
-        "pannbiffen",
-        "pannbiffar"
-    ],
-    "pannkaka": [
-        "pannkaka",
-        "pannkakan",
-        "pannkakor"
-    ],
-    "pannå": [
-        "pannå",
-        "pannån",
-        "pannåer"
-    ],
-    "pansarbandvagn": [
-        "pansarbandvagn",
-        "pansarbandvagnen",
-        "pansarbandvagnar"
-    ],
-    "pansarbil": [
-        "pansarbil",
-        "pansarbilen",
-        "pansarbilar"
-    ],
-    "pansarmal": [
-        "pansarmal",
-        "pansarmalen",
-        "pansarmalar"
-    ],
-    "pansarskott": [
-        "pansarskott",
-        "pansarskottet",
-        "pansarskott",
-        "pansarskotten"
-    ],
-    "pant": [
-        "pant",
-        "panten",
-        "panter"
-    ],
-    "pantbank": [
-        "pantbank",
-        "pantbanken",
-        "pantbanker"
-    ],
-    "pantlånare": [
-        "pantlånare",
-        "pantlånaren",
-        "pantlånare",
-        "pantlånarna"
-    ],
-    "pantlånerörelse": [
-        "pantlånerörelse",
-        "pantlånerörelsen",
-        "pantlånerörelser"
-    ],
-    "pantograf": [
-        "pantograf",
-        "pantografen",
-        "pantografer"
-    ],
-    "pantomim": [
-        "pantomim",
-        "pantomimen",
-        "pantomimer"
-    ],
-    "papegoja": [
-        "papegoja",
-        "papegojan",
-        "papegojor"
-    ],
-    "papegojtulpan": [
-        "papegojtulpan",
-        "papegojtulpanen",
-        "papegojtulpaner"
-    ],
-    "papier-maché": [
-        "papier-maché",
-        "papier-machén"
-    ],
-    "papism": [
-        "papism",
-        "papismen"
-    ],
-    "papp": [
-        "papp",
-        "pappen"
-    ],
-    "pappa": [
-        "pappa",
-        "pappan",
-        "pappor"
-    ],
-    "pappamånad": [
-        "pappamånad",
-        "pappamånaden",
-        "pappamånader"
-    ],
-    "pappenheimare": [
-        "pappenheimare",
-        "pappenheimaren",
-        "pappenheimare",
-        "pappenheimarna"
-    ],
-    "papper": [
-        "papper",
-        "pappret",
-        "el.",
-        "papperet",
-        "papper",
-        "pappren",
-        "el.",
-        "papperna",
-        "el.",
-        "papperen",
-        "el.",
-        "papprena"
-    ],
-    "pappersbok": [
-        "pappersbok",
-        "pappersboken",
-        "pappersböcker"
-    ],
-    "pappersexercis": [
-        "pappersexercis",
-        "pappersexercisen"
-    ],
-    "pappershandduk": [
-        "pappershandduk",
-        "pappershandduken",
-        "pappershanddukar"
-    ],
-    "pappersklämma": [
-        "pappersklämma",
-        "pappersklämman",
-        "pappersklämmor"
-    ],
-    "papperskniv": [
-        "papperskniv",
-        "papperskniven",
-        "pappersknivar"
-    ],
-    "papperskorg": [
-        "papperskorg",
-        "papperskorgen",
-        "papperskorgar"
-    ],
-    "papperskvarn": [
-        "papperskvarn",
-        "papperskvarnen",
-        "papperskvarnar"
-    ],
-    "pappersmassa": [
-        "pappersmassa",
-        "pappersmassan"
-    ],
-    "pappersnäsduk": [
-        "pappersnäsduk",
-        "pappersnäsduken",
-        "pappersnäsdukar"
-    ],
-    "papperssax": [
-        "papperssax",
-        "papperssaxen",
-        "papperssaxar"
-    ],
-    "papperstallrik": [
-        "papperstallrik",
-        "papperstallriken",
-        "papperstallrikar"
-    ],
-    "papperstidning": [
-        "papperstidning",
-        "papperstidningen",
-        "papperstidningar"
-    ],
-    "papperstuss": [
-        "papperstuss",
-        "papperstussen",
-        "papperstussar"
-    ],
-    "paprika": [
-        "paprika",
-        "paprikan",
-        "paprikor"
-    ],
-    "papyrus": [
-        "papyrus",
-        "papyrusen",
-        "el.",
-        "papyren",
-        "papyrer",
-        "el.",
-        "papyrusar"
-    ],
-    "parabel": [
-        "parabel",
-        "parabeln",
-        "parabler"
-    ],
-    "parabolantenn": [
-        "parabolantenn",
-        "parabolantennen",
-        "parabolantenner"
-    ],
-    "parad": [
-        "parad",
-        "paraden",
-        "parader"
-    ],
-    "paradigm": [
-        "paradigm",
-        "paradigmet",
-        "paradigm",
-        "el.",
-        "paradigmer",
-        "paradigmen",
-        "el.",
-        "paradigmerna"
-    ],
-    "paradmarsch": [
-        "paradmarsch",
-        "paradmarschen",
-        "paradmarscher"
-    ],
-    "paradox": [
-        "paradox",
-        "paradoxen",
-        "paradoxer"
-    ],
-    "paraduniform": [
-        "paraduniform",
-        "paraduniformen",
-        "paraduniformer"
-    ],
-    "paragraf": [
-        "paragraf",
-        "paragrafen",
-        "paragrafer"
-    ],
-    "parallellcirkel": [
-        "parallellcirkel",
-        "parallellcirkeln",
-        "parallellcirklar"
-    ],
-    "parallellepiped": [
-        "parallellepiped",
-        "parallellepipeden",
-        "parallellepipeder"
-    ],
-    "parallellitet": [
-        "parallellitet",
-        "parallelliteten"
-    ],
-    "parallellsväng": [
-        "parallellsväng",
-        "parallellsvängen",
-        "parallellsvängar"
-    ],
-    "paralys": [
-        "paralys",
-        "paralysen",
-        "paralyser"
-    ],
-    "parameter": [
-        "parameter",
-        "parametern",
-        "parametrar"
-    ],
-    "paranoia": [
-        "paranoia",
-        "paranoian"
-    ],
-    "paraplydrink": [
-        "paraplydrink",
-        "paraplydrinken",
-        "paraplydrinkar"
-    ],
-    "paraplyorganisation": [
-        "paraplyorganisation",
-        "paraplyorganisationen",
-        "paraplyorganisationer"
-    ],
-    "parasit": [
-        "parasit",
-        "parasiten",
-        "parasiter"
-    ],
-    "parasömn": [
-        "parasömn",
-        "parasömnen"
-    ],
-    "pardans": [
-        "pardans",
-        "pardansen",
-        "pardanser"
-    ],
-    "pardon": [
-        "pardon",
-        "",
-        "utrum"
-    ],
-    "parentes": [
-        "parentes",
-        "parentesen",
-        "parenteser"
-    ],
-    "parentestecken": [
-        "parentestecken",
-        "parentestecknet",
-        "parentestecken",
-        "parentestecknen"
-    ],
-    "pares": [
-        "pares",
-        "paresen",
-        "pareser"
-    ],
-    "parfait": [
-        "parfait",
-        "parfaiten",
-        "parfaiter"
-    ],
-    "parfym": [
-        "parfym",
-        "parfymen",
-        "parfymer"
-    ],
-    "parhäst": [
-        "parhäst",
-        "parhästen",
-        "parhästar"
-    ],
-    "paria": [
-        "paria",
-        "parian",
-        "parias",
-        "el.",
-        "parior"
-    ],
-    "paritet": [
-        "paritet",
-        "pariteten"
-    ],
-    "park": [
-        "park",
-        "parken",
-        "parker"
-    ],
-    "parkering": [
-        "parkering",
-        "parkeringen",
-        "parkeringar"
-    ],
-    "parkeringsbot": [
-        "parkeringsbot",
-        "parkeringsboten",
-        "parkeringsböter"
-    ],
-    "parkeringsplats": [
-        "parkeringsplats",
-        "parkeringsplatsen",
-        "parkeringsplatser"
-    ],
-    "parkeringssensor": [
-        "parkeringssensor",
-        "parkeringssensorn",
-        "parkeringssensorer"
-    ],
-    "parkeringsvakt": [
-        "parkeringsvakt",
-        "parkeringsvakten",
-        "parkeringsvakter"
-    ],
-    "parkett": [
-        "parkett",
-        "parketten",
-        "parketter"
-    ],
-    "parkettstav": [
-        "parkettstav",
-        "parkettstaven",
-        "parkettstavar"
-    ],
-    "parlamentarism": [
-        "parlamentarism",
-        "parlamentarismen"
-    ],
-    "parlör": [
-        "parlör",
-        "parlören",
-        "parlörer"
-    ],
-    "parmaskinka": [
-        "parmaskinka",
-        "parmaskinkan",
-        "parmaskinkor"
-    ],
-    "parnass": [
-        "parnass",
-        "parnassen",
-        "parnasser"
-    ],
-    "parningslek": [
-        "parningslek",
-        "parningsleken",
-        "parningslekar"
-    ],
-    "parodi": [
-        "parodi",
-        "parodin",
-        "parodier"
-    ],
-    "parodiker": [
-        "parodiker",
-        "parodikern",
-        "parodiker"
-    ],
-    "parodontit": [
-        "parodontit",
-        "parodontiten",
-        "parodontiter"
-    ],
-    "paroll": [
-        "paroll",
-        "parollen",
-        "paroller"
-    ],
-    "parser": [
-        "parser",
-        "parsern",
-        "parsrar",
-        "äv.",
-        "parsers"
-    ],
-    "parsing": [
-        "parsing",
-        "parsingen",
-        "även",
-        "parsning",
-        "parsningen"
-    ],
-    "part": [
-        "part",
-        "parten",
-        "parter"
-    ],
-    "partifärg": [
-        "partifärg",
-        "partifärgen",
-        "partifärger"
-    ],
-    "partihandel": [
-        "partihandel",
-        "partihandeln"
-    ],
-    "partikel": [
-        "partikel",
-        "partikeln",
-        "partiklar"
-    ],
-    "partikularism": [
-        "partikularism",
-        "partikularismen"
-    ],
-    "partiledare": [
-        "partiledare",
-        "partiledaren",
-        "partiledare",
-        "partiledarna"
-    ],
-    "partiordförande": [
-        "partiordförande",
-        "partiordföranden",
-        "partiordförande"
-    ],
-    "partipiska": [
-        "partipiska",
-        "partipiskan"
-    ],
-    "partisan": [
-        "partisan",
-        "partisanen",
-        "partisaner"
-    ],
-    "partisekreterare": [
-        "partisekreterare",
-        "partisekreteraren",
-        "partisekreterare",
-        "partisekreterarna"
-    ],
-    "partner": [
-        "partner",
-        "partnern",
-        "partner",
-        "el.",
-        "partners"
-    ],
-    "partsinlaga": [
-        "partsinlaga",
-        "partsinlagan",
-        "partsinlagor"
-    ],
-    "parveny": [
-        "parveny",
-        "parvenyn",
-        "parvenyer"
-    ],
-    "passad": [
-        "passad",
-        "passaden",
-        "passader"
-    ],
-    "passadvind": [
-        "passadvind",
-        "passadvinden",
-        "passadvindar"
-    ],
-    "passage": [
-        "passage",
-        "passagen",
-        "passager"
-    ],
-    "passagerare": [
-        "passagerare",
-        "passageraren",
-        "passagerare",
-        "passagerarna"
-    ],
-    "passare": [
-        "passare",
-        "passaren",
-        "passare",
-        "passarna"
-    ],
-    "passgång": [
-        "passgång",
-        "passgången"
-    ],
-    "passgångare": [
-        "passgångare",
-        "passgångaren",
-        "passgångare",
-        "passgångarna"
-    ],
-    "passion": [
-        "passion",
-        "passionen",
-        "passioner"
-    ],
-    "passivitet": [
-        "passivitet",
-        "passiviteten"
-    ],
-    "passkontroll": [
-        "passkontroll",
-        "~en",
-        "~er"
-    ],
-    "passning": [
-        "passning",
-        "passningen",
-        "passningar"
-    ],
-    "passopp": [
-        "passopp",
-        "passoppen",
-        "passopper"
-    ],
-    "passus": [
-        "passus",
-        "passusen",
-        "passusar"
-    ],
-    "pasta": [
-        "pasta",
-        "pastan",
-        "pastor"
-    ],
-    "pastej": [
-        "pastej",
-        "pastejen",
-        "pastejer"
-    ],
-    "pastell": [
-        "pastell",
-        "pastellen",
-        "pasteller"
-    ],
-    "pastellfärg": [
-        "pastellfärg",
-        "pastellfärgen",
-        "pastellfärger"
-    ],
-    "pastisch": [
-        "pastisch",
-        "pastischen",
-        "pastischer"
-    ],
-    "pastor": [
-        "pastor",
-        "pastorn",
-        "pastorer"
-    ],
-    "pastoral": [
-        "pastoral",
-        "pastoralen",
-        "pastoraler"
-    ],
-    "pastorsadjunkt": [
-        "pastorsadjunkt",
-        "pastorsadjunkten",
-        "pastorsadjunkter"
-    ],
-    "patch": [
-        "patch",
-        "patchen",
-        "patchar",
-        "el.",
-        "patcher"
-    ],
-    "patellarreflex": [
-        "patellarreflex",
-        "patellarreflexen",
-        "patellarreflexer"
-    ],
-    "pater": [
-        "pater",
-        "patern",
-        "patrar"
-    ],
-    "patetik": [
-        "patetik",
-        "patetiken"
-    ],
-    "patiens": [
-        "patiens",
-        "patiensen",
-        "patienser"
-    ],
-    "patient": [
-        "patient",
-        "patienten",
-        "patienter"
-    ],
-    "patientnämnd": [
-        "patientnämnd",
-        "patientnämnden",
-        "patientnämnder"
-    ],
-    "patina": [
-        "patina",
-        "patinan"
-    ],
-    "patogen": [
-        "patogen",
-        "patogenen",
-        "patogenerpatogen",
-        "patogent",
-        "patogena"
-    ],
-    "patriark": [
-        "patriark",
-        "patriarken",
-        "patriarker"
-    ],
-    "patriot": [
-        "patriot",
-        "patrioten",
-        "patrioter"
-    ],
-    "patriotism": [
-        "patriotism",
-        "patriotismen"
-    ],
-    "patron": [
-        "patron",
-        "patronen",
-        "el.",
-        "vardagligt",
-        "patron",
-        "patroner"
-    ],
-    "patrull": [
-        "patrull",
-        "patrullen",
-        "patruller",
-        ";",
-        "i",
-        "ett",
-        "uttr.",
-        "patrullo"
-    ],
-    "patrullbåt": [
-        "patrullbåt",
-        "patrullbåten",
-        "patrullbåtar"
-    ],
-    "patt": [
-        "patt",
-        "patten",
-        "patter"
-    ],
-    "patt-2": [
-        "patt",
-        "patten",
-        "pattar",
-        "eller",
-        "patte",
-        "patten",
-        "pattar"
-    ],
-    "paus": [
-        "paus",
-        "pausen",
-        "pauser"
-    ],
-    "paviljong": [
-        "paviljong",
-        "paviljongen",
-        "paviljonger"
-    ],
-    "peang": [
-        "peang",
-        "peangen",
-        "peanger"
-    ],
-    "pedagog": [
-        "pedagog",
-        "pedagogen",
-        "pedagoger"
-    ],
-    "pedagogik": [
-        "pedagogik",
-        "pedagogiken"
-    ],
-    "pedal": [
-        "pedal",
-        "pedalen",
-        "pedaler"
-    ],
-    "pedikyr": [
-        "pedikyr",
-        "pedikyren"
-    ],
-    "pedofil": [
-        "pedofil",
-        "pedofilen",
-        "pedofiler"
-    ],
-    "pedofili": [
-        "pedofili",
-        "pedofilin"
-    ],
-    "pekare": [
-        "pekare",
-        "pekaren",
-        "pekare",
-        "pekarna"
-    ],
-    "pekbok": [
-        "pekbok",
-        "pekboken",
-        "pekböcker"
-    ],
-    "pelare": [
-        "pelare",
-        "pelaren",
-        "pelare",
-        "pelarna"
-    ],
-    "pelikan": [
-        "pelikan",
-        "pelikanen",
-        "pelikaner"
-    ],
-    "pelikanfågel": [
-        "pelikanfågel",
-        "pelikanfågeln",
-        "pelikanfåglar"
-    ],
-    "pellejöns": [
-        "pellejöns",
-        "pellejönsen",
-        "pellejönsar"
-    ],
-    "pellet": [
-        "pellet",
-        "pelleten",
-        "pelletar",
-        "äv.",
-        "pellets"
-    ],
-    "pen": [
-        "pen",
-        "penen",
-        "penar"
-    ],
-    "pendang": [
-        "pendang",
-        "pendangen",
-        "pendanger"
-    ],
-    "pendel": [
-        "pendel",
-        "pendeln",
-        "pendlar"
-    ],
-    "pendeltrafik": [
-        "pendeltrafik",
-        "pendeltrafiken"
-    ],
-    "pendlare": [
-        "pendlare",
-        "pendlaren",
-        "pendlare",
-        "pendlarna"
-    ],
-    "pendyl": [
-        "pendyl",
-        "pendylen",
-        "pendyler"
-    ],
-    "peng": [
-        "peng",
-        "pengen",
-        "pengar"
-    ],
-    "penis": [
-        "penis",
-        "penisen",
-        "el.",
-        "penis",
-        "penisar"
-    ],
-    "penna": [
-        "penna",
-        "pennan",
-        "pennor"
-    ],
-    "penning": [
-        "penning",
-        "penningen",
-        "penningar"
-    ],
-    "penningpolitik": [
-        "penningpolitik",
-        "penningpolitiken"
-    ],
-    "penningpåse": [
-        "penningpåse",
-        "penningpåsen",
-        "penningpåsar"
-    ],
-    "penningsumma": [
-        "penningsumma",
-        "penningsumman",
-        "penningsummor"
-    ],
-    "penningtvätt": [
-        "penningtvätt",
-        "penningtvätten"
-    ],
-    "pennteckning": [
-        "pennteckning",
-        "pennteckningen",
-        "pennteckningar"
-    ],
-    "pennvässare": [
-        "pennvässare",
-        "pennvässaren",
-        "pennvässare",
-        "pennvässarna"
-    ],
-    "pensel": [
-        "pensel",
-        "penseln",
-        "penslar"
-    ],
-    "penselföring": [
-        "penselföring",
-        "penselföringen"
-    ],
-    "pension": [
-        "pension",
-        "pensionen",
-        "pensioner"
-    ],
-    "pensionsförsäkring": [
-        "pensionsförsäkring",
-        "pensionsförsäkringen",
-        "pensionsförsäkringar"
-    ],
-    "pensionspoäng": [
-        "pensionspoäng",
-        "pensionspoängen",
-        "pensionspoäng",
-        "pensionspoängen"
-    ],
-    "pensionsålder": [
-        "pensionsålder",
-        "pensionsåldern",
-        "pensionsåldrar"
-    ],
-    "pensionär": [
-        "pensionär",
-        "pensionären",
-        "pensionärer"
-    ],
-    "penultima": [
-        "penultima",
-        "bestämd",
-        "form",
-        "penultima",
-        "el.",
-        "penultiman",
-        "penultimor"
-    ],
-    "peperoni": [
-        "peperoni",
-        "peperonin"
-    ],
-    "peppar": [
-        "peppar",
-        "pepparn"
-    ],
-    "pepparkaka": [
-        "pepparkaka",
-        "pepparkakan",
-        "pepparkakor"
-    ],
-    "pepparkaksgubbe": [
-        "pepparkaksgubbe",
-        "pepparkaksgubben",
-        "pepparkaksgubbar"
-    ],
-    "pepparrot": [
-        "pepparrot",
-        "pepparroten"
-    ],
-    "peppning": [
-        "peppning",
-        "peppningen",
-        "peppningar"
-    ],
-    "perception": [
-        "perception",
-        "perceptionen",
-        "perceptioner"
-    ],
-    "perenn": [
-        "perenn",
-        "perennen",
-        "perenner"
-    ],
-    "perestrojka": [
-        "perestrojka",
-        "perestrojkan"
-    ],
-    "perfektion": [
-        "perfektion",
-        "perfektionen"
-    ],
-    "periferi": [
-        "periferi",
-        "periferin",
-        "periferier"
-    ],
-    "period": [
-        "period",
-        "perioden",
-        "perioder"
-    ],
-    "periodare": [
-        "periodare",
-        "periodaren",
-        "periodare",
-        "periodarna"
-    ],
-    "periodicitet": [
-        "periodicitet",
-        "periodiciteten"
-    ],
-    "periodsupare": [
-        "periodsupare",
-        "periodsuparen",
-        "periodsupare",
-        "periodsuparna"
-    ],
-    "peripeti": [
-        "peripeti",
-        "peripetin",
-        "peripetier"
-    ],
-    "peristaltik": [
-        "peristaltik",
-        "peristaltiken"
-    ],
-    "peristyl": [
-        "peristyl",
-        "peristylen",
-        "peristyler"
-    ],
-    "perkolation": [
-        "perkolation",
-        "perkolationen"
-    ],
-    "perkolator": [
-        "perkolator",
-        "perkolatorn",
-        "perkolatorer"
-    ],
-    "permafrost": [
-        "permafrost",
-        "permafrosten"
-    ],
-    "permanens": [
-        "permanens",
-        "permanensen"
-    ],
-    "permanent": [
-        "permanent",
-        "permanenten",
-        "permanenter"
-    ],
-    "permission": [
-        "permission",
-        "permissionen",
-        "permissioner"
-    ],
-    "permutation": [
-        "permutation",
-        "permutationen",
-        "permutationer"
-    ],
-    "peroxid": [
-        "peroxid",
-        "peroxiden",
-        "peroxider"
-    ],
-    "perrong": [
-        "perrong",
-        "perrongen",
-        "perronger"
-    ],
-    "pers": [
-        "pers",
-        "persen",
-        "pers",
-        "persen"
-    ],
-    "persedel": [
-        "persedel",
-        "persedeln",
-        "persedlar"
-    ],
-    "persienn": [
-        "persienn",
-        "persiennen",
-        "persienner"
-    ],
-    "persika": [
-        "persika",
-        "persikan",
-        "persikor"
-    ],
-    "persikohy": [
-        "persikohy",
-        "persikohyn"
-    ],
-    "persilja": [
-        "persilja",
-        "persiljan"
-    ],
-    "person": [
-        "person",
-        "personen",
-        "personer"
-    ],
-    "persona": [
-        "persona",
-        "personan"
-    ],
-    "personal": [
-        "personal",
-        "personalen",
-        "personaler"
-    ],
-    "personalavdelning": [
-        "personalavdelning",
-        "personalavdelningen",
-        "personalavdelningar"
-    ],
-    "personalchef": [
-        "personalchef",
-        "personalchefen",
-        "personalchefer"
-    ],
-    "personalism": [
-        "personalism",
-        "personalismen"
-    ],
-    "personalmatsal": [
-        "personalmatsal",
-        "~en",
-        "~ar"
-    ],
-    "personalorganisation": [
-        "personalorganisation",
-        "personalorganisationen",
-        "personalorganisationer"
-    ],
-    "personaltidning": [
-        "personaltidning",
-        "personaltidningen",
-        "personaltidningar"
-    ],
-    "personalunion": [
-        "personalunion",
-        "personalunionen",
-        "personalunioner"
-    ],
-    "personalutbildning": [
-        "personalutbildning",
-        "personalutbildningen",
-        "personalutbildningar"
-    ],
-    "personbil": [
-        "personbil",
-        "personbilen",
-        "personbilar"
-    ],
-    "personbästa": [
-        "personbästa",
-        "personbästat",
-        "personbästan"
-    ],
-    "persondator": [
-        "persondator",
-        "persondatorn",
-        "persondatorer"
-    ],
-    "personfråga": [
-        "personfråga",
-        "personfrågan",
-        "personfrågor"
-    ],
-    "personförsäkring": [
-        "personförsäkring",
-        "personförsäkringen",
-        "personförsäkringar"
-    ],
-    "persongalleri": [
-        "persongalleri",
-        "persongalleriet",
-        "persongallerier"
-    ],
-    "personhistoria": [
-        "personhistoria",
-        "personhistorien"
-    ],
-    "personifikation": [
-        "personifikation",
-        "personifikationen",
-        "personifikationer"
-    ],
-    "personkemi": [
-        "personkemi",
-        "personkemin"
-    ],
-    "personkilometer": [
-        "personkilometer",
-        "personkilometern",
-        "personkilometer"
-    ],
-    "personkult": [
-        "personkult",
-        "personkulten",
-        "personkulter"
-    ],
-    "personlighet": [
-        "personlighet",
-        "personligheten",
-        "personligheter"
-    ],
-    "personlighetsklyvning": [
-        "personlighetsklyvning",
-        "personlighetsklyvningen"
-    ],
-    "personröst": [
-        "personröst",
-        "personrösten",
-        "personröster"
-    ],
-    "personskildring": [
-        "personskildring",
-        "personskildringen",
-        "personskildringar"
-    ],
-    "personsökare": [
-        "personsökare",
-        "personsökaren",
-        "personsökare",
-        "personsökarna"
-    ],
-    "persontrafik": [
-        "persontrafik",
-        "persontrafiken"
-    ],
-    "personundersökning": [
-        "personundersökning",
-        "personundersökningen",
-        "personundersökningar"
-    ],
-    "personuppgift": [
-        "personuppgift",
-        "personuppgiften",
-        "personuppgifter"
-    ],
-    "personvagn": [
-        "personvagn",
-        "personvagnen",
-        "personvagnar"
-    ],
-    "personvåg": [
-        "personvåg",
-        "personvågen",
-        "personvågar"
-    ],
-    "perspektivbild": [
-        "perspektivbild",
-        "perspektivbilden",
-        "perspektivbilder"
-    ],
-    "perspektivförskjutning": [
-        "perspektivförskjutning",
-        "perspektivförskjutningen",
-        "perspektivförskjutningar"
-    ],
-    "perspiration": [
-        "perspiration",
-        "perspirationen"
-    ],
-    "perturbation": [
-        "perturbation",
-        "perturbationen",
-        "perturbationer"
-    ],
-    "peruk": [
-        "peruk",
-        "peruken",
-        "peruker"
-    ],
-    "perukmakare": [
-        "perukmakare",
-        "perukmakaren",
-        "perukmakare",
-        "perukmakarna"
-    ],
-    "perukstock": [
-        "perukstock",
-        "perukstocken",
-        "perukstockar"
-    ],
-    "perversion": [
-        "perversion",
-        "perversionen",
-        "perversioner"
-    ],
-    "perversitet": [
-        "perversitet",
-        "perversiteten",
-        "perversiteter"
-    ],
-    "peseta": [
-        "peseta",
-        "pesetan",
-        "pesetas"
-    ],
-    "peso": [
-        "peso",
-        "peson",
-        "peso",
-        "äv.",
-        "pesos"
-    ],
-    "pessimism": [
-        "pessimism",
-        "pessimismen"
-    ],
-    "pessimist": [
-        "pessimist",
-        "pessimisten",
-        "pessimister"
-    ],
-    "pest": [
-        "pest",
-        "pesten",
-        "pester"
-    ],
-    "pesticid": [
-        "pesticid",
-        "pesticiden",
-        "pesticider"
-    ],
-    "pestilens": [
-        "pestilens",
-        "pestilensen",
-        "pestilenser"
-    ],
-    "pesto": [
-        "pesto",
-        "peston"
-    ],
-    "petflaska": [
-        "petflaska",
-        "petflaskan",
-        "petflaskor",
-        "eller",
-        "pet-flaska",
-        "pet-flaskan",
-        "pet-flaskor"
-    ],
-    "petit mal": [
-        "petit",
-        "mal"
-    ],
-    "petitess": [
-        "petitess",
-        "petitessen",
-        "petitesser"
-    ],
-    "petmoj": [
-        "petmoj",
-        "petmojen",
-        "petmojar"
-    ],
-    "petroleum": [
-        "petroleum",
-        "petroleumen",
-        "el.",
-        "petroleumet"
-    ],
-    "phishing": [
-        "phishing",
-        "phishingen"
-    ],
-    "pianist": [
-        "pianist",
-        "pianisten",
-        "pianister"
-    ],
-    "pianosonat": [
-        "pianosonat",
-        "pianosonaten",
-        "pianosonater"
-    ],
-    "piazza": [
-        "piazza",
-        "piazzan",
-        "piazzor"
-    ],
-    "picador": [
-        "picador",
-        "picadoren",
-        "picadorer",
-        "även",
-        "pikador",
-        "pikadoren",
-        "pikadorer"
-    ],
-    "pickup": [
-        "pickup",
-        "pickupen",
-        "pickuper"
-    ],
-    "pidgin": [
-        "pidgin",
-        "",
-        "utrum"
-    ],
-    "pidginengelska": [
-        "pidginengelska",
-        "pidginengelskan"
-    ],
-    "piedestal": [
-        "piedestal",
-        "piedestalen",
-        "piedestaler"
-    ],
-    "pietism": [
-        "pietism",
-        "pietismen"
-    ],
-    "pietist": [
-        "pietist",
-        "pietisten",
-        "pietister"
-    ],
-    "piga": [
-        "piga",
-        "pigan",
-        "pigor"
-    ],
-    "pigg": [
-        "pigg",
-        "piggen",
-        "piggar"
-    ],
-    "pigghaj": [
-        "pigghaj",
-        "pigghajen",
-        "pigghajar"
-    ],
-    "piggvar": [
-        "piggvar",
-        "piggvaren",
-        "piggvarar"
-    ],
-    "pigment": [
-        "pigment",
-        "pigmentet",
-        "pigment",
-        "pigmenten"
-    ],
-    "pigroman": [
-        "pigroman",
-        "pigromanen",
-        "pigromaner"
-    ],
-    "pik": [
-        "pik",
-        "piken",
-        "pikar"
-    ],
-    "pikhacka": [
-        "pikhacka",
-        "pikhackan",
-        "pikhackor"
-    ],
-    "pikstav": [
-        "pikstav",
-        "pikstaven",
-        "pikstavar"
-    ],
-    "piktur": [
-        "piktur",
-        "pikturen",
-        "pikturer"
-    ],
-    "pil": [
-        "pil",
-        "pilen",
-        "pilar"
-    ],
-    "pilkoger": [
-        "pilkoger",
-        "pilkogret",
-        "pilkoger",
-        "pilkogren"
-    ],
-    "pillerburk": [
-        "pillerburk",
-        "pillerburken",
-        "pillerburkar"
-    ],
-    "pilot": [
-        "pilot",
-        "piloten",
-        "piloter"
-    ],
-    "pilotstudie": [
-        "pilotstudie",
-        "pilotstudien",
-        "pilotstudier"
-    ],
-    "pilotundersökning": [
-        "pilotundersökning",
-        "~en",
-        "~ar"
-    ],
-    "pilsner": [
-        "pilsner",
-        "pilsnern",
-        "pilsner"
-    ],
-    "pilsnerfilm": [
-        "pilsnerfilm",
-        "pilsnerfilmen",
-        "pilsnerfilmer"
-    ],
-    "pilsnerflaska": [
-        "pilsnerflaska",
-        "pilsnerflaskan",
-        "pilsnerflaskor"
-    ],
-    "pilspets": [
-        "pilspets",
-        "pilspetsen",
-        "pilspetsar"
-    ],
-    "pimpinell": [
-        "pimpinell",
-        "pimpinellen",
-        "pimpineller"
-    ],
-    "pimpinella": [
-        "pimpinella",
-        "pimpinellan",
-        "pimpinellor"
-    ],
-    "pin": [
-        "pin",
-        ""
-    ],
-    "pincené": [
-        "pincené",
-        "pincenén",
-        "pincenéer"
-    ],
-    "pincett": [
-        "pincett",
-        "pincetten",
-        "pincetter"
-    ],
-    "pingis": [
-        "pingis",
-        "pingisen"
-    ],
-    "pingla": [
-        "pingla",
-        "pinglan",
-        "pinglor"
-    ],
-    "pingpong": [
-        "pingpong",
-        "pingpongen"
-    ],
-    "pingst": [
-        "pingst",
-        "pingsten",
-        "pingstar",
-        ";",
-        "obestämd",
-        "form",
-        "singular",
-        "genitiv",
-        "pingstas",
-        "i",
-        "ett",
-        "uttr."
-    ],
-    "pingsthelg": [
-        "pingsthelg",
-        "pingsthelgen",
-        "pingsthelger"
-    ],
-    "pingstlilja": [
-        "pingstlilja",
-        "pingstliljan",
-        "pingstliljor"
-    ],
-    "pingvin": [
-        "pingvin",
-        "pingvinen",
-        "pingviner"
-    ],
-    "pinne": [
-        "pinne",
-        "pinnen",
-        "pinnar"
-    ],
-    "pinnharv": [
-        "pinnharv",
-        "pinnharven",
-        "pinnharvar"
-    ],
-    "pinnstol": [
-        "pinnstol",
-        "pinnstolen",
-        "pinnstolar"
-    ],
-    "pinnved": [
-        "pinnved",
-        "pinnveden"
-    ],
-    "pint": [
-        "pint",
-        "pinten",
-        "pint",
-        "äv.",
-        "pints"
-    ],
-    "pionjär": [
-        "pionjär",
-        "pionjären",
-        "pionjärer"
-    ],
-    "pipa": [
-        "pipa",
-        "pipan",
-        "pipor"
-    ],
-    "pipare": [
-        "pipare",
-        "piparen",
-        "pipare",
-        "piparna"
-    ],
-    "pipeline": [
-        "pipeline",
-        "pipelinen",
-        "pipeliner",
-        "äv.",
-        "pipelines"
-    ],
-    "piplärka": [
-        "piplärka",
-        "piplärkan",
-        "piplärkor"
-    ],
-    "pippi": [
-        "pippi",
-        "pippin",
-        "pippiar"
-    ],
-    "piprensare": [
-        "piprensare",
-        "piprensaren",
-        "piprensare",
-        "piprensarna"
-    ],
-    "piptobak": [
-        "piptobak",
-        "piptobaken"
-    ],
-    "pir": [
-        "pir",
-        "piren",
-        "pirar",
-        "el.",
-        "pirer"
-    ],
-    "pirat": [
-        "pirat",
-        "piraten",
-        "pirater"
-    ],
-    "piratkopia": [
-        "piratkopia",
-        "piratkopian",
-        "piratkopior"
-    ],
-    "piratsändare": [
-        "piratsändare",
-        "piratsändaren",
-        "piratsändare",
-        "piratsändarna"
-    ],
-    "pirra": [
-        "pirra",
-        "pirran",
-        "pirror"
-    ],
-    "piruett": [
-        "piruett",
-        "piruetten",
-        "piruetter"
-    ],
-    "piska": [
-        "piska",
-        "piskan",
-        "piskor"
-    ],
-    "pisksnärt": [
-        "pisksnärt",
-        "pisksnärten",
-        "pisksnärtar"
-    ],
-    "pisksnärtskada": [
-        "pisksnärtskada",
-        "pisksnärtskadan",
-        "pisksnärtskador",
-        "eller",
-        "pisksnärtsskada",
-        "pisksnärtsskadan",
-        "pisksnärtsskador"
-    ],
-    "piskställning": [
-        "piskställning",
-        "piskställningen",
-        "piskställningar"
-    ],
-    "pissoar": [
-        "pissoar",
-        "pissoaren",
-        "pissoarer"
-    ],
-    "pist": [
-        "pist",
-        "pisten",
-        "pister"
-    ],
-    "pistasch": [
-        "pistasch",
-        "pistaschen",
-        "pistascher",
-        "eller",
-        "pistage",
-        "pistagen",
-        "pistager"
-    ],
-    "pistill": [
-        "pistill",
-        "pistillen",
-        "pistiller"
-    ],
-    "pistol": [
-        "pistol",
-        "pistolen",
-        "pistoler"
-    ],
-    "pitepalt": [
-        "pitepalt",
-        "pitepalten",
-        "pitepaltar"
-    ],
-    "pitprops": [
-        "pitprops",
-        "pitpropsen"
-    ],
-    "pitt": [
-        "pitt",
-        "pitten",
-        "pittar"
-    ],
-    "pixel": [
-        "pixel",
-        "pixeln",
-        "pixlar"
-    ],
-    "pizza": [
-        "pizza",
-        "pizzan",
-        "pizzor"
-    ],
-    "pjäs": [
-        "pjäs",
-        "pjäsen",
-        "pjäser"
-    ],
-    "pjäxa": [
-        "pjäxa",
-        "pjäxan",
-        "pjäxor"
-    ],
-    "placebo": [
-        "placebo",
-        "placebon"
-    ],
-    "placeboeffekt": [
-        "placeboeffekt",
-        "placeboeffekten",
-        "placeboeffekter"
-    ],
-    "placering": [
-        "placering",
-        "placeringen",
-        "placeringar"
-    ],
-    "plack": [
-        "plack",
-        "placken",
-        "el.",
-        "placket"
-    ],
-    "plage": [
-        "plage",
-        "plagen",
-        "plager"
-    ],
-    "plakett": [
-        "plakett",
-        "plaketten",
-        "plaketter"
-    ],
-    "plan": [
-        "plan",
-        "planet",
-        "plan",
-        "planen"
-    ],
-    "planekonomi": [
-        "planekonomi",
-        "planekonomin",
-        "planekonomier"
-    ],
-    "planet": [
-        "planet",
-        "planeten",
-        "planeter"
-    ],
-    "plangeometri": [
-        "plangeometri",
-        "plangeometrin"
-    ],
-    "planhalva": [
-        "planhalva",
-        "planhalvan",
-        "planhalvor"
-    ],
-    "planimetri": [
-        "planimetri",
-        "planimetrin"
-    ],
-    "plank": [
-        "plank",
-        "planken"
-    ],
-    "planka": [
-        "planka",
-        "plankan",
-        "plankor"
-    ],
-    "planläggning": [
-        "planläggning",
-        "~en"
-    ],
-    "planlösning": [
-        "planlösning",
-        "planlösningen",
-        "planlösningar"
-    ],
-    "planritning": [
-        "planritning",
-        "planritningen",
-        "planritningar"
-    ],
-    "plansch": [
-        "plansch",
-        "planschen",
-        "planscher"
-    ],
-    "plantering": [
-        "plantering",
-        "planteringen",
-        "planteringar"
-    ],
-    "plask": [
-        "plask",
-        "plasket"
-    ],
-    "plast": [
-        "plast",
-        "plasten",
-        "plaster"
-    ],
-    "plastblomma": [
-        "plastblomma",
-        "plastblomman",
-        "plastblommor"
-    ],
-    "plastficka": [
-        "plastficka",
-        "plastfickan",
-        "plastfickor"
-    ],
-    "plastfolie": [
-        "plastfolie",
-        "plastfolien",
-        "plastfolier"
-    ],
-    "plastik": [
-        "plastik",
-        "plastiken"
-    ],
-    "plastikkirurgi": [
-        "plastikkirurgi",
-        "plastikkirurgin"
-    ],
-    "plastikoperation": [
-        "plastikoperation",
-        "plastikoperationen",
-        "plastikoperationer"
-    ],
-    "plastmamma": [
-        "plastmamma",
-        "plastmamman",
-        "plastmammor"
-    ],
-    "plastmapp": [
-        "plastmapp",
-        "plastmappen",
-        "plastmappar"
-    ],
-    "plastpappa": [
-        "plastpappa",
-        "plastpappan",
-        "plastpappor"
-    ],
-    "plastpartikel": [
-        "plastpartikel",
-        "plastpartikeln",
-        "plastpartiklar"
-    ],
-    "plastpåse": [
-        "plastpåse",
-        "plastpåsen",
-        "plastpåsar"
-    ],
-    "plaståldern": [
-        "plaståldern",
-        "bestämd",
-        "form"
-    ],
-    "platan": [
-        "platan",
-        "platanen",
-        "plataner"
-    ],
-    "platina": [
-        "platina",
-        "platinan"
-    ],
-    "platinaskiva": [
-        "platinaskiva",
-        "platinaskivan",
-        "platinaskivor"
-    ],
-    "plats": [
-        "plats",
-        "platsen",
-        "platser"
-    ],
-    "platsannons": [
-        "platsannons",
-        "~en",
-        "~er"
-    ],
-    "platsbiljett": [
-        "platsbiljett",
-        "platsbiljetten",
-        "platsbiljetter"
-    ],
-    "platt-tv": [
-        "platt-tv",
-        "platt-tv:n",
-        "platt-tv:ar"
-    ],
-    "platta": [
-        "platta",
-        "plattan",
-        "plattor"
-    ],
-    "plattfisk": [
-        "plattfisk",
-        "plattfisken",
-        "plattfiskar"
-    ],
-    "plattform": [
-        "plattform",
-        "plattformen",
-        "plattformar"
-    ],
-    "plattfot": [
-        "plattfot",
-        "plattfoten"
-    ],
-    "platthet": [
-        "platthet",
-        "plattheten",
-        "plattheter"
-    ],
-    "plattityd": [
-        "plattityd",
-        "plattityden",
-        "plattityder"
-    ],
-    "plattmask": [
-        "plattmask",
-        "plattmasken",
-        "plattmaskar"
-    ],
-    "plattyska": [
-        "plattyska",
-        "plattyskan"
-    ],
-    "plattång": [
-        "plattång",
-        "plattången",
-        "plattänger"
-    ],
-    "platå": [
-        "platå",
-        "platån",
-        "platåer"
-    ],
-    "plebs": [
-        "plebs",
-        "plebsen"
-    ],
-    "plejad": [
-        "plejad",
-        "plejaden",
-        "plejader"
-    ],
-    "plenisal": [
-        "plenisal",
-        "plenisalen",
-        "plenisalar"
-    ],
-    "pleonasm": [
-        "pleonasm",
-        "pleonasmen",
-        "pleonasmer"
-    ],
-    "pli": [
-        "pli",
-        "plin"
-    ],
-    "plikt": [
-        "plikt",
-        "plikten",
-        "plikter"
-    ],
-    "plita": [
-        "plita",
-        "plitan",
-        "plitor"
-    ],
-    "plockare": [
-        "plockare",
-        "plockaren",
-        "plockare",
-        "plockarna"
-    ],
-    "plog": [
-        "plog",
-        "plogen",
-        "plogar"
-    ],
-    "plogbill": [
-        "plogbill",
-        "plogbillen",
-        "plogbillar"
-    ],
-    "plogfåra": [
-        "plogfåra",
-        "plogfåran",
-        "plogfåror"
-    ],
-    "ploj": [
-        "ploj",
-        "plojen",
-        "plojer",
-        "el.",
-        "plojar"
-    ],
-    "plomb": [
-        "plomb",
-        "plomben",
-        "plomber"
-    ],
-    "plombering": [
-        "plombering",
-        "~en",
-        "~ar"
-    ],
-    "plugg": [
-        "plugg",
-        "pluggen",
-        "pluggar"
-    ],
-    "plugghäst": [
-        "plugghäst",
-        "plugghästen",
-        "plugghästar"
-    ],
-    "plump": [
-        "plump",
-        "plumpen",
-        "plumpar"
-    ],
-    "plundring": [
-        "plundring",
-        "plundringen",
-        "plundringar"
-    ],
-    "plupp": [
-        "plupp",
-        "pluppen",
-        "pluppar"
-    ],
-    "plural": [
-        "",
-        "pluralen",
-        "pluraler",
-        ";",
-        "i",
-        "ett",
-        "uttr.",
-        "plurale"
-    ],
-    "plusgrad": [
-        "plusgrad",
-        "plusgraden",
-        "plusgrader"
-    ],
-    "pluspol": [
-        "pluspol",
-        "pluspolen",
-        "pluspoler"
-    ],
-    "plusvariant": [
-        "plusvariant",
-        "plusvarianten",
-        "plusvarianter"
-    ],
-    "plym": [
-        "plym",
-        "plymen",
-        "plymer"
-    ],
-    "plysch": [
-        "plysch",
-        "plyschen"
-    ],
-    "pläd": [
-        "pläd",
-        "pläden",
-        "plädar"
-    ],
-    "plädering": [
-        "plädering",
-        "pläderingen",
-        "pläderingar"
-    ],
-    "plätt": [
-        "plätt",
-        "plätten",
-        "plättar"
-    ],
-    "plånbok": [
-        "plånbok",
-        "plånboken",
-        "plånböcker"
-    ],
-    "plånboksfråga": [
-        "plånboksfråga",
-        "plånboksfrågan",
-        "plånboksfrågor"
-    ],
-    "plåt": [
-        "plåt",
-        "plåten",
-        "plåtar"
-    ],
-    "plåtskada": [
-        "plåtskada",
-        "plåtskadan",
-        "plåtskador"
-    ],
-    "pneumoni": [
-        "pneumoni",
-        "pneumonin",
-        "pneumonier"
-    ],
-    "podager": [
-        "podager",
-        "podagern"
-    ],
-    "podcast": [
-        "podcast",
-        "podcasten",
-        "podcaster",
-        "el.",
-        "podcasts"
-    ],
-    "podd": [
-        "podd",
-        "podden",
-        "poddar"
-    ],
-    "poddradio": [
-        "poddradio",
-        "poddradion"
-    ],
-    "poesi": [
-        "poesi",
-        "poesin",
-        "poesier"
-    ],
-    "poet": [
-        "poet",
-        "poeten",
-        "poeter"
-    ],
-    "pogrom": [
-        "pogrom",
-        "pogromen",
-        "pogromer"
-    ],
-    "pointer": [
-        "pointer",
-        "pointern",
-        "pointrar"
-    ],
-    "pointillism": [
-        "pointillism",
-        "pointillismen"
-    ],
-    "pojke": [
-        "pojke",
-        "pojken",
-        "pojkar"
-    ],
-    "pojkspoling": [
-        "pojkspoling",
-        "pojkspolingen",
-        "pojkspolingar"
-    ],
-    "pojkvän": [
-        "pojkvän",
-        "pojkvännen",
-        "pojkvänner"
-    ],
-    "poker": [
-        "poker",
-        "pokern"
-    ],
-    "pol": [
-        "pol",
-        "polen",
-        "poler"
-    ],
-    "polack": [
-        "polack",
-        "polacken",
-        "polacker"
-    ],
-    "polare": [
-        "polare",
-        "polaren",
-        "äv.",
-        "vardagligt",
-        "polarn",
-        "polare",
-        "polarna"
-    ],
-    "polarexpedition": [
-        "polarexpedition",
-        "polarexpeditionen",
-        "polarexpeditioner"
-    ],
-    "polarisation": [
-        "polarisation",
-        "polarisationen",
-        "polarisationer"
-    ],
-    "polaritet": [
-        "polaritet",
-        "polariteten"
-    ],
-    "polarräv": [
-        "polarräv",
-        "polarräven",
-        "polarrävar"
-    ],
-    "polcirkel": [
-        "polcirkel",
-        "polcirkeln",
-        "polcirklar"
-    ],
-    "polenta": [
-        "polenta",
-        "polentan"
-    ],
-    "policy": [
-        "policy",
-        "policyn",
-        "policyer"
-    ],
-    "polis": [
-        "polis",
-        "polisen",
-        "poliser"
-    ],
-    "polisbil": [
-        "polisbil",
-        "polisbilen",
-        "polisbilar"
-    ],
-    "polisbricka": [
-        "polisbricka",
-        "polisbrickan",
-        "polisbrickor"
-    ],
-    "polisdistrikt": [
-        "polisdistrikt",
-        "polisdistriktet",
-        "polisdistrikt",
-        "polisdistrikten"
-    ],
-    "polish": [
-        "polish",
-        "polishen"
-    ],
-    "poliskommissarie": [
-        "poliskommissarie",
-        "poliskommissarien",
-        "poliskommissarier"
-    ],
-    "polismakt": [
-        "polismakt",
-        "polismakten"
-    ],
-    "polisman": [
-        "polisman",
-        "polismannen",
-        "polismän",
-        "polismännen"
-    ],
-    "polismästare": [
-        "polismästare",
-        "polismästaren",
-        "äv.",
-        "vardagligt",
-        "polismästarn",
-        "polismästare",
-        "polismästarna"
-    ],
-    "polisstat": [
-        "polisstat",
-        "polisstaten",
-        "polisstater"
-    ],
-    "polisstation": [
-        "polisstation",
-        "polisstationen",
-        "polisstationer"
-    ],
-    "politik": [
-        "politik",
-        "politiken"
-    ],
-    "politiker": [
-        "politiker",
-        "politikern",
-        "politiker"
-    ],
-    "polityr": [
-        "polityr",
-        "polityren",
-        "polityrer"
-    ],
-    "pollenallergi": [
-        "pollenallergi",
-        "pollenallergin",
-        "pollenallergier"
-    ],
-    "pollenallergiker": [
-        "pollenallergiker",
-        "pollenallergikern",
-        "pollenallergiker"
-    ],
-    "pollenanalys": [
-        "pollenanalys",
-        "pollenanalysen",
-        "pollenanalyser"
-    ],
-    "pollenslang": [
-        "pollenslang",
-        "pollenslangen",
-        "pollenslangar"
-    ],
-    "pollett": [
-        "pollett",
-        "polletten",
-        "polletter"
-    ],
-    "polokrage": [
-        "polokrage",
-        "polokragen",
-        "polokragar"
-    ],
-    "polotröja": [
-        "polotröja",
-        "polotröjan",
-        "polotröjor"
-    ],
-    "polska": [
-        "polska",
-        "polskan",
-        "polskor"
-    ],
-    "polska-2": [
-        "polska",
-        "polskan",
-        "polskor"
-    ],
-    "polstjärna": [
-        "polstjärna",
-        "polstjärnan"
-    ],
-    "polyamid": [
-        "polyamid",
-        "polyamiden",
-        "polyamider"
-    ],
-    "polyamori": [
-        "polyamori",
-        "polyamorin"
-    ],
-    "polyeder": [
-        "polyeder",
-        "polyedern",
-        "polyedrar"
-    ],
-    "polygami": [
-        "polygami",
-        "polygamin"
-    ],
-    "polyglott": [
-        "polyglott",
-        "polyglotten",
-        "polyglotter"
-    ],
-    "polygon": [
-        "polygon",
-        "polygonen",
-        "polygoner"
-    ],
-    "polygrip": [
-        "polygrip",
-        "polygripen",
-        "polygriper"
-    ],
-    "polyhistor": [
-        "polyhistor",
-        "polyhistorn",
-        "polyhistorer"
-    ],
-    "polysem": [
-        "polysem",
-        "polysemen",
-        "polysemer"
-    ],
-    "polysemi": [
-        "polysemi",
-        "polysemin"
-    ],
-    "pomp": [
-        "pomp",
-        "pompen"
-    ],
-    "pompa": [
-        "pompa",
-        "pompan"
-    ],
-    "poncho": [
-        "poncho",
-        "ponchon",
-        "ponchor",
-        "äv.",
-        "ponchos"
-    ],
-    "pondus": [
-        "pondus",
-        "pondusen"
-    ],
-    "ponny": [
-        "ponny",
-        "ponnyn",
-        "ponnyer",
-        "äv.",
-        "ponnies"
-    ],
-    "ponton": [
-        "ponton",
-        "pontonen",
-        "pontoner"
-    ],
-    "pool": [
-        "pool",
-        "poolen",
-        "pooler"
-    ],
-    "poolbiljard": [
-        "poolbiljard",
-        "~en",
-        "~er"
-    ],
-    "pop": [
-        "pop",
-        "popen",
-        "el.",
-        "poppen"
-    ],
-    "popkonst": [
-        "popkonst",
-        "popkonsten"
-    ],
-    "popmusik": [
-        "popmusik",
-        "popmusiken"
-    ],
-    "popnit": [
-        "popnit",
-        "popniten",
-        "popnitar"
-    ],
-    "popsångerska": [
-        "popsångerska",
-        "~n",
-        "popsångeskor"
-    ],
-    "popularitet": [
-        "popularitet",
-        "populariteten"
-    ],
-    "populasen": [
-        "populasen",
-        "bestämd",
-        "form"
-    ],
-    "population": [
-        "population",
-        "populationen",
-        "populationer"
-    ],
-    "populism": [
-        "populism",
-        "populismen"
-    ],
-    "populist": [
-        "populist",
-        "populisten",
-        "populister"
-    ],
-    "populärkonsert": [
-        "populärkonsert",
-        "populärkonserten",
-        "populärkonserter"
-    ],
-    "populärpress": [
-        "populärpress",
-        "populärpressen"
-    ],
-    "populärvetenskap": [
-        "populärvetenskap",
-        "populärvetenskapen"
-    ],
-    "popup": [
-        "popup",
-        "popupen",
-        "popuper",
-        "äv.",
-        "popups",
-        "eller",
-        "pop-up",
-        "pop-upen",
-        "pop-uper",
-        "äv.",
-        "pop-ups"
-    ],
-    "por": [
-        "por",
-        "poren",
-        "porer"
-    ],
-    "pornografi": [
-        "pornografi",
-        "pornografin"
-    ],
-    "porr": [
-        "porr",
-        "porren"
-    ],
-    "porslinsdegel": [
-        "porslinsdegel",
-        "porslinsdegeln",
-        "porslinsdeglar"
-    ],
-    "porslinskrona": [
-        "porslinskrona",
-        "porslinskronan",
-        "porslinskronor"
-    ],
-    "port": [
-        "port",
-        "porten",
-        "portar"
-    ],
-    "portal": [
-        "portal",
-        "portalen",
-        "portaler"
-    ],
-    "portalfigur": [
-        "portalfigur",
-        "portalfiguren",
-        "portalfigurer"
-    ],
-    "portfölj": [
-        "portfölj",
-        "portföljen",
-        "portföljer"
-    ],
-    "portgång": [
-        "portgång",
-        "portgången",
-        "portgångar"
-    ],
-    "portier": [
-        "portier",
-        "portieren",
-        "el.",
-        "portiern",
-        "portierer"
-    ],
-    "portik": [
-        "portik",
-        "portiken",
-        "portiker"
-    ],
-    "portion": [
-        "portion",
-        "portionen",
-        "portioner"
-    ],
-    "portiär": [
-        "portiär",
-        "portiären",
-        "portiärer"
-    ],
-    "portmonnä": [
-        "portmonnä",
-        "portmonnän",
-        "portmonnäer"
-    ],
-    "porträttör": [
-        "porträttör",
-        "porträttören",
-        "porträttörer"
-    ],
-    "porttelefon": [
-        "porttelefon",
-        "porttelefonen",
-        "porttelefoner"
-    ],
-    "portvakt": [
-        "portvakt",
-        "portvakten",
-        "portvakter"
-    ],
-    "portör": [
-        "portör",
-        "portören",
-        "portörer"
-    ],
-    "pose": [
-        "pose",
-        "posen",
-        "poser"
-    ],
-    "position": [
-        "position",
-        "positionen",
-        "positioner"
-    ],
-    "positivism": [
-        "positivism",
-        "positivismen"
-    ],
-    "positron": [
-        "positron",
-        "positronen",
-        "positroner"
-    ],
-    "post": [
-        "post",
-        "posten",
-        "poster"
-    ],
-    "postadress": [
-        "postadress",
-        "postadressen",
-        "postadresser"
-    ],
-    "postanstalt": [
-        "postanstalt",
-        "postanstalten",
-        "postanstalter"
-    ],
-    "postanvisning": [
-        "postanvisning",
-        "postanvisningen",
-        "postanvisningar"
-    ],
-    "postbox": [
-        "postbox",
-        "postboxen",
-        "postboxar"
-    ],
-    "postdok": [
-        "postdok",
-        "postdoken",
-        "postdokar"
-    ],
-    "postering": [
-        "postering",
-        "posteringen",
-        "posteringar"
-    ],
-    "postkontor": [
-        "postkontor",
-        "postkontoret",
-        "postkontor",
-        "postkontoren"
-    ],
-    "posto": [
-        "posto"
-    ],
-    "posör": [
-        "posör",
-        "posören",
-        "posörer"
-    ],
-    "potage": [
-        "potage",
-        "potagen",
-        "potager"
-    ],
-    "potatis": [
-        "potatis",
-        "potatisen",
-        "potatisar"
-    ],
-    "potatissallad": [
-        "potatissallad",
-        "potatissalladen",
-        "potatissallader"
-    ],
-    "potatisskalare": [
-        "potatisskalare",
-        "potatisskalaren",
-        "potatisskalare",
-        "potatisskalarna"
-    ],
-    "potatisstöt": [
-        "potatisstöt",
-        "potatisstöten",
-        "potatisstötar"
-    ],
-    "potens": [
-        "potens",
-        "potensen",
-        "potenser"
-    ],
-    "potentat": [
-        "potentat",
-        "potentaten",
-        "potentater"
-    ],
-    "potential": [
-        "potential",
-        "potentialen",
-        "potentialer"
-    ],
-    "potkes": [
-        "potkes",
-        "potkesen",
-        "eller",
-        "potkäs",
-        "potkäsen"
-    ],
-    "pott": [
-        "pott",
-        "potten",
-        "potter"
-    ],
-    "potta": [
-        "potta",
-        "pottan",
-        "pottor"
-    ],
-    "pottkanten": [
-        "pottkanten",
-        "bestämd",
-        "form"
-    ],
-    "poäng": [
-        "poäng",
-        "poängen",
-        "äv.",
-        "poänget",
-        "poäng",
-        "poängen"
-    ],
-    "poängseger": [
-        "poängseger",
-        "poängsegern",
-        "poängsegrar"
-    ],
-    "pr": [
-        "pr",
-        "",
-        "utrum",
-        "eller",
-        "PR",
-        "ingen",
-        "böjning",
-        "utrum"
-    ],
-    "pracka": [
-        "pracka",
-        "prackan",
-        "prackor"
-    ],
-    "practical joke": [
-        "practical",
-        "joke",
-        "practical",
-        "jokes",
-        "neutrum"
-    ],
-    "praktik": [
-        "praktik",
-        "praktiken"
-    ],
-    "praktikant": [
-        "praktikant",
-        "praktikanten",
-        "praktikanter"
-    ],
-    "praktikantplats": [
-        "praktikantplats",
-        "praktikantplatsen",
-        "praktikantplatser"
-    ],
-    "praktiker": [
-        "praktiker",
-        "praktikern",
-        "praktiker"
-    ],
-    "pralin": [
-        "pralin",
-        "pralinen",
-        "praliner"
-    ],
-    "pratbubbla": [
-        "pratbubbla",
-        "pratbubblan",
-        "pratbubblor"
-    ],
-    "pratkvarn": [
-        "pratkvarn",
-        "pratkvarnen",
-        "pratkvarnar"
-    ],
-    "pratshow": [
-        "pratshow",
-        "pratshowen",
-        "pratshower"
-    ],
-    "pratstund": [
-        "pratstund",
-        "pratstunden",
-        "pratstunder"
-    ],
-    "praxis": [
-        "praxis",
-        "bestämd",
-        "form",
-        "praxis",
-        "äv.",
-        "praxisen"
-    ],
-    "precision": [
-        "precision",
-        "precisionen"
-    ],
-    "preciös": [
-        "preciös",
-        "preciösen",
-        "preciöser"
-    ],
-    "predation": [
-        "predation",
-        "predationen"
-    ],
-    "predator": [
-        "predator",
-        "predatorn",
-        "predatorer"
-    ],
-    "predestination": [
-        "predestination",
-        "predestinationen"
-    ],
-    "predikan": [
-        "predikan",
-        "bestämd",
-        "form",
-        "predikan",
-        "utrum",
-        ";",
-        "som",
-        "kan",
-        "användas",
-        "predikningar"
-    ],
-    "predikant": [
-        "predikant",
-        "predikanten",
-        "predikanter"
-    ],
-    "predikare": [
-        "predikare",
-        "predikaren",
-        "predikare",
-        "predikarna"
-    ],
-    "predikatsfyllnad": [
-        "predikatsfyllnad",
-        "predikatsfyllnaden",
-        "predikatsfyllnader"
-    ],
-    "predikstol": [
-        "predikstol",
-        "predikstolen",
-        "predikstolar"
-    ],
-    "prediktion": [
-        "prediktion",
-        "prediktionen",
-        "prediktioner"
-    ],
-    "predisposition": [
-        "predisposition",
-        "predispositionen"
-    ],
-    "preferens": [
-        "preferens",
-        "preferensen",
-        "preferenser"
-    ],
-    "preferensaktie": [
-        "preferensaktie",
-        "preferensaktien",
-        "preferensaktier"
-    ],
-    "premie": [
-        "premie",
-        "premien",
-        "premier"
-    ],
-    "premiss": [
-        "premiss",
-        "premissen",
-        "premisser"
-    ],
-    "premiär": [
-        "premiär",
-        "premiären",
-        "premiärer"
-    ],
-    "premiärminister": [
-        "premiärminister",
-        "premiärministern",
-        "premiärministrar"
-    ],
-    "prenumeration": [
-        "prenumeration",
-        "prenumerationen",
-        "prenumerationer"
-    ],
-    "preparand": [
-        "preparand",
-        "preparanden",
-        "preparander"
-    ],
-    "preparat": [
-        "preparat",
-        "preparatet",
-        "preparat",
-        "preparaten"
-    ],
-    "presbyter": [
-        "presbyter",
-        "presbytern",
-        "presbyterer"
-    ],
-    "presenning": [
-        "presenning",
-        "presenningen",
-        "presenningar"
-    ],
-    "presens": [
-        "presens",
-        "presens",
-        "neutrum"
     ],
     "present": [
         "present",
@@ -58752,7 +54956,6 @@
         "pushup-bh",
         "pushup-bh:n",
         "pushup-bh:ar",
-        "eller",
         "pushupbehå",
         "pushupbehån",
         "pushupbehåar"
@@ -58830,7 +55033,6 @@
         "pyrrhusseger",
         "pyrrhussegern",
         "pyrrhussegrar",
-        "eller",
         "pyrrusseger",
         "pyrrussegern",
         "pyrrussegrar"
@@ -58904,11 +55106,6 @@
         "påannons",
         "påannonsen",
         "påannonser"
-    ],
-    "påbröd": [
-        "påbröd",
-        "",
-        "neutrum"
     ],
     "pådrivare": [
         "pådrivare",
@@ -59278,13 +55475,6 @@
         "raglanärmen",
         "raglanärmar"
     ],
-    "ragnarök": [
-        "ragnarök",
-        "",
-        "neutrum",
-        "el.",
-        "utrum"
-    ],
     "rajd": [
         "rajd",
         "rajden",
@@ -59435,13 +55625,6 @@
         "rapportör",
         "rapportören",
         "rapportörer"
-    ],
-    "raptus": [
-        "raptus",
-        "",
-        "utrum",
-        "el.",
-        "neutrum"
     ],
     "raring": [
         "raring",
@@ -59752,7 +55935,6 @@
         "reflexion",
         "reflexionen",
         "reflexioner",
-        "eller",
         "reflektion",
         "reflektionen",
         "reflektioner"
@@ -60644,7 +56826,6 @@
         "rhododendron",
         "el.",
         "rhododendrer",
-        "även",
         "rododendron",
         "rododendronen",
         "rododendron",
@@ -60828,7 +57009,6 @@
         "riksha",
         "rikshan",
         "rikshor",
-        "eller",
         "rickshaw",
         "rickshawn",
         "rickshawer"
@@ -61087,7 +57267,6 @@
         "robe",
         "roben",
         "rober",
-        "även",
         "rob",
         "roben",
         "rober"
@@ -61229,13 +57408,6 @@
         "rosenhy",
         "rosenhyn"
     ],
-    "rosenkvitten": [
-        "rosenkvitten",
-        "rosenkvitten",
-        "utrum",
-        "el.",
-        "neutrum"
-    ],
     "rosenkål": [
         "rosenkål",
         "rosenkålen"
@@ -61320,7 +57492,6 @@
         "roulett",
         "rouletten",
         "rouletter",
-        "eller",
         "roulette",
         "rouletten",
         "rouletter"
@@ -61329,7 +57500,6 @@
         "roulett",
         "rouletten",
         "rouletter",
-        "eller",
         "roulette",
         "rouletten",
         "rouletter"
@@ -61377,14 +57547,12 @@
     "ruccola": [
         "ruccola",
         "ruccolan",
-        "eller",
         "rucola",
         "rucolan"
     ],
     "ruccolasallad": [
         "ruccolasallad",
         "ruccolasalladen",
-        "eller",
         "rucolasallad",
         "rucolasalladen"
     ],
@@ -61423,7 +57591,6 @@
         "rugge",
         "ruggen",
         "ruggar",
-        "eller",
         "rugg",
         "ruggen",
         "ruggar"
@@ -61437,7 +57604,6 @@
         "rullad",
         "rulladen",
         "rullader",
-        "eller",
         "roulad",
         "rouladen",
         "roulader"
@@ -61662,7 +57828,6 @@
         "rutt",
         "rutten",
         "rutter",
-        "även",
         "route",
         "routen",
         "router"
@@ -61678,7 +57843,6 @@
         "ryckningar"
     ],
     "rygg": [
-        "rygg",
         "ryggen",
         "ryggar"
     ],
@@ -61817,11 +57981,6 @@
         "räckan",
         "räckor"
     ],
-    "räckhåll": [
-        "närhåll",
-        "",
-        "neutrum"
-    ],
     "räckvidd": [
         "räckvidd",
         "räckvidden",
@@ -61831,7 +57990,6 @@
         "räd",
         "räden",
         "räder",
-        "även",
         "raid",
         "raiden",
         "raider"
@@ -62006,12 +58164,8 @@
         "rätstickningen"
     ],
     "rätt": [
-        "rätt",
         "rätten",
         "rätter",
-        "efter",
-        "preposition",
-        "ibland",
         "rätta"
     ],
     "rätta": [
@@ -62792,7 +58946,6 @@
         "salskrake",
         "salskraken",
         "salskrakar",
-        "eller",
         "salskrak",
         "salskraken",
         "salskrakar"
@@ -63468,7 +59621,6 @@
         "sanskulott",
         "sanskulotten",
         "sanskulotter",
-        "även",
         "sansculotte",
         "sansculotten",
         "sansculotter"
@@ -63553,7 +59705,6 @@
         "satkärring",
         "satkärringen",
         "satkärringar",
-        "eller",
         "satkäring",
         "satkäringen",
         "satkäringar"
@@ -63663,7 +59814,6 @@
         "scanners",
         "el.",
         "scannrar",
-        "eller",
         "skanner",
         "skannern",
         "skanners",
@@ -63758,7 +59908,6 @@
         "schvungen",
         "el.",
         "schvunget",
-        "även",
         "schwung",
         "schwungen",
         "el.",
@@ -64385,7 +60534,6 @@
         "serveesset",
         "serveess",
         "serveessen",
-        "eller",
         "serveäss",
         "serveässet",
         "serveäss",
@@ -64535,11 +60683,6 @@
         "sfär",
         "sfären",
         "sfärer"
-    ],
-    "sgraffito": [
-        "sgraffito",
-        "",
-        "neutrum"
     ],
     "sherry": [
         "sherry",
@@ -64772,7 +60915,6 @@
         "silhuett",
         "silhuetten",
         "silhuetter",
-        "eller",
         "siluett",
         "siluetten",
         "siluetter"
@@ -65146,7 +61288,6 @@
         "sjal",
         "sjalen",
         "sjalar",
-        "även",
         "schal",
         "schalen",
         "schalar"
@@ -65155,7 +61296,6 @@
         "sjalett",
         "sjaletten",
         "sjaletter",
-        "även",
         "schalett",
         "schaletten",
         "schaletter"
@@ -65281,7 +61421,6 @@
         "sjuttiotalist",
         "sjuttiotalisten",
         "sjuttiotalister",
-        "även",
         "vardagligt",
         "sjuttitalist",
         "sjuttitalisten",
@@ -65483,7 +61622,6 @@
         "självscanning",
         "självscanningen",
         "självscanningar",
-        "eller",
         "självskanning",
         "självskanningen",
         "självskanningar"
@@ -65694,6 +61832,12 @@
         "skadegörelsen",
         "skadegörelser"
     ],
+    "skadestånd": [
+        "skadestånd",
+        "skade­ståndet",
+        "skade­stånd",
+        "skade­stånden"
+    ],
     "skadeverkan": [
         "skadeverkan",
         "bestämd",
@@ -65721,7 +61865,6 @@
         "skakel",
         "skakeln",
         "skaklar",
-        "även",
         "skackel",
         "skackeln",
         "skacklar"
@@ -65874,7 +62017,6 @@
         "skateboards",
         "el.",
         "skateboardar",
-        "även",
         "skejtboard",
         "skejtboarden",
         "skejtboards",
@@ -66587,7 +62729,6 @@
         "skoter",
         "skotern",
         "skotrar",
-        "även",
         "scooter",
         "scootern",
         "scootrar"
@@ -66636,7 +62777,6 @@
         "skrake",
         "skraken",
         "skrakar",
-        "eller",
         "skrak",
         "skraken",
         "skrakar"
@@ -67739,7 +63879,6 @@
     ],
     "slowmotion": [
         "slowmotion",
-        "eller",
         "slow",
         "motion",
         "ingen",
@@ -68093,7 +64232,6 @@
         "smitthärd",
         "smitthärden",
         "smitthärdar",
-        "även",
         "smittohärd",
         "smittohärden",
         "smittohärdar"
@@ -68102,7 +64240,6 @@
         "smittkälla",
         "smittkällan",
         "smittkällor",
-        "även",
         "smittokälla",
         "smittokällan",
         "smittokällor"
@@ -68112,7 +64249,6 @@
         "smittbäraren",
         "smittbärare",
         "smittbärarna",
-        "även",
         "smittobärare",
         "smittobäraren",
         "smittobärare",
@@ -69514,7 +65650,6 @@
     "spagetti": [
         "spagetti",
         "spagettin",
-        "eller",
         "spaghetti",
         "spaghettin"
     ],
@@ -69650,11 +65785,6 @@
         "spatel",
         "spateln",
         "spatlar"
-    ],
-    "spe": [
-        "spe",
-        "",
-        "neutrum"
     ],
     "speaker": [
         "speaker",
@@ -69981,7 +66111,6 @@
         "spiselhäll",
         "spiselhällen",
         "spiselhällar",
-        "eller",
         "spishäll",
         "spishällen",
         "spishällar"
@@ -70098,7 +66227,6 @@
         "spont",
         "sponten",
         "sponter",
-        "eller",
         "spånt",
         "spånten",
         "spånter"
@@ -70171,7 +66299,6 @@
         "spray",
         "sprayen",
         "sprayer",
-        "eller",
         "sprej",
         "sprejen",
         "sprejer"
@@ -70519,7 +66646,6 @@
     "squaredans": [
         "squaredans",
         "squaredansen",
-        "eller",
         "squaredance"
     ],
     "squash": [
@@ -70584,13 +66710,6 @@
         "stadga",
         "stadgan",
         "stadgor"
-    ],
-    "stadion": [
-        "stadion",
-        "stadion",
-        "utrum",
-        "el.",
-        "neutrum"
     ],
     "stadsarkitekt": [
         "stadsarkitekt",
@@ -70728,7 +66847,6 @@
         "stamfader",
         "stamfadern",
         "stamfäder",
-        "eller",
         "stamfar",
         "stamfadern",
         "stamfäder"
@@ -70948,19 +67066,7 @@
     ],
     "status": [
         "status",
-        "bestämd",
-        "form",
-        "status",
-        "el.",
         "statusen",
-        ";",
-        "i",
-        "vissa",
-        "fall",
-        "äv.",
-        "neutrum",
-        "status",
-        "el.",
         "statusar"
     ],
     "statussymbol": [
@@ -71288,15 +67394,6 @@
         "stimulansen",
         "stimulanser"
     ],
-    "stimulus": [
-        "stimulus",
-        "stimuli",
-        "el.",
-        "stimulus",
-        "utrum",
-        "el.",
-        "neutrum"
-    ],
     "stinkpadda": [
         "stinkpadda",
         "stinkpaddan",
@@ -71474,7 +67571,6 @@
         "stoppnålar"
     ],
     "stor": [
-        "stor",
         "storen"
     ],
     "storasyrra": [
@@ -71895,15 +67991,6 @@
     "stringens": [
         "stringens",
         "stringensen"
-    ],
-    "stringent": [
-        "stringent",
-        "neutrum",
-        "stringent",
-        "bestämd",
-        "form",
-        "och",
-        "stringenta"
     ],
     "stringtrosa": [
         "stringtrosa",
@@ -72433,7 +68520,6 @@
         "styvfar",
         "styvfadern",
         "styvfäder",
-        "även",
         "styvfader",
         "styvfadern",
         "styvfäder"
@@ -72447,7 +68533,6 @@
         "styvmor",
         "styvmodern",
         "styvmödrar",
-        "även",
         "styvmoder",
         "styvmodern",
         "styvmödrar"
@@ -72852,13 +68937,6 @@
         "supen",
         "supar"
     ],
-    "super-G": [
-        "super-G",
-        "",
-        "utrum",
-        "el.",
-        "neutrum"
-    ],
     "superhjälte": [
         "superhjälte",
         "superhjälten",
@@ -72978,7 +69056,6 @@
         "suterräng",
         "suterrängen",
         "suterränger",
-        "eller",
         "souterräng",
         "souterrängen",
         "souterränger"
@@ -73083,7 +69160,6 @@
         "svartalf",
         "svartalfen",
         "svartalfer",
-        "eller",
         "svartalv",
         "svartalven",
         "svartalver"
@@ -73091,7 +69167,6 @@
     "svartepetter": [
         "svartepetter",
         "svartepettern",
-        "eller",
         "Svarte",
         "Petter",
         "",
@@ -73331,7 +69406,6 @@
         "svärfar",
         "svärfarn",
         "svärfäder",
-        "även",
         "svärfader",
         "svärfadern",
         "svärfäder"
@@ -73351,7 +69425,6 @@
         "svärmor",
         "svärmorn",
         "svärmödrar",
-        "även",
         "svärmoder",
         "svärmodern",
         "svärmödrar"
@@ -73606,11 +69679,6 @@
         "synestesi",
         "synestesin",
         "synestesier"
-    ],
-    "synhåll": [
-        "synhåll",
-        "",
-        "neutrum"
     ],
     "synkop": [
         "synkop",
@@ -74253,7 +70321,6 @@
         "t-bana",
         "t-banan",
         "t-banor",
-        "eller",
         "T-bana",
         "T-banan",
         "T-banor"
@@ -74364,7 +70431,6 @@
     "tajming": [
         "tajming",
         "tajmingen",
-        "eller",
         "tajmning",
         "tajmningen"
     ],
@@ -74540,7 +70606,6 @@
         "tallkottkörtel",
         "tallkottkörteln",
         "tallkottkörtlar",
-        "även",
         "tallkottskörtel",
         "tallkottskörteln",
         "tallkottskörtlar"
@@ -74911,11 +70976,6 @@
     "taxonomi": [
         "taxonomi",
         "taxonomin"
-    ],
-    "teamwork": [
-        "teamwork",
-        "",
-        "neutrum"
     ],
     "teater": [
         "teater",
@@ -75386,7 +71446,6 @@
         "utrum"
     ],
     "test": [
-        "test",
         "testen",
         "testar"
     ],
@@ -75444,7 +71503,6 @@
         "tv",
         "tv:n",
         "tv:ar",
-        "eller",
         "teve",
         "teven",
         "tevear",
@@ -75685,7 +71743,6 @@
         "tidsplan",
         "tidsplanen",
         "tidsplaner",
-        "även",
         "tidplan",
         "tidplanen",
         "tidplaner"
@@ -75703,7 +71760,6 @@
         "tidsrymd",
         "tidsrymden",
         "tidsrymder",
-        "eller",
         "tidrymd",
         "tidrymden",
         "tidrymder"
@@ -75724,7 +71780,6 @@
         "form",
         "tidsspillan",
         "utrum",
-        "även",
         "tidspillan",
         "bestämd",
         "form",
@@ -75777,7 +71832,6 @@
         "tiebreaket",
         "tiebreak",
         "tiebreaken",
-        "även",
         "tie-break",
         "tie-breaket",
         "tie-break",
@@ -76089,7 +72143,6 @@
         "timme",
         "timmen",
         "timmar",
-        "eller",
         "timma",
         "timman",
         "timmar"
@@ -76354,7 +72407,6 @@
         "tjuven",
         "tjuvar",
         "vardagligt",
-        "även",
         "tjyv",
         "tjyven",
         "tjyvar"
@@ -76538,7 +72590,6 @@
         "toffel",
         "toffeln",
         "tofflor",
-        "även",
         "toffla",
         "tofflan",
         "tofflor"
@@ -76552,7 +72603,6 @@
         "tok",
         "token",
         "tokar",
-        "även",
         "toker",
         "tokern",
         "tokar"
@@ -76972,7 +73022,6 @@
     "totalreflexion": [
         "totalreflexion",
         "totalreflexionen",
-        "eller",
         "totalreflektion",
         "totalreflektionen"
     ],
@@ -77190,7 +73239,6 @@
     "trans": [
         "trans",
         "transen",
-        "eller",
         "trance",
         "trancen"
     ],
@@ -77375,11 +73423,7 @@
         "trauman"
     ],
     "trav": [
-        "trav",
         "travet",
-        "el.",
-        "ngn",
-        "gång",
         "traven"
     ],
     "travare": [
@@ -77480,7 +73524,6 @@
         "trettondag",
         "trettondagen",
         "trettondagar",
-        "även",
         "trettondedag",
         "trettondedagen",
         "trettondedagar"
@@ -78500,7 +74543,6 @@
         "tupé",
         "tupén",
         "tupéer",
-        "eller",
         "toupé",
         "toupén",
         "toupéer"
@@ -78692,7 +74734,6 @@
         "tv-apparat",
         "tv-apparaten",
         "tv-apparater",
-        "eller",
         "teveapparat",
         "teveapparaten",
         "teveapparater"
@@ -78702,7 +74743,6 @@
         "tv-tittaren",
         "tv-tittare",
         "tv-tittarna",
-        "eller",
         "tevetittare",
         "tevetittaren",
         "tevetittare",
@@ -79282,7 +75322,6 @@
         "tête-à-tête",
         "tête-à-têten",
         "tête-à-têter",
-        "eller",
         "tete-a-tete",
         "tete-a-teten",
         "tete-a-teter"
@@ -79616,10 +75655,7 @@
     ],
     "understatement": [
         "understatement",
-        "understatement",
-        "el.",
-        "understatements",
-        "neutrum"
+        "understatements"
     ],
     "understämma": [
         "understämma",
@@ -79679,7 +75715,6 @@
         "undervisningstimme",
         "undervisningstimmen",
         "undervisningstimmar",
-        "även",
         "undervisningstimma",
         "undervisningstimman",
         "undervisningstimmar"
@@ -79713,11 +75748,6 @@
         "undring",
         "undringen",
         "undringar"
-    ],
-    "undseende": [
-        "undseende",
-        "",
-        "neutrum"
     ],
     "undskyllan": [
         "undskyllan",
@@ -80688,7 +76718,6 @@
         "urngrav",
         "urngraven",
         "urngravar",
-        "även",
         "urnegrav",
         "urnegraven",
         "urnegravar"
@@ -80742,7 +76771,6 @@
     "urskillning": [
         "urskillning",
         "urskillningen",
-        "även",
         "urskiljning",
         "urskiljningen"
     ],
@@ -81950,11 +77978,6 @@
         "vagnhallen",
         "vagnhallar"
     ],
-    "vaj": [
-        "vaj",
-        "",
-        "neutrum"
-    ],
     "vaja": [
         "vaja",
         "vajan",
@@ -81964,7 +77987,6 @@
         "vajer",
         "vajern",
         "vajrar",
-        "eller",
         "wire",
         "wiren",
         "wirar"
@@ -82485,7 +78507,6 @@
         "vargtimme",
         "vargtimmen",
         "vargtimmar",
-        "även",
         "vargtimma",
         "vargtimman",
         "vargtimmar"
@@ -82779,15 +78800,10 @@
         "vattenytan",
         "vattenytor"
     ],
-    "vattkoppor": [
-        "vattkoppor",
-        "även"
-    ],
     "vaudeville": [
         "vaudeville",
         "vaudevillen",
         "vaudeviller",
-        "även",
         "vådevill",
         "vådevillen",
         "vådeviller"
@@ -82826,11 +78842,6 @@
         "vd",
         "vd:n",
         "vd:ar"
-    ],
-    "ve": [
-        "ve",
-        "",
-        "neutrum"
     ],
     "vecka": [
         "vecka",
@@ -83458,7 +79469,6 @@
         "vindkraftspark",
         "vindkraftsparken",
         "vindkraftsparker",
-        "eller",
         "vindkraftpark",
         "vindkraftparken",
         "vindkraftparker"
@@ -83670,18 +79680,9 @@
         "vinstugor"
     ],
     "vinter": [
-        "vinter",
         "vintern",
         "vintrar",
-        ";",
-        "obestämd",
-        "form",
-        "singular",
-        "genitiv",
-        "vintras",
-        "i",
-        "ett",
-        "uttryck"
+        "vintras"
     ],
     "vinterbadare": [
         "vinterbadare",
@@ -84311,11 +80312,6 @@
         "väktare",
         "väktarna"
     ],
-    "väl": [
-        "väl",
-        "",
-        "neutrum"
-    ],
     "välfägnad": [
         "välfägnad",
         "välfägnaden"
@@ -84580,7 +80576,6 @@
         "form"
     ],
     "världsatlas": [
-        "världsatlas",
         "världsatlasen",
         "världsatlaser"
     ],
@@ -84614,11 +80609,6 @@
         "världsetta",
         "världsettan",
         "världsettor"
-    ],
-    "världsformat": [
-        "världsformat",
-        "",
-        "neutrum"
     ],
     "världsförklaring": [
         "världsförklaring",
@@ -84879,7 +80869,6 @@
         "västern",
         "västern",
         "utrum",
-        "eller",
         "western",
         "western",
         "äv.",
@@ -85250,7 +81239,6 @@
         "vålm",
         "vålmen",
         "vålmar",
-        "eller",
         "volm",
         "volmen",
         "volmar"
@@ -85325,7 +81313,6 @@
         "vårdkase",
         "vårdkasen",
         "vårdkasar",
-        "eller",
         "vårdkas",
         "vårdkasen",
         "vårdkasar"
@@ -85443,11 +81430,6 @@
         "wallboard",
         "wallboarden"
     ],
-    "waterloo": [
-        "waterloo",
-        "",
-        "neutrum"
-    ],
     "watt": [
         "watt",
         "watt",
@@ -85535,7 +81517,6 @@
     "whisky": [
         "whisky",
         "whiskyn",
-        "även",
         "whiskey",
         "whiskeyn"
     ],
@@ -85579,7 +81560,6 @@
         "x-krok",
         "x-kroken",
         "x-krokar",
-        "eller",
         "X-krok",
         "X-kroken",
         "X-krokar"
@@ -85588,7 +81568,6 @@
         "x-kromosom",
         "x-kromosomen",
         "x-kromosomer",
-        "eller",
         "X-kromosom",
         "X-kromosomen",
         "X-kromosomer"
@@ -85602,7 +81581,6 @@
         "y-kromosom",
         "y-kromosomen",
         "y-kromosomer",
-        "eller",
         "Y-kromosom",
         "Y-kromosomen",
         "Y-kromosomer"
@@ -85797,7 +81775,6 @@
         "zebra",
         "zebran",
         "zebror",
-        "eller",
         "sebra",
         "sebran",
         "sebror"
@@ -86303,7 +82280,6 @@
         "ända",
         "ändan",
         "ändar",
-        "eller",
         "ände",
         "änden",
         "ändar"
@@ -86492,7 +82468,6 @@
         "äppelkaka",
         "äppelkakan",
         "äppelkakor",
-        "även",
         "äpplekaka",
         "äpplekakan",
         "äpplekakor"
@@ -86500,18 +82475,13 @@
     "äppelkart": [
         "äppelkart",
         "äppelkarten",
-        "el.",
         "äppelkartet",
         "äppelkartar",
-        "el.",
         "äppelkart",
         "äppelkartarna",
-        "el.",
         "äppelkarten",
-        "även",
         "äpplekart",
         "äpplekarten",
-        "el.",
         "äpplekartet",
         "äpplekartar",
         "el.",
@@ -86528,7 +82498,6 @@
     "äppelskorv": [
         "äppelskorv",
         "äppelskorven",
-        "eller",
         "äppleskorv",
         "äppleskorven"
     ],
@@ -86536,7 +82505,6 @@
         "äppelskrott",
         "äppelskrotten",
         "äppelskrottar",
-        "även",
         "äppleskrott",
         "äppleskrotten",
         "äppleskrottar"
@@ -86734,7 +82702,6 @@
         "ättartavla",
         "ättartavlan",
         "ättartavlor",
-        "eller",
         "ättetavla",
         "ättetavlan",
         "ättetavlor"
@@ -86852,7 +82819,6 @@
         "åder",
         "ådern",
         "ådror",
-        "även",
         "ådra",
         "ådran",
         "ådror"
@@ -87752,8 +83718,6 @@
     "åttiotalism": [
         "åttiotalism",
         "åttiotalismen",
-        "även",
-        "vardagligt",
         "åttitalism",
         "åttitalismen"
     ],
@@ -87761,8 +83725,6 @@
         "åttiotalist",
         "åttiotalisten",
         "åttiotalister",
-        "även",
-        "vardagligt",
         "åttitalist",
         "åttitalisten",
         "åttitalister"
@@ -88017,10 +83979,8 @@
         "äv.",
         "ölcafét",
         "ölcaféer",
-        "eller",
         "ölkafé",
         "ölkaféet",
-        "äv.",
         "ölkafét",
         "ölkaféer"
     ],
@@ -88274,7 +84234,6 @@
         "örsnibb",
         "örsnibben",
         "örsnibbar",
-        "även",
         "öronsnibb",
         "öronsnibben",
         "öronsnibbar"
@@ -88303,7 +84262,6 @@
         "örtsäng",
         "örtsängen",
         "örtsängar",
-        "även",
         "örtesäng",
         "örtesängen",
         "örtesängar"
