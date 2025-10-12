@@ -4824,7 +4824,6 @@
         "avsidesrepliker"
     ],
     "avsikt": [
-        "avsikt",
         "avsikten",
         "avsikter"
     ],
@@ -39803,6 +39802,11 @@
         "kopparödlan",
         "kopparödlor"
     ],
+    "koppel": [
+        "kopplet",
+        "koppel",
+        "kopplen"
+    ],
     "kopplare": [
         "kopplare",
         "kopplaren",
@@ -46330,6 +46334,10 @@
         "makrill",
         "makrillen",
         "makrillar"
+    ],
+    "makro": [
+        "makrot",
+        "makron"
     ],
     "makroekonomi": [
         "makroekonomi",
@@ -53866,6 +53874,16 @@
     "otillfredsställelse": [
         "otillfredsställelse",
         "otillfredsställelsen"
+    ],
+    "poäng": [
+        "poängen",
+        "poänget",
+        "poäng",
+        "poängen"
+    ],
+    "poäng-2": [
+        "poängen",
+        "poänger"
     ],
     "present": [
         "present",
@@ -61750,6 +61768,11 @@
         "~en",
         "~ar"
     ],
+    "skal": [
+        "skalet",
+        "skal",
+        "skalen"
+    ],
     "skala": [
         "skala",
         "skalan",
@@ -69375,6 +69398,10 @@
         "sydvästen",
         "sydvästar"
     ],
+    "syfte": [
+        "syftet",
+        "syften"
+    ],
     "syl": [
         "syl",
         "sylen",
@@ -75806,6 +75833,12 @@
         "universitetsstad",
         "universitetsstaden",
         "universitetsstäder"
+    ],
+    "universum": [
+        "universum",
+        "universumet",
+        "universum",
+        "universumen"
     ],
     "uppassare": [
         "uppassare",
