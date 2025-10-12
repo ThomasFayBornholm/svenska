@@ -829,7 +829,6 @@
         "aktieägare",
         "aktieägaren",
         "äv.",
-        "vardagligt",
         "aktieägarn",
         "aktieägare",
         "aktieägarna"
@@ -3815,14 +3814,11 @@
         "atlaser"
     ],
     "atlas-2": [
-        "atlas",
         "atlasen",
         "atlaset"
     ],
     "atlas-3": [
-        "atlas",
-        "",
-        "utrum"
+        ""
     ],
     "atlet": [
         "atlet",
@@ -5913,7 +5909,6 @@
         "barnkammare",
         "barnkammaren",
         "äv.",
-        "vardagligt",
         "barnkammarn",
         "barnkamrar",
         "barnkammare",
@@ -6054,9 +6049,8 @@
         "barytoner"
     ],
     "bas": [
-        "bas",
         "basen",
-        "basar"
+        "baser"
     ],
     "bas-2": [
         "bas",
@@ -6798,13 +6792,6 @@
         "bekännelseskriften",
         "bekännelseskrifter"
     ],
-    "bel canto": [
-        "bel",
-        "canto",
-        "belcanto",
-        "ingen",
-        "böjning"
-    ],
     "belackare": [
         "belackare",
         "belackaren",
@@ -6953,7 +6940,6 @@
     "bemärkelsedag": [
         "bemärkelsedag",
         "bemärkelsedagen",
-        "vardagligt",
         "bemärkelsedan",
         "bemärkelsedagar"
     ],
@@ -8520,7 +8506,6 @@
         "bilägare",
         "bilägaren",
         "äv.",
-        "vardagligt",
         "bilägarn",
         "bilägare",
         "bilägarna"
@@ -9708,7 +9693,6 @@
         "bokhandlare",
         "bokhandlaren",
         "äv.",
-        "vardagligt",
         "bokhandlarn",
         "bokhandlare",
         "bokhandlarna"
@@ -10152,7 +10136,6 @@
         "borgmästare",
         "borgmästaren",
         "äv.",
-        "vardagligt",
         "borgmästarn",
         "borgmästare",
         "borgmästarna"
@@ -10904,7 +10887,6 @@
         "bror",
         "ingen",
         "egen",
-        "böjning",
         "broder",
         "brodern",
         "bröder"
@@ -12225,10 +12207,6 @@
         "böjmuskeln",
         "böjmuskler"
     ],
-    "böjning": [
-        "böjning",
-        "böjnar"
-    ],
     "böjningspunkt": [
         "böjningspunkt",
         "~en",
@@ -12347,7 +12325,6 @@
         "börsmäklare",
         "börsmäklaren",
         "äv.",
-        "vardagligt",
         "börsmäklarn",
         "börsmäklare",
         "börsmäklarna"
@@ -12645,7 +12622,6 @@
         "ceremonimästare",
         "ceremonimästaren",
         "äv.",
-        "vardagligt",
         "ceremonimästarn",
         "ceremonimästare",
         "ceremonimästarna"
@@ -12853,14 +12829,12 @@
         "cigarettändare",
         "cigarettändaren",
         "äv.",
-        "vardagligt",
         "cigarettändarn",
         "cigarettändare",
         "cigarettändarna",
         "cigarrettändare",
         "cigarrettändaren",
         "äv.",
-        "vardagligt",
         "cigarrettändarn",
         "cigarrettändare",
         "bestämd",
@@ -13185,9 +13159,7 @@
     ],
     "credit": [
         "credit",
-        "kredit",
-        "ingen",
-        "böjning"
+        "kredit"
     ],
     "credo": [
         "credo",
@@ -13358,13 +13330,11 @@
     "dag": [
         "dag",
         "dagen",
-        "vardagligt",
         "dan",
         "åld.",
         "genitiv",
         "dagsens",
         "dagar",
-        "vardagligt",
         "dar",
         "åld.",
         "genitiv",
@@ -13562,7 +13532,6 @@
         "dagshandlare",
         "dagshandlaren",
         "äv.",
-        "vardagligt",
         "dagshandlarn",
         "dagshandlare",
         "dagshandlarna"
@@ -14189,7 +14158,6 @@
         "delägare",
         "delägaren",
         "äv.",
-        "vardagligt",
         "delägarn",
         "delägare",
         "delägarna"
@@ -14430,7 +14398,6 @@
         "detaljhandlare",
         "detaljhandlaren",
         "äv.",
-        "vardagligt",
         "detaljhandlarn",
         "detaljhandlare",
         "detaljhandlarna"
@@ -15052,7 +15019,6 @@
         "distriktsmästare",
         "distriktsmästaren",
         "äv.",
-        "vardagligt",
         "distriktsmästarn",
         "distriktsmästare",
         "distriktsmästarna"
@@ -15827,7 +15793,6 @@
         "drätselkammare",
         "drätselkammaren",
         "äv.",
-        "vardagligt",
         "drätselkammarn",
         "drätselkamrar",
         "el.",
@@ -16334,12 +16299,7 @@
         "~en"
     ],
     "déjà vu": [
-        "déjà",
-        "vu",
-        "deja",
-        "vu",
-        "ingen",
-        "böjning"
+        "deja vu"
     ],
     "döbattang": [
         "döbattang",
@@ -16360,7 +16320,6 @@
         "dödgrävare",
         "dödgrävaren",
         "äv.",
-        "vardagligt",
         "dödgrävarn",
         "dödgrävare",
         "dödgrävarna"
@@ -16834,7 +16793,6 @@
         "eftersläntrare",
         "eftersläntraren",
         "äv.",
-        "vardagligt",
         "eftersläntrarn",
         "eftersläntrare",
         "eftersläntrarna"
@@ -17138,7 +17096,6 @@
         "elcyklar"
     ],
     "eld": [
-        "eld",
         "elden",
         "eldar"
     ],
@@ -18177,7 +18134,6 @@
         "europamästare",
         "europamästaren",
         "äv.",
-        "vardagligt",
         "europamästarn",
         "europamästare",
         "europamästarna"
@@ -19055,7 +19011,6 @@
         "fastighetsmäklare",
         "fastighetsmäklaren",
         "äv.",
-        "vardagligt",
         "fastighetsmäklarn",
         "fastighetsmäklare",
         "fastighetsmäklarna"
@@ -19529,7 +19484,6 @@
         "fifflare",
         "fifflaren",
         "äv.",
-        "vardagligt",
         "fifflarn",
         "fifflare",
         "fifflarna"
@@ -19991,7 +19945,6 @@
         "fixare",
         "fixaren",
         "äv.",
-        "vardagligt",
         "fixarn",
         "fixare",
         "fixarna"
@@ -21075,7 +21028,6 @@
         "fordringsägare",
         "fordringsägaren",
         "äv.",
-        "vardagligt",
         "fordringsägarn",
         "fordringsägare",
         "fordringsägarna"
@@ -21587,7 +21539,6 @@
         "fredsmäklare",
         "fredsmäklaren",
         "äv.",
-        "vardagligt",
         "fredsmäklarn",
         "fredsmäklare",
         "fredsmäklarna"
@@ -22578,7 +22529,6 @@
         "fältkikare",
         "fältkikaren",
         "äv.",
-        "vardagligt",
         "fältkikarn",
         "fältkikare",
         "fältkikarna"
@@ -22960,7 +22910,6 @@
         "följeslagare",
         "följeslagaren",
         "äv.",
-        "vardagligt",
         "följeslagarn",
         "följeslagare",
         "följeslagarna"
@@ -23686,7 +23635,6 @@
         "förmiddag",
         "förmiddagen",
         "el.",
-        "vardagligt",
         "förmiddan",
         "förmiddagar"
     ],
@@ -25221,6 +25169,11 @@
         "gardisten",
         "gardister"
     ],
+    "garn": [
+        "garnet",
+        "garn",
+        "garnen"
+    ],
     "garndocka": [
         "garndocka",
         "garndockan",
@@ -26526,7 +26479,6 @@
         "godsägare",
         "godsägaren",
         "äv.",
-        "vardagligt",
         "godsägarn",
         "godsägare",
         "godsägarna"
@@ -26790,15 +26742,11 @@
         "mal"
     ],
     "granit": [
-        "granit",
         "graniten",
         "graniter"
     ],
     "grann": [
-        "grann",
-        "grand",
-        "ingen",
-        "böjning"
+        "grand"
     ],
     "granne": [
         "granne",
@@ -27111,7 +27059,6 @@
         "grosshandlare",
         "grosshandlaren",
         "äv.",
-        "vardagligt",
         "grosshandlarn",
         "grosshandlare",
         "grosshandlarna"
@@ -27516,7 +27463,6 @@
         "grävare",
         "grävaren",
         "äv.",
-        "vardagligt",
         "grävarn",
         "grävare",
         "grävarna"
@@ -27749,7 +27695,6 @@
         "guldgrävare",
         "guldgrävaren",
         "äv.",
-        "vardagligt",
         "guldgrävarn",
         "guldgrävare",
         "guldgrävarna"
@@ -28851,7 +28796,6 @@
         "hammare",
         "hammaren",
         "äv.",
-        "vardagligt",
         "hammarn",
         "hammare",
         "äv.",
@@ -28967,7 +28911,6 @@
         "handelskammare",
         "handelskammaren",
         "äv.",
-        "vardagligt",
         "handelskammarn",
         "handelskamrar",
         "el.",
@@ -29036,7 +28979,6 @@
         "handlare",
         "handlaren",
         "äv.",
-        "vardagligt",
         "handlarn",
         "handlare",
         "handlarna"
@@ -29140,7 +29082,6 @@
         "hantlangare",
         "hantlangaren",
         "äv.",
-        "vardagligt",
         "hantlangarn",
         "hantlangare",
         "hantlangarna"
@@ -29676,7 +29617,6 @@
         "hemmansägare",
         "hemmansägaren",
         "äv.",
-        "vardagligt",
         "hemmansägarn",
         "hemmansägare",
         "hemmansägarna"
@@ -30504,7 +30444,6 @@
         "hovmästare",
         "hovmästaren",
         "äv.",
-        "vardagligt",
         "hovmästarn",
         "hovmästare",
         "hovmästarna"
@@ -30884,7 +30823,6 @@
         "huvudstad",
         "huvudstaden",
         "el.",
-        "vardagligt",
         "huvudstan",
         "huvudstäder"
     ],
@@ -31576,7 +31514,6 @@
         "häxmästare",
         "häxmästaren",
         "äv.",
-        "vardagligt",
         "häxmästarn",
         "häxmästare",
         "häxmästarna"
@@ -33551,7 +33488,6 @@
         "innerstad",
         "innerstaden",
         "el.",
-        "vardagligt",
         "innerstan",
         "innerstäder"
     ],
@@ -35060,7 +34996,6 @@
         "jordägare",
         "jordägaren",
         "äv.",
-        "vardagligt",
         "jordägarn",
         "jordägare",
         "jordägarna"
@@ -35262,7 +35197,6 @@
         "jungfrukammare",
         "jungfrukammaren",
         "äv.",
-        "vardagligt",
         "jungfrukammarn",
         "jungfrukamrar",
         "el.",
@@ -36076,7 +36010,6 @@
         "kammare",
         "kammaren",
         "äv.",
-        "vardagligt",
         "kammarn",
         "kamrar",
         "el.",
@@ -36936,7 +36869,6 @@
         "utrum",
         "katarsis",
         "ingen",
-        "böjning",
         "utrum"
     ],
     "katjon": [
@@ -37105,7 +37037,6 @@
         "utrum",
         "Kelvin",
         "ingen",
-        "böjning",
         "utrum"
     ],
     "kemi": [
@@ -37156,7 +37087,6 @@
         "kikare",
         "kikaren",
         "äv.",
-        "vardagligt",
         "kikarn",
         "kikare",
         "kikarna"
@@ -37303,12 +37233,10 @@
         "kirurgin"
     ],
     "kis": [
-        "kis",
         "kisen",
         "kiser"
     ],
     "kis-2": [
-        "kis",
         "kisen",
         "kisar"
     ],
@@ -37903,7 +37831,6 @@
         "klädkammare",
         "klädkammaren",
         "äv.",
-        "vardagligt",
         "klädkammarn",
         "klädkamrar",
         "el.",
@@ -38061,7 +37988,6 @@
         "knarkare",
         "knarkaren",
         "äv.",
-        "vardagligt",
         "knarkarn",
         "knarkare",
         "knarkarna"
@@ -39882,7 +39808,6 @@
         "kopparslagare",
         "kopparslagaren",
         "äv.",
-        "vardagligt",
         "kopparslagarn",
         "kopparslagare",
         "kopparslagarna"
@@ -42118,7 +42043,6 @@
         "källare",
         "källaren",
         "äv.",
-        "vardagligt",
         "källarn",
         "källare",
         "källarna"
@@ -43102,7 +43026,6 @@
         "langare",
         "langaren",
         "äv.",
-        "vardagligt",
         "langarn",
         "langare",
         "langarna"
@@ -43995,7 +43918,6 @@
         "limpor"
     ],
     "lina": [
-        "lina",
         "linan",
         "linor"
     ],
@@ -46134,6 +46056,10 @@
         "löntagaren",
         "löntagare",
         "löntagarna"
+    ],
+    "löpa": [
+        "löpan",
+        "löpor"
     ],
     "löpare": [
         "löpare",
@@ -49991,7 +49917,6 @@
         "mäklare",
         "mäklaren",
         "äv.",
-        "vardagligt",
         "mäklarn",
         "mäklare",
         "mäklarna"
@@ -50014,7 +49939,6 @@
         "människa",
         "människan",
         "människor",
-        "vardagligt",
         "ibl.",
         "mänska",
         "mänskan",
@@ -50127,7 +50051,6 @@
         "mästare",
         "mästaren",
         "äv.",
-        "vardagligt",
         "mästarn",
         "mästare",
         "mästarna"
@@ -50257,7 +50180,6 @@
         "målsägare",
         "målsägaren",
         "äv.",
-        "vardagligt",
         "målsägarn",
         "målsägare",
         "målsägarna"
@@ -54879,7 +54801,6 @@
         "pundare",
         "pundaren",
         "äv.",
-        "vardagligt",
         "pundarn",
         "pundare",
         "pundarna"
@@ -55312,7 +55233,6 @@
         "rackare",
         "rackaren",
         "äv.",
-        "vardagligt",
         "rackarn",
         "rackare",
         "rackarna"
@@ -58658,7 +58578,6 @@
         "rötkammare",
         "rötkammaren",
         "äv.",
-        "vardagligt",
         "rötkammarn",
         "rötkamrar",
         "el.",
@@ -61421,7 +61340,6 @@
         "sjuttiotalist",
         "sjuttiotalisten",
         "sjuttiotalister",
-        "vardagligt",
         "sjuttitalist",
         "sjuttitalisten",
         "sjuttitalister"
@@ -62082,7 +62000,6 @@
         "skattkammare",
         "skattkammaren",
         "äv.",
-        "vardagligt",
         "skattkammarn",
         "skattkamrar",
         "el.",
@@ -62153,7 +62070,6 @@
         "skeppare",
         "skepparen",
         "äv.",
-        "vardagligt",
         "skepparn",
         "skeppare",
         "skepparna"
@@ -62236,7 +62152,6 @@
         "skeppsmäklare",
         "skeppsmäklaren",
         "äv.",
-        "vardagligt",
         "skeppsmäklarn",
         "skeppsmäklare",
         "skeppsmäklarna"
@@ -62716,7 +62631,6 @@
         "skorstensfejare",
         "skorstensfejaren",
         "äv.",
-        "vardagligt",
         "skorstensfejarn",
         "skorstensfejare",
         "skorstensfejarna"
@@ -63634,7 +63548,6 @@
         "slaktare",
         "slaktaren",
         "äv.",
-        "vardagligt",
         "slaktarn",
         "slaktare",
         "slaktarna"
@@ -63879,10 +63792,7 @@
     ],
     "slowmotion": [
         "slowmotion",
-        "slow",
-        "motion",
-        "ingen",
-        "böjning"
+        "slow motion"
     ],
     "sluka": [
         "sluka",
@@ -64438,7 +64348,6 @@
         "småhandlare",
         "småhandlaren",
         "äv.",
-        "vardagligt",
         "småhandlarn",
         "småhandlare",
         "småhandlarna"
@@ -65411,7 +65320,6 @@
         "sommarpratare",
         "sommarprataren",
         "äv.",
-        "vardagligt",
         "sommarpratarn",
         "sommarpratare",
         "sommarpratarna"
@@ -65598,7 +65506,6 @@
         "sotare",
         "sotaren",
         "äv.",
-        "vardagligt",
         "sotarn",
         "sotare",
         "sotarna"
@@ -66608,6 +66515,11 @@
         "spånkorgen",
         "spånkorgar"
     ],
+    "spår": [
+        "spåret",
+        "spår",
+        "spåren"
+    ],
     "spårhund": [
         "spårhund",
         "spårhunden",
@@ -66685,7 +66597,6 @@
         "stackare",
         "stackaren",
         "äv.",
-        "vardagligt",
         "stackarn",
         "stackare",
         "stackarna"
@@ -66698,7 +66609,6 @@
     "stad": [
         "stad",
         "staden",
-        "vardagligt",
         "stan",
         "städer"
     ],
@@ -67661,7 +67571,6 @@
         "storfräsare",
         "storfräsaren",
         "äv.",
-        "vardagligt",
         "storfräsarn",
         "storfräsare",
         "storfräsarna"
@@ -67735,7 +67644,6 @@
         "stormästare",
         "stormästaren",
         "äv.",
-        "vardagligt",
         "stormästarn",
         "stormästare",
         "stormästarna"
@@ -67763,7 +67671,6 @@
         "storstad",
         "storstaden",
         "el.",
-        "vardagligt",
         "storstan",
         "storstäder"
     ],
@@ -68328,7 +68235,6 @@
         "studerkammare",
         "studerkammaren",
         "äv.",
-        "vardagligt",
         "studerkammarn",
         "studerkamrar",
         "el.",
@@ -70009,7 +69915,6 @@
         "sängkammare",
         "sängkammaren",
         "äv.",
-        "vardagligt",
         "sängkammarn",
         "sängkamrar",
         "el.",
@@ -71446,6 +71351,14 @@
         "utrum"
     ],
     "test": [
+        "testet",
+        "testen",
+        "tester",
+        "test",
+        "testerna",
+        "testen"
+    ],
+    "test-2": [
         "testen",
         "testar"
     ],
@@ -72210,10 +72123,7 @@
     ],
     "tipptopp": [
         "tipptopp",
-        "<\/i>eller",
-        "<i>tiptop",
-        "ingen",
-        "böjning"
+        "tiptop"
     ],
     "tipskupong": [
         "tipskupong",
@@ -72406,7 +72316,6 @@
         "tjuv",
         "tjuven",
         "tjuvar",
-        "vardagligt",
         "tjyv",
         "tjyven",
         "tjyvar"
@@ -72581,7 +72490,6 @@
         "tobakshandlare",
         "tobakshandlaren",
         "äv.",
-        "vardagligt",
         "tobakshandlarn",
         "tobakshandlare",
         "tobakshandlarna"
@@ -73912,7 +73820,6 @@
         "trumslagare",
         "trumslagaren",
         "äv.",
-        "vardagligt",
         "trumslagarn",
         "trumslagare",
         "trumslagarna"
@@ -74324,7 +74231,6 @@
         "tubkikare",
         "tubkikaren",
         "äv.",
-        "vardagligt",
         "tubkikarn",
         "tubkikare",
         "tubkikarna"
@@ -76114,7 +76020,6 @@
         "upphandlare",
         "upphandlaren",
         "äv.",
-        "vardagligt",
         "upphandlarn",
         "upphandlare",
         "upphandlarna"
@@ -77201,7 +77106,6 @@
         "utgrävare",
         "utgrävaren",
         "äv.",
-        "vardagligt",
         "utgrävarn",
         "utgrävare",
         "utgrävarna"
@@ -78031,7 +77935,6 @@
         "vaktmästare",
         "vaktmästaren",
         "äv.",
-        "vardagligt",
         "vaktmästarn",
         "vaktmästare",
         "vaktmästarna"
@@ -79063,7 +78966,6 @@
         "verkstad",
         "verkstaden",
         "el.",
-        "vardagligt",
         "verkstan",
         "verkstäder"
     ],
@@ -79264,11 +79166,6 @@
     "vidsyn": [
         "vidsyn",
         "vidsynen"
-    ],
-    "vift": [
-        "vift",
-        "igen",
-        "böjning"
     ],
     "vigg": [
         "vigg",
@@ -80659,7 +80556,6 @@
         "världsmästare",
         "världsmästaren",
         "äv.",
-        "vardagligt",
         "världsmästarn",
         "världsmästare",
         "världsmästarna"
@@ -81147,13 +81043,15 @@
         "växtvärk",
         "växtvärken"
     ],
+    "våd": [
+        "våden",
+        "våder"
+    ],
     "våda": [
-        "våda",
         "vådan",
         "vådor"
     ],
     "vådeld": [
-        "vådeld",
         "vådelden",
         "vådeldar"
     ],
@@ -81191,7 +81089,6 @@
         "vågmästare",
         "vågmästaren",
         "äv.",
-        "vardagligt",
         "vågmästarn",
         "vågmästare",
         "vågmästarna"
@@ -81896,7 +81793,6 @@
         "ägare",
         "ägaren",
         "äv.",
-        "vardagligt",
         "ägarn",
         "ägare",
         "ägarna"
@@ -82083,7 +81979,6 @@
         "äktenskapsmäklare",
         "äktenskapsmäklaren",
         "äv.",
-        "vardagligt",
         "äktenskapsmäklarn",
         "äktenskapsmäklare",
         "äktenskapsmäklarna"
@@ -82247,6 +82142,10 @@
         "ämbetstitel",
         "ämbetstiteln",
         "ämbetstitlar"
+    ],
+    "ämne": [
+        "ämnet",
+        "ämnen"
     ],
     "ämnesintegration": [
         "ämnesintegration",

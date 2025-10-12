@@ -6236,14 +6236,7 @@
     ],
     "föga": [
         "föga",
-        "som",
-        "",
-        "används",
         "mindre",
-        ";",
-        "som",
-        "superlativ",
-        "används",
         "minst"
     ],
     "följande": [
@@ -8896,16 +8889,8 @@
     "hög": [
         "hög",
         "högt",
-        "",
         "högre,",
-        "superlativ",
         "högst",
-        ";",
-        "i",
-        "vissa",
-        "stelnade",
-        "uttryck",
-        "används",
         "högan"
     ],
     "högaktiv": [
@@ -12155,7 +12140,6 @@
         "ledsen",
         "ledset",
         "ledsna",
-        "vardagligt",
         "lessen",
         "lesset",
         "lessna"
@@ -15087,13 +15071,9 @@
     ],
     "nära": [
         "nära",
-        "",
         "närmare",
-        "äv.",
         "närmre",
-        "superlativ",
         "närmast",
-        "äv.",
         "närmst"
     ],
     "närbelägen": [
@@ -21969,9 +21949,7 @@
         "stor",
         "stort",
         "stora",
-        "",
         "större,",
-        "superlativ",
         "störst"
     ],
     "storartad": [
@@ -22693,10 +22671,6 @@
     ],
     "sämre": [
         "sämre"
-    ],
-    "sämst": [
-        "sämst",
-        "superlativ"
     ],
     "sär": [
         "sär",
@@ -27312,9 +27286,6 @@
         "övlig",
         "övligt",
         "övliga"
-    ],
-    "övre": [
-        "övre"
     ],
     "övrig": [
         "övrig",
