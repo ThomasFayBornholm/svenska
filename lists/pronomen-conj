@@ -1,4 +1,17 @@
 {
-"ingen": ["ingen", "inget", "inga"],
-"dylik": ["dylik","dylikt","dylika"]
+    "dylik": [
+        "dylik",
+        "dylikt",
+        "dylika"
+    ],
+    "ingen": [
+        "ingen",
+        "inget",
+        "inga"
+    ],
+    "någon": [
+	"något",
+        "nåt",
+        "några"
+    ]
 }

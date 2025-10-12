@@ -2051,21 +2051,18 @@
         "ankarbojar"
     ],
     "ankare": [
-        "ankare",
         "ankaret",
         "ankare",
         "ankaren",
         "ankarna",
-        ";",
-        "i",
-        "obestämd",
-        "form",
-        "singular",
-        "används",
-        "i",
-        "några",
-        "uttr.",
         "ankar"
+    ],
+    "ankare-2": [
+        "ankaren",
+        "ankaret",
+        "ankare",
+        "ankaren",
+        "ankarna"
     ],
     "ankargrund": [
         "ankargrund",
@@ -27570,16 +27567,9 @@
         "gubbstruttar"
     ],
     "gud": [
-        "gud",
         "guden",
         "gudar",
-        ";",
-        "äldre",
-        "dativ",
-        "Gudi",
-        "i",
-        "några",
-        "uttr."
+        "Gudi"
     ],
     "gudasaga": [
         "gudasaga",
@@ -30013,7 +30003,6 @@
         "hjortronen"
     ],
     "hjul": [
-        "hjul",
         "hjulet",
         "hjul",
         "hjulen"
@@ -61294,7 +61283,6 @@
         "sjuttitalister"
     ],
     "själ": [
-        "själ",
         "själen",
         "själar"
     ],
