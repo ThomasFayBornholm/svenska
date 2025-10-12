@@ -129,8 +129,8 @@ function putMoreMany(moreArr, cur) {
 	})
 }
 
-async function addDef(key, meta, def, more, word_class, fast = false) {
-	if (DEBUG) console.log("addDef(meta,def,more)");
+async function addDef(key, meta, def, more, word_class, options) {
+	if (DEBUG) console.log("addDef(meta,def,more,word_class,options)");
 	$('#iMeta').html("adding... '<b>" + key + "</b>'");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -145,7 +145,7 @@ async function addDef(key, meta, def, more, word_class, fast = false) {
 	if (def.length + more.length > MAX_URL) {
 		more = "";
 	}
-	let url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + word_class; 
+	let url = 'backend/addDef.php?word=' + key.replace("/-[1-9]","") + '&meta=' + meta + '&def=' + def + '&more=' + more + '&class=' + word_class + '&options=' + options; 
 	const res = await fetch(url, {
 		method: 'get',
 		mode: 'cors',
@@ -581,44 +581,6 @@ function getRefs(def) {
 	return arr;
 }
 
-function onlineLookup(elHTML, ev) {	
-	if (DEBUG) console.log("onlineLookup(elHTML, ev)");
-	ev.preventDefault();
-	word = elHTML.value;
-	if (word.length === 0) word = CUR_WORD;
-	if (word.length > 0) {
-		fetch('backend/showExtern.php?word=' + word, {
-			'method': 'get',
-			'mode': 'cors',
-			'headers': {
-				'Content-Type': 'application/json'
-			}
-		})
-		.then(response => {
-			return response.json();
-		})
-		.then(json => {
-			let tmp = "";
-			let delim = "";
-			for (const el of json) {
-				delim = "<br>";
-				if (el.includes("; id=")) {
-					let start = el.indexOf("; id=")+5;
-					let tmpID = el.substr(start);
-					tmp += delim + '<a href="http://svenska.se/so/?id=' + tmpID + '"';
-					tmp += ' oncontextmenu=ScrapeByID(event,"' + tmpID + '")>' + el.replace("; id=" + tmpID,"") + "</a>";
-				} else {
-					tmp += delim + "<a href='http://svenska.se/so?sok=" + encodeURI(word) + "'>" + el + "</a>";
-				}
-			}
-			$('#iExtern').html(tmp);
-		})
-		.catch(error => {
-			console.log(error)
-		})
-	}
-}
-
 function switchTab() {	
 	TAB_DUMMY.close()
 	TAB_LOOKUP.focus();		
@@ -818,9 +780,24 @@ async function seekWord(word, link = false, lastEnum = false) {
 		$('#iInput').attr("placeholder","No match for '" + word + "'");
 	}
 	if (GLOBAL.cur_matches_count > 1) {
-		$('#iInput').attr("placeholder",GLOBAL.cur_matches_count + " matches, navigate with PageUp/Down");
+		$('#iInput').attr("placeholder","Navigate matches with PageUp/Down");
 	}
-	$('#iSuggestions').text(CUR_WORD);
+	let out_html = "'" + CUR_WORD + "'";
+	let n_pVerbs = 0; // Particle verbs
+	for(const key of Object.keys(GLOBAL.cur_matches)) {
+		let tmp =  GLOBAL.cur_matches[key];
+		if (tmp["class"] === "verb" && tmp["word"].includes(" ")) {
+			n_pVerbs++;
+		} else {
+		out_html += " - " + GLOBAL.cur_matches[key]["class"];
+		}
+	}
+	if (n_pVerbs === 1) {
+		out_html += " - partikel verb";
+	} else if (n_pVerbs > 1) {
+		out_html += " - partikel verb (x" + n_pVerbs + ")";
+	}
+	$('#iSummary').text(out_html);
 	focusInput();
 }
 
@@ -1987,21 +1964,14 @@ function processKeyDown(ev) {
 		let tmp = $('#iInput').val() + "!"		
 		seekWord(tmp);
 	}
-	if (ev.key === "ArrowUp") {
-		let el = document.getElementById("iInput");
-		onlineLookup(el,ev);
-		// ?!
-		focusDef()
-	} else if (ev.key === "Insert") {
-		addWord();	
-	} else if (ev.key === "Delete") {
+	if (ev.key === "Delete") {
 		removeWord();
 	} else if (ev.key === "F1") {
 		showExternal();	
 	} else if (ev.key === "*") {
 		ev.preventDefault();
 		fromEnglish();
-	} else if (ev.key === "ArrowDown" || ev.key === "F2") {
+	} else if (ev.key === "F2") {
 		fetchDef();
 	} else if (ev.key === "F6") {
 		walkListing();
@@ -2192,6 +2162,7 @@ async function fetchDef() {
 	})
 	const json = await res.json();
 	if (CLASS === "fraser") {	
+		/*
 		let tmp ="";
 		let keys = Object.keys(json);
 		del = "";
@@ -2204,15 +2175,15 @@ async function fetchDef() {
 		$('#iDivMore').css("display", "none");
 		focusDef();
 		$('#iDefText').val(tmp);					
-			
+		*/	
 	} else {
-		if (! json.hasOwnProperty("error")) {
-			for(const el of json["matches"]) {
+		if (json.matches.length > 0) {
+			for(const el of json.matches) {
 				let key = word;
-				key = key.replaceAll("?","");				
-				if (key[0] === "-") key = key.substr(1);
-				adddDef(key,el['meta'],el['def'],el['more'], el["class"]);		
+				addDef(key,el['meta'],el['def'],el['more'], el["class"],el["options"]);		
 			}
+			$('#iMeta').html("Finised adding entries for '<b>" + word + "</b>'");
+			seekWord(word);
 		} else {
 			$('#iMeta').html("Failed to find match");
 		}
@@ -2448,10 +2419,11 @@ function inc_match(inc) {
 	if (GLOBAL.match_inc > GLOBAL.cur_matches_count-1) GLOBAL.match_inc = GLOBAL.cur_matches_count- 1;
 	if (GLOBAL.match_inc != cur_match_inc) {
 		let key = Object.keys(GLOBAL.cur_matches)[GLOBAL.match_inc];
-		setClass(key);
+		setClass(GLOBAL.cur_matches[key]["class"]);
 		// This implies unique keys return from getDefAll
 		CUR_DEF = GLOBAL.cur_matches[key]["def"];
 		CUR_WORD = GLOBAL.cur_matches[key]["word"];
+		CUR_CONJ = GLOBAL.cur_matches[key]["word"];
 		N_DEFS = nDefs();
 		let def = "";
 		if (N_DEFS > 1) {
@@ -2460,7 +2432,7 @@ function inc_match(inc) {
 			def = CUR_DEF;
 		}
 		displayDef(def);
-		displayMeta(GLOBAL.cur_matches[CLASS]["meta"]);
+		displayMeta(GLOBAL.cur_matches[key]["meta"]);
 	}
 }
 
@@ -2490,8 +2462,9 @@ async function checkCompletions(ev) {
 }
 
 async function showExternal() {
-	console.log("FUNC showExternal");
+	if (DEBUG) console.log("FUNC showExternal");
 	let inp = $('#iInput').val();
+	if (inp.length === 0) inp = CUR_WORD
 	if (inp.length === 0) return;
 	const res = await fetch('backend/getID.php?word=' + inp, {
 		method: 'GET',

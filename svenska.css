@@ -313,5 +313,8 @@ label {
 }
 
 .suggestions {
-	height: 12vh;
+	height: 1vh;
+	font-size: 16pt;
+	margin-left: 2vw;
+	text-align: left;
 }

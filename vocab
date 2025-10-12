@@ -43,6 +43,7 @@
 </div>
 
 <div id="iInfo" class="firstColumn" onwheel="scrollView(event)" oncontextmenu="clickMiddle(event)">
+	<p id="iSummary"></p>
 	<div id="iDefDiv">
 		 <textarea  class="defBox" id="iDefText" onkeydown="defEntry(event)"></textarea>			 
 	</div>				

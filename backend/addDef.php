@@ -9,6 +9,7 @@
 	$word = str_replace("(","-",$word);
 	$word = str_replace(")","",$word);
 	$meta = $_GET['meta'];
+	$options = $_GET["options"];
 	$def = $_GET['def'];
 	$more = $_GET['more'];
 	
@@ -146,7 +147,7 @@
 			$name = $path . $class . "-conj";
 			$contents = file_get_contents($name, 'UTF-8');
 			$dict = json_decode($contents,true);
-			$dict[$word] = explode(" ",$meta);
+			$dict[$word] = explode(",",$options);
 			ksort($dict);
 			$res = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
