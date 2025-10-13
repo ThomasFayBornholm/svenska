@@ -30526,6 +30526,12 @@
         "huvtröjan",
         "huvtröjor"
     ],
+    "huvud": [
+        "huvudet",
+        "huvuden",
+        "huvud",
+        "huvudena"
+    ],
     "huvudbonad": [
         "huvudbonad",
         "huvudbonaden",
@@ -41554,7 +41560,6 @@
         "kvisslor"
     ],
     "kvist": [
-        "kvist",
         "kvisten",
         "kvistar"
     ],
@@ -46384,7 +46389,6 @@
         "manskörer"
     ],
     "manslem": [
-        "manslem",
         "manslemmen",
         "manslemmar"
     ],
@@ -47838,7 +47842,6 @@
         "militärtjänsten"
     ],
     "miljard": [
-        "miljard",
         "miljarden",
         "miljarder"
     ],
@@ -47848,7 +47851,6 @@
         "miljardärer"
     ],
     "miljon": [
-        "miljon",
         "miljonen",
         "miljoner"
     ],
@@ -53601,6 +53603,11 @@
     "partikel": [
         "partikeln",
         "partiklar"
+    ],
+    "penis": [
+        "penisen",
+        "penis",
+        "penisar"
     ],
     "period": [
         "perioden",
@@ -60229,6 +60236,10 @@
         "servitör",
         "servitören",
         "servitörer"
+    ],
+    "session": [
+        "sessionen",
+        "sessioner"
     ],
     "setboll": [
         "setboll",
@@ -80098,7 +80109,6 @@
         "värdinnor"
     ],
     "värja": [
-        "värja",
         "värjan",
         "värjor"
     ],
@@ -84369,7 +84379,6 @@
         "överträdelser"
     ],
     "övertygelse": [
-        "övertygelse",
         "övertygelsen",
         "övertygelser"
     ],
