@@ -77,14 +77,6 @@
         "NN",
         "N.N."
     ],
-    "Orienten": [
-        "Orienten",
-        "bestämd",
-        "form",
-        "orienten",
-        "bestämd",
-        "form"
-    ],
     "Plats": [
         "Plats",
         "~en"
@@ -1817,8 +1809,6 @@
     ],
     "anfordran": [
         "anfordran",
-        "bestämd",
-        "form",
         "anfordran",
         "utrum"
     ],
@@ -1910,7 +1900,6 @@
         "anglosachsare",
         "anglosachsaren",
         "anglosachsare",
-        "bestämd",
         "anglosachsarna"
     ],
     "angläs": [
@@ -2148,24 +2137,18 @@
     ],
     "anmodan": [
         "anmodan",
-        "bestämd",
-        "form",
         "anmodan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "anmodanden"
     ],
     "anmälan": [
         "anmälan",
-        "bestämd",
-        "form",
         "anmälan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "anmälningar"
@@ -2489,12 +2472,9 @@
     ],
     "ansökan": [
         "ansökan",
-        "bestämd",
-        "form",
         "ansökan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "ansökningar"
@@ -2558,8 +2538,6 @@
     ],
     "antepenultima": [
         "antepenultima",
-        "bestämd",
-        "form",
         "antepenultima",
         "antepenultiman",
         "antepenultimor"
@@ -2811,12 +2789,9 @@
     ],
     "antydan": [
         "antydan",
-        "bestämd",
-        "form",
         "antydan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "antydningar"
@@ -2860,8 +2835,6 @@
     ],
     "aorta": [
         "aorta",
-        "bestämd",
-        "form",
         "aorta",
         "aortan"
     ],
@@ -3214,8 +3187,6 @@
     ],
     "arbetsplenum": [
         "arbetsplenum",
-        "bestämd",
-        "form",
         "arbetsplenum",
         "arbetsplenumet",
         "arbetsplenum",
@@ -4796,12 +4767,9 @@
     ],
     "avrådan": [
         "avrådan",
-        "bestämd",
-        "form",
         "avrådan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "avrådanden"
@@ -4980,8 +4948,6 @@
     ],
     "avståndsverkan": [
         "avståndsverkan",
-        "bestämd",
-        "form",
         "avståndsverkan",
         "utrum"
     ],
@@ -6372,12 +6338,9 @@
     ],
     "befordran": [
         "befordran",
-        "bestämd",
-        "form",
         "befordran",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "befordringar"
@@ -6569,8 +6532,6 @@
     ],
     "begrundan": [
         "begrundan",
-        "bestämd",
-        "form",
         "begrundan",
         "utrum"
     ],
@@ -6632,8 +6593,6 @@
     ],
     "begäran": [
         "begäran",
-        "bestämd",
-        "form",
         "begäran",
         "utrum"
     ],
@@ -6714,11 +6673,8 @@
     ],
     "beivran": [
         "beivran",
-        "bestämd",
-        "form",
         "beivran",
         "utrum;",
-        "som",
         "kan",
         "användas",
         "beivranden"
@@ -6983,17 +6939,12 @@
         "benediktinerkloster",
         "benediktinerklostret",
         "benediktinerkloster",
-        "bestämd",
         "benediktinerklostren"
     ],
     "benediktinorden": [
         "benediktinorden",
-        "bestämd",
-        "form",
         "utrum",
         "benediktinerorden",
-        "bestämd",
-        "form",
         "utrum"
     ],
     "benfisk": [
@@ -7379,8 +7330,6 @@
     ],
     "bergspredikan": [
         "bergspredikan",
-        "bestämd",
-        "form",
         "bergspredikan",
         "utrum"
     ],
@@ -7889,8 +7838,6 @@
     ],
     "beundran": [
         "beundran",
-        "bestämd",
-        "form",
         "beundran",
         "utrum"
     ],
@@ -8115,8 +8062,6 @@
     ],
     "bilddyrkan": [
         "bilddyrkan",
-        "bestämd",
-        "form",
         "bilddyrkan",
         "utrum"
     ],
@@ -8777,12 +8722,9 @@
     ],
     "biverkan": [
         "biverkan",
-        "bestämd",
-        "form",
         "biverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "biverkningar"
@@ -9186,13 +9128,9 @@
     ],
     "blodspillan": [
         "blodspillan",
-        "bestämd",
-        "form",
         "blodspillan",
         "utrum",
         "blodsspillan",
-        "bestämd",
-        "form",
         "blodsspillan",
         "utrum"
     ],
@@ -10009,8 +9947,6 @@
     ],
     "bordläggningsplenum": [
         "bordläggningsplenum",
-        "bestämd",
-        "form",
         "bordläggningsplenum",
         "el.",
         "bordläggningsplenumet",
@@ -10047,7 +9983,6 @@
         "bordlöpare",
         "bordlöparen",
         "bordlöpare",
-        "bestämd",
         "bordlöparna"
     ],
     "bordssalt": [
@@ -10650,8 +10585,6 @@
     ],
     "braxen": [
         "braxen",
-        "bestämd",
-        "form",
         "braxen",
         "braxnar",
         "utrum"
@@ -11198,8 +11131,6 @@
     ],
     "bräken": [
         "bräken",
-        "bestämd",
-        "form",
         "bräken",
         "bräknar",
         "utrum"
@@ -12070,8 +12001,6 @@
     ],
     "bävan": [
         "bävan",
-        "bestämd",
-        "form",
         "bävan",
         "utrum"
     ],
@@ -12152,11 +12081,6 @@
         "båt",
         "båten",
         "båtar"
-    ],
-    "båtfolket": [
-        "båtfolket",
-        "bestämd",
-        "form"
     ],
     "båtmössa": [
         "båtmössa",
@@ -12317,8 +12241,6 @@
     ],
     "början": [
         "början",
-        "bestämd",
-        "form",
         "början",
         "utrum"
     ],
@@ -12848,7 +12770,6 @@
         "äv.",
         "cigarrettändarn",
         "cigarrettändare",
-        "bestämd",
         "cigarrettändarna"
     ],
     "cigarill": [
@@ -14459,8 +14380,6 @@
     ],
     "diabetes": [
         "diabetes",
-        "bestämd",
-        "form",
         "diabetesen",
         "el.",
         "diabetes"
@@ -14576,11 +14495,6 @@
     "difteri": [
         "difteri",
         "difterin"
-    ],
-    "digerdöden": [
-        "digerdöden",
-        "bestämd",
-        "form"
     ],
     "digital-tv": [
         "digital-tv",
@@ -15034,11 +14948,6 @@
         "ditresan",
         "ditresor"
     ],
-    "ditvägen": [
-        "ditvägen",
-        "bestämd",
-        "form"
-    ],
     "divergens": [
         "divergens",
         "divergensen",
@@ -15084,8 +14993,6 @@
     ],
     "djupverkan": [
         "djupverkan",
-        "bestämd",
-        "form",
         "djupverkan",
         "utrum"
     ],
@@ -15145,8 +15052,6 @@
     ],
     "djävulsdyrkan": [
         "djävulsdyrkan",
-        "bestämd",
-        "form",
         "djävulsdyrkan",
         "utrum"
     ],
@@ -15201,8 +15106,6 @@
     ],
     "doktorsexamen": [
         "doktorsexamen",
-        "bestämd",
-        "form",
         "doktorsexamen",
         "doktorsexamina",
         "utrum"
@@ -15295,12 +15198,9 @@
     ],
     "domedagspredikan": [
         "domedagspredikan",
-        "bestämd",
-        "form",
         "domedagspredikan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "domedagspredikningar"
@@ -15382,8 +15282,6 @@
     ],
     "donjuan": [
         "donjuan",
-        "bestämd",
-        "form",
         "donjuan",
         "äv.",
         "donjuanen",
@@ -16632,12 +16530,9 @@
     ],
     "efterfrågan": [
         "efterfrågan",
-        "bestämd",
-        "form",
         "efterfrågan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "efterfrågningar"
@@ -16706,16 +16601,6 @@
         "efterkontrollen",
         "efterkontroller"
     ],
-    "efterkrigstiden": [
-        "efterkrigstiden",
-        "bestämd",
-        "form"
-    ],
-    "efterkälken": [
-        "efterkälken",
-        "bestämd",
-        "form"
-    ],
     "efterkänning": [
         "efterkänning",
         "efterkänningen",
@@ -16744,11 +16629,6 @@
         "eftermiddag",
         "eftermiddagen",
         "eftermiddagar"
-    ],
-    "efternatten": [
-        "efternatten",
-        "bestämd",
-        "form"
     ],
     "efterprövning": [
         "efterprövning",
@@ -16874,12 +16754,9 @@
     ],
     "efterverkan": [
         "efterverkan",
-        "bestämd",
-        "form",
         "efterverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "efterverkningar"
@@ -17431,8 +17308,6 @@
     ],
     "emeritus": [
         "emeritus",
-        "bestämd",
-        "form",
         "emeritus",
         "emeriti"
     ],
@@ -17773,8 +17648,6 @@
     ],
     "epidermis": [
         "epidermis",
-        "bestämd",
-        "form",
         "epidermis",
         "utrum"
     ],
@@ -17861,12 +17734,9 @@
     ],
     "erbjudan": [
         "erbjudan",
-        "bestämd",
-        "form",
         "erbjudan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "erbjudanden"
@@ -18211,8 +18081,6 @@
     ],
     "examen": [
         "examen",
-        "bestämd",
-        "form",
         "examen",
         "examina",
         "utrum"
@@ -18725,8 +18593,6 @@
     ],
     "fan": [
         "fan",
-        "bestämd",
-        "form",
         "fan",
         "utrum"
     ],
@@ -18805,8 +18671,6 @@
     ],
     "farao": [
         "farao",
-        "bestämd",
-        "form",
         "farao",
         "el.",
         "faraon",
@@ -19046,11 +18910,6 @@
         "fastighetstaxeringen",
         "fastighetstaxeringar"
     ],
-    "fastlagen": [
-        "fastlagen",
-        "bestämd",
-        "form"
-    ],
     "fastlagsbulle": [
         "fastlagsbulle",
         "fastlagsbullen",
@@ -19189,12 +19048,9 @@
     ],
     "felanmälan": [
         "felanmälan",
-        "bestämd",
-        "form",
         "felanmälan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "felanmälningar"
@@ -21020,12 +20876,9 @@
     ],
     "fordran": [
         "fordran",
-        "bestämd",
-        "form",
         "fordran",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "fordringar"
@@ -21053,12 +20906,10 @@
         "forensiken"
     ],
     "form": [
-        "form",
         "formen",
         "formar"
     ],
     "form-2": [
-        "form",
         "formen",
         "former"
     ],
@@ -21417,12 +21268,9 @@
     ],
     "framställan": [
         "framställan",
-        "bestämd",
-        "form",
         "framställan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "framställningar"
@@ -21772,11 +21620,6 @@
         "~en",
         "friluftsteatrar"
     ],
-    "frimurarorden": [
-        "frimurarorden",
-        "bestämd",
-        "form"
-    ],
     "frimärkssamling": [
         "frimärkssamling",
         "frimärkssamlingen",
@@ -21994,8 +21837,6 @@
     ],
     "fruktan": [
         "fruktan",
-        "bestämd",
-        "form",
         "fruktan",
         "utrum"
     ],
@@ -22076,11 +21917,6 @@
     "frälsning": [
         "frälsning",
         "frälsningen"
-    ],
-    "frälsningsarmén": [
-        "frälsningsarmén",
-        "bestämd",
-        "form"
     ],
     "frälsningssoldat": [
         "frälsningssoldat",
@@ -22170,8 +22006,6 @@
     ],
     "fröken": [
         "fröken",
-        "bestämd",
-        "form",
         "fröken",
         "fröknar"
     ],
@@ -22281,10 +22115,8 @@
         ";",
         "i",
         "obestämd",
-        "form",
         "singular",
         "används",
-        "som",
         "titel",
         "framför",
         "namn",
@@ -22578,12 +22410,9 @@
     ],
     "fälttävlan": [
         "fälttävlan",
-        "bestämd",
-        "form",
         "fälttävlan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "fälttävlingar"
@@ -22769,11 +22598,6 @@
         "fågelholk",
         "fågelholken",
         "fågelholkar"
-    ],
-    "fågelvägen": [
-        "fågelvägen",
-        "bestämd",
-        "form"
     ],
     "fåglalåt": [
         "fåglalåt",
@@ -23341,12 +23165,9 @@
     ],
     "förfrågan": [
         "förfrågan",
-        "bestämd",
-        "form",
         "förfrågan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "förfrågningar"
@@ -23555,8 +23376,6 @@
     ],
     "förlitan": [
         "förlitan",
-        "bestämd",
-        "form",
         "förlitan",
         "utrum"
     ],
@@ -23672,12 +23491,9 @@
     ],
     "förmodan": [
         "förmodan",
-        "bestämd",
-        "form",
         "förmodan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "förmodanden"
@@ -24007,8 +23823,6 @@
     ],
     "förskyllan": [
         "förskyllan",
-        "bestämd",
-        "form",
         "förskyllan",
         "utrum"
     ],
@@ -24143,11 +23957,6 @@
         "försteläraren",
         "förstelärare",
         "förstelärarna"
-    ],
-    "försten": [
-        "försten",
-        "bestämd",
-        "form"
     ],
     "förstening": [
         "förstening",
@@ -24351,12 +24160,9 @@
     ],
     "försäkran": [
         "försäkran",
-        "bestämd",
-        "form",
         "försäkran",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "försäkringar"
@@ -24590,8 +24396,6 @@
     ],
     "förtröstan": [
         "förtröstan",
-        "bestämd",
-        "form",
         "förtröstan",
         "utrum"
     ],
@@ -24611,8 +24415,6 @@
     ],
     "förtvivlan": [
         "förtvivlan",
-        "bestämd",
-        "form",
         "förtvivlan",
         "utrum"
     ],
@@ -24646,8 +24448,6 @@
     ],
     "förundran": [
         "förundran",
-        "bestämd",
-        "form",
         "förundran",
         "utrum"
     ],
@@ -24758,12 +24558,9 @@
     ],
     "förväntan": [
         "förväntan",
-        "bestämd",
-        "form",
         "förväntan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "förväntningar"
@@ -24791,8 +24588,6 @@
     ],
     "förvållan": [
         "förvållan",
-        "bestämd",
-        "form",
         "förvållan",
         "utrum"
     ],
@@ -25019,12 +24814,6 @@
         "gallup",
         "gallupen",
         "gallupar"
-    ],
-    "galna ko-sjukan": [
-        "galna",
-        "ko-sjukan",
-        "bestämd",
-        "form"
     ],
     "galning": [
         "galning",
@@ -25633,8 +25422,6 @@
     ],
     "genesis": [
         "genesis",
-        "bestämd",
-        "form",
         "genesis",
         "utrum"
     ],
@@ -26520,11 +26307,6 @@
         "godtemplare",
         "godtemplarna"
     ],
-    "godtemplarorden": [
-        "godtemplarorden",
-        "bestämd",
-        "form"
-    ],
     "goja": [
         "goja",
         "gojan"
@@ -26886,11 +26668,6 @@
     "gravitation": [
         "gravitation",
         "gravitationen"
-    ],
-    "gravitationslagen": [
-        "gravitationslagen",
-        "bestämd",
-        "form"
     ],
     "gravitet": [
         "gravitet",
@@ -27257,7 +27034,6 @@
         "grundskolelärare",
         "grundskoleläraren",
         "grundskolelärare",
-        "bestämd",
         "grundskolelärarna"
     ],
     "grundsyn": [
@@ -27653,8 +27429,6 @@
     ],
     "gudsfruktan": [
         "gudsfruktan",
-        "bestämd",
-        "form",
         "gudsfruktan",
         "utrum"
     ],
@@ -28121,8 +27895,6 @@
         "gärsgården",
         "gärsgårdar",
         "i",
-        "bestämd",
-        "form",
         "ibland",
         "gärsgårn"
     ],
@@ -29615,8 +29387,6 @@
     ],
     "hemlängtan": [
         "hemlängtan",
-        "bestämd",
-        "form",
         "hemlängtan",
         "utrum"
     ],
@@ -29691,12 +29461,9 @@
     ],
     "hemställan": [
         "hemställan",
-        "bestämd",
-        "form",
         "hemställan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "hemställningar"
@@ -30028,14 +29795,6 @@
         "hits",
         "el.",
         "hittar"
-    ],
-    "hitvägen": [
-        "hitvägen",
-        "bestämd",
-        "form"
-    ],
-    "hiv": [
-        ""
     ],
     "hjord": [
         "hjord",
@@ -30938,8 +30697,6 @@
     ],
     "hymen": [
         "hymen",
-        "bestämd",
-        "form",
         "hymen",
         "utrum"
     ],
@@ -32070,8 +31827,6 @@
     ],
     "högskoleexamen": [
         "högskoleexamen",
-        "bestämd",
-        "form",
         "högskoleexamen",
         "högskoleexamina",
         "utrum"
@@ -32373,7 +32128,6 @@
         "höstar",
         ";",
         "obestämd",
-        "form",
         "singular",
         "genitiv",
         "höstas",
@@ -32885,12 +32639,9 @@
     ],
     "inbjudan": [
         "inbjudan",
-        "bestämd",
-        "form",
         "inbjudan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "inbjudningar"
@@ -33592,8 +33343,6 @@
     ],
     "inrådan": [
         "inrådan",
-        "bestämd",
-        "form",
         "inrådan",
         "utrum"
     ],
@@ -34260,12 +34009,9 @@
     ],
     "inverkan": [
         "inverkan",
-        "bestämd",
-        "form",
         "inverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "inverkningar"
@@ -35128,7 +34874,6 @@
         "jular",
         ";",
         "obestämd",
-        "form",
         "singular",
         "genitiv",
         "julas",
@@ -37026,10 +36771,8 @@
         ";",
         "i",
         "obestämd",
-        "form",
         "singular",
         "används",
-        "som",
         "titel",
         "framför",
         "namn",
@@ -37358,8 +37101,6 @@
     ],
     "klagan": [
         "klagan",
-        "bestämd",
-        "form",
         "klagan",
         "utrum"
     ],
@@ -38062,11 +37803,6 @@
         "knegare",
         "knegarna"
     ],
-    "kneken": [
-        "kneken",
-        "bestämd",
-        "form"
-    ],
     "knekt": [
         "knekt",
         "knekten",
@@ -38551,11 +38287,6 @@
     "koll": [
         "koll",
         "kollen"
-    ],
-    "kolla vippen": [
-        "vippen",
-        "bestämd",
-        "form"
     ],
     "kollaboration": [
         "kollaboration",
@@ -39642,8 +39373,6 @@
     ],
     "kontraströntgen": [
         "kontraströntgen",
-        "bestämd",
-        "form",
         "kontraströntgen",
         "utrum"
     ],
@@ -39843,11 +39572,6 @@
         "kopparspiral",
         "kopparspiralen",
         "kopparspiraler"
-    ],
-    "kopparåldern": [
-        "kopparåldern",
-        "bestämd",
-        "form"
     ],
     "kopparödla": [
         "kopparödla",
@@ -41231,8 +40955,6 @@
     ],
     "kulmen": [
         "kulmen",
-        "bestämd",
-        "form",
         "kulmen",
         "utrum"
     ],
@@ -41398,8 +41120,6 @@
     ],
     "kungaförsäkran": [
         "kungaförsäkran",
-        "bestämd",
-        "form",
         "kungaförsäkran",
         "utrum"
     ],
@@ -42436,11 +42156,6 @@
         "köksträdgården",
         "köksträdgårdar"
     ],
-    "köksvägen": [
-        "köksvägen",
-        "bestämd",
-        "form"
-    ],
     "köksväxt": [
         "köksväxt",
         "köksväxten",
@@ -43040,11 +42755,6 @@
         "landvinningen",
         "landvinningar"
     ],
-    "landvägen": [
-        "landvägen",
-        "bestämd",
-        "form"
-    ],
     "landå": [
         "landå",
         "landån",
@@ -43453,11 +43163,6 @@
         "legitimitet",
         "legitimiteten"
     ],
-    "legitimitetsprincipen": [
-        "legitimitetsprincipen",
-        "bestämd",
-        "form"
-    ],
     "legoknekt": [
         "legoknekt",
         "legoknekten",
@@ -43493,11 +43198,6 @@
         "lejonkulan",
         "lejonkulor"
     ],
-    "lejonparten": [
-        "lejonparten",
-        "bestämd",
-        "form"
-    ],
     "lek": [
         "lek",
         "leken",
@@ -43505,8 +43205,6 @@
     ],
     "lekamen": [
         "lekamen",
-        "bestämd",
-        "form",
         "lekamen",
         "utrum"
     ],
@@ -43779,11 +43477,6 @@
         "lie",
         "lien",
         "liar"
-    ],
-    "liemannen": [
-        "liemannen",
-        "bestämd",
-        "form"
     ],
     "liga": [
         "liga",
@@ -45061,12 +44754,9 @@
     ],
     "lyckönskan": [
         "lyckönskan",
-        "bestämd",
-        "form",
         "lyckönskan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "lyckönskningar"
@@ -45356,8 +45046,6 @@
     ],
     "längtan": [
         "längtan",
-        "bestämd",
-        "form",
         "längtan",
         "utrum"
     ],
@@ -46137,8 +45825,6 @@
     ],
     "lösen": [
         "lösen",
-        "bestämd",
-        "form",
         "lösen",
         "utrum"
     ],
@@ -46706,8 +46392,6 @@
     ],
     "manspillan": [
         "manspillan",
-        "bestämd",
-        "form",
         "manspillan",
         "utrum"
     ],
@@ -47609,8 +47293,6 @@
     ],
     "medverkan": [
         "medverkan",
-        "bestämd",
-        "form",
         "medverkan",
         "utrum"
     ],
@@ -48533,8 +48215,6 @@
     ],
     "misströstan": [
         "misströstan",
-        "bestämd",
-        "form",
         "misströstan",
         "utrum"
     ],
@@ -48848,8 +48528,6 @@
     ],
     "mogenhetsexamen": [
         "mogenhetsexamen",
-        "bestämd",
-        "form",
         "mogenhetsexamen",
         "mogenhetsexamina",
         "utrum"
@@ -49049,12 +48727,9 @@
     ],
     "moralpredikan": [
         "moralpredikan",
-        "bestämd",
-        "form",
         "moralpredikan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "moralpredikningar"
@@ -49592,8 +49267,6 @@
     ],
     "munkorden": [
         "munkorden",
-        "bestämd",
-        "form",
         "munkorden",
         "munkordnar",
         "utrum"
@@ -50187,11 +49860,6 @@
         "målning",
         "målningen",
         "målningar"
-    ],
-    "målron": [
-        "målron",
-        "bestämd",
-        "form"
     ],
     "målskillnad": [
         "målskillnad",
@@ -51477,8 +51145,6 @@
     ],
     "nitälskan": [
         "nitälskan",
-        "bestämd",
-        "form",
         "nitälskan",
         "utrum"
     ],
@@ -51614,11 +51280,6 @@
     "nordkant": [
         "nordkant",
         "nordkanten"
-    ],
-    "nordostpassagen": [
-        "nordostpassagen",
-        "bestämd",
-        "form"
     ],
     "nordpol": [
         "nordpol",
@@ -51816,8 +51477,6 @@
     ],
     "nunneorden": [
         "nunneorden",
-        "bestämd",
-        "form",
         "nunneorden",
         "nunneordnar",
         "utrum"
@@ -52599,11 +52258,6 @@
         "obygd",
         "obygden",
         "obygder"
-    ],
-    "occidenten": [
-        "occidenten",
-        "bestämd",
-        "form"
     ],
     "ocean": [
         "ocean",
@@ -53458,8 +53112,6 @@
     ],
     "orden": [
         "orden",
-        "bestämd",
-        "form",
         "orden",
         "ordnar",
         "utrum"
@@ -53478,8 +53130,6 @@
     ],
     "ordervägran": [
         "ordervägran",
-        "bestämd",
-        "form",
         "ordervägran",
         "utrum"
     ],
@@ -53986,8 +53636,6 @@
     ],
     "preses": [
         "preses",
-        "bestämd",
-        "form",
         "preses",
         "presides",
         "äv.",
@@ -54099,8 +53747,6 @@
     ],
     "primas": [
         "primas",
-        "bestämd",
-        "form",
         "primas",
         "utrum"
     ],
@@ -55192,7 +54838,6 @@
         "påskar",
         ";",
         "obestämd",
-        "form",
         "singular",
         "genitiv",
         "påskas",
@@ -55243,12 +54888,9 @@
     ],
     "påverkan": [
         "påverkan",
-        "bestämd",
-        "form",
         "påverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "påverkningar"
@@ -55567,12 +55209,9 @@
     ],
     "rannsakan": [
         "rannsakan",
-        "bestämd",
-        "form",
         "rannsakan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "rannsakningar"
@@ -56851,8 +56490,6 @@
     ],
     "riddarorden": [
         "riddarorden",
-        "bestämd",
-        "form",
         "riddarorden",
         "riddarordnar",
         "utrum"
@@ -58520,8 +58157,6 @@
     ],
     "röntgen": [
         "röntgen",
-        "bestämd",
-        "form",
         "och",
         "röntgen",
         "utrum"
@@ -59336,12 +58971,9 @@
     ],
     "samverkan": [
         "samverkan",
-        "bestämd",
-        "form",
         "samverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "samverkningar"
@@ -59554,12 +59186,9 @@
     ],
     "sanningsförsäkran": [
         "sanningsförsäkran",
-        "bestämd",
-        "form",
         "sanningsförsäkran",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "sanningsförsäkringar"
@@ -59610,8 +59239,6 @@
     ],
     "sanskrit": [
         "sanskrit",
-        "bestämd",
-        "form",
         "sanskrit",
         "el.",
         "sanskriten"
@@ -59657,8 +59284,6 @@
     ],
     "satan": [
         "satan",
-        "bestämd",
-        "form",
         "satan",
         "utrum"
     ],
@@ -60536,7 +60161,6 @@
         "serveäss",
         "serveässet",
         "serveäss",
-        "bestämd",
         "serveässen"
     ],
     "server": [
@@ -61599,12 +61223,9 @@
     ],
     "självrannsakan": [
         "självrannsakan",
-        "bestämd",
-        "form",
         "självrannsakan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "självrannsakningar"
@@ -61799,11 +61420,6 @@
         "sjötungan",
         "sjötungor"
     ],
-    "sjövägen": [
-        "sjövägen",
-        "bestämd",
-        "form"
-    ],
     "skabb": [
         "skabb",
         "skabben"
@@ -61836,12 +61452,9 @@
     ],
     "skadeverkan": [
         "skadeverkan",
-        "bestämd",
-        "form",
         "skadeverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "skadeverkningar"
@@ -62163,8 +61776,6 @@
     ],
     "skepparexamen": [
         "skepparexamen",
-        "bestämd",
-        "form",
         "skepparexamen",
         "skepparexamina",
         "utrum"
@@ -62347,8 +61958,6 @@
     ],
     "skiktröntgen": [
         "skiktröntgen",
-        "bestämd",
-        "form",
         "skiktröntgen",
         "utrum"
     ],
@@ -62614,8 +62223,6 @@
     ],
     "skolfröken": [
         "skolfröken",
-        "bestämd",
-        "form",
         "skolfröken",
         "skolfröknar"
     ],
@@ -63892,11 +63499,6 @@
         "slukare",
         "slukarna"
     ],
-    "slukaråldern": [
-        "slukaråldern",
-        "bestämd",
-        "form"
-    ],
     "slum": [
         "slum",
         "slummen"
@@ -64249,7 +63851,6 @@
         "smittobärare",
         "smittobäraren",
         "smittobärare",
-        "bestämd",
         "smittobärarna"
     ],
     "smittspårning": [
@@ -65371,7 +64972,6 @@
         "somrar",
         ";",
         "obestämd",
-        "form",
         "singular",
         "genitiv",
         "somras",
@@ -67641,11 +67241,6 @@
         "storfavoriten",
         "storfavoriter"
     ],
-    "storfinansen": [
-        "storfinansen",
-        "bestämd",
-        "form"
-    ],
     "storfräsare": [
         "storfräsare",
         "storfräsaren",
@@ -68110,12 +67705,9 @@
     ],
     "strävan": [
         "strävan",
-        "bestämd",
-        "form",
         "strävan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "strävanden"
@@ -68281,8 +67873,6 @@
     ],
     "studentexamen": [
         "studentexamen",
-        "bestämd",
-        "form",
         "studentexamen",
         "studentexamina",
         "utrum"
@@ -69015,11 +68605,6 @@
         "surströmming",
         "surströmmingen",
         "surströmmingar"
-    ],
-    "susen": [
-        "susen",
-        "bestämd",
-        "form"
     ],
     "suspension": [
         "suspension",
@@ -70517,8 +70102,6 @@
     ],
     "talan": [
         "talan",
-        "bestämd",
-        "form",
         "talan",
         "utrum"
     ],
@@ -70951,7 +70534,6 @@
         "taxi",
         "taxin",
         ";",
-        "som",
         "kan",
         "användas",
         "taxibilar"
@@ -71245,8 +70827,6 @@
     ],
     "tentamen": [
         "tentamen",
-        "bestämd",
-        "form",
         "tentamen",
         "tentamina",
         "utrum"
@@ -71412,11 +70992,6 @@
         "tertiär",
         "",
         "utrum"
-    ],
-    "tertiärtiden": [
-        "tertiärtiden",
-        "bestämd",
-        "form"
     ],
     "tes": [
         "tes",
@@ -71777,13 +71352,9 @@
     ],
     "tidsspillan": [
         "tidsspillan",
-        "bestämd",
-        "form",
         "tidsspillan",
         "utrum",
         "tidspillan",
-        "bestämd",
-        "form",
         "tidspillan",
         "utrum"
     ],
@@ -71836,7 +71407,6 @@
         "tie-break",
         "tie-breaket",
         "tie-break",
-        "bestämd",
         "tie-breaken"
     ],
     "tiger": [
@@ -72028,12 +71598,9 @@
     ],
     "tillstyrkan": [
         "tillstyrkan",
-        "bestämd",
-        "form",
         "tillstyrkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "tillstyrkanden"
@@ -72119,12 +71686,9 @@
     ],
     "tillönskan": [
         "tillönskan",
-        "bestämd",
-        "form",
         "tillönskan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "tillönskningar"
@@ -72386,7 +71950,6 @@
         "tjurveden"
     ],
     "tjusare": [
-        "tjusare",
         "tjusaren",
         "tjusare",
         "tjusarna"
@@ -73066,11 +72629,6 @@
     "trafik": [
         "trafik",
         "trafiken"
-    ],
-    "trafikdöden": [
-        "trafikdöden",
-        "bestämd",
-        "form"
     ],
     "trafikkorsning": [
         "trafikkorsning",
@@ -74744,7 +74302,6 @@
         "tevetittare",
         "tevetittaren",
         "tevetittare",
-        "bestämd",
         "tevetittarna"
     ],
     "tvedräkt": [
@@ -74763,8 +74320,6 @@
     ],
     "tvekan": [
         "tvekan",
-        "bestämd",
-        "form",
         "tvekan",
         "utrum"
     ],
@@ -74803,11 +74358,6 @@
         "tvivlaren",
         "tvivlare",
         "tvivlarna"
-    ],
-    "tvären": [
-        "tvären",
-        "bestämd",
-        "form"
     ],
     "tvärflöjt": [
         "tvärflöjt",
@@ -74980,11 +74530,6 @@
     "tyngdkraft": [
         "tyngdkraft",
         "tyngdkraften"
-    ],
-    "tyngdlagen": [
-        "tyngdlagen",
-        "bestämd",
-        "form"
     ],
     "tyngdpunkt": [
         "tyngdpunkt",
@@ -75189,12 +74734,9 @@
     ],
     "tävlan": [
         "tävlan",
-        "bestämd",
-        "form",
         "tävlan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "tävlingar"
@@ -75432,8 +74974,6 @@
     ],
     "ultima": [
         "ultima",
-        "bestämd",
-        "form",
         "ultima",
         "el.",
         "ultiman",
@@ -75737,12 +75277,9 @@
     ],
     "undran": [
         "undran",
-        "bestämd",
-        "form",
         "undran",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "undringar"
@@ -75754,12 +75291,9 @@
     ],
     "undskyllan": [
         "undskyllan",
-        "bestämd",
-        "form",
         "undskyllan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "undskyllningar"
@@ -76048,20 +75582,15 @@
     ],
     "uppfordran": [
         "uppfordran",
-        "bestämd",
-        "form",
         "uppfordran",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "uppfordringar"
     ],
     "uppfostran": [
         "uppfostran",
-        "bestämd",
-        "form",
         "uppfostran",
         "utrum"
     ],
@@ -76266,12 +75795,9 @@
     ],
     "uppmuntran": [
         "uppmuntran",
-        "bestämd",
-        "form",
         "uppmuntran",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "uppmuntringar"
@@ -77905,8 +77431,6 @@
     ],
     "vacklan": [
         "vacklan",
-        "bestämd",
-        "form",
         "vacklan",
         "utrum"
     ],
@@ -78468,8 +77992,6 @@
     ],
     "vapenvägran": [
         "vapenvägran",
-        "bestämd",
-        "form",
         "vapenvägran",
         "utrum"
     ],
@@ -78952,8 +78474,6 @@
     ],
     "veklagan": [
         "veklagan",
-        "bestämd",
-        "form",
         "veklagan",
         "utrum"
     ],
@@ -79020,12 +78540,9 @@
     ],
     "verkan": [
         "verkan",
-        "bestämd",
-        "form",
         "verkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "verkningar"
@@ -79767,11 +79284,6 @@
         "vippan",
         "vippor"
     ],
-    "vippen": [
-        "vippen",
-        "bestämd",
-        "form"
-    ],
     "vira": [
         "vira",
         "viran"
@@ -80238,12 +79750,9 @@
     ],
     "vädjan": [
         "vädjan",
-        "bestämd",
-        "form",
         "vädjan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "vädjanden"
@@ -80284,8 +79793,6 @@
     ],
     "vägran": [
         "vägran",
-        "bestämd",
-        "form",
         "vägran",
         "utrum"
     ],
@@ -80500,8 +80007,6 @@
     ],
     "väntan": [
         "väntan",
-        "bestämd",
-        "form",
         "väntan",
         "utrum"
     ],
@@ -80589,11 +80094,6 @@
         "värld",
         "världen",
         "världar"
-    ],
-    "världsalltet": [
-        "världsalltet",
-        "bestämd",
-        "form"
     ],
     "världsatlas": [
         "världsatlasen",
@@ -81052,12 +80552,9 @@
     ],
     "växelverkan": [
         "växelverkan",
-        "bestämd",
-        "form",
         "växelverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "växelverkningar"
@@ -81289,7 +80786,6 @@
         "vårar",
         ";",
         "obestämd",
-        "form",
         "singular",
         "genitiv",
         "våras",
@@ -82407,8 +81903,6 @@
     ],
     "ängslan": [
         "ängslan",
-        "bestämd",
-        "form",
         "ängslan",
         "utrum"
     ],
@@ -82450,11 +81944,6 @@
         "änkefru",
         "änkefrun",
         "änkefruar"
-    ],
-    "änkeleken": [
-        "änkeleken",
-        "bestämd",
-        "form"
     ],
     "änkeman": [
         "änkeman",
@@ -82513,7 +82002,6 @@
         "äpplekartar",
         "el.",
         "äpplekart",
-        "bestämd",
         "äpplekartarna",
         "el.",
         "äpplekarten"
@@ -82814,8 +82302,6 @@
     ],
     "ävlan": [
         "ävlan",
-        "bestämd",
-        "form",
         "ävlan",
         "utrum"
     ],
@@ -82890,8 +82376,6 @@
     ],
     "åkallan": [
         "åkallan",
-        "bestämd",
-        "form",
         "åkallan",
         "utrum"
     ],
@@ -83490,8 +82974,6 @@
     ],
     "åstundan": [
         "åstundan",
-        "bestämd",
-        "form",
         "åstundan",
         "utrum"
     ],
@@ -83657,12 +83139,9 @@
     ],
     "återverkan": [
         "återverkan",
-        "bestämd",
-        "form",
         "återverkan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "återverkningar"
@@ -83771,8 +83250,6 @@
     ],
     "åverkan": [
         "åverkan",
-        "bestämd",
-        "form",
         "åverkan",
         "utrum"
     ],
@@ -84085,19 +83562,14 @@
     ],
     "ömkan": [
         "ömkan",
-        "bestämd",
-        "form",
         "ömkan",
         "utrum"
     ],
     "önskan": [
         "önskan",
-        "bestämd",
-        "form",
         "önskan",
         "utrum",
         ";",
-        "som",
         "kan",
         "användas",
         "önskningar"
@@ -84205,8 +83677,6 @@
     ],
     "örnbräken": [
         "örnbräken",
-        "bestämd",
-        "form",
         "örnbräken",
         "örnbräknar",
         "utrum"
