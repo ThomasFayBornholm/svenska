@@ -13145,12 +13145,10 @@
         "cyanvätesyran"
     ],
     "cykel": [
-        "cykel",
         "cykeln",
         "cyklar"
     ],
     "cykel-2": [
-        "cykel",
         "cykeln",
         "cykler"
     ],
@@ -37320,6 +37318,11 @@
         "klienten",
         "klienter"
     ],
+    "klimat": [
+        "klimatet",
+        "klimat",
+        "klimaten"
+    ],
     "klimatfråga": [
         "klimatfråga",
         "~n",
@@ -48676,7 +48679,6 @@
         "montörer"
     ],
     "moped": [
-        "moped",
         "mopeden",
         "mopeder"
     ],
@@ -49709,7 +49711,6 @@
         "människoätarna"
     ],
     "mänsklighet": [
-        "mänsklighet",
         "mänskligheten"
     ],
     "märkning": [
@@ -53619,6 +53620,13 @@
         "poängen",
         "poänger"
     ],
+    "prat": [
+        "pratet"
+    ],
+    "prata": [
+        "pratan",
+        "prator"
+    ],
     "present": [
         "present",
         "presenten",
@@ -55381,6 +55389,10 @@
         "reaktionsmotor",
         "reaktionsmotorn",
         "reaktionsmotorer"
+    ],
+    "reaktionstid": [
+        "reaktionstiden",
+        "reaktionstider"
     ],
     "reaktor": [
         "reaktor",
@@ -79713,6 +79725,11 @@
         "väckelserörelse",
         "~n",
         "~r"
+    ],
+    "väder": [
+        "vädret",
+        "väder",
+        "vädren"
     ],
     "väderkarta": [
         "väderkarta",
