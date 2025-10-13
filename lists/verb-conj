@@ -2858,7 +2858,6 @@
         "beivrat"
     ],
     "bejaka": [
-        "bejaka",
         "bejakade",
         "bejakat"
     ],
@@ -11069,7 +11068,6 @@
         "förorenat"
     ],
     "förorsaka": [
-        "förorsaka",
         "förorsakade",
         "förorsakat"
     ],
@@ -30857,9 +30855,8 @@
         "städat"
     ],
     "ställa": [
-        "ställa",
         "ställde",
-        "ställt,",
+        "ställt",
         "ställer"
     ],
     "ställa av": [
@@ -36809,9 +36806,8 @@
         "vidmakthåller"
     ],
     "vidröra": [
-        "vidröra",
         "vidrörde",
-        "vidrört,",
+        "vidrört",
         "vidrör"
     ],
     "vidta": [

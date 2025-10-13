@@ -2010,7 +2010,6 @@
         "animositeten"
     ],
     "aning": [
-        "aning",
         "aningen",
         "aningar"
     ],
@@ -5081,6 +5080,11 @@
         "avtoningen",
         "avtoningar"
     ],
+    "avtryck": [
+        "avtrycket",
+        "avtryck",
+        "avtrycken"
+    ],
     "avtryckare": [
         "avtryckare",
         "avtryckaren",
@@ -5395,7 +5399,6 @@
         "bakar"
     ],
     "bakdel": [
-        "bakdel",
         "bakdelen",
         "bakdelar"
     ],
@@ -7680,7 +7683,6 @@
         "beständigheten"
     ],
     "beståndsdel": [
-        "beståndsdel",
         "beståndsdelen",
         "beståndsdelar"
     ],
@@ -16277,6 +16279,11 @@
         "dämpare",
         "dämparna"
     ],
+    "dåd": [
+        "dådet",
+        "dåd",
+        "dåden"
+    ],
     "dålighet": [
         "dålighet",
         "dåligheten",
@@ -19721,7 +19728,6 @@
         "finlandssvenskor"
     ],
     "finländare": [
-        "finländare",
         "finländaren",
         "finländare",
         "finländarna"
@@ -21341,7 +21347,6 @@
         "frallor"
     ],
     "framdel": [
-        "framdel",
         "framdelen",
         "framdelar"
     ],
@@ -24515,6 +24520,10 @@
         "förtretlighet",
         "förtretligheten",
         "förtretligheter"
+    ],
+    "förtroende": [
+        "förtroendet",
+        "förtroenden"
     ],
     "förtroendefråga": [
         "förtroendefråga",
@@ -31753,6 +31762,10 @@
         "hårgelét",
         "hårgeléer"
     ],
+    "hårklyveri": [
+        "hårklyveriet",
+        "hårklyverier"
+    ],
     "hårknut": [
         "hårknut",
         "hårknuten",
@@ -35326,7 +35339,6 @@
         "jägarna"
     ],
     "jämförelse": [
-        "jämförelse",
         "jämförelsen",
         "jämförelser"
     ],
@@ -36285,6 +36297,9 @@
         "kanvasen",
         "canvas",
         "canvasen"
+    ],
+    "kaos": [
+        "kaoset"
     ],
     "kap": [
         "kap"
@@ -53932,9 +53947,17 @@
         "otillfredsställelse",
         "otillfredsställelsen"
     ],
+    "partikel": [
+        "partikeln",
+        "partiklar"
+    ],
     "period": [
         "perioden",
         "perioder"
+    ],
+    "planhalva": [
+        "planhalvan",
+        "planhalvor"
     ],
     "poäng": [
         "poängen",
@@ -56636,6 +56659,11 @@
         "restskatt",
         "restskatten",
         "restskatter"
+    ],
+    "resultat": [
+        "resultatet",
+        "resultat",
+        "resultaten"
     ],
     "resumé": [
         "resumé",
@@ -68550,7 +68578,6 @@
         "stämningar"
     ],
     "stämpel": [
-        "stämpel",
         "stämpeln",
         "stämplar"
     ],
@@ -75844,7 +75871,6 @@
         "ungdomsvården"
     ],
     "unge": [
-        "unge",
         "ungen",
         "ungar"
     ],
@@ -81589,6 +81615,11 @@
         "yawlen",
         "yawler"
     ],
+    "yngel": [
+        "ynglet",
+        "yngel",
+        "ynglen"
+    ],
     "yngling": [
         "yngling",
         "ynglingen",
@@ -82793,6 +82824,16 @@
         "äxingen",
         "äxingar"
     ],
+    "å": [
+        "å:et",
+        "å:n",
+        "å",
+        "å:na"
+    ],
+    "å-2": [
+        "ån",
+        "åar"
+    ],
     "åbo": [
         "åbo",
         "åbon",
@@ -83736,12 +83777,14 @@
         "utrum"
     ],
     "ö": [
-        "ö",
         "ö:et",
         "ö:n",
-        "el.",
         "ö",
         "ö:na"
+    ],
+    "ö-2": [
+        "ön",
+        "öar"
     ],
     "öbo": [
         "öbo",
@@ -84276,6 +84319,9 @@
         "östanvinden",
         "östanvindar"
     ],
+    "öster": [
+        "östern"
+    ],
     "österbottning": [
         "österbottning",
         "österbottningen",
@@ -84622,7 +84668,6 @@
         "överloppsgärningar"
     ],
     "överläggning": [
-        "överläggning",
         "överläggningen",
         "överläggningar"
     ],
