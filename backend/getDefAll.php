@@ -3,13 +3,10 @@ function get_details($word, $dict,$class) {
 	$tmp["word"] = $word;
 	$tmp["def"] = $dict[$word];
 	$tmp["class"] = $class;
-	if ($el === "fraser") {
-		$tmp["meta"] = $word;						
-	}
+	$path = getcwd() ."/../lists/";
 	if ($el === "fraser") {
 		$tmp["meta"] = $word;						
 	} else {
-		$path = getcwd() ."/../lists/";
 		$meta_name = $path . $class . "-meta";
 		$contents = file_get_contents($meta_name, 'UTF-8');
 		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
@@ -18,6 +15,15 @@ function get_details($word, $dict,$class) {
 				$tmp["meta"] = $dict[$word];						
 			}
 		}
+		$conj_name = $path . $class . "-conj";
+		$contents_conj = file_get_contents($conj_name);
+		$dict_conj = json_decode($contents_conj, JSON_UNESCAPED_UNICODE);
+		if ($dict_conj) {
+			if (array_key_exists($word, $dict_conj)) {
+				$tmp["conj"] = $dict_conj[$word];						
+			}
+		}
+
 	}
 	return $tmp;
 }
@@ -32,11 +38,6 @@ function get_details($word, $dict,$class) {
 		$contents = file_get_contents($path . $name, 'UTF-8');
 		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
 		if ($dict) {
-			if (strlen($out) > 0) { 
-				$del = "<br>";
-			} else {
-				$del = "";
-			}
 			if (array_key_exists($word, $dict)) {
 				$tmp = get_details($word, $dict,$el);
 				$outArr[$el . "_" . $word] =  $tmp;

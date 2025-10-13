@@ -60,6 +60,7 @@ GLOBAL = {
 	cur_matches: [],
 	cur_matches_count: 0,
 	match_inc: 0,
+	conj_inc: -1
 }
 
 function startup() {
@@ -714,6 +715,9 @@ function clearInput() {
 
 async function seekWord(word, link = false, lastEnum = false) {
 	if (DEBUG) console.log ("seekWord()");
+	if (DEBUG) console.log ("  PARAM word = " + word);
+	if (DEBUG) console.log ("  PARAM link = " + link);
+	if (DEBUG) console.log ("  PARAM lastEnum = " + lastEnum);
 	$('#iInput').val("");
 	CUR_DEF_ENUM = 1; // Always show first defintion for a word the user has searched for
 	CUR_CONJ = "";
@@ -721,6 +725,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 	GLOBAL.cur_matches = [];
 	GLOBAL.cur_matches_count = 0;
 	GLOBAL.cur_match_inc = 0;
+	GLOBAL.conj_inc = -1;
 	// For backwards navigation
 	
 	LAST_CLASS = CLASS;
@@ -770,6 +775,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 		let first_match_key = match_keys[0];
 		let tmp_class = GLOBAL.cur_matches[first_match_key]["class"];
 		setClass(tmp_class);
+		if (CUR_CONJ.length > 0) GLOBAL.conj_inc = get_conj_inc(CUR_CONJ);
 		CUR_DEF = GLOBAL.cur_matches[first_match_key]["def"];
 		N_DEFS = nDefs();
 		let def = getDefInd(CUR_DEF_ENUM);
@@ -1812,7 +1818,12 @@ function fmtMeta(meta) {
 	let rep = "<span id='iWordRoot'"
 	rep += " onmouseover=highlight(this,event)";
 	// Remove any disambiguation suffix when more than one entry exists for root key
-	CUR_CONJ.length > 0 ? tmpCUR_WORD = CUR_CONJ : tmpCUR_WORD = CUR_WORD;
+	if (CUR_CONJ != undefined) {
+		CUR_CONJ.length > 0 ? tmpCUR_WORD = CUR_CONJ : tmpCUR_WORD = CUR_WORD;
+	} else {
+		CUR_CONJ = "";
+		tmpCUR_WORD = CUR_CONJ;
+	}
 	tmpCUR_WORD = tmpCUR_WORD.replace(/-.*/,"");
 	rep += "><b>" + tmpCUR_WORD + "</b></span>"
 	if (CLASS === "fraser") {
@@ -1985,6 +1996,10 @@ function processKeyDown(ev) {
 		defaultMeta(false);
 	} else if (ev.key === "ArrowLeft" || ev.key === "ArrowRight") {		
 		navDef(ev);
+	} else if (ev.key === "ArrowDown") {
+		nav_conj(1);
+	} else if (ev.key === "ArrowUp") {
+		nav_conj(-1);
 	}
 	
 	if (ev.location === 2) {
@@ -2445,6 +2460,7 @@ function inc_match(inc) {
 	if (DEBUG) console.log("  PARAM inc = " + inc);
 	let cur_match_inc = GLOBAL.match_inc;
 	CUR_DEF_ENUM = 1;
+	GLOBAL.conj_inc = -1;
 	GLOBAL.match_inc += inc;
 	if (GLOBAL.match_inc < 0) GLOBAL.match_inc = 0;
 	if (GLOBAL.match_inc > GLOBAL.cur_matches_count-1) GLOBAL.match_inc = GLOBAL.cur_matches_count- 1;
@@ -2516,4 +2532,28 @@ async function showExternal() {
 		const id = json["id"];
 		window.open(base_url + id);
 	}
+}
+
+function nav_conj(inc) {
+	let key = CLASS + "_" + CUR_WORD;
+	let cur_match = GLOBAL.cur_matches[key];
+	let conj_arr = cur_match["conj"];
+	GLOBAL.conj_inc += inc;
+	if (GLOBAL.conj_inc < -1) GLOBAL.conj_inc = -1;
+	if (GLOBAL.conj_inc > conj_arr.length - 1) GLOBAL.conj_inc = conj_arr.length - 1;
+	if (GLOBAL.conj_inc === -1) {
+		CUR_CONJ = cur_match["word"];
+	} else {
+		CUR_CONJ = conj_arr[GLOBAL.conj_inc];
+	}
+	$('#iMeta').html(fmtMeta(cur_match["meta"]));
+}
+
+function get_conj_inc() {
+	if (DEBUG) console.log("FUNC get_conj_inc");
+	let key = CLASS + "_" + CUR_WORD;
+	let cur_match = GLOBAL.cur_matches[key];
+	let conj_arr = cur_match["conj"];
+	let inc = conj_arr.indexOf(CUR_CONJ);
+	return inc; 
 }
