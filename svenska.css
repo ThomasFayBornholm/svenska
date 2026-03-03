@@ -300,7 +300,6 @@ label {
 
 .fraser {
 	color: skyblue;
-	cursor: pointer;
 }
 
 .link {
@@ -317,4 +316,9 @@ label {
 	font-size: 16pt;
 	margin-left: 2vw;
 	text-align: left;
+}
+
+.class_fmt {
+	text-transform: uppercase;
+	text-decoration: underline;
 }

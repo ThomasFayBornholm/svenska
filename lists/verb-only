@@ -1,3 +1,4 @@
+  2
 abbreviera
 abdikera
 abonnera
@@ -698,6 +699,7 @@ bjussa
 blada
 bladdra
 blaja
+blamage
 blamera
 blamera sig
 blanchera
@@ -793,6 +795,7 @@ bota
 botanisera
 bottenskrapa
 bottna
+bowla
 boxa
 boxas
 braka
@@ -852,6 +855,7 @@ bräda
 brädsegla
 brädslå
 bräka
+bräm
 bränna
 bränna av
 bränna sig
@@ -902,6 +906,7 @@ byta upp sig
 byta ut
 bädda
 bädda in
+bäddjacka
 bälga i sig
 bälta
 bälta sig
@@ -1393,6 +1398,8 @@ fastslå
 fastställa
 fatta
 fattas
+fega
+fega ur
 feja
 fejka
 fejla
@@ -1436,6 +1443,7 @@ fisa
 fiska
 fixa
 fixa sig
+fixera
 fjanta
 fjanta sig
 fjädra
@@ -1508,6 +1516,7 @@ forma om
 formalisera
 formatera
 formera
+formera sig
 formge
 formulera
 forsa
@@ -1568,6 +1577,7 @@ frisera sig
 friska
 friska upp
 friskna till
+frisläppa
 friställa
 frita
 fritera
@@ -1642,6 +1652,8 @@ färska
 fästa
 fästa sig
 få
+få för sig
+få ur
 få ut
 få åter
 fålla
@@ -2177,6 +2189,7 @@ gifta om sig
 gifta sig
 gilja
 gilla
+gillas
 gina
 gippa
 gira
@@ -2240,6 +2253,7 @@ gottgöra
 gradera
 graduera
 granska
+grant  -1
 grassera
 gratinera
 gratta
@@ -2264,6 +2278,7 @@ gripa sig an
 gro
 gro igen
 grogga
+grotta ner sig
 grovna
 grubbla
 gruffa
@@ -2346,8 +2361,11 @@ göra upp
 göra åt
 ha
 ha för sig
+ha sig
 hacka
+hacka ned
 hacka ner
+haffa
 hafsa
 hagla
 haka
@@ -2426,6 +2444,7 @@ hjälpa upp
 hjälpas åt
 hoa
 hojta
+hokuspokus
 holka ur
 hopa sig
 hopas
@@ -2485,6 +2504,7 @@ hämnas
 hämta
 hämta in
 hämta sig
+hämta upp
 hända
 hänföra
 hänföra sig
@@ -2785,6 +2805,7 @@ isa ner
 isa sig
 iscensätta
 isolera
+isolera sig
 ituta
 iver
 ivra
@@ -2939,6 +2960,7 @@ klarna
 klassa
 klassificera
 klavbinda
+klavertramp
 klema
 klema bort
 kleta
@@ -3308,6 +3330,7 @@ kärlkramp
 kärna
 kärna ur
 kåsera
+köa
 köna
 könskvotera
 köpa
@@ -3376,6 +3399,7 @@ leka
 lemlästa
 lera
 leta
+leta sig
 leva
 leva med
 leva om
@@ -3428,6 +3452,7 @@ livnära
 ljuda
 ljuga
 ljusna
+ljuta
 lobotomera
 locka
 locka av
@@ -3447,6 +3472,7 @@ lotsa
 lotsa sig fram
 lotta
 lova
+lova bort
 lovorda
 lovprisa
 lubba
@@ -3642,6 +3668,7 @@ meritera
 meritera sig
 messa
 meta
+meänkieli
 migrera
 mikra
 mildra
@@ -3701,6 +3728,7 @@ moltiga
 molvärka
 monopolisera
 montera
+montera ned
 montera ner
 moralisera
 morra
@@ -3776,6 +3804,7 @@ möblera
 möblera om
 möda sig
 möjliggöra
+mönstra
 mönstra av
 mönstra in
 mönstra på
@@ -3875,6 +3904,7 @@ närma sig
 närvara
 nätverka
 nå
+nå ut
 nåta
 nödga
 nödgas
@@ -4022,6 +4052,7 @@ passa sig
 passa upp
 passera
 passivera
+pastörisera
 patcha
 patinera
 patrullera
@@ -4108,8 +4139,10 @@ polarisera
 polemisera
 polera
 politisera
+pollinera
 polstra
 ponera
+poppa
 poppa upp
 porla
 porta
@@ -4125,6 +4158,7 @@ poängtera
 praktisera
 prassla
 prata
+prata ihop sig
 precisera
 predestinera
 predicera
@@ -4871,6 +4905,7 @@ slappna
 slappna av
 slarva
 slaska
+slavofil
 sleva
 slicka
 slingra
@@ -5008,6 +5043,7 @@ snabba på
 snabba sig
 snabba upp
 snacka
+snacka ihop sig
 snagga
 snagga sig
 snappa
@@ -5155,6 +5191,7 @@ spä
 spä på
 späcka
 späda
+späda på
 spänna
 spänta
 spärra
@@ -5349,6 +5386,7 @@ stöka till
 stöna
 stöpa
 störa
+störa sig
 störta
 störta sig
 störtblöda
@@ -5384,6 +5422,7 @@ sura
 surfa
 surra
 susa
+susning
 suspendera
 svaja
 svalka
@@ -5500,6 +5539,7 @@ sömma
 sönderdela
 sönderfalla
 sörja
+sörpla
 ta
 ta av
 ta bort
@@ -5534,7 +5574,6 @@ ta åt sig
 ta över
 tabba sig
 tabellera
-tabubelägga
 tacka
 tackla
 tackla av
@@ -5630,6 +5669,7 @@ tillspilloge
 tillströmma
 tillstunda
 tillstyrka
+tillställa
 tillstå
 tillsätta
 tillta
@@ -5715,6 +5755,7 @@ totalvägra
 toucha
 tova
 tova sig
+tracka
 tradera
 trafikera
 traggla
@@ -5818,6 +5859,7 @@ tumla
 tumma
 tungkyssa
 tunna
+tunnla
 tupera
 tuppa av
 turas om
@@ -5993,6 +6035,7 @@ uppnå
 uppoffra
 upprada
 upprepa
+upprepa sig
 uppresa
 uppresa sig
 upprusta
@@ -6229,8 +6272,11 @@ vanvårda
 vanvörda
 vanära
 vara
+vara med
+vara på
 vara sig
 vara-2
+varas
 varda
 variera
 varna
@@ -6447,6 +6493,7 @@ vårda
 vårda sig
 våta
 vörda
+wallraffa
 yla
 yngla
 ynka

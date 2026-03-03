@@ -288,7 +288,7 @@ function displayDef(def) {
 	}
 	outDef = outDef.replaceAll(" </b>","</b>")
 	// Dynamise links
-	outDef = outDef.replaceAll("<l>","<span onclick=followLink(this.innerText) onmouseover=highlight(this,event) title='Click to follow'><b>");
+	outDef = outDef.replaceAll("<l>","<span><b>");
 	outDef = outDef.replaceAll("</l>","</b></span>");
 	let tmpSpan = "<span id='iMeta' "
 
@@ -346,10 +346,7 @@ function addLinks(refClass,def) {
 	def = "";
 	m = refClass + " ";
 	delim = "";
-	beginSpan = "<span onclick=followLink(this.innerText) title='Click to follow'";
-	beginSpan += " onmouseover=highlight(this,event)";
-	beginSpan += ">"
-	spanTmp = beginSpan + "<b>_w_</b></span>";
+	spanTmp = "<span><b>_w_</b></span>"
 	for (line of defArr) {		
 		if (line.indexOf(m) != -1) {
 			elArr = line.split(", ");
@@ -370,23 +367,6 @@ function addLinks(refClass,def) {
 	return def;
 }
 
-function followLink(word) {
-    if (DEBUG) console.log("followLink(" + word +  ")");
-	LAST_SCROLL_Y = window.pageYOffset;	
-	LAST_CLASS = CLASS;	
-	LAST_DEF_ENUM = CUR_DEF_ENUM;	
-    // Remove any soft hyphens in word
-    word = word.replaceAll("\u00ad","");
-	let rep = word.match(/\s/);
-	if (rep != null) {
-		word = word.replaceAll(rep[0], " ");
-	}
-    for (i = 0; i < 24; i++) {
-		word = word.replace(i,"");
-	}
-	setCUR_WORD(word);
-	wordFromAll(word);		
-}
 
 function defFromAll(word) {
 	if (DEBUG) console.log("defFromAll(" + word + ")");
@@ -414,112 +394,8 @@ function defFromAll(word) {
 	});
 }
 
-/* Return as soon as first match is Found
- Order is
- 1: 'All'
- 2: 'Conjugate (any class)'
- 3: 'Fuzzy Fras' match
-*/
-function wordFromAll(word) {
-	defFromAll(word)
-	.then((result) => {
-		if (result["match"].length > 0) {		
-			setClass(result['class'], result['match']);
-			return;
-		} else {
-			wordFromAll_getConj(result,word)
-			.then((result2) => {
-				if (result2["match"].length > 0) {
-					setClass(result2['class'], result2['match']);
-					return;
-				} else {
-					wordFromAll_FrasFuzzy(result2, word)
-					.then((result3) => {
-						if (result3["match"].length > 0) {
-							setClass(result3['class'], result3['match']);
-						} else {
-							noMatch(word);
-						}
-					})
-					.catch(error => {
-						console.log(error);
-					})
-				}
-			})
-		}
-	})
-}					
-
-function wordFromAll_getConj(inp, word) {
-	if (DEBUG) console.log("wordFromAll_getConj");
-	return new Promise((resolve) => {	
-		var out = [];
-		out['class'] = "all";
-		if (inp["match"].length > 0) {
-			// No further work required
-			// Simply pass through input results			
-			out['match'] = inp['match'];
-			out['class'] = inp['class'];
-			resolve(out);
-		} else {	
-			fetch('backend/getConj.php?word=' + word + '&class=all', {
-				method: 'get',
-				mode: 'cors',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {
-				return response.json();
-			})
-			.then(json => {
-				
-				out['match'] = json["word"];	
-				if (json["word"].length > 1) {
-					out['class'] = json["class"];	
-				}
-				resolve(out)
-			})
-		}
-	});
-}
-
-function wordFromAll_FrasFuzzy(inp,word) {	
-	if (DEBUG) console.log("wordFromAll_FrasFuzzy");
-	return new Promise((resolve) => {	
-		var out = [];
-		out['class'] = "all";
-		if (inp['match'].length > 0) {
-			// No further work required
-			// Simply pass through input results
-			out['match'] = inp['match'];
-			out['class'] = inp['class'];			
-			resolve(out);
-		} else {
-			fetch('backend/fuzzyFrasMatch.php?key=' + word, {
-				method: 'get',
-				mode: 'cors',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {
-				return response.json();
-			})
-			.then(json => {				
-				if (json['match'].length > 0) { 					
-					out['match'] = json["match"];
-					out['class'] = "fraser";
-				} else {
-					out['match'] = "";
-				}
-				resolve(out)
-			})			
-		}
-	});
-}
-
 function getCompDef(meta, def) {
+
 	if (DEBUG) console.log("getCompDef(def); def = " + def);
 	// Compose and output string that combines definition of multiple (usually two)
 	// component words
@@ -547,7 +423,7 @@ function getCompDef(meta, def) {
 			// def - the original reference definition
 			// tmp - original ref + link to the referenced word
 			// json - the referenced definition
-			let tmp = "<span onclick=\"followLink(this.innerText)\"><b>_w_</b></span>:";
+			let tmp = "<span><b>_w_</b></span>:";
 			tmp = tmp.replaceAll("_w_",removeClassDesc(w));
 			tmp = tmp + "<br>";
 			out[done] = makeLinks(tmp + json["def"]);
@@ -747,6 +623,7 @@ async function seekWord(word, link = false, lastEnum = false) {
 	})
 	let json = await res.json();
 	// Combine exact (root) matches and conjugation/declination matches
+	// Only combine frases in the case that no other matches are found
 	let exact_matches = json["matches"];
 	if (Object.keys(exact_matches).length > 0) CUR_WORD = word;
 	const res_conj = await fetch('backend/getConj.php?word=' + word, {
@@ -761,10 +638,12 @@ async function seekWord(word, link = false, lastEnum = false) {
 	conj_matches = json_conj["matches"];
 	conj_keys = Object.keys(conj_matches);
 	for(const k of conj_keys) {
-		if (!(k in Object.keys(matches))) {
-			matches[k] = conj_matches[k];
+		if (true || matches.length > 0 && ! k.includes("fraser") || matches.length === 0) {
+			if (!(k in Object.keys(matches))) {
+				matches[k] = conj_matches[k];
+				if (CUR_WORD === "") CUR_WORD = conj_matches[k]["word"];
+			}
 		}
-		if (CUR_WORD === "") CUR_WORD = conj_matches[k]["word"];
 		CUR_CONJ = word;
 	}
 	let match_keys = Object.keys(matches);
@@ -790,21 +669,49 @@ async function seekWord(word, link = false, lastEnum = false) {
 	}
 	let out_html = "'" + CUR_WORD.replace(/-\d/,"") + "'";
 	let n_pVerbs = 0; // Particle verbs
+	let pVerbs = [];
 	for(const key of Object.keys(GLOBAL.cur_matches)) {
 		let tmp =  GLOBAL.cur_matches[key];
 		if (tmp["class"] === "verb" && tmp["word"].includes(" ")) {
 			n_pVerbs++;
+			let tmp_arr = tmp["word"].split(" ");
+			let tmp_str = "";
+			for (let i = 1; i < tmp_arr.length; i++) {
+				tmp_str.length === 0 ? delim = "" : delim = " ";
+				tmp_str += delim + tmp_arr[i];
+			}
+			pVerbs.push(tmp_str);
 		} else {
-		out_html += " - " + GLOBAL.cur_matches[key]["class"];
+			out_html += " - " + GLOBAL.cur_matches[key]["class"];
 		}
 	}
+
+	pVerbs_str = fmt_pVerbs(pVerbs);
 	if (n_pVerbs === 1) {
-		out_html += " - partikel verb";
+		if (word.includes(" ")) {
+			out_html += " - verb";
+		} else {
+			out_html += " - partikel verb"
+		}
 	} else if (n_pVerbs > 1) {
-		out_html += " - partikel verb (x" + n_pVerbs + ")";
+		out_html += " - partikel verb (x" + n_pVerbs + ")"
 	}
-	$('#iSummary').text(out_html);
+	$('#iSummary').html(out_html);
 	focusInput();
+}
+
+function fmt_pVerbs(arr) {
+	let out = "";
+	for(let i = 0; i < arr.length; i++) {
+		if (i === 0) {
+			out = arr[i];
+		} else if (i % 8 === 0) {
+			out += "<br>" + arr[i];
+		} else {
+			out += "/" + arr[i];
+		}
+	}
+	return out;
 }
 
 async function getWordConj(word) {
@@ -837,11 +744,11 @@ function noMatch(word) {
 }
 
 function setClass(c, showMore = false) {
-    if (DEBUG) console.log("setClass(" + c + ", seek = " + seek + ")");
+    if (DEBUG) console.log("setClass(" + c + ", showMore = " + showMore + ")");
 	LAST_CLASS = CLASS;	
 	if (CLASS != "fraser") LAST_SCROLL_Y = window.pageYOffset;	
 	
-	if (DEBUG) console.log("setClass(c, seek), c = " + c + ", seek = " + seek);
+	if (DEBUG) console.log("setClass(c, showMore), c = " + c + ", showMore = " + showMore);
 	$('#iAux').html("");	
 	$('#iMeta').html("");
 	//wordCount(); // Think it is better to do word count only when there is an addition to the listing. This line was a previous hack.
@@ -1850,11 +1757,13 @@ function fmtMeta(meta) {
 		if (i == 0) tmpMeta += delMeta + metaArr[i];
 	}
 	tmpMeta = "<i>" + tmpMeta + "</i><br>"
-	let pretty_class = CLASS.replace(/_.*/,"");
-	tmpMeta += "<br>" + pretty_class + "<br>";
+	let pretty_class = "<span class='class_fmt'>" + CLASS.replace(/_.*/,"") + "</span>";
+	if (tmpMeta.includes(CUR_WORD + "et") || tmpMeta.includes(CUR_WORD + "t")) pretty_class = pretty_class.replace("substantiv","substantiv - ett")
+	tmpMeta = "<br>" + pretty_class + "<br><br>" + tmpMeta;
 	tmpMeta += "---------------------<br>";
 	return tmpMeta;
 }
+
 function ScrollViewDownWrapper() {
 
 	if (false && $('#iDefDiv').css("display") === "none") {
@@ -1931,9 +1840,9 @@ function getMore(ind) {
 			tmp = tmp.replaceAll("HISTORIK:","<b>HISTORIK:</b>");
 			// Use displayDef to to dynamise word links
 			// Dynamise links
-			tmp = tmp.replaceAll("<l>","<span class='link' onclick=followLink(this.innerText)>");
+			tmp = tmp.replaceAll("<l>","<span>");
 			tmp = tmp.replaceAll("</l>","</span>");
-			tmp = tmp.replaceAll("<lf>","<span class='fraser' onclick=seekWord(this.innerText)><b>");
+			tmp = tmp.replaceAll("<lf>","<span class='fraser'><b>");
 			tmp = tmp.replaceAll("</lf>","</b></span>");
 			$('#iMoreText').html(tmp);		
 			let moreHeight = parseInt($('#iMoreText').css("height").replace("px",""));
@@ -1966,7 +1875,6 @@ function editMore(ev,key) {
 }
 
 function processKeyDown(ev) {
-		
 	if (DEBUG) console.log("processKeyDown(ev), ev.key = " + ev.key)	
 	
 	if (ev.key === "Escape") {
@@ -1981,7 +1889,7 @@ function processKeyDown(ev) {
 		removeWord();
 	} else if (ev.key === "F1") {
 		showExternal();	
-	} else if (ev.key === "*") {
+	} else if (ev.key === "'") {
 		ev.preventDefault();
 		fromEnglish();
 	} else if (ev.key === "F2") {
@@ -2158,6 +2066,9 @@ function round(dec, places) {
 
 async function fetchDef() {
 	if (DEBUG) console.log("FUNC fetchDef()");
+	if ($('#iInput').val().length > 0) {
+		CUR_WORD = $('#iInput').val();
+	}
 	$('#iMeta').html("searching for '<b>" + CUR_WORD + "</b>' ... ");
 	$('#iParDef').html("");
 	$('#iMore').html("");
@@ -2194,6 +2105,7 @@ async function fetchDef() {
 		$('#iDefText').val(tmp);					
 		*/	
 	} else {
+		console.log(json.matches.length)
 		if (json.matches.length > 0) {
 			added_keys = [];
 			classes = [];
@@ -2225,7 +2137,6 @@ function get_unique_key(key,word_class,added_keys) {
 		const regex = /-\d{1}$/;
 		if (regex.test(last)) {
 			let ind = last.at(-1);
-			console.log(last,ind)
 			key = last.slice(0,-1) + (Number(ind) + 1);
 		} else {
 			key = key + "-2";
@@ -2233,29 +2144,6 @@ function get_unique_key(key,word_class,added_keys) {
 	}
 	added_keys[word_class].push(key);
 	return key;
-}
-
-function getRaw() {
-	if (DEBUG) console.log("FUNC getRaw()")
-	fetch('backend/scrapeRaw.php?word=' + CUR_WORD + "&class=" + CLASS, {
-		nethod: 'get',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json'
-		}		
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(json => {
-		let url = json;
-		window.open(url)
-	})
-	.catch(error => {
-		log(error);
-	})
-	
-	// Make this more intelligent so that it resolves the work class if multiple matches
 }
 
 function shortenClass() {
@@ -2387,8 +2275,8 @@ function fromEnglish() {
 			return response.json();
 		})
 		.then(json => {
-			if (json != null) {
-				$('#iInput').val(json)
+			if (json["translation"] != null) {
+				$('#iInput').val(json["translation"])
 			} else {
 				// If no local translation use external service
 				
@@ -2536,6 +2424,7 @@ async function showExternal() {
 
 function nav_conj(inc) {
 	let key = CLASS + "_" + CUR_WORD;
+	console.log(key)
 	let cur_match = GLOBAL.cur_matches[key];
 	let conj_arr = cur_match["conj"];
 	GLOBAL.conj_inc += inc;
@@ -2551,7 +2440,7 @@ function nav_conj(inc) {
 
 function get_conj_inc() {
 	if (DEBUG) console.log("FUNC get_conj_inc");
-	let key = CLASS + "_" + CUR_WORD;
+	let key = CLASS + "_" + CUR_WORD.replaceAll(" ", "_");
 	let cur_match = GLOBAL.cur_matches[key];
 	let conj_arr = cur_match["conj"];
 	let inc = conj_arr.indexOf(CUR_CONJ);

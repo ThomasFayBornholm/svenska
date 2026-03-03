@@ -4,7 +4,7 @@ function get_details($word, $dict,$class) {
 	$tmp["def"] = $dict[$word];
 	$tmp["class"] = $class;
 	$path = getcwd() ."/../lists/";
-	if ($el === "fraser") {
+	if ($class === "fraser") {
 		$tmp["meta"] = $word;						
 	} else {
 		$meta_name = $path . $class . "-meta";
@@ -13,6 +13,7 @@ function get_details($word, $dict,$class) {
 		if ($dict) {
 			if (array_key_exists($word, $dict)) {
 				$tmp["meta"] = $dict[$word];						
+				$tmp["meta"] = str_replace("\u{00AD}", "", $tmp["meta"]);
 			}
 		}
 		$conj_name = $path . $class . "-conj";
@@ -40,17 +41,17 @@ function get_details($word, $dict,$class) {
 		if ($dict) {
 			if (array_key_exists($word, $dict)) {
 				$tmp = get_details($word, $dict,$el);
-				$outArr[$el . "_" . $word] =  $tmp;
+				$outArr[$el . "_" . str_replace(" ","_",$word)] =  $tmp;
 			}
 			$word2 = $word . "-2";
 			if (array_key_exists($word2,$dict)) {
 				$tmp = get_details($word2, $dict,$el);
-				$outArr[$el . "_" . $word2] = $tmp;
+				$outArr[$el . "_" . str_replace(" ","_",$word2)] = $tmp;
 			}
 			$word3 = $word . "-3";
 			if (array_key_exists($word3,$dict)) {
 				$tmp = get_details($word3, $dict,$el);
-				$outArr[$el . "_" . $word3] = $tmp;
+				$outArr[$el . "_" . str_replace(" ","_",$word3)] = $tmp;
 			} 
 		}
 	}

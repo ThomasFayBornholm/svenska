@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 
 set -e
-sudo apt install -y apache2 php php-curl
+dpkg -s apache2 >/dev/null 2>&1 || sudo apt-get install -y apache2
+dpkg -s php >/dev/null 2>&1 || sudo apt-get install -y php
+dpkg -s php-curl >/dev/null 2>&1 || sudo apt-get install -y php-curl
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 post=${script_dir#*svenska}
 root_path=${script_dir//$post/}
@@ -20,7 +22,7 @@ cp -r $root_path/main.js $install_path
 cp -r $root_path/svenska.css $install_path
 cp -r $root_path/img $install_path
 sudo chown -R www-data:www-data $install_path/sounds/*
-
+sudo cp $root_path/infra/scrape-svenska.py /srv/venv/t.py
 if [ ! -f $install_path/jquery-3.6.0.js ]; then
     wget -O "$install_path/jquery-3.6.0.js" https://code.jquery.com/jquery-3.6.0.js
 fi

@@ -956,9 +956,9 @@
         "arbiträra"
     ],
     "arg": [
-        "arg",
         "argt",
-        "arga"
+        "arga",
+        "arg"
     ],
     "argsint": [
         "argsint",
@@ -2515,9 +2515,14 @@
         "blasé"
     ],
     "blek": [
-        "blek",
         "blekt",
-        "bleka"
+        "bleka",
+        "blek"
+    ],
+    "bleklagd": [
+        "bleklagt",
+        "bleklagda",
+        "bleklagd"
     ],
     "blind": [
         "blind",
@@ -3053,6 +3058,10 @@
         "bärkraftigt",
         "bärkraftiga"
     ],
+    "böhmisk": [
+        "böhmiskt",
+        "böhmiska"
+    ],
     "böjbar": [
         "böjbar",
         "böjbart",
@@ -3220,11 +3229,6 @@
         "daggig",
         "daggigt",
         "daggiga"
-    ],
-    "daggvåt": [
-        "daggvåt",
-        "daggvått",
-        "daggvåta"
     ],
     "daglig": [
         "daglig",
@@ -3626,9 +3630,9 @@
         "diverse"
     ],
     "djup": [
-        "djup",
         "djupt",
-        "djupa"
+        "djupa",
+        "djup"
     ],
     "djupgående": [
         "djupgående"
@@ -4149,9 +4153,9 @@
         "ekiga"
     ],
     "ekivok": [
-        "ekivok",
         "ekivokt",
-        "ekivoka"
+        "ekivoka",
+        "ekivok"
     ],
     "eklatant": [
         "eklatant",
@@ -4449,7 +4453,8 @@
     ],
     "enskild": [
         "enskilt",
-        "enskilda"
+        "enskilda",
+        "enskild"
     ],
     "enslig": [
         "enslig",
@@ -4540,9 +4545,9 @@
         "erbarmliga"
     ],
     "erfaren": [
-        "erfaren",
         "erfaret",
-        "erfarna"
+        "erfarna",
+        "erfaren"
     ],
     "erfarenhetsmässig": [
         "erfarenhetsmässig",
@@ -4992,7 +4997,7 @@
         "fejk"
     ],
     "fel": [
-        "fel"
+        ""
     ],
     "felaktig": [
         "felaktig",
@@ -5000,7 +5005,6 @@
         "felaktiga"
     ],
     "felfri": [
-        "felfri",
         "felfritt",
         "felfria"
     ],
@@ -5469,6 +5473,11 @@
         "flärdfullt",
         "flärdfulla"
     ],
+    "fläskig": [
+        "fläskigt",
+        "fläskiga",
+        "fläskig"
+    ],
     "flörtig": [
         "flörtig",
         "flörtigt",
@@ -5524,7 +5533,8 @@
     ],
     "formell": [
         "formellt",
-        "formella"
+        "formella",
+        "formell"
     ],
     "formlig": [
         "formlig",
@@ -5923,7 +5933,6 @@
         "fullgoda"
     ],
     "fullkomlig": [
-        "fullkomlig",
         "fullkomligt",
         "fullkomliga"
     ],
@@ -6441,6 +6450,11 @@
         "förhatlig",
         "förhatligt",
         "förhatliga"
+    ],
+    "förhistorisk": [
+        "förhistoriskt",
+        "förhistoriska",
+        "förhistorisk"
     ],
     "förhoppningsfull": [
         "förhoppningsfull",
@@ -7302,6 +7316,11 @@
         "geotermiskt",
         "geotermiska"
     ],
+    "gift": [
+        "gift",
+        "gifta",
+        "gift"
+    ],
     "giftgrön": [
         "giftgrön",
         "giftgrönt",
@@ -7719,6 +7738,11 @@
         "grå",
         "el.",
         "gråa"
+    ],
+    "gråblek": [
+        "gråblekt",
+        "gråbleka",
+        "gråblek"
     ],
     "gråhårig": [
         "gråhårig",
@@ -8351,6 +8375,11 @@
     ],
     "himla": [
         "himla"
+    ],
+    "himlaboren": [
+        "himlaboret",
+        "himlaborna",
+        "himlaboren"
     ],
     "himmelsblå": [
         "himmelsblå",
@@ -9345,6 +9374,10 @@
         "imposant",
         "imposanta"
     ],
+    "impressionistisk": [
+        "impressionistiskt",
+        "impressionistiska"
+    ],
     "impulsiv": [
         "impulsiv",
         "impulsivt",
@@ -9409,6 +9442,7 @@
         "inbäddade"
     ],
     "inbördes": [
+        "",
         "inbördes"
     ],
     "incestuös": [
@@ -10307,9 +10341,9 @@
         "jämlikheten"
     ],
     "jämmerlig": [
-        "jämmerlig",
         "jämmerligt",
-        "jämmerliga"
+        "jämmerliga",
+        "jämmerlig"
     ],
     "jämn": [
         "jämn",
@@ -10837,6 +10871,10 @@
         "klärvoajant",
         "klärvoajant",
         "klärvoajanta"
+    ],
+    "knagglig": [
+        "knaggligt",
+        "knaggliga"
     ],
     "knal": [
         "knal",
@@ -11648,6 +11686,7 @@
         "kufiska"
     ],
     "kul": [
+        "",
         "kul"
     ],
     "kulen": [
@@ -12470,7 +12509,8 @@
     "ljus": [
         "ljust",
         "ljusa",
-        "ljusan"
+        "ljusan",
+        "ljus"
     ],
     "ljusblå": [
         "ljusblå",
@@ -12880,6 +12920,11 @@
         "lättsaltad",
         "lättsaltat",
         "lättsaltade"
+    ],
+    "lättsam": [
+        "lättsamt",
+        "lättsamma",
+        "lättsam"
     ],
     "lättsinnig": [
         "lättsinnig",
@@ -13585,9 +13630,9 @@
         "medmänskliga"
     ],
     "medtagen": [
-        "medtagen",
         "medtaget",
-        "medtagna"
+        "medtagna",
+        "medtagen"
     ],
     "medveten": [
         "medveten",
@@ -13780,6 +13825,11 @@
     ],
     "minst": [
         "minsta"
+    ],
+    "misantropisk": [
+        "misantropiskt",
+        "misantropiska",
+        "misantropisk"
     ],
     "miserabel": [
         "miserabel",
@@ -14219,6 +14269,11 @@
         "mäktig",
         "mäktigt",
         "mäktiga"
+    ],
+    "människofientlig": [
+        "människofientligt",
+        "människofientliga",
+        "människofientlig"
     ],
     "människovänlig": [
         "människovänlig",
@@ -14876,9 +14931,9 @@
         "nobla"
     ],
     "noggrann": [
-        "noggrann",
         "noggrant",
-        "noggranna"
+        "noggranna",
+        "noggrann"
     ],
     "nomadisk": [
         "nomadisk",
@@ -15528,6 +15583,11 @@
         "odlingsbart",
         "odlingsbara"
     ],
+    "odogmatisk": [
+        "odogmatiskt",
+        "odogmatiska",
+        "odogmatisk"
+    ],
     "odramatisk": [
         "odramatisk",
         "odramatiskt",
@@ -16172,6 +16232,11 @@
         "okritisk",
         "okritiskt",
         "okritiska"
+    ],
+    "okroppslig": [
+        "okroppsligt",
+        "okroppsliga",
+        "okroppslig"
     ],
     "okränkbar": [
         "okränkbar",
@@ -16818,9 +16883,9 @@
         "organisatoriska"
     ],
     "organiserad": [
-        "organiserad",
         "organiserat",
-        "organiserade"
+        "organiserade",
+        "organiserad"
     ],
     "organisk": [
         "organisk",
@@ -17450,6 +17515,11 @@
         "ovärderligt",
         "ovärderliga"
     ],
+    "ovärdig": [
+        "ovärdigt",
+        "ovärdiga",
+        "ovärdig"
+    ],
     "oväsentlig": [
         "oväsentlig",
         "oväsentligt",
@@ -17775,7 +17845,6 @@
     ],
     "permanent": [
         "permanent",
-        "permanent",
         "permanenta"
     ],
     "perpetuell": [
@@ -17844,6 +17913,7 @@
         "pigga"
     ],
     "piggelin": [
+        "",
         "piggelin"
     ],
     "pigmenterad": [
@@ -18120,6 +18190,11 @@
         "poänglöst",
         "poänglösa"
     ],
+    "pragmatisk": [
+        "pragmatiskt",
+        "pragmatiska",
+        "pragmatisk"
+    ],
     "praktfull": [
         "praktfull",
         "praktfullt",
@@ -18358,6 +18433,11 @@
         "proprietärt",
         "proprietära"
     ],
+    "prosaisk": [
+        "prosaiskt",
+        "prosaiska",
+        "prosaisk"
+    ],
     "prostituerad": [
         "prostituerad",
         "prostituerat",
@@ -18386,6 +18466,11 @@
         "prydlig",
         "prydligt",
         "prydliga"
+    ],
+    "prylgalen": [
+        "prylgalet",
+        "prylgalna",
+        "prylgalen"
     ],
     "präktig": [
         "präktig",
@@ -18525,9 +18610,9 @@
         "pålästa"
     ],
     "påpassad": [
-        "påpassad",
         "påpassat",
-        "påpassade"
+        "påpassade",
+        "påpassad"
     ],
     "påsig": [
         "påsig",
@@ -19911,6 +19996,11 @@
         "segeryra",
         "segeryran"
     ],
+    "seglivad": [
+        "seglivat",
+        "seglivade",
+        "seglivad"
+    ],
     "sekret": [
         "sekret",
         "sekret",
@@ -20560,6 +20650,10 @@
         "skevt",
         "skeva"
     ],
+    "skickad": [
+        "skickat",
+        "skickade"
+    ],
     "skicklig": [
         "skicklig",
         "skickligt",
@@ -20598,9 +20692,9 @@
         "skoj"
     ],
     "skojfrisk": [
-        "skojfrisk",
         "skojfriskt",
-        "skojfriska"
+        "skojfriska",
+        "skojfrisk"
     ],
     "skojig": [
         "skojig",
@@ -20616,9 +20710,9 @@
         "skolbildande"
     ],
     "skoningslös": [
-        "skoningslös",
         "skoningslöst",
-        "skoningslösa"
+        "skoningslösa",
+        "skoningslös"
     ],
     "skonsam": [
         "skonsam",
@@ -20821,6 +20915,11 @@
         "skäligt",
         "skäliga"
     ],
+    "skälmsk": [
+        "skälmskt",
+        "skälmska",
+        "skälmsk"
+    ],
     "skämd": [
         "skämd",
         "skämt",
@@ -20992,6 +21091,11 @@
         "slokörad",
         "slokörat",
         "slokörade"
+    ],
+    "sluddrig": [
+        "sluddrigt",
+        "sluddriga",
+        "sluddrig"
     ],
     "slug": [
         "slug",
@@ -21340,9 +21444,9 @@
         "snobbiga"
     ],
     "snopen": [
-        "snopen",
         "snopet",
-        "snopna"
+        "snopna",
+        "snopen"
     ],
     "snorig": [
         "snorig",
@@ -21384,9 +21488,9 @@
         "snälla"
     ],
     "snäv": [
-        "snäv",
         "snävt",
-        "snäva"
+        "snäva",
+        "snäv"
     ],
     "snål": [
         "snål",
@@ -21819,6 +21923,11 @@
         "starkt",
         "starka"
     ],
+    "stationär": [
+        "stationärt",
+        "stationära",
+        "stationär"
+    ],
     "statisk": [
         "statisk",
         "statiskt",
@@ -21867,6 +21976,11 @@
         "stenhårt",
         "stenhårda"
     ],
+    "stenig": [
+        "stenigt",
+        "steniga",
+        "stenig"
+    ],
     "stereotyp": [
         "stereotyp",
         "stereotypt",
@@ -21895,6 +22009,11 @@
         "stilig",
         "stiligt",
         "stiliga"
+    ],
+    "stilistisk": [
+        "stilistiskt",
+        "stilistiska",
+        "stilistisk"
     ],
     "stillasittande": [
         "stillasittande"
@@ -22905,6 +23024,11 @@
         "tarvlig",
         "tarvligt",
         "tarvliga"
+    ],
+    "taskig": [
+        "taskigt",
+        "taskiga",
+        "taskig"
     ],
     "tegelröd": [
         "tegelröd",
@@ -25542,9 +25666,9 @@
         "vice"
     ],
     "vid": [
-        "vid",
         "vitt",
-        "vida"
+        "vida",
+        "vid"
     ],
     "vidare": [
         "vidare"
@@ -26473,7 +26597,8 @@
         "äktsvenska"
     ],
     "äldre": [
-        ""
+        "",
+        "äldre"
     ],
     "älskad": [
         "älskad",

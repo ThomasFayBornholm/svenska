@@ -521,6 +521,7 @@ blaserad
 blasfemisk
 blasé
 blek
+bleklagd
 blind
 blivande
 blixtsnabb
@@ -572,7 +573,6 @@ bortsprängd
 bosatt
 bosnisk
 bottenlös
-bra
 brandfarlig
 brandgul
 brant
@@ -631,6 +631,7 @@ bärande
 bärbar
 bärig
 bärkraftig
+böhmisk
 böjbar
 böjd
 böjlig
@@ -665,7 +666,6 @@ dagblind
 daggblå
 daggfrisk
 daggig
-daggvåt
 daglig
 dagsaktuell
 dagvill
@@ -1126,6 +1126,7 @@ fläng
 flängd
 flängig
 flärdfull
+fläskig
 flörtig
 fnasig
 fnittrig
@@ -1334,6 +1335,7 @@ förhandenvarande
 förhandlingsbar
 förhastad
 förhatlig
+förhistorisk
 förhoppningsfull
 förhärdad
 förhärskande
@@ -1516,6 +1518,7 @@ geopolitisk
 georgisk
 geostationär
 geotermisk
+gift
 giftgrön
 giftig
 gigantisk
@@ -1603,6 +1606,7 @@ gränslös
 gränsöverskridande
 gräslig
 grå
+gråblek
 gråhårig
 gråtfärdig
 gråtmild
@@ -1733,6 +1737,7 @@ heuristisk
 hierarkisk
 highbrow
 himla
+himlaboren
 himmelsblå
 himmelsk
 himmelsvid
@@ -1819,6 +1824,7 @@ härdig
 härjad
 härlig
 härsken
+hästspark
 hätsk
 hågad
 håglös
@@ -1939,6 +1945,7 @@ implicit
 imponerande
 impopulär
 imposant
+impressionistisk
 impulsiv
 inadekvat
 inaktiv
@@ -2244,6 +2251,7 @@ klädd
 klädsam
 klämmig
 klärvoajant
+knagglig
 knal
 knallhård
 knaper
@@ -2360,6 +2368,7 @@ kortvuxen
 kortväxt
 koscher
 kosmisk
+kossa
 kostnadsfri
 kostsam
 kraftfull
@@ -2666,6 +2675,7 @@ lättrökt
 lättrörd
 lättrörlig
 lättsaltad
+lättsam
 lättsinnig
 lättstött
 lättvindig
@@ -2852,6 +2862,7 @@ mindre
 minimal
 minnesvärd
 minst
+misantropisk
 miserabel
 misogyn
 missanpassad
@@ -2942,6 +2953,7 @@ mysig
 mystisk
 mytomspunnen
 mäktig
+människofientlig
 människovänlig
 mänsklig
 märgfull
@@ -3197,6 +3209,7 @@ odelad
 odemokratisk
 odiskutabel
 odlingsbar
+odogmatisk
 odramatisk
 odräglig
 oduglig
@@ -3327,6 +3340,7 @@ okontrollerbar
 okontroversiell
 okristlig
 okritisk
+okroppslig
 okränkbar
 okular
 okultiverad
@@ -3587,6 +3601,7 @@ oviss
 ovänlig
 oväntad
 ovärderlig
+ovärdig
 oväsentlig
 ovårdad
 oäkta
@@ -3723,6 +3738,7 @@ postgymnasial
 postum
 potentiell
 poänglös
+pragmatisk
 praktfull
 praktisk
 pratsam
@@ -3771,12 +3787,14 @@ proportionell
 proportionerlig
 proppmätt
 proprietär
+prosaisk
 prostituerad
 protestantisk
 provinsiell
 provisorisk
 pryd
 prydlig
+prylgalen
 präktig
 prålig
 psykiatrisk
@@ -4095,6 +4113,7 @@ segerrik
 segersäll
 segerviss
 segeryra
+seglivad
 sekret
 sekulär
 sekunda
@@ -4233,6 +4252,7 @@ skenhelig
 skeppsbruten
 skeptisk
 skev
+skickad
 skicklig
 skild
 skildkönad
@@ -4287,6 +4307,7 @@ skymflig
 skyndsam
 skäggig
 skälig
+skälmsk
 skämd
 skämmig
 skämtsam
@@ -4322,6 +4343,7 @@ slirig
 sliten
 slitsam
 slokörad
+sluddrig
 slug
 slumpartad
 slumpmässig
@@ -4494,6 +4516,7 @@ stadd
 stadig
 stadigvarande
 stark
+stationär
 statisk
 statistisk
 statlig
@@ -4504,12 +4527,14 @@ stel
 stelfrusen
 stendöd
 stenhård
+stenig
 stereotyp
 steril
 stickande
 stickelhårig
 stilfull
 stilig
+stilistisk
 stillasittande
 stillastående
 stillsam
@@ -4690,6 +4715,7 @@ sömnlös
 sönderbruten
 sönderslagen
 söndrig
+sörpla
 söt
 sötaktig
 sötsur
@@ -4721,6 +4747,7 @@ tanklös
 tankspridd
 tapper
 tarvlig
+taskig
 tegelröd
 teknisk
 teknologisk

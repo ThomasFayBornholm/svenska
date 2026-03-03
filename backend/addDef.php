@@ -1,5 +1,6 @@
 <?php
 	include "error_catch.php";
+	$out["status"] = "init";
 	$class = $_GET['class'];
 	$class = preg_replace("/_.*/","",$class);
 	$word = $_GET['word'];	
@@ -28,7 +29,7 @@
 		$outfile = fopen($fileName, 'w') or die("Could not open file: " . $fileName);
 		
 		$elements = preg_split("/\r\n|\r|\n/", $contents);
-		$out = "";	
+		$tmp_out = "";	
 		$placed = false;
 		$del = "";
 		// First in list case	
@@ -37,24 +38,24 @@
 		foreach($elements as $w) {				
 			// Insertion point
 			if ($w === $word) {			
-				$out .= $del . $word;			
+				$tmp_out .= $del . $word;			
 				$placed = true;
 			} else if ($w > $word && !$placed) {
-				$out .= $del . $word;				
-				$out .= $del . $w;
+				$tmp_out .= $del . $word;				
+				$tmp_out .= $del . $w;
 				$placed = true;
 			} else {				
-				$out .= $del . $w;				
+				$tmp_out .= $del . $w;				
 			}
 			$del = "\n";
 		}
 		
 		// For case where word is last in alphabetical sorting
 		if ($placed === false) {
-			$out = $out . $del . $word;
+			$tmp_out .= $del . $word;
 		}
 		
-		fwrite($outfile,$out);
+		fwrite($outfile,$tmp_out);
 		fclose($outfile);
 		
 		// Add word to all listing if needed
@@ -63,32 +64,32 @@
 		$contents = fread($allFile, filesize($allName));
 		fclose($allFile);
 		$elements = preg_split("/\r\n|\r|\n/", $contents);
-		$out = "";
+		$tmp_out = "";
 		$placed = false;
 		$del = "";
 		
 		foreach($elements as $w) {
 			// Insertion point
 			if ($w === $word) {
-				$out = $out . $del . $word;
+				$tmp_out .= $del . $word;
 				$placed = true;
 			} else if ($w > $word && !$placed) {
-				$out = $out . $del . $word;
+				$tmp_out .= $del . $word;
 				$del = "\n";
-				$out = $out . $del. $w;
+				$tmp_out .= $del. $w;
 				$placed = true;
 			} else {
-				$out = $out . $del . $w;
+				$tmp_out .= $del . $w;
 				$del = "\n";
 			}
 		}
 		// If word is alphabetically last in listing
 		if ($placed === false) {
-			$out = $out . $del . $word;
+			$tmp_out .= $del . $word;
 		}
 		
 		$outfileAll = fopen($allName, "w") or die("Could not open file: " . $allName);
-		fwrite($outfileAll, $out);
+		fwrite($outfileAll, $tmp_out);
 		fclose($outfileAll);
 	}
 				
@@ -112,7 +113,7 @@
 		}	
 		$outDef .= PHP_EOL . "}";
 		// Write as string rather than JSON to allow new line as delimiter
-		file_put_contents($name, $outDef);
+		$out["def-bytes"] = file_put_contents($name, $outDef);
 	}
 	
 	if ($class != "fraser") {
@@ -143,16 +144,18 @@
 				$delimMore = "," . PHP_EOL;
 			}
 			$outMore .= PHP_EOL . "}";
-			file_put_contents($name, $outMore);
+			$out["more-bytes"] = file_put_contents($name, $outMore);
 		}
 		
 		if (strlen($meta) > 0) {			
 			$name = $path . $class . "-conj";
 			$contents = file_get_contents($name, 'UTF-8');
 			$dict = json_decode($contents,true);
-			$dict[$word] = explode(",",$options);
+			$tmp = explode(",",$options);
+			array_push($tmp,explode(" ",$word)[0]);
+			$dict[$word] = $tmp;
 			ksort($dict);
-			$res = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+			$out["conj-bytes"] = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
 			$name = $path . $class . "-meta";
 			$contents = file_get_contents($name, 'UTF-8');
@@ -160,10 +163,11 @@
 			$tmp = $meta  . "<br>"  . $class;
 			$dict[$word] = $tmp;
 			ksort($dict);
-			$res = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+			$out["meta-bytes"] = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 		}
 	}
-	echo json_encode("success");
+	$out["status"] = "done";
+	echo json_encode($out);
 	function shortClassName($long) {
 		$short = $long;
 		switch ($long) {

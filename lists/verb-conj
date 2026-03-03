@@ -218,8 +218,7 @@
     "alarmera": [
         "alarmera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "alienera": [
         "alienera",
@@ -343,14 +342,12 @@
         "andats"
     ],
     "andas in": [
-        "andas",
-        "in",
+        "andas in",
         "andades",
         "andats"
     ],
     "andas ut": [
-        "andas",
-        "ut",
+        "andas ut",
         "andades",
         "andats"
     ],
@@ -678,8 +675,7 @@
     "anstryka": [
         "anstryka",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "anstränga": [
         "anstränga",
@@ -893,8 +889,7 @@
         "arbetat"
     ],
     "arbeta in": [
-        "arbeta",
-        "in",
+        "arbeta in",
         "arbetade",
         "arbetat"
     ],
@@ -917,8 +912,7 @@
         "arbetat"
     ],
     "arbeta ut": [
-        "arbeta",
-        "ut",
+        "arbeta ut",
         "arbetade",
         "arbetat"
     ],
@@ -975,8 +969,7 @@
         "arrenderat"
     ],
     "arrendera ut": [
-        "arrendera",
-        "ut",
+        "arrendera ut",
         "arrenderade",
         "arrenderat"
     ],
@@ -1622,8 +1615,7 @@
     "avmäta": [
         "avmäta",
         "avmätte",
-        "avmätt",
-        ""
+        "avmätt"
     ],
     "avmåla": [
         "avmåla",
@@ -2301,8 +2293,7 @@
         "bakat"
     ],
     "baka in": [
-        "baka",
-        "in",
+        "baka in",
         "bakade",
         "bakat"
     ],
@@ -2313,8 +2304,7 @@
         "bakat"
     ],
     "baka ut": [
-        "baka",
-        "ut",
+        "baka ut",
         "bakade",
         "bakat"
     ],
@@ -2463,8 +2453,7 @@
         "bastat"
     ],
     "basunera ut": [
-        "basunera",
-        "ut",
+        "basunera ut",
         "basunerade",
         "basunerat"
     ],
@@ -2876,8 +2865,7 @@
     "bekika": [
         "bekika",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "beklaga": [
         "beklaga",
@@ -3102,8 +3090,7 @@
         "benat"
     ],
     "bena ut": [
-        "bena",
-        "ut",
+        "bena ut",
         "benade",
         "benat"
     ],
@@ -3593,8 +3580,7 @@
         "betalt",
         "kvitteras\/kvitterat",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "bete sig": [
         "bete",
@@ -3996,8 +3982,7 @@
         "bjuder"
     ],
     "bjuda in": [
-        "bjuda",
-        "in",
+        "bjuda in",
         "bjöd",
         "bjudit",
         "bjuder"
@@ -4017,8 +4002,7 @@
         "bjuder"
     ],
     "bjuda ut": [
-        "bjuda",
-        "ut",
+        "bjuda ut",
         "bjöd",
         "bjudit",
         "bjuder"
@@ -4050,10 +4034,9 @@
         "verb<br>"
     ],
     "blamera sig": [
-        "blamera",
-        "sig",
         "blamerade",
-        "blamerat"
+        "blamerat",
+        "blamera"
     ],
     "blanchera": [
         "blanchera",
@@ -4257,15 +4240,13 @@
         "blända",
         "av",
         "bländade",
-        "bländat",
-        ""
+        "bländat"
     ],
     "blända ner": [
         "blända",
         "ner",
         "bländade",
-        "bländat",
-        ""
+        "bländat"
     ],
     "blänga": [
         "blänga",
@@ -4323,16 +4304,13 @@
         "blåser"
     ],
     "blåsa upp": [
-        "blåsa",
-        "upp",
+        "blåsa upp",
         "blåste",
         "blåst",
-        "blåser",
-        ""
+        "blåser"
     ],
     "blåsa ut": [
-        "blåsa",
-        "ut",
+        "blåsa ut",
         "blåste",
         "blåst",
         "blåser"
@@ -4356,15 +4334,12 @@
         "blötlägger"
     ],
     "bo": [
-        "bo",
         "bodde",
         "bott",
         "bor"
     ],
     "bo in sig": [
-        "bo",
-        "in",
-        "sig",
+        "bo in sig",
         "bodde",
         "bott",
         "bor"
@@ -4455,8 +4430,7 @@
     "bonitera": [
         "bonitera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "borda": [
         "borda",
@@ -4595,6 +4569,10 @@
         "bottnade",
         "bottnat"
     ],
+    "bowla": [
+        "bowlade",
+        "bowlat"
+    ],
     "boxa": [
         "boxa",
         "boxade",
@@ -4641,27 +4619,21 @@
         "brer"
     ],
     "breda ut": [
-        "breda",
-        "ut",
+        "breda ut",
         "bredde",
         "brett",
         "breder",
-        "bre",
-        "ut",
+        "bre ut",
         "bredde",
         "brett",
         "brer"
     ],
     "breda ut sig": [
-        "breda",
-        "ut",
-        "sig",
+        "breda ut sig",
         "bredde",
         "brett,",
         "breder",
-        "bre",
-        "ut",
-        "sig",
+        "bre ut sig",
         "bredde",
         "brett,",
         "brer"
@@ -4751,8 +4723,7 @@
         "broderat"
     ],
     "brodera ut": [
-        "brodera",
-        "ut",
+        "brodera ut",
         "broderade",
         "broderat"
     ],
@@ -4825,9 +4796,6 @@
         "bryr"
     ],
     "bry sig om": [
-        "bry",
-        "sig",
-        "om",
         "brydde",
         "brytt",
         "bryr"
@@ -4913,17 +4881,13 @@
         "bryter"
     ],
     "bryta sig in": [
-        "bryta",
-        "sig",
-        "in",
+        "bryta sig in",
         "bröt",
         "brutit",
         "bryter"
     ],
     "bryta sig ut": [
-        "bryta",
-        "sig",
-        "ut",
+        "bryta sig ut",
         "bröt",
         "brutit",
         "bryter"
@@ -4936,8 +4900,7 @@
         "bryter"
     ],
     "bryta ut": [
-        "bryta",
-        "ut",
+        "bryta ut",
         "bröt",
         "brutit",
         "bryter"
@@ -5127,8 +5090,7 @@
         "buntat"
     ],
     "bura in": [
-        "bura",
-        "in",
+        "bura in",
         "burade",
         "burat"
     ],
@@ -5187,8 +5149,7 @@
         "samman",
         "byggde",
         "byggt",
-        "bygger",
-        ""
+        "bygger"
     ],
     "bygga upp": [
         "bygga",
@@ -5198,8 +5159,7 @@
         "bygger"
     ],
     "bygga ut": [
-        "bygga",
-        "ut",
+        "bygga ut",
         "byggde",
         "byggt",
         "bygger"
@@ -5224,8 +5184,7 @@
         "byter"
     ],
     "byta in": [
-        "byta",
-        "in",
+        "byta in",
         "bytte",
         "bytt",
         "byter"
@@ -5246,8 +5205,7 @@
         "byter"
     ],
     "byta ut": [
-        "byta",
-        "ut",
+        "byta ut",
         "bytte",
         "bytt",
         "byter"
@@ -5258,8 +5216,7 @@
         "bäddat"
     ],
     "bädda in": [
-        "bädda",
-        "in",
+        "bädda in",
         "bäddade",
         "bäddat"
     ],
@@ -5296,8 +5253,7 @@
     "bänsla": [
         "bänsla",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "bära": [
         "bära",
@@ -5469,8 +5425,7 @@
     "cedera": [
         "cedera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "cementa": [
         "cementa",
@@ -5541,17 +5496,14 @@
         "checkat"
     ],
     "checka in": [
-        "checka",
-        "in",
+        "checka in",
         "checkade",
         "checkat"
     ],
     "checka ut": [
-        "checka",
-        "ut",
+        "checka ut",
         "checkade",
-        "checkat",
-        ""
+        "checkat"
     ],
     "chefa": [
         "chefa",
@@ -5711,8 +5663,7 @@
         "damma",
         "av",
         "dammade",
-        "dammat",
-        ""
+        "dammat"
     ],
     "damma på": [
         "damma",
@@ -5742,8 +5693,7 @@
     "dampa": [
         "dampa",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "dana": [
         "dana",
@@ -5862,14 +5812,12 @@
         "definiera",
         "om",
         "definierade",
-        "definierat",
-        ""
+        "definierat"
     ],
     "deflorera": [
         "deflorera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "deformera": [
         "deformera",
@@ -5956,33 +5904,29 @@
         "delat"
     ],
     "dela in": [
-        "dela",
-        "in",
+        "dela in",
         "delade",
         "delat"
     ],
     "dela med sig": [
-        "dela",
+        "dela med sig",
         "med",
         "sig",
         "delade",
         "delat"
     ],
     "dela sig": [
-        "dela",
-        "sig",
+        "dela sig",
         "delade",
         "delat"
     ],
     "dela upp": [
-        "dela",
-        "upp",
+        "dela upp",
         "delade",
         "delat"
     ],
     "dela ut": [
-        "dela",
-        "ut",
+        "dela ut",
         "delade",
         "delat"
     ],
@@ -6079,8 +6023,7 @@
     "denudera": [
         "denudera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "deodorisera": [
         "deodorisera",
@@ -6616,9 +6559,7 @@
         "dra",
         "för",
         "drog",
-        "dragit",
-        "drar",
-        ""
+        "dragit"
     ],
     "dra ifrån": [
         "dra",
@@ -6650,20 +6591,16 @@
         "drar"
     ],
     "dra in": [
-        "dra",
-        "in",
+        "dra in",
         "drog",
         "dragit",
         "drar"
     ],
     "dra in sig": [
-        "dra",
-        "in",
-        "sig",
+        "dra in sig",
         "drog",
         "dragit",
-        "drar",
-        ""
+        "drar"
     ],
     "dra på": [
         "dra",
@@ -6717,8 +6654,7 @@
         "drar"
     ],
     "dra ut": [
-        "dra",
-        "ut",
+        "dra ut",
         "drog",
         "dragit",
         "drar"
@@ -6845,8 +6781,7 @@
     "driftsätta": [
         "driftsätta",
         "driftsättade",
-        "driftsättat",
-        ""
+        "driftsättat"
     ],
     "drilla": [
         "drilla",
@@ -6882,15 +6817,13 @@
         "driver"
     ],
     "driva in": [
-        "driva",
-        "in",
+        "driva in",
         "drev",
         "drivit",
         "driver"
     ],
     "driva på": [
-        "driva",
-        "på",
+        "driva på",
         "drev",
         "drivit",
         "driver"
@@ -6903,8 +6836,7 @@
         "driver"
     ],
     "driva ut": [
-        "driva",
-        "ut",
+        "driva ut",
         "drev",
         "drivit",
         "driver"
@@ -6945,8 +6877,7 @@
         "dryftat"
     ],
     "dryga ut": [
-        "dryga",
-        "ut",
+        "dryga ut",
         "drygade",
         "drygat"
     ],
@@ -7215,8 +7146,7 @@
     "dävna": [
         "dävna",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "dåna": [
         "dåna",
@@ -7240,8 +7170,7 @@
         "dör"
     ],
     "dö ut": [
-        "dö",
-        "ut",
+        "dö ut",
         "dog",
         "dött",
         "dör"
@@ -7269,8 +7198,7 @@
         "dömer"
     ],
     "döma ut": [
-        "döma",
-        "ut",
+        "döma ut",
         "dömde",
         "dömt",
         "dömer"
@@ -7292,8 +7220,7 @@
         "dövat"
     ],
     "ebba ut": [
-        "ebba",
-        "ut",
+        "ebba ut",
         "ebbade",
         "ebbat"
     ],
@@ -7579,9 +7506,9 @@
         "emulgerat"
     ],
     "ena": [
-        "ena",
         "enade",
-        "enat"
+        "enat",
+        "ena"
     ],
     "enas": [
         "enas",
@@ -7897,8 +7824,7 @@
         "faller"
     ],
     "falla in": [
-        "falla",
-        "in",
+        "falla in",
         "föll",
         "fallit",
         "faller"
@@ -7911,8 +7837,7 @@
         "faller"
     ],
     "falla ut": [
-        "falla",
-        "ut",
+        "falla ut",
         "föll",
         "fallit",
         "faller"
@@ -7958,8 +7883,7 @@
         "fasat"
     ],
     "fasa ut": [
-        "fasa",
-        "ut",
+        "fasa ut",
         "fasade",
         "fasat"
     ],
@@ -8001,12 +7925,12 @@
         "fastnat"
     ],
     "fastslå": [
-        "fastslå",
         "fastslog",
         "fastslagit",
         "fastslagen",
-        "fastslagna,",
-        "fastslår"
+        "fastslagna",
+        "fastslår",
+        "fastslå"
     ],
     "fastställa": [
         "fastställa",
@@ -8023,6 +7947,16 @@
         "fattas",
         "fattades",
         "fattats"
+    ],
+    "fega": [
+        "fegade",
+        "fegat",
+        "fega"
+    ],
+    "fega ur": [
+        "fegade",
+        "fegat",
+        "fega"
     ],
     "feja": [
         "feja",
@@ -8259,6 +8193,11 @@
         "fixade",
         "fixat"
     ],
+    "fixera": [
+        "fixerade",
+        "fixerat",
+        "fixera"
+    ],
     "fjanta": [
         "fjanta",
         "fjantade",
@@ -8316,8 +8255,7 @@
         "flaggat"
     ],
     "flagga ut": [
-        "flagga",
-        "ut",
+        "flagga ut",
         "flaggade",
         "flaggat"
     ],
@@ -8367,20 +8305,17 @@
         "flexat"
     ],
     "flexa in": [
-        "flexa",
-        "in",
+        "flexa in",
         "flexade",
         "flexat"
     ],
     "flexa ut": [
-        "flexa",
-        "ut",
+        "flexa ut",
         "flexade",
         "flexat"
     ],
     "flika in": [
-        "flika",
-        "in",
+        "flika in",
         "flikade",
         "flikat"
     ],
@@ -8487,8 +8422,7 @@
         "flyter"
     ],
     "flyta in": [
-        "flyta",
-        "in",
+        "flyta in",
         "flöt",
         "flutit",
         "flyter"
@@ -8531,14 +8465,12 @@
         "flänger"
     ],
     "fläta in": [
-        "fläta",
-        "in",
+        "fläta in",
         "flätade",
         "flätat"
     ],
     "fläta samman": [
-        "fläta",
-        "samman",
+        "fläta samman",
         "flätade",
         "flätat"
     ],
@@ -8619,8 +8551,7 @@
         "fordrat"
     ],
     "fordra in": [
-        "fordra",
-        "in",
+        "fordra in",
         "fordrade",
         "fordrat"
     ],
@@ -8651,7 +8582,10 @@
         "formaterat"
     ],
     "formera": [
-        "formera",
+        "formerade",
+        "formerat"
+    ],
+    "formera sig": [
         "formerade",
         "formerat"
     ],
@@ -9042,6 +8976,12 @@
         "frisknade",
         "frisknat"
     ],
+    "frisläppa": [
+        "frisläppte",
+        "frisläppt",
+        "frisläpper",
+        "frisläppa"
+    ],
     "friställa": [
         "friställa",
         "friställde",
@@ -9119,16 +9059,13 @@
         "fryser"
     ],
     "frysa in": [
-        "frysa",
-        "in",
+        "frysa in",
         "frös",
         "frusit",
-        "fryser",
-        ""
+        "fryser"
     ],
     "frysa ut": [
-        "frysa",
-        "ut",
+        "frysa ut",
         "frös",
         "el.",
         "fryste",
@@ -9184,8 +9121,7 @@
         "frågat"
     ],
     "fråga ut": [
-        "fråga",
-        "ut",
+        "fråga ut",
         "frågade",
         "frågat"
     ],
@@ -9345,12 +9281,10 @@
         "upp",
         "fyllde",
         "fyllt",
-        "fyller",
-        ""
+        "fyller"
     ],
     "fylla ut": [
-        "fylla",
-        "ut",
+        "fylla ut",
         "fyllde",
         "fyllt",
         "fyller"
@@ -9395,8 +9329,7 @@
         "fäller"
     ],
     "fälla in": [
-        "fälla",
-        "in",
+        "fälla in",
         "fällde",
         "fällt",
         "fäller"
@@ -9416,8 +9349,7 @@
         "fäller"
     ],
     "fälla ut": [
-        "fälla",
-        "ut",
+        "fälla ut",
         "fällde",
         "fällt",
         "fäller"
@@ -9485,9 +9417,18 @@
         "får",
         "finge"
     ],
+    "få för sig": [
+        "fick",
+        "fått",
+        "får"
+    ],
+    "få ur": [
+        "fick",
+        "fått",
+        "får"
+    ],
     "få ut": [
-        "få",
-        "ut",
+        "få ut",
         "fick",
         "fått",
         "får"
@@ -9496,8 +9437,7 @@
         "få",
         "åter",
         "fick",
-        "fått",
-        ""
+        "fått"
     ],
     "fålla": [
         "fålla",
@@ -9510,8 +9450,7 @@
         "fångat"
     ],
     "fånga in": [
-        "fånga",
-        "in",
+        "fånga in",
         "fångade",
         "fångat"
     ],
@@ -9563,8 +9502,7 @@
         "föra",
         "bort",
         "förde",
-        "fört",
-        ""
+        "fört"
     ],
     "föra fram": [
         "föra",
@@ -9574,11 +9512,9 @@
         "för"
     ],
     "föra in": [
-        "föra",
-        "in",
+        "föra in",
         "förde",
-        "fört",
-        ""
+        "fört"
     ],
     "föra med sig": [
         "föra",
@@ -9592,8 +9528,7 @@
         "föra",
         "om",
         "förde",
-        "fört",
-        ""
+        "fört"
     ],
     "föra samman": [
         "föra",
@@ -9617,18 +9552,14 @@
         "för"
     ],
     "föra ut": [
-        "föra",
-        "ut",
+        "föra ut",
         "förde",
-        "fört",
-        ""
+        "fört"
     ],
     "föra över": [
-        "föra",
-        "över",
+        "föra över",
         "förde",
-        "fört",
-        ""
+        "fört"
     ],
     "förakta": [
         "förakta",
@@ -9716,8 +9647,7 @@
         "förbehållit",
         "förbehållen",
         "förbehållna",
-        "förbehåller",
-        ""
+        "förbehåller"
     ],
     "förbereda": [
         "förbereda",
@@ -11067,7 +10997,8 @@
     ],
     "förorsaka": [
         "förorsakade",
-        "förorsakat"
+        "förorsakat",
+        "förorsaka"
     ],
     "förorätta": [
         "förorätta",
@@ -11308,16 +11239,6 @@
         "förskyllt",
         "förskyller"
     ],
-    "förskärare": [
-        "förskärare",
-        "för­skäraren",
-        "plural",
-        "för­skärare",
-        "bestämd",
-        "plural",
-        "förskärarna<br>substantiv<br>fö`rskärare",
-        ""
-    ],
     "försköna": [
         "försköna",
         "förskönade",
@@ -11366,9 +11287,9 @@
         "förslöat"
     ],
     "förslösa": [
-        "förslösa",
         "förslösade",
-        "förslösat"
+        "förslösat",
+        "förslösa"
     ],
     "försmäkta": [
         "försmäkta",
@@ -11913,8 +11834,7 @@
         "förutbestämma",
         "förutbestämmade",
         "förutbestämmat",
-        "förutbestämmer",
-        ""
+        "förutbestämmer"
     ],
     "förutse": [
         "förutse",
@@ -12227,8 +12147,7 @@
         "gafflat"
     ],
     "gaffla in": [
-        "gaffla",
-        "in",
+        "gaffla in",
         "gafflade",
         "gafflat"
     ],
@@ -12382,9 +12301,7 @@
         "gett"
     ],
     "ge sig ut": [
-        "ge",
-        "sig",
-        "ut",
+        "ge sig ut",
         "gav",
         "gett",
         "el.",
@@ -12392,8 +12309,7 @@
         "ger"
     ],
     "ge till": [
-        "ge",
-        "till",
+        "ge till",
         "gav",
         "gett",
         "el.",
@@ -12401,8 +12317,7 @@
         "ger"
     ],
     "ge upp": [
-        "ge",
-        "upp",
+        "ge upp",
         "gav",
         "gett",
         "el.",
@@ -12410,8 +12325,7 @@
         "ger"
     ],
     "ge ut": [
-        "ge",
-        "ut",
+        "ge ut",
         "gav",
         "gett",
         "el.",
@@ -12585,9 +12499,9 @@
         "genskjuter"
     ],
     "gentrifiera": [
-        "gentrifiera",
         "gentrifierade",
-        "gentrifierat"
+        "gentrifierat",
+        "gentrifiera"
     ],
     "geometrisera": [
         "geometrisera",
@@ -12662,6 +12576,12 @@
         "gillade",
         "gillat"
     ],
+    "gillas": [
+        "gillades",
+        "gillats",
+        "gills",
+        "gillas"
+    ],
     "gina": [
         "gina",
         "ginade",
@@ -12716,16 +12636,13 @@
         "gjuter"
     ],
     "gjuta in": [
-        "gjuta",
-        "in",
+        "gjuta in",
         "göt",
         "gjutit",
-        "gjuter",
-        ""
+        "gjuter"
     ],
     "gjuta över": [
-        "gjuta",
-        "över",
+        "gjuta över",
         "göt",
         "gjutit"
     ],
@@ -12745,8 +12662,7 @@
         "glappat"
     ],
     "glasa in": [
-        "glasa",
-        "in",
+        "glasa in",
         "glasade",
         "glasat"
     ],
@@ -12756,8 +12672,7 @@
         "glaserat"
     ],
     "glesa ut": [
-        "glesa",
-        "ut",
+        "glesa ut",
         "glesade",
         "glesat"
     ],
@@ -13130,8 +13045,7 @@
         "griper"
     ],
     "gripa in": [
-        "gripa",
-        "in",
+        "gripa in",
         "grep",
         "gripit",
         "griper"
@@ -13161,6 +13075,11 @@
         "grogga",
         "groggade",
         "groggat"
+    ],
+    "grotta ner sig": [
+        "grottade",
+        "grottat",
+        "grotta"
     ],
     "grovna": [
         "grovna",
@@ -13228,8 +13147,7 @@
         "grusbelade",
         "grusbelagt",
         "grusbelagd",
-        "grusbelägger",
-        ""
+        "grusbelägger"
     ],
     "gruva sig": [
         "gruva",
@@ -13282,10 +13200,10 @@
         "gräns­trakter<br>substantiv<br>grän`strakt"
     ],
     "gräva": [
-        "gräva",
         "grävde",
         "grävt",
-        "gräver"
+        "gräver",
+        "gräva"
     ],
     "gråta": [
         "gråta",
@@ -13294,8 +13212,7 @@
         "gråter"
     ],
     "gråta ut": [
-        "gråta",
-        "ut",
+        "gråta ut",
         "grät",
         "gråtit",
         "gråter"
@@ -13388,9 +13305,9 @@
         "gäller"
     ],
     "gänga": [
-        "gänga",
         "gängade",
-        "gängat"
+        "gängat",
+        "gänga"
     ],
     "gänga sig": [
         "gänga",
@@ -13448,8 +13365,7 @@
         "förbi",
         "gick",
         "gått",
-        "går",
-        ""
+        "går"
     ],
     "gå ifrån": [
         "gå",
@@ -13480,8 +13396,7 @@
         "går"
     ],
     "gå in": [
-        "gå",
-        "in",
+        "gå in",
         "gick",
         "gått",
         "går"
@@ -13541,8 +13456,7 @@
         "går"
     ],
     "gå ut": [
-        "gå",
-        "ut",
+        "gå ut",
         "gick",
         "gått",
         "går"
@@ -13670,10 +13584,21 @@
         "haft,",
         "har"
     ],
+    "ha sig": [
+        "hade",
+        "haft",
+        "har",
+        "ha"
+    ],
     "hacka": [
         "hacka",
         "hackade",
         "hackat"
+    ],
+    "hacka ned": [
+        "hackade",
+        "hackat",
+        "hacka"
     ],
     "hacka ner": [
         "hacka",
@@ -13684,6 +13609,11 @@
         "ned",
         "hackade",
         "hackat"
+    ],
+    "haffa": [
+        "haffade",
+        "haffat",
+        "haffa"
     ],
     "hafsa": [
         "hafsa",
@@ -13710,8 +13640,7 @@
         "haka",
         "fast",
         "hakade",
-        "hakat",
-        ""
+        "hakat"
     ],
     "haka loss": [
         "haka",
@@ -14163,8 +14092,7 @@
         "hoppat"
     ],
     "hoppa in": [
-        "hoppa",
-        "in",
+        "hoppa in",
         "hoppade",
         "hoppat"
     ],
@@ -14334,8 +14262,7 @@
         "hyr"
     ],
     "hyra ut": [
-        "hyra",
-        "ut",
+        "hyra ut",
         "hyrde",
         "hyrt",
         "hyr"
@@ -14434,14 +14361,17 @@
         "hämtat"
     ],
     "hämta in": [
-        "hämta",
-        "in",
+        "hämta in",
         "hämtade",
         "hämtat"
     ],
     "hämta sig": [
         "hämta",
         "sig",
+        "hämtade",
+        "hämtat"
+    ],
+    "hämta upp": [
         "hämtade",
         "hämtat"
     ],
@@ -14507,8 +14437,7 @@
         "hänger"
     ],
     "hänga ut": [
-        "hänga",
-        "ut",
+        "hänga ut",
         "hängde",
         "hängt",
         "hänger"
@@ -14559,8 +14488,7 @@
         "härdat"
     ],
     "härda ut": [
-        "härda",
-        "ut",
+        "härda ut",
         "härdade",
         "härdat"
     ],
@@ -14748,8 +14676,7 @@
         "håller"
     ],
     "hålla ut": [
-        "hålla",
-        "ut",
+        "hålla ut",
         "höll",
         "hållit",
         "håller"
@@ -14900,8 +14827,7 @@
         "ihop",
         "hörde",
         "hört",
-        "hör",
-        ""
+        "hör"
     ],
     "höra samman": [
         "höra",
@@ -14935,8 +14861,7 @@
         "hörsammat"
     ],
     "hösta in": [
-        "hösta",
-        "in",
+        "hösta in",
         "höstade",
         "höstat"
     ],
@@ -14962,18 +14887,12 @@
         "skipat"
     ],
     "iaktta": [
-        "iaktta",
         "iakttog",
         "iakttagit",
         "iakttagen",
         "iakttagna",
-        "iakttar",
-        "iakttaga",
-        "iakttog",
-        "iakttagit",
-        "iakttagen",
-        "iakttagna",
-        "iakttager"
+        "iakttager",
+        "iaktta"
     ],
     "idas": [
         "idas",
@@ -14994,8 +14913,7 @@
     "idiotförklara": [
         "idiotförklara",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "idissla": [
         "idissla",
@@ -15349,8 +15267,7 @@
     "infärga": [
         "infärga",
         "infärgade",
-        "infärgat",
-        ""
+        "infärgat"
     ],
     "infånga": [
         "infånga",
@@ -15591,8 +15508,7 @@
     "inmata": [
         "inmata",
         "inmatade",
-        "inmatat",
-        ""
+        "inmatat"
     ],
     "inmundiga": [
         "inmundiga",
@@ -15605,10 +15521,10 @@
         "inmutat"
     ],
     "innebära": [
-        "innebära",
         "innebar",
-        "inneburit,",
-        "innebär"
+        "inneburit",
+        "innebär",
+        "innebära"
     ],
     "innefatta": [
         "innefatta",
@@ -15738,8 +15654,7 @@
     "insalta": [
         "insalta",
         "insaltade",
-        "insaltat",
-        ""
+        "insaltat"
     ],
     "insamla": [
         "insamla",
@@ -15927,8 +15842,7 @@
     "insöndra": [
         "insöndra",
         "insönrade",
-        "insönrat",
-        ""
+        "insönrat"
     ],
     "inta": [
         "inta",
@@ -16222,15 +16136,15 @@
         "isolerade",
         "isolerat"
     ],
+    "isolera sig": [
+        "isolerade",
+        "isolerat",
+        "isolera"
+    ],
     "ituta": [
         "ituta",
         "itutade",
         "itutat"
-    ],
-    "iver": [
-        "iver",
-        "ivern<br>substantiv<br>i´ver",
-        ""
     ],
     "ivra": [
         "ivra",
@@ -16248,8 +16162,7 @@
         "jagat"
     ],
     "jaga in": [
-        "jaga",
-        "in",
+        "jaga in",
         "jagade",
         "jagat"
     ],
@@ -16261,9 +16174,9 @@
         "jagat"
     ],
     "jaka": [
-        "jaka",
         "jakade",
-        "jakat"
+        "jakat",
+        "jaka"
     ],
     "jazza": [
         "jazza",
@@ -16362,8 +16275,7 @@
         "jämnat"
     ],
     "jämna ut": [
-        "jämna",
-        "ut",
+        "jämna ut",
         "jämnade",
         "jämnat"
     ],
@@ -16442,8 +16354,7 @@
         "kallat"
     ],
     "kalla in": [
-        "kalla",
-        "in",
+        "kalla in",
         "kallade",
         "kallat"
     ],
@@ -16562,8 +16473,7 @@
         "kammat"
     ],
     "kamma in": [
-        "kamma",
-        "in",
+        "kamma in",
         "kammade",
         "kammat"
     ],
@@ -16657,8 +16567,7 @@
         "kapsejsat"
     ],
     "kapsla in": [
-        "kapsla",
-        "in",
+        "kapsla in",
         "kapslade",
         "kapslat"
     ],
@@ -16707,8 +16616,7 @@
         "kasserat"
     ],
     "kassera in": [
-        "kassera",
-        "in",
+        "kassera in",
         "kasserade",
         "kasserat"
     ],
@@ -16761,8 +16669,7 @@
         "kastat"
     ],
     "kasta ut": [
-        "kasta",
-        "ut",
+        "kasta ut",
         "kastade",
         "kastat"
     ],
@@ -17022,8 +16929,7 @@
         "klara",
         "av",
         "klarade",
-        "klarat",
-        ""
+        "klarat"
     ],
     "klara sig": [
         "klara",
@@ -17038,8 +16944,7 @@
         "klarat"
     ],
     "klara ut": [
-        "klara",
-        "ut",
+        "klara ut",
         "klarade",
         "klarat"
     ],
@@ -17144,8 +17049,7 @@
         "klingat"
     ],
     "klinga ut": [
-        "klinga",
-        "ut",
+        "klinga ut",
         "klingade",
         "klingat"
     ],
@@ -17259,8 +17163,7 @@
         "klurat"
     ],
     "klura ut": [
-        "klura",
-        "ut",
+        "klura ut",
         "klurade",
         "klurat"
     ],
@@ -17303,16 +17206,14 @@
         "på",
         "klädde",
         "klätt",
-        "klär",
-        ""
+        "klär"
     ],
     "klä sig": [
         "klä",
         "sig",
         "klädde",
         "klätt",
-        "klär",
-        ""
+        "klär"
     ],
     "klä upp": [
         "klä",
@@ -17322,8 +17223,7 @@
         "klär"
     ],
     "klä ut": [
-        "klä",
-        "ut",
+        "klä ut",
         "klädde",
         "klätt",
         "klär"
@@ -17677,8 +17577,7 @@
         "kodat"
     ],
     "koda in": [
-        "koda",
-        "in",
+        "koda in",
         "kodade",
         "kodat"
     ],
@@ -17707,14 +17606,12 @@
         "kokat"
     ],
     "koka in": [
-        "koka",
-        "in",
+        "koka in",
         "kokade",
         "kokat"
     ],
     "koka ner": [
-        "koka",
-        "ner",
+        "koka ner",
         "kokade",
         "kokat",
         "koka",
@@ -17875,8 +17772,7 @@
         "kommer"
     ],
     "komma in": [
-        "komma",
-        "in",
+        "komma in",
         "kom",
         "kommit,",
         "kommer"
@@ -17911,8 +17807,7 @@
         "kommer"
     ],
     "komma ut": [
-        "komma",
-        "ut",
+        "komma ut",
         "kom",
         "kommit",
         "kommer"
@@ -17936,8 +17831,7 @@
         "åter",
         "kom",
         "kommit",
-        "kommer",
-        ""
+        "kommer"
     ],
     "komma över": [
         "komma",
@@ -18083,11 +17977,6 @@
         "konfundera",
         "konfunderade",
         "konfunderat"
-    ],
-    "konfusion": [
-        "konfusion",
-        "konfusionen<br>substantiv<br>[-∫o´n]",
-        ""
     ],
     "kongressa": [
         "kongressa",
@@ -18323,8 +18212,7 @@
         "koppla",
         "till",
         "kopplade",
-        "kopplat",
-        ""
+        "kopplat"
     ],
     "koppla upp": [
         "koppla",
@@ -18510,8 +18398,7 @@
     "krigsplacera": [
         "krigsplacera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "kringgärda": [
         "kringgärda",
@@ -18668,8 +18555,7 @@
         "kryssat"
     ],
     "kryssa in": [
-        "kryssa",
-        "in",
+        "kryssa in",
         "kryssade",
         "kryssat"
     ],
@@ -18733,15 +18619,13 @@
         "kräver"
     ],
     "kräva in": [
-        "kräva",
-        "in",
+        "kräva in",
         "krävde",
         "krävt",
         "kräver"
     ],
     "kräva ut": [
-        "kräva",
-        "ut",
+        "kräva ut",
         "krävde",
         "krävt",
         "kräver"
@@ -18948,8 +18832,7 @@
         "kvitterat"
     ],
     "kvittera ut": [
-        "kvittera",
-        "ut",
+        "kvittera ut",
         "kvitterade",
         "kvitterat"
     ],
@@ -19020,8 +18903,7 @@
         "ner",
         "kylde",
         "kylt",
-        "kyler",
-        ""
+        "kyler"
     ],
     "kyssa": [
         "kyssa",
@@ -19082,8 +18964,7 @@
         "till",
         "sig",
         "kämpade",
-        "kämpat",
-        ""
+        "kämpat"
     ],
     "känna": [
         "känna",
@@ -19192,26 +19073,29 @@
         "kärade",
         "kärat"
     ],
-    "kärlkramp": [
-        "kärlkramp",
-        "kärl­krampen<br>substantiv<br>kä`rlkramp",
-        ""
-    ],
     "kärna": [
-        "kärna",
-        "kärnan",
-        "kärnor"
+        "kärnade",
+        "kärnat",
+        "kärna"
     ],
     "kärna ur": [
-        "kärna",
-        "ur",
+        "kärna ur",
         "kärnade",
         "kärnat"
+    ],
+    "kärna-2": [
+        "kärnade",
+        "kärnat",
+        "kärna-2"
     ],
     "kåsera": [
         "kåsera",
         "kåserade",
         "kåserat"
+    ],
+    "köa": [
+        "köade",
+        "köat"
     ],
     "köna": [
         "köna",
@@ -19230,8 +19114,7 @@
         "köper"
     ],
     "köpa in": [
-        "köpa",
-        "in",
+        "köpa in",
         "köpte",
         "köpt",
         "köper"
@@ -19244,8 +19127,7 @@
         "köper"
     ],
     "köpa ut": [
-        "köpa",
-        "ut",
+        "köpa ut",
         "köpte",
         "köpt",
         "köper"
@@ -19280,8 +19162,7 @@
         "kör"
     ],
     "köra in": [
-        "köra",
-        "in",
+        "köra in",
         "körde",
         "kört",
         "kör"
@@ -19313,8 +19194,7 @@
         "kör"
     ],
     "köra ut": [
-        "köra",
-        "ut",
+        "köra ut",
         "körde",
         "kört",
         "kör"
@@ -19372,8 +19252,7 @@
         "ur",
         "sig",
         "laddade",
-        "laddat",
-        ""
+        "laddat"
     ],
     "laga": [
         "laga",
@@ -19517,8 +19396,7 @@
         "lastat"
     ],
     "lasta ut": [
-        "lasta",
-        "ut",
+        "lasta ut",
         "lastade",
         "lastat"
     ],
@@ -19612,9 +19490,14 @@
         "lerat"
     ],
     "leta": [
-        "leta",
         "letade",
-        "letat"
+        "letat",
+        "leta"
+    ],
+    "leta sig": [
+        "letade",
+        "letat",
+        "leta"
     ],
     "leva": [
         "leva",
@@ -19625,8 +19508,7 @@
         "lever"
     ],
     "leva med": [
-        "leva",
-        "med",
+        "leva med",
         "levde",
         "levt",
         "el.",
@@ -19634,8 +19516,7 @@
         "lever"
     ],
     "leva om": [
-        "leva",
-        "om",
+        "leva om",
         "levde",
         "levt",
         "el.",
@@ -19643,9 +19524,7 @@
         "lever"
     ],
     "leva sig in": [
-        "leva",
-        "sig",
-        "in",
+        "leva sig in",
         "levde",
         "levt",
         "el.",
@@ -19653,8 +19532,7 @@
         "lever"
     ],
     "leva upp": [
-        "leva",
-        "upp",
+        "leva upp",
         "levde,",
         "levt",
         "el.",
@@ -19662,8 +19540,7 @@
         "lever"
     ],
     "leva ut": [
-        "leva",
-        "ut",
+        "leva ut",
         "levde",
         "levt",
         "el.",
@@ -19858,8 +19735,7 @@
         "lindat"
     ],
     "linda in": [
-        "linda",
-        "in",
+        "linda in",
         "lindade",
         "lindat"
     ],
@@ -19907,8 +19783,7 @@
         "listat"
     ],
     "lista ut": [
-        "lista",
-        "ut",
+        "lista ut",
         "listade",
         "listat"
     ],
@@ -19947,6 +19822,12 @@
         "ljusnade",
         "ljusnat"
     ],
+    "ljuta": [
+        "ljöt",
+        "ljutit",
+        "ljuter",
+        "ljuta"
+    ],
     "lobotomera": [
         "lobotomera",
         "lobotomerade",
@@ -19974,8 +19855,7 @@
         "loggat"
     ],
     "logga in": [
-        "logga",
-        "in",
+        "logga in",
         "loggade",
         "loggat"
     ],
@@ -19986,8 +19866,7 @@
         "loggat"
     ],
     "logga ut": [
-        "logga",
-        "ut",
+        "logga ut",
         "loggade",
         "loggat"
     ],
@@ -20038,8 +19917,7 @@
         "sig",
         "fram",
         "lotsade",
-        "lotsat",
-        ""
+        "lotsat"
     ],
     "lotta": [
         "lotta",
@@ -20050,6 +19928,11 @@
         "lova",
         "lovade",
         "lovat"
+    ],
+    "lova bort": [
+        "lovade",
+        "lovat",
+        "lova"
     ],
     "lovorda": [
         "lovorda",
@@ -20085,8 +19968,7 @@
         "lugna",
         "ner",
         "lugnade",
-        "lugnat",
-        ""
+        "lugnat"
     ],
     "lugna sig": [
         "lugna",
@@ -20146,8 +20028,7 @@
         "lurat"
     ],
     "lura ut": [
-        "lura",
-        "ut",
+        "lura ut",
         "lurade",
         "lurat"
     ],
@@ -20183,8 +20064,7 @@
         "luta",
         "sig",
         "lutade",
-        "lutat",
-        ""
+        "lutat"
     ],
     "lycka": [
         "lycka",
@@ -20237,8 +20117,7 @@
         "lyfter"
     ],
     "lyfta ut": [
-        "lyfta",
-        "ut",
+        "lyfta ut",
         "lyfte",
         "lyft",
         "lyfter"
@@ -20274,8 +20153,7 @@
         "lyser"
     ],
     "lysa ut": [
-        "lysa",
-        "ut",
+        "lysa ut",
         "lyste",
         "lyst",
         "lyser"
@@ -20292,11 +20170,9 @@
         "lyssnat"
     ],
     "lyssna in": [
-        "lyssna",
-        "in",
+        "lyssna in",
         "lyssnade",
-        "lyssnat",
-        ""
+        "lyssnat"
     ],
     "läcka": [
         "läcka",
@@ -20362,8 +20238,7 @@
         "lägger"
     ],
     "lägga in": [
-        "lägga",
-        "in",
+        "lägga in",
         "lade",
         "lagt",
         "lägger"
@@ -20454,8 +20329,7 @@
         "lägger"
     ],
     "lägga ut": [
-        "lägga",
-        "ut",
+        "lägga ut",
         "lade",
         "lagt",
         "lägger"
@@ -20478,14 +20352,12 @@
         "lämnat"
     ],
     "lämna in": [
-        "lämna",
-        "in",
+        "lämna in",
         "lämnade",
         "lämnat"
     ],
     "lämna ut": [
-        "lämna",
-        "ut",
+        "lämna ut",
         "lämnade",
         "lämnat"
     ],
@@ -20542,29 +20414,25 @@
         "lär"
     ],
     "lära av": [
-        "lära",
-        "av",
+        "lära av",
         "lärde",
         "lärt",
         "lär"
     ],
     "lära in": [
-        "lära",
-        "in",
+        "lära in",
         "lärde",
         "lärt",
         "lär"
     ],
     "lära sig": [
-        "lära",
-        "sig",
+        "lära sig",
         "lärde",
         "lärt",
         "lär"
     ],
     "lära upp": [
-        "lära",
-        "upp",
+        "lära upp",
         "lärde",
         "lärt",
         "lär"
@@ -20576,58 +20444,49 @@
         "läser"
     ],
     "läsa av": [
-        "läsa",
-        "av",
+        "läsa av",
         "läste",
         "läst",
         "läser"
     ],
     "läsa emot": [
-        "läsa",
-        "emot",
+        "läsa emot",
         "läste",
         "läst",
         "läser"
     ],
     "läsa igenom": [
-        "läsa",
-        "igenom",
+        "läsa igenom",
         "läste",
         "läst",
         "läser"
     ],
     "läsa in": [
-        "läsa",
-        "in",
+        "läsa in",
         "läste",
         "läst",
         "läser"
     ],
     "läsa in sig": [
-        "läsa",
-        "in",
-        "sig",
+        "läsa in sig",
         "läste",
         "läst",
         "läser"
     ],
     "läsa på": [
-        "läsa",
-        "på",
+        "läsa på",
         "läste",
         "läst",
         "läser"
     ],
     "läsa upp": [
-        "läsa",
-        "upp",
+        "läsa upp",
         "läste",
         "läst",
         "läser"
     ],
     "läsa ut": [
-        "läsa",
-        "ut",
+        "läsa ut",
         "läste",
         "läst",
         "läser"
@@ -20678,8 +20537,7 @@
         "låser"
     ],
     "låsa in": [
-        "låsa",
-        "in",
+        "låsa in",
         "låste",
         "låst",
         "låser"
@@ -20755,11 +20613,10 @@
         "löper"
     ],
     "löpa in": [
-        "löpa",
-        "in",
         "löpte",
         "löpt",
-        "löper"
+        "löper",
+        "löpa"
     ],
     "löpa samman": [
         "löpa",
@@ -20769,8 +20626,7 @@
         "löper"
     ],
     "löpa ut": [
-        "löpa",
-        "ut",
+        "löpa ut",
         "löpte",
         "löpt",
         "löper"
@@ -20803,8 +20659,7 @@
         "löser"
     ],
     "lösa ut": [
-        "lösa",
-        "ut",
+        "lösa ut",
         "löste",
         "löst",
         "löser"
@@ -21013,18 +20868,14 @@
         "matat"
     ],
     "mata in": [
-        "mata",
-        "in",
+        "mata in",
         "matade",
-        "matat",
-        ""
+        "matat"
     ],
     "mata ut": [
-        "mata",
-        "ut",
+        "mata ut",
         "matade",
-        "matat",
-        ""
+        "matat"
     ],
     "matcha": [
         "matcha",
@@ -21573,9 +21424,14 @@
         "monopoliserat"
     ],
     "montera": [
-        "montera",
         "monterade",
-        "monterat"
+        "monterat",
+        "montera"
+    ],
+    "montera ned": [
+        "monterade",
+        "monterat",
+        "montera"
     ],
     "montera ner": [
         "montera",
@@ -21793,8 +21649,7 @@
         "mutat"
     ],
     "muta in": [
-        "muta",
-        "in",
+        "muta in",
         "mutade",
         "mutat"
     ],
@@ -21827,8 +21682,7 @@
         "mynnat"
     ],
     "mynna ut": [
-        "mynna",
-        "ut",
+        "mynna ut",
         "mynnade",
         "mynnat"
     ],
@@ -21880,8 +21734,7 @@
         "märker"
     ],
     "märka ut": [
-        "märka",
-        "ut",
+        "märka ut",
         "märkte",
         "märkt",
         "märker"
@@ -21906,8 +21759,7 @@
         "mäta",
         "av",
         "mätade",
-        "mätat",
-        ""
+        "mätat"
     ],
     "mäta sig": [
         "mäta",
@@ -21924,8 +21776,7 @@
         "mäter"
     ],
     "mäta ut": [
-        "mäta",
-        "ut",
+        "mäta ut",
         "mätte",
         "mätt",
         "mäter"
@@ -21936,10 +21787,14 @@
         "mättat"
     ],
     "må": [
-        "må",
         "mådde",
         "mått",
-        "mår"
+        "mår",
+        "må"
+    ],
+    "må-2": [
+        "måtte",
+        "må-2"
     ],
     "måla": [
         "måla",
@@ -21965,8 +21820,7 @@
         "målat"
     ],
     "måla ut": [
-        "måla",
-        "ut",
+        "måla ut",
         "målade",
         "målat"
     ],
@@ -22007,6 +21861,11 @@
         "möjliggjort",
         "möjliggör"
     ],
+    "mönstra": [
+        "mönstrade",
+        "mönstrat",
+        "mönstra"
+    ],
     "mönstra av": [
         "mönstra",
         "av",
@@ -22014,8 +21873,7 @@
         "mönstrat"
     ],
     "mönstra in": [
-        "mönstra",
-        "in",
+        "mönstra in",
         "mönstrade",
         "mönstrat"
     ],
@@ -22029,12 +21887,10 @@
         "mönstra",
         "upp",
         "mönstrade",
-        "mönstrat",
-        ""
+        "mönstrat"
     ],
     "mönstra ut": [
-        "mönstra",
-        "ut",
+        "mönstra ut",
         "mönstrade",
         "mönstrat"
     ],
@@ -22319,8 +22175,7 @@
     "nedtona": [
         "nedtona",
         "nedtonade",
-        "nedtonat",
-        ""
+        "nedtonat"
     ],
     "nedtrappa": [
         "nedtrappa",
@@ -22373,8 +22228,7 @@
         "niger"
     ],
     "nischa in": [
-        "nischa",
-        "in",
+        "nischa in",
         "nischade",
         "nischat"
     ],
@@ -22549,8 +22403,7 @@
     "nyrekrytera": [
         "nyrekrytera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "nysa": [
         "nysa",
@@ -22637,6 +22490,12 @@
         "nådde",
         "nått",
         "når"
+    ],
+    "nå ut": [
+        "nådde",
+        "nått",
+        "når",
+        "nå"
     ],
     "nåta": [
         "nåta",
@@ -22818,8 +22677,7 @@
     "omdefiniera": [
         "omdefiniera",
         "omdefinierade",
-        "omdefinierat",
-        ""
+        "omdefinierat"
     ],
     "omdirigera": [
         "omdirigera",
@@ -22868,8 +22726,7 @@
     "omgruppera": [
         "omgruppera",
         "omgrupperade",
-        "omgrupperat",
-        ""
+        "omgrupperat"
     ],
     "omgärda": [
         "omgärda",
@@ -23040,9 +22897,9 @@
         "omsätter"
     ],
     "omtala": [
-        "omtala",
         "omtalade",
-        "omtalat"
+        "omtalat",
+        "omtala"
     ],
     "omtolka": [
         "omtolka",
@@ -23128,14 +22985,12 @@
         "opererat"
     ],
     "operera in": [
-        "operera",
-        "in",
+        "operera in",
         "opererade",
         "opererat"
     ],
     "operera sig": [
-        "operera",
-        "sig",
+        "operera sig",
         "opererade",
         "opererat"
     ],
@@ -23207,12 +23062,6 @@
         "sig",
         "orienterade",
         "orienterat"
-    ],
-    "orienteringstävling": [
-        "orienteringstävling",
-        "orienterings­tävlingen",
-        "orienterings­tävlingar<br>substantiv<br>oriente`ringstävling",
-        ""
     ],
     "orka": [
         "orka",
@@ -23435,25 +23284,21 @@
     ],
     "passa av": [
         "passa",
-        "av",
         "passade",
         "passat"
     ],
     "passa på": [
         "passa",
-        "på",
         "passade",
         "passat"
     ],
     "passa sig": [
         "passa",
-        "sig",
         "passade",
         "passat"
     ],
     "passa upp": [
         "passa",
-        "upp",
         "passade",
         "passat"
     ],
@@ -23466,6 +23311,10 @@
         "passivera",
         "passiverade",
         "passiverat"
+    ],
+    "pastörisera": [
+        "pastöriserade",
+        "pastöriserat"
     ],
     "patcha": [
         "patcha",
@@ -23508,8 +23357,7 @@
         "pekat"
     ],
     "peka ut": [
-        "peka",
-        "ut",
+        "peka ut",
         "pekade",
         "pekat"
     ],
@@ -23670,7 +23518,6 @@
         "pirror"
     ],
     "piska": [
-        "piska",
         "piskade",
         "piskat"
     ],
@@ -23736,10 +23583,9 @@
         "planerat"
     ],
     "planera in": [
-        "planera",
-        "in",
-        "~de",
-        "~t"
+        "planera in",
+        "planerade",
+        "planerat"
     ],
     "planka": [
         "planka",
@@ -23753,9 +23599,9 @@
         "planlägger"
     ],
     "planta": [
-        "planta",
         "plantade",
-        "plantat"
+        "plantat",
+        "planta"
     ],
     "plantera": [
         "plantera",
@@ -23873,8 +23719,7 @@
         "plåga"
     ],
     "plåna ut": [
-        "plåna",
-        "ut",
+        "plåna ut",
         "plånade",
         "plånat"
     ],
@@ -23919,6 +23764,11 @@
         "politiserade",
         "politiserat"
     ],
+    "pollinera": [
+        "pollinerade",
+        "pollinerat",
+        "pollinera"
+    ],
     "polstra": [
         "polstra",
         "polstrade",
@@ -23928,6 +23778,11 @@
         "ponera",
         "ponerade",
         "ponerat"
+    ],
+    "poppa": [
+        "poppade",
+        "poppat",
+        "poppa"
     ],
     "poppa upp": [
         "poppa",
@@ -24004,6 +23859,10 @@
         "prasslat"
     ],
     "prata": [
+        "pratade",
+        "pratat"
+    ],
+    "prata ihop sig": [
         "pratade",
         "pratat"
     ],
@@ -24275,8 +24134,7 @@
         "provat"
     ],
     "prova ut": [
-        "prova",
-        "ut",
+        "prova ut",
         "provade",
         "provat"
     ],
@@ -24289,8 +24147,7 @@
         "provocera",
         "fram",
         "provocerade",
-        "provocerat",
-        ""
+        "provocerat"
     ],
     "prunka": [
         "prunka",
@@ -24335,8 +24192,7 @@
         "präntat"
     ],
     "pränta in": [
-        "pränta",
-        "in",
+        "pränta in",
         "präntade",
         "präntat"
     ],
@@ -24416,8 +24272,7 @@
         "pumpat"
     ],
     "punga ut": [
-        "punga",
-        "ut",
+        "punga ut",
         "pungade",
         "pungat"
     ],
@@ -24682,8 +24537,7 @@
         "raljerat"
     ],
     "rama in": [
-        "rama",
-        "in",
+        "rama in",
         "ramade",
         "ramat"
     ],
@@ -24709,8 +24563,7 @@
         "randomiserat"
     ],
     "rangera ut": [
-        "rangera",
-        "ut",
+        "rangera ut",
         "rangerade",
         "rangerat"
     ],
@@ -24780,8 +24633,7 @@
         "rapporterat"
     ],
     "rapportera in": [
-        "rapportera",
-        "in",
+        "rapportera in",
         "rapporterade",
         "rapporterat"
     ],
@@ -24826,8 +24678,7 @@
         "rattat"
     ],
     "ratta in": [
-        "ratta",
-        "in",
+        "ratta in",
         "rattade",
         "rattat"
     ],
@@ -24877,8 +24728,7 @@
         "av",
         "redde",
         "rett",
-        "reder",
-        ""
+        "reder"
     ],
     "reda sig": [
         "reda",
@@ -24892,8 +24742,7 @@
         "till",
         "redde",
         "rett",
-        "reder",
-        ""
+        "reder"
     ],
     "reda upp": [
         "reda",
@@ -24903,8 +24752,7 @@
         "reder"
     ],
     "reda ut": [
-        "reda",
-        "ut",
+        "reda ut",
         "redde",
         "rett",
         "reder"
@@ -25041,12 +24889,6 @@
         "reklamerade",
         "reklamerat"
     ],
-    "rekommendation": [
-        "rekommendation",
-        "rekommendationen",
-        "rekommendationer<br>substantiv<br>[-∫o´n]",
-        ""
-    ],
     "rekommendera": [
         "rekommendera",
         "rekommenderade",
@@ -25126,8 +24968,7 @@
         "rensat"
     ],
     "rensa ut": [
-        "rensa",
-        "ut",
+        "rensa ut",
         "rensade",
         "rensat"
     ],
@@ -25143,8 +24984,7 @@
         "repat"
     ],
     "repa in": [
-        "repa",
-        "in",
+        "repa in",
         "repade",
         "repat"
     ],
@@ -25415,15 +25255,14 @@
         "rikoschetterat"
     ],
     "rikta": [
-        "rikta",
         "riktade",
-        "riktat"
+        "riktat",
+        "rikta"
     ],
     "rikta sig": [
-        "rikta",
-        "sig",
         "riktade",
-        "riktat"
+        "riktat",
+        "rikta"
     ],
     "rimma": [
         "rimma",
@@ -25437,8 +25276,7 @@
         "ringer"
     ],
     "ringa in": [
-        "ringa",
-        "in",
+        "ringa in",
         "ringde",
         "ringt",
         "ringer"
@@ -25451,8 +25289,7 @@
         "ringer"
     ],
     "ringa ut": [
-        "ringa",
-        "ut",
+        "ringa ut",
         "ringde",
         "ringt",
         "ringer"
@@ -25582,8 +25419,7 @@
         "ropat"
     ],
     "ropa in": [
-        "ropa",
-        "in",
+        "ropa in",
         "ropade",
         "ropat"
     ],
@@ -25594,8 +25430,7 @@
         "ropat"
     ],
     "ropa ut": [
-        "ropa",
-        "ut",
+        "ropa ut",
         "ropade",
         "ropat"
     ],
@@ -25749,8 +25584,7 @@
         "rusta",
         "upp",
         "rustade",
-        "rustat",
-        ""
+        "rustat"
     ],
     "ruta": [
         "ruta",
@@ -25758,8 +25592,7 @@
         "rutat"
     ],
     "ruta in": [
-        "ruta",
-        "in",
+        "ruta in",
         "rutade",
         "rutat"
     ],
@@ -25800,8 +25633,7 @@
         "fram",
         "ryckte",
         "ryckt",
-        "rycker",
-        ""
+        "rycker"
     ],
     "rycka till": [
         "rycka",
@@ -25819,8 +25651,7 @@
         "rycker"
     ],
     "rycka ut": [
-        "rycka",
-        "ut",
+        "rycka ut",
         "ryckte",
         "ryckt",
         "rycker"
@@ -25866,8 +25697,7 @@
         "rymmer"
     ],
     "rymma ut": [
-        "rymma",
-        "ut"
+        "rymma ut"
     ],
     "rymmas": [
         "rymmas",
@@ -25953,11 +25783,9 @@
         "räknat"
     ],
     "räkna in": [
-        "räkna",
-        "in",
+        "räkna in",
         "räknade",
-        "räknat",
-        ""
+        "räknat"
     ],
     "räkna med": [
         "räkna",
@@ -25994,8 +25822,7 @@
         "räknat"
     ],
     "räkna ut": [
-        "räkna",
-        "ut",
+        "räkna ut",
         "räknade",
         "räknat"
     ],
@@ -26021,8 +25848,7 @@
         "rätat"
     ],
     "räta ut": [
-        "räta",
-        "ut",
+        "räta ut",
         "rätade",
         "rätat"
     ],
@@ -26032,21 +25858,17 @@
         "rättat"
     ],
     "rätta in sig": [
-        "rätta",
-        "in",
-        "sig",
+        "rätta in sig",
         "rättade",
         "rättat"
     ],
     "rätta sig": [
-        "rätta",
-        "sig",
+        "rätta sig",
         "rättade",
         "rättat"
     ],
     "rätta till": [
-        "rätta",
-        "till",
+        "rätta till",
         "rättade",
         "rättat"
     ],
@@ -26127,8 +25949,7 @@
         "råkat"
     ],
     "råka ut": [
-        "råka",
-        "ut",
+        "råka ut",
         "råkade",
         "råkat"
     ],
@@ -26205,8 +26026,7 @@
         "röker"
     ],
     "röka ut": [
-        "röka",
-        "ut",
+        "röka ut",
         "rökte",
         "rökt",
         "röker"
@@ -26348,8 +26168,7 @@
         "samla",
         "ihop",
         "samlade",
-        "samlat",
-        ""
+        "samlat"
     ],
     "samla sig": [
         "samla",
@@ -26384,8 +26203,7 @@
     "sammanbygga": [
         "sammanbygga",
         "sammanbyggade",
-        "sammanbyggat",
-        ""
+        "sammanbyggat"
     ],
     "sammandra": [
         "sammandra",
@@ -26530,8 +26348,7 @@
     "sammanväga": [
         "sammanväga",
         "sammanvägade",
-        "sammanvägat",
-        ""
+        "sammanvägat"
     ],
     "sammanväva": [
         "sammanväva",
@@ -26637,12 +26454,6 @@
         "satsade",
         "satsat"
     ],
-    "satsdel": [
-        "satsdel",
-        "sats­delen",
-        "sats­delar<br>substantiv<br>sat`sdel",
-        ""
-    ],
     "sava": [
         "sava",
         "savade",
@@ -26745,8 +26556,7 @@
         "ser"
     ],
     "se ut": [
-        "se",
-        "ut",
+        "se ut",
         "såg",
         "sett",
         "ser"
@@ -26804,14 +26614,12 @@
         "seglat"
     ],
     "segla in": [
-        "segla",
-        "in",
+        "segla in",
         "seglade",
         "seglat"
     ],
     "segla upp": [
-        "segla",
-        "upp",
+        "segla upp",
         "seglade",
         "seglat"
     ],
@@ -27053,15 +26861,13 @@
         "sjunger"
     ],
     "sjunga in": [
-        "sjunga",
-        "in",
+        "sjunga in",
         "sjöng",
         "sjungit",
         "sjunger"
     ],
     "sjunga ut": [
-        "sjunga",
-        "ut",
+        "sjunga ut",
         "sjöng",
         "sjungit",
         "sjunger"
@@ -27233,24 +27039,20 @@
         "skeppat"
     ],
     "skeppa in": [
-        "skeppa",
-        "in",
+        "skeppa in",
         "skeppade",
         "skeppat"
     ],
     "skeppa ut": [
-        "skeppa",
-        "ut",
+        "skeppa ut",
         "skeppade",
-        "skeppat",
-        ""
+        "skeppat"
     ],
     "skeppa över": [
         "skeppa",
         "över",
         "skeppade",
-        "skeppat",
-        ""
+        "skeppat"
     ],
     "skeva": [
         "skeva",
@@ -27269,8 +27071,7 @@
         "skickat"
     ],
     "skicka in": [
-        "skicka",
-        "in",
+        "skicka in",
         "skickade",
         "skickat"
     ],
@@ -27318,15 +27119,13 @@
         "skilja",
         "av",
         "skiljade",
-        "sklijat",
-        ""
+        "sklijat"
     ],
     "skilja ifrån": [
         "skilja",
         "ifrån",
         "skiljade",
-        "skiljat",
-        ""
+        "skiljat"
     ],
     "skilja sig": [
         "skilja",
@@ -27338,8 +27137,7 @@
         "skiljer"
     ],
     "skilja ut": [
-        "skilja",
-        "ut",
+        "skilja ut",
         "skilde",
         "skiljde",
         "skilt",
@@ -27350,8 +27148,7 @@
         "skilja",
         "åt",
         "skiljade",
-        "skiljat",
-        ""
+        "skiljat"
     ],
     "skiljas": [
         "skiljas",
@@ -27466,15 +27263,13 @@
         "skjuter"
     ],
     "skjuta in": [
-        "skjuta",
-        "in",
+        "skjuta in",
         "sköt",
         "skjutit",
         "skjuter"
     ],
     "skjuta till": [
-        "skjuta",
-        "till",
+        "skjuta till",
         "sköt",
         "skjutit",
         "skjuter"
@@ -27521,14 +27316,12 @@
         "skolat"
     ],
     "skola in": [
-        "skola",
-        "in",
+        "skola in",
         "skolade",
         "skolat"
     ],
     "skola om": [
-        "skola",
-        "om",
+        "skola om",
         "skolade",
         "skolat"
     ],
@@ -27541,8 +27334,7 @@
         "skall",
         "i",
         "vissa",
-        "uttr.",
-        ""
+        "uttr."
     ],
     "skolka": [
         "skolka",
@@ -27597,8 +27389,7 @@
         "skrattat"
     ],
     "skratta ut": [
-        "skratta",
-        "ut",
+        "skratta ut",
         "skrattade",
         "skrattat"
     ],
@@ -27642,8 +27433,7 @@
         "skriver"
     ],
     "skriva in": [
-        "skriva",
-        "in",
+        "skriva in",
         "skrev",
         "skrivit",
         "skriver"
@@ -27691,8 +27481,7 @@
         "skriva",
         "till",
         "skrivade",
-        "skrivat",
-        ""
+        "skrivat"
     ],
     "skriva under": [
         "skriva",
@@ -27705,12 +27494,10 @@
         "skriva",
         "upp",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "skriva ut": [
-        "skriva",
-        "ut",
+        "skriva ut",
         "skrev",
         "skrivit",
         "skriver"
@@ -27992,8 +27779,7 @@
         "skäller"
     ],
     "skälla ut": [
-        "skälla",
-        "ut",
+        "skälla ut",
         "skällde",
         "skällt",
         "skäller"
@@ -28020,8 +27806,7 @@
         "skämmer"
     ],
     "skämma ut": [
-        "skämma",
-        "ut",
+        "skämma ut",
         "skämde",
         "skämt",
         "skämmer"
@@ -28056,8 +27841,7 @@
         "skänker"
     ],
     "skänka ut": [
-        "skänka",
-        "ut",
+        "skänka ut",
         "skänkte",
         "skänkt",
         "skänker"
@@ -28130,8 +27914,7 @@
         "skärper"
     ],
     "skärpa in": [
-        "skärpa",
-        "in",
+        "skärpa in",
         "skärpte",
         "skärpt",
         "skärper"
@@ -28261,8 +28044,7 @@
     "slantsingla": [
         "slantsingla",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "slappa": [
         "slappa",
@@ -28354,25 +28136,16 @@
         "sliter"
     ],
     "slita ut": [
-        "slita",
-        "ut",
+        "slita ut",
         "slet",
         "slitit",
         "sliter"
     ],
     "slita ut sig": [
-        "slita",
-        "ut",
-        "sig",
+        "slita ut sig",
         "slet",
         "slitit",
         "sliter"
-    ],
-    "slitning": [
-        "slitning",
-        "slitningen",
-        "slitningar<br>substantiv<br>sli`tning",
-        ""
     ],
     "slockna": [
         "slockna",
@@ -28390,9 +28163,9 @@
         "slopat"
     ],
     "sluddra": [
-        "sluddra",
         "sluddrade",
-        "sluddrat"
+        "sluddrat",
+        "sluddra"
     ],
     "sluka": [
         "sluka",
@@ -28428,7 +28201,6 @@
         "slussat"
     ],
     "sluta": [
-        "sluta",
         "slutade",
         "slutat"
     ],
@@ -28451,6 +28223,19 @@
         "upp",
         "slutade",
         "slutat"
+    ],
+    "sluta-2": [
+        "slutade",
+        "slöt",
+        "slutat",
+        "slutar"
+    ],
+    "sluta-3": [
+        "slöt",
+        "slutit",
+        "sluten",
+        "slutna",
+        "sluter"
     ],
     "slutföra": [
         "slutföra",
@@ -28526,9 +28311,7 @@
         "släpat"
     ],
     "släpa ut sig": [
-        "släpa",
-        "ut",
-        "sig",
+        "släpa ut sig",
         "släpade",
         "släpat"
     ],
@@ -28642,8 +28425,7 @@
         "slår"
     ],
     "slå in": [
-        "slå",
-        "in",
+        "slå in",
         "slog",
         "slagit",
         "slår"
@@ -28739,15 +28521,13 @@
         "slår"
     ],
     "slå ut": [
-        "slå",
-        "ut",
+        "slå ut",
         "slog",
         "slagit",
         "slår"
     ],
     "slå över": [
-        "slå",
-        "över",
+        "slå över",
         "slog",
         "slagit",
         "slår"
@@ -28850,9 +28630,7 @@
         "smilat"
     ],
     "smila in sig": [
-        "smila",
-        "in",
-        "sig",
+        "smila in sig",
         "smilade",
         "smilat"
     ],
@@ -28926,8 +28704,7 @@
         "smutsa",
         "ner",
         "smutsade",
-        "smutsat",
-        ""
+        "smutsat"
     ],
     "smutskasta": [
         "smutskasta",
@@ -28953,12 +28730,10 @@
         "smyger"
     ],
     "smyga in": [
-        "smyga",
-        "in",
+        "smyga in",
         "smög",
         "smugit",
-        "smyger",
-        ""
+        "smyger"
     ],
     "smyga sig": [
         "smyga",
@@ -28968,9 +28743,7 @@
         "smyger"
     ],
     "smyga sig in": [
-        "smyga",
-        "sig",
-        "in",
+        "smyga sig in",
         "smygade",
         "smygat"
     ],
@@ -29044,8 +28817,7 @@
         "smälter"
     ],
     "smälta in": [
-        "smälta",
-        "in",
+        "smälta in",
         "smälte",
         "smält",
         "smälter"
@@ -29100,14 +28872,12 @@
     "småvärka": [
         "småvärka",
         "småvärkte",
-        "småvärkt",
-        ""
+        "småvärkt"
     ],
     "smörja": [
         "smörja",
         "smorde",
-        "smort,",
-        "smörjer"
+        "smort,"
     ],
     "snabba": [
         "snabba",
@@ -29130,11 +28900,14 @@
         "snabba",
         "upp",
         "snabbade",
-        "snabbat",
-        ""
+        "snabbat"
     ],
     "snacka": [
         "snacka",
+        "snackade",
+        "snackat"
+    ],
+    "snacka ihop sig": [
         "snackade",
         "snackat"
     ],
@@ -29158,8 +28931,7 @@
         "snappa",
         "upp",
         "snappade",
-        "snappat",
-        ""
+        "snappat"
     ],
     "snarka": [
         "snarka",
@@ -29342,16 +29114,13 @@
         "snärjer"
     ],
     "snärja in sig": [
-        "snärja",
-        "in",
-        "sig",
+        "snärja in sig",
         "snärjde",
         "snärjt",
         "snärjer"
     ],
     "snärja sig": [
         "snärja",
-        "sig",
         "snärjde",
         "snärjt",
         "snärjer"
@@ -29395,8 +29164,7 @@
         "snöat"
     ],
     "snöa in": [
-        "snöa",
-        "in",
+        "snöa in",
         "snöade",
         "snöat"
     ],
@@ -29487,8 +29255,7 @@
         "somnat"
     ],
     "somna in": [
-        "somna",
-        "in",
+        "somna in",
         "somnade",
         "somnat"
     ],
@@ -29535,8 +29302,7 @@
         "sover"
     ],
     "sova ut": [
-        "sova",
-        "ut",
+        "sova ut",
         "sov",
         "sovit",
         "sover"
@@ -29593,8 +29359,7 @@
         "sparkat"
     ],
     "sparka ut": [
-        "sparka",
-        "ut",
+        "sparka ut",
         "sparkade",
         "sparkat"
     ],
@@ -29652,26 +29417,22 @@
         "spelat"
     ],
     "spela in": [
-        "spela",
-        "in",
+        "spela in",
         "spelade",
         "spelat"
     ],
     "spela upp": [
-        "spela",
-        "upp",
+        "spela upp",
         "spelade",
         "spelat"
     ],
     "spela ut": [
-        "spela",
-        "ut",
+        "spela ut",
         "spelade",
         "spelat"
     ],
     "spela över": [
-        "spela",
-        "över",
+        "spela över",
         "spelade",
         "spelat"
     ],
@@ -29681,15 +29442,12 @@
         "spenderat"
     ],
     "spetsa till": [
-        "spetsa",
-        "till",
+        "spetsa till",
         "spetsade",
         "spetsat"
     ],
     "spetsa till sig": [
-        "spetsa",
-        "till",
-        "sig",
+        "spetsa till sig",
         "spetsade",
         "spetsat"
     ],
@@ -29730,12 +29488,6 @@
         "spann",
         "spunnit",
         "spinner"
-    ],
-    "spinnrock": [
-        "spinnrock",
-        "spinn­rocken",
-        "spinn­rockar<br>substantiv<br>spinn`rock",
-        ""
     ],
     "spionera": [
         "spionera",
@@ -29785,8 +29537,7 @@
         "spola",
         "om",
         "spolade",
-        "spolat",
-        ""
+        "spolat"
     ],
     "spoliera": [
         "spoliera",
@@ -29847,8 +29598,7 @@
         "spricker"
     ],
     "spricka ut": [
-        "spricka",
-        "ut",
+        "spricka ut",
         "sprack",
         "spruckit",
         "spricker"
@@ -30011,6 +29761,12 @@
         "spätt",
         "späder"
     ],
+    "späda på": [
+        "spädde",
+        "spätt",
+        "späder",
+        "späda"
+    ],
     "spänna": [
         "spänna",
         "spände",
@@ -30031,24 +29787,20 @@
         "spärra",
         "av",
         "spärrade",
-        "spärrat",
-        ""
+        "spärrat"
     ],
     "spärra in": [
-        "spärra",
-        "in",
+        "spärra in",
         "spärrade",
         "spärrat"
     ],
     "spärra upp": [
-        "spärra",
-        "upp",
+        "spärra upp",
         "spärrade",
         "spärrat"
     ],
     "spärra ut": [
-        "spärra",
-        "ut",
+        "spärra ut",
         "spärrade",
         "spärrat"
     ],
@@ -30086,8 +29838,7 @@
         "spökat"
     ],
     "spöka ut": [
-        "spöka",
-        "ut",
+        "spöka ut",
         "spökade",
         "spökat"
     ],
@@ -30338,8 +30089,7 @@
         "sticker"
     ],
     "sticka ut": [
-        "sticka",
-        "ut",
+        "sticka ut",
         "stack",
         "stuckit",
         "sticker"
@@ -30506,8 +30256,7 @@
     "storsatsa": [
         "storsatsa",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "straffa": [
         "straffa",
@@ -30671,12 +30420,9 @@
         "stryker"
     ],
     "stryka ut": [
-        "stryka",
-        "ut",
+        "stryka ut",
         "strök",
-        "strukit",
-        "stryker",
-        ""
+        "strukit"
     ],
     "stryka över": [
         "stryka",
@@ -30705,16 +30451,13 @@
         "sträcker"
     ],
     "sträcka ut": [
-        "sträcka",
-        "ut",
+        "sträcka ut",
         "sträckte",
         "sträckt",
         "sträcker"
     ],
     "sträcka ut sig": [
-        "sträcka",
-        "ut",
-        "sig",
+        "sträcka ut sig",
         "sträckte",
         "sträckt",
         "sträcker"
@@ -30805,22 +30548,19 @@
         "styr"
     ],
     "styra om": [
-        "styra",
-        "om",
+        "styra om",
         "styrde",
         "styrt",
         "styr"
     ],
     "styra sig": [
-        "styra",
-        "sig",
+        "styra sig",
         "styrde",
         "styrt",
         "styr"
     ],
     "styra ut": [
-        "styra",
-        "ut",
+        "styra ut",
         "styrde",
         "styrt",
         "styr"
@@ -30855,23 +30595,19 @@
         "ställer"
     ],
     "ställa in": [
-        "ställa",
-        "in",
+        "ställa in",
         "ställde",
         "ställt",
         "ställer"
     ],
     "ställa in sig": [
-        "ställa",
-        "in",
-        "sig",
+        "ställa in sig",
         "ställde",
         "ställt",
         "ställer"
     ],
     "ställa om": [
-        "ställa",
-        "om",
+        "ställa om",
         "ställde",
         "ställt",
         "ställer"
@@ -30899,9 +30635,7 @@
         "ställer"
     ],
     "ställa sig in": [
-        "ställa",
-        "sig",
-        "in",
+        "ställa sig in",
         "ställde",
         "ställt",
         "ställer"
@@ -30921,8 +30655,7 @@
         "ställer"
     ],
     "ställa ut": [
-        "ställa",
-        "ut",
+        "ställa ut",
         "ställde",
         "ställt",
         "ställer"
@@ -30941,8 +30674,7 @@
         "stämmer"
     ],
     "stämma in": [
-        "stämma",
-        "in",
+        "stämma in",
         "stämde",
         "stämt",
         "stämmer"
@@ -30991,17 +30723,14 @@
         "inne",
         "stängde",
         "stängt",
-        "stänger",
-        ""
+        "stänger"
     ],
     "stänga ner": [
-        "stänga",
-        "ner",
+        "stänga ner",
         "stängde",
         "stängt",
         "stänger",
-        "stänga",
-        "ned",
+        "stänga ned",
         "stängde",
         "stängt",
         "stänger"
@@ -31018,8 +30747,7 @@
         "ute",
         "stängde",
         "stängt",
-        "stänger",
-        ""
+        "stänger"
     ],
     "stänka": [
         "stänka",
@@ -31102,8 +30830,7 @@
         "står"
     ],
     "stå ut": [
-        "stå",
-        "ut",
+        "stå ut",
         "stod",
         "stått",
         "står"
@@ -31189,10 +30916,21 @@
         "stöper"
     ],
     "störa": [
-        "störa",
         "störde",
         "stört",
-        "stör"
+        "stör",
+        "störa"
+    ],
+    "störa sig": [
+        "störde",
+        "stört",
+        "stör",
+        "störa"
+    ],
+    "störa-2": [
+        "störade",
+        "störat",
+        "störa-2"
     ],
     "störta": [
         "störta",
@@ -31229,16 +30967,14 @@
         "på",
         "stötte",
         "stött",
-        "stöter",
-        ""
+        "stöter"
     ],
     "stöta samman": [
         "stöta",
         "samman",
         "stötte",
         "stött",
-        "stöter",
-        ""
+        "stöter"
     ],
     "stöta sig": [
         "stöta",
@@ -31255,8 +30991,7 @@
         "stöter"
     ],
     "stöta ut": [
-        "stöta",
-        "ut",
+        "stöta ut",
         "stötte",
         "stött",
         "stöter"
@@ -31333,8 +31068,7 @@
         "suger"
     ],
     "suga ut": [
-        "suga",
-        "ut",
+        "suga ut",
         "sög",
         "sugit",
         "suger"
@@ -31660,8 +31394,7 @@
         "syr"
     ],
     "sy in": [
-        "sy",
-        "in",
+        "sy in",
         "sydde",
         "sytt",
         "syr"
@@ -31693,8 +31426,7 @@
         "synat"
     ],
     "syna ut": [
-        "syna",
-        "ut",
+        "syna ut",
         "synade",
         "synat"
     ],
@@ -31755,51 +31487,42 @@
         "säger"
     ],
     "säga emot": [
-        "säga",
-        "emot",
+        "säga emot",
         "sade",
         "sagt"
     ],
     "säga ifrån": [
-        "säga",
-        "ifrån",
+        "säga ifrån",
         "sade",
         "sagt"
     ],
     "säga sig": [
-        "säga",
-        "sig",
+        "säga sig",
         "sade",
         "sagt"
     ],
     "säga till": [
-        "säga",
-        "till",
+        "säga till",
         "sade",
         "sagt"
     ],
     "säga upp": [
-        "säga",
-        "upp",
+        "säga upp",
         "sade",
         "sagt"
     ],
     "säga upp sig": [
-        "säga",
-        "upp",
-        "sig",
+        "säga upp sig",
         "sade",
         "sagt"
     ],
     "säga ut": [
-        "säga",
-        "ut",
+        "säga ut",
         "sade",
         "sagt"
     ],
     "säga åt": [
-        "säga",
-        "åt",
+        "säga åt",
         "sade",
         "sagt"
     ],
@@ -31848,8 +31571,7 @@
         "ner",
         "sänkte",
         "sänkt",
-        "sänker",
-        ""
+        "sänker"
     ],
     "sänka sig": [
         "sänka",
@@ -31935,20 +31657,17 @@
         "sätter"
     ],
     "sätta in": [
-        "sätta",
-        "in",
+        "sätta in",
         "satte",
         "satt",
         "sätter"
     ],
     "sätta ner": [
-        "sätta",
-        "ner",
+        "sätta ner",
         "satte",
         "satt",
         "sätter",
-        "sätta",
-        "ned",
+        "sätta ned",
         "satte",
         "satt",
         "sätter"
@@ -31983,9 +31702,7 @@
         "sätter"
     ],
     "sätta sig in": [
-        "sätta",
-        "sig",
-        "in",
+        "sätta sig in",
         "satte",
         "satt,",
         "sätter"
@@ -32005,12 +31722,10 @@
         "sätter"
     ],
     "sätta ut": [
-        "sätta",
-        "ut",
+        "sätta ut",
         "satte",
         "satt",
-        "sätter",
-        ""
+        "sätter"
     ],
     "sätta åt": [
         "sätta",
@@ -32107,6 +31822,11 @@
         "sörjt,",
         "sörjer"
     ],
+    "sörpla": [
+        "sörplade",
+        "sörplat",
+        "sörpla"
+    ],
     "ta": [
         "ta",
         "tog",
@@ -32177,8 +31897,7 @@
         "ifrån",
         "tog",
         "tagit",
-        "tar",
-        ""
+        "tar"
     ],
     "ta igen sig": [
         "ta",
@@ -32189,8 +31908,7 @@
         "tar"
     ],
     "ta in": [
-        "ta",
-        "in",
+        "ta in",
         "tog",
         "tagit",
         "tar"
@@ -32229,8 +31947,7 @@
         "sig",
         "tog",
         "tagit",
-        "tar",
-        ""
+        "tar"
     ],
     "ta sig": [
         "ta",
@@ -32272,24 +31989,19 @@
         "tar"
     ],
     "ta sig ut": [
-        "ta",
-        "sig",
-        "ut",
+        "ta sig ut",
         "tog",
         "tagit",
         "tar"
     ],
     "ta till": [
-        "ta",
-        "till",
+        "ta till",
         "tog",
         "tagit",
         "tar"
     ],
     "ta till sig": [
-        "ta",
-        "till",
-        "sig",
+        "ta till sig",
         "tog",
         "tagit",
         "tar"
@@ -32302,23 +32014,19 @@
         "tar"
     ],
     "ta upp": [
-        "ta",
-        "upp",
+        "ta ut",
         "tog",
         "tagit",
         "tar"
     ],
     "ta ut": [
-        "ta",
-        "ut",
+        "ta ut",
         "tog",
         "tagit",
         "tar"
     ],
     "ta ut sig": [
-        "ta",
-        "ut",
-        "sig",
+        "ta ut sig",
         "tog",
         "tagit",
         "tar"
@@ -32335,8 +32043,7 @@
         "åt",
         "tog",
         "tagit",
-        "tar",
-        ""
+        "tar"
     ],
     "ta åt sig": [
         "ta",
@@ -32357,26 +32064,16 @@
         "tabba",
         "sig",
         "tabbade",
-        "tabbat",
-        ""
+        "tabbat"
     ],
     "tabellera": [
         "tabellera",
         "tabellerade",
         "tabellerat"
     ],
-    "tabubelägga": [
-        "tabubelägga",
-        "tabubelade",
-        "tabubelagt",
-        "tabubelagd",
-        "n.",
-        "tabubelagt",
-        "pres.",
-        "tabubelägger",
-        ""
-    ],
     "tacka": [
+        "tackade",
+        "tackat",
         "tacka"
     ],
     "tackla": [
@@ -32426,8 +32123,7 @@
         "talat"
     ],
     "tala in": [
-        "tala",
-        "in",
+        "tala in",
         "talade",
         "talat"
     ],
@@ -32438,8 +32134,7 @@
         "talat"
     ],
     "tala ut": [
-        "tala",
-        "ut",
+        "tala ut",
         "talade",
         "talat"
     ],
@@ -32956,6 +32651,12 @@
         "tillstyrkt",
         "tillstyrker"
     ],
+    "tillställa": [
+        "tillställde",
+        "tillställt",
+        "tillställer",
+        "tillställa"
+    ],
     "tillstå": [
         "tillstå",
         "tillstod",
@@ -33024,10 +32725,9 @@
         "tillvitat"
     ],
     "tillvälla sig": [
-        "tillvälla",
-        "sig",
         "tillvällade",
-        "tillvällat"
+        "tillvällat",
+        "tillvälla"
     ],
     "tillägga": [
         "tillägga",
@@ -33129,11 +32829,9 @@
         "tittat"
     ],
     "titta in": [
-        "titta",
-        "in",
+        "titta in",
         "tittade",
-        "tittat",
-        ""
+        "tittat"
     ],
     "titta till": [
         "titta",
@@ -33148,8 +32846,7 @@
         "tittat"
     ],
     "titta ut": [
-        "titta",
-        "ut",
+        "titta ut",
         "tittade",
         "tittat"
     ],
@@ -33199,16 +32896,6 @@
         "tjusa",
         "tjusade",
         "tjusat"
-    ],
-    "tjusare": [
-        "tjusare",
-        "tjusaren",
-        "plural",
-        "tjusare",
-        "bestämd",
-        "plural",
-        "tjusarna<br>substantiv<br>tju`sare",
-        ""
     ],
     "tjuta": [
         "tjuta",
@@ -33274,8 +32961,7 @@
         "tjänat"
     ],
     "tjäna ut": [
-        "tjäna",
-        "ut",
+        "tjäna ut",
         "tjänade",
         "tjänat"
     ],
@@ -33291,7 +32977,6 @@
         "tjärat"
     ],
     "tolerera": [
-        "tolerera",
         "tolererade",
         "tolererat"
     ],
@@ -33301,8 +32986,7 @@
         "tolkat"
     ],
     "tolka in": [
-        "tolka",
-        "in",
+        "tolka in",
         "tolkade",
         "tolkat"
     ],
@@ -33386,8 +33070,7 @@
         "torkat"
     ],
     "torka in": [
-        "torka",
-        "in",
+        "torka in",
         "torkade",
         "torkat"
     ],
@@ -33398,8 +33081,7 @@
         "torkat"
     ],
     "torka ut": [
-        "torka",
-        "ut"
+        "torka ut"
     ],
     "torktumla": [
         "torktumla",
@@ -33446,6 +33128,11 @@
         "sig",
         "tovade",
         "tovat"
+    ],
+    "tracka": [
+        "trackade",
+        "trackat",
+        "tracka"
     ],
     "tradera": [
         "tradera",
@@ -33608,9 +33295,7 @@
         "trasslat"
     ],
     "trassla in sig": [
-        "trassla",
-        "in",
-        "sig",
+        "trassla in sig",
         "trasslade",
         "trasslat"
     ],
@@ -33731,8 +33416,7 @@
         "trolla",
         "fram",
         "trollade",
-        "trollat",
-        ""
+        "trollat"
     ],
     "trollbinda": [
         "trollbinda",
@@ -33775,8 +33459,7 @@
         "trumfat"
     ],
     "trumfa in": [
-        "trumfa",
-        "in",
+        "trumfa in",
         "trumfade",
         "trumfat"
     ],
@@ -33798,8 +33481,7 @@
         "trummat"
     ],
     "trumma in": [
-        "trumma",
-        "in",
+        "trumma in",
         "trummade",
         "trummat"
     ],
@@ -33821,8 +33503,7 @@
         "om",
         "tryckte",
         "tryckt",
-        "trycker",
-        ""
+        "trycker"
     ],
     "trycka på": [
         "trycka",
@@ -33881,9 +33562,9 @@
         "träffat"
     ],
     "träffas": [
-        "träffas",
         "träffades",
-        "träffats"
+        "träffats",
+        "träffas"
     ],
     "träna": [
         "träna",
@@ -33907,16 +33588,13 @@
         "igenom",
         "trängde",
         "trängt",
-        "tränger",
-        ""
+        "tränger"
     ],
     "tränga in": [
-        "tränga",
-        "in",
+        "tränga in",
         "trängde",
         "trängt",
-        "tränger",
-        ""
+        "tränger"
     ],
     "tränga sig": [
         "tränga",
@@ -33949,11 +33627,9 @@
         "tråkat"
     ],
     "tråka ut": [
-        "tråka",
-        "ut",
+        "tråka ut",
         "tråkade",
-        "tråkat",
-        ""
+        "tråkat"
     ],
     "tråla": [
         "tråla",
@@ -33976,8 +33652,7 @@
         "tröttat"
     ],
     "trötta ut": [
-        "trötta",
-        "ut",
+        "trötta ut",
         "tröttade",
         "tröttat"
     ],
@@ -34031,6 +33706,11 @@
         "tunna",
         "tunnade",
         "tunnat"
+    ],
+    "tunnla": [
+        "tunnlade",
+        "tunnlat",
+        "tunnla"
     ],
     "tupera": [
         "tupera",
@@ -34107,8 +33787,7 @@
         "tvinga",
         "ifrån",
         "tvingade",
-        "tvingat",
-        ""
+        "tvingat"
     ],
     "tvinga på": [
         "tvinga",
@@ -34331,8 +34010,7 @@
         "tänker"
     ],
     "tänka ut": [
-        "tänka",
-        "ut",
+        "tänka ut",
         "tänkte",
         "tänkt",
         "tänker"
@@ -35114,8 +34792,12 @@
         "upprepade",
         "upprepat"
     ],
+    "upprepa sig": [
+        "upprepa",
+        "upprepade",
+        "upprepat"
+    ],
     "uppresa": [
-        "uppresa",
         "uppreste",
         "upprest,",
         "uppreser"
@@ -35360,8 +35042,7 @@
         "urladda",
         "sig",
         "urladdade",
-        "urladdat",
-        ""
+        "urladdat"
     ],
     "urskilja": [
         "urskilja",
@@ -35467,8 +35148,7 @@
     "utbetala": [
         "utbetala",
         "utbetalade",
-        "utbetalt",
-        ""
+        "utbetalt"
     ],
     "utbilda": [
         "utbilda",
@@ -36328,8 +36008,7 @@
         "vaggat"
     ],
     "vagga in": [
-        "vagga",
-        "in",
+        "vagga in",
         "vaggade",
         "vaggat"
     ],
@@ -36371,8 +36050,7 @@
         "vallat"
     ],
     "valla in": [
-        "valla",
-        "in",
+        "valla in",
         "vallade",
         "vallat"
     ],
@@ -36476,7 +36154,20 @@
         "varit",
         "är",
         "vare",
-        "vore"
+        "vore",
+        "vara"
+    ],
+    "vara med": [
+        "var",
+        "varit",
+        "är",
+        "vara"
+    ],
+    "vara på": [
+        "var",
+        "varit",
+        "är",
+        "vara"
     ],
     "vara sig": [
         "vara",
@@ -36486,7 +36177,13 @@
     ],
     "vara-2": [
         "varade",
-        "varat"
+        "varat",
+        "vara-2"
+    ],
+    "varas": [
+        "varades",
+        "varats",
+        "varas"
     ],
     "varda": [
         "vart",
@@ -36553,8 +36250,7 @@
     "vattenfylla": [
         "vattenfylla",
         "vattenfyllde",
-        "vattenfyllt",
-        ""
+        "vattenfyllt"
     ],
     "vattna": [
         "vattna",
@@ -36584,8 +36280,7 @@
         "vecklat"
     ],
     "veckla in": [
-        "veckla",
-        "in",
+        "veckla in",
         "vecklade",
         "vecklat"
     ],
@@ -36752,8 +36447,7 @@
     "vidhäfta": [
         "vidhäfta",
         "vidhäftade",
-        "vidhäftat",
-        ""
+        "vidhäftat"
     ],
     "vidhålla": [
         "vidhålla",
@@ -36887,8 +36581,7 @@
         "viker"
     ],
     "vika ut": [
-        "vika",
-        "ut",
+        "vika ut",
         "vek",
         "vikit",
         "el.",
@@ -36896,9 +36589,7 @@
         "viker"
     ],
     "vika ut sig": [
-        "vika",
-        "ut",
-        "sig",
+        "vika ut sig",
         "vek",
         "vikit",
         "el.",
@@ -36929,8 +36620,7 @@
         "vilat"
     ],
     "vila ut": [
-        "vila",
-        "ut",
+        "vila ut",
         "vilade",
         "vilat"
     ],
@@ -36941,25 +36631,22 @@
         "vill"
     ],
     "vilja sig": [
-        "vilja",
-        "sig",
         "ville",
         "velat",
-        "vill"
+        "vill",
+        "vilja"
     ],
     "vilja till": [
-        "vilja",
-        "till",
         "ville",
         "velat",
-        "vill"
+        "vill",
+        "vilja"
     ],
     "vilja åt": [
-        "vilja",
-        "åt",
         "ville",
         "velat",
-        "vill"
+        "vill",
+        "vilja"
     ],
     "villa bort": [
         "villa",
@@ -37061,8 +36748,7 @@
         "vinterbonat"
     ],
     "vintra in": [
-        "vintra",
-        "in",
+        "vintra in",
         "vintrade",
         "vintrat"
     ],
@@ -37103,8 +36789,7 @@
         "visat"
     ],
     "visa ut": [
-        "visa",
-        "ut",
+        "visa ut",
         "visade",
         "visat"
     ],
@@ -37356,15 +37041,13 @@
         "väljer"
     ],
     "välja in": [
-        "välja",
-        "in",
+        "välja in",
         "valde",
         "valt",
         "väljer"
     ],
     "välja om": [
-        "välja",
-        "om",
+        "välja om",
         "valde",
         "valt",
         "väljer"
@@ -37448,8 +37131,7 @@
         "vända",
         "åter",
         "vändade",
-        "vändat",
-        ""
+        "vändat"
     ],
     "vänja": [
         "vänja",
@@ -37492,20 +37174,17 @@
         "väntat"
     ],
     "vänta in": [
-        "vänta",
-        "in",
+        "vänta in",
         "väntade",
         "väntat"
     ],
     "vänta sig": [
-        "vänta",
-        "sig",
+        "vänta sig",
         "väntade",
         "väntat"
     ],
     "vänta ut": [
-        "vänta",
-        "ut",
+        "vänta ut",
         "väntade",
         "väntat"
     ],
@@ -37520,8 +37199,7 @@
         "värderat"
     ],
     "värdera ner": [
-        "värdera",
-        "ner",
+        "värdera ner",
         "värderade",
         "värderat",
         "värdera",
@@ -37633,8 +37311,7 @@
         "väver"
     ],
     "väva in": [
-        "väva",
-        "in",
+        "väva in",
         "vävde",
         "vävt",
         "väver"
@@ -37647,18 +37324,15 @@
         "väver"
     ],
     "växa": [
-        "växa",
-        "växte,",
+        "växte",
         "vuxit",
-        "el.",
-        "växt,",
+        "växt",
         "vuxen",
-        "el.",
-        "växt,",
+        "växt",
         "vuxna",
-        "el.",
-        "växta,",
-        "växer"
+        "växta",
+        "växer",
+        "växa"
     ],
     "växa bort": [
         "växa",
@@ -37712,8 +37386,7 @@
         "vuxit",
         "el.",
         "växt",
-        "växer",
-        ""
+        "växer"
     ],
     "växa till sig": [
         "växa",
@@ -37744,13 +37417,11 @@
         "växer"
     ],
     "växa ut": [
-        "växa",
-        "ut",
         "växte",
         "vuxit",
-        "el.",
         "växt",
-        "växer"
+        "växer",
+        "växa"
     ],
     "växla": [
         "växla",
@@ -37836,6 +37507,11 @@
         "vörda",
         "vördade",
         "vördat"
+    ],
+    "wallraffa": [
+        "wallraffade",
+        "wallraffat",
+        "wallraffa"
     ],
     "yla": [
         "yla",
@@ -37924,22 +37600,9 @@
         "zoomat"
     ],
     "zooma ut": [
-        "zooma",
-        "ut",
+        "zooma ut",
         "zoomade",
         "zoomat"
-    ],
-    "½": [
-        "½",
-        "~de",
-        "~t",
-        ""
-    ],
-    "Äverb": [
-        "Äverb",
-        "~de",
-        "~t",
-        ""
     ],
     "äckla": [
         "äckla",
@@ -37958,8 +37621,7 @@
         "ägnat"
     ],
     "ägna sig": [
-        "ägna",
-        "sig",
+        "ägna sig",
         "ägnade",
         "ägnat"
     ],
@@ -38189,29 +37851,25 @@
         "åker"
     ],
     "åka in": [
-        "åka",
-        "in",
+        "åka in",
         "åkte",
         "åkt",
         "åker"
     ],
     "åka på": [
-        "åka",
-        "på",
+        "åka på",
         "åkte",
         "åkt",
         "åker"
     ],
     "åka ur": [
-        "åka",
-        "ur",
+        "åka ur",
         "åkte",
         "åkt",
         "åker"
     ],
     "åka ut": [
-        "åka",
-        "ut",
+        "åka ut",
         "åkte",
         "åkt",
         "åker"
@@ -38617,8 +38275,7 @@
     "återträffa": [
         "återträffa",
         "återträffade",
-        "återträffat",
-        ""
+        "återträffat"
     ],
     "återuppbygga": [
         "återuppbygga",
@@ -38886,8 +38543,7 @@
         "öser"
     ],
     "ösa ut": [
-        "ösa",
-        "ut",
+        "ösa ut",
         "ösade",
         "öst"
     ],
@@ -38902,20 +38558,17 @@
         "övat"
     ],
     "öva in": [
-        "öva",
-        "in",
+        "öva in",
         "övade",
         "övat"
     ],
     "öva sig": [
-        "öva",
-        "sig",
+        "öva sig",
         "övade",
         "övat"
     ],
     "öva upp": [
-        "öva",
-        "upp",
+        "öva upp",
         "övade",
         "övat"
     ],
@@ -39184,8 +38837,7 @@
     "överordna": [
         "överordna",
         "överordnade",
-        "överordnat",
-        ""
+        "överordnat"
     ],
     "överpröva": [
         "överpröva",
@@ -39279,8 +38931,7 @@
     "överstimulera": [
         "överstimulera",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "översvämma": [
         "översvämma",
@@ -39361,8 +39012,7 @@
     "övervalla": [
         "övervalla",
         "~de",
-        "~t",
-        ""
+        "~t"
     ],
     "övervara": [
         "övervara",

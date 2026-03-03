@@ -4,14 +4,73 @@
         "dylikt",
         "dylika"
     ],
+    "ena": [
+        "ene",
+        "ena"
+    ],
+    "ena-2": [
+        "",
+        "ena-2"
+    ],
     "ingen": [
         "ingen",
         "inget",
         "inga"
     ],
+    "ni": [
+        "er",
+        "eder"
+    ],
+    "er": [
+        "ert",
+        "era"
+    ],
+    "mången": [
+        "månget",
+        "mångt",
+        "många",
+        "många",
+        "fler",
+        "flera",
+        "många",
+        "flest",
+        "mången"
+    ],
     "någon": [
-	"något",
+        "något",
         "nåt",
         "några"
+    ],
+    "sån": [
+        "sånt",
+        "såna"
+    ],
+    "sådan": [
+        "sådant",
+        "sådana"
+    ],
+    "vad": [
+        "vad"
+    ],
+    "jag": [
+        "mig",
+        "mej"
+    ],
+    "du": [
+        "dig",
+        "dej"
+    ],
+    "vi": [
+        "oss"
+    ],
+    "vilken": [
+        "vilket",
+        "vilka",
+        "vilken"
+    ],
+    "vår": [
+        "vårt",
+        "våra",
+        "vår"
     ]
 }
