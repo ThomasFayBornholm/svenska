@@ -1,6 +1,8 @@
 backend/backup/*
 jquery-*
-tmp
+.*
+!.gitignore
+lists/tmp
 superseded
 eBookScripts
 sounds/en
