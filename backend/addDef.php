@@ -9,10 +9,9 @@
 	// Internal enumeration takes form '-#'
 	$word = str_replace("(","-",$word);
 	$word = str_replace(")","",$word);
-	$meta = $_GET['meta'];
 	$options = $_GET["options"];
 	$def = $_GET['def'];
-	$more = $_GET['more'];
+	#$more = $_GET['more']; TODO implement scraping of more info
 	
 	// Add word to listing if not already available
 	$path = getcwd() . "/../lists/";
@@ -102,69 +101,25 @@
 		}
 		$contents = file_get_contents($name, 'UTF-8');
 		$arr = json_decode($contents, true);
+
 		$arr[$word] = $def;
 		ksort($arr);
-		$outDef = "{" . PHP_EOL;
-		$delimDef = "";
-		foreach ($arr as $key => $value) {
-			$val = str_replace('"',"'",$value);
- 			$outDef .= $delimDef . '"' . $key . '": "' . $val . '"';
-			$delimDef = ',' . PHP_EOL;
-		}	
-		$outDef .= PHP_EOL . "}";
-		// Write as string rather than JSON to allow new line as delimiter
-		$out["def-bytes"] = file_put_contents($name, $outDef);
+		$json = json_encode($arr,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+		if (count($arr) > 50) {
+			$out["def-bytes"] = file_put_contents($name, $json);
+		} else {
+			$out["def-bytes"] = 0;
+		}
 	}
 	
-	if ($class != "fraser") {
-		// "Fraser" class does not benefit from "more" or "meta" fields so exclude
-		if (strlen($more) > 0) {
-			$key_suffix = "_0";
-			
-			$moreSplit = explode("||",$more);	
-			$name = $path . $class . "-more";
-			if (!file_exists($name)) fopen($name, "w");			
-			$contents = file_get_contents($name, 'UTF-8');
-			$arr = json_decode($contents,true);
-			$i = 0;
-			foreach($moreSplit as $m) {				
-				// Don't forget to replace space(s) in key with dash
-				$key = str_replace(" ","-", $word) . "_" . $i;
-				
-				$arr[$key] = $moreSplit[$i];
-				$i++;
-			}
-			ksort($arr);
-			$outMore = "{" . PHP_EOL;
-			$delimMore = "";
-			foreach($arr as $key => $value) {
-				$value = str_replace('"',"'",$value);
-				$value = str_replace('\\','\\\\',$value);
-				$outMore .= $delimMore . '"' . $key . '": "' . $value . '"';
-				$delimMore = "," . PHP_EOL;
-			}
-			$outMore .= PHP_EOL . "}";
-			$out["more-bytes"] = file_put_contents($name, $outMore);
-		}
-		
-		if (strlen($meta) > 0) {			
-			$name = $path . $class . "-conj";
-			$contents = file_get_contents($name, 'UTF-8');
-			$dict = json_decode($contents,true);
-			$tmp = explode(",",$options);
-			array_push($tmp,explode(" ",$word)[0]);
-			$dict[$word] = $tmp;
-			ksort($dict);
-			$out["conj-bytes"] = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-
-			$name = $path . $class . "-meta";
-			$contents = file_get_contents($name, 'UTF-8');
-			$dict = json_decode($contents,true);
-			$tmp = $meta  . "<br>"  . $class;
-			$dict[$word] = $tmp;
-			ksort($dict);
-			$out["meta-bytes"] = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-		}
+	if (strlen($options) > 0) {			
+		$name = $path . $class . "-conj";
+		$contents = file_get_contents($name, 'UTF-8');
+		$dict = json_decode($contents,true);
+		$tmp = explode(",",$options);
+		$dict[$word] = $tmp;
+		ksort($dict);
+		$out["conj-bytes"] = file_put_contents($name, json_encode($dict, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 	}
 	$out["status"] = "done";
 	echo json_encode($out);

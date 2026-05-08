@@ -29,8 +29,6 @@
 <div id="iControls">
 	<p class="debug" id="iDebugTxt"></p>
 	<form class="centred" onsubmit="newInputWrapper(event)">	
-		<img class="b2" src="img/leftArrow.svg" id="iLast" onclick="getLastWord()" oncontextmenu="hack(event)" onmouseover="highlight(this,event)" onmouseout="highlight(this,event)"
-		title="Go back">
 		<input id="iInput" placeholder="Sök ord/fras här" oncontextmenu="onlineLookup(this,event)" class="inputSearch" autocomplete="off" onkeydown="processKeyDown(event)" onkeyup="checkCompletions(event)">				
 		<img class="b2" src ="img/Shakespeare.png" onclick="fromEnglish()" ondblclick="fromEnglishExternal()" oncontextmenu="fromSwedish(event)" onmouseover="highlight(this,event)" ondblclick="scrapeWholeClass()"
 		title="Translate from English to Swedish">

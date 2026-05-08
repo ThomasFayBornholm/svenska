@@ -48,9 +48,9 @@ if ($include_phrases) {
             array_push($out["matches"], $el);
             $n_fraser++;
         } else {
-            $user_words = preg_split("/[ ,]/",$txt);
+            $user_words = preg_split("/[ ,\/]/",$txt);
             if (count($user_words) > 1) {
-                $el_words = preg_split("/[ ,]/",$el);
+                $el_words = preg_split("/[ ,\/]/",$el);
                 $n_match = 0;
                 foreach($user_words as $u_w) {
                     if (in_array($u_w,$el_words)) $n_match++;

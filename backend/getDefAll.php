@@ -5,26 +5,16 @@ function get_details($word, $dict,$class) {
 	$tmp["class"] = $class;
 	$path = getcwd() ."/../lists/";
 	if ($class === "fraser") {
-		$tmp["meta"] = $word;						
+		$tmp["options"] = $word;						
 	} else {
-		$meta_name = $path . $class . "-meta";
-		$contents = file_get_contents($meta_name, 'UTF-8');
-		$dict = json_decode($contents, JSON_UNESCAPED_UNICODE);
-		if ($dict) {
-			if (array_key_exists($word, $dict)) {
-				$tmp["meta"] = $dict[$word];						
-				$tmp["meta"] = str_replace("\u{00AD}", "", $tmp["meta"]);
-			}
-		}
 		$conj_name = $path . $class . "-conj";
 		$contents_conj = file_get_contents($conj_name);
 		$dict_conj = json_decode($contents_conj, JSON_UNESCAPED_UNICODE);
 		if ($dict_conj) {
 			if (array_key_exists($word, $dict_conj)) {
-				$tmp["conj"] = $dict_conj[$word];						
+				$tmp["options"] = $dict_conj[$word];						
 			}
 		}
-
 	}
 	return $tmp;
 }

@@ -38,12 +38,12 @@ include "error_catch.php";
 				if (array_key_exists($key, $defDict)) {
 					$tmp["def"] = $defDict[$key];
 				}
-				$name = $el . "-meta";
-				$contents_meta = file_get_contents($path . $name, 'UTF-8');
-				$metaDict = json_decode($contents_meta, JSON_UNESCAPED_UNICODE);
-				if (array_key_exists($key, $metaDict)) {
-					$tmp["meta"] = $metaDict[$key];
-				}	
+				$name = $el . "-conj";
+				$contents_options= file_get_contents($path . $name, 'UTF-8');
+				$options_dict = json_decode($contents_options, JSON_UNESCAPED_UNICODE);
+				if (array_key_exists($key,$options_dict)) {
+					$tmp["options"] = $options_dict[$key];
+				}
 				$tmp["word"] = $key;
 				$out["matches"][$el . "_" . $key] = $tmp;
 			}
@@ -67,7 +67,7 @@ include "error_catch.php";
 			if ($all_match && $word != $key) {
 				$tmp["word"] = $key;
 				$tmp["meta"] = "";
-				$tmp["conj"] = [$key];
+				$tmp["options"] = [$key];
 				$tmp["class"] = "fraser";
 				$tmp["def"] = $value;
 				$out["matches"]["fraser_" . str_replace(" ","_",$key)] = $tmp;

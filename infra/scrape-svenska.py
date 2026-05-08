@@ -39,102 +39,59 @@ def fetch_page_content(url: str) -> str:
         ts("Browser close")
         return html
 
+def extract_defs(raw):
+    re_li = r"<li.*?</li>"
+    li_matches = re.findall(re_li,raw)
+    defs = list()
+    for el in li_matches:
+        text = BeautifulSoup(el,"html.parser").get_text()
+        text = text.replace("VISA MER +","")
+        text = text.replace("JFR","<br><b>JFR</b>")
+        text = text.replace("SYN","<br><b>SYN</b>")
+        text = text.replace("SE","<br><b>SE</b>")
+        text = text.replace("MOTSATS","<br><b>MOTSATS</b>")
+        text = text.replace("<br><br>","<br>")
+        defs.append(text)
+    return defs 
+
+
 word = sys.argv[1]
 url = "https://svenska.se/?activeTab=so&q=" + word.replace(" ","+")
 html = fetch_page_content(url)
 ts("HTML returned")
-tmp_res = html.split("-right-1")
-del tmp_res[0]
-regex_class=r'ORDKLASS: <\/span><span data-v-662ffdb7="" class="">(.*?)<\/span><\/div>'
-regex_opts=r'<span data-v-662ffdb7="" class="text-black">(.*?)<\/span><\/div>'
-regex_opts_2 = r'<span class="i">(.*?)<\/span>'
-regex_def=r'-->(<span data-v-662ffdb7="" class="(?:text-sm)*">.*?<\/span>)<!--'
-regex_links = r'-->(<div data-v-662ffdb7="" class="">.*?<\/div>)'
-#regex_links = r'-->(<div data-v-662ffdb7="" class=".*)'
-regex_grammar=r'\(<span data-v-662ffdb7="" class="text-sm">\⟨(.*?)\⟩ </span>'
+'''
+Output a list of dictionaries corresponding to word class matches
+Each dictionary contains 
+class: e.g. "substantiv"
+def: e.g. person som (yrkesmässigt) ägnar sig åt akrobatik JFR balanskonstnär, ekvilibrist, lindansare
+meta: akrobaten akrobater
+'''
+out = list()
+# ORDKLASS: </span><span data-v-93e4013d="" class="">substantiv</span>
+re_word_class = r"ORDKLASS: </span><span.*?>(.*?)</span>"
+tmp_classes = re.findall(re_word_class,html)
+for el in tmp_classes:
+    tmp = dict() 
+    tmp["class"] = el
+    out.append(tmp)
+word_classes = html.split("ORDKLASS")
+word_classes.pop() # Remove trailing text
 
-def fmt_txt(el):
-    tmp = el
-    
-    for j in range(1,10):
-        # Remove all span tasg
-        # Resolve hyperlinks to bold highlighting
-        tmp = re.sub(r'<a href=.*?>(.*?)<\/a>',r'<b>\1</b>',tmp)
-        # Does this handle nested spans correctly
-        tmp = re.sub(r'<span data-v-662ffdb7="".*?>(.*?)<\/span>',r"\1",tmp)
-        tmp = re.sub(r'<div data-v-662ffdb7="".*?>(.*?)<\/div>',r"\1",tmp)
-    for j in range(1,10):
-        tmp = re.sub(r'<span data-v-662ffdb7="".*?>','',tmp)
-        tmp = re.sub(r'<div data-v-662ffdb7="".*?>','',tmp)
-        
-    tmp = re.sub(r'<div.*?<\/li>',"",tmp)
-    tmp = re.sub(r'^.*?<!---->','',tmp)
-    tmp = re.sub(r'<!---->','',tmp)
-    tmp = re.sub(r'<span class="b">(.*?)\) </span>',r'<b>\1</b>) ',tmp)
-    tmp = re.sub(r'<sup>.*?<\/sup>','',tmp)
-    tmp = re.sub(r'<button.*','',tmp)
-    tmp = re.sub(r'JFR','<br>JFR',tmp)
-    tmp = re.sub(r'SE','<br>SE',tmp)
-    tmp = re.sub(r'MOTSATS','<br>MOTSATS',tmp)
-    tmp = re.sub(r'SYN','<br>SYN',tmp)
-    return tmp
+ind = 0
+for el in word_classes:
+    re_meta = r'<span class="i">(.*?)</span>'
+    meta_el = re.findall(re_meta,el)
+    out[ind]["options"] = (meta_el)
+    ind += 1
 
-def fmt_links(raw):
-    out = raw
-    out = re.sub(r'<span data-v-662ffdb7="" class="text-sm text-slate-600 font-semibold">(.*?)<\/span>',r"\1",out)
-    out = re.sub(r"<a.*?>(.*?)<\/a>",r"<b>\1</b>",out)
-    out = re.sub(r"<div.*?>","",out)
-    out = re.sub(r"<span.*?>","",out)
-    out = re.sub(r"</span>","",out)
-    out = re.sub(r"</div>","",out)
-    out = re.sub(r"<!---->","",out)
-    return out
-
-matches = list()
-tmp = dict()
-for el in tmp_res:
-    ts("Loop")
-    tmp["class"] = "" 
-    tmp["options"] = []
-    tmp["grammar"] = ""
-    tmp["def"] = ""
-    tmp["more"] = ""
-    tmp["meta"] = word 
-    el = el.split("VISA MER")[0]
-    match_class = re.search(regex_class,el)
-    if match_class:
-        tmp["class"] = str(match_class.groups(1)[0])
-    match_opts = re.search(regex_opts,el)
-    res_def = re.findall(regex_def,html)
-    if (not res_def):
-        tmp["debug"] = el 
-    
-    if res_def:
-        delim = ""
-        if len(res_def) == 1:
-            tmp["def"] = "● " + fmt_txt(res_def[0])
-        else:
-            i = 1
-            for el in res_def:
-                tmp["def"] += delim + str(i) + " " + fmt_txt(el)
-                delim = "<br>"
-                i += 1
-    res_links = re.findall(regex_links,html)
-    if res_links:
-        if len(res_def) == 1:
-            for el in res_links:
-                tmp["def"] += "<br>" + fmt_links(el);
-    if match_opts:
-        raw = str(match_opts.group(1))
-        match_opt_2 = re.findall(regex_opts_2,raw)
-        soup = BeautifulSoup(raw,"html.parser")
-        tmp_opts =  soup.get_text()
-        tmp["meta"] += tmp_opts
-        tmp["options"] = match_opt_2
-
-    matches.append(tmp)
+re_def = r"<ol data-v-93e4013d.*?</ol>"
+def_raw = re.findall(re_def,html)
+ind = 0
+for el in def_raw:
+    out[ind]["def"] = extract_defs(el)
+    ind += 1
 
 sys.stdout.write(
-    json.dumps(matches, ensure_ascii=False)
+    json.dumps(out, ensure_ascii=False)
 )
 sys.stdout.flush()
